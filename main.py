@@ -1,9 +1,7 @@
 from transformers import AutoModelForCausalLM, AutoTokenizer, pipeline
 
-# Model name on Hugging Face
+# load model and tokenizer from Hugging Face
 model_name = "deepseek-ai/deepseek-coder-6.7b-instruct"
-
-# Load tokenizer
 tokenizer = AutoTokenizer.from_pretrained(model_name)
 
 # Load model (FP16 for GPU; use load_in_8bit=True for 8-bit quantization if needed)
@@ -20,13 +18,13 @@ generator = pipeline(
     tokenizer=tokenizer,
 )
 
-# Example prompt
+
 prompt = "Write a Python function that calculates Fibonacci numbers using recursion."
 
 # Run inference
 output = generator(
     prompt,
-    max_new_tokens=200,
+    max_new_tokens=256,
     temperature=1.0,
     top_p=0.9,
     do_sample=True
