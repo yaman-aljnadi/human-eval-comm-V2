@@ -3,7 +3,7 @@
 HumanEvalComm prototype runner (Option 1: evaluation reliability)
 
 - Loads jie-jw-wu/HumanEvalComm
-- Filters by clarification categories
+- Selects prompt variant fields (prompt1a, prompt1c, prompt1p, 2ac, 2ap, 2cp, 3acp)
 - Runs HuggingFace causal LMs to generate an initial response per item
 - Computes Communication Rate (non-code responses), as per paper definition
 - Saves per-item outputs and quick summary for future judging
@@ -16,9 +16,7 @@ USAGE (example):
       --temperature 1.0 \
       --top-p 0.9 \
       --limit 20 \
-      --outdir ./runs/deepseek_6.7b_1a1c1p
-
-You can run multiple times with different models and merge the JSONL files later.
+      --outdir ./runs/deepseek-coder-6.7b_1a1c1p
 """
 import argparse
 import json
@@ -59,22 +57,23 @@ class GenConfig:
 @dataclass
 class ItemResult:
     task_id: str
-    category: Optional[str]
+    category: Optional[str]          # now set to the prompt key used (e.g., "prompt1a")
     entry_point: Optional[str]
     prompt_modified: str
     prompt_original: Optional[str]
     model_name: str
     seed: int
-    gen: Dict[str, Any]             # raw HF output dict
-    generated_text: str             # text output
-    contains_code: bool             # heuristic
-    extracted_code: Optional[str]   # parsed from output
-    extracted_questions: List[str]  # parsed from output
+    gen: Dict[str, Any]              # raw HF output dict (without "generated_text" key)
+    generated_text: str              # single source of truth for the text output
+    contains_code: bool              # heuristic
+    extracted_code: Optional[str]    # parsed from output
+    extracted_questions: List[str]   # parsed from output
     latency_sec: float
 
 CODE_FENCE_RE = re.compile(r"```(?:python)?\s*([\s\S]*?)```", re.IGNORECASE)
 DEF_RE = re.compile(r"^\s*def\s+\w+\s*\(", re.MULTILINE)
 Q_SENT_RE = re.compile(r"[^.?!]*\?")
+PROMPT_VARIANTS = ["1a", "1c", "1p", "2ac", "2ap", "2cp", "3acp"]
 
 def contains_code_block(text: str) -> bool:
     if CODE_FENCE_RE.search(text):
@@ -89,18 +88,10 @@ def extract_code(text: str) -> Optional[str]:
     # Fallback: grab lines around a def
     if DEF_RE.search(text):
         lines = text.splitlines()
-        # simple heuristic: return contiguous lines from first 'def' to next blank triple-backtick or end
-        start = None
+        # simple heuristic: return contiguous lines from first 'def' onward
         for i, ln in enumerate(lines):
             if DEF_RE.match(ln):
-                start = i
-                break
-        if start is not None:
-            # collect until an empty line followed by non-indented?
-            buf = []
-            for ln in lines[start:]:
-                buf.append(ln)
-            return "\n".join(buf).strip()
+                return "\n".join(lines[i:]).strip()
     return None
 
 def extract_questions(text: str) -> List[str]:
@@ -108,10 +99,8 @@ def extract_questions(text: str) -> List[str]:
     chunks = [c.strip() for c in text.split('?') if c.strip()]
     qs = []
     for c in chunks:
-        # drop obvious code-y lines
         if 'def ' in c or 'return ' in c or '```' in c:
             continue
-        # re-attach '?'
         qs.append(c + '?')
     # Also find inline question-like sentences
     for m in Q_SENT_RE.finditer(text):
@@ -128,20 +117,41 @@ def extract_questions(text: str) -> List[str]:
             dedup.append(k)
     return dedup
 
-def build_initial_prompt(item: Dict[str, Any]) -> Tuple[str, Optional[str], Optional[str], Optional[str]]:
+def _select_prompt_field(item: Dict[str, Any], requested_categories: Optional[List[str]]) -> Tuple[str, Optional[str], Optional[str]]:
     """
-    Returns: (final_prompt, category, entry_point, prompt_original)
-    We try to be robust to field-name differences.
+    Returns: (prompt_text, category_label, prompt_original)
+
+    - If requested_categories is given, try keys 'prompt{cat}' in order.
+    - Otherwise, prefer 'prompt' if present; else fall back to any existing variant in PROMPT_VARIANTS.
+    - category_label is the key name used (e.g., 'prompt1a') so it's never None when a variant is chosen.
+    """
+    # If the dataset offers an explicit original/description field, keep it if available.
+    prompt_original = item.get("original_prompt") or item.get("original_description") or item.get("original") or None
+
+    candidate_keys: List[str] = []
+    if requested_categories:
+        candidate_keys.extend([f"prompt{c}" for c in requested_categories])
+    # General fallback order: 'prompt' then all known variants
+    candidate_keys.append("prompt")
+    candidate_keys.extend([f"prompt{v}" for v in PROMPT_VARIANTS])
+
+    for k in candidate_keys:
+        txt = item.get(k)
+        if isinstance(txt, str) and txt.strip():
+            return txt, (k if k != "prompt" else "prompt"), prompt_original
+
+    # Final fallback: empty string
+    return "", None, prompt_original
+
+def build_initial_prompt(item: Dict[str, Any], requested_categories: Optional[List[str]]) -> Tuple[str, Optional[str], Optional[str], Optional[str]]:
+    """
+    Returns: (final_prompt, category_label, entry_point, prompt_original)
     """
     # Common HumanEval-like keys
     entry_point = item.get("entry_point") or item.get("entrypoint") or None
-    category = item.get("category") or item.get("clarification_type") or item.get("type") or None
 
-    # Modified prompt
-    # In HumanEval, "prompt" holds the (docstring + signature) text to display to a model.
-    # In HumanEvalComm, there might be "modified_prompt" or they might overload "prompt".
-    prompt_modified = item.get("modified_prompt") or item.get("prompt") or ""
-    prompt_original = item.get("original_prompt") or item.get("original_description") or item.get("original") or None
+    # Choose which prompt text to feed the model and set the category label to that field name
+    prompt_text, category_label, prompt_original = _select_prompt_field(item, requested_categories)
 
     system_header = (
         "You are evaluating a possibly inconsistent, ambiguous, or incomplete programming problem.\n"
@@ -151,12 +161,19 @@ def build_initial_prompt(item: Dict[str, Any]) -> Tuple[str, Optional[str], Opti
         "  (B) Return Python3 code only (in a fenced block), if you are certain the requirements are fully clear.\n"
         "Respond with ONLY one of the two (questions OR code)."
     )
-    final_prompt = f"{system_header}\n\n### Problem:\n{prompt_modified}"
-    return final_prompt, category, entry_point, prompt_original
+    final_prompt = f"{system_header}\n\n### Problem:\n{prompt_text}"
+    return final_prompt, category_label, entry_point, prompt_original
 
 def load_dataset_filtered(categories: Optional[List[str]] = None, split: str = "train"):
+    """
+    HumanEvalComm doesn't expose a 'category' column; it exposes multiple prompt fields instead
+    (e.g., 'prompt1a', 'prompt1c', ...). So we generally don't filter rows here.
+    We keep this function in case a future variant adds a category-like column.
+    """
     from datasets import load_dataset
     ds = load_dataset("jie-jw-wu/HumanEvalComm", split=split)
+
+    # If the dataset *did* have a category-like column, we could filter here; otherwise we skip filtering.
     if categories:
         # Try a few likely field names for category
         key = None
@@ -164,10 +181,10 @@ def load_dataset_filtered(categories: Optional[List[str]] = None, split: str = "
             if k in ds.features:
                 key = k
                 break
-        if key is None:
-            print("[WARN] Category field not found; returning all items.")
-            return ds
-        ds = ds.filter(lambda x: x.get(key) in categories)
+        if key is not None:
+            ds = ds.filter(lambda x: x.get(key) in categories)
+        else:
+            print("[info] No explicit category field in dataset; will select among prompt variants per item.")
     return ds
 
 def prepare_generator(model_name: str):
@@ -185,7 +202,6 @@ def prepare_generator(model_name: str):
     except Exception:
         pass
     try:
-        # torch_dtype='auto' may choose bf16/fp16 depending on hardware
         load_kwargs.update(dict(torch_dtype="auto"))
     except Exception:
         pass
@@ -226,7 +242,7 @@ def main():
 
     parser = argparse.ArgumentParser()
     parser.add_argument("--model", required=True, help="HF model hub id, e.g., deepseek-ai/deepseek-coder-6.7b-instruct")
-    parser.add_argument("--categories", nargs="*", default=None, help="Subset of categories, e.g., 1a 1c 1p 2ac 2cp 2ap. Default: all")
+    parser.add_argument("--categories", nargs="*", default=None, help="Prompt variants to prefer: 1a 1c 1p 2ac 2cp 2ap 3acp. Default: try 'prompt', then all variants")
     parser.add_argument("--split", default="train")
     parser.add_argument("--limit", type=int, default=None, help="Debug: stop after N items")
     parser.add_argument("--seed", type=int, default=0)
@@ -264,27 +280,36 @@ def main():
 
     for i in range(n):
         rec = ds[i]
-        final_prompt, category, entry_point, prompt_orig = build_initial_prompt(rec)
+        final_prompt, category_label, entry_point, prompt_orig = build_initial_prompt(rec, args.categories)
 
         t0 = time.time()
         gen = generate_one(gen_pipe, final_prompt, cfg)
         dt = time.time() - t0
 
         text = gen.get("generated_text", "") or str(gen)
+
+        # Keep only ONE copy of generated text: top-level only
+        gen_slim = dict(gen)
+        if "generated_text" in gen_slim:
+            try:
+                del gen_slim["generated_text"]
+            except Exception:
+                pass
+
         has_code = contains_code_block(text)
         code = extract_code(text) if has_code else None
         questions = [] if has_code else extract_questions(text)
 
         ir = ItemResult(
             task_id=rec.get("task_id") or rec.get("problem_id") or f"idx_{i}",
-            category=category,
+            category=category_label,          # e.g., "prompt1a" or "prompt"
             entry_point=entry_point,
             prompt_modified=final_prompt,
             prompt_original=prompt_orig,
             model_name=args.model,
             seed=args.seed,
-            gen=gen,
-            generated_text=text,
+            gen=gen_slim,                     # raw dict without duplicate text
+            generated_text=text,              # single authoritative text field
             contains_code=has_code,
             extracted_code=code,
             extracted_questions=questions,
@@ -298,7 +323,7 @@ def main():
             json.dump(row, f, ensure_ascii=False, indent=2)
 
         if (i + 1) % 10 == 0 or (i + 1) == n:
-            print(f"[{i+1}/{n}] time={dt:.2f}s code={has_code} q={len(questions)}")
+            print(f"[{i+1}/{n}] time={dt:.2f}s cat={category_label} code={has_code} q={len(questions)}")
 
     total_sec = time.time() - t0_all
 
@@ -313,7 +338,7 @@ def main():
         "communication_rate": communication_rate,
         "non_code_responses": non_code,
         "runtime_sec": total_sec,
-        "categories": args.categories or "ALL",
+        "categories": args.categories or "AUTO",
     }
     print("\n=== Quick Summary ===")
     for k, v in summary.items():
@@ -342,9 +367,6 @@ def main():
         pass
 
     # Stubs for future Option-1 reliability work:
-    # - add multi-LLM judge ensemble
-    # - incorporate simple rule-based sanity checks (did response contain BOTH code and questions? treat as 'invalid')
-    # - sample 30-60 items for human labels to calibrate judge scores (Kappa, etc.)
     with open(os.path.join(args.outdir, "NEXT_STEPS.md"), "w", encoding="utf-8") as f:
         f.write(
 """# Next Steps (Option 1: Evaluation Reliability)
