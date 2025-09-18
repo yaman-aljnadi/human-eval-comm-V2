@@ -89,6 +89,10 @@ def ensure_dirs(outdir: str):
     os.makedirs(os.path.join(outdir, "artifacts"), exist_ok=True)
 
 def atomic_write(path: str, data: str, mode: str = "w", encoding: str = "utf-8"):
+    """Atomic write that also ensures the parent directory exists."""
+    parent = os.path.dirname(path)
+    if parent:
+        os.makedirs(parent, exist_ok=True)
     tmp = f"{path}.tmp-{uuid.uuid4().hex}"
     with open(tmp, mode, encoding=encoding) as f:
         f.write(data)
