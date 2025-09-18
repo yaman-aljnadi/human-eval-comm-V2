@@ -24,6 +24,13 @@ Usage example:
     --max-new-tokens 256 --temperature 1.0 --top-p 0.95 \
     --outdir ./runs/deepseek_coder_allcats
 
+  python make_dataset_v2.py \
+    --model meta-llama/Llama-3.1-8B \
+    --categories 1a 1c 1p 2ac 2ap 2cp 3acp \
+    --max-new-tokens 256 --temperature 1.0 --top-p 0.95 \
+    --outdir ./runs/meta-llama/Llama-3.1-8B
+
+
 Outputs:
   outdir/
     run_manifest.json            # run config + dataset provenance + schema ver
