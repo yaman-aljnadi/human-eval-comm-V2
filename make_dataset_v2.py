@@ -36,6 +36,11 @@ Usage example:
     --max-new-tokens 256 --temperature 1.0 --top-p 0.95 \
     --outdir ./runs/gemini-2.5-flash-lite
     
+    python make_dataset_v2.py \
+        --model deepseek/deepseek-r1:free \
+        --categories 1a 1c 1p 2ac 2ap 2cp 3acp \
+        --max-new-tokens 256 --temperature 1.0 --top-p 0.95 \
+        --outdir ./runs/openrouter/deepseek-r1-free
 
 Outputs:
   outdir/
@@ -261,6 +266,83 @@ def prepare_generator_gemini(model_name: str, cfg) -> Any:
     return gen_fn
 
 
+def prepare_generator_openrouter(model_name: str, cfg) -> Any:
+    """
+    Returns a callable with an HF-like interface:
+      gen_fn(final_prompt, **ignored) -> [{"generated_text": str, "gen_raw": dict, "latency_sec": float}]
+    Requires:
+      - pip install openai>=1.0.0
+      - env: OPENROUTER_API_KEY
+      - optional env: OPENROUTER_SITE_URL, OPENROUTER_SITE_NAME
+    """
+    try:
+        from openai import OpenAI
+    except Exception as e:
+        raise RuntimeError("openai package is required for OpenRouter. pip install openai") from e
+
+    api_key = os.getenv("OPENROUTER_API_KEY")
+    if not api_key:
+        raise RuntimeError("OPENROUTER_API_KEY env var is not set for OpenRouter.")
+
+    client = OpenAI(
+        base_url="https://openrouter.ai/api/v1",
+        api_key=api_key,
+    )
+
+    # Map your config to OpenAI-style params
+    generation_kwargs = {
+        "temperature": float(getattr(cfg, "temperature", 1.0)),
+        "top_p": float(getattr(cfg, "top_p", 0.9)),
+        # OpenRouter supports max_tokens (new tokens); your CLI uses max_new_tokens
+        "max_tokens": int(getattr(cfg, "max_new_tokens", 256)),
+    }
+
+    # Optional attribution headers for openrouter.ai rankings
+    extra_headers = {}
+    site_url = os.getenv("OPENROUTER_SITE_URL")
+    site_name = os.getenv("OPENROUTER_SITE_NAME")
+    if site_url:
+        extra_headers["HTTP-Referer"] = site_url
+    if site_name:
+        extra_headers["X-Title"] = site_name
+
+    def gen_fn(prompt_text: str, **_):
+        t0 = time.time()
+        # Simple one-turn chat with your full prompt in the user role
+        resp = client.chat.completions.create(
+            model=model_name,
+            messages=[{"role": "user", "content": prompt_text}],
+            extra_headers=extra_headers or None,
+            **generation_kwargs,
+        )
+        latency = time.time() - t0
+
+        # Defensive extraction
+        text = ""
+        try:
+            text = resp.choices[0].message.content or ""
+        except Exception:
+            text = ""
+
+        # Slim raw for parity with your HF dict
+        try:
+            usage = getattr(resp, "usage", None)
+            finish_reason = getattr(resp.choices[0], "finish_reason", None)
+            gen_raw = {
+                "usage": usage.__dict__ if getattr(usage, "__dict__", None) else dict(usage or {}),
+                "finish_reason": finish_reason,
+                "model": getattr(resp, "model", None),
+                "id": getattr(resp, "id", None),
+            }
+        except Exception:
+            gen_raw = {}
+
+        return [{"generated_text": text, "gen_raw": gen_raw, "latency_sec": latency}]
+
+    # Attach tokenizer placeholders to align with HF path
+    gen_fn.tokenizer = type("T", (), {"pad_token_id": None, "eos_token_id": None})()
+    return gen_fn
+
 # ---------- data classes ----------
 @dataclass
 class GenConfig:
@@ -372,8 +454,12 @@ def main():
 
     # Prepare generator
     use_gemini = args.model.strip().lower().startswith("gemini")
+    use_openrouter = (":" in args.model)
+
     if use_gemini:
-        gen_pipe = prepare_generator_gemini(args.model, cfg=None)  # cfg bound below after we parse args
+        gen_pipe = prepare_generator_gemini(args.model, cfg=None)
+    elif use_openrouter:
+        gen_pipe = prepare_generator_openrouter(args.model, cfg=None)
     else:
         gen_pipe = prepare_generator(args.model)
 
@@ -386,8 +472,9 @@ def main():
     )
 
     if use_gemini:
-    # Rebuild gen_pipe with the final cfg so it can map to generation_config
         gen_pipe = prepare_generator_gemini(args.model, cfg)
+    elif use_openrouter:
+        gen_pipe = prepare_generator_openrouter(args.model, cfg)
 
 
     # Paths
@@ -417,7 +504,7 @@ def main():
             final_prompt = PAPER_PROMPT_TEMPLATE.format(problem=problem.strip())
             prompt_hash = sha256_text(final_prompt)
 
-            if use_gemini:
+            if use_gemini or use_openrouter:
                 now = time.time()
                 elapsed = now - last_request_time
                 if elapsed < SECONDS_PER_REQUEST:
