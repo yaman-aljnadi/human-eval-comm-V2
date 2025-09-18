@@ -74,11 +74,6 @@ PAPER_PROMPT_TEMPLATE = (
     "or ask clarifying questions:\n\n{problem}"
 )
 
-# For Gemini rate limits 
-REQUESTS_PER_MINUTE = 15
-SECONDS_PER_REQUEST = 60.0 / REQUESTS_PER_MINUTE
-last_request_time = 0.0
-
 
 
 SCHEMA_VERSION = "comm-v2.1"
@@ -318,6 +313,11 @@ class ItemRow:
 
 # ---------- main ----------
 def main():
+    # For Gemini rate limits 
+    REQUESTS_PER_MINUTE = 15
+    SECONDS_PER_REQUEST = 60.0 / REQUESTS_PER_MINUTE
+    last_request_time = 0.0
+
     lazy_imports()
     parser = argparse.ArgumentParser()
     parser.add_argument("--model", required=True)
