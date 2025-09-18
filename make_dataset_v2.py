@@ -30,6 +30,12 @@ Usage example:
     --max-new-tokens 256 --temperature 1.0 --top-p 0.95 \
     --outdir ./runs/meta-llama/Llama-3.1-8B
 
+    python make_dataset_v2.py \
+    --model gemini-2.5-flash-lite \
+    --categories 1a 1c 1p 2ac 2ap 2cp 3acp \
+    --max-new-tokens 256 --temperature 1.0 --top-p 0.95 \
+    --outdir ./runs/gemini-2.5-flash-lite
+    
 
 Outputs:
   outdir/
@@ -68,8 +74,14 @@ PAPER_PROMPT_TEMPLATE = (
     "or ask clarifying questions:\n\n{problem}"
 )
 
-SCHEMA_VERSION = "comm-v2.1"
+# For Gemini rate limits 
+REQUESTS_PER_MINUTE = 15
+SECONDS_PER_REQUEST = 60.0 / REQUESTS_PER_MINUTE
+last_request_time = 0.0
 
+
+
+SCHEMA_VERSION = "comm-v2.1"
 # ---------- seeding ----------
 def set_all_seeds(seed: int):
     try:
@@ -406,7 +418,12 @@ def main():
             prompt_hash = sha256_text(final_prompt)
 
             if use_gemini:
-                # Our Gemini adapter returns a uniform list with timing embedded
+                now = time.time()
+                elapsed = now - last_request_time
+                if elapsed < SECONDS_PER_REQUEST:
+                    time.sleep(SECONDS_PER_REQUEST - elapsed)
+                last_request_time = time.time()
+
                 _out = gen_pipe(final_prompt)[0]
                 out = {"generated_text": _out.get("generated_text", "")}
                 out_slim = _out.get("gen_raw", {})
