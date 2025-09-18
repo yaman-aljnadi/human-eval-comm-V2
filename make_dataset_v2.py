@@ -1,176 +1,69 @@
 #!/usr/bin/env python3
 """
-make_dataset_v2.py — HumanEvalComm runner with bias-aware logging.
+make_dataset_v2.py — HumanEvalComm runner with robust, schema-stable saving.
 
-What it does
-============
-• Iterates a dataset of items and, for each requested category (e.g., 1a, 2ac),
-  generates a model response using a prompt template (paper-style by default).
-• Extracts both code and questions (from NON-code regions), even for mixed outputs.
-• Records rich metadata to enable later judge/eval (committee) analysis.
-• Writes a JSONL of item-level rows and a summary.json with run stats.
+What’s new vs your version:
+  - Strong IDs: record_id = "<task_id>::<cat>::<model>::seed<seed>"
+  - Provenance: model, sampling params, prompt hash, dataset name/version
+  - Rich per-item fields for later committee aggregation:
+      * is_question (bool), question_count, first_question, question_chars
+      * code_detected_method ("fenced" | "def-scan" | "none")
+      * timings + token settings
+  - Atomic writes + --append support for results.jsonl (+ optional .gz)
+  - Optional Parquet export for analysis (pandas/pyarrow if available)
+  - Summary saved with exact counts + schema version
+  - Everything under outdir/{by_item,artifacts} with a run_manifest.json
 
-Assumptions about dataset
-=========================
-The loader searches for a "modified description" string per category in this order:
-  1) item[f"prompt{cat}"]
-  2) item[cat]
-  3) item["prompts"][cat]            (if a nested "prompts" dict exists)
-  4) item["variants"][cat]           (if a nested "variants" dict exists)
+NOTE: This script still *generates* model outputs. Your separate script can
+ingest results.jsonl (or Parquet) to run the 3-model committee & add ratings.
 
-Additionally, it looks for:
-  • "task_id" (string) — optional; else a sequential id is used
-  • "entry_point" (string) — optional
+Usage example:
+  python make_dataset_v2.py \
+    --model deepseek-ai/deepseek-coder-6.7b-instruct \
+    --categories 1a 1c 1p 2ac 2ap 2cp 3acp \
+    --max-new-tokens 256 --temperature 1.0 --top-p 0.95 \
+    --outdir ./runs/deepseek_coder_allcats_v2
 
-Usage example
-=============
-python make_dataset_v2.py \
-  --dataset ./humanevalcomm.jsonl \
-  --model deepseek-ai/deepseek-coder-6.7b-instruct \
-  --categories 1a 1c 1p 2ac 2ap 2cp 3acp \
-  --max-new-tokens 256 --temperature 1 --top-p 0.95 \
-  --outdir ./runs/deepseek_coder_allcats --seed 123
-
-Outputs (in --outdir)
-=====================
-  items.jsonl          # one JSON record per (item, category)
-  summary.json         # aggregate stats and model/tokenizer metadata
-
+Outputs:
+  outdir/
+    run_manifest.json            # run config + dataset provenance + schema ver
+    results.jsonl[.gz]           # one line per (task_id, category)
+    results.parquet              # optional if --parquet
+    by_item/<record_id>.json     # per-sample artifact
+    summary.json                 # quick aggregates
 """
 
 import argparse
+import hashlib
 import json
 import os
 import re
 import sys
 import time
+import uuid
 from dataclasses import dataclass, asdict
 from typing import Any, Dict, List, Optional
 
-# ----------------------------
-# Prompt template (paper-like)
-# ----------------------------
-DEFAULT_PROMPT_TEMPLATE = (
+import random
+import numpy as np
+
+# ---------- regexes & helpers ----------
+CODE_FENCE_RE = re.compile(r"```(?:python)?\s*([\s\S]*?)```", re.IGNORECASE)
+DEF_RE = re.compile(r"^\s*def\s+\w+\s*\(", re.MULTILINE)
+Q_SENT_RE = re.compile(r"[^.?!]*\?")
+
+PROMPT_VARIANTS_ALL = ["1a", "1c", "1p", "2ac", "2ap", "2cp", "3acp"]
+
+PAPER_PROMPT_TEMPLATE = (
     "You are an expert software developer who writes high quality code. "
     "With below information, please either generate Python3 code (Respond directly with code only with markdown), "
     "or ask clarifying questions:\n\n{problem}"
 )
 
-# ----------------------------
-# Simple dataset loader
-# ----------------------------
-def load_jsonl(path: str) -> List[Dict[str, Any]]:
-    items = []
-    with open(path, "r", encoding="utf-8") as f:
-        for line in f:
-            line = line.strip()
-            if not line:
-                continue
-            items.append(json.loads(line))
-    return items
+SCHEMA_VERSION = "comm-v2.1"
 
-def resolve_modified_description(item: Dict[str, Any], cat: str) -> Optional[str]:
-    # Try common keys: prompt{cat}, {cat}, prompts[cat], variants[cat]
-    keys = [f"prompt{cat}", cat]
-    for k in keys:
-        if k in item and isinstance(item[k], str) and item[k].strip():
-            return item[k]
-
-    for parent in ("prompts", "variants"):
-        if parent in item and isinstance(item[parent], dict):
-            v = item[parent].get(cat)
-            if isinstance(v, str) and v.strip():
-                return v
-    return None
-
-# ----------------------------
-# Regex / heuristics
-# ----------------------------
-CODE_FENCE_RE = re.compile(r"^```", re.MULTILINE)
-DEF_RE = re.compile(r"^\s*(def|class)\s+\w+\s*\(", re.MULTILINE)
-
-INTERROGATIVE_START_RE = re.compile(
-    r"(?i)^\s*(what|which|how|why|when|where|who|whom|whose|should|do|does|did|is|are|was|were|can|could|would|may|must|will)\b"
-)
-
-def contains_code_block(text: str) -> bool:
-    if CODE_FENCE_RE.search(text):
-        return True
-    return DEF_RE.search(text) is not None
-
-def extract_code(text: str) -> Optional[str]:
-    """
-    Returns the FIRST fenced code block if any (including fences).
-    """
-    lines = text.splitlines(keepends=False)
-    out = []
-    capturing = False
-    for line in lines:
-        if line.strip().startswith("```"):
-            if not capturing:
-                capturing = True
-                out.append(line)
-            else:
-                out.append(line)
-                return "\n".join(out)
-        elif capturing:
-            out.append(line)
-    return None
-
-def _strip_fenced_code(text: str) -> str:
-    cleaned = []
-    in_fence = False
-    for line in text.splitlines():
-        if line.strip().startswith("```"):
-            in_fence = not in_fence
-            continue
-        if not in_fence:
-            cleaned.append(line)
-    return "\n".join(cleaned)
-
-def extract_questions_sane(text: str) -> List[str]:
-    """
-    Extract question-like lines from NON-code regions.
-    Heuristics:
-      - line ends with '?' OR
-      - starts with a common interrogative (even without '?')
-    Deduplicated (case/space-insensitive).
-    """
-    non_code = _strip_fenced_code(text)
-    qs = []
-    for raw in non_code.splitlines():
-        line = raw.strip()
-        if not line:
-            continue
-        if line.endswith("?") or INTERROGATIVE_START_RE.match(line):
-            qs.append(line)
-    # deduplicate lightly
-    seen = set()
-    dedup = []
-    for q in qs:
-        k = re.sub(r"\s+", " ", q.lower())
-        if k not in seen:
-            seen.add(k)
-            dedup.append(q)
-    return dedup
-
-def count_code_fences(text: str) -> int:
-    return sum(1 for line in text.splitlines() if line.strip().startswith("```"))
-
-# ----------------------------
-# Token counting helpers
-# ----------------------------
-def token_count(tok, text: str) -> int:
-    try:
-        return len(tok(text).input_ids)
-    except Exception:
-        return 0
-
-# ----------------------------
-# Seeding helpers
-# ----------------------------
+# ---------- seeding ----------
 def set_all_seeds(seed: int):
-    import random, numpy as np
     try:
         import torch
         torch.manual_seed(seed)
@@ -186,274 +79,349 @@ def set_all_seeds(seed: int):
     random.seed(seed)
     np.random.seed(seed)
 
-# ----------------------------
-# Data classes
-# ----------------------------
-@dataclass
-class GenConfig:
-    max_new_tokens: int = 256
-    temperature: float = 0.8
-    top_p: float = 0.95
-    do_sample: bool = True
-    repetition_penalty: float = 1.0
+# ---------- small utils ----------
+def sha256_text(s: str) -> str:
+    return hashlib.sha256(s.encode("utf-8")).hexdigest()
 
-@dataclass
-class ItemOut:
-    task_id: str
-    category: str                  # e.g., 1a, 2ac, ...
-    entry_point: Optional[str]
-    prompt_field: str              # e.g., "prompt1a"
-    prompt_text: str               # the selected modified description
-    prompt_final: str              # resolved prompt after {problem} substitution
-    model_name: str
-    gen_raw: Dict[str, Any]        # raw pipeline return (slimmed)
-    generated_text: str
-    contains_code: bool
-    extracted_code: Optional[str]
-    extracted_questions: List[str]
-    asked_question: bool
-    has_backticks: bool
-    num_code_fences: int
-    num_questions: int
-    response_mode: str             # code_only | question_only | mixed | other
-    num_tokens_prompt: int
-    num_tokens_generated: int
-    latency_sec: float
-    seed: int
+def ensure_dirs(outdir: str):
+    os.makedirs(outdir, exist_ok=True)
+    os.makedirs(os.path.join(outdir, "by_item"), exist_ok=True)
+    os.makedirs(os.path.join(outdir, "artifacts"), exist_ok=True)
 
-# ----------------------------
-# HF model prep & generation
-# ----------------------------
-def prepare_generator(model_name: str, seed: int = 0):
+def atomic_write(path: str, data: str, mode: str = "w", encoding: str = "utf-8"):
+    tmp = f"{path}.tmp-{uuid.uuid4().hex}"
+    with open(tmp, mode, encoding=encoding) as f:
+        f.write(data)
+    os.replace(tmp, path)
+
+def append_jsonl(path: str, rows: List[Dict[str, Any]], gzip: bool = False):
+    if gzip:
+        import gzip as _gzip
+        mode = "ab"
+        with _gzip.open(path, mode) as f:
+            for r in rows:
+                line = (json.dumps(r, ensure_ascii=False) + "\n").encode("utf-8")
+                f.write(line)
+    else:
+        with open(path, "a", encoding="utf-8") as f:
+            for r in rows:
+                f.write(json.dumps(r, ensure_ascii=False) + "\n")
+
+def detect_code_and_questions(text: str):
+    """Return: contains_code(bool), extracted_code(str|None),
+               questions(list[str]), code_detected_method(str)"""
+    method = "none"
+    m = CODE_FENCE_RE.search(text)
+    if m:
+        method = "fenced"
+        return True, m.group(1).strip(), [], method
+    if DEF_RE.search(text):
+        lines = text.splitlines()
+        for i, ln in enumerate(lines):
+            if DEF_RE.match(ln):
+                method = "def-scan"
+                return True, "\n".join(lines[i:]).strip(), [], method
+    # No code detected => try extract questions (filter out obvious code-y lines)
+    chunks = [c.strip() for c in text.split('?') if c.strip()]
+    qs = []
+    for c in chunks:
+        if 'def ' in c or 'return ' in c or '```' in c:
+            continue
+        qs.append(c + '?')
+    for m in Q_SENT_RE.finditer(text):
+        q = m.group(0).strip()
+        if q and '```' not in q and q not in qs:
+            qs.append(q)
+    # de-dup
+    seen, out = set(), []
+    for q in qs:
+        if q not in seen:
+            seen.add(q)
+            out.append(q)
+    return False, None, out, method
+
+# ---------- HF generation ----------
+def lazy_imports():
+    try:
+        import torch  # noqa: F401
+    except Exception:
+        print("ERROR: PyTorch is required.", file=sys.stderr)
+        raise
+    try:
+        from transformers import AutoModelForCausalLM, AutoTokenizer, pipeline  # noqa: F401
+    except Exception:
+        print("ERROR: transformers is required.", file=sys.stderr)
+        raise
+    try:
+        from datasets import load_dataset  # noqa: F401
+    except Exception:
+        print("ERROR: datasets is required.", file=sys.stderr)
+        raise
+
+def prepare_generator(model_name: str):
     from transformers import AutoModelForCausalLM, AutoTokenizer, pipeline
-
     tok = AutoTokenizer.from_pretrained(model_name, use_fast=True, trust_remote_code=True)
     if tok.pad_token is None and tok.eos_token is not None:
         tok.pad_token = tok.eos_token
-
     load_kwargs = dict(device_map="auto", trust_remote_code=True)
+    # If available, these can improve memory/throughput; ignore if unsupported
+    try:
+        load_kwargs.update(dict(load_in_8bit=True))
+    except Exception:
+        pass
+    try:
+        load_kwargs.update(dict(torch_dtype="auto"))
+    except Exception:
+        pass
     model = AutoModelForCausalLM.from_pretrained(model_name, **load_kwargs)
-
     gen_pipe = pipeline(
         "text-generation",
         model=model,
         tokenizer=tok,
         device_map="auto",
-        trust_remote_code=True,
-    )
-
-    # Create a torch.Generator for reproducible sampling
-    try:
-        import torch
-        device = 0 if torch.cuda.is_available() else -1
-        g = torch.Generator(device="cuda" if device == 0 else "cpu")
-        g.manual_seed(seed)
-    except Exception:
-        g = None
-
-    return gen_pipe, tok, g, model
-
-def generate_one(gen_pipe, prompt: str, cfg: GenConfig, generator=None) -> Dict[str, Any]:
-    out = gen_pipe(
-        prompt,
-        max_new_tokens=cfg.max_new_tokens,
-        temperature=cfg.temperature,
-        top_p=cfg.top_p,
-        do_sample=cfg.do_sample,
-        repetition_penalty=cfg.repetition_penalty,
-        generator=generator,
         return_full_text=True,
-    )[0]
-    return out
+    )
+    return gen_pipe
 
-# ----------------------------
-# Args
-# ----------------------------
-def parse_args():
-    p = argparse.ArgumentParser()
-    p.add_argument("--dataset", type=str, required=True, help="Path to dataset JSONL.")
-    p.add_argument("--model", type=str, required=True, help="HF model repo id or path.")
-    p.add_argument("--categories", nargs="+", required=True,
-                   help="List of categories to run, e.g. 1a 1c 1p 2ac 2ap 2cp 3acp")
-    p.add_argument("--prompt-template", type=str, default=None,
-                   help="Optional path to a prompt template file with '{problem}'.")
-    p.add_argument("--max-new-tokens", type=int, default=256)
-    p.add_argument("--temperature", type=float, default=0.8)
-    p.add_argument("--top-p", type=float, default=0.95)
-    p.add_argument("--do-sample", action="store_true", default=True)
-    p.add_argument("--no-sample", dest="do_sample", action="store_false")
-    p.add_argument("--repetition-penalty", type=float, default=1.0)
-    p.add_argument("--seed", type=int, default=123)
-    p.add_argument("--outdir", type=str, required=True)
-    return p.parse_args()
+# ---------- data classes ----------
+@dataclass
+class GenConfig:
+    max_new_tokens: int = 256
+    temperature: float = 1.0
+    top_p: float = 0.9
+    do_sample: bool = True
+    repetition_penalty: float = 1.0
 
-# ----------------------------
-# Main
-# ----------------------------
+@dataclass
+class ItemRow:
+    # Identifiers
+    record_id: str
+    task_id: str
+    category: str
+    entry_point: Optional[str]
+
+    # Prompt provenance
+    prompt_field: str
+    prompt_text: str
+    prompt_final: str
+    prompt_sha256: str
+
+    # Model provenance
+    model_name: str
+    seed: int
+    gen_params: Dict[str, Any]
+
+    # Raw output
+    generated_text: str
+    gen_raw: Dict[str, Any]  # slimmed HF dict (no generated_text)
+
+    # Parsed output
+    contains_code: bool
+    code_detected_method: str
+    extracted_code: Optional[str]
+    is_question: bool
+    extracted_questions: List[str]
+    question_count: int
+    first_question: Optional[str]
+    question_chars: int
+
+    # Timings
+    latency_sec: float
+
+    # Placeholders reserved for committee/evaluator later
+    committee_label: Optional[str] = None          # e.g., "code" | "question" | "tie" | "inconclusive"
+    evaluator_quality: Optional[int] = None        # 1/2/3 (paper), to be filled later
+    evaluator_answers: Optional[str] = None        # filled later
+
+# ---------- main ----------
 def main():
-    args = parse_args()
-    os.makedirs(args.outdir, exist_ok=True)
+    lazy_imports()
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--model", required=True)
+    parser.add_argument("--split", default="train")
+    parser.add_argument("--categories", nargs="*", default=PROMPT_VARIANTS_ALL)
+    parser.add_argument("--limit", type=int, default=None)
+    parser.add_argument("--seed", type=int, default=0)
+    parser.add_argument("--max-new-tokens", type=int, default=256)
+    parser.add_argument("--temperature", type=float, default=1.0)
+    parser.add_argument("--top-p", type=float, default=0.9)
+    parser.add_argument("--repetition-penalty", type=float, default=1.0)
+    parser.add_argument("--outdir", required=True)
 
-    # Prompt template setup
-    if args.prompt_template and os.path.exists(args.prompt_template):
-        with open(args.prompt_template, "r", encoding="utf-8") as f:
-            prompt_template = f.read()
-    else:
-        prompt_template = DEFAULT_PROMPT_TEMPLATE
+    # Saving options
+    parser.add_argument("--append", action="store_true", help="Append to results.jsonl(.gz) instead of overwriting.")
+    parser.add_argument("--gzip", action="store_true", help="Write results.jsonl.gz instead of results.jsonl.")
+    parser.add_argument("--parquet", action="store_true", help="Also write results.parquet if pandas/pyarrow available.")
 
-    # Seeding
+    args = parser.parse_args()
     set_all_seeds(args.seed)
 
-    # Load model
-    gen_pipe, tok, torch_generator, model = prepare_generator(args.model, seed=args.seed)
+    # Provenance + schema
+    ensure_dirs(args.outdir)
+    manifest = {
+        "schema_version": SCHEMA_VERSION,
+        "dataset": "jie-jw-wu/HumanEvalComm",
+        "split": args.split,
+        "categories": args.categories,
+        "run_id": uuid.uuid4().hex,
+        "model": args.model,
+        "seed": args.seed,
+        "gen_params": {
+            "max_new_tokens": args.max_new_tokens,
+            "temperature": args.temperature,
+            "top_p": args.top_p,
+            "repetition_penalty": args.repetition_penalty,
+            "do_sample": True,
+        },
+        "created_utc": int(time.time()),
+    }
+    atomic_write(os.path.join(args.outdir, "run_manifest.json"), json.dumps(manifest, indent=2))
 
-    # Load data
-    data = load_jsonl(args.dataset)
+    # Save initial config too (back-compat with your layout)
+    with open(os.path.join(args.outdir, "run_config.json"), "w", encoding="utf-8") as f:
+        json.dump(vars(args), f, indent=2)
 
-    # Gen config
+    # Load dataset
+    from datasets import load_dataset
+    ds = load_dataset("jie-jw-wu/HumanEvalComm", split=args.split)
+    n_base = len(ds) if args.limit is None else min(args.limit, len(ds))
+    print(f"[load] base items: {n_base} (of {len(ds)}) ; categories per item: {args.categories}")
+
+    # Prepare generator
+    gen_pipe = prepare_generator(args.model)
+
     cfg = GenConfig(
         max_new_tokens=args.max_new_tokens,
         temperature=args.temperature,
         top_p=args.top_p,
-        do_sample=args.do_sample,
+        do_sample=True,
         repetition_penalty=args.repetition_penalty,
     )
 
-    rows: List[Dict[str, Any]] = []
+    # Paths
+    results_path = os.path.join(args.outdir, "results.jsonl.gz" if args.gzip else "results.jsonl")
+    by_item_dir = os.path.join(args.outdir, "by_item")
 
-    # In case dataset lacks explicit IDs
-    def _item_id(i, item):
-        return str(item.get("task_id") or item.get("id") or f"idx_{i:05d}")
+    # If not appending, (over)write an empty file atomically to start fresh
+    if not args.append and os.path.exists(results_path):
+        os.remove(results_path)
 
-    t_all0 = time.time()
-    for i, item in enumerate(data):
+    all_rows_for_parquet: List[Dict[str, Any]] = []
+    t0_all = time.time()
+    expanded = 0
+
+    for i in range(n_base):
+        item = ds[i]
+        entry_point = item.get("entry_point")
+        task_id = item.get("task_id") or item.get("problem_id") or f"idx_{i}"
+
         for cat in args.categories:
-            problem = resolve_modified_description(item, cat)
-            if problem is None:
-                # skip gracefully if category not present in this item
+            field = f"prompt{cat}"
+            problem = item.get(field)
+            if not isinstance(problem, str) or not problem.strip():
+                # Some combos (2ac/2cp/2ap/3acp) may be missing; skip gracefully
                 continue
 
-            # Compose final prompt
-            try:
-                final_prompt = prompt_template.format(problem=problem)
-            except KeyError as e:
-                print(f"[WARN] Missing key in prompt template: {e}. Falling back to default.", file=sys.stderr)
-                final_prompt = DEFAULT_PROMPT_TEMPLATE.format(problem=problem)
+            final_prompt = PAPER_PROMPT_TEMPLATE.format(problem=problem.strip())
+            prompt_hash = sha256_text(final_prompt)
 
-            # Generate
             t0 = time.time()
-            gen = generate_one(gen_pipe, final_prompt, cfg, generator=torch_generator)
+            out = gen_pipe(
+                final_prompt,
+                max_new_tokens=cfg.max_new_tokens,
+                temperature=cfg.temperature,
+                top_p=cfg.top_p,
+                do_sample=cfg.do_sample,
+                repetition_penalty=cfg.repetition_penalty,
+                pad_token_id=gen_pipe.tokenizer.pad_token_id,
+                eos_token_id=gen_pipe.tokenizer.eos_token_id,
+            )[0]
             dt = time.time() - t0
 
-            # Normalize output dict a bit
-            text = gen.get("generated_text", "")
-            gen_slim = {
-                k: gen.get(k)
-                for k in ("generated_text", "details", "index")
-                if k in gen
-            }
+            text = out.get("generated_text", "") or str(out)
+            out_slim = dict(out)
+            out_slim.pop("generated_text", None)
 
-            # Analysis
-            has_code = contains_code_block(text)
-            code = extract_code(text) if has_code else None
-            questions = extract_questions_sane(text)
-            asked_question = len(questions) > 0
-            num_q = len(questions)
-            num_fences = count_code_fences(text)
-            has_backticks = ("```" in text)
+            has_code, code, questions, method = detect_code_and_questions(text)
+            is_question = not has_code
+            q_count = len(questions)
+            first_q = questions[0] if q_count else None
+            q_chars = sum(len(q) for q in questions)
 
-            # response mode
-            if has_code and not asked_question:
-                response_mode = "code_only"
-            elif asked_question and not has_code:
-                response_mode = "question_only"
-            elif has_code and asked_question:
-                response_mode = "mixed"
-            else:
-                response_mode = "other"
+            record_id = f"{task_id}::{cat}::{args.model}::seed{args.seed}"
 
-            n_tok_prompt = token_count(tok, final_prompt)
-            n_tok_total = token_count(tok, text)
-            n_tok_gen = max(0, n_tok_total - n_tok_prompt)
-
-            task_id = _item_id(i, item)
-            entry_point = item.get("entry_point")
-
-            rec = ItemOut(
+            row = ItemRow(
+                record_id=record_id,
                 task_id=task_id,
                 category=cat,
                 entry_point=entry_point,
-                prompt_field=f"prompt{cat}",
+                prompt_field=field,
                 prompt_text=problem,
                 prompt_final=final_prompt,
+                prompt_sha256=prompt_hash,
                 model_name=args.model,
-                gen_raw=gen_slim,
-                generated_text=text,
-                contains_code=has_code,
-                extracted_code=code,
-                extracted_questions=questions,
-                asked_question=asked_question,
-                has_backticks=has_backticks,
-                num_code_fences=num_fences,
-                num_questions=num_q,
-                response_mode=response_mode,
-                num_tokens_prompt=n_tok_prompt,
-                num_tokens_generated=n_tok_gen,
-                latency_sec=dt,
                 seed=args.seed,
+                gen_params=asdict(cfg),
+                generated_text=text,
+                gen_raw=out_slim,
+                contains_code=has_code,
+                code_detected_method=method,
+                extracted_code=code,
+                is_question=is_question,
+                extracted_questions=questions,
+                question_count=q_count,
+                first_question=first_q,
+                question_chars=q_chars,
+                latency_sec=dt,
             )
-            rows.append(asdict(rec))
+            row_dict = asdict(row)
 
-    total_sec = time.time() - t_all0
+            # Per-item JSON (atomic)
+            per_path = os.path.join(by_item_dir, f"{record_id.replace('::','__')}.json")
+            atomic_write(per_path, json.dumps(row_dict, ensure_ascii=False, indent=2))
 
-    # Write items.jsonl
-    items_path = os.path.join(args.outdir, "items.jsonl")
-    with open(items_path, "w", encoding="utf-8") as f:
-        for r in rows:
-            f.write(json.dumps(r, ensure_ascii=False) + "\n")
+            # Append to JSONL (streaming)
+            append_jsonl(results_path, [row_dict], gzip=args.gzip)
 
-    # Summary stats
-    asked_any = sum(1 for r in rows if r.get("asked_question"))
-    comm_rate_strict = asked_any / max(1, len(rows))
+            # Keep for parquet
+            all_rows_for_parquet.append(row_dict)
+            expanded += 1
 
-    non_code = sum(1 for r in rows if not r.get("contains_code"))
-    mixed_rate = sum(1 for r in rows if r.get("response_mode") == "mixed") / max(1, len(rows))
+        if (i + 1) % 10 == 0 or (i + 1) == n_base:
+            print(f"[{i+1}/{n_base}] expanded rows so far: {expanded}")
 
-    # Model meta
-    model_meta = {
-        "model_name": getattr(model, "name_or_path", args.model),
-        "model_type": getattr(getattr(model, "config", None), "__class__", type("x", (), {})).__name__,
-        "tokenizer_name": getattr(getattr(gen_pipe, "tokenizer", None), "name_or_path", "unknown"),
-        "pad_token_id": getattr(gen_pipe.tokenizer, "pad_token_id", None) if getattr(gen_pipe, "tokenizer", None) else None,
-        "eos_token_id": getattr(gen_pipe.tokenizer, "eos_token_id", None) if getattr(gen_pipe, "tokenizer", None) else None,
-        "inference_kwargs": {
-            "max_new_tokens": args.max_new_tokens,
-            "temperature": args.temperature,
-            "top_p": args.top_p,
-            "do_sample": args.do_sample,
-            "repetition_penalty": args.repetition_penalty,
-            "seed": args.seed,
-        },
-    }
+    total_sec = time.time() - t0_all
+
+    # Quick metrics (paper: Communication Rate = non-code / total)
+    total = expanded
+    non_code = sum(1 for r in all_rows_for_parquet if r["is_question"])
+    comm_rate = (non_code / total) if total else 0.0
 
     summary = {
-        "total": len(rows),
-        "communication_rate_strict": comm_rate_strict,
-        "mixed_output_rate": mixed_rate,
+        "schema_version": SCHEMA_VERSION,
+        "model": args.model,
+        "base_items": n_base,
+        "expanded_rows": total,
+        "communication_rate": comm_rate,   # matches paper definition
         "non_code_responses": non_code,
         "runtime_sec": total_sec,
         "categories": args.categories,
-        "model_meta": model_meta,
+        "results_file": os.path.basename(results_path),
     }
-
-    with open(os.path.join(args.outdir, "summary.json"), "w", encoding="utf-8") as f:
-        json.dump(summary, f, indent=2)
-
-    # Console summary
+    atomic_write(os.path.join(args.outdir, "summary.json"), json.dumps(summary, indent=2))
     print("\n=== Summary ===")
     for k, v in summary.items():
         print(f"{k}: {v}")
-    print(f"\nWrote:\n  {items_path}\n  {os.path.join(args.outdir, 'summary.json')}")
+
+    # Optional Parquet
+    if args.parquet:
+        try:
+            import pandas as pd
+            df = pd.DataFrame(all_rows_for_parquet)
+            df.to_parquet(os.path.join(args.outdir, "results.parquet"), index=False)
+            print("[write] results.parquet")
+        except Exception as e:
+            print(f"[warn] parquet export skipped: {e}")
 
 if __name__ == "__main__":
     main()
