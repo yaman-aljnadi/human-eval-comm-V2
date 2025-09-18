@@ -22,7 +22,7 @@ Usage example:
     --model deepseek-ai/deepseek-coder-6.7b-instruct \
     --categories 1a 1c 1p 2ac 2ap 2cp 3acp \
     --max-new-tokens 256 --temperature 1.0 --top-p 0.95 \
-    --outdir ./runs/deepseek_coder_allcats_v2
+    --outdir ./runs/deepseek_coder_allcats
 
 Outputs:
   outdir/
@@ -383,7 +383,7 @@ def main():
             # Per-item JSON (atomic)
             fn = f"{task_id}__{cat}.json"
             with open(os.path.join(args.outdir, "by_item", fn), "w", encoding="utf-8") as f:
-                json.dump(row, f, ensure_ascii=False, indent=2)
+                json.dump(row_dict, f, ensure_ascii=False, indent=2)
 
             # Append to JSONL (streaming)
             append_jsonl(results_path, [row_dict], gzip=args.gzip)
