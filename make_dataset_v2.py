@@ -50,6 +50,7 @@ import time
 import uuid
 from dataclasses import dataclass, asdict
 from typing import Any, Dict, List, Optional
+import google.generativeai as genai
 
 import random
 import numpy as np
@@ -194,6 +195,65 @@ def prepare_generator(model_name: str):
     )
     return gen_pipe
 
+def prepare_generator_gemini(model_name: str, cfg) -> Any:
+    """
+    Returns a callable with a HF-like interface:
+      gen_fn(final_prompt, **ignored) -> {"generated_text": str, "gen_raw": dict}
+    """
+    if genai is None:
+        raise RuntimeError("google-generativeai is not installed. pip install google-generativeai")
+
+    api_key = os.getenv("GEMINI_API_KEY")
+    if not api_key:
+        raise RuntimeError("GEMINI_API_KEY env var is not set.")
+    genai.configure(api_key=api_key)
+
+    # Build the model
+    model = genai.GenerativeModel(model_name)
+
+    # Map your config to Gemini generation_config
+    generation_config = {
+        "max_output_tokens": int(getattr(cfg, "max_new_tokens", 256)),
+        "temperature": float(getattr(cfg, "temperature", 1.0)),
+        "top_p": float(getattr(cfg, "top_p", 0.9)),
+        # You can add "top_k": N if you want; not in your CLI today
+        # "response_mime_type": "text/plain",
+    }
+
+    def gen_fn(prompt_text: str, **_):
+        t0 = time.time()
+        resp = model.generate_content(
+            prompt_text,
+            generation_config=generation_config,
+        )
+        dt = time.time() - t0
+
+        # Pull a plain text; fall back defensively
+        try:
+            text = resp.text or ""
+        except Exception:
+            text = ""
+
+        # Make a slim raw dict for parity with your HF "gen_raw"
+        try:
+            usage = getattr(resp, "usage_metadata", None)
+            candidates = getattr(resp, "candidates", None)
+            gen_raw = {
+                "usage_metadata": getattr(usage, "__dict__", usage) if usage else None,
+                "num_candidates": len(candidates) if candidates else 0,
+                "finish_reasons": [getattr(c, "finish_reason", None) for c in (candidates or [])],
+            }
+        except Exception:
+            gen_raw = {}
+
+        # Mirror HF pipeline return shape minimally
+        return [{"generated_text": text, "gen_raw": gen_raw, "latency_sec": dt}]
+
+    # Attach attrs used in your HF path to keep calls uniform
+    gen_fn.tokenizer = type("T", (), {"pad_token_id": None, "eos_token_id": None})()
+    return gen_fn
+
+
 # ---------- data classes ----------
 @dataclass
 class GenConfig:
@@ -299,7 +359,11 @@ def main():
     print(f"[load] base items: {n_base} (of {len(ds)}) ; categories per item: {args.categories}")
 
     # Prepare generator
-    gen_pipe = prepare_generator(args.model)
+    use_gemini = args.model.strip().lower().startswith("gemini")
+    if use_gemini:
+        gen_pipe = prepare_generator_gemini(args.model, cfg=None)  # cfg bound below after we parse args
+    else:
+        gen_pipe = prepare_generator(args.model)
 
     cfg = GenConfig(
         max_new_tokens=args.max_new_tokens,
@@ -308,6 +372,11 @@ def main():
         do_sample=True,
         repetition_penalty=args.repetition_penalty,
     )
+
+    if use_gemini:
+    # Rebuild gen_pipe with the final cfg so it can map to generation_config
+        gen_pipe = prepare_generator_gemini(args.model, cfg)
+
 
     # Paths
     results_path = os.path.join(args.outdir, "results.jsonl.gz" if args.gzip else "results.jsonl")
@@ -336,18 +405,28 @@ def main():
             final_prompt = PAPER_PROMPT_TEMPLATE.format(problem=problem.strip())
             prompt_hash = sha256_text(final_prompt)
 
-            t0 = time.time()
-            out = gen_pipe(
-                final_prompt,
-                max_new_tokens=cfg.max_new_tokens,
-                temperature=cfg.temperature,
-                top_p=cfg.top_p,
-                do_sample=cfg.do_sample,
-                repetition_penalty=cfg.repetition_penalty,
-                pad_token_id=gen_pipe.tokenizer.pad_token_id,
-                eos_token_id=gen_pipe.tokenizer.eos_token_id,
-            )[0]
-            dt = time.time() - t0
+            if use_gemini:
+                # Our Gemini adapter returns a uniform list with timing embedded
+                _out = gen_pipe(final_prompt)[0]
+                out = {"generated_text": _out.get("generated_text", "")}
+                out_slim = _out.get("gen_raw", {})
+                dt = _out.get("latency_sec", None)
+            else:
+                t0 = time.time()
+                _out = gen_pipe(
+                    final_prompt,
+                    max_new_tokens=cfg.max_new_tokens,
+                    temperature=cfg.temperature,
+                    top_p=cfg.top_p,
+                    do_sample=cfg.do_sample,
+                    repetition_penalty=cfg.repetition_penalty,
+                    pad_token_id=gen_pipe.tokenizer.pad_token_id,
+                    eos_token_id=gen_pipe.tokenizer.eos_token_id,
+                )[0]
+                dt = time.time() - t0
+                out = _out
+                out_slim = dict(_out)
+                out_slim.pop("generated_text", None)
 
             text = out.get("generated_text", "") or str(out)
             out_slim = dict(out)
