@@ -4,6 +4,19 @@ import argparse, json, os, re, sys, time
 from dataclasses import dataclass, asdict
 from typing import Any, Dict, List, Optional
 
+"""
+ export GEMINI_API_KEY="YOUR_KEY"
+
+ python make_dataset_v2_gemini_ready.py \
+   --backend gemini \
+   --model gemini-2.5-flash \
+   --categories 1a 1c 1p 2ac 2ap 2cp 3acp \
+   --max-new-tokens 256 --temperature 0.8 --top-p 0.95 \
+   --outdir runs/gemini_2_5_flash_allcats \
+   --limit 10
+
+"""
+
 # ---------- unchanged helpers (code/question extraction) ----------
 CODE_FENCE_RE = re.compile(r"```(?:python)?\s*([\s\S]*?)```", re.IGNORECASE)
 DEF_RE = re.compile(r"^\s*def\s+\w+\s*\(", re.MULTILINE)
@@ -122,7 +135,6 @@ def generate_one_gemini(client, model: str, prompt: str, cfg: GenConfig) -> Dict
     resp = client.models.generate_content(
         model=model,
         contents=prompt,
-        generation_config=generation_config,
     )
     text = getattr(resp, "text", None)
     if text is None:
