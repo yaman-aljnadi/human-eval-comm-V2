@@ -289,11 +289,11 @@ def prepare_generator_openrouter(model_name: str, cfg) -> Any:
         api_key=api_key,
     )
 
-    # Map your config to OpenAI-style params
+    # Map your config to OpenAI-style params (sane defaults)
     generation_kwargs = {
-        "temperature": float(getattr(cfg, "temperature", 1.0)),
+        "temperature": float(getattr(cfg, "temperature", 1.0)),     # steadier default
         "top_p": float(getattr(cfg, "top_p", 0.9)),
-        # OpenRouter supports max_tokens (new tokens); your CLI uses max_new_tokens
+        # OpenRouter uses max_tokens (new tokens). Give reasoning models room.
         "max_tokens": int(getattr(cfg, "max_new_tokens", 256)),
     }
 
@@ -306,23 +306,52 @@ def prepare_generator_openrouter(model_name: str, cfg) -> Any:
     if site_name:
         extra_headers["X-Title"] = site_name
 
+    def _extract_text_from_message(msg) -> str:
+        """Robustly extract visible text from an OpenRouter message object."""
+        # Case 1: plain string content
+        content = getattr(msg, "content", None)
+        if isinstance(content, str) and content:
+            return content
+
+        # Case 2: list of parts (content array)
+        if isinstance(content, list):
+            parts = []
+            for p in content:
+                p_type = getattr(p, "type", None) if hasattr(p, "type") else (p.get("type") if isinstance(p, dict) else None)
+                p_text = getattr(p, "text", None) if hasattr(p, "text") else (p.get("text") if isinstance(p, dict) else None)
+                # Prefer standard textual parts; some providers label final text as "output_text"
+                if p_text and (p_type in (None, "text", "output_text")):
+                    parts.append(p_text)
+            if parts:
+                return "".join(parts)
+
+        # Case 3: last resort—if a provider exposed a 'reasoning' field and content is empty
+        reasoning = getattr(msg, "reasoning", None)
+        if isinstance(reasoning, str) and reasoning:
+            return reasoning
+
+        return ""
+
     def gen_fn(prompt_text: str, **_):
         t0 = time.time()
-        # Simple one-turn chat with your full prompt in the user role
+        # IMPORTANT: Ask for less visible 'thinking' and exclude it from the response.
+        # Many reasoning models (e.g., deepseek-r1) honor this on OpenRouter.
         resp = client.chat.completions.create(
             model=model_name,
             messages=[{"role": "user", "content": prompt_text}],
+            reasoning={"exclude": True, "effort": "low"},
             extra_headers=extra_headers or None,
             **generation_kwargs,
         )
         latency = time.time() - t0
 
         # Defensive extraction
-        text = ""
         try:
-            text = resp.choices[0].message.content or ""
+            msg = resp.choices[0].message
         except Exception:
-            text = ""
+            msg = None
+
+        text = _extract_text_from_message(msg) if msg is not None else ""
 
         # Slim raw for parity with your HF dict
         try:
@@ -339,7 +368,7 @@ def prepare_generator_openrouter(model_name: str, cfg) -> Any:
 
         return [{"generated_text": text, "gen_raw": gen_raw, "latency_sec": latency}]
 
-    # Attach tokenizer placeholders to align with HF path
+    # Tokenizer placeholders to align with HF path
     gen_fn.tokenizer = type("T", (), {"pad_token_id": None, "eos_token_id": None})()
     return gen_fn
 
