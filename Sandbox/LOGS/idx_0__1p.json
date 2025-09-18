@@ -1,0 +1,25 @@
+{
+  "task_id": "idx_0",
+  "category": "1p",
+  "entry_point": "has_close_elements",
+  "prompt_field": "prompt1p",
+  "prompt_text": "from typing import List\n\n\ndef candidate(...) -> bool:\n \"\"\" Check given a list of number.\"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List\n\n\ndef candidate(...) -> bool:\n \"\"\" Check given a list of number.\"\"\"",
+  "model_name": "gemini-2.5-flash",
+  "backend": "gemini",
+  "gen_raw": {},
+  "generated_text": "The description \"Check given a list of number\" is too broad. Could you please specify **what condition** the `candidate` function should check for in the list of numbers to return `True` or `False`?\n\nFor example:\n*   Should it check if all numbers are positive?\n*   Should it check if the list contains any duplicates?\n*   Should it check if the list is sorted in ascending order?\n*   Should it check if the sum of numbers is greater than a certain value?\n*   Should it check if the list is empty?\n\nPlease provide more details about the specific check required.",
+  "contains_code": false,
+  "extracted_code": null,
+  "extracted_questions": [
+    "For example:\n*   Should it check if all numbers are positive?",
+    "*   Should it check if the list contains any duplicates?",
+    "*   Should it check if the list is sorted in ascending order?",
+    "*   Should it check if the sum of numbers is greater than a certain value?",
+    "*   Should it check if the list is empty?",
+    "Please provide more details about the specific check required.?",
+    "Could you please specify **what condition** the `candidate` function should check for in the list of numbers to return `True` or `False`?"
+  ],
+  "latency_sec": 6.6588969230651855,
+  "seed": 0
+}
