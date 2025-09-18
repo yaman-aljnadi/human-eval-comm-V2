@@ -381,8 +381,9 @@ def main():
             row_dict = asdict(row)
 
             # Per-item JSON (atomic)
-            per_path = os.path.join(by_item_dir, f"{record_id.replace('::','__')}.json")
-            atomic_write(per_path, json.dumps(row_dict, ensure_ascii=False, indent=2))
+            fn = f"{task_id}__{cat}.json"
+            with open(os.path.join(args.outdir, "by_item", fn), "w", encoding="utf-8") as f:
+                json.dump(row, f, ensure_ascii=False, indent=2)
 
             # Append to JSONL (streaming)
             append_jsonl(results_path, [row_dict], gzip=args.gzip)
