@@ -378,6 +378,59 @@ def prepare_generator_openrouter(model_name: str, cfg) -> Any:
     gen_fn.tokenizer = type("T", (), {"pad_token_id": None, "eos_token_id": None})()
     return gen_fn
 
+
+def prepare_generator_openai(model_name: str, cfg):
+    """
+    Returns a callable with an HF-like interface:
+      gen_fn(prompt_text) -> [{"generated_text": str, "gen_raw": dict, "latency_sec": float}]
+    Requires:
+      - pip install openai>=1.0.0
+      - env: OPENAI_API_KEY
+    Accepts:
+      - "gpt-3.5-turbo" or "openai/gpt-3.5-turbo"
+    """
+    import os, time
+    from openai import OpenAI
+
+    api_key = os.getenv("OPENAI_API_KEY")
+    if not api_key:
+        raise RuntimeError("OPENAI_API_KEY env var is not set")
+
+    client = OpenAI(api_key=api_key)
+
+    # Normalize model name
+    if model_name.lower().startswith("openai/"):
+        model_name = model_name.split("/", 1)[1]
+
+    generation_kwargs = {
+        "temperature": float(getattr(cfg, "temperature", 1.0)),
+        "top_p": float(getattr(cfg, "top_p", 0.9)),
+        "max_tokens": int(getattr(cfg, "max_new_tokens", 256)),  # OpenAI's param name
+    }
+
+    def gen_fn(prompt_text: str, **_):
+        t0 = time.time()
+        resp = client.chat.completions.create(
+            model=model_name,
+            messages=[{"role": "user", "content": prompt_text}],
+            **generation_kwargs,
+        )
+        latency = time.time() - t0
+
+        text = resp.choices[0].message.content or ""
+        gen_raw = {
+            "usage": getattr(resp, "usage", None),
+            "finish_reason": resp.choices[0].finish_reason,
+            "model": resp.model,
+            "id": resp.id,
+        }
+
+        return [{"generated_text": text, "gen_raw": gen_raw, "latency_sec": latency}]
+
+    # Fake tokenizer fields so the rest of code works
+    gen_fn.tokenizer = type("T", (), {"pad_token_id": None, "eos_token_id": None})()
+    return gen_fn
+
 # ---------- data classes ----------
 @dataclass
 class GenConfig:
@@ -488,13 +541,20 @@ def main():
     print(f"[load] base items: {n_base} (of {len(ds)}) ; categories per item: {args.categories}")
 
     # Prepare generator
-    use_gemini = args.model.strip().lower().startswith("gemini")
+    model_lower = args.model.strip().lower()
+    use_gemini = model_lower.startswith("gemini")
     use_openrouter = (":" in args.model)
+    use_openai = (model_lower.startswith("gpt-") or model_lower.startswith("openai/"))
+
+    if not (use_gemini or use_openrouter or use_openai):
+        lazy_imports()
 
     if use_gemini:
-        gen_pipe = prepare_generator_gemini(args.model, cfg=None)
+        gen_pipe = prepare_generator_gemini(args.model, cfg)
     elif use_openrouter:
-        gen_pipe = prepare_generator_openrouter(args.model, cfg=None)
+        gen_pipe = prepare_generator_openrouter(args.model, cfg)
+    elif use_openai:
+        gen_pipe = prepare_generator_openai(args.model, cfg)
     else:
         gen_pipe = prepare_generator(args.model)
 
@@ -539,7 +599,7 @@ def main():
             final_prompt = PAPER_PROMPT_TEMPLATE.format(problem=problem.strip())
             prompt_hash = sha256_text(final_prompt)
 
-            if use_gemini or use_openrouter:
+            if use_gemini or use_openrouter or use_openai:
                 now = time.time()
                 elapsed = now - last_request_time
                 if elapsed < SECONDS_PER_REQUEST:
