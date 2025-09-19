@@ -17,9 +17,9 @@ Env vars (set only the ones you use):
 Examples:
 # Single evaluator
 python eval_committee_v2.py \
-  --results ./runs/x/results.jsonl \
-  --outdir ./runs/x \
-  --judges openai/gpt-4o-mini
+  --results ./runs/openai-gpt-3.5-turbo/results.jsonl \
+  --outdir ./runs/openai-gpt-3.5-turbo \
+  --judges meta-llama/Llama-3.1-8B
 
 # Double evaluators (majority/median aggregation)
 python eval_committee_v2.py \
