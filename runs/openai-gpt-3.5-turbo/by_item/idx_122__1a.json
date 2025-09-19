@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_122::1a::gpt-3.5-turbo::seed0",
+  "task_id": "idx_122",
+  "category": "1a",
+  "entry_point": "add_elements",
+  "prompt_field": "prompt1a",
+  "prompt_text": "\ndef add_elements(arr, k):\n    \"\"\"\n    Given a non-empty array of integers arr and an integer k, return\n    the product or sum of the elements with at most two digits from the last or first k elements of arr.\n\n    Example:\n\n        Input: arr = [111,21,3,4000,5,6,7,8,9], k = 4\n        Output: 24 # sum of 21 + 3\n\n    Constraints:\n        1. 1 <= len(arr) <= 100\n        2. 1 <= k <= len(arr)\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef add_elements(arr, k):\n    \"\"\"\n    Given a non-empty array of integers arr and an integer k, return\n    the product or sum of the elements with at most two digits from the last or first k elements of arr.\n\n    Example:\n\n        Input: arr = [111,21,3,4000,5,6,7,8,9], k = 4\n        Output: 24 # sum of 21 + 3\n\n    Constraints:\n        1. 1 <= len(arr) <= 100\n        2. 1 <= k <= len(arr)\n    \"\"\"",
+  "prompt_sha256": "6b839770bc67fa710c665f548d3bdde5808d5dbd169b88ebd56b0ebe8b57b8ea",
+  "model_name": "gpt-3.5-turbo",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef add_elements(arr, k):\n    sorted_arr = sorted(arr[:k] + arr[-k:], reverse=True)\n    two_digit_elements = [x for x in sorted_arr if 9 < x < 100]\n    return sum(two_digit_elements)\n\n# Test the function with the given example\narr = [111, 21, 3, 4000, 5, 6, 7, 8, 9]\nk = 4\nresult = add_elements(arr, k)\nprint(result)\n```",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def add_elements(arr, k):\n    sorted_arr = sorted(arr[:k] + arr[-k:], reverse=True)\n    two_digit_elements = [x for x in sorted_arr if 9 < x < 100]\n    return sum(two_digit_elements)\n\n# Test the function with the given example\narr = [111, 21, 3, 4000, 5, 6, 7, 8, 9]\nk = 4\nresult = add_elements(arr, k)\nprint(result)",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 1.1112523078918457,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

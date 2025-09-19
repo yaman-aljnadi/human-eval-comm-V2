@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_103::1p::gpt-3.5-turbo::seed0",
+  "task_id": "idx_103",
+  "category": "1p",
+  "entry_point": "rounded_avg",
+  "prompt_field": "prompt1p",
+  "prompt_text": "\ndef candidate(n, m):\n    \"\"\"You are given two positive integers n and m, and your task is to compute the\n    average of the integers from n through m (including n and m). \n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(n, m):\n    \"\"\"You are given two positive integers n and m, and your task is to compute the\n    average of the integers from n through m (including n and m). \n    \"\"\"",
+  "prompt_sha256": "1c3d42496b7dadcb0c4de1ffa4dd43d33671b821c499b8fcba3e97fa12bf1a75",
+  "model_name": "gpt-3.5-turbo",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef candidate(n, m):\n    sum_integers = sum(range(n, m+1))\n    avg = sum_integers / (m - n + 1)\n    return avg\n```",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def candidate(n, m):\n    sum_integers = sum(range(n, m+1))\n    avg = sum_integers / (m - n + 1)\n    return avg",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 0.5939078330993652,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

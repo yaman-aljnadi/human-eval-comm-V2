@@ -1,0 +1,35 @@
+{
+  "record_id": "idx_140::2ap::gpt-3.5-turbo::seed0",
+  "task_id": "idx_140",
+  "category": "2ap",
+  "entry_point": "fix_spaces",
+  "prompt_field": "prompt2ap",
+  "prompt_text": "\ndef fix_spaces(text):\n    \"\"\"\n    Given a string text, replace all spaces in it with underscores, \n    and if a string has certain consecutive spaces, \n    then \n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef fix_spaces(text):\n    \"\"\"\n    Given a string text, replace all spaces in it with underscores, \n    and if a string has certain consecutive spaces, \n    then \n    \"\"\"",
+  "prompt_sha256": "6b5873a717fbf339c86dedaab92c6b4bde123cc6aa56adfe441843155e06bfc4",
+  "model_name": "gpt-3.5-turbo",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "Can you please provide more details on what should be done if the string has certain consecutive spaces?",
+  "gen_raw": {},
+  "contains_code": false,
+  "code_detected_method": "none",
+  "extracted_code": null,
+  "is_question": true,
+  "extracted_questions": [
+    "Can you please provide more details on what should be done if the string has certain consecutive spaces?"
+  ],
+  "question_count": 1,
+  "first_question": "Can you please provide more details on what should be done if the string has certain consecutive spaces?",
+  "question_chars": 104,
+  "latency_sec": 0.3390192985534668,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

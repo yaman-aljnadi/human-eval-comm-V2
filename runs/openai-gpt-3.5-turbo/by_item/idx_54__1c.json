@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_54::1c::gpt-3.5-turbo::seed0",
+  "task_id": "idx_54",
+  "category": "1c",
+  "entry_point": "same_chars",
+  "prompt_field": "prompt1c",
+  "prompt_text": "\n\ndef same_chars(s0: str, s1: str):\n    \"\"\"\n    Check if two words have the same characters.\n    >>> same_chars('eabcdzzzz', 'dddzzzzzzzddeddabc')\n    False\n    >>> same_chars('abcd', 'dddddddabc')\n    False\n    >>> same_chars('dddddddabc', 'abcd')\n    False\n    >>> same_chars('eabcd', 'dddddddabc')\n    True\n    >>> same_chars('abcd', 'dddddddabce')\n    True\n    >>> same_chars('eabcdzzzz', 'dddzzzzzzzddddabc')\n    True\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef same_chars(s0: str, s1: str):\n    \"\"\"\n    Check if two words have the same characters.\n    >>> same_chars('eabcdzzzz', 'dddzzzzzzzddeddabc')\n    False\n    >>> same_chars('abcd', 'dddddddabc')\n    False\n    >>> same_chars('dddddddabc', 'abcd')\n    False\n    >>> same_chars('eabcd', 'dddddddabc')\n    True\n    >>> same_chars('abcd', 'dddddddabce')\n    True\n    >>> same_chars('eabcdzzzz', 'dddzzzzzzzddddabc')\n    True\n    \"\"\"",
+  "prompt_sha256": "08df24a3365f98c03c1e6d9e2d805f0c1c077c745cdfb678dd28a0e62f7de6d7",
+  "model_name": "gpt-3.5-turbo",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef same_chars(s0: str, s1: str):\n    return sorted(s0) == sorted(s1)\n```",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def same_chars(s0: str, s1: str):\n    return sorted(s0) == sorted(s1)",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 0.4729797840118408,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

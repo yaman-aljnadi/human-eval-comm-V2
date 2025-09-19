@@ -1,0 +1,35 @@
+{
+  "record_id": "idx_57::2cp::gpt-3.5-turbo::seed0",
+  "task_id": "idx_57",
+  "category": "2cp",
+  "entry_point": "monotonic",
+  "prompt_field": "prompt2cp",
+  "prompt_text": "\n\ndef candidate(l: list):\n    \"\"\"Return True if list elements are monotonic.\n    >>> candidate([1, 2, 4, 20])\n    False\n    >>> candidate([1, 20, 4, 10])\n    True\n    >>> candidate([4, 1, 0, -10])\n    False\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(l: list):\n    \"\"\"Return True if list elements are monotonic.\n    >>> candidate([1, 2, 4, 20])\n    False\n    >>> candidate([1, 20, 4, 10])\n    True\n    >>> candidate([4, 1, 0, -10])\n    False\n    \"\"\"",
+  "prompt_sha256": "2ff8d9ca995039484b4bb621a957b388fc0f22f1e55ff0e82999fa86a673a8a1",
+  "model_name": "gpt-3.5-turbo",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "Do you want the function to return True if the list is monotonically increasing or monotonically decreasing?",
+  "gen_raw": {},
+  "contains_code": false,
+  "code_detected_method": "none",
+  "extracted_code": null,
+  "is_question": true,
+  "extracted_questions": [
+    "Do you want the function to return True if the list is monotonically increasing or monotonically decreasing?"
+  ],
+  "question_count": 1,
+  "first_question": "Do you want the function to return True if the list is monotonically increasing or monotonically decreasing?",
+  "question_chars": 108,
+  "latency_sec": 0.36892056465148926,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

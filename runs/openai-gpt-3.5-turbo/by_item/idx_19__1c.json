@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_19::1c::gpt-3.5-turbo::seed0",
+  "task_id": "idx_19",
+  "category": "1c",
+  "entry_point": "sort_numbers",
+  "prompt_field": "prompt1c",
+  "prompt_text": "from typing import List\n\n\ndef sort_numbers(numbers: str) -> str:\n    \"\"\" Input is a space-delimited string of numberals from 'zero' to 'nine'.\n    Valid choices are 'zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight' and 'nine'.\n    Return the string with numbers sorted from smallest to largest\n    >>> sort_numbers('three one five')\n    'five three one'\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List\n\n\ndef sort_numbers(numbers: str) -> str:\n    \"\"\" Input is a space-delimited string of numberals from 'zero' to 'nine'.\n    Valid choices are 'zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight' and 'nine'.\n    Return the string with numbers sorted from smallest to largest\n    >>> sort_numbers('three one five')\n    'five three one'\n    \"\"\"",
+  "prompt_sha256": "073395c319f05bb9440da1e68d9adb8299640f0a09e97d83d718800c9655710d",
+  "model_name": "gpt-3.5-turbo",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef sort_numbers(numbers: str) -> str:\n    words_to_numbers = {\n        \"zero\": 0,\n        \"one\": 1,\n        \"two\": 2,\n        \"three\": 3,\n        \"four\": 4,\n        \"five\": 5,\n        \"six\": 6,\n        \"seven\": 7,\n        \"eight\": 8,\n        \"nine\": 9\n    }\n    \n    numbers_list = numbers.split()\n    numbers_list.sort(key=lambda x: words_to_numbers[x])\n    \n    return ' '.join(numbers_list)\n```",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def sort_numbers(numbers: str) -> str:\n    words_to_numbers = {\n        \"zero\": 0,\n        \"one\": 1,\n        \"two\": 2,\n        \"three\": 3,\n        \"four\": 4,\n        \"five\": 5,\n        \"six\": 6,\n        \"seven\": 7,\n        \"eight\": 8,\n        \"nine\": 9\n    }\n    \n    numbers_list = numbers.split()\n    numbers_list.sort(key=lambda x: words_to_numbers[x])\n    \n    return ' '.join(numbers_list)",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 1.5805346965789795,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

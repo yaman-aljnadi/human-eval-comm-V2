@@ -1,0 +1,35 @@
+{
+  "record_id": "idx_41::1a::gpt-3.5-turbo::seed0",
+  "task_id": "idx_41",
+  "category": "1a",
+  "entry_point": "car_race_collision",
+  "prompt_field": "prompt1a",
+  "prompt_text": "\n\ndef car_race_collision(n: int):\n    \"\"\"\n    Imagine a road that's a perfectly straight infinitely long line.\n    2*n or n cars are driving left to right;  simultaneously, a different set of 2*n or n cars\n    are driving right to left.   The two sets of cars start out being very far from\n    each other.  All cars move in the same speed.  Two cars are said to collide\n    when a car that's moving left to right hits a car that's moving right to left.\n    However, the cars are infinitely sturdy and strong; as a result, they continue moving\n    in their trajectory as if they did not collide.\n\n    This function outputs the number of such collisions.\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef car_race_collision(n: int):\n    \"\"\"\n    Imagine a road that's a perfectly straight infinitely long line.\n    2*n or n cars are driving left to right;  simultaneously, a different set of 2*n or n cars\n    are driving right to left.   The two sets of cars start out being very far from\n    each other.  All cars move in the same speed.  Two cars are said to collide\n    when a car that's moving left to right hits a car that's moving right to left.\n    However, the cars are infinitely sturdy and strong; as a result, they continue moving\n    in their trajectory as if they did not collide.\n\n    This function outputs the number of such collisions.\n    \"\"\"",
+  "prompt_sha256": "e18534e1d8a1437be3b233ba3bcb5034670ddc6603c6f83e18a9c92b7600e8a0",
+  "model_name": "gpt-3.5-turbo",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "Are all cars moving at the same speed?",
+  "gen_raw": {},
+  "contains_code": false,
+  "code_detected_method": "none",
+  "extracted_code": null,
+  "is_question": true,
+  "extracted_questions": [
+    "Are all cars moving at the same speed?"
+  ],
+  "question_count": 1,
+  "first_question": "Are all cars moving at the same speed?",
+  "question_chars": 38,
+  "latency_sec": 0.33213257789611816,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

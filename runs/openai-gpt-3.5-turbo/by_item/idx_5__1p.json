@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_5::1p::gpt-3.5-turbo::seed0",
+  "task_id": "idx_5",
+  "category": "1p",
+  "entry_point": "intersperse",
+  "prompt_field": "prompt1p",
+  "prompt_text": "from typing import List\n\n\ndef candidate(numbers: List[int], delimeter: int) -> List[int]:\n    \"\"\" Insert a number 'delimeter'\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List\n\n\ndef candidate(numbers: List[int], delimeter: int) -> List[int]:\n    \"\"\" Insert a number 'delimeter'\n    \"\"\"",
+  "prompt_sha256": "68e7a0ba9028d4eb61bde03c047287c2ad8f7b4bac38b07cae34b437932f49b7",
+  "model_name": "gpt-3.5-turbo",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef candidate(numbers: List[int], delimeter: int) -> List[int]:\n    index = 0\n    for i in range(len(numbers)):\n        if numbers[i] >= delimeter:\n            index = i\n            break\n    numbers.insert(index, delimeter)\n    return numbers\n```",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def candidate(numbers: List[int], delimeter: int) -> List[int]:\n    index = 0\n    for i in range(len(numbers)):\n        if numbers[i] >= delimeter:\n            index = i\n            break\n    numbers.insert(index, delimeter)\n    return numbers",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 0.8259034156799316,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

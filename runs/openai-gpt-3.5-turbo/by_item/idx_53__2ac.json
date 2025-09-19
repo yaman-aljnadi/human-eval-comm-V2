@@ -1,0 +1,35 @@
+{
+  "record_id": "idx_53::2ac::gpt-3.5-turbo::seed0",
+  "task_id": "idx_53",
+  "category": "2ac",
+  "entry_point": "add",
+  "prompt_field": "prompt2ac",
+  "prompt_text": "\n\ndef candidate(x: int, y: int):\n    \"\"\"Add or multiply or subtract two numbers x and y\n    >>> candidate(2, 3)\n    1\n    >>> candidate(5, 7)\n    2\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(x: int, y: int):\n    \"\"\"Add or multiply or subtract two numbers x and y\n    >>> candidate(2, 3)\n    1\n    >>> candidate(5, 7)\n    2\n    \"\"\"",
+  "prompt_sha256": "bf35586ba36fc2a20b4d752e781a1025aefff003581cf0e503795fd14599007d",
+  "model_name": "gpt-3.5-turbo",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "Are the inputs x and y always guaranteed to be integers?",
+  "gen_raw": {},
+  "contains_code": false,
+  "code_detected_method": "none",
+  "extracted_code": null,
+  "is_question": true,
+  "extracted_questions": [
+    "Are the inputs x and y always guaranteed to be integers?"
+  ],
+  "question_count": 1,
+  "first_question": "Are the inputs x and y always guaranteed to be integers?",
+  "question_chars": 56,
+  "latency_sec": 0.429898738861084,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

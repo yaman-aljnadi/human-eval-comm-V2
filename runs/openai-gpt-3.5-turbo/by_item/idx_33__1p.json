@@ -1,0 +1,35 @@
+{
+  "record_id": "idx_33::1p::gpt-3.5-turbo::seed0",
+  "task_id": "idx_33",
+  "category": "1p",
+  "entry_point": "sort_third",
+  "prompt_field": "prompt1p",
+  "prompt_text": "\n\ndef candidate(l: list):\n    \"\"\"This function takes a list l and returns a list l' such that\n    l' is identical to l in the indicies that are not divisible by three, while its values at the indicies that are divisible by three are equal\n    to the values of the corresponding indicies of l.\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(l: list):\n    \"\"\"This function takes a list l and returns a list l' such that\n    l' is identical to l in the indicies that are not divisible by three, while its values at the indicies that are divisible by three are equal\n    to the values of the corresponding indicies of l.\n    \"\"\"",
+  "prompt_sha256": "61be0d3df088c7c3ab45b7f04296d8146802d4e389c91132f0f39220fb62bf31",
+  "model_name": "gpt-3.5-turbo",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "Would you like the new list `l'` to have the same length as the input list `l`?",
+  "gen_raw": {},
+  "contains_code": false,
+  "code_detected_method": "none",
+  "extracted_code": null,
+  "is_question": true,
+  "extracted_questions": [
+    "Would you like the new list `l'` to have the same length as the input list `l`?"
+  ],
+  "question_count": 1,
+  "first_question": "Would you like the new list `l'` to have the same length as the input list `l`?",
+  "question_chars": 79,
+  "latency_sec": 0.45615577697753906,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

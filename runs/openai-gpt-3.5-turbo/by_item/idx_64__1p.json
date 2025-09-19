@@ -1,0 +1,36 @@
+{
+  "record_id": "idx_64::1p::gpt-3.5-turbo::seed0",
+  "task_id": "idx_64",
+  "category": "1p",
+  "entry_point": "vowels_count",
+  "prompt_field": "prompt1p",
+  "prompt_text": "\nFIX = \"\"\"\nAdd more test cases.\n\"\"\"\n\ndef candidate(s):\n    \"\"\"Write a function candidate which takes a string representing\n    a word as input.\n    Vowels in this case are 'a', 'e', 'i', 'o', 'u'. Here, 'y' is also a\n    vowel, but only when it is at the end of the given word.\n\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nFIX = \"\"\"\nAdd more test cases.\n\"\"\"\n\ndef candidate(s):\n    \"\"\"Write a function candidate which takes a string representing\n    a word as input.\n    Vowels in this case are 'a', 'e', 'i', 'o', 'u'. Here, 'y' is also a\n    vowel, but only when it is at the end of the given word.\n\n    \"\"\"",
+  "prompt_sha256": "0622cd58fb410cd6ba976edfaefad734ec839ed3e51bedbeafc07b7156a46c85",
+  "model_name": "gpt-3.5-turbo",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "Can you please provide some examples of input and output for the function `candidate`? It would help me understand the requirements better.",
+  "gen_raw": {},
+  "contains_code": false,
+  "code_detected_method": "none",
+  "extracted_code": null,
+  "is_question": true,
+  "extracted_questions": [
+    "Can you please provide some examples of input and output for the function `candidate`?",
+    "It would help me understand the requirements better.?"
+  ],
+  "question_count": 2,
+  "first_question": "Can you please provide some examples of input and output for the function `candidate`?",
+  "question_chars": 139,
+  "latency_sec": 0.553971529006958,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_119::1c::gpt-3.5-turbo::seed0",
+  "task_id": "idx_119",
+  "category": "1c",
+  "entry_point": "match_parens",
+  "prompt_field": "prompt1c",
+  "prompt_text": "\ndef match_parens(lst):\n    '''\n    You are given a list of two strings, both strings consist of open\n    parentheses '(' or close parentheses ')' only.\n    Your job is to check if it is possible to concatenate the two strings in\n    some order, that the resulting string will be good.\n    A string S is considered to be good if and only if all parentheses in S\n    are balanced. For example: the string '(())()' is good, while the string\n    '())' is not.\n    Return 'Yes' if there's a way to make a good string, and return 'No' otherwise.\n\n    Examples:\n    match_parens(['()(', ')']) == 'No'\n    match_parens([')', ')']) == 'Yes'\n    '''\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef match_parens(lst):\n    '''\n    You are given a list of two strings, both strings consist of open\n    parentheses '(' or close parentheses ')' only.\n    Your job is to check if it is possible to concatenate the two strings in\n    some order, that the resulting string will be good.\n    A string S is considered to be good if and only if all parentheses in S\n    are balanced. For example: the string '(())()' is good, while the string\n    '())' is not.\n    Return 'Yes' if there's a way to make a good string, and return 'No' otherwise.\n\n    Examples:\n    match_parens(['()(', ')']) == 'No'\n    match_parens([')', ')']) == 'Yes'\n    '''",
+  "prompt_sha256": "1608ef81d018e9fc09213588aa76ab0a1ea6bfc3c6c0d6c741b9c6774cdf192e",
+  "model_name": "gpt-3.5-turbo",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef match_parens(lst):\n    opening_count = closing_count = 0\n\n    for i in lst:\n        if i == '(':\n            opening_count += 1\n        else:\n            closing_count += 1\n\n        if closing_count > opening_count:\n            return 'No'\n\n    if opening_count == closing_count:\n        return 'Yes'\n    else:\n        return 'No'\n\n# Test cases\nprint(match_parens(['()(', ')']))  # Output: No\nprint(match_parens([')', ')']))    # Output: Yes\n```",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def match_parens(lst):\n    opening_count = closing_count = 0\n\n    for i in lst:\n        if i == '(':\n            opening_count += 1\n        else:\n            closing_count += 1\n\n        if closing_count > opening_count:\n            return 'No'\n\n    if opening_count == closing_count:\n        return 'Yes'\n    else:\n        return 'No'\n\n# Test cases\nprint(match_parens(['()(', ')']))  # Output: No\nprint(match_parens([')', ')']))    # Output: Yes",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 1.2145671844482422,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

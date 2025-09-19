@@ -1,0 +1,37 @@
+{
+  "record_id": "idx_41::3acp::gpt-3.5-turbo::seed0",
+  "task_id": "idx_41",
+  "category": "3acp",
+  "entry_point": "car_race_collision",
+  "prompt_field": "prompt3acp",
+  "prompt_text": "\n\ndef is_prime(n: int):\n    \"\"\"\n    Imagine a road that's a perfectly straight infinitely long line.\n  2*n or n cars are driving left to right;  simultaneously, a different set of 2*n or n cars\n    are driving right to left.   The two sets of cars start out being very far from\n    each other.  All cars move in the same speed.  Two cars are said to collide\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef is_prime(n: int):\n    \"\"\"\n    Imagine a road that's a perfectly straight infinitely long line.\n  2*n or n cars are driving left to right;  simultaneously, a different set of 2*n or n cars\n    are driving right to left.   The two sets of cars start out being very far from\n    each other.  All cars move in the same speed.  Two cars are said to collide\n    \"\"\"",
+  "prompt_sha256": "40e9d5dd90878eafd22a7e22c4dc5ce52fefe85ce7cc7d932b1bc1896bd8642b",
+  "model_name": "gpt-3.5-turbo",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "I would be happy to help write Python3 code for you. Could you please clarify what specific task or function you would like the code to perform in relation to the given explanation about cars colliding on a road? Thank you.",
+  "gen_raw": {},
+  "contains_code": false,
+  "code_detected_method": "none",
+  "extracted_code": null,
+  "is_question": true,
+  "extracted_questions": [
+    "I would be happy to help write Python3 code for you. Could you please clarify what specific task or function you would like the code to perform in relation to the given explanation about cars colliding on a road?",
+    "Thank you.?",
+    "Could you please clarify what specific task or function you would like the code to perform in relation to the given explanation about cars colliding on a road?"
+  ],
+  "question_count": 3,
+  "first_question": "I would be happy to help write Python3 code for you. Could you please clarify what specific task or function you would like the code to perform in relation to the given explanation about cars colliding on a road?",
+  "question_chars": 382,
+  "latency_sec": 0.6127557754516602,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

@@ -1,0 +1,40 @@
+{
+  "record_id": "idx_160::2ap::gpt-3.5-turbo::seed0",
+  "task_id": "idx_160",
+  "category": "2ap",
+  "entry_point": "do_algebra",
+  "prompt_field": "prompt2ap",
+  "prompt_text": "\ndef do_algebra(list1, list2):\n    \"\"\"\n    Given two lists, use the two given lists to build the algebric \n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef do_algebra(list1, list2):\n    \"\"\"\n    Given two lists, use the two given lists to build the algebric \n    \"\"\"",
+  "prompt_sha256": "398f435a1442117145208e362707656f88dc6b7def001faa48b7f951d414933f",
+  "model_name": "gpt-3.5-turbo",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "Clarifying questions:\n1. What specific algebraic operation needs to be performed using the two lists?\n2. Are the two lists guaranteed to be of the same length?\n3. Should the output be a new list or a single value?",
+  "gen_raw": {},
+  "contains_code": false,
+  "code_detected_method": "none",
+  "extracted_code": null,
+  "is_question": true,
+  "extracted_questions": [
+    "Clarifying questions:\n1. What specific algebraic operation needs to be performed using the two lists?",
+    "2. Are the two lists guaranteed to be of the same length?",
+    "3. Should the output be a new list or a single value?",
+    "What specific algebraic operation needs to be performed using the two lists?",
+    "Are the two lists guaranteed to be of the same length?",
+    "Should the output be a new list or a single value?"
+  ],
+  "question_count": 6,
+  "first_question": "Clarifying questions:\n1. What specific algebraic operation needs to be performed using the two lists?",
+  "question_chars": 391,
+  "latency_sec": 0.6816146373748779,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

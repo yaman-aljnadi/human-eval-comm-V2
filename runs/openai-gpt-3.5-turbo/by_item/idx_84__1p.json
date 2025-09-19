@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_84::1p::gpt-3.5-turbo::seed0",
+  "task_id": "idx_84",
+  "category": "1p",
+  "entry_point": "solve",
+  "prompt_field": "prompt1p",
+  "prompt_text": "\ndef solve(N):\n    \"\"\"Given a positive integer N, return the total sum of its digits.\n    \n    Example\n        For N = 1000, the sum of digits will be 1 the output should be \"1\".\n        For N = 150, the sum of digits will be 6 the output should be \"110\".\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef solve(N):\n    \"\"\"Given a positive integer N, return the total sum of its digits.\n    \n    Example\n        For N = 1000, the sum of digits will be 1 the output should be \"1\".\n        For N = 150, the sum of digits will be 6 the output should be \"110\".\n    \"\"\"",
+  "prompt_sha256": "ecf63bc25c178713fa3ab224e0a9b4c9d82d3c4d0b494fe05a800979d0825afa",
+  "model_name": "gpt-3.5-turbo",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef solve(N):\n    return sum(int(digit) for digit in str(N))\n\n# Testing the function with the examples provided\nprint(solve(1000)) # Output: 1\nprint(solve(150)) # Output: 6\n```",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def solve(N):\n    return sum(int(digit) for digit in str(N))\n\n# Testing the function with the examples provided\nprint(solve(1000)) # Output: 1\nprint(solve(150)) # Output: 6",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 0.5208449363708496,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

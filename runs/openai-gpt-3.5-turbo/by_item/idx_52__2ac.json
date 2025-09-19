@@ -1,0 +1,36 @@
+{
+  "record_id": "idx_52::2ac::gpt-3.5-turbo::seed0",
+  "task_id": "idx_52",
+  "category": "2ac",
+  "entry_point": "below_threshold",
+  "prompt_field": "prompt2ac",
+  "prompt_text": "\n\ndef candidate(l: list, t: int):\n    \"\"\"Return True if numbers in the list l are around threshold t.\n    >>> candidate([1, 2, 4, 10], 100)\n    False\n    >>> candidate([1, 20, 4, 10], 5)\n    True\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(l: list, t: int):\n    \"\"\"Return True if numbers in the list l are around threshold t.\n    >>> candidate([1, 2, 4, 10], 100)\n    False\n    >>> candidate([1, 20, 4, 10], 5)\n    True\n    \"\"\"",
+  "prompt_sha256": "a3a6f4c49e425d5b938828ea6f7ebafb3e7801fcca56a11c9fca88caae849325",
+  "model_name": "gpt-3.5-turbo",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "What do you mean by \"around threshold t\"? Can you provide more specific criteria or range for determining if numbers in the list l are around threshold t?",
+  "gen_raw": {},
+  "contains_code": false,
+  "code_detected_method": "none",
+  "extracted_code": null,
+  "is_question": true,
+  "extracted_questions": [
+    "What do you mean by \"around threshold t\"?",
+    "Can you provide more specific criteria or range for determining if numbers in the list l are around threshold t?"
+  ],
+  "question_count": 2,
+  "first_question": "What do you mean by \"around threshold t\"?",
+  "question_chars": 153,
+  "latency_sec": 0.4550654888153076,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

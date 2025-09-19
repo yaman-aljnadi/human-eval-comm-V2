@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_155::2cp::gpt-3.5-turbo::seed0",
+  "task_id": "idx_155",
+  "category": "2cp",
+  "entry_point": "even_odd_count",
+  "prompt_field": "prompt2cp",
+  "prompt_text": "\ndef candidate(num):\n    \"\"\"Example:\n        candidate(-12) ==> (1, 1)\n        candidate(123) ==> (2, 1)\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(num):\n    \"\"\"Example:\n        candidate(-12) ==> (1, 1)\n        candidate(123) ==> (2, 1)\n    \"\"\"",
+  "prompt_sha256": "026b22640522b805b4b230005e1639be40f4eadecb9d3d6decc4190984d7b3fa",
+  "model_name": "gpt-3.5-turbo",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef candidate(num):\n    # Convert the number to a string\n    num_str = str(abs(num))\n    \n    # Count the number of digits in the number\n    num_digits = len(num_str)\n    \n    # Check if the number is positive or negative\n    if num < 0:\n        # Subtract 1 from the number of digits to account for the negative sign\n        num_digits -= 1\n        \n    # Count the number of odd digits in the number\n    num_odd_digits = sum(1 for digit in num_str if int(digit) % 2 != 0)\n    \n    return num_digits, num_odd_digits\n\n# Test cases\nprint(candidate(-12))  # (1, 1)\nprint(candidate(123))  # (2, 1)\n```",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def candidate(num):\n    # Convert the number to a string\n    num_str = str(abs(num))\n    \n    # Count the number of digits in the number\n    num_digits = len(num_str)\n    \n    # Check if the number is positive or negative\n    if num < 0:\n        # Subtract 1 from the number of digits to account for the negative sign\n        num_digits -= 1\n        \n    # Count the number of odd digits in the number\n    num_odd_digits = sum(1 for digit in num_str if int(digit) % 2 != 0)\n    \n    return num_digits, num_odd_digits\n\n# Test cases\nprint(candidate(-12))  # (1, 1)\nprint(candidate(123))  # (2, 1)",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 1.3496150970458984,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

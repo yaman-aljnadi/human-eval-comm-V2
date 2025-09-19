@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_161::2ac::gpt-3.5-turbo::seed0",
+  "task_id": "idx_161",
+  "category": "2ac",
+  "entry_point": "solve",
+  "prompt_field": "prompt2ac",
+  "prompt_text": "\ndef solve(s):\n    \"\"\"You are given a string s.\n    if s[i] is a letter, reverse its case from lower to upper or vise versa, \n    otherwise keep it as it is.\n    If the string contains no letters, perform some transformation.\n    The function should return the resulted string.\n    Examples\n    solve(\"1234\") = \"1234\"\n    solve(\"ab\") = \"ab\"\n    solve(\"#a@C\") = \"#a@C\"\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef solve(s):\n    \"\"\"You are given a string s.\n    if s[i] is a letter, reverse its case from lower to upper or vise versa, \n    otherwise keep it as it is.\n    If the string contains no letters, perform some transformation.\n    The function should return the resulted string.\n    Examples\n    solve(\"1234\") = \"1234\"\n    solve(\"ab\") = \"ab\"\n    solve(\"#a@C\") = \"#a@C\"\n    \"\"\"",
+  "prompt_sha256": "c0f67983358db3aea66987574b35bca15cd921161d1eec6031d3b711eb5ea7b6",
+  "model_name": "gpt-3.5-turbo",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef solve(s):\n    new_s = \"\"\n    has_letter = False\n    for char in s:\n        if char.isalpha():\n            new_s += char.swapcase()\n            has_letter = True\n        else:\n            new_s += char\n    if not has_letter:\n        new_s = new_s[::-1]\n    return new_s\n```",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def solve(s):\n    new_s = \"\"\n    has_letter = False\n    for char in s:\n        if char.isalpha():\n            new_s += char.swapcase()\n            has_letter = True\n        else:\n            new_s += char\n    if not has_letter:\n        new_s = new_s[::-1]\n    return new_s",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 1.6218326091766357,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

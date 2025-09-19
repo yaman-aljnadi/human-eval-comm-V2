@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_6::1c::gpt-3.5-turbo::seed0",
+  "task_id": "idx_6",
+  "category": "1c",
+  "entry_point": "parse_nested_parens",
+  "prompt_field": "prompt1c",
+  "prompt_text": "from typing import List\n\n\ndef parse_nested_parens(paren_string: str) -> List[int]:\n    \"\"\" Input to this function is a string represented multiple groups for nested parentheses separated by spaces.\n    For each of the group, output the deepest level of nesting of parentheses.\n    E.g. (() ()) has maximum two levels of nesting while ((( ))) has three.\n\n    >>> parse_nested_parens('(()())((()))()((())()())')\n    [2, 3, 1, 3]\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List\n\n\ndef parse_nested_parens(paren_string: str) -> List[int]:\n    \"\"\" Input to this function is a string represented multiple groups for nested parentheses separated by spaces.\n    For each of the group, output the deepest level of nesting of parentheses.\n    E.g. (() ()) has maximum two levels of nesting while ((( ))) has three.\n\n    >>> parse_nested_parens('(()())((()))()((())()())')\n    [2, 3, 1, 3]\n    \"\"\"",
+  "prompt_sha256": "949e9143269af64f97a778d3771cccd798d9c6d63337de7fe7a48209971baed2",
+  "model_name": "gpt-3.5-turbo",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef parse_nested_parens(paren_string: str) -> List[int]:\n    max_depth = 0\n    current_depth = 0\n    depths = []\n    \n    for char in paren_string:\n        if char == '(':\n            current_depth += 1\n            max_depth = max(max_depth, current_depth)\n        elif char == ')':\n            current_depth -= 1\n        elif char == ' ':\n            depths.append(max_depth)\n            max_depth = 0\n    \n    depths.append(max_depth)\n    \n    return depths\n\n# Test the function with the example input\nprint(parse_nested_parens('(()())((()))()((())()())'))\n```",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def parse_nested_parens(paren_string: str) -> List[int]:\n    max_depth = 0\n    current_depth = 0\n    depths = []\n    \n    for char in paren_string:\n        if char == '(':\n            current_depth += 1\n            max_depth = max(max_depth, current_depth)\n        elif char == ')':\n            current_depth -= 1\n        elif char == ' ':\n            depths.append(max_depth)\n            max_depth = 0\n    \n    depths.append(max_depth)\n    \n    return depths\n\n# Test the function with the example input\nprint(parse_nested_parens('(()())((()))()((())()())'))",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 1.2595865726470947,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

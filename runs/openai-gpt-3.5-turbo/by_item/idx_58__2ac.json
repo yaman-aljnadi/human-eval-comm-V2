@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_58::2ac::gpt-3.5-turbo::seed0",
+  "task_id": "idx_58",
+  "category": "2ac",
+  "entry_point": "common",
+  "prompt_field": "prompt2ac",
+  "prompt_text": "\n\ndef candidate(l1: list, l2: list):\n    \"\"\"Return sorted (descendingly or ascendingly) unique common elements for two lists.\n    >>> candidate([1, 4, 3, 34, 653, 2, 5], [5, 7, 1, 5, 9, 653, 121])\n    [653, 5, 1]\n    >>> candidate([5, 3, 2, 8], [3, 2])\n    [3, 2]\n\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(l1: list, l2: list):\n    \"\"\"Return sorted (descendingly or ascendingly) unique common elements for two lists.\n    >>> candidate([1, 4, 3, 34, 653, 2, 5], [5, 7, 1, 5, 9, 653, 121])\n    [653, 5, 1]\n    >>> candidate([5, 3, 2, 8], [3, 2])\n    [3, 2]\n\n    \"\"\"",
+  "prompt_sha256": "0fcd8b67df08fdd79e6bc50dbe9a574ec5e42df3952b5a16f8eeadb7c567fb96",
+  "model_name": "gpt-3.5-turbo",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef candidate(l1: list, l2: list, descending=True):\n    common_elements = list(set(l1) & set(l2))\n    sorted_common_elements = sorted(common_elements, reverse=descending)\n    return sorted_common_elements\n```",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def candidate(l1: list, l2: list, descending=True):\n    common_elements = list(set(l1) & set(l2))\n    sorted_common_elements = sorted(common_elements, reverse=descending)\n    return sorted_common_elements",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 0.8777866363525391,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

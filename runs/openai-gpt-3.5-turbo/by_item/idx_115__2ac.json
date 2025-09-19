@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_115::2ac::gpt-3.5-turbo::seed0",
+  "task_id": "idx_115",
+  "category": "2ac",
+  "entry_point": "max_fill",
+  "prompt_field": "prompt2ac",
+  "prompt_text": "\ndef max_fill(grid, capacity):\n    import math\n    \"\"\"\n    You are given a rectangular grid of wells. Each row represents a single well,\n    and each 0 or 1 in a row represents a single unit of water.\n    Each well has a corresponding bucket that can be used to extract water from it, \n    and all buckets have the same capacity.\n    Your task is to use the buckets to empty the wells.\n    Output something to lower the buckets.\n\n    Example 1:\n        Input: \n            grid : [[0,0,1,0], [0,1,0,0], [1,1,1,1]]\n            bucket_capacity : 1\n        Output: 3\n\n    Example 2:\n        Input: \n            grid : [[0,0,1,1], [0,0,0,0], [1,1,1,1], [0,1,1,1]]\n            bucket_capacity : 2\n        Output: 2\n    \n    Example 3:\n        Input: \n            grid : [[0,0,0], [0,0,0]]\n            bucket_capacity : 5\n        Output: 3\n\n    Constraints:\n        * all wells have the same length\n        * 1 <= grid.length <= 10^2\n        * 1 <= grid[:,1].length <= 10^2\n        * grid[i][j] -> 0 | 1\n        * 1 <= capacity <= 10\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef max_fill(grid, capacity):\n    import math\n    \"\"\"\n    You are given a rectangular grid of wells. Each row represents a single well,\n    and each 0 or 1 in a row represents a single unit of water.\n    Each well has a corresponding bucket that can be used to extract water from it, \n    and all buckets have the same capacity.\n    Your task is to use the buckets to empty the wells.\n    Output something to lower the buckets.\n\n    Example 1:\n        Input: \n            grid : [[0,0,1,0], [0,1,0,0], [1,1,1,1]]\n            bucket_capacity : 1\n        Output: 3\n\n    Example 2:\n        Input: \n            grid : [[0,0,1,1], [0,0,0,0], [1,1,1,1], [0,1,1,1]]\n            bucket_capacity : 2\n        Output: 2\n    \n    Example 3:\n        Input: \n            grid : [[0,0,0], [0,0,0]]\n            bucket_capacity : 5\n        Output: 3\n\n    Constraints:\n        * all wells have the same length\n        * 1 <= grid.length <= 10^2\n        * 1 <= grid[:,1].length <= 10^2\n        * grid[i][j] -> 0 | 1\n        * 1 <= capacity <= 10\n    \"\"\"",
+  "prompt_sha256": "f7c366b5f83d82cc5fbb5ebdfd3a6410794798d04970a620d1a7488b0a539e59",
+  "model_name": "gpt-3.5-turbo",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef max_fill(grid, capacity):\n    def get_buckets_needed(row, capacity):\n        curr_water = 0\n        buckets = 0\n        for well in row:\n            curr_water += well\n            if curr_water >= capacity:\n                buckets += 1\n                curr_water = 0\n        if curr_water > 0:\n            buckets += 1\n        return buckets\n\n    total_buckets = 0\n    for row in grid:\n        total_buckets += get_buckets_needed(row, capacity)\n\n    return total_buckets\n```",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def max_fill(grid, capacity):\n    def get_buckets_needed(row, capacity):\n        curr_water = 0\n        buckets = 0\n        for well in row:\n            curr_water += well\n            if curr_water >= capacity:\n                buckets += 1\n                curr_water = 0\n        if curr_water > 0:\n            buckets += 1\n        return buckets\n\n    total_buckets = 0\n    for row in grid:\n        total_buckets += get_buckets_needed(row, capacity)\n\n    return total_buckets",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 1.0837841033935547,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

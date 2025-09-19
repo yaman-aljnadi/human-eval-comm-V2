@@ -1,0 +1,35 @@
+{
+  "record_id": "idx_122::1p::gpt-3.5-turbo::seed0",
+  "task_id": "idx_122",
+  "category": "1p",
+  "entry_point": "add_elements",
+  "prompt_field": "prompt1p",
+  "prompt_text": "\ndef add_elements(arr, k):\n    \"\"\"\n    Given a non-empty array of integers arr and an integer k, return\n    the sum of the elements with at most two digits from\n\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef add_elements(arr, k):\n    \"\"\"\n    Given a non-empty array of integers arr and an integer k, return\n    the sum of the elements with at most two digits from\n\n    \"\"\"",
+  "prompt_sha256": "8fdcedb9b33e1dbbe031d04db39f0bd32819380038da8ed148224ce9cbd53a3e",
+  "model_name": "gpt-3.5-turbo",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "Could you please clarify if you want to calculate the sum of elements in the array 'arr' that have at most two digits and are less than or equal to 'k'?",
+  "gen_raw": {},
+  "contains_code": false,
+  "code_detected_method": "none",
+  "extracted_code": null,
+  "is_question": true,
+  "extracted_questions": [
+    "Could you please clarify if you want to calculate the sum of elements in the array 'arr' that have at most two digits and are less than or equal to 'k'?"
+  ],
+  "question_count": 1,
+  "first_question": "Could you please clarify if you want to calculate the sum of elements in the array 'arr' that have at most two digits and are less than or equal to 'k'?",
+  "question_chars": 152,
+  "latency_sec": 0.5179493427276611,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

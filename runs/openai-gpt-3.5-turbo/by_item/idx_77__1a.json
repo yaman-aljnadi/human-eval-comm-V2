@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_77::1a::gpt-3.5-turbo::seed0",
+  "task_id": "idx_77",
+  "category": "1a",
+  "entry_point": "iscube",
+  "prompt_field": "prompt1a",
+  "prompt_text": "\ndef candidate(a):\n    '''\n    Write a function that takes an integer a and returns True \n    if this integer is a cube or a similar exponents of some integer number.\n    Note: you may assume the input is always valid.\n    Examples:\n    candidate(1) ==> True\n    candidate(2) ==> False\n    candidate(-1) ==> True\n    candidate(64) ==> True\n    candidate(0) ==> True\n    candidate(180) ==> False\n    '''\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(a):\n    '''\n    Write a function that takes an integer a and returns True \n    if this integer is a cube or a similar exponents of some integer number.\n    Note: you may assume the input is always valid.\n    Examples:\n    candidate(1) ==> True\n    candidate(2) ==> False\n    candidate(-1) ==> True\n    candidate(64) ==> True\n    candidate(0) ==> True\n    candidate(180) ==> False\n    '''",
+  "prompt_sha256": "b800bb895accce449d944b0c03d7e9650b409b43056252c4ae3f99c5768cb5f4",
+  "model_name": "gpt-3.5-turbo",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\nimport math\n\ndef candidate(a):\n    return math.isqrt(a) ** 3 == a or a == 0\n\n# Test cases\nprint(candidate(1)) # True\nprint(candidate(2)) # False\nprint(candidate(-1)) # True\nprint(candidate(64)) # True\nprint(candidate(0)) # True\nprint(candidate(180)) # False\n```",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "import math\n\ndef candidate(a):\n    return math.isqrt(a) ** 3 == a or a == 0\n\n# Test cases\nprint(candidate(1)) # True\nprint(candidate(2)) # False\nprint(candidate(-1)) # True\nprint(candidate(64)) # True\nprint(candidate(0)) # True\nprint(candidate(180)) # False",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 1.3404557704925537,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

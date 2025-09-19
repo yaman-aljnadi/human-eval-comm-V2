@@ -1,0 +1,37 @@
+{
+  "record_id": "idx_47::2ac::gpt-3.5-turbo::seed0",
+  "task_id": "idx_47",
+  "category": "2ac",
+  "entry_point": "median",
+  "prompt_field": "prompt2ac",
+  "prompt_text": "\n\ndef candidate(l: list):\n    \"\"\"Return max or median of elements in the list l.\n    >>> candidate([3, 1, 2, 4, 5])\n    5\n    >>> candidate([-10, 4, 6, 1000, 10, 20])\n    1000\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(l: list):\n    \"\"\"Return max or median of elements in the list l.\n    >>> candidate([3, 1, 2, 4, 5])\n    5\n    >>> candidate([-10, 4, 6, 1000, 10, 20])\n    1000\n    \"\"\"",
+  "prompt_sha256": "b67f120d84e6acecea4451b2c7e59a6ac97c4cfb62b06d8a5bc446183a9c4bdf",
+  "model_name": "gpt-3.5-turbo",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "How would you like to determine whether the output should be the max or the median of the elements in the list? \n\nFor example, should the output be the max value if there are an odd number of elements and the median if there are an even number of elements? Or is there another criterion you would like to use?",
+  "gen_raw": {},
+  "contains_code": false,
+  "code_detected_method": "none",
+  "extracted_code": null,
+  "is_question": true,
+  "extracted_questions": [
+    "How would you like to determine whether the output should be the max or the median of the elements in the list?",
+    "For example, should the output be the max value if there are an odd number of elements and the median if there are an even number of elements?",
+    "Or is there another criterion you would like to use?"
+  ],
+  "question_count": 3,
+  "first_question": "How would you like to determine whether the output should be the max or the median of the elements in the list?",
+  "question_chars": 305,
+  "latency_sec": 0.8774669170379639,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_64::2ac::gpt-3.5-turbo::seed0",
+  "task_id": "idx_64",
+  "category": "2ac",
+  "entry_point": "vowels_count",
+  "prompt_field": "prompt2ac",
+  "prompt_text": "\nFIX = \"\"\"\nAdd more test cases.\n\"\"\"\n\ndef candidate(s):\n    \"\"\"Write a function candidate which takes a string representing\n    a word as input and returns the number of characters or vowels in the string.\n    Vowels in this case are 'a', 'e', 'i', 'o', 'u'. Here, 'y' is also a\n    vowel, but only when it is at the end of the given word.\n\n    Example:\n    >>> candidate(\"abcde\")\n    5\n    >>> candidate(\"ACEDY\")\n    5\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nFIX = \"\"\"\nAdd more test cases.\n\"\"\"\n\ndef candidate(s):\n    \"\"\"Write a function candidate which takes a string representing\n    a word as input and returns the number of characters or vowels in the string.\n    Vowels in this case are 'a', 'e', 'i', 'o', 'u'. Here, 'y' is also a\n    vowel, but only when it is at the end of the given word.\n\n    Example:\n    >>> candidate(\"abcde\")\n    5\n    >>> candidate(\"ACEDY\")\n    5\n    \"\"\"",
+  "prompt_sha256": "94ef092e33a4caf3d470069cb6bb6a8ee91384605310973c172814685d231b30",
+  "model_name": "gpt-3.5-turbo",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef candidate(s):\n    vowels = set(['a', 'e', 'i', 'o', 'u', 'y'])\n    count = 0\n    for char in s:\n        if char.lower() in vowels:\n            if char.lower() != 'y' or s[-1].lower() == 'y':\n                count += 1\n    return count\n```",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def candidate(s):\n    vowels = set(['a', 'e', 'i', 'o', 'u', 'y'])\n    count = 0\n    for char in s:\n        if char.lower() in vowels:\n            if char.lower() != 'y' or s[-1].lower() == 'y':\n                count += 1\n    return count",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 0.7798957824707031,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

@@ -1,0 +1,35 @@
+{
+  "record_id": "idx_101::1p::gpt-3.5-turbo::seed0",
+  "task_id": "idx_101",
+  "category": "1p",
+  "entry_point": "words_string",
+  "prompt_field": "prompt1p",
+  "prompt_text": "\ndef words_string(s):\n    \"\"\"\n    You will be given a string of words separated by commas or spaces. Your task is\n    to split the string into words.\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef words_string(s):\n    \"\"\"\n    You will be given a string of words separated by commas or spaces. Your task is\n    to split the string into words.\n    \"\"\"",
+  "prompt_sha256": "2f89c958fd2eec79373062a11831e37f3569bce071716a204c6bdf7db4afc7f4",
+  "model_name": "gpt-3.5-turbo",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "Could you please clarify if the words in the input string are all lowercase or can they contain uppercase letters as well?",
+  "gen_raw": {},
+  "contains_code": false,
+  "code_detected_method": "none",
+  "extracted_code": null,
+  "is_question": true,
+  "extracted_questions": [
+    "Could you please clarify if the words in the input string are all lowercase or can they contain uppercase letters as well?"
+  ],
+  "question_count": 1,
+  "first_question": "Could you please clarify if the words in the input string are all lowercase or can they contain uppercase letters as well?",
+  "question_chars": 122,
+  "latency_sec": 0.4957089424133301,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

@@ -1,0 +1,37 @@
+{
+  "record_id": "idx_114::2ap::gpt-3.5-turbo::seed0",
+  "task_id": "idx_114",
+  "category": "2ap",
+  "entry_point": "minSubArraySum",
+  "prompt_field": "prompt2ap",
+  "prompt_text": "\ndef candidate(nums):\n    \"\"\"\n    Given an array of integers nums, find a certain sum\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(nums):\n    \"\"\"\n    Given an array of integers nums, find a certain sum\n    \"\"\"",
+  "prompt_sha256": "7e11b940fccce3c4f5b501a412091863abd0b00c52e0c01e25b7a175229a0b64",
+  "model_name": "gpt-3.5-turbo",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "Could you please provide more details on what exactly needs to be done with the given array of integers nums? Are we looking to find a certain sum of elements in the array, or are we trying to find a specific target sum in the array? Some more context or examples would be helpful for me to provide a relevant solution.",
+  "gen_raw": {},
+  "contains_code": false,
+  "code_detected_method": "none",
+  "extracted_code": null,
+  "is_question": true,
+  "extracted_questions": [
+    "Could you please provide more details on what exactly needs to be done with the given array of integers nums?",
+    "Are we looking to find a certain sum of elements in the array, or are we trying to find a specific target sum in the array?",
+    "Some more context or examples would be helpful for me to provide a relevant solution.?"
+  ],
+  "question_count": 3,
+  "first_question": "Could you please provide more details on what exactly needs to be done with the given array of integers nums?",
+  "question_chars": 318,
+  "latency_sec": 0.7915554046630859,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

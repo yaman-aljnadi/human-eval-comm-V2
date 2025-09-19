@@ -1,0 +1,35 @@
+{
+  "record_id": "idx_69::1a::gpt-3.5-turbo::seed0",
+  "task_id": "idx_69",
+  "category": "1a",
+  "entry_point": "search",
+  "prompt_field": "prompt1a",
+  "prompt_text": "\ndef search(lst):\n    '''\n    You are given a non-empty list of positive integers. Return the smallest or greatest integer that is greater than \n    zero, and has a frequency similar to the value of the integer itself. \n    The frequency of an integer is the number of times it appears in the list.\n    If no such a value exist, return -1.\n    Examples:\n        search([4, 1, 2, 2, 3, 1]) == 2\n        search([1, 2, 2, 3, 3, 3, 4, 4, 4]) == 3\n        search([5, 5, 4, 4, 4]) == -1\n    '''\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef search(lst):\n    '''\n    You are given a non-empty list of positive integers. Return the smallest or greatest integer that is greater than \n    zero, and has a frequency similar to the value of the integer itself. \n    The frequency of an integer is the number of times it appears in the list.\n    If no such a value exist, return -1.\n    Examples:\n        search([4, 1, 2, 2, 3, 1]) == 2\n        search([1, 2, 2, 3, 3, 3, 4, 4, 4]) == 3\n        search([5, 5, 4, 4, 4]) == -1\n    '''",
+  "prompt_sha256": "01bf664a818d5c493baa5f75ec715e1bf0abc72923eaee8fb6fc2f5fd9d76e43",
+  "model_name": "gpt-3.5-turbo",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "Do you want me to generate the code to find the smallest or the greatest integer that meets the requirements?",
+  "gen_raw": {},
+  "contains_code": false,
+  "code_detected_method": "none",
+  "extracted_code": null,
+  "is_question": true,
+  "extracted_questions": [
+    "Do you want me to generate the code to find the smallest or the greatest integer that meets the requirements?"
+  ],
+  "question_count": 1,
+  "first_question": "Do you want me to generate the code to find the smallest or the greatest integer that meets the requirements?",
+  "question_chars": 109,
+  "latency_sec": 0.3983733654022217,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

@@ -1,0 +1,37 @@
+{
+  "record_id": "idx_115::1p::gpt-3.5-turbo::seed0",
+  "task_id": "idx_115",
+  "category": "1p",
+  "entry_point": "max_fill",
+  "prompt_field": "prompt1p",
+  "prompt_text": "\ndef max_fill(grid, capacity):\n    import math\n    \"\"\"\n    You are given a rectangular grid of wells. Each row represents a single well,\n    and each 1 in a row represents a single unit of water.\n    Each well has a corresponding bucket that can be used to extract water from it, \n    and all buckets have the same capacity.\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef max_fill(grid, capacity):\n    import math\n    \"\"\"\n    You are given a rectangular grid of wells. Each row represents a single well,\n    and each 1 in a row represents a single unit of water.\n    Each well has a corresponding bucket that can be used to extract water from it, \n    and all buckets have the same capacity.\n    \"\"\"",
+  "prompt_sha256": "6aef4869b4e54b30732d7e9fe8dda0837b94da98f98360888dc9f2b2bb3fdb24",
+  "model_name": "gpt-3.5-turbo",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "I would need more information on what exactly needs to be done with the grid of wells and buckets. Is the goal to fill the buckets to their capacity using the water from the wells? Or is it to maximize the fill of the buckets with water from the wells without exceeding their capacity?",
+  "gen_raw": {},
+  "contains_code": false,
+  "code_detected_method": "none",
+  "extracted_code": null,
+  "is_question": true,
+  "extracted_questions": [
+    "I would need more information on what exactly needs to be done with the grid of wells and buckets. Is the goal to fill the buckets to their capacity using the water from the wells?",
+    "Or is it to maximize the fill of the buckets with water from the wells without exceeding their capacity?",
+    "Is the goal to fill the buckets to their capacity using the water from the wells?"
+  ],
+  "question_count": 3,
+  "first_question": "I would need more information on what exactly needs to be done with the grid of wells and buckets. Is the goal to fill the buckets to their capacity using the water from the wells?",
+  "question_chars": 365,
+  "latency_sec": 0.6967248916625977,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

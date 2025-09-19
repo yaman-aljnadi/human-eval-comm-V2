@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_149::1c::gpt-3.5-turbo::seed0",
+  "task_id": "idx_149",
+  "category": "1c",
+  "entry_point": "sorted_list_sum",
+  "prompt_field": "prompt1c",
+  "prompt_text": "\ndef sorted_list_sum(lst):\n    \"\"\"Write a function that accepts a list of strings as a parameter,\n    deletes the strings that have odd lengths from it,\n    and returns the resulted list with a sorted order,\n    The list is always a list of strings and never an array of numbers,\n    and it may contain duplicates.\n    The order of the list should be ascending by length of each word, and you\n    should return the list sorted by that rule.\n    If two words have the same length, sort the list alphabetically.\n    The function should return a list of strings in sorted order.\n    You may assume that all words will have the same length.\n    For example:\n    assert list_sort([\"aa\", \"a\", \"aaa\"]) => [\"a\"]\n    assert list_sort([\"ab\", \"a\", \"aaa\", \"cd\"]) => [\"a\", \"aaa\"]\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef sorted_list_sum(lst):\n    \"\"\"Write a function that accepts a list of strings as a parameter,\n    deletes the strings that have odd lengths from it,\n    and returns the resulted list with a sorted order,\n    The list is always a list of strings and never an array of numbers,\n    and it may contain duplicates.\n    The order of the list should be ascending by length of each word, and you\n    should return the list sorted by that rule.\n    If two words have the same length, sort the list alphabetically.\n    The function should return a list of strings in sorted order.\n    You may assume that all words will have the same length.\n    For example:\n    assert list_sort([\"aa\", \"a\", \"aaa\"]) => [\"a\"]\n    assert list_sort([\"ab\", \"a\", \"aaa\", \"cd\"]) => [\"a\", \"aaa\"]\n    \"\"\"",
+  "prompt_sha256": "eca5fd0bbeea2389f6e05766e4089fc6df0f8d5121f037ba1bd5e2e39b5676d5",
+  "model_name": "gpt-3.5-turbo",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef list_sort(lst):\n    lst = [word for word in lst if len(word) % 2 == 0]\n    return sorted(lst, key=lambda x: (len(x), x))\n```",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def list_sort(lst):\n    lst = [word for word in lst if len(word) % 2 == 0]\n    return sorted(lst, key=lambda x: (len(x), x))",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 0.7243552207946777,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

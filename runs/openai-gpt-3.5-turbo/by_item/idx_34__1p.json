@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_34::1p::gpt-3.5-turbo::seed0",
+  "task_id": "idx_34",
+  "category": "1p",
+  "entry_point": "unique",
+  "prompt_field": "prompt1p",
+  "prompt_text": "\n\ndef candidate(l: list):\n    \"\"\"Return elements in a list\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(l: list):\n    \"\"\"Return elements in a list\n    \"\"\"",
+  "prompt_sha256": "5c2a3a0789db930b381e247b28f46067c9f690e27920e134a7051a1e302e6cbe",
+  "model_name": "gpt-3.5-turbo",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef candidate(l: list):\n    \"\"\"Return elements in a list\n    \"\"\"\n    return l\n```",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def candidate(l: list):\n    \"\"\"Return elements in a list\n    \"\"\"\n    return l",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 0.5526564121246338,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

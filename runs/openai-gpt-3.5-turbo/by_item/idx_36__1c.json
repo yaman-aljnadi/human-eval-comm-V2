@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_36::1c::gpt-3.5-turbo::seed0",
+  "task_id": "idx_36",
+  "category": "1c",
+  "entry_point": "fizz_buzz",
+  "prompt_field": "prompt1c",
+  "prompt_text": "\n\ndef fizz_buzz(n: int):\n    \"\"\"Return the number of times the digit 7 appears in integers less than n which are divisible by 11 or 13.\n    >>> fizz_buzz(50)\n    2\n    >>> fizz_buzz(78)\n    4\n    >>> fizz_buzz(79)\n    4\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef fizz_buzz(n: int):\n    \"\"\"Return the number of times the digit 7 appears in integers less than n which are divisible by 11 or 13.\n    >>> fizz_buzz(50)\n    2\n    >>> fizz_buzz(78)\n    4\n    >>> fizz_buzz(79)\n    4\n    \"\"\"",
+  "prompt_sha256": "8719f76615558e853b4b408f60a79ca0a07028e0337d725dc095bce9009c5c75",
+  "model_name": "gpt-3.5-turbo",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef fizz_buzz(n: int):\n    count = 0\n    for i in range(1, n):\n        if (i % 11 == 0 or i % 13 == 0) and '7' in str(i):\n            count += str(i).count('7')\n    return count\n\n# Test cases\nprint(fizz_buzz(50))  # Output: 2\nprint(fizz_buzz(78))  # Output: 4\nprint(fizz_buzz(79))  # Output: 4\n```",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def fizz_buzz(n: int):\n    count = 0\n    for i in range(1, n):\n        if (i % 11 == 0 or i % 13 == 0) and '7' in str(i):\n            count += str(i).count('7')\n    return count\n\n# Test cases\nprint(fizz_buzz(50))  # Output: 2\nprint(fizz_buzz(78))  # Output: 4\nprint(fizz_buzz(79))  # Output: 4",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 2.0489916801452637,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

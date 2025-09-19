@@ -1,0 +1,41 @@
+{
+  "record_id": "idx_105::1p::gpt-3.5-turbo::seed0",
+  "task_id": "idx_105",
+  "category": "1p",
+  "entry_point": "by_length",
+  "prompt_field": "prompt1p",
+  "prompt_text": "\ndef by_length(arr):\n    \"\"\"\n    Given an array of integers, sort the integers that are between 1 and 9 inclusive,\n    reverse the resulting array, and then replace each digit by its corresponding name from\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef by_length(arr):\n    \"\"\"\n    Given an array of integers, sort the integers that are between 1 and 9 inclusive,\n    reverse the resulting array, and then replace each digit by its corresponding name from\n    \"\"\"",
+  "prompt_sha256": "ee8f796625d4ec6ab66af5031777a8bf0ea6e970749f05ea8a726a019182dafa",
+  "model_name": "gpt-3.5-turbo",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "I have a couple of clarifying questions before I can generate the Python3 code:\n\n1. What are the corresponding names for the digits 1 to 9 that should be used for replacement?\n2. Should the code take into account any edge cases or error handling scenarios?\n3. Would you like the code to be in a specific format or should it just be functional?\n\nPlease provide the necessary details so I can generate the Python3 code accordingly.",
+  "gen_raw": {},
+  "contains_code": false,
+  "code_detected_method": "none",
+  "extracted_code": null,
+  "is_question": true,
+  "extracted_questions": [
+    "I have a couple of clarifying questions before I can generate the Python3 code:\n\n1. What are the corresponding names for the digits 1 to 9 that should be used for replacement?",
+    "2. Should the code take into account any edge cases or error handling scenarios?",
+    "3. Would you like the code to be in a specific format or should it just be functional?",
+    "Please provide the necessary details so I can generate the Python3 code accordingly.?",
+    "What are the corresponding names for the digits 1 to 9 that should be used for replacement?",
+    "Should the code take into account any edge cases or error handling scenarios?",
+    "Would you like the code to be in a specific format or should it just be functional?"
+  ],
+  "question_count": 7,
+  "first_question": "I have a couple of clarifying questions before I can generate the Python3 code:\n\n1. What are the corresponding names for the digits 1 to 9 that should be used for replacement?",
+  "question_chars": 677,
+  "latency_sec": 0.8772177696228027,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

@@ -1,0 +1,36 @@
+{
+  "record_id": "idx_119::1p::gpt-3.5-turbo::seed0",
+  "task_id": "idx_119",
+  "category": "1p",
+  "entry_point": "match_parens",
+  "prompt_field": "prompt1p",
+  "prompt_text": "\ndef candidate(lst):\n    '''\n    You are given a list of two strings, both strings consist of open\n    parentheses '(' or close parentheses ')' only.\n    Your job is to check if it is possible to concatenate the two strings in\n    some order, that the resulting string will be good.\n    '''\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(lst):\n    '''\n    You are given a list of two strings, both strings consist of open\n    parentheses '(' or close parentheses ')' only.\n    Your job is to check if it is possible to concatenate the two strings in\n    some order, that the resulting string will be good.\n    '''",
+  "prompt_sha256": "fb2b60b8977bb88629388f72253d7fe7ec06bab8c885f1f05994c6a053680495",
+  "model_name": "gpt-3.5-turbo",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "I will need further clarification on what is meant by a \"good\" string in this context. Can you provide more details or examples of what makes a concatenated string good or not good?",
+  "gen_raw": {},
+  "contains_code": false,
+  "code_detected_method": "none",
+  "extracted_code": null,
+  "is_question": true,
+  "extracted_questions": [
+    "I will need further clarification on what is meant by a \"good\" string in this context. Can you provide more details or examples of what makes a concatenated string good or not good?",
+    "Can you provide more details or examples of what makes a concatenated string good or not good?"
+  ],
+  "question_count": 2,
+  "first_question": "I will need further clarification on what is meant by a \"good\" string in this context. Can you provide more details or examples of what makes a concatenated string good or not good?",
+  "question_chars": 275,
+  "latency_sec": 0.6602520942687988,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

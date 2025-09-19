@@ -1,0 +1,35 @@
+{
+  "record_id": "idx_48::1p::gpt-3.5-turbo::seed0",
+  "task_id": "idx_48",
+  "category": "1p",
+  "entry_point": "is_palindrome",
+  "prompt_field": "prompt1p",
+  "prompt_text": "\n\ndef candidate(text: str):\n    \"\"\"\n    Checks if given string is a \n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(text: str):\n    \"\"\"\n    Checks if given string is a \n    \"\"\"",
+  "prompt_sha256": "a7912483763e4cf56bd3727a979d1a5dd096fd589ac6a080508390a6946eabb2",
+  "model_name": "gpt-3.5-turbo",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "Are you looking for a function that checks if a given string is a palindrome?",
+  "gen_raw": {},
+  "contains_code": false,
+  "code_detected_method": "none",
+  "extracted_code": null,
+  "is_question": true,
+  "extracted_questions": [
+    "Are you looking for a function that checks if a given string is a palindrome?"
+  ],
+  "question_count": 1,
+  "first_question": "Are you looking for a function that checks if a given string is a palindrome?",
+  "question_chars": 77,
+  "latency_sec": 0.4586634635925293,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

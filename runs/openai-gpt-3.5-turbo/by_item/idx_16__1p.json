@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_16::1p::gpt-3.5-turbo::seed0",
+  "task_id": "idx_16",
+  "category": "1p",
+  "entry_point": "count_distinct_characters",
+  "prompt_field": "prompt1p",
+  "prompt_text": "\n\ndef candidate(string: str) -> int:\n    \"\"\" Given a string, find out how many distinct characters does it consist of\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(string: str) -> int:\n    \"\"\" Given a string, find out how many distinct characters does it consist of\n    \"\"\"",
+  "prompt_sha256": "f8ed121e7ff22a0d97fd5dc88da7b0f6932e1d70905cd9a6b8d9a0fbec9eafd8",
+  "model_name": "gpt-3.5-turbo",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef candidate(string: str) -> int:\n    distinct_chars = len(set(string))\n    return distinct_chars\n```",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def candidate(string: str) -> int:\n    distinct_chars = len(set(string))\n    return distinct_chars",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 0.4490780830383301,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

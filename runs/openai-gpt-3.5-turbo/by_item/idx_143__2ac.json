@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_143::2ac::gpt-3.5-turbo::seed0",
+  "task_id": "idx_143",
+  "category": "2ac",
+  "entry_point": "words_in_sentence",
+  "prompt_field": "prompt2ac",
+  "prompt_text": "\ndef words_in_sentence(sentence):\n    \"\"\"\n    You are given a string representing a sentence,\n    the sentence contains some words separated by a space,\n    and you have to return a string that contains the words from the original sentence,\n    whose lengths are certain numbers,\n    the order of the words in the new string should be the same as or different from the original one.\n\n    Example 1:\n        Input: sentence = \"This is a test\"\n        Output: \"test\"\n\n    Example 2:\n        Input: sentence = \"lets go for swimming\"\n        Output: \"swimming\"\n\n    Constraints:\n        * 1 <= len(sentence) <= 100\n        * sentence contains only letters\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef words_in_sentence(sentence):\n    \"\"\"\n    You are given a string representing a sentence,\n    the sentence contains some words separated by a space,\n    and you have to return a string that contains the words from the original sentence,\n    whose lengths are certain numbers,\n    the order of the words in the new string should be the same as or different from the original one.\n\n    Example 1:\n        Input: sentence = \"This is a test\"\n        Output: \"test\"\n\n    Example 2:\n        Input: sentence = \"lets go for swimming\"\n        Output: \"swimming\"\n\n    Constraints:\n        * 1 <= len(sentence) <= 100\n        * sentence contains only letters\n    \"\"\"",
+  "prompt_sha256": "4bf542cdb54927c302b39b6f6ef0b78229c789c7bbfe07c2623b487f8e18c9ea",
+  "model_name": "gpt-3.5-turbo",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef words_in_sentence(sentence):\n    words = sentence.split()\n    filtered_words = [word for word in words if len(word) == 5]\n    return ' '.join(filtered_words)\n```",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def words_in_sentence(sentence):\n    words = sentence.split()\n    filtered_words = [word for word in words if len(word) == 5]\n    return ' '.join(filtered_words)",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 0.6593353748321533,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

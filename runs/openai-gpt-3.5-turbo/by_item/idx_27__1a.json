@@ -1,0 +1,37 @@
+{
+  "record_id": "idx_27::1a::gpt-3.5-turbo::seed0",
+  "task_id": "idx_27",
+  "category": "1a",
+  "entry_point": "flip_case",
+  "prompt_field": "prompt1a",
+  "prompt_text": "\n\ndef candidate(string: str) -> str:\n    \"\"\" For a given string, flip lowercase or uppercase characters to either uppercase or lowercase.\n    >>> candidate('Hello')\n    'hELLO'\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(string: str) -> str:\n    \"\"\" For a given string, flip lowercase or uppercase characters to either uppercase or lowercase.\n    >>> candidate('Hello')\n    'hELLO'\n    \"\"\"",
+  "prompt_sha256": "14c8c42dc45c1c54c8b85d21eff73ff9b6c5077d163c69a96512c6f0f4ae2722",
+  "model_name": "gpt-3.5-turbo",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "**Clarifying Question:** Would you like me to provide a solution that directly flips the case of each character in the string (e.g., 'H' to 'h' and 'e' to 'E') or should I simply swap the cases of the letters without changing them to their opposite case (e.g., 'H' stays 'H' but changes to uppercase)?\n\nThis distinction is important because it will affect how the code handles characters that are already in the desired case.",
+  "gen_raw": {},
+  "contains_code": false,
+  "code_detected_method": "none",
+  "extracted_code": null,
+  "is_question": true,
+  "extracted_questions": [
+    "**Clarifying Question:** Would you like me to provide a solution that directly flips the case of each character in the string (e.g., 'H' to 'h' and 'e' to 'E') or should I simply swap the cases of the letters without changing them to their opposite case (e.g., 'H' stays 'H' but changes to uppercase)?",
+    "This distinction is important because it will affect how the code handles characters that are already in the desired case.?",
+    ", 'H' stays 'H' but changes to uppercase)?"
+  ],
+  "question_count": 3,
+  "first_question": "**Clarifying Question:** Would you like me to provide a solution that directly flips the case of each character in the string (e.g., 'H' to 'h' and 'e' to 'E') or should I simply swap the cases of the letters without changing them to their opposite case (e.g., 'H' stays 'H' but changes to uppercase)?",
+  "question_chars": 466,
+  "latency_sec": 0.8287806510925293,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

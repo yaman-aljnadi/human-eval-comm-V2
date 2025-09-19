@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_100::1p::gpt-3.5-turbo::seed0",
+  "task_id": "idx_100",
+  "category": "1p",
+  "entry_point": "make_a_pile",
+  "prompt_field": "prompt1p",
+  "prompt_text": "\ndef make_a_pile(n):\n    \"\"\"\n    Given a positive integer n, you have to make a pile of n levels of stones.\n    The first level has n stones.\n    The number of stones in the next level is:\n        - the next odd number if n is odd.\n        - the next even number if n is even.\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef make_a_pile(n):\n    \"\"\"\n    Given a positive integer n, you have to make a pile of n levels of stones.\n    The first level has n stones.\n    The number of stones in the next level is:\n        - the next odd number if n is odd.\n        - the next even number if n is even.\n    \"\"\"",
+  "prompt_sha256": "763f93f7436f136b3ba0599b32b48c48ed58546be508860824e59e3cdaf8355f",
+  "model_name": "gpt-3.5-turbo",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef make_a_pile(n):\n    stones = []\n    stones.append(n)\n    \n    while n > 1:\n        if n % 2 == 0:\n            n = n // 2\n        else:\n            n = 3 * n + 1\n        stones.append(n)\n        \n    return stones\n```",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def make_a_pile(n):\n    stones = []\n    stones.append(n)\n    \n    while n > 1:\n        if n % 2 == 0:\n            n = n // 2\n        else:\n            n = 3 * n + 1\n        stones.append(n)\n        \n    return stones",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 0.9908318519592285,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

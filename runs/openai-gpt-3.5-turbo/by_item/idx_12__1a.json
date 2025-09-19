@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_12::1a::gpt-3.5-turbo::seed0",
+  "task_id": "idx_12",
+  "category": "1a",
+  "entry_point": "longest",
+  "prompt_field": "prompt1a",
+  "prompt_text": "from typing import List, Optional\n\n\ndef candidate(strings: List[str]) -> Optional[str]:\n    \"\"\" Out of list of strings, return a certain one (the shortest or longest or another). Return the first one in case of multiple\n    strings of the same length. Return None in case the input list is empty.\n    >>> candidate([])\n\n    >>> candidate(['a', 'b', 'c'])\n    'a'\n    >>> candidate(['a', 'bb', 'ccc'])\n    'ccc'\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List, Optional\n\n\ndef candidate(strings: List[str]) -> Optional[str]:\n    \"\"\" Out of list of strings, return a certain one (the shortest or longest or another). Return the first one in case of multiple\n    strings of the same length. Return None in case the input list is empty.\n    >>> candidate([])\n\n    >>> candidate(['a', 'b', 'c'])\n    'a'\n    >>> candidate(['a', 'bb', 'ccc'])\n    'ccc'\n    \"\"\"",
+  "prompt_sha256": "f95af29dc3ac5f90d5214003e0abcbf7b6b93215cb433c2304903fed88c5010a",
+  "model_name": "gpt-3.5-turbo",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef candidate(strings: List[str]) -> Optional[str]:\n    if not strings:\n        return None\n    return min(strings, key=lambda x: (-len(x), x))\n\n# Test cases\nprint(candidate([]))  # None\nprint(candidate(['a', 'b', 'c']))  # 'a'\nprint(candidate(['a', 'bb', 'ccc']))  # 'ccc'\n```",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def candidate(strings: List[str]) -> Optional[str]:\n    if not strings:\n        return None\n    return min(strings, key=lambda x: (-len(x), x))\n\n# Test cases\nprint(candidate([]))  # None\nprint(candidate(['a', 'b', 'c']))  # 'a'\nprint(candidate(['a', 'bb', 'ccc']))  # 'ccc'",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 0.8708944320678711,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

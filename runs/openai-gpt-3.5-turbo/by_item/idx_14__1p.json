@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_14::1p::gpt-3.5-turbo::seed0",
+  "task_id": "idx_14",
+  "category": "1p",
+  "entry_point": "all_prefixes",
+  "prompt_field": "prompt1p",
+  "prompt_text": "from typing import List\n\n\ndef all_prefixes(string: str) -> List[str]:\n    \"\"\" Return list of all prefixes\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List\n\n\ndef all_prefixes(string: str) -> List[str]:\n    \"\"\" Return list of all prefixes\n    \"\"\"",
+  "prompt_sha256": "672413b41f414ad2a2a35b27ac6cf23b6213b8b8affe4f43da49e2b0970ca8a4",
+  "model_name": "gpt-3.5-turbo",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef all_prefixes(string: str) -> List[str]:\n    prefixes = [string[:i] for i in range(1, len(string)+1)]\n    return prefixes\n```",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def all_prefixes(string: str) -> List[str]:\n    prefixes = [string[:i] for i in range(1, len(string)+1)]\n    return prefixes",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 0.5087695121765137,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

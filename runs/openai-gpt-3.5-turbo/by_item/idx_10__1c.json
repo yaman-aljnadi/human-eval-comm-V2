@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_10::1c::gpt-3.5-turbo::seed0",
+  "task_id": "idx_10",
+  "category": "1c",
+  "entry_point": "make_palindrome",
+  "prompt_field": "prompt1c",
+  "prompt_text": "\n\ndef is_palindrome(string: str) -> bool:\n    \"\"\" Test if given string is a palindrome \"\"\"\n    return string == string[::-1]\n\n\ndef make_palindrome(string: str) -> str:\n    \"\"\" Find the shortest palindrome that begins with a supplied string.\n    Algorithm idea is simple:\n    - Find the longest postfix of supplied string that is a palindrome.\n    - Append to the end of the string reverse of a string prefix that comes before the palindromic suffix.\n    >>> make_palindrome('')\n    ''\n    >>> make_palindrome('cat')\n    'ata'\n    >>> make_palindrome('cata')\n    'ata'\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef is_palindrome(string: str) -> bool:\n    \"\"\" Test if given string is a palindrome \"\"\"\n    return string == string[::-1]\n\n\ndef make_palindrome(string: str) -> str:\n    \"\"\" Find the shortest palindrome that begins with a supplied string.\n    Algorithm idea is simple:\n    - Find the longest postfix of supplied string that is a palindrome.\n    - Append to the end of the string reverse of a string prefix that comes before the palindromic suffix.\n    >>> make_palindrome('')\n    ''\n    >>> make_palindrome('cat')\n    'ata'\n    >>> make_palindrome('cata')\n    'ata'\n    \"\"\"",
+  "prompt_sha256": "e2012aade4244abca8fec8286e0975c5d88e73ce159da0cac233adc7800a1ae9",
+  "model_name": "gpt-3.5-turbo",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef make_palindrome(string: str) -> str:\n    prefix = \"\"\n    for i in range(len(string), 0, -1):\n        if string[:i] == string[:i][::-1]:\n            prefix = string[i:]\n            break\n    return prefix[::-1] + string\n```",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def make_palindrome(string: str) -> str:\n    prefix = \"\"\n    for i in range(len(string), 0, -1):\n        if string[:i] == string[:i][::-1]:\n            prefix = string[i:]\n            break\n    return prefix[::-1] + string",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 0.7078492641448975,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

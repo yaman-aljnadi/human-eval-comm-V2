@@ -1,0 +1,35 @@
+{
+  "record_id": "idx_148::1p::gpt-3.5-turbo::seed0",
+  "task_id": "idx_148",
+  "category": "1p",
+  "entry_point": "bf",
+  "prompt_field": "prompt1p",
+  "prompt_text": "\ndef bf(planet1, planet2):\n    '''\n    There are eight planets in our solar system: the closerst to the Sun \n    is Mercury, the next one is Venus, then Earth, Mars, Jupiter, Saturn, \n    Uranus, Neptune.\n    Write a function that takes two planet names as strings planet1 and planet2. \n    '''\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef bf(planet1, planet2):\n    '''\n    There are eight planets in our solar system: the closerst to the Sun \n    is Mercury, the next one is Venus, then Earth, Mars, Jupiter, Saturn, \n    Uranus, Neptune.\n    Write a function that takes two planet names as strings planet1 and planet2. \n    '''",
+  "prompt_sha256": "15dbff96a0108484d7424b6f65618c491b79dde692627eb2de92cc748d6dc6a0",
+  "model_name": "gpt-3.5-turbo",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "What should the function return or do with the two planet names provided as input?",
+  "gen_raw": {},
+  "contains_code": false,
+  "code_detected_method": "none",
+  "extracted_code": null,
+  "is_question": true,
+  "extracted_questions": [
+    "What should the function return or do with the two planet names provided as input?"
+  ],
+  "question_count": 1,
+  "first_question": "What should the function return or do with the two planet names provided as input?",
+  "question_chars": 82,
+  "latency_sec": 0.4067058563232422,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

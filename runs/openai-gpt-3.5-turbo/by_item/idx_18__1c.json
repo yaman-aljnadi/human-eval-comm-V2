@@ -1,0 +1,35 @@
+{
+  "record_id": "idx_18::1c::gpt-3.5-turbo::seed0",
+  "task_id": "idx_18",
+  "category": "1c",
+  "entry_point": "how_many_times",
+  "prompt_field": "prompt1c",
+  "prompt_text": "\n\ndef how_many_times(string: str, substring: str) -> int:\n    \"\"\" Find how many times a given substring can be found in the original string. Count overlaping cases.\n    >>> how_many_times('', 'a')\n    0\n    >>> how_many_times('aaa', 'a')\n    3\n    >>> how_many_times('aaaa', 'aa')\n    2\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef how_many_times(string: str, substring: str) -> int:\n    \"\"\" Find how many times a given substring can be found in the original string. Count overlaping cases.\n    >>> how_many_times('', 'a')\n    0\n    >>> how_many_times('aaa', 'a')\n    3\n    >>> how_many_times('aaaa', 'aa')\n    2\n    \"\"\"",
+  "prompt_sha256": "fd31b2d0f057964a389e5aac233ce63138830aa73fff9bfa8e3bcbc4a8e41ce1",
+  "model_name": "gpt-3.5-turbo",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "How should we handle cases where the substring is longer than the original string or when either the string or substring is empty?",
+  "gen_raw": {},
+  "contains_code": false,
+  "code_detected_method": "none",
+  "extracted_code": null,
+  "is_question": true,
+  "extracted_questions": [
+    "How should we handle cases where the substring is longer than the original string or when either the string or substring is empty?"
+  ],
+  "question_count": 1,
+  "first_question": "How should we handle cases where the substring is longer than the original string or when either the string or substring is empty?",
+  "question_chars": 130,
+  "latency_sec": 0.5256373882293701,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_20::1p::gpt-3.5-turbo::seed0",
+  "task_id": "idx_20",
+  "category": "1p",
+  "entry_point": "find_closest_elements",
+  "prompt_field": "prompt1p",
+  "prompt_text": "from typing import List, Tuple\n\n\ndef find_closest_elements(numbers: List[float]) -> Tuple[float, float]:\n    \"\"\" From a supplied list of numbers (of length at least two) select and return two that are the closest to each\n    other and return them in order.\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List, Tuple\n\n\ndef find_closest_elements(numbers: List[float]) -> Tuple[float, float]:\n    \"\"\" From a supplied list of numbers (of length at least two) select and return two that are the closest to each\n    other and return them in order.\n    \"\"\"",
+  "prompt_sha256": "354e9db87137a22c2c8c3fbefa810d1ccc43eea8718065960a220b1d420d6fef",
+  "model_name": "gpt-3.5-turbo",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef find_closest_elements(numbers: List[float]) -> Tuple[float, float]:\n    sorted_numbers = sorted(numbers)\n    min_diff = float('inf')\n    result = ()\n\n    for i in range(1, len(sorted_numbers)):\n        diff = abs(sorted_numbers[i] - sorted_numbers[i - 1])\n        if diff < min_diff:\n            min_diff = diff\n            result = (sorted_numbers[i - 1], sorted_numbers[i])\n\n    return result\n```",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def find_closest_elements(numbers: List[float]) -> Tuple[float, float]:\n    sorted_numbers = sorted(numbers)\n    min_diff = float('inf')\n    result = ()\n\n    for i in range(1, len(sorted_numbers)):\n        diff = abs(sorted_numbers[i] - sorted_numbers[i - 1])\n        if diff < min_diff:\n            min_diff = diff\n            result = (sorted_numbers[i - 1], sorted_numbers[i])\n\n    return result",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 0.9364676475524902,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

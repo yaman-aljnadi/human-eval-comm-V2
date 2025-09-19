@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_129::1c::gpt-3.5-turbo::seed0",
+  "task_id": "idx_129",
+  "category": "1c",
+  "entry_point": "minPath",
+  "prompt_field": "prompt1c",
+  "prompt_text": "\ndef minPath(grid, k):\n    \"\"\"\n    Given a grid with N rows and N columns (N >= 2) and a positive integer k, \n    each cell of the grid contains a value. Every integer in the range [1, N * N]\n    inclusive appears exactly once on the cells of the grid.\n\n    You have to find the minimum path of length k in the grid. You can start\n    from any cell, and in each step you can move to any of the neighbor cells,\n    in other words, you can go to cells which share an edge with you current\n    cell.\n    Please note that a path of length k means visiting exactly k cells (not\n    necessarily distinct).\n    You CANNOT go off the grid.\n    A path A (of length k) is considered less than a path B (of length k) if\n    after making the ordered lists of the values on the cells that A and B go\n    through (let's call them lst_A and lst_B), lst_A is lexicographically less\n    than lst_B, in other words, there exist an integer index i (1 <= i <= k)\n    such that lst_A[i] < lst_B[i] and for any j (1 <= j < i) we have\n    lst_A[j] = lst_B[j].\n    It is guaranteed that the answer is unique.\n    Return an ordered list of the values on the cells that the minimum path go through.\n\n    Examples:\n\n        Input: grid = [ [1,2,3], [4,5,6], [7,8,9]], k = 3\n        Output: [9, 8, 7]\n\n        Input: grid = [ [5,9,3], [4,1,6], [7,8,2]], k = 1\n        Output: [9]\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef minPath(grid, k):\n    \"\"\"\n    Given a grid with N rows and N columns (N >= 2) and a positive integer k, \n    each cell of the grid contains a value. Every integer in the range [1, N * N]\n    inclusive appears exactly once on the cells of the grid.\n\n    You have to find the minimum path of length k in the grid. You can start\n    from any cell, and in each step you can move to any of the neighbor cells,\n    in other words, you can go to cells which share an edge with you current\n    cell.\n    Please note that a path of length k means visiting exactly k cells (not\n    necessarily distinct).\n    You CANNOT go off the grid.\n    A path A (of length k) is considered less than a path B (of length k) if\n    after making the ordered lists of the values on the cells that A and B go\n    through (let's call them lst_A and lst_B), lst_A is lexicographically less\n    than lst_B, in other words, there exist an integer index i (1 <= i <= k)\n    such that lst_A[i] < lst_B[i] and for any j (1 <= j < i) we have\n    lst_A[j] = lst_B[j].\n    It is guaranteed that the answer is unique.\n    Return an ordered list of the values on the cells that the minimum path go through.\n\n    Examples:\n\n        Input: grid = [ [1,2,3], [4,5,6], [7,8,9]], k = 3\n        Output: [9, 8, 7]\n\n        Input: grid = [ [5,9,3], [4,1,6], [7,8,2]], k = 1\n        Output: [9]\n    \"\"\"",
+  "prompt_sha256": "fcdd8cce76e306ba76d064e24bb3c15ab925948c98752ba8e6a51a4cf7d7468e",
+  "model_name": "gpt-3.5-turbo",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef minPath(grid, k):\n    n = len(grid)\n    seen = set()\n    pq = [(grid[i][j], i, j, []) for i in range(n) for j in range(n)]\n    \n    while pq:\n        val, i, j, path = heapq.heappop(pq)\n        if (i, j) in seen:\n            continue\n        \n        seen.add((i, j))\n        if len(path) == k:\n            return path\n        \n        for x, y in ((i+1, j), (i-1, j), (i, j+1), (i, j-1)):\n            if 0 <= x < n and 0 <= y < n and (x, y) not in seen:\n                heapq.heappush(pq, (grid[x][y], x, y, path + [grid[x][y]]))\n    \n    return None\n\n# Test cases\nprint(minPath([[1,2,3], [4,5,6], [7,8,9]], 3)) # Output: [9, 8, 7]\nprint(minPath([[5,9,3], [4,1,6], [7,8",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def minPath(grid, k):\n    n = len(grid)\n    seen = set()\n    pq = [(grid[i][j], i, j, []) for i in range(n) for j in range(n)]\n    \n    while pq:\n        val, i, j, path = heapq.heappop(pq)\n        if (i, j) in seen:\n            continue\n        \n        seen.add((i, j))\n        if len(path) == k:\n            return path\n        \n        for x, y in ((i+1, j), (i-1, j), (i, j+1), (i, j-1)):\n            if 0 <= x < n and 0 <= y < n and (x, y) not in seen:\n                heapq.heappush(pq, (grid[x][y], x, y, path + [grid[x][y]]))\n    \n    return None\n\n# Test cases\nprint(minPath([[1,2,3], [4,5,6], [7,8,9]], 3)) # Output: [9, 8, 7]\nprint(minPath([[5,9,3], [4,1,6], [7,8",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 2.1491594314575195,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

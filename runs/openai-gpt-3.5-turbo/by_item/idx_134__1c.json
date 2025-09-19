@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_134::1c::gpt-3.5-turbo::seed0",
+  "task_id": "idx_134",
+  "category": "1c",
+  "entry_point": "check_if_last_char_is_a_letter",
+  "prompt_field": "prompt1c",
+  "prompt_text": "\ndef check_if_last_char_is_a_letter(txt):\n    '''\n    Create a function that returns True if the last character\n    of a given string is an alphabetical character and is not\n    a part of a word, and False otherwise.\n    Note: \"word\" is a group of characters separated by space.\n\n    Examples:\n    check_if_last_char_is_a_letter(\"apple pie\") ➞ True\n    check_if_last_char_is_a_letter(\"apple pi e\") ➞ False\n    check_if_last_char_is_a_letter(\"apple pi e \") ➞ True\n    check_if_last_char_is_a_letter(\"\") ➞ True \n    '''\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef check_if_last_char_is_a_letter(txt):\n    '''\n    Create a function that returns True if the last character\n    of a given string is an alphabetical character and is not\n    a part of a word, and False otherwise.\n    Note: \"word\" is a group of characters separated by space.\n\n    Examples:\n    check_if_last_char_is_a_letter(\"apple pie\") ➞ True\n    check_if_last_char_is_a_letter(\"apple pi e\") ➞ False\n    check_if_last_char_is_a_letter(\"apple pi e \") ➞ True\n    check_if_last_char_is_a_letter(\"\") ➞ True \n    '''",
+  "prompt_sha256": "6c05649a9537287425142edb6df23752088f97c7891670b64fc9fd070310b040",
+  "model_name": "gpt-3.5-turbo",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef check_if_last_char_is_a_letter(txt):\n    if txt == \"\":\n        return True\n    else:\n        txt = txt.strip()\n        if not txt:\n            return True\n        else:\n            return txt[-1].isalpha() and txt[-2] == \" \"\n\n# Test cases\nprint(check_if_last_char_is_a_letter(\"apple pie\"))  # ➞ True\nprint(check_if_last_char_is_a_letter(\"apple pi e\"))  # ➞ False\nprint(check_if_last_char_is_a_letter(\"apple pi e \"))  # ➞ True\nprint(check_if_last_char_is_a_letter(\"\"))  # ➞ True\n```",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def check_if_last_char_is_a_letter(txt):\n    if txt == \"\":\n        return True\n    else:\n        txt = txt.strip()\n        if not txt:\n            return True\n        else:\n            return txt[-1].isalpha() and txt[-2] == \" \"\n\n# Test cases\nprint(check_if_last_char_is_a_letter(\"apple pie\"))  # ➞ True\nprint(check_if_last_char_is_a_letter(\"apple pi e\"))  # ➞ False\nprint(check_if_last_char_is_a_letter(\"apple pi e \"))  # ➞ True\nprint(check_if_last_char_is_a_letter(\"\"))  # ➞ True",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 0.9886126518249512,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

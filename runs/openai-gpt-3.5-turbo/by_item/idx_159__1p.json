@@ -1,0 +1,42 @@
+{
+  "record_id": "idx_159::1p::gpt-3.5-turbo::seed0",
+  "task_id": "idx_159",
+  "category": "1p",
+  "entry_point": "eat",
+  "prompt_field": "prompt1p",
+  "prompt_text": "\ndef eat(number, need, remaining):\n    \"\"\"\n    You're a hungry rabbit, and you already have eaten a certain number of carrots,\n    but now you need to eat more carrots to complete the day's meals.\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef eat(number, need, remaining):\n    \"\"\"\n    You're a hungry rabbit, and you already have eaten a certain number of carrots,\n    but now you need to eat more carrots to complete the day's meals.\n    \"\"\"",
+  "prompt_sha256": "e4b533cbe651826cd96bf745c122554b9a7916b76d32efd79c9baa29a758f06b",
+  "model_name": "gpt-3.5-turbo",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "I will need more information on the specific requirements for the `eat` function in order to generate Python3 code. \n\nPlease provide the following details:\n1. What should the function return?\n2. How should the function handle cases where the number of carrots needed exceeds the remaining amount?\n3. Are there any constraints on the input values for the function parameters?\n4. Any specific error handling or edge cases that need to be considered?",
+  "gen_raw": {},
+  "contains_code": false,
+  "code_detected_method": "none",
+  "extracted_code": null,
+  "is_question": true,
+  "extracted_questions": [
+    "I will need more information on the specific requirements for the `eat` function in order to generate Python3 code. \n\nPlease provide the following details:\n1. What should the function return?",
+    "2. How should the function handle cases where the number of carrots needed exceeds the remaining amount?",
+    "3. Are there any constraints on the input values for the function parameters?",
+    "4. Any specific error handling or edge cases that need to be considered?",
+    "What should the function return?",
+    "How should the function handle cases where the number of carrots needed exceeds the remaining amount?",
+    "Are there any constraints on the input values for the function parameters?",
+    "Any specific error handling or edge cases that need to be considered?"
+  ],
+  "question_count": 8,
+  "first_question": "I will need more information on the specific requirements for the `eat` function in order to generate Python3 code. \n\nPlease provide the following details:\n1. What should the function return?",
+  "question_chars": 720,
+  "latency_sec": 0.8459296226501465,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

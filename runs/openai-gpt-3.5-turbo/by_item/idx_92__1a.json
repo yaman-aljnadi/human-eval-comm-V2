@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_92::1a::gpt-3.5-turbo::seed0",
+  "task_id": "idx_92",
+  "category": "1a",
+  "entry_point": "any_int",
+  "prompt_field": "prompt1a",
+  "prompt_text": "\ndef any_int(x, y, z):\n    '''\n    Create a function that takes 3 numbers.\n    Returns true if one of the numbers meets certain condition (such as larger than, or equal to the sum of the other two), and all numbers are integers.\n    Returns false in any other cases.\n    \n    Examples\n    any_int(5, 2, 7) ➞ True\n    \n    any_int(3, 2, 2) ➞ False\n\n    any_int(3, -2, 1) ➞ True\n    \n    any_int(3.6, -2.2, 2) ➞ False\n  \n\n    \n    '''\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef any_int(x, y, z):\n    '''\n    Create a function that takes 3 numbers.\n    Returns true if one of the numbers meets certain condition (such as larger than, or equal to the sum of the other two), and all numbers are integers.\n    Returns false in any other cases.\n    \n    Examples\n    any_int(5, 2, 7) ➞ True\n    \n    any_int(3, 2, 2) ➞ False\n\n    any_int(3, -2, 1) ➞ True\n    \n    any_int(3.6, -2.2, 2) ➞ False\n  \n\n    \n    '''",
+  "prompt_sha256": "068371a4509751ab939cac7979534f819116affea710fed3e96510368f20e9b4",
+  "model_name": "gpt-3.5-turbo",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef any_int(x, y, z):\n    if all(isinstance(num, int) for num in [x, y, z]):\n        return x >= y + z or y >= x + z or z >= x + y\n    return False\n```",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def any_int(x, y, z):\n    if all(isinstance(num, int) for num in [x, y, z]):\n        return x >= y + z or y >= x + z or z >= x + y\n    return False",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 0.663273811340332,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

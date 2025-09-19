@@ -1,0 +1,35 @@
+{
+  "record_id": "idx_86::1p::gpt-3.5-turbo::seed0",
+  "task_id": "idx_86",
+  "category": "1p",
+  "entry_point": "anti_shuffle",
+  "prompt_field": "prompt1p",
+  "prompt_text": "\ndef anti_shuffle(s):\n    \"\"\"\n    Write a function that takes a string and returns an ordered version of it.\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef anti_shuffle(s):\n    \"\"\"\n    Write a function that takes a string and returns an ordered version of it.\n    \"\"\"",
+  "prompt_sha256": "a9e6b4e0e28b2c782dfb25300a85c88eb2fb7c2eba9b20ca88dc7c446e4a9bdb",
+  "model_name": "gpt-3.5-turbo",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "I will need a little more information to clarify the requirements for the \"ordered version\" of the string. Are we looking to return the string sorted alphabetically or in some other specific order?",
+  "gen_raw": {},
+  "contains_code": false,
+  "code_detected_method": "none",
+  "extracted_code": null,
+  "is_question": true,
+  "extracted_questions": [
+    "Are we looking to return the string sorted alphabetically or in some other specific order?"
+  ],
+  "question_count": 1,
+  "first_question": "Are we looking to return the string sorted alphabetically or in some other specific order?",
+  "question_chars": 90,
+  "latency_sec": 0.6770527362823486,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

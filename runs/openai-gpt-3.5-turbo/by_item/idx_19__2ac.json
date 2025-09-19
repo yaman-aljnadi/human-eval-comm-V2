@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_19::2ac::gpt-3.5-turbo::seed0",
+  "task_id": "idx_19",
+  "category": "2ac",
+  "entry_point": "sort_numbers",
+  "prompt_field": "prompt2ac",
+  "prompt_text": "from typing import List\n\n\ndef candidate(numbers: str) -> str:\n    \"\"\" Input is a space-delimited string of numberals from 'zero' to 'nine'.\n    Valid choices are 'zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight' and 'nine'.\n    Return the string with numbers in a certain order (sorted descendingly or ascendingly or another order)\n    >>> candidate('three one five')\n    'five three one'\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List\n\n\ndef candidate(numbers: str) -> str:\n    \"\"\" Input is a space-delimited string of numberals from 'zero' to 'nine'.\n    Valid choices are 'zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight' and 'nine'.\n    Return the string with numbers in a certain order (sorted descendingly or ascendingly or another order)\n    >>> candidate('three one five')\n    'five three one'\n    \"\"\"",
+  "prompt_sha256": "aa7bf28e0c1470715c566f4a834dc9487106c0dd60c4c5530dcc47dcf01235e6",
+  "model_name": "gpt-3.5-turbo",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef candidate(numbers: str) -> str:\n    number_map = {\n        'zero': 0,\n        'one': 1,\n        'two': 2,\n        'three': 3,\n        'four': 4,\n        'five': 5,\n        'six': 6,\n        'seven': 7,\n        'eight': 8,\n        'nine': 9\n    }\n    \n    # Convert words to numbers\n    num_list = [number_map[num] for num in numbers.split()]\n    \n    # Sort the numbers in ascending order\n    sorted_nums = sorted(num_list)\n    \n    # Convert sorted numbers back to words\n    result = ' '.join([key for value in sorted_nums for key, num in number_map.items() if num == value])\n    \n    return result\n```",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def candidate(numbers: str) -> str:\n    number_map = {\n        'zero': 0,\n        'one': 1,\n        'two': 2,\n        'three': 3,\n        'four': 4,\n        'five': 5,\n        'six': 6,\n        'seven': 7,\n        'eight': 8,\n        'nine': 9\n    }\n    \n    # Convert words to numbers\n    num_list = [number_map[num] for num in numbers.split()]\n    \n    # Sort the numbers in ascending order\n    sorted_nums = sorted(num_list)\n    \n    # Convert sorted numbers back to words\n    result = ' '.join([key for value in sorted_nums for key, num in number_map.items() if num == value])\n    \n    return result",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 1.3940718173980713,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_117::1c::gpt-3.5-turbo::seed0",
+  "task_id": "idx_117",
+  "category": "1c",
+  "entry_point": "select_words",
+  "prompt_field": "prompt1c",
+  "prompt_text": "\ndef select_words(s, n):\n    \"\"\"Given a string s and a natural number n, you have been tasked to implement \n    a function that returns a list of all words from string s that contain exactly \n    n consonants, in order these words appear in the string s.\n    If the string s is empty then the function should return an empty list.\n    Note: you may assume the input string contains only letters and spaces.\n    Examples:\n    select_words(\"Mary had a little lamb\", 4) ==> [\"had\"]\n    select_words(\"Mary had a little lamb\", 3) ==> [\"lamb\"]\n    select_words(\"simple white space\", 2) ==> [\"white\"]\n    select_words(\"Hello world\", 4) ==> [\"Hello\"]\n    select_words(\"Uncle sam\", 3) ==> [\"sam\"]\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef select_words(s, n):\n    \"\"\"Given a string s and a natural number n, you have been tasked to implement \n    a function that returns a list of all words from string s that contain exactly \n    n consonants, in order these words appear in the string s.\n    If the string s is empty then the function should return an empty list.\n    Note: you may assume the input string contains only letters and spaces.\n    Examples:\n    select_words(\"Mary had a little lamb\", 4) ==> [\"had\"]\n    select_words(\"Mary had a little lamb\", 3) ==> [\"lamb\"]\n    select_words(\"simple white space\", 2) ==> [\"white\"]\n    select_words(\"Hello world\", 4) ==> [\"Hello\"]\n    select_words(\"Uncle sam\", 3) ==> [\"sam\"]\n    \"\"\"",
+  "prompt_sha256": "5786006a4136f8dbe7498b617917aa35e0368488550ef341668967c2d696f60d",
+  "model_name": "gpt-3.5-turbo",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef select_words(s, n):\n    if not s:\n        return []\n    \n    def count_consonants(word):\n        consonants = \"bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ\"\n        return sum(1 for letter in word if letter in consonants)\n    \n    words = s.split()\n    result = [word for word in words if count_consonants(word) == n]\n    \n    return result\n\n# Test cases\nprint(select_words(\"Mary had a little lamb\", 4))  # [\"had\"]\nprint(select_words(\"Mary had a little lamb\", 3))  # [\"lamb\"]\nprint(select_words(\"simple white space\", 2))      # [\"white\"]\nprint(select_words(\"Hello world\", 4))             # [\"Hello\"]\nprint(select_words(\"Uncle sam\", 3))               # [\"sam\"]\n```",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def select_words(s, n):\n    if not s:\n        return []\n    \n    def count_consonants(word):\n        consonants = \"bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ\"\n        return sum(1 for letter in word if letter in consonants)\n    \n    words = s.split()\n    result = [word for word in words if count_consonants(word) == n]\n    \n    return result\n\n# Test cases\nprint(select_words(\"Mary had a little lamb\", 4))  # [\"had\"]\nprint(select_words(\"Mary had a little lamb\", 3))  # [\"lamb\"]\nprint(select_words(\"simple white space\", 2))      # [\"white\"]\nprint(select_words(\"Hello world\", 4))             # [\"Hello\"]\nprint(select_words(\"Uncle sam\", 3))               # [\"sam\"]",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 1.5669276714324951,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

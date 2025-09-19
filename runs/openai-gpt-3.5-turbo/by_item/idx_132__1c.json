@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_132::1c::gpt-3.5-turbo::seed0",
+  "task_id": "idx_132",
+  "category": "1c",
+  "entry_point": "is_nested",
+  "prompt_field": "prompt1c",
+  "prompt_text": "\ndef is_nested(string):\n    '''\n    Create a function that takes a string as input which contains only square brackets.\n    The function should return True if and only if there is a valid subsequence of brackets \n    where at least one bracket in the subsequence is nested.\n\n    is_nested('[[]]') ➞ False\n    is_nested('[]]]]]]][[[[[]') ➞ True\n    is_nested('[][]') ➞ True\n    is_nested('[]') ➞ True\n    is_nested('[[][]]') ➞ False\n    is_nested('[[]][[') ➞ False\n    '''\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef is_nested(string):\n    '''\n    Create a function that takes a string as input which contains only square brackets.\n    The function should return True if and only if there is a valid subsequence of brackets \n    where at least one bracket in the subsequence is nested.\n\n    is_nested('[[]]') ➞ False\n    is_nested('[]]]]]]][[[[[]') ➞ True\n    is_nested('[][]') ➞ True\n    is_nested('[]') ➞ True\n    is_nested('[[][]]') ➞ False\n    is_nested('[[]][[') ➞ False\n    '''",
+  "prompt_sha256": "6aa7e045fa6b2541701a6bf3491078ba6447c0bc74e66cab5d94f43780b69ff7",
+  "model_name": "gpt-3.5-turbo",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef is_nested(string):\n    if '[]' in string:\n        return True\n    return False\n```",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def is_nested(string):\n    if '[]' in string:\n        return True\n    return False",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 0.4494931697845459,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

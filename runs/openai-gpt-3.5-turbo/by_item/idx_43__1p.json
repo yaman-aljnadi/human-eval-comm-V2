@@ -1,0 +1,35 @@
+{
+  "record_id": "idx_43::1p::gpt-3.5-turbo::seed0",
+  "task_id": "idx_43",
+  "category": "1p",
+  "entry_point": "pairs_sum_to_zero",
+  "prompt_field": "prompt1p",
+  "prompt_text": "\n\ndef candidate(l):\n    \"\"\"\n    candidate takes a list of integers as an input.\n    it returns True if there are two distinct elements in the list that\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(l):\n    \"\"\"\n    candidate takes a list of integers as an input.\n    it returns True if there are two distinct elements in the list that\n    \"\"\"",
+  "prompt_sha256": "6af1565de96ba35355ac564557f6f768024b3390b30ff192406b6675bab33e48",
+  "model_name": "gpt-3.5-turbo",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "Could you please provide more information on what condition those two distinct elements need to meet in order for the function to return True?",
+  "gen_raw": {},
+  "contains_code": false,
+  "code_detected_method": "none",
+  "extracted_code": null,
+  "is_question": true,
+  "extracted_questions": [
+    "Could you please provide more information on what condition those two distinct elements need to meet in order for the function to return True?"
+  ],
+  "question_count": 1,
+  "first_question": "Could you please provide more information on what condition those two distinct elements need to meet in order for the function to return True?",
+  "question_chars": 142,
+  "latency_sec": 0.484250545501709,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_154::2ac::gpt-3.5-turbo::seed0",
+  "task_id": "idx_154",
+  "category": "2ac",
+  "entry_point": "cycpattern_check",
+  "prompt_field": "prompt2ac",
+  "prompt_text": "\ndef cycpattern_check(a , b):\n    \"\"\"You are given 2 words. You need to return True if the second word or any of its rotations is related to the first word\n    cycpattern_check(\"abcd\",\"abd\") => True\n    cycpattern_check(\"hello\",\"ell\") => False\n    cycpattern_check(\"whassup\",\"psus\") => True\n    cycpattern_check(\"abab\",\"baa\") => False\n    cycpattern_check(\"efef\",\"eeff\") => True\n    cycpattern_check(\"himenss\",\"simen\") => False\n\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef cycpattern_check(a , b):\n    \"\"\"You are given 2 words. You need to return True if the second word or any of its rotations is related to the first word\n    cycpattern_check(\"abcd\",\"abd\") => True\n    cycpattern_check(\"hello\",\"ell\") => False\n    cycpattern_check(\"whassup\",\"psus\") => True\n    cycpattern_check(\"abab\",\"baa\") => False\n    cycpattern_check(\"efef\",\"eeff\") => True\n    cycpattern_check(\"himenss\",\"simen\") => False\n\n    \"\"\"",
+  "prompt_sha256": "eddd4aa1a9741761fbb78425b0f794f06ee778ea69b8d2516c3927e4adeda4fd",
+  "model_name": "gpt-3.5-turbo",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef cycpattern_check(a, b):\n    if len(a) != len(b):\n        return False\n    for i in range(len(b)):\n        if a in b:\n            return True\n        b = b[1:] + b[0]\n    return False\n```",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def cycpattern_check(a, b):\n    if len(a) != len(b):\n        return False\n    for i in range(len(b)):\n        if a in b:\n            return True\n        b = b[1:] + b[0]\n    return False",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 0.8000509738922119,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

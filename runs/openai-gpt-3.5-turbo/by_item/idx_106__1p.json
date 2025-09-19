@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_106::1p::gpt-3.5-turbo::seed0",
+  "task_id": "idx_106",
+  "category": "1p",
+  "entry_point": "f",
+  "prompt_field": "prompt1p",
+  "prompt_text": "\ndef f(n):\n    \"\"\" Implement the function f that takes n as a parameter,\n    and returns a list of size n, such that the value of the element at index i is the factorial of i if i is even\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef f(n):\n    \"\"\" Implement the function f that takes n as a parameter,\n    and returns a list of size n, such that the value of the element at index i is the factorial of i if i is even\n    \"\"\"",
+  "prompt_sha256": "74ffe97b25327175b1c22a7180a6ebfdefb96f6a407d5b6fe07df44afea68142",
+  "model_name": "gpt-3.5-turbo",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef f(n):\n    def factorial(num):\n        if num == 0:\n            return 1\n        else:\n            return num * factorial(num - 1)\n\n    return [factorial(i) if i % 2 == 0 else None for i in range(n)]\n```",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def f(n):\n    def factorial(num):\n        if num == 0:\n            return 1\n        else:\n            return num * factorial(num - 1)\n\n    return [factorial(i) if i % 2 == 0 else None for i in range(n)]",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 0.811652660369873,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

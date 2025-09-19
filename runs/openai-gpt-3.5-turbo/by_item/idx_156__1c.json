@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_156::1c::gpt-3.5-turbo::seed0",
+  "task_id": "idx_156",
+  "category": "1c",
+  "entry_point": "int_to_mini_roman",
+  "prompt_field": "prompt1c",
+  "prompt_text": "\ndef int_to_mini_roman(number):\n    \"\"\"\n    Given a positive integer, obtain its roman numeral equivalent as a string,\n    and return it in lowercase.\n    Restrictions: 1 <= num <= 1000\n\n    Examples:\n    >>> int_to_mini_roman(19) == 'xix'\n    >>> int_to_mini_roman(152) == 'iilc'\n    >>> int_to_mini_roman(426) == 'ivxxdc'\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef int_to_mini_roman(number):\n    \"\"\"\n    Given a positive integer, obtain its roman numeral equivalent as a string,\n    and return it in lowercase.\n    Restrictions: 1 <= num <= 1000\n\n    Examples:\n    >>> int_to_mini_roman(19) == 'xix'\n    >>> int_to_mini_roman(152) == 'iilc'\n    >>> int_to_mini_roman(426) == 'ivxxdc'\n    \"\"\"",
+  "prompt_sha256": "941a99451fdcd2ce7c5097609f8abf0312844a41f2515c69dc6b0f2aeaa6e368",
+  "model_name": "gpt-3.5-turbo",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef int_to_mini_roman(number):\n    if not isinstance(number, int) or number < 1 or number > 1000:\n        return \"Invalid input. Number must be a positive integer between 1 and 1000\"\n    \n    roman_mapping = {\n        1000: \"m\",\n        900: \"cm\",\n        500: \"d\",\n        400: \"cd\",\n        100: \"c\",\n        90: \"xc\",\n        50: \"l\",\n        40: \"xl\",\n        10: \"x\",\n        9: \"ix\",\n        5: \"v\",\n        4: \"iv\",\n        1: \"i\"\n    }\n    \n    result = \"\"\n    for value, numeral in roman_mapping.items():\n        while number >= value:\n            result += numeral\n            number -= value\n            \n    return result.lower()\n\nprint(int_to_mini_roman(19))\nprint(int_to_mini_roman(152))\nprint(int_to_mini_roman(426))\n```",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def int_to_mini_roman(number):\n    if not isinstance(number, int) or number < 1 or number > 1000:\n        return \"Invalid input. Number must be a positive integer between 1 and 1000\"\n    \n    roman_mapping = {\n        1000: \"m\",\n        900: \"cm\",\n        500: \"d\",\n        400: \"cd\",\n        100: \"c\",\n        90: \"xc\",\n        50: \"l\",\n        40: \"xl\",\n        10: \"x\",\n        9: \"ix\",\n        5: \"v\",\n        4: \"iv\",\n        1: \"i\"\n    }\n    \n    result = \"\"\n    for value, numeral in roman_mapping.items():\n        while number >= value:\n            result += numeral\n            number -= value\n            \n    return result.lower()\n\nprint(int_to_mini_roman(19))\nprint(int_to_mini_roman(152))\nprint(int_to_mini_roman(426))",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 2.1432833671569824,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

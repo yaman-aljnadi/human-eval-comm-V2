@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_28::1p::gpt-3.5-turbo::seed0",
+  "task_id": "idx_28",
+  "category": "1p",
+  "entry_point": "concatenate",
+  "prompt_field": "prompt1p",
+  "prompt_text": "from typing import List\n\n\ndef candidate(strings: List[str]) -> str:\n    \"\"\" Concatenate\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List\n\n\ndef candidate(strings: List[str]) -> str:\n    \"\"\" Concatenate\n    \"\"\"",
+  "prompt_sha256": "a21715d40d3f92beb2ccfa6057983e93ff9f47bd33b99fb35c509c633daee4e2",
+  "model_name": "gpt-3.5-turbo",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef candidate(strings: List[str]) -> str:\n    return \"\".join(strings)\n```",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def candidate(strings: List[str]) -> str:\n    return \"\".join(strings)",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 0.369049072265625,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

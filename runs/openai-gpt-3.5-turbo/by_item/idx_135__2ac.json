@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_135::2ac::gpt-3.5-turbo::seed0",
+  "task_id": "idx_135",
+  "category": "2ac",
+  "entry_point": "can_arrange",
+  "prompt_field": "prompt2ac",
+  "prompt_text": "\ndef can_arrange(arr):\n    \"\"\"Create a function which returns the smallest or largest index of an element which\n    is not greater than or equal to the element immediately preceding it. If\n    no such element exists then return -1. The given array will not contain\n    duplicate values.\n\n    Examples:\n    can_arrange([1,2,4,3,5]) = 2\n    can_arrange([1,2,3]) = 2\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef can_arrange(arr):\n    \"\"\"Create a function which returns the smallest or largest index of an element which\n    is not greater than or equal to the element immediately preceding it. If\n    no such element exists then return -1. The given array will not contain\n    duplicate values.\n\n    Examples:\n    can_arrange([1,2,4,3,5]) = 2\n    can_arrange([1,2,3]) = 2\n    \"\"\"",
+  "prompt_sha256": "e46540c3c0de72447776ba3360bf41ced5e0f9704b6c41fefd3e7a64f4a3c7bf",
+  "model_name": "gpt-3.5-turbo",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef can_arrange(arr):\n    smallest_index = -1\n    largest_index = -1\n\n    for i in range(1, len(arr)):\n        if arr[i] < arr[i-1]:\n            smallest_index = i\n            break\n    \n    for i in range(1, len(arr)):\n        if arr[i] <= arr[i-1]:\n            largest_index = i\n\n    return largest_index if smallest_index == -1 else smallest_index\n```",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def can_arrange(arr):\n    smallest_index = -1\n    largest_index = -1\n\n    for i in range(1, len(arr)):\n        if arr[i] < arr[i-1]:\n            smallest_index = i\n            break\n    \n    for i in range(1, len(arr)):\n        if arr[i] <= arr[i-1]:\n            largest_index = i\n\n    return largest_index if smallest_index == -1 else smallest_index",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 1.0552518367767334,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

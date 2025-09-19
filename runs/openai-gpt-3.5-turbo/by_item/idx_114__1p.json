@@ -1,0 +1,35 @@
+{
+  "record_id": "idx_114::1p::gpt-3.5-turbo::seed0",
+  "task_id": "idx_114",
+  "category": "1p",
+  "entry_point": "minSubArraySum",
+  "prompt_field": "prompt1p",
+  "prompt_text": "\ndef candidate(nums):\n    \"\"\"\n    Given an array of integers nums, find the minimum sum\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(nums):\n    \"\"\"\n    Given an array of integers nums, find the minimum sum\n    \"\"\"",
+  "prompt_sha256": "62a45b3a7978dad677b11a8bc69c9d44926d585ed0145fd7b44a30b833ffb647",
+  "model_name": "gpt-3.5-turbo",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "Are there any specific constraints or conditions that need to be considered when finding the minimum sum of the array of integers?",
+  "gen_raw": {},
+  "contains_code": false,
+  "code_detected_method": "none",
+  "extracted_code": null,
+  "is_question": true,
+  "extracted_questions": [
+    "Are there any specific constraints or conditions that need to be considered when finding the minimum sum of the array of integers?"
+  ],
+  "question_count": 1,
+  "first_question": "Are there any specific constraints or conditions that need to be considered when finding the minimum sum of the array of integers?",
+  "question_chars": 130,
+  "latency_sec": 0.3911736011505127,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

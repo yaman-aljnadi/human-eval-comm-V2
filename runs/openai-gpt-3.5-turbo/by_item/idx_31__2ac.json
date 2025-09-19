@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_31::2ac::gpt-3.5-turbo::seed0",
+  "task_id": "idx_31",
+  "category": "2ac",
+  "entry_point": "is_prime",
+  "prompt_field": "prompt2ac",
+  "prompt_text": "\n\ndef candidate(n):\n    \"\"\"Return true if a given number is composite or prime, and false otherwise.\n    >>> candidate(6)\n    True\n    >>> candidate(101)\n    False\n    >>> candidate(11)\n    False\n    >>> candidate(13441)\n    False\n    >>> candidate(61)\n    False\n    >>> candidate(4)\n    True\n    >>> candidate(1)\n    True\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(n):\n    \"\"\"Return true if a given number is composite or prime, and false otherwise.\n    >>> candidate(6)\n    True\n    >>> candidate(101)\n    False\n    >>> candidate(11)\n    False\n    >>> candidate(13441)\n    False\n    >>> candidate(61)\n    False\n    >>> candidate(4)\n    True\n    >>> candidate(1)\n    True\n    \"\"\"",
+  "prompt_sha256": "aa5c15f796ea03513b38eddbf78108386e37dffd390dda8443dede76ebf9721f",
+  "model_name": "gpt-3.5-turbo",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\nimport math\n\ndef is_prime(n):\n    if n <= 1:\n        return False\n    if n <= 3:\n        return True\n    if n % 2 == 0 or n % 3 == 0:\n        return False\n    i = 5\n    while i * i <= n:\n        if n % i == 0 or n % (i + 2) == 0:\n            return False\n        i += 6\n    return True\n\ndef candidate(n):\n    if n == 1 or n == 4:\n        return True\n    return not is_prime(n)\n\n# Test the function with provided examples\nprint(candidate(6))    # Output: True\nprint(candidate(101))  # Output: False\nprint(candidate(11))   # Output: False\nprint(candidate(13441)) # Output: False\nprint(candidate(61))   # Output: False\nprint(candidate(4))    # Output: True\nprint(candidate(1))    # Output: True\n```",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "import math\n\ndef is_prime(n):\n    if n <= 1:\n        return False\n    if n <= 3:\n        return True\n    if n % 2 == 0 or n % 3 == 0:\n        return False\n    i = 5\n    while i * i <= n:\n        if n % i == 0 or n % (i + 2) == 0:\n            return False\n        i += 6\n    return True\n\ndef candidate(n):\n    if n == 1 or n == 4:\n        return True\n    return not is_prime(n)\n\n# Test the function with provided examples\nprint(candidate(6))    # Output: True\nprint(candidate(101))  # Output: False\nprint(candidate(11))   # Output: False\nprint(candidate(13441)) # Output: False\nprint(candidate(61))   # Output: False\nprint(candidate(4))    # Output: True\nprint(candidate(1))    # Output: True",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 1.6767261028289795,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

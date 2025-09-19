@@ -1,0 +1,35 @@
+{
+  "record_id": "idx_140::1p::gpt-3.5-turbo::seed0",
+  "task_id": "idx_140",
+  "category": "1p",
+  "entry_point": "fix_spaces",
+  "prompt_field": "prompt1p",
+  "prompt_text": "\ndef fix_spaces(text):\n    \"\"\"\n    Given a string text, replace all spaces in it with underscores, \n    and if a string has more than 2 consecutive spaces, \n    then \n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef fix_spaces(text):\n    \"\"\"\n    Given a string text, replace all spaces in it with underscores, \n    and if a string has more than 2 consecutive spaces, \n    then \n    \"\"\"",
+  "prompt_sha256": "d31e9b8bb2426f1ef4b656288dafe6e978cf263d1a348cb30b7f2433b020df82",
+  "model_name": "gpt-3.5-turbo",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "Could you please clarify what should be done if a string has more than 2 consecutive spaces?",
+  "gen_raw": {},
+  "contains_code": false,
+  "code_detected_method": "none",
+  "extracted_code": null,
+  "is_question": true,
+  "extracted_questions": [
+    "Could you please clarify what should be done if a string has more than 2 consecutive spaces?"
+  ],
+  "question_count": 1,
+  "first_question": "Could you please clarify what should be done if a string has more than 2 consecutive spaces?",
+  "question_chars": 92,
+  "latency_sec": 0.6321799755096436,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

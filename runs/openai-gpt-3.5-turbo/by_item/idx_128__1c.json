@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_128::1c::gpt-3.5-turbo::seed0",
+  "task_id": "idx_128",
+  "category": "1c",
+  "entry_point": "prod_signs",
+  "prompt_field": "prompt1c",
+  "prompt_text": "\ndef prod_signs(arr):\n    \"\"\"\n    You are given an array arr of integers and you need to return\n    sum of magnitudes of integers multiplied by product of all signs\n    of each number in the array, represented by 1, -1 or 0.\n    Note: return None for empty arr.\n\n    Example:\n    >>> prod_signs([1, 2, 2, -4]) == 1\n    >>> prod_signs([0, 1]) == 1\n    >>> prod_signs([]) == None\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef prod_signs(arr):\n    \"\"\"\n    You are given an array arr of integers and you need to return\n    sum of magnitudes of integers multiplied by product of all signs\n    of each number in the array, represented by 1, -1 or 0.\n    Note: return None for empty arr.\n\n    Example:\n    >>> prod_signs([1, 2, 2, -4]) == 1\n    >>> prod_signs([0, 1]) == 1\n    >>> prod_signs([]) == None\n    \"\"\"",
+  "prompt_sha256": "37b7e43004e3479a8e9477d99651369e4077abbf86e21ec33f3c3d2cc84e4e91",
+  "model_name": "gpt-3.5-turbo",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef prod_signs(arr):\n    if not arr:\n        return None\n    \n    sign_product = 1\n    magnitude_sum = 0\n    \n    for num in arr:\n        sign_product *= 1 if num == 0 else num // abs(num)\n        magnitude_sum += abs(num)\n    \n    return sign_product * magnitude_sum\n```",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def prod_signs(arr):\n    if not arr:\n        return None\n    \n    sign_product = 1\n    magnitude_sum = 0\n    \n    for num in arr:\n        sign_product *= 1 if num == 0 else num // abs(num)\n        magnitude_sum += abs(num)\n    \n    return sign_product * magnitude_sum",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 0.8983590602874756,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

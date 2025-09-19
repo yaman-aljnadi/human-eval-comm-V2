@@ -1,0 +1,36 @@
+{
+  "record_id": "idx_93::1p::gpt-3.5-turbo::seed0",
+  "task_id": "idx_93",
+  "category": "1p",
+  "entry_point": "encode",
+  "prompt_field": "prompt1p",
+  "prompt_text": "\ndef encode(message):\n    \"\"\"\n    Write a function that takes a message, and encodes in such a \n    way that it swaps case of all letters, replaces all vowels in \n    the message with the letter that appears \n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef encode(message):\n    \"\"\"\n    Write a function that takes a message, and encodes in such a \n    way that it swaps case of all letters, replaces all vowels in \n    the message with the letter that appears \n    \"\"\"",
+  "prompt_sha256": "c35e579e4d7f4d737a9091ebb1915c686ce89246e79636213f5314aad049fc22",
+  "model_name": "gpt-3.5-turbo",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "To clarify, when replacing the vowels in the message with the letter that appears, do you mean the letter that appears directly after the vowel in the alphabet?\n\nFor example, if the message is \"Hello\", should the vowels be replaced as follows:\n- 'e' should be replaced with 'f'\n- 'o' should be replaced with 'p'",
+  "gen_raw": {},
+  "contains_code": false,
+  "code_detected_method": "none",
+  "extracted_code": null,
+  "is_question": true,
+  "extracted_questions": [
+    "To clarify, when replacing the vowels in the message with the letter that appears, do you mean the letter that appears directly after the vowel in the alphabet?",
+    "For example, if the message is \"Hello\", should the vowels be replaced as follows:\n- 'e' should be replaced with 'f'\n- 'o' should be replaced with 'p'?"
+  ],
+  "question_count": 2,
+  "first_question": "To clarify, when replacing the vowels in the message with the letter that appears, do you mean the letter that appears directly after the vowel in the alphabet?",
+  "question_chars": 310,
+  "latency_sec": 0.7213985919952393,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

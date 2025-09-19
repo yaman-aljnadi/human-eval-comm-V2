@@ -1,0 +1,35 @@
+{
+  "record_id": "idx_48::2ac::gpt-3.5-turbo::seed0",
+  "task_id": "idx_48",
+  "category": "2ac",
+  "entry_point": "is_palindrome",
+  "prompt_field": "prompt2ac",
+  "prompt_text": "\n\ndef candidate(text: str):\n    \"\"\"\n    Checks if given string is an Isogram/Palindrome or not \n    >>> candidate('')\n    False\n    >>> candidate('aba')\n    False\n    >>> candidate('aaaaa')\n    False\n    >>> candidate('zbcd')\n    True\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(text: str):\n    \"\"\"\n    Checks if given string is an Isogram/Palindrome or not \n    >>> candidate('')\n    False\n    >>> candidate('aba')\n    False\n    >>> candidate('aaaaa')\n    False\n    >>> candidate('zbcd')\n    True\n    \"\"\"",
+  "prompt_sha256": "8455379d07b51b166ec2ada029261028bc26890e300c40f9f00849af939f0edb",
+  "model_name": "gpt-3.5-turbo",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "What should be the expected output for a string that is both an isogram and a palindrome?",
+  "gen_raw": {},
+  "contains_code": false,
+  "code_detected_method": "none",
+  "extracted_code": null,
+  "is_question": true,
+  "extracted_questions": [
+    "What should be the expected output for a string that is both an isogram and a palindrome?"
+  ],
+  "question_count": 1,
+  "first_question": "What should be the expected output for a string that is both an isogram and a palindrome?",
+  "question_chars": 89,
+  "latency_sec": 0.7124462127685547,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

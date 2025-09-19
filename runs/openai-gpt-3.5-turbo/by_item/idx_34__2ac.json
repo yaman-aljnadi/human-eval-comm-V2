@@ -1,0 +1,35 @@
+{
+  "record_id": "idx_34::2ac::gpt-3.5-turbo::seed0",
+  "task_id": "idx_34",
+  "category": "2ac",
+  "entry_point": "unique",
+  "prompt_field": "prompt2ac",
+  "prompt_text": "\n\ndef candidate(l: list):\n    \"\"\"Return descending or ascending sorted unique elements in a list\n    >>> candidate([5, 3, 5, 2, 3, 3, 9, 0, 123])\n    [3, 5, 9, 123]\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(l: list):\n    \"\"\"Return descending or ascending sorted unique elements in a list\n    >>> candidate([5, 3, 5, 2, 3, 3, 9, 0, 123])\n    [3, 5, 9, 123]\n    \"\"\"",
+  "prompt_sha256": "774aac67df561704d9d3ea5e5269b658a38eb072c5ab26b934bd41afa2c44c16",
+  "model_name": "gpt-3.5-turbo",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "Do you want the sorted list to be in descending or ascending order?",
+  "gen_raw": {},
+  "contains_code": false,
+  "code_detected_method": "none",
+  "extracted_code": null,
+  "is_question": true,
+  "extracted_questions": [
+    "Do you want the sorted list to be in descending or ascending order?"
+  ],
+  "question_count": 1,
+  "first_question": "Do you want the sorted list to be in descending or ascending order?",
+  "question_chars": 67,
+  "latency_sec": 0.37183189392089844,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_118::1a::gpt-3.5-turbo::seed0",
+  "task_id": "idx_118",
+  "category": "1a",
+  "entry_point": "get_closest_vowel",
+  "prompt_field": "prompt1a",
+  "prompt_text": "\ndef candidate(word):\n    \"\"\"You are given a word. Your task is to find the farthest or closest vowel that stands between \n    two consonants from the left or right side of the word (case sensitive).\n    \n    Vowels in the beginning and ending doesn't count. Return empty string if you didn't\n    find any vowel met the above condition. \n\n    You may assume that the given string contains English letter only.\n\n    Example:\n    candidate(\"yogurt\") ==> \"u\"\n    candidate(\"FULL\") ==> \"U\"\n    candidate(\"quick\") ==> \"\"\n    candidate(\"ab\") ==> \"\"\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(word):\n    \"\"\"You are given a word. Your task is to find the farthest or closest vowel that stands between \n    two consonants from the left or right side of the word (case sensitive).\n    \n    Vowels in the beginning and ending doesn't count. Return empty string if you didn't\n    find any vowel met the above condition. \n\n    You may assume that the given string contains English letter only.\n\n    Example:\n    candidate(\"yogurt\") ==> \"u\"\n    candidate(\"FULL\") ==> \"U\"\n    candidate(\"quick\") ==> \"\"\n    candidate(\"ab\") ==> \"\"\n    \"\"\"",
+  "prompt_sha256": "03fc462ab11e013a48a7e31caa70ac6e243a91e876c9385c03a3884ba38eb842",
+  "model_name": "gpt-3.5-turbo",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef candidate(word):\n    vowels = \"AEIOUaeiou\"\n    consonants = \"BCDFGHJKLMNPQRSTVWXYZbcdfghjklmnpqrstvwxyz\"\n    vowel_positions = [i for i, letter in enumerate(word) if letter in vowels]\n    \n    if len(vowel_positions) < 2:\n        return \"\"\n    \n    left_consonant = -1\n    right_consonant = len(word)\n    \n    for i in range(1, vowel_positions[-1]):\n        if word[i] in consonants:\n            left_consonant = i\n            break\n    \n    for i in range(vowel_positions[-1], len(word)-1):\n        if word[i] in consonants:\n            right_consonant = i\n            break\n    \n    if left_consonant == -1 or right_consonant == len(word):\n        return \"\"\n    \n    left_vowel_distance = vowel_positions[-1] - left_consonant\n    right_vowel_distance = right_consonant - vowel_positions[-1]\n    \n    closest_vowel = word[vowel_positions[-1]]\n    \n    if left_vowel_distance < right_vowel_distance:\n        for i in reversed(vowel_positions):\n            if",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def candidate(word):\n    vowels = \"AEIOUaeiou\"\n    consonants = \"BCDFGHJKLMNPQRSTVWXYZbcdfghjklmnpqrstvwxyz\"\n    vowel_positions = [i for i, letter in enumerate(word) if letter in vowels]\n    \n    if len(vowel_positions) < 2:\n        return \"\"\n    \n    left_consonant = -1\n    right_consonant = len(word)\n    \n    for i in range(1, vowel_positions[-1]):\n        if word[i] in consonants:\n            left_consonant = i\n            break\n    \n    for i in range(vowel_positions[-1], len(word)-1):\n        if word[i] in consonants:\n            right_consonant = i\n            break\n    \n    if left_consonant == -1 or right_consonant == len(word):\n        return \"\"\n    \n    left_vowel_distance = vowel_positions[-1] - left_consonant\n    right_vowel_distance = right_consonant - vowel_positions[-1]\n    \n    closest_vowel = word[vowel_positions[-1]]\n    \n    if left_vowel_distance < right_vowel_distance:\n        for i in reversed(vowel_positions):\n            if",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 2.382965326309204,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_17::1a::gpt-3.5-turbo::seed0",
+  "task_id": "idx_17",
+  "category": "1a",
+  "entry_point": "parse_music",
+  "prompt_field": "prompt1a",
+  "prompt_text": "from typing import List\n\n\ndef parse_music(music_string: str) -> List[int]:\n    \"\"\" Input to this function is a string representing musical notes in a special ASCII format.\n    Your task is to parse this string and return list of integers corresponding to how many beats does each\n    not last.\n\n    Here is a legend:\n    'o' - whole note, lasts A beats\n    'o|' - half note, lasts B beats\n    '.|' - quater note, lasts C beat\n\n    >>> parse_music('o o| .| o| o| .| .| .| .| o o')\n    [4, 2, 1, 2, 2, 1, 1, 1, 1, 4, 4]\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List\n\n\ndef parse_music(music_string: str) -> List[int]:\n    \"\"\" Input to this function is a string representing musical notes in a special ASCII format.\n    Your task is to parse this string and return list of integers corresponding to how many beats does each\n    not last.\n\n    Here is a legend:\n    'o' - whole note, lasts A beats\n    'o|' - half note, lasts B beats\n    '.|' - quater note, lasts C beat\n\n    >>> parse_music('o o| .| o| o| .| .| .| .| o o')\n    [4, 2, 1, 2, 2, 1, 1, 1, 1, 4, 4]\n    \"\"\"",
+  "prompt_sha256": "0755f175027cd6114f53649998695f25303b722c4f08ff43eacf02ae8a656d83",
+  "model_name": "gpt-3.5-turbo",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef parse_music(music_string: str) -> List[int]:\n    notes_duration = {'o': 4, 'o|': 2, '.|': 1}\n    parsed_music = []\n\n    notes = music_string.split()\n    for note in notes:\n        duration = notes_duration.get(note)\n        if duration is not None:\n            parsed_music.append(duration)\n\n    return parsed_music\n\n# Test the function\nprint(parse_music('o o| .| o| o| .| .| .| .| o o'))  # Output: [4, 2, 1, 2, 2, 1, 1, 1, 1, 4, 4]\n```",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def parse_music(music_string: str) -> List[int]:\n    notes_duration = {'o': 4, 'o|': 2, '.|': 1}\n    parsed_music = []\n\n    notes = music_string.split()\n    for note in notes:\n        duration = notes_duration.get(note)\n        if duration is not None:\n            parsed_music.append(duration)\n\n    return parsed_music\n\n# Test the function\nprint(parse_music('o o| .| o| o| .| .| .| .| o o'))  # Output: [4, 2, 1, 2, 2, 1, 1, 1, 1, 4, 4]",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 1.275876760482788,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

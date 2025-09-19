@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_151::2ac::gpt-3.5-turbo::seed0",
+  "task_id": "idx_151",
+  "category": "2ac",
+  "entry_point": "double_the_difference",
+  "prompt_field": "prompt2ac",
+  "prompt_text": "\ndef double_the_difference(lst):\n    '''\n    Given a list of numbers, return the sum of squares of the numbers\n    in the list that are odd. Ignore numbers that are negative or not integers.\n    \n    double_the_difference([1, 3, 2, 0]) == 1 + 9 + 0 + 0 = 10\n    double_the_difference([-1, -2, 0]) == 0\n    double_the_difference([9, -2]) == 81\n    double_the_difference([0]) == 0  \n   \n    If the input list is empty, return 0.\n    '''\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef double_the_difference(lst):\n    '''\n    Given a list of numbers, return the sum of squares of the numbers\n    in the list that are odd. Ignore numbers that are negative or not integers.\n    \n    double_the_difference([1, 3, 2, 0]) == 1 + 9 + 0 + 0 = 10\n    double_the_difference([-1, -2, 0]) == 0\n    double_the_difference([9, -2]) == 81\n    double_the_difference([0]) == 0  \n   \n    If the input list is empty, return 0.\n    '''",
+  "prompt_sha256": "30648a1c43f0299a001c80ffc8cd49d76c6767bbdf2996ff4692ffc4e49aed63",
+  "model_name": "gpt-3.5-turbo",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef double_the_difference(lst):\n    return sum(num**2 for num in lst if num % 2 != 0 and num >= 0 and isinstance(num, int))\n```",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def double_the_difference(lst):\n    return sum(num**2 for num in lst if num % 2 != 0 and num >= 0 and isinstance(num, int))",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 0.5858991146087646,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

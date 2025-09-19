@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_107::1p::gpt-3.5-turbo::seed0",
+  "task_id": "idx_107",
+  "category": "1p",
+  "entry_point": "even_odd_palindrome",
+  "prompt_field": "prompt1p",
+  "prompt_text": "\ndef even_odd_palindrome(n):\n    \"\"\"\n    Given a positive integer n, return a tuple that has the number of even and odd\n    integer palindromes that fall within the range, inclusive.\n\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef even_odd_palindrome(n):\n    \"\"\"\n    Given a positive integer n, return a tuple that has the number of even and odd\n    integer palindromes that fall within the range, inclusive.\n\n    \"\"\"",
+  "prompt_sha256": "43c915866aa7a7f4ebd9e19a892f49830f461a2c00ebd744a1a7e7cd3b593cb7",
+  "model_name": "gpt-3.5-turbo",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef is_palindrome(num):\n    return str(num) == str(num)[::-1]\n\ndef even_odd_palindrome(n):\n    even_count = 0\n    odd_count = 0\n\n    for i in range(1, n+1):\n        if is_palindrome(i):\n            if i % 2 == 0:\n                even_count += 1\n            else:\n                odd_count += 1\n\n    return even_count, odd_count\n```",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def is_palindrome(num):\n    return str(num) == str(num)[::-1]\n\ndef even_odd_palindrome(n):\n    even_count = 0\n    odd_count = 0\n\n    for i in range(1, n+1):\n        if is_palindrome(i):\n            if i % 2 == 0:\n                even_count += 1\n            else:\n                odd_count += 1\n\n    return even_count, odd_count",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 0.925335168838501,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

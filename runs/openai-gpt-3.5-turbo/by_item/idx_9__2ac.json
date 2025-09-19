@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_9::2ac::gpt-3.5-turbo::seed0",
+  "task_id": "idx_9",
+  "category": "2ac",
+  "entry_point": "rolling_max",
+  "prompt_field": "prompt2ac",
+  "prompt_text": "from typing import List, Tuple\n\n\ndef candidate(numbers: List[int]) -> List[int]:\n    \"\"\" From a given list of integers, generate a list of rolling certain type of element (minimal or maximum or other) found until given moment\n    in the sequence.\n    >>> candidate([1, 2, 3, 2, 3, 4, 2])\n    [1, 1, 1, 1, 1, 1, 1]\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List, Tuple\n\n\ndef candidate(numbers: List[int]) -> List[int]:\n    \"\"\" From a given list of integers, generate a list of rolling certain type of element (minimal or maximum or other) found until given moment\n    in the sequence.\n    >>> candidate([1, 2, 3, 2, 3, 4, 2])\n    [1, 1, 1, 1, 1, 1, 1]\n    \"\"\"",
+  "prompt_sha256": "a7b7d060669aa516d09ff95a25704f96fef5efb83ee287d35b928d0bc3a6f318",
+  "model_name": "gpt-3.5-turbo",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef candidate(numbers: List[int]) -> List[int]:\n    \"\"\"\n    From a given list of integers, generate a list of rolling minimum elements found until given moment in the sequence.\n    \"\"\"\n    rolling_mins = []\n    for i in range(1, len(numbers)+1):\n        rolling_mins.append(min(numbers[:i]))\n    return rolling_mins\n```",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def candidate(numbers: List[int]) -> List[int]:\n    \"\"\"\n    From a given list of integers, generate a list of rolling minimum elements found until given moment in the sequence.\n    \"\"\"\n    rolling_mins = []\n    for i in range(1, len(numbers)+1):\n        rolling_mins.append(min(numbers[:i]))\n    return rolling_mins",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 0.8165616989135742,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

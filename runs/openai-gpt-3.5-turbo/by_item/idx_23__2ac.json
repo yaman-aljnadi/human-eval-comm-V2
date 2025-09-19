@@ -1,0 +1,36 @@
+{
+  "record_id": "idx_23::2ac::gpt-3.5-turbo::seed0",
+  "task_id": "idx_23",
+  "category": "2ac",
+  "entry_point": "strlen",
+  "prompt_field": "prompt2ac",
+  "prompt_text": "\n\ndef candidate(string: str) -> int:\n    \"\"\" Return length or length of Longest Palindrome Substring of the given string\n    >>> candidate('')\n    0\n    >>> candidate('abc')\n    1\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(string: str) -> int:\n    \"\"\" Return length or length of Longest Palindrome Substring of the given string\n    >>> candidate('')\n    0\n    >>> candidate('abc')\n    1\n    \"\"\"",
+  "prompt_sha256": "a704b163dc7e576bcb3f3e9a7b6c0a9f5cf86ca010cddff4ab00b24b4c292d69",
+  "model_name": "gpt-3.5-turbo",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "How do you define a palindrome substring in this context? Does it have to be a continuous substring or can it be non-continuous characters in the original string that form a palindrome?",
+  "gen_raw": {},
+  "contains_code": false,
+  "code_detected_method": "none",
+  "extracted_code": null,
+  "is_question": true,
+  "extracted_questions": [
+    "How do you define a palindrome substring in this context?",
+    "Does it have to be a continuous substring or can it be non-continuous characters in the original string that form a palindrome?"
+  ],
+  "question_count": 2,
+  "first_question": "How do you define a palindrome substring in this context?",
+  "question_chars": 184,
+  "latency_sec": 0.5099868774414062,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

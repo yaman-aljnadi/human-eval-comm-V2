@@ -1,0 +1,35 @@
+{
+  "record_id": "idx_75::2ac::gpt-3.5-turbo::seed0",
+  "task_id": "idx_75",
+  "category": "2ac",
+  "entry_point": "is_multiply_prime",
+  "prompt_field": "prompt2ac",
+  "prompt_text": "\ndef is_multiply_prime(a):\n    \"\"\"Write a function that returns true if the given number is the multiplication of K prime numbers\n    and false otherwise.\n    Knowing that (a) is less then 100. \n    Example:\n    is_multiply_prime(30) == False\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef is_multiply_prime(a):\n    \"\"\"Write a function that returns true if the given number is the multiplication of K prime numbers\n    and false otherwise.\n    Knowing that (a) is less then 100. \n    Example:\n    is_multiply_prime(30) == False\n    \"\"\"",
+  "prompt_sha256": "0a4fe88c7cc99c5473b4a1ac5a334b85bb956c74e0ecedf6968b6b3e4410c8c5",
+  "model_name": "gpt-3.5-turbo",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "How many prime numbers are we checking for the multiplication?",
+  "gen_raw": {},
+  "contains_code": false,
+  "code_detected_method": "none",
+  "extracted_code": null,
+  "is_question": true,
+  "extracted_questions": [
+    "How many prime numbers are we checking for the multiplication?"
+  ],
+  "question_count": 1,
+  "first_question": "How many prime numbers are we checking for the multiplication?",
+  "question_chars": 62,
+  "latency_sec": 0.30725908279418945,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

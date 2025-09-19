@@ -1,0 +1,36 @@
+{
+  "record_id": "idx_38::2ac::gpt-3.5-turbo::seed0",
+  "task_id": "idx_38",
+  "category": "2ac",
+  "entry_point": "decode_cyclic",
+  "prompt_field": "prompt2ac",
+  "prompt_text": "\n\ndef encode_cyclic(s: str):\n    \"\"\"\n    returns encoded string by cycling groups of three characters.\n    \"\"\"\n    # split string to groups. Each of length 3.\n    groups = [s[(3 * i):min((3 * i + 3), len(s))] for i in range((len(s) + 2) // 3)]\n    # cycle elements in each group. Unless group has fewer elements than 3.\n    groups = [(group[1:] + group[0]) if len(group) == 3 else group for group in groups]\n    return \"\".join(groups)\n\n\ndef candidate(s: str):\n    \"\"\"\n    takes as input string decoded with encode_cyclic function. Returns encoded or decoded string.\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef encode_cyclic(s: str):\n    \"\"\"\n    returns encoded string by cycling groups of three characters.\n    \"\"\"\n    # split string to groups. Each of length 3.\n    groups = [s[(3 * i):min((3 * i + 3), len(s))] for i in range((len(s) + 2) // 3)]\n    # cycle elements in each group. Unless group has fewer elements than 3.\n    groups = [(group[1:] + group[0]) if len(group) == 3 else group for group in groups]\n    return \"\".join(groups)\n\n\ndef candidate(s: str):\n    \"\"\"\n    takes as input string decoded with encode_cyclic function. Returns encoded or decoded string.\n    \"\"\"",
+  "prompt_sha256": "f7db9226ec4e9d622d0188be7d0c5a9e5c0e5ef8bcd27804e8c9570d4f6ec017",
+  "model_name": "gpt-3.5-turbo",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "Please clarify how the encode_cyclic function works. Does it cycle the first character with the second, second with the third, and the third with the first character for each group of three characters?",
+  "gen_raw": {},
+  "contains_code": false,
+  "code_detected_method": "none",
+  "extracted_code": null,
+  "is_question": true,
+  "extracted_questions": [
+    "Please clarify how the encode_cyclic function works. Does it cycle the first character with the second, second with the third, and the third with the first character for each group of three characters?",
+    "Does it cycle the first character with the second, second with the third, and the third with the first character for each group of three characters?"
+  ],
+  "question_count": 2,
+  "first_question": "Please clarify how the encode_cyclic function works. Does it cycle the first character with the second, second with the third, and the third with the first character for each group of three characters?",
+  "question_chars": 349,
+  "latency_sec": 0.7650482654571533,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

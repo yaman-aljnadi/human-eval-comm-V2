@@ -1,0 +1,36 @@
+{
+  "record_id": "idx_90::1p::gpt-3.5-turbo::seed0",
+  "task_id": "idx_90",
+  "category": "1p",
+  "entry_point": "next_smallest",
+  "prompt_field": "prompt1p",
+  "prompt_text": "\ndef next_smallest(lst):\n    \"\"\"\n    You are given a list of integers.\n    Write a function next_smallest()\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef next_smallest(lst):\n    \"\"\"\n    You are given a list of integers.\n    Write a function next_smallest()\n    \"\"\"",
+  "prompt_sha256": "a2016e31b25c55d6bd27ad5fdee7cc9fa4352436a55a5ef1784c8ddc0d35cbd6",
+  "model_name": "gpt-3.5-turbo",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "Could you please clarify what you mean by \"next smallest\"? Do you want the next smallest integer for each integer in the list, or something else?",
+  "gen_raw": {},
+  "contains_code": false,
+  "code_detected_method": "none",
+  "extracted_code": null,
+  "is_question": true,
+  "extracted_questions": [
+    "Could you please clarify what you mean by \"next smallest\"?",
+    "Do you want the next smallest integer for each integer in the list, or something else?"
+  ],
+  "question_count": 2,
+  "first_question": "Could you please clarify what you mean by \"next smallest\"?",
+  "question_chars": 144,
+  "latency_sec": 0.5090024471282959,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

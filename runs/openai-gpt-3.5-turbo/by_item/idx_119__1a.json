@@ -1,0 +1,35 @@
+{
+  "record_id": "idx_119::1a::gpt-3.5-turbo::seed0",
+  "task_id": "idx_119",
+  "category": "1a",
+  "entry_point": "match_parens",
+  "prompt_field": "prompt1a",
+  "prompt_text": "\ndef candidate(lst):\n    '''\n    You are given a list of two strings, both strings consist of open\n    parentheses '(' or close parentheses ')' only.\n    Your job is to check if it is possible to process the two strings in\n    some order, that the resulting string will be good.\n    A string S is considered to be good if and only if all parentheses in S\n    are balanced. For example: the string '(())()' is good, while the string\n    '())' is not.\n    Return 'Yes' if there's a way to make a good string, and return 'No' otherwise.\n\n    Examples:\n    candidate(['()(', ')']) == 'Yes'\n    candidate([')', ')']) == 'No'\n    '''\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(lst):\n    '''\n    You are given a list of two strings, both strings consist of open\n    parentheses '(' or close parentheses ')' only.\n    Your job is to check if it is possible to process the two strings in\n    some order, that the resulting string will be good.\n    A string S is considered to be good if and only if all parentheses in S\n    are balanced. For example: the string '(())()' is good, while the string\n    '())' is not.\n    Return 'Yes' if there's a way to make a good string, and return 'No' otherwise.\n\n    Examples:\n    candidate(['()(', ')']) == 'Yes'\n    candidate([')', ')']) == 'No'\n    '''",
+  "prompt_sha256": "18d24d7fc7b4b63a5f50bfc97362ef80b9e571ad4f3886fc6c6a76576d1e6ec3",
+  "model_name": "gpt-3.5-turbo",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "Can the resulting string have a different order of opening and closing parentheses compared to the input strings?",
+  "gen_raw": {},
+  "contains_code": false,
+  "code_detected_method": "none",
+  "extracted_code": null,
+  "is_question": true,
+  "extracted_questions": [
+    "Can the resulting string have a different order of opening and closing parentheses compared to the input strings?"
+  ],
+  "question_count": 1,
+  "first_question": "Can the resulting string have a different order of opening and closing parentheses compared to the input strings?",
+  "question_chars": 113,
+  "latency_sec": 0.4481813907623291,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

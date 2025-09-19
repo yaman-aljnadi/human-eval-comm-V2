@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_70::2cp::gpt-3.5-turbo::seed0",
+  "task_id": "idx_70",
+  "category": "2cp",
+  "entry_point": "strange_sort_list",
+  "prompt_field": "prompt2cp",
+  "prompt_text": "\ndef strange_sort_list(lst):\n    '''\n    Given list of integers, return list in strange order.\n\n    Examples:\n    strange_sort_list([1, 2, 3, 4]) == [1, 2, 3, 4]\n    strange_sort_list([5, 5, 5, 5]) == [5]\n    strange_sort_list([]) == []\n    '''\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef strange_sort_list(lst):\n    '''\n    Given list of integers, return list in strange order.\n\n    Examples:\n    strange_sort_list([1, 2, 3, 4]) == [1, 2, 3, 4]\n    strange_sort_list([5, 5, 5, 5]) == [5]\n    strange_sort_list([]) == []\n    '''",
+  "prompt_sha256": "4424926cb617fdaf1fa69cc027367fe97cc1cbe39a99da2df3aef05236439f9f",
+  "model_name": "gpt-3.5-turbo",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "Here is the Python3 code for sorting the list in a strange order based on the information provided:\n\n```python\ndef strange_sort_list(lst):\n    sorted_list = sorted(set(lst))\n    return sorted_list\n\n# Test cases\nprint(strange_sort_list([1, 2, 3, 4]))  # Output: [1, 2, 3, 4]\nprint(strange_sort_list([5, 5, 5, 5]))  # Output: [5]\nprint(strange_sort_list([]))  # Output: []\n```",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def strange_sort_list(lst):\n    sorted_list = sorted(set(lst))\n    return sorted_list\n\n# Test cases\nprint(strange_sort_list([1, 2, 3, 4]))  # Output: [1, 2, 3, 4]\nprint(strange_sort_list([5, 5, 5, 5]))  # Output: [5]\nprint(strange_sort_list([]))  # Output: []",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 1.0383679866790771,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

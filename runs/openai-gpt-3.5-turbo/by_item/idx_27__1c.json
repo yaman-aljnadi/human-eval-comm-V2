@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_27::1c::gpt-3.5-turbo::seed0",
+  "task_id": "idx_27",
+  "category": "1c",
+  "entry_point": "flip_case",
+  "prompt_field": "prompt1c",
+  "prompt_text": "\n\ndef flip_case(string: str) -> str:\n    \"\"\" For a given string, flip lowercase characters to uppercase and uppercase to lowercase.\n    >>> flip_case('Hello')\n    'hello'\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef flip_case(string: str) -> str:\n    \"\"\" For a given string, flip lowercase characters to uppercase and uppercase to lowercase.\n    >>> flip_case('Hello')\n    'hello'\n    \"\"\"",
+  "prompt_sha256": "cedd4555dfab64c7b218dce337eb3e1776943b40901826e0cab3b4c3bbf828c5",
+  "model_name": "gpt-3.5-turbo",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef flip_case(string: str) -> str:\n    flipped_string = ''\n    for char in string:\n        if char.islower():\n            flipped_string += char.upper()\n        elif char.isupper():\n            flipped_string += char.lower()\n        else:\n            flipped_string += char\n    return flipped_string\n\n# Test the function with the example given\nprint(flip_case('Hello'))  # Output: 'hELLO'\n```",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def flip_case(string: str) -> str:\n    flipped_string = ''\n    for char in string:\n        if char.islower():\n            flipped_string += char.upper()\n        elif char.isupper():\n            flipped_string += char.lower()\n        else:\n            flipped_string += char\n    return flipped_string\n\n# Test the function with the example given\nprint(flip_case('Hello'))  # Output: 'hELLO'",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 0.9796428680419922,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

@@ -1,0 +1,40 @@
+{
+  "record_id": "idx_87::1p::gpt-3.5-turbo::seed0",
+  "task_id": "idx_87",
+  "category": "1p",
+  "entry_point": "get_row",
+  "prompt_field": "prompt1p",
+  "prompt_text": "\ndef get_row(lst, x):\n    \"\"\"\n    You are given a 2 dimensional data, as a nested lists,\n    which is similar to matrix, however, unlike matrices,\n    each row may contain a different number of columns.\n    Given lst, and integer x, find integers x in the list.\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef get_row(lst, x):\n    \"\"\"\n    You are given a 2 dimensional data, as a nested lists,\n    which is similar to matrix, however, unlike matrices,\n    each row may contain a different number of columns.\n    Given lst, and integer x, find integers x in the list.\n    \"\"\"",
+  "prompt_sha256": "b7b22e2f0f3f042b9f292a6cd651588cabf02bee36305088e0e58041491b2f09",
+  "model_name": "gpt-3.5-turbo",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "### Clarifying Questions:\n1. Are we looking for the integer x within each individual row of the 2-dimensional data or across all rows?\n2. If x is found in multiple rows, should we return the row number(s) or just the first occurrence?\n3. Should we consider edge cases, such as empty rows or an empty list?\n\nOnce you provide answers to these questions, I can proceed to generate the Python3 code for the `get_row` function.",
+  "gen_raw": {},
+  "contains_code": false,
+  "code_detected_method": "none",
+  "extracted_code": null,
+  "is_question": true,
+  "extracted_questions": [
+    "### Clarifying Questions:\n1. Are we looking for the integer x within each individual row of the 2-dimensional data or across all rows?",
+    "3. Should we consider edge cases, such as empty rows or an empty list?",
+    "Once you provide answers to these questions, I can proceed to generate the Python3 code for the `get_row` function.?",
+    "Are we looking for the integer x within each individual row of the 2-dimensional data or across all rows?",
+    "If x is found in multiple rows, should we return the row number(s) or just the first occurrence?",
+    "Should we consider edge cases, such as empty rows or an empty list?"
+  ],
+  "question_count": 6,
+  "first_question": "### Clarifying Questions:\n1. Are we looking for the integer x within each individual row of the 2-dimensional data or across all rows?",
+  "question_chars": 588,
+  "latency_sec": 0.819568395614624,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

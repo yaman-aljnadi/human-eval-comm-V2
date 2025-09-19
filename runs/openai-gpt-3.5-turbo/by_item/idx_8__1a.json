@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_8::1a::gpt-3.5-turbo::seed0",
+  "task_id": "idx_8",
+  "category": "1a",
+  "entry_point": "sum_product",
+  "prompt_field": "prompt1a",
+  "prompt_text": "from typing import List, Tuple\n\n\ndef candidate(numbers: List[int]) -> Tuple[int, int]:\n    \"\"\" For a given list of integers, return a tuple consisting of a sum and a product of a certain given subset of the integers in a list.\n    Empty sum or product should be equal to either 0 or 1.\n    >>> sum_product([])\n    (0, 1)\n    >>> sum_product([1, 2, 3, 4])\n    (10, 24)\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List, Tuple\n\n\ndef candidate(numbers: List[int]) -> Tuple[int, int]:\n    \"\"\" For a given list of integers, return a tuple consisting of a sum and a product of a certain given subset of the integers in a list.\n    Empty sum or product should be equal to either 0 or 1.\n    >>> sum_product([])\n    (0, 1)\n    >>> sum_product([1, 2, 3, 4])\n    (10, 24)\n    \"\"\"",
+  "prompt_sha256": "8ecec7106085f0c86ec99bc025decccbc40cd6531ab911c8ffd5d9e65178b53d",
+  "model_name": "gpt-3.5-turbo",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\nfrom typing import List, Tuple\n\ndef sum_product(numbers: List[int]) -> Tuple[int, int]:\n    sum_num = sum(numbers)\n    product_num = 1\n    for num in numbers:\n        product_num *= num\n    return sum_num, product_num\n```",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "from typing import List, Tuple\n\ndef sum_product(numbers: List[int]) -> Tuple[int, int]:\n    sum_num = sum(numbers)\n    product_num = 1\n    for num in numbers:\n        product_num *= num\n    return sum_num, product_num",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 1.4744009971618652,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

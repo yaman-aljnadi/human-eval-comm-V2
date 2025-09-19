@@ -1,0 +1,35 @@
+{
+  "record_id": "idx_128::1p::gpt-3.5-turbo::seed0",
+  "task_id": "idx_128",
+  "category": "1p",
+  "entry_point": "prod_signs",
+  "prompt_field": "prompt1p",
+  "prompt_text": "\ndef candidate(arr):\n    \"\"\"\n    You are given an array arr of integers and you need to return\n    sum of magnitudes of integers multiplied by \n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(arr):\n    \"\"\"\n    You are given an array arr of integers and you need to return\n    sum of magnitudes of integers multiplied by \n    \"\"\"",
+  "prompt_sha256": "ec188a05b82aede35986c6754fff7977a044d82c949a5bfdd66e88d19691128c",
+  "model_name": "gpt-3.5-turbo",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "Could you please provide more information on what the integers should be multiplied by?",
+  "gen_raw": {},
+  "contains_code": false,
+  "code_detected_method": "none",
+  "extracted_code": null,
+  "is_question": true,
+  "extracted_questions": [
+    "Could you please provide more information on what the integers should be multiplied by?"
+  ],
+  "question_count": 1,
+  "first_question": "Could you please provide more information on what the integers should be multiplied by?",
+  "question_chars": 87,
+  "latency_sec": 0.39919114112854004,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

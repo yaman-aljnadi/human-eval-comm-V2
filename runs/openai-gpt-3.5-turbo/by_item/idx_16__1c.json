@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_16::1c::gpt-3.5-turbo::seed0",
+  "task_id": "idx_16",
+  "category": "1c",
+  "entry_point": "count_distinct_characters",
+  "prompt_field": "prompt1c",
+  "prompt_text": "\n\ndef count_distinct_characters(string: str) -> int:\n    \"\"\" Given a string, find out how many distinct characters (regardless of case) does it consist of\n    >>> count_distinct_characters('xyzXYZ')\n    6\n    >>> count_distinct_characters('Jerry')\n    5\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef count_distinct_characters(string: str) -> int:\n    \"\"\" Given a string, find out how many distinct characters (regardless of case) does it consist of\n    >>> count_distinct_characters('xyzXYZ')\n    6\n    >>> count_distinct_characters('Jerry')\n    5\n    \"\"\"",
+  "prompt_sha256": "1b67a6d7320fef8fdeda90f2db05118fde58b646e0e778da3449849e79f1b9f1",
+  "model_name": "gpt-3.5-turbo",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef count_distinct_characters(string: str) -> int:\n    return len(set(string.lower()))\n```",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def count_distinct_characters(string: str) -> int:\n    return len(set(string.lower()))",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 0.5680677890777588,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

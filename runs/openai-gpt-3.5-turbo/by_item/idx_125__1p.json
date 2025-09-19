@@ -1,0 +1,35 @@
+{
+  "record_id": "idx_125::1p::gpt-3.5-turbo::seed0",
+  "task_id": "idx_125",
+  "category": "1p",
+  "entry_point": "split_words",
+  "prompt_field": "prompt1p",
+  "prompt_text": "\ndef split_words(txt):\n    '''\n    Given a string of words, return a list of words split on whitespace, if no whitespaces exists in the text you\n    should split on commas ',' if no commas exists you should return the number of \n    '''\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef split_words(txt):\n    '''\n    Given a string of words, return a list of words split on whitespace, if no whitespaces exists in the text you\n    should split on commas ',' if no commas exists you should return the number of \n    '''",
+  "prompt_sha256": "e5a789b9c582a56c4eceb62b14b1a56076497958f304a4c1a140c0fc00dfec67",
+  "model_name": "gpt-3.5-turbo",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "Could you please clarify what should be returned if the input string is empty?",
+  "gen_raw": {},
+  "contains_code": false,
+  "code_detected_method": "none",
+  "extracted_code": null,
+  "is_question": true,
+  "extracted_questions": [
+    "Could you please clarify what should be returned if the input string is empty?"
+  ],
+  "question_count": 1,
+  "first_question": "Could you please clarify what should be returned if the input string is empty?",
+  "question_chars": 78,
+  "latency_sec": 0.3973691463470459,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

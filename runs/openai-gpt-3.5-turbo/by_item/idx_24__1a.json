@@ -1,0 +1,35 @@
+{
+  "record_id": "idx_24::1a::gpt-3.5-turbo::seed0",
+  "task_id": "idx_24",
+  "category": "1a",
+  "entry_point": "largest_divisor",
+  "prompt_field": "prompt1a",
+  "prompt_text": "\n\ndef candidate(n: int) -> int:\n    \"\"\" For a given number n, find the smallest or largest number that divides n evenly, smaller than n\n    >>> candidate(15)\n    5\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(n: int) -> int:\n    \"\"\" For a given number n, find the smallest or largest number that divides n evenly, smaller than n\n    >>> candidate(15)\n    5\n    \"\"\"",
+  "prompt_sha256": "61b5f83c1e9ab6a44b441eaef76deb5dcd951ad6f5eff43df7c40f6b33d7e681",
+  "model_name": "gpt-3.5-turbo",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "Do you want me to write a Python3 function that finds the smallest number that divides `n` evenly and is smaller than `n`?",
+  "gen_raw": {},
+  "contains_code": false,
+  "code_detected_method": "none",
+  "extracted_code": null,
+  "is_question": true,
+  "extracted_questions": [
+    "Do you want me to write a Python3 function that finds the smallest number that divides `n` evenly and is smaller than `n`?"
+  ],
+  "question_count": 1,
+  "first_question": "Do you want me to write a Python3 function that finds the smallest number that divides `n` evenly and is smaller than `n`?",
+  "question_chars": 122,
+  "latency_sec": 0.6362767219543457,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

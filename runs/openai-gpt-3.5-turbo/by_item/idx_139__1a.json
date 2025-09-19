@@ -1,0 +1,37 @@
+{
+  "record_id": "idx_139::1a::gpt-3.5-turbo::seed0",
+  "task_id": "idx_139",
+  "category": "1a",
+  "entry_point": "special_factorial",
+  "prompt_field": "prompt1a",
+  "prompt_text": "\ndef candidate(n):\n    \"\"\"The Brazilian factorial is defined as:\n    brazilian_factorial(n) = n!, or, brazilian_factorial(n) = n! * (n-1)! * (n-2)! * ... * 1!\n    where n > 0\n\n    For example:\n    >>> candidate(4)\n    288\n\n    The function will receive an integer as input and should return the special\n    factorial of this integer.\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(n):\n    \"\"\"The Brazilian factorial is defined as:\n    brazilian_factorial(n) = n!, or, brazilian_factorial(n) = n! * (n-1)! * (n-2)! * ... * 1!\n    where n > 0\n\n    For example:\n    >>> candidate(4)\n    288\n\n    The function will receive an integer as input and should return the special\n    factorial of this integer.\n    \"\"\"",
+  "prompt_sha256": "de439de3ac7a84206b5a1940f118879bdeedd69dbf306e743ea63a815bd447b2",
+  "model_name": "gpt-3.5-turbo",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "How is the Brazilian factorial different from the regular factorial function in Python?\n\nAre there any constraints on the input integer n? \n\nIs there a specific formula or algorithm that needs to be followed for calculating the Brazilian factorial of a number?",
+  "gen_raw": {},
+  "contains_code": false,
+  "code_detected_method": "none",
+  "extracted_code": null,
+  "is_question": true,
+  "extracted_questions": [
+    "How is the Brazilian factorial different from the regular factorial function in Python?",
+    "Are there any constraints on the input integer n?",
+    "Is there a specific formula or algorithm that needs to be followed for calculating the Brazilian factorial of a number?"
+  ],
+  "question_count": 3,
+  "first_question": "How is the Brazilian factorial different from the regular factorial function in Python?",
+  "question_chars": 255,
+  "latency_sec": 1.2708125114440918,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

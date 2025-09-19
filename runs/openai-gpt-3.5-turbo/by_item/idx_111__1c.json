@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_111::1c::gpt-3.5-turbo::seed0",
+  "task_id": "idx_111",
+  "category": "1c",
+  "entry_point": "histogram",
+  "prompt_field": "prompt1c",
+  "prompt_text": "\ndef histogram(test):\n    \"\"\"Given a string representing a space separated lowercase letters, return a dictionary\n    of the letter with the most repetition and containing the corresponding count.\n    If several letters have the same occurrence, return all of them.\n    \n    Example:\n    histogram('a b c') == {'a': 1}\n    histogram('a b b a') == {'a': 2}\n    histogram('a b c a b') == {'a': 2}\n    histogram('b b b b a') == {'b': 4}\n    histogram('') == {}\n\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef histogram(test):\n    \"\"\"Given a string representing a space separated lowercase letters, return a dictionary\n    of the letter with the most repetition and containing the corresponding count.\n    If several letters have the same occurrence, return all of them.\n    \n    Example:\n    histogram('a b c') == {'a': 1}\n    histogram('a b b a') == {'a': 2}\n    histogram('a b c a b') == {'a': 2}\n    histogram('b b b b a') == {'b': 4}\n    histogram('') == {}\n\n    \"\"\"",
+  "prompt_sha256": "ad2cced00d235d7267196b63fa017b3158e1409351c27e61e29ecbd3b4bf14e8",
+  "model_name": "gpt-3.5-turbo",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\nfrom collections import Counter\n\ndef histogram(test):\n    letters = test.split()\n    counts = Counter(letters)\n    \n    max_count = max(counts.values(), default=0)\n    result = {key: value for key, value in counts.items() if value == max_count}\n    \n    return result\n```",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "from collections import Counter\n\ndef histogram(test):\n    letters = test.split()\n    counts = Counter(letters)\n    \n    max_count = max(counts.values(), default=0)\n    result = {key: value for key, value in counts.items() if value == max_count}\n    \n    return result",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 0.6620497703552246,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

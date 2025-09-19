@@ -1,0 +1,35 @@
+{
+  "record_id": "idx_93::2ac::gpt-3.5-turbo::seed0",
+  "task_id": "idx_93",
+  "category": "2ac",
+  "entry_point": "encode",
+  "prompt_field": "prompt2ac",
+  "prompt_text": "\ndef encode(message):\n    \"\"\"\n    Write a function that takes a message, and encodes in such a \n    way that it swaps case of all letters, replaces all vowels in \n    the message with the letter that appears several places ahead of that \n    vowel in the english alphabet. \n    Assume only letters. \n    \n    Examples:\n    >>> encode('test')\n    'TEST'\n    >>> encode('This is a message')\n    'tHIS IS A MESSAGE'\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef encode(message):\n    \"\"\"\n    Write a function that takes a message, and encodes in such a \n    way that it swaps case of all letters, replaces all vowels in \n    the message with the letter that appears several places ahead of that \n    vowel in the english alphabet. \n    Assume only letters. \n    \n    Examples:\n    >>> encode('test')\n    'TEST'\n    >>> encode('This is a message')\n    'tHIS IS A MESSAGE'\n    \"\"\"",
+  "prompt_sha256": "c42268e1612c328d5a224f691c82044327e8e6e7108b06be8e67fa199020f7da",
+  "model_name": "gpt-3.5-turbo",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "Could you please clarify what should be done when we reach the letter 'z' or 'Z' while swapping cases or replacing vowels with the letter that appears several places ahead in the English alphabet?",
+  "gen_raw": {},
+  "contains_code": false,
+  "code_detected_method": "none",
+  "extracted_code": null,
+  "is_question": true,
+  "extracted_questions": [
+    "Could you please clarify what should be done when we reach the letter 'z' or 'Z' while swapping cases or replacing vowels with the letter that appears several places ahead in the English alphabet?"
+  ],
+  "question_count": 1,
+  "first_question": "Could you please clarify what should be done when we reach the letter 'z' or 'Z' while swapping cases or replacing vowels with the letter that appears several places ahead in the English alphabet?",
+  "question_chars": 196,
+  "latency_sec": 0.4941976070404053,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

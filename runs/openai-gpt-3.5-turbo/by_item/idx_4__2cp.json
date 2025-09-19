@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_4::2cp::gpt-3.5-turbo::seed0",
+  "task_id": "idx_4",
+  "category": "2cp",
+  "entry_point": "mean_absolute_deviation",
+  "prompt_field": "prompt2cp",
+  "prompt_text": "from typing import List\n\n\ndef mean_absolute_deviation(numbers: List[float]) -> float:\n    \"\"\" For a given list of input numbers, calculate Mean Absolute Deviation. \n    >>> mean_absolute_deviation([1.0, 2.0, 3.0, 4.0])\n    1.5\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List\n\n\ndef mean_absolute_deviation(numbers: List[float]) -> float:\n    \"\"\" For a given list of input numbers, calculate Mean Absolute Deviation. \n    >>> mean_absolute_deviation([1.0, 2.0, 3.0, 4.0])\n    1.5\n    \"\"\"",
+  "prompt_sha256": "1f022e25bbb381664e6c0fc3adf20a2b09250ed40d9767ae9d7e3797f6fdd3f8",
+  "model_name": "gpt-3.5-turbo",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef mean_absolute_deviation(numbers: List[float]) -> float:\n    mean = sum(numbers) / len(numbers)\n    deviations = [abs(x - mean) for x in numbers]\n    return sum(deviations) / len(numbers)\n```",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def mean_absolute_deviation(numbers: List[float]) -> float:\n    mean = sum(numbers) / len(numbers)\n    deviations = [abs(x - mean) for x in numbers]\n    return sum(deviations) / len(numbers)",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 0.8388102054595947,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

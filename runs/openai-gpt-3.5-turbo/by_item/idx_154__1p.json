@@ -1,0 +1,35 @@
+{
+  "record_id": "idx_154::1p::gpt-3.5-turbo::seed0",
+  "task_id": "idx_154",
+  "category": "1p",
+  "entry_point": "cycpattern_check",
+  "prompt_field": "prompt1p",
+  "prompt_text": "\ndef candidate(a , b):\n    \"\"\"\n    candidate(\"abcd\",\"abd\") => False\n    candidate(\"hello\",\"ell\") => True\n    candidate(\"whassup\",\"psus\") => False\n    candidate(\"abab\",\"baa\") => True\n    candidate(\"efef\",\"eeff\") => False\n    candidate(\"himenss\",\"simen\") => True\n\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(a , b):\n    \"\"\"\n    candidate(\"abcd\",\"abd\") => False\n    candidate(\"hello\",\"ell\") => True\n    candidate(\"whassup\",\"psus\") => False\n    candidate(\"abab\",\"baa\") => True\n    candidate(\"efef\",\"eeff\") => False\n    candidate(\"himenss\",\"simen\") => True\n\n    \"\"\"",
+  "prompt_sha256": "943af5f9bb212d24219d872d3d7a80d63218d9483504f1d4829b8d623277aef1",
+  "model_name": "gpt-3.5-turbo",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "Do you want the function `candidate` to return `True` if string `b` is a subsequence of string `a`?",
+  "gen_raw": {},
+  "contains_code": false,
+  "code_detected_method": "none",
+  "extracted_code": null,
+  "is_question": true,
+  "extracted_questions": [
+    "Do you want the function `candidate` to return `True` if string `b` is a subsequence of string `a`?"
+  ],
+  "question_count": 1,
+  "first_question": "Do you want the function `candidate` to return `True` if string `b` is a subsequence of string `a`?",
+  "question_chars": 99,
+  "latency_sec": 0.46970438957214355,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

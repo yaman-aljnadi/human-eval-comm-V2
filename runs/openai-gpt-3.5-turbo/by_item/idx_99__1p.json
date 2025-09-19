@@ -1,0 +1,35 @@
+{
+  "record_id": "idx_99::1p::gpt-3.5-turbo::seed0",
+  "task_id": "idx_99",
+  "category": "1p",
+  "entry_point": "closest_integer",
+  "prompt_field": "prompt1p",
+  "prompt_text": "\ndef closest_integer(value):\n    '''\n    Create a function that takes a value (string) representing a number\n    and returns the closest\n    '''\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef closest_integer(value):\n    '''\n    Create a function that takes a value (string) representing a number\n    and returns the closest\n    '''",
+  "prompt_sha256": "6029212f237bb18a104317187677fca3b0738f10e9c5ae2acab8501cba1fc594",
+  "model_name": "gpt-3.5-turbo",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "Do you want the function to round the number to the nearest integer or find the closest integer without rounding?",
+  "gen_raw": {},
+  "contains_code": false,
+  "code_detected_method": "none",
+  "extracted_code": null,
+  "is_question": true,
+  "extracted_questions": [
+    "Do you want the function to round the number to the nearest integer or find the closest integer without rounding?"
+  ],
+  "question_count": 1,
+  "first_question": "Do you want the function to round the number to the nearest integer or find the closest integer without rounding?",
+  "question_chars": 113,
+  "latency_sec": 0.5620687007904053,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

@@ -1,0 +1,35 @@
+{
+  "record_id": "idx_35::1p::gpt-3.5-turbo::seed0",
+  "task_id": "idx_35",
+  "category": "1p",
+  "entry_point": "max_element",
+  "prompt_field": "prompt1p",
+  "prompt_text": "\n\ndef candidate(l: list):\n    \"\"\"Return element in the list.\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(l: list):\n    \"\"\"Return element in the list.\n    \"\"\"",
+  "prompt_sha256": "ced475065608b9fb1090d40d7a7bca209cb28eff845be3b77914bd0a56faff62",
+  "model_name": "gpt-3.5-turbo",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "Could you please provide more details on what specific element we are looking for in the list?",
+  "gen_raw": {},
+  "contains_code": false,
+  "code_detected_method": "none",
+  "extracted_code": null,
+  "is_question": true,
+  "extracted_questions": [
+    "Could you please provide more details on what specific element we are looking for in the list?"
+  ],
+  "question_count": 1,
+  "first_question": "Could you please provide more details on what specific element we are looking for in the list?",
+  "question_chars": 94,
+  "latency_sec": 0.43006300926208496,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

@@ -1,0 +1,38 @@
+{
+  "record_id": "idx_10::1a::gpt-3.5-turbo::seed0",
+  "task_id": "idx_10",
+  "category": "1a",
+  "entry_point": "make_palindrome",
+  "prompt_field": "prompt1a",
+  "prompt_text": "\n\ndef is_palindrome(string: str) -> bool:\n    \"\"\" Test if given string is a palindrome \"\"\"\n    return string == string[::-1]\n\n\ndef candidate(string: str) -> str:\n    \"\"\" Find the longest or shortest palindrome that begins with a supplied string.\n    Algorithm idea is simple:\n    - Find the shortest or longest postfix of supplied string that is a palindrome.\n    - Append to the end of the string reverse of a string prefix that comes before the palindromic suffix.\n    >>> candidate('')\n    ''\n    >>> candidate('cat')\n    'catac'\n    >>> candidate('cata')\n    'catac'\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef is_palindrome(string: str) -> bool:\n    \"\"\" Test if given string is a palindrome \"\"\"\n    return string == string[::-1]\n\n\ndef candidate(string: str) -> str:\n    \"\"\" Find the longest or shortest palindrome that begins with a supplied string.\n    Algorithm idea is simple:\n    - Find the shortest or longest postfix of supplied string that is a palindrome.\n    - Append to the end of the string reverse of a string prefix that comes before the palindromic suffix.\n    >>> candidate('')\n    ''\n    >>> candidate('cat')\n    'catac'\n    >>> candidate('cata')\n    'catac'\n    \"\"\"",
+  "prompt_sha256": "8b74e2c12360d0bf2ffe1a76d336c84ef795270a15a41a2c3535eb6a863810d9",
+  "model_name": "gpt-3.5-turbo",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "**Questions:**\n1. When finding the longest or shortest palindrome that begins with a supplied string, should we consider any restrictions in terms of palindrome length or availability?\n2. Should the function be able to find both the shortest and longest palindromes or should it only return one type based on certain criteria?\n3. Should the function return the candidate that meets the length requirement while giving priority to the longest or shortest palindrome?",
+  "gen_raw": {},
+  "contains_code": false,
+  "code_detected_method": "none",
+  "extracted_code": null,
+  "is_question": true,
+  "extracted_questions": [
+    "**Questions:**\n1. When finding the longest or shortest palindrome that begins with a supplied string, should we consider any restrictions in terms of palindrome length or availability?",
+    "When finding the longest or shortest palindrome that begins with a supplied string, should we consider any restrictions in terms of palindrome length or availability?",
+    "Should the function be able to find both the shortest and longest palindromes or should it only return one type based on certain criteria?",
+    "Should the function return the candidate that meets the length requirement while giving priority to the longest or shortest palindrome?"
+  ],
+  "question_count": 4,
+  "first_question": "**Questions:**\n1. When finding the longest or shortest palindrome that begins with a supplied string, should we consider any restrictions in terms of palindrome length or availability?",
+  "question_chars": 623,
+  "latency_sec": 0.8254351615905762,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

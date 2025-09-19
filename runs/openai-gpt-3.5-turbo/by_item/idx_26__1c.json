@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_26::1c::gpt-3.5-turbo::seed0",
+  "task_id": "idx_26",
+  "category": "1c",
+  "entry_point": "remove_duplicates",
+  "prompt_field": "prompt1c",
+  "prompt_text": "from typing import List\n\n\ndef remove_duplicates(numbers: List[int]) -> List[int]:\n    \"\"\" From a list of integers, remove all elements that occur more than once.\n    Keep order of elements left the same as in the input.\n    >>> remove_duplicates([1, 2, 3, 2, 4])\n    [1, 2, 3, 4]\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List\n\n\ndef remove_duplicates(numbers: List[int]) -> List[int]:\n    \"\"\" From a list of integers, remove all elements that occur more than once.\n    Keep order of elements left the same as in the input.\n    >>> remove_duplicates([1, 2, 3, 2, 4])\n    [1, 2, 3, 4]\n    \"\"\"",
+  "prompt_sha256": "e277b737bd314e12e09b4a1906314d2c89c2e1ce838e4f6c8dd991365480399e",
+  "model_name": "gpt-3.5-turbo",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef remove_duplicates(numbers: List[int]) -> List[int]:\n    return list(dict.fromkeys(numbers))\n```",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def remove_duplicates(numbers: List[int]) -> List[int]:\n    return list(dict.fromkeys(numbers))",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 0.6194248199462891,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

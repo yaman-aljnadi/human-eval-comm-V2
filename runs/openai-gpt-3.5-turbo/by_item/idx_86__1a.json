@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_86::1a::gpt-3.5-turbo::seed0",
+  "task_id": "idx_86",
+  "category": "1a",
+  "entry_point": "anti_shuffle",
+  "prompt_field": "prompt1a",
+  "prompt_text": "\ndef anti_shuffle(s):\n    \"\"\"\n    Write a function that takes a string and returns an ordered version of it.\n    Ordered version of string, is a string where all words (separated by space)\n    are replaced by a new word where all the characters arranged in\n    descending or ascending order based on ascii value.\n    Note: You should keep the order of words and blank spaces in the sentence.\n\n    For example:\n    anti_shuffle('Hi') returns 'Hi'\n    anti_shuffle('hello') returns 'ehllo'\n    anti_shuffle('Hello World!!!') returns 'Hello !!!Wdlor'\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef anti_shuffle(s):\n    \"\"\"\n    Write a function that takes a string and returns an ordered version of it.\n    Ordered version of string, is a string where all words (separated by space)\n    are replaced by a new word where all the characters arranged in\n    descending or ascending order based on ascii value.\n    Note: You should keep the order of words and blank spaces in the sentence.\n\n    For example:\n    anti_shuffle('Hi') returns 'Hi'\n    anti_shuffle('hello') returns 'ehllo'\n    anti_shuffle('Hello World!!!') returns 'Hello !!!Wdlor'\n    \"\"\"",
+  "prompt_sha256": "bfe8250c60f0de6e0390a5f0e6ba4e27874f389ec0f0d411bb466d1079ced4c6",
+  "model_name": "gpt-3.5-turbo",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef anti_shuffle(s):\n    def order_word(word, ascending=True):\n        return ''.join(sorted(word, reverse=not ascending))\n\n    words = s.split()\n    ordered_words = [order_word(word, ascending=i%2==0) for i, word in enumerate(words)]\n    return ' '.join(ordered_words)\n```",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def anti_shuffle(s):\n    def order_word(word, ascending=True):\n        return ''.join(sorted(word, reverse=not ascending))\n\n    words = s.split()\n    ordered_words = [order_word(word, ascending=i%2==0) for i, word in enumerate(words)]\n    return ' '.join(ordered_words)",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 0.6338322162628174,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

@@ -1,0 +1,35 @@
+{
+  "record_id": "idx_49::2ac::gpt-3.5-turbo::seed0",
+  "task_id": "idx_49",
+  "category": "2ac",
+  "entry_point": "modp",
+  "prompt_field": "prompt2ac",
+  "prompt_text": "\n\ndef candidate(x: int, y: int):\n    \"\"\"Return 2^n modulo p (be aware of numerics).\n    >>> candidate(3, 5)\n    5\n    >>> candidate(1101, 101)\n    101\n    >>> candidate(0, 101)\n    101\n    >>> candidate(3, 11)\n    11\n    >>> candidate(100, 101)\n    101\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(x: int, y: int):\n    \"\"\"Return 2^n modulo p (be aware of numerics).\n    >>> candidate(3, 5)\n    5\n    >>> candidate(1101, 101)\n    101\n    >>> candidate(0, 101)\n    101\n    >>> candidate(3, 11)\n    11\n    >>> candidate(100, 101)\n    101\n    \"\"\"",
+  "prompt_sha256": "1d6b4e63accf7483fdeaa0a3a0ca3dee5ab8f5645b68d0b8e32a588f104c6c9f",
+  "model_name": "gpt-3.5-turbo",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "How should the function handle edge cases such as negative inputs for x and y?",
+  "gen_raw": {},
+  "contains_code": false,
+  "code_detected_method": "none",
+  "extracted_code": null,
+  "is_question": true,
+  "extracted_questions": [
+    "How should the function handle edge cases such as negative inputs for x and y?"
+  ],
+  "question_count": 1,
+  "first_question": "How should the function handle edge cases such as negative inputs for x and y?",
+  "question_chars": 78,
+  "latency_sec": 0.610302209854126,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

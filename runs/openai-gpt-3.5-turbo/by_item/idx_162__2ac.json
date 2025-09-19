@@ -1,0 +1,35 @@
+{
+  "record_id": "idx_162::2ac::gpt-3.5-turbo::seed0",
+  "task_id": "idx_162",
+  "category": "2ac",
+  "entry_point": "string_to_md5",
+  "prompt_field": "prompt2ac",
+  "prompt_text": "\ndef string_to_md5(text):\n    \"\"\"\n    Given a string 'text', return its ideal hash equivalent string.\n    If 'text' is an empty string, return None.\n\n    >>> string_to_md5('Hello world') == '12345'\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef string_to_md5(text):\n    \"\"\"\n    Given a string 'text', return its ideal hash equivalent string.\n    If 'text' is an empty string, return None.\n\n    >>> string_to_md5('Hello world') == '12345'\n    \"\"\"",
+  "prompt_sha256": "1c31ba1880ea98657674655afd8512a4c0ff9fbdb78f35d1fce47288ccc7f2f4",
+  "model_name": "gpt-3.5-turbo",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "Is there a specific MD5 hashing library or module that you would like the code to use for generating the MD5 hash in Python3?",
+  "gen_raw": {},
+  "contains_code": false,
+  "code_detected_method": "none",
+  "extracted_code": null,
+  "is_question": true,
+  "extracted_questions": [
+    "Is there a specific MD5 hashing library or module that you would like the code to use for generating the MD5 hash in Python3?"
+  ],
+  "question_count": 1,
+  "first_question": "Is there a specific MD5 hashing library or module that you would like the code to use for generating the MD5 hash in Python3?",
+  "question_chars": 125,
+  "latency_sec": 0.6831843852996826,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_20::2ap::gpt-3.5-turbo::seed0",
+  "task_id": "idx_20",
+  "category": "2ap",
+  "entry_point": "find_closest_elements",
+  "prompt_field": "prompt2ap",
+  "prompt_text": "from typing import List, Tuple\n\n\ndef candidate(numbers: List[float]) -> Tuple[float, float]:\n    \"\"\" From a supplied list of numbers (of length at least two) select and return two that are the farthest or closest to each\n    other and return them in order.\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List, Tuple\n\n\ndef candidate(numbers: List[float]) -> Tuple[float, float]:\n    \"\"\" From a supplied list of numbers (of length at least two) select and return two that are the farthest or closest to each\n    other and return them in order.\n    \"\"\"",
+  "prompt_sha256": "0bb3b81ffa6dff5a86efc9b1432d60faad3558365ddcc23e498a11943cced5c6",
+  "model_name": "gpt-3.5-turbo",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef candidate(numbers: List[float]) -> Tuple[float, float]:\n    numbers.sort()\n    min_pair = (numbers[0], numbers[1])\n    max_pair = (numbers[0], numbers[-1])\n    min_diff = abs(numbers[0] - numbers[1])\n    max_diff = abs(numbers[0] - numbers[-1])\n\n    for i in range(len(numbers) - 1):\n        diff = abs(numbers[i] - numbers[i + 1])\n        if diff < min_diff:\n            min_diff = diff\n            min_pair = (numbers[i], numbers[i + 1])\n        if diff > max_diff:\n            max_diff = diff\n            max_pair = (numbers[i], numbers[i + 1])\n\n    return min_pair, max_pair\n```",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def candidate(numbers: List[float]) -> Tuple[float, float]:\n    numbers.sort()\n    min_pair = (numbers[0], numbers[1])\n    max_pair = (numbers[0], numbers[-1])\n    min_diff = abs(numbers[0] - numbers[1])\n    max_diff = abs(numbers[0] - numbers[-1])\n\n    for i in range(len(numbers) - 1):\n        diff = abs(numbers[i] - numbers[i + 1])\n        if diff < min_diff:\n            min_diff = diff\n            min_pair = (numbers[i], numbers[i + 1])\n        if diff > max_diff:\n            max_diff = diff\n            max_pair = (numbers[i], numbers[i + 1])\n\n    return min_pair, max_pair",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 1.5942413806915283,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

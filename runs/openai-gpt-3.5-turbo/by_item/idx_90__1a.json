@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_90::1a::gpt-3.5-turbo::seed0",
+  "task_id": "idx_90",
+  "category": "1a",
+  "entry_point": "next_smallest",
+  "prompt_field": "prompt1a",
+  "prompt_text": "\ndef next_smallest(lst):\n    \"\"\"\n    You are given a list of integers.\n    Write a function next_smallest() that returns the 1st, or 2nd, or 3rd smallest element of the list.\n    Return None if there is no such element.\n    \n    next_smallest([1, 2, 3, 4, 5]) == 2\n    next_smallest([5, 1, 4, 3, 2]) == 2\n    next_smallest([]) == None\n    next_smallest([1, 1]) == None\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef next_smallest(lst):\n    \"\"\"\n    You are given a list of integers.\n    Write a function next_smallest() that returns the 1st, or 2nd, or 3rd smallest element of the list.\n    Return None if there is no such element.\n    \n    next_smallest([1, 2, 3, 4, 5]) == 2\n    next_smallest([5, 1, 4, 3, 2]) == 2\n    next_smallest([]) == None\n    next_smallest([1, 1]) == None\n    \"\"\"",
+  "prompt_sha256": "a8564789567934224629624a98f8227f4e33281ef1152294ac5071c0af87ced0",
+  "model_name": "gpt-3.5-turbo",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef next_smallest(lst):\n    if not lst or len(lst) < 3:\n        return None\n    sorted_lst = sorted(lst)\n    return sorted_lst[2]\n```",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def next_smallest(lst):\n    if not lst or len(lst) < 3:\n        return None\n    sorted_lst = sorted(lst)\n    return sorted_lst[2]",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 0.6952841281890869,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

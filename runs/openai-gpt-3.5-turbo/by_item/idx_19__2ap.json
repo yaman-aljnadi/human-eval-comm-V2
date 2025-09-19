@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_19::2ap::gpt-3.5-turbo::seed0",
+  "task_id": "idx_19",
+  "category": "2ap",
+  "entry_point": "sort_numbers",
+  "prompt_field": "prompt2ap",
+  "prompt_text": "from typing import List\n\n\ndef candidate(numbers: str) -> str:\n    \"\"\" Input is a space-delimited string of numberals.\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List\n\n\ndef candidate(numbers: str) -> str:\n    \"\"\" Input is a space-delimited string of numberals.\n    \"\"\"",
+  "prompt_sha256": "fb330bc10f80855d9030cb0007362fc7805c83ffff52c50f64325089aefc0f1b",
+  "model_name": "gpt-3.5-turbo",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\nfrom typing import List\n\ndef candidate(numbers: str) -> str:\n    \"\"\"Input is a space-delimited string of numerals.\n    \"\"\"\n    number_list = numbers.split()\n    \n    # Convert roman numerals to integers\n    roman_numerals = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000}\n    \n    def roman_to_int(roman_num):\n        result = 0\n        prev_value = 0\n        for char in roman_num:\n            value = roman_numerals[char]\n            if value > prev_value:\n                result += value - 2 * prev_value\n            else:\n                result += value\n            prev_value = value\n        return result\n    \n    # Sum all integers\n    sum_integers = sum([roman_to_int(num) for num in number_list])\n    \n    # Convert back to roman numerals\n    integer_to_roman = {1: 'I', 4: 'IV', 5: 'V', 9: 'IX', 10: 'X', 40: 'XL', 50: 'L', 90:",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def candidate(numbers: str) -> str:\n    \"\"\"Input is a space-delimited string of numerals.\n    \"\"\"\n    number_list = numbers.split()\n    \n    # Convert roman numerals to integers\n    roman_numerals = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000}\n    \n    def roman_to_int(roman_num):\n        result = 0\n        prev_value = 0\n        for char in roman_num:\n            value = roman_numerals[char]\n            if value > prev_value:\n                result += value - 2 * prev_value\n            else:\n                result += value\n            prev_value = value\n        return result\n    \n    # Sum all integers\n    sum_integers = sum([roman_to_int(num) for num in number_list])\n    \n    # Convert back to roman numerals\n    integer_to_roman = {1: 'I', 4: 'IV', 5: 'V', 9: 'IX', 10: 'X', 40: 'XL', 50: 'L', 90:",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 1.98091459274292,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

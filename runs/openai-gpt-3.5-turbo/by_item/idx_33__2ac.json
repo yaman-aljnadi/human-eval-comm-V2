@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_33::2ac::gpt-3.5-turbo::seed0",
+  "task_id": "idx_33",
+  "category": "2ac",
+  "entry_point": "sort_third",
+  "prompt_field": "prompt2ac",
+  "prompt_text": "\n\ndef candidate(l: list):\n    \"\"\"This function takes a list l and returns a list l' such that\n    l' is identical to l in the indicies that are not divisible by three, while its values at the indicies that are divisible by three are equal\n    to the values of the corresponding indicies of l, but sorted descendingly or ascendingly.\n    >>> candidate([1, 2, 3])\n    [3, 2, 1]\n    >>> candidate([5, 6, 3, 4, 8, 9, 2])\n    [9, 8, 6, 5, 4, 3, 2]\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(l: list):\n    \"\"\"This function takes a list l and returns a list l' such that\n    l' is identical to l in the indicies that are not divisible by three, while its values at the indicies that are divisible by three are equal\n    to the values of the corresponding indicies of l, but sorted descendingly or ascendingly.\n    >>> candidate([1, 2, 3])\n    [3, 2, 1]\n    >>> candidate([5, 6, 3, 4, 8, 9, 2])\n    [9, 8, 6, 5, 4, 3, 2]\n    \"\"\"",
+  "prompt_sha256": "4e2e3199aa64a26bb633307be832005c357a77b10bbd3441678d4d883ec06e30",
+  "model_name": "gpt-3.5-turbo",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef candidate(l: list):\n    divisible_by_three = [val for i, val in enumerate(l) if i % 3 == 0]\n    sorted_divisible_by_three = sorted(divisible_by_three, reverse=True)\n    res = [sorted_divisible_by_three.pop(0) if i % 3 == 0 else val for i, val in enumerate(l)]\n    return res\n```",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def candidate(l: list):\n    divisible_by_three = [val for i, val in enumerate(l) if i % 3 == 0]\n    sorted_divisible_by_three = sorted(divisible_by_three, reverse=True)\n    res = [sorted_divisible_by_three.pop(0) if i % 3 == 0 else val for i, val in enumerate(l)]\n    return res",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 0.8828403949737549,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

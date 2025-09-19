@@ -1,0 +1,35 @@
+{
+  "record_id": "idx_40::2ac::gpt-3.5-turbo::seed0",
+  "task_id": "idx_40",
+  "category": "2ac",
+  "entry_point": "triples_sum_to_zero",
+  "prompt_field": "prompt2ac",
+  "prompt_text": "\n\ndef candidate(l: list):\n    \"\"\"\n    candidate takes a list of integers as an input.\n    it returns True if there are three elements in a list that\n    sum to zero and meet a certain condition (such as they are distinct, they are odd, they are prime, or another condition), and False otherwise.\n\n    >>> candidate([1, 3, 5, 0])\n    True\n    >>> candidate([1, 3, -2, 1])\n    False\n    >>> candidate([1, 2, 3, 7])\n    True\n    >>> candidate([2, 4, -5, 3, 9, 7])\n    False\n    >>> candidate([1])\n    True\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(l: list):\n    \"\"\"\n    candidate takes a list of integers as an input.\n    it returns True if there are three elements in a list that\n    sum to zero and meet a certain condition (such as they are distinct, they are odd, they are prime, or another condition), and False otherwise.\n\n    >>> candidate([1, 3, 5, 0])\n    True\n    >>> candidate([1, 3, -2, 1])\n    False\n    >>> candidate([1, 2, 3, 7])\n    True\n    >>> candidate([2, 4, -5, 3, 9, 7])\n    False\n    >>> candidate([1])\n    True\n    \"\"\"",
+  "prompt_sha256": "eb19518fcb59d9f4237a9299d655ac0baed29602cafac74645d7608b2ec1d86e",
+  "model_name": "gpt-3.5-turbo",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "Is the condition that the three elements need to meet flexible, or do you have a specific condition in mind?",
+  "gen_raw": {},
+  "contains_code": false,
+  "code_detected_method": "none",
+  "extracted_code": null,
+  "is_question": true,
+  "extracted_questions": [
+    "Is the condition that the three elements need to meet flexible, or do you have a specific condition in mind?"
+  ],
+  "question_count": 1,
+  "first_question": "Is the condition that the three elements need to meet flexible, or do you have a specific condition in mind?",
+  "question_chars": 108,
+  "latency_sec": 0.59610915184021,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

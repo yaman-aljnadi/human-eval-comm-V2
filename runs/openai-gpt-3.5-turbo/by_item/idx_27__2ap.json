@@ -1,0 +1,43 @@
+{
+  "record_id": "idx_27::2ap::gpt-3.5-turbo::seed0",
+  "task_id": "idx_27",
+  "category": "2ap",
+  "entry_point": "flip_case",
+  "prompt_field": "prompt2ap",
+  "prompt_text": "\n\ndef candidate(string: str) -> str:\n    \"\"\" For a given string, flip lowercase or uppercase characters to either uppercase or lowercase.\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(string: str) -> str:\n    \"\"\" For a given string, flip lowercase or uppercase characters to either uppercase or lowercase.\n    \"\"\"",
+  "prompt_sha256": "aaef5523119f6ac35930485fcfe6e254d22a9f7cc41a8c7c79d2d89012ab515c",
+  "model_name": "gpt-3.5-turbo",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "### Clarifying questions:\n1. Are there any specific constraints on the input string?\n2. Should the function only flip the case of alphabetic characters or all characters in the string?\n3. Should the function preserve non-alphabetic characters (like numbers or symbols) unchanged?\n4. Should the function handle special characters or non-English characters differently?\n\nPlease provide more information or constraints to generate the Python3 code for the `candidate` function.",
+  "gen_raw": {},
+  "contains_code": false,
+  "code_detected_method": "none",
+  "extracted_code": null,
+  "is_question": true,
+  "extracted_questions": [
+    "### Clarifying questions:\n1. Are there any specific constraints on the input string?",
+    "2. Should the function only flip the case of alphabetic characters or all characters in the string?",
+    "3. Should the function preserve non-alphabetic characters (like numbers or symbols) unchanged?",
+    "4. Should the function handle special characters or non-English characters differently?",
+    "Please provide more information or constraints to generate the Python3 code for the `candidate` function.?",
+    "Are there any specific constraints on the input string?",
+    "Should the function only flip the case of alphabetic characters or all characters in the string?",
+    "Should the function preserve non-alphabetic characters (like numbers or symbols) unchanged?",
+    "Should the function handle special characters or non-English characters differently?"
+  ],
+  "question_count": 9,
+  "first_question": "### Clarifying questions:\n1. Are there any specific constraints on the input string?",
+  "question_chars": 796,
+  "latency_sec": 0.9393589496612549,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

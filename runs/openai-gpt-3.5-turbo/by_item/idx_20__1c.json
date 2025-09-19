@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_20::1c::gpt-3.5-turbo::seed0",
+  "task_id": "idx_20",
+  "category": "1c",
+  "entry_point": "find_closest_elements",
+  "prompt_field": "prompt1c",
+  "prompt_text": "from typing import List, Tuple\n\n\ndef find_closest_elements(numbers: List[float]) -> Tuple[float, float]:\n    \"\"\" From a supplied list of numbers (of length at least two) select and return two that are the closest to each\n    other and return them in order (smaller number, larger number).\n    >>> find_closest_elements([1.0, 2.0, 3.0, 4.0, 5.0, 2.2])\n    (1.0, 5.0)\n    >>> find_closest_elements([1.0, 2.0, 3.0, 4.0, 5.0, 2.0])\n    (1.0, 5.0)\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List, Tuple\n\n\ndef find_closest_elements(numbers: List[float]) -> Tuple[float, float]:\n    \"\"\" From a supplied list of numbers (of length at least two) select and return two that are the closest to each\n    other and return them in order (smaller number, larger number).\n    >>> find_closest_elements([1.0, 2.0, 3.0, 4.0, 5.0, 2.2])\n    (1.0, 5.0)\n    >>> find_closest_elements([1.0, 2.0, 3.0, 4.0, 5.0, 2.0])\n    (1.0, 5.0)\n    \"\"\"",
+  "prompt_sha256": "abd2d1f5cd085cd01cbb8475d9c595e211e817121fcd0cb22a59a3edb14fc952",
+  "model_name": "gpt-3.5-turbo",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef find_closest_elements(numbers: List[float]) -> Tuple[float, float]:\n    numbers.sort()\n    min_diff = float('inf')\n    first_element, second_element = 0, 1\n    for i in range(len(numbers) - 1):\n        if numbers[i+1] - numbers[i] < min_diff:\n            first_element, second_element = i, i + 1\n            min_diff = numbers[i+1] - numbers[i]\n    return numbers[first_element], numbers[second_element]\n```",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def find_closest_elements(numbers: List[float]) -> Tuple[float, float]:\n    numbers.sort()\n    min_diff = float('inf')\n    first_element, second_element = 0, 1\n    for i in range(len(numbers) - 1):\n        if numbers[i+1] - numbers[i] < min_diff:\n            first_element, second_element = i, i + 1\n            min_diff = numbers[i+1] - numbers[i]\n    return numbers[first_element], numbers[second_element]",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 0.9530050754547119,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

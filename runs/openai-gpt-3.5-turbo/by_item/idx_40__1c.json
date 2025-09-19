@@ -1,0 +1,35 @@
+{
+  "record_id": "idx_40::1c::gpt-3.5-turbo::seed0",
+  "task_id": "idx_40",
+  "category": "1c",
+  "entry_point": "triples_sum_to_zero",
+  "prompt_field": "prompt1c",
+  "prompt_text": "\n\ndef triples_sum_to_zero(l: list):\n    \"\"\"\n    triples_sum_to_zero takes a list of integers as an input.\n    it returns True if there are three distinct elements in the list that\n    sum to zero, and False otherwise.\n\n    >>> triples_sum_to_zero([1, 3, 5, 0])\n    False\n    >>> triples_sum_to_zero([1, 3, -2, 1])\n    False\n    >>> triples_sum_to_zero([1, 2, 3, 7])\n    True\n    >>> triples_sum_to_zero([2, 4, -5, 3, 9, 7])\n    False\n    >>> triples_sum_to_zero([1])\n    True\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef triples_sum_to_zero(l: list):\n    \"\"\"\n    triples_sum_to_zero takes a list of integers as an input.\n    it returns True if there are three distinct elements in the list that\n    sum to zero, and False otherwise.\n\n    >>> triples_sum_to_zero([1, 3, 5, 0])\n    False\n    >>> triples_sum_to_zero([1, 3, -2, 1])\n    False\n    >>> triples_sum_to_zero([1, 2, 3, 7])\n    True\n    >>> triples_sum_to_zero([2, 4, -5, 3, 9, 7])\n    False\n    >>> triples_sum_to_zero([1])\n    True\n    \"\"\"",
+  "prompt_sha256": "04f25fb3749970934111ddd576d2270655d022681d55f458b149301031905a5a",
+  "model_name": "gpt-3.5-turbo",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "How should the function handle the case where there are fewer than three elements in the input list?",
+  "gen_raw": {},
+  "contains_code": false,
+  "code_detected_method": "none",
+  "extracted_code": null,
+  "is_question": true,
+  "extracted_questions": [
+    "How should the function handle the case where there are fewer than three elements in the input list?"
+  ],
+  "question_count": 1,
+  "first_question": "How should the function handle the case where there are fewer than three elements in the input list?",
+  "question_chars": 100,
+  "latency_sec": 0.4906144142150879,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

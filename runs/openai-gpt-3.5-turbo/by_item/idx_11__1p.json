@@ -1,0 +1,36 @@
+{
+  "record_id": "idx_11::1p::gpt-3.5-turbo::seed0",
+  "task_id": "idx_11",
+  "category": "1p",
+  "entry_point": "string_xor",
+  "prompt_field": "prompt1p",
+  "prompt_text": "from typing import List\n\n\ndef candidate(a: str, b: str) -> str:\n    \"\"\" Input are two strings a and b consisting only of 1s and 0s.\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List\n\n\ndef candidate(a: str, b: str) -> str:\n    \"\"\" Input are two strings a and b consisting only of 1s and 0s.\n    \"\"\"",
+  "prompt_sha256": "a1165e8d3a5bbacbb914290290638eb75e76118fab40934c44c7e2488cc3be01",
+  "model_name": "gpt-3.5-turbo",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "I need more information on what the `candidate` function is supposed to do with the input strings `a` and `b`. Can you provide more details on the expected behavior or output based on these input strings?",
+  "gen_raw": {},
+  "contains_code": false,
+  "code_detected_method": "none",
+  "extracted_code": null,
+  "is_question": true,
+  "extracted_questions": [
+    "I need more information on what the `candidate` function is supposed to do with the input strings `a` and `b`. Can you provide more details on the expected behavior or output based on these input strings?",
+    "Can you provide more details on the expected behavior or output based on these input strings?"
+  ],
+  "question_count": 2,
+  "first_question": "I need more information on what the `candidate` function is supposed to do with the input strings `a` and `b`. Can you provide more details on the expected behavior or output based on these input strings?",
+  "question_chars": 297,
+  "latency_sec": 0.5438928604125977,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

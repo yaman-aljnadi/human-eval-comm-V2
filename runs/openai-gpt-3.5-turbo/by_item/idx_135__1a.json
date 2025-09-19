@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_135::1a::gpt-3.5-turbo::seed0",
+  "task_id": "idx_135",
+  "category": "1a",
+  "entry_point": "can_arrange",
+  "prompt_field": "prompt1a",
+  "prompt_text": "\ndef can_arrange(arr):\n    \"\"\"Create a function which returns the smallest or largest index of an element which\n    is not greater than or equal to the element immediately preceding it. If\n    no such element exists then return -1. The given array will not contain\n    duplicate values.\n\n    Examples:\n    can_arrange([1,2,4,3,5]) = 3\n    can_arrange([1,2,3]) = -1\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef can_arrange(arr):\n    \"\"\"Create a function which returns the smallest or largest index of an element which\n    is not greater than or equal to the element immediately preceding it. If\n    no such element exists then return -1. The given array will not contain\n    duplicate values.\n\n    Examples:\n    can_arrange([1,2,4,3,5]) = 3\n    can_arrange([1,2,3]) = -1\n    \"\"\"",
+  "prompt_sha256": "ff12856171b4fc9a0630f2c205b9c378d45e8b09172284f91de400f36c33db3b",
+  "model_name": "gpt-3.5-turbo",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef can_arrange(arr):\n    smallest_index = -1\n    largest_index = -1\n\n    for i in range(1, len(arr)):\n        if arr[i] < arr[i-1]:\n            smallest_index = min(smallest_index, i) if smallest_index != -1 else i\n            largest_index = i\n\n    if smallest_index == -1:\n        return -1\n    else:\n        return largest_index\n\n# Test cases\nprint(can_arrange([1,2,4,3,5]))  # Output should be 3\nprint(can_arrange([1,2,3]))  # Output should be -1\n```",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def can_arrange(arr):\n    smallest_index = -1\n    largest_index = -1\n\n    for i in range(1, len(arr)):\n        if arr[i] < arr[i-1]:\n            smallest_index = min(smallest_index, i) if smallest_index != -1 else i\n            largest_index = i\n\n    if smallest_index == -1:\n        return -1\n    else:\n        return largest_index\n\n# Test cases\nprint(can_arrange([1,2,4,3,5]))  # Output should be 3\nprint(can_arrange([1,2,3]))  # Output should be -1",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 1.3092732429504395,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

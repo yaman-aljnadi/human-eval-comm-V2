@@ -1,0 +1,36 @@
+{
+  "record_id": "idx_125::2ac::gpt-3.5-turbo::seed0",
+  "task_id": "idx_125",
+  "category": "2ac",
+  "entry_point": "split_words",
+  "prompt_field": "prompt2ac",
+  "prompt_text": "\ndef split_words(txt):\n    '''\n    Given a string of words, return a list of words split on characters, if no characters exists in the text you\n    should split on commas ',' if no commas exists you should return the number of lower-case letters with odd order in the\n    alphabet, ord('a') = 10, ord('b') = 11, ... ord('z') = 125\n    Examples\n    split_words(\"Hello world!\") ➞ [\"Hello\"]\n    split_words(\"Hello,world!\") ➞ [\"world!\"]\n    split_words(\"abcdef\") == 3 \n    '''\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef split_words(txt):\n    '''\n    Given a string of words, return a list of words split on characters, if no characters exists in the text you\n    should split on commas ',' if no commas exists you should return the number of lower-case letters with odd order in the\n    alphabet, ord('a') = 10, ord('b') = 11, ... ord('z') = 125\n    Examples\n    split_words(\"Hello world!\") ➞ [\"Hello\"]\n    split_words(\"Hello,world!\") ➞ [\"world!\"]\n    split_words(\"abcdef\") == 3 \n    '''",
+  "prompt_sha256": "dcadd867a47b65f0be8e3c59fc2a61f31ca62ee8914413cb6b02246d45c8d717",
+  "model_name": "gpt-3.5-turbo",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "Could you please clarify how we should handle uppercase letters in the input string? Should we treat them differently or ignore them?",
+  "gen_raw": {},
+  "contains_code": false,
+  "code_detected_method": "none",
+  "extracted_code": null,
+  "is_question": true,
+  "extracted_questions": [
+    "Could you please clarify how we should handle uppercase letters in the input string?",
+    "Should we treat them differently or ignore them?"
+  ],
+  "question_count": 2,
+  "first_question": "Could you please clarify how we should handle uppercase letters in the input string?",
+  "question_chars": 132,
+  "latency_sec": 0.5934886932373047,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

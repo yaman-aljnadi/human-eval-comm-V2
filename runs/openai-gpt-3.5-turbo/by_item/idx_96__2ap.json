@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_96::2ap::gpt-3.5-turbo::seed0",
+  "task_id": "idx_96",
+  "category": "2ap",
+  "entry_point": "count_up_to",
+  "prompt_field": "prompt2ap",
+  "prompt_text": "\ndef count_up_to(n):\n    \"\"\"Implement a function that takes an non-negative integer and returns an array of the last or first n\n    integers that are prime numbers and\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef count_up_to(n):\n    \"\"\"Implement a function that takes an non-negative integer and returns an array of the last or first n\n    integers that are prime numbers and\n    \"\"\"",
+  "prompt_sha256": "8ccdb427311c4305a8d8d78e97fdd788cb34ec1121e5065c47cb04f8c6c68b69",
+  "model_name": "gpt-3.5-turbo",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef is_prime(num):\n    if num < 2:\n        return False\n    for i in range(2, int(num**0.5) + 1):\n        if num % i == 0:\n            return False\n    return True\n\ndef count_up_to(n, last=True):\n    primes = []\n    num = 2\n    while len(primes) < n:\n        if is_prime(num):\n            primes.append(num)\n        num += 1\n    return primes if last else primes[::-1]\n\n# Example Usage\nprint(count_up_to(5, last=True)) # Output: [2, 3, 5, 7, 11]\nprint(count_up_to(5, last=False)) # Output: [11, 7, 5, 3, 2]\n```\nIn the code above:\n- The `is_prime` function is defined to check if a given number is a prime number.\n- The `count_up_to` function takes in a non-negative integer `n` and a boolean `last` parameter to determine whether to return the last `n` prime numbers or the first `n` prime numbers.\n- It generates an array of the last or first `n` prime",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def is_prime(num):\n    if num < 2:\n        return False\n    for i in range(2, int(num**0.5) + 1):\n        if num % i == 0:\n            return False\n    return True\n\ndef count_up_to(n, last=True):\n    primes = []\n    num = 2\n    while len(primes) < n:\n        if is_prime(num):\n            primes.append(num)\n        num += 1\n    return primes if last else primes[::-1]\n\n# Example Usage\nprint(count_up_to(5, last=True)) # Output: [2, 3, 5, 7, 11]\nprint(count_up_to(5, last=False)) # Output: [11, 7, 5, 3, 2]",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 1.8970379829406738,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

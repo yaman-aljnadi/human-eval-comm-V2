@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_47::1c::gpt-3.5-turbo::seed0",
+  "task_id": "idx_47",
+  "category": "1c",
+  "entry_point": "median",
+  "prompt_field": "prompt1c",
+  "prompt_text": "\n\ndef median(l: list):\n    \"\"\"Return median of elements in the list l.\n    >>> median([3, 1, 2, 4, 5])\n    5\n    >>> median([-10, 4, 6, 1000, 10, 20])\n    1000\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef median(l: list):\n    \"\"\"Return median of elements in the list l.\n    >>> median([3, 1, 2, 4, 5])\n    5\n    >>> median([-10, 4, 6, 1000, 10, 20])\n    1000\n    \"\"\"",
+  "prompt_sha256": "2cd12585c66a66c38b0bfe721a8cbfe61f9e8dc8b347ca36b3532b0b87f9cfae",
+  "model_name": "gpt-3.5-turbo",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef median(l: list):\n    sorted_list = sorted(l)\n    length = len(sorted_list)\n    \n    if length % 2 == 0:\n        return sorted_list[length // 2]\n    else:\n        return sorted_list[length // 2]\n\n# Test cases\nprint(median([3, 1, 2, 4, 5]))  # Output: 3\nprint(median([-10, 4, 6, 1000, 10, 20]))  # Output: 10\n```",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def median(l: list):\n    sorted_list = sorted(l)\n    length = len(sorted_list)\n    \n    if length % 2 == 0:\n        return sorted_list[length // 2]\n    else:\n        return sorted_list[length // 2]\n\n# Test cases\nprint(median([3, 1, 2, 4, 5]))  # Output: 3\nprint(median([-10, 4, 6, 1000, 10, 20]))  # Output: 10",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 1.3886349201202393,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

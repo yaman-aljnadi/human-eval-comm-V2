@@ -1,0 +1,36 @@
+{
+  "record_id": "idx_55::1a::gpt-3.5-turbo::seed0",
+  "task_id": "idx_55",
+  "category": "1a",
+  "entry_point": "fib",
+  "prompt_field": "prompt1a",
+  "prompt_text": "\n\ndef candidate(n: int):\n    \"\"\"Return a number that satisfies a specific condition (such as being n-th Prime number, being n-th Fibonacci number, or meeting another specific condition).\n    >>> candidate(10)\n    55\n    >>> candidate(1)\n    1\n    >>> candidate(8)\n    21\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(n: int):\n    \"\"\"Return a number that satisfies a specific condition (such as being n-th Prime number, being n-th Fibonacci number, or meeting another specific condition).\n    >>> candidate(10)\n    55\n    >>> candidate(1)\n    1\n    >>> candidate(8)\n    21\n    \"\"\"",
+  "prompt_sha256": "5392b719603b8b0ec5b4751d45023ef61f5b47d53b125fd0bd6012d5882c59dd",
+  "model_name": "gpt-3.5-turbo",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "I can help with that! Could you please provide more specific details on the condition that the number should satisfy for a given input `n`?",
+  "gen_raw": {},
+  "contains_code": false,
+  "code_detected_method": "none",
+  "extracted_code": null,
+  "is_question": true,
+  "extracted_questions": [
+    "I can help with that! Could you please provide more specific details on the condition that the number should satisfy for a given input `n`?",
+    "Could you please provide more specific details on the condition that the number should satisfy for a given input `n`?"
+  ],
+  "question_count": 2,
+  "first_question": "I can help with that! Could you please provide more specific details on the condition that the number should satisfy for a given input `n`?",
+  "question_chars": 256,
+  "latency_sec": 0.41737794876098633,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}
