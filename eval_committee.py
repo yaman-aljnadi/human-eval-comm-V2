@@ -1,455 +1,453 @@
 #!/usr/bin/env python3
 """
-eval_committee.py — 3‑LLM committee evaluator for HumanEvalComm runs.
+Evaluation via a 3‑LLM "committee" for HumanEvalComm results.
 
-Reads a results.jsonl (or .jsonl.gz) produced by make_dataset_v2.py, asks a
-committee of 3 LLM judges to rate each model response, and computes the paper’s
-metrics:
+What this script does
+---------------------
+- Loads your generation artifacts (results.jsonl) produced by make_dataset_v2.py
+  and iterates over each ItemRow (schema aligned with your runner).
+- For each model response, it determines if the response asked clarifying
+  questions (using the saved `is_question`/`extracted_questions` fields).
+- It asks a *committee* of up to 3 judge models to:
+    * If there ARE questions: rate their quality on the 1..3 scale used in the
+      paper (1=none/bad, 2=fair, 3=good). We aggregate by **majority/median**.
+      From these we compute:
+        - Communication Rate = share of responses that asked questions
+        - Good Question Rate  = share of *all responses* whose questions got 3
+        - Acceptable Question Rate = share with 2 or 3
+    * If there are NO questions: decide whether the answer nonetheless
+      **recovered missing information** (Yes/No). We aggregate by **majority**
+      and compute the **False Recovery Rate** among non‑question responses.
+- Saves per‑item judgments and overall aggregates to JSON & CSV in --outdir.
 
-- Communication Rate (from logged is_question)
-- Good Question Rate (committee label == 3)
-- Good Answer Rate (questions)      -> from committee's "answer_quality" == 3
-- Acceptable Answer Rate (questions) -> from committee's "answer_quality" in {2,3}
-- False Recovery Rate (non-questions)-> among non-question responses, committee says
-                                        the model's response recovered missing info
+Supported judge model identifiers
+---------------------------------
+Pass any 1–3 identifiers to --judges (space separated):
+  • openai/<model>            e.g. openai/gpt-4o-mini, openai/gpt-3.5-turbo
+  • gemini/<model>            e.g. gemini/gemini-2.5-flash-lite
+  • openrouter/<model>        e.g. openrouter/deepseek/deepseek-r1:free
+  • <HF_repo_id>              e.g. meta-llama/Llama-3.1-8B, deepseek-ai/deepseek-coder-6.7b-instruct
+  • hf/<HF_repo_id>           (explicit HF prefix also accepted)
 
-The script also writes back a per-item augmentation JSONL with the committee’s
-votes and a summary JSON.
+Env vars expected (set only those you use):
+  OPENAI_API_KEY, GEMINI_API_KEY, OPENROUTER_API_KEY
 
-Backends supported for judges:
-  * OpenAI (env: OPENAI_API_KEY)             e.g. --judges openai/gpt-4o-mini openai/gpt-4o-mini openai/gpt-4o-mini
-  * OpenRouter (env: OPENROUTER_API_KEY)     e.g. --judges openrouter/deepseek/deepseek-r1:free openrouter/google/gemini-2.0-flash-thinking-exp:free openrouter/openai/gpt-4o-mini
-  * Gemini via google-generativeai (env: GEMINI_API_KEY) e.g. --judges gemini/gemini-2.0-flash-lite gemini/gemini-2.0-flash-lite gemini/gemini-2.0-flash-lite
+Examples
+--------
+python eval_committee.py \
+  --results ./runs/deepseek_coder_allcats/results.jsonl \
+  --outdir  ./runs/deepseek_coder_allcats \
+  --judges gemini/gemini-2.5-flash-lite openai/gpt-3.5-turbo meta-llama/Llama-3.1-8B \
+  --max-tokens 256 --temperature 1
 
-Usage:
-  python eval_committee.py \
-    --results ./runs/deepseek_coder_allcats/results.jsonl \
-    --outdir  ./runs/deepseek_coder_allcats \
-    --judges openai/gpt-4o-mini openrouter/deepseek/deepseek-r1:free gemini/gemini-2.0-flash-lite \
-    --max-tokens 512 --temperature 0.2
-
-Notes:
-- We fetch the ORIGINAL & MODIFIED problem text from the public dataset so judges
-  can check “recovery” precisely.
-- If you already captured evaluator outputs, this script can be run in "dry"
-  mode (--no-llm) to only recompute aggregate metrics from stored labels.
-
-Output files:
-  outdir/
-    committee.jsonl         # per-item augmentation (record_id keyed)
-    committee_summary.json  # corpus-level metrics + per-category breakdown
+Notes
+-----
+This script fixes the CLI parsing so `--max-tokens 256` is correctly treated as an
+integer argument (your error "unrecognized arguments: 256" happens when the flag
+was defined like a boolean or with a different name). It also adds HF support
+for judges, including models like meta-llama/Llama-3.1-8B.
 """
 
 from __future__ import annotations
 import argparse
-import gzip
-import io
+import csv
+import dataclasses
 import json
+import math
 import os
+import statistics
 import sys
 import time
-import uuid
-from dataclasses import dataclass, asdict
+from dataclasses import dataclass
 from typing import Any, Dict, List, Optional, Tuple
 
-# ---------- Small utils ----------
+# ---------- I/O helpers ----------
 
-def load_jsonl(path: str) -> List[Dict[str, Any]]:
-    out = []
-    if path.endswith(".gz"):
-        with gzip.open(path, "rb") as f:
-            for ln in f:
-                if not ln.strip():
-                    continue
-                out.append(json.loads(ln.decode("utf-8")))
-    else:
-        with open(path, "r", encoding="utf-8") as f:
-            for ln in f:
-                if not ln.strip():
-                    continue
-                out.append(json.loads(ln))
-    return out
+def read_jsonl(path: str) -> List[Dict[str, Any]]:
+    rows: List[Dict[str, Any]] = []
+    with open(path, "r", encoding="utf-8") as f:
+        for line in f:
+            line = line.strip()
+            if not line:
+                continue
+            try:
+                rows.append(json.loads(line))
+            except json.JSONDecodeError:
+                # best‑effort tolerance; you can also raise
+                continue
+    return rows
 
-def atomic_write(path: str, data: str, binary: bool = False):
-    os.makedirs(os.path.dirname(path) or ".", exist_ok=True)
-    tmp = f"{path}.tmp-{uuid.uuid4().hex}"
-    mode = "wb" if binary else "w"
-    with open(tmp, mode) as f:
-        if binary:
-            f.write(data)
-        else:
-            f.write(data)
-    os.replace(tmp, path)
 
-def append_jsonl(path: str, rows: List[Dict[str, Any]]):
-    os.makedirs(os.path.dirname(path) or ".", exist_ok=True)
-    with open(path, "a", encoding="utf-8") as f:
-        for r in rows:
-            f.write(json.dumps(r, ensure_ascii=False) + "\n")
+def ensure_outdir(path: str) -> None:
+    os.makedirs(path, exist_ok=True)
 
-# ---------- Dataset helpers ----------
 
-@dataclass
-class SourceItem:
-    task_id: str
-    category: str
-    modified_problem: str
-    original_problem: str
+# ---------- Judge adapters (OpenAI, Gemini, OpenRouter, HF) ----------
 
-def load_hec_index(split: str = "train") -> Dict[Tuple[str, str], SourceItem]:
-    """
-    Build (task_id, category) -> SourceItem from the huggingface dataset.
-    Requires: datasets
-    """
-    try:
-        from datasets import load_dataset
-    except Exception as e:
-        raise RuntimeError("pip install datasets") from e
-
-    ds = load_dataset("jie-jw-wu/HumanEvalComm", split=split)
-    index: Dict[Tuple[str, str], SourceItem] = {}
-    for rec in ds:
-        task_id = rec.get("task_id")
-        cat = rec.get("variant") or rec.get("category") or rec.get("clarification_category")
-        modified = rec.get("problem_modified") or rec.get("problem") or ""
-        original = rec.get("problem_original") or rec.get("original_problem") or rec.get("missing_information") or ""
-        if not task_id or not cat:
-            # Be permissive; skip if missing keys.
-            continue
-        index[(str(task_id), str(cat))] = SourceItem(
-            task_id=str(task_id),
-            category=str(cat),
-            modified_problem=str(modified),
-            original_problem=str(original),
-        )
-    return index
-
-# ---------- Judge backends ----------
-
-class JudgeClient:
-    def __init__(self, model_spec: str, temperature: float = 0.2, max_tokens: int = 512):
-        """
-        model_spec formats:
-          - "openai/<model>"
-          - "openrouter/<provider>/<model>" OR "openrouter/<model>"
-          - "gemini/<model>"
-        """
-        self.spec = model_spec.strip()
+class Judge:
+    def __init__(self, model_id: str, temperature: float = 0.0, max_tokens: int = 256):
+        self.model_id = model_id
         self.temperature = float(temperature)
         self.max_tokens = int(max_tokens)
+        self.provider, self.model_name = self._parse_model(model_id)
+        self._init_backend()
 
-        if self.spec.startswith("openai/"):
-            from openai import OpenAI
-            self.kind = "openai"
-            self.model = self.spec.split("/", 1)[1]
-            self.client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
-        elif self.spec.startswith("openrouter/"):
-            from openai import OpenAI
-            self.kind = "openrouter"
-            self.model = self.spec.split("/", 1)[1]  # allow provider/model or just model
-            self.client = OpenAI(
-                api_key=os.getenv("OPENROUTER_API_KEY"),
-                base_url="https://openrouter.ai/api/v1",
+    @staticmethod
+    def _parse_model(model_id: str) -> Tuple[str, str]:
+        if model_id.startswith("openai/"):
+            return "openai", model_id.split("/", 1)[1]
+        if model_id.startswith("gemini/"):
+            return "gemini", model_id.split("/", 1)[1]
+        if model_id.startswith("openrouter/"):
+            return "openrouter", model_id.split("/", 1)[1]
+        if model_id.startswith("hf/"):
+            return "hf", model_id.split("/", 1)[1]
+        # default: treat as HF repo id if there's a slash, otherwise try OpenAI
+        if "/" in model_id:
+            return "hf", model_id
+        return "openai", model_id
+
+    def _init_backend(self) -> None:
+        if self.provider == "openai":
+            from openai import OpenAI  # type: ignore
+            api_key = os.getenv("OPENAI_API_KEY")
+            if not api_key:
+                raise RuntimeError("OPENAI_API_KEY not set but an OpenAI judge was requested.")
+            self._client = OpenAI()
+        elif self.provider == "gemini":
+            import google.generativeai as genai  # type: ignore
+            api_key = os.getenv("GEMINI_API_KEY")
+            if not api_key:
+                raise RuntimeError("GEMINI_API_KEY not set but a Gemini judge was requested.")
+            genai.configure(api_key=api_key)
+            self._client = genai.GenerativeModel(self.model_name)
+        elif self.provider == "openrouter":
+            from openai import OpenAI  # type: ignore
+            api_key = os.getenv("OPENROUTER_API_KEY")
+            if not api_key:
+                raise RuntimeError("OPENROUTER_API_KEY not set but an OpenRouter judge was requested.")
+            self._client = OpenAI(base_url="https://openrouter.ai/api/v1", api_key=api_key)
+        elif self.provider == "hf":
+            from transformers import AutoModelForCausalLM, AutoTokenizer, pipeline  # type: ignore
+            tok = AutoTokenizer.from_pretrained(self.model_name, use_fast=True, trust_remote_code=True)
+            if tok.pad_token is None and tok.eos_token is not None:
+                tok.pad_token = tok.eos_token
+            model = AutoModelForCausalLM.from_pretrained(
+                self.model_name,
+                device_map="auto",
+                trust_remote_code=True,
             )
-        elif self.spec.startswith("gemini/"):
-            import google.generativeai as genai
-            self.kind = "gemini"
-            self.model = self.spec.split("/", 1)[1]
-            gemini_key = os.getenv("GEMINI_API_KEY")
-            if not gemini_key:
-                raise RuntimeError("GEMINI_API_KEY not set")
-            genai.configure(api_key=gemini_key)
-            self.client = genai.GenerativeModel(self.model)
+            self._pipe = pipeline(
+                "text-generation",
+                model=model,
+                tokenizer=tok,
+                device_map="auto",
+                return_full_text=False,
+            )
         else:
-            raise ValueError(f"Unrecognized judge model spec: {self.spec}")
+            raise ValueError(f"Unknown provider for judge: {self.provider}")
 
-    def chat(self, prompt: str) -> str:
-        if self.kind in ("openai", "openrouter"):
-            resp = self.client.chat.completions.create(
-                model=self.model,
+    # ---- prompts ----
+    @staticmethod
+    def _prompt_for_questions(modified_problem: str, questions: List[str]) -> str:
+        # Aligned to the 1..3 scale used in the paper; keep the response machine‑parsable.
+        qlist = "\n".join(f"- {q}" for q in questions) if questions else "(none)"
+        return (
+            "You are grading the QUALITY of clarifying questions for a coding task.\n"
+            "Scale: 3=Good (insightful and directly recover missing/ambiguous requirements);\n"
+            "2=Fair (partially helpful but incomplete); 1=Bad/None (no questions or irrelevant).\n\n"
+            f"Modified problem description (possibly ambiguous/incomplete/inconsistent):\n{modified_problem}\n\n"
+            f"Clarifying questions to grade:\n{qlist}\n\n"
+            "Reply ONLY in this strict JSON: {\"quality\": <1|2|3>, \"rationale\": \"short reason\"}"
+        )
+
+    @staticmethod
+    def _prompt_for_recovery(modified_problem: str, answer_text: str) -> str:
+        return (
+            "Judge whether the following NON‑question answer text nonetheless *recovers the missing or ambiguous "
+            "requirements* implied by the modified problem description.\n"
+            "Respond in strict JSON with {\"recovered\": true|false, \"rationale\": \"short\"}.\n\n"
+            f"Modified problem description:\n{modified_problem}\n\n"
+            f"Model answer (no questions asked):\n{answer_text}"
+        )
+
+    # ---- inference ----
+    def _chat(self, prompt: str) -> str:
+        if self.provider == "openai":
+            resp = self._client.chat.completions.create(
+                model=self.model_name,
                 messages=[{"role": "user", "content": prompt}],
                 temperature=self.temperature,
                 max_tokens=self.max_tokens,
+                top_p=0.9,
             )
-            return (resp.choices[0].message.content or "").strip()
-        elif self.kind == "gemini":
-            resp = self.client.generate_content(
+            return resp.choices[0].message.content or ""
+        if self.provider == "gemini":
+            resp = self._client.generate_content(
                 prompt,
                 generation_config={
                     "temperature": self.temperature,
                     "max_output_tokens": self.max_tokens,
+                    "top_p": 0.9,
                 },
             )
-            try:
-                return (resp.text or "").strip()
-            except Exception:
-                return ""
-        else:
-            raise RuntimeError("Unknown backend")
+            return getattr(resp, "text", "") or ""
+        if self.provider == "openrouter":
+            resp = self._client.chat.completions.create(
+                model=self.model_name,
+                messages=[{"role": "user", "content": prompt}],
+                temperature=self.temperature,
+                max_tokens=self.max_tokens,
+                top_p=0.9,
+                extra_body={"include_reasoning": True},
+            )
+            return resp.choices[0].message.content or ""
+        if self.provider == "hf":
+            # For HF we just do single‑shot generation; many HF models are not chat‑tuned.
+            outs = self._pipe(prompt, max_new_tokens=self.max_tokens, do_sample=self.temperature > 0, top_p=0.9)
+            return outs[0]["generated_text"]
+        raise RuntimeError("Unsupported provider")
 
-# ---------- Prompts ----------
+    def grade_questions(self, modified_problem: str, questions: List[str]) -> Tuple[int, str]:
+        raw = self._chat(self._prompt_for_questions(modified_problem, questions))
+        # Extract a single integer 1..3 from JSON-ish output robustly
+        try:
+            j = json.loads(raw)
+            q = int(j.get("quality", 0))
+            if q not in (1, 2, 3):
+                raise ValueError
+            rationale = str(j.get("rationale", ""))
+            return q, rationale
+        except Exception:
+            # Fallback: find first digit 1..3 in the text
+            for ch in raw:
+                if ch in "123":
+                    return int(ch), raw
+            return 1, raw  # conservative
 
-JUDGE_PROMPT = """You are a careful *evaluator* of clarifying-question quality and recovery.
-You are given:
-1) The ORIGINAL coding problem description.
-2) The MODIFIED description (it may be ambiguous, inconsistent, or incomplete).
-3) A MODEL RESPONSE (which may contain questions and/or code).
+    def grade_recovery(self, modified_problem: str, answer_text: str) -> Tuple[bool, str]:
+        raw = self._chat(self._prompt_for_recovery(modified_problem, answer_text))
+        try:
+            j = json.loads(raw)
+            rec = bool(j.get("recovered", False))
+            rationale = str(j.get("rationale", ""))
+            return rec, rationale
+        except Exception:
+            text = raw.lower()
+            if "true" in text and "false" not in text:
+                return True, raw
+            if "false" in text and "true" not in text:
+                return False, raw
+            return False, raw
 
-Please do ALL of the following and answer in strict JSON (no extra text):
-- is_question: true/false — whether the model actually asked any clarifying question(s).
-- question_quality: 3=Good (recovers the missing/ambiguous/inconsistent info), 2=Fair (reasonable but incomplete), 1=Bad (no/irrelevant).
-- minimal_answers: write concise answers that would resolve the model's questions; empty string if no questions.
-- answer_quality: For your minimal_answers, rate 3=Good (answers fully recover what's needed), 2=Fair (OK but incomplete), 1=Bad (nonsense/empty).
-- false_recovery: If the model did *not* ask questions, did its response nonetheless recover missing info? true/false.
-- reasoning: 1-2 sentence justification.
 
-Return EXACTLY this JSON schema:
-{"is_question": <bool>,
- "question_quality": <1|2|3>,
- "minimal_answers": "<string>",
- "answer_quality": <1|2|3>,
- "false_recovery": <bool>,
- "reasoning": "<string>"}
+# ---------- Aggregation ----------
 
-ORIGINAL:
-{original}
-
-MODIFIED:
-{modified}
-
-MODEL RESPONSE:
-{response}
-"""
-
-def parse_safe_json(s: str) -> Dict[str, Any]:
+def majority_vote_int(values: List[int]) -> int:
+    if not values:
+        return 1
     try:
-        return json.loads(s)
-    except Exception:
-        # Try to extract the last JSON object
-        import re
-        m = re.search(r"\{.*\}\s*$", s, flags=re.DOTALL)
-        if m:
-            try:
-                return json.loads(m.group(0))
-            except Exception:
-                pass
-    # Fallback default
-    return {
-        "is_question": False,
-        "question_quality": 1,
-        "minimal_answers": "",
-        "answer_quality": 1,
-        "false_recovery": False,
-        "reasoning": "parse_error",
-    }
+        return statistics.mode(values)
+    except statistics.StatisticsError:
+        # tie -> median (rounded)
+        return int(round(statistics.median(values)))
 
-# ---------- Voting ----------
 
-def majority_vote(ints: List[int], default: int = 1) -> int:
-    from collections import Counter
-    cnt = Counter(ints)
-    value, _ = cnt.most_common(1)[0]
-    return value if value in (1,2,3) else default
+def majority_vote_bool(values: List[bool]) -> bool:
+    if not values:
+        return False
+    true_count = sum(1 for v in values if v)
+    return true_count >= math.ceil(len(values) / 2)
 
-def bool_vote(bools: List[bool]) -> bool:
-    return sum(1 for b in bools if b) >= 2
 
-# ---------- Main pipeline ----------
+# ---------- Main evaluation ----------
 
-def run_committee(
-    results_path: str,
-    outdir: str,
-    judges: List[str],
-    split: str = "train",
-    temperature: float = 0.2,
-    max_tokens: int = 512,
-    dry: bool = False,
-    limit: Optional[int] = None,
-) -> Dict[str, Any]:
+@dataclass
+class PerItemJudgment:
+    record_id: str
+    is_question: bool
+    question_count: int
+    committee_quality_labels: List[int]
+    final_quality_label: Optional[int]  # only for question items
+    committee_recovered: List[bool]
+    final_recovered: Optional[bool]     # only for non‑question items
 
-    rows = load_jsonl(results_path)
-    if limit is not None:
+
+def evaluate(results_path: str, outdir: str, judge_ids: List[str], temperature: float, max_tokens: int, limit: Optional[int]) -> None:
+    ensure_outdir(outdir)
+    rows = read_jsonl(results_path)
+    if limit:
         rows = rows[:limit]
 
-    # Build index to ORIGINAL/MODIFIED text
-    hec = load_hec_index(split=split)
+    judges = [Judge(mid, temperature=temperature, max_tokens=max_tokens) for mid in judge_ids]
 
-    # Init judges
-    judge_clients = []
-    if not dry:
-        for spec in judges:
-            judge_clients.append(JudgeClient(spec, temperature=temperature, max_tokens=max_tokens))
+    per_item: List[PerItemJudgment] = []
 
-    # Outputs
-    aug_rows: List[Dict[str, Any]] = []
+    num_with_questions = 0
+    num_items = 0
 
-    # Running tallies
-    total = 0
-    non_code = 0  # equals "is_question" logged by generator
-    gq_good = 0
-    ans_good = 0
-    ans_acc = 0
-    nq_total = 0
-    false_recovery_count = 0
+    # for rates
+    num_good = 0  # quality==3 among *question items*
+    num_acceptable = 0  # quality in {2,3} among *question items*
 
-    # Category breakdowns
-    by_cat = {}
+    # For non‑questions
+    num_nonq = 0
+    num_false_recovery = 0
 
     for r in rows:
-        total += 1
-        task_id = str(r.get("task_id") or r.get("problem_id") or "")
-        category = str(r.get("category") or "")
-        key = (task_id, category)
-        src = hec.get(key)
+        num_items += 1
+        is_q = bool(r.get("is_question")) or (isinstance(r.get("extracted_questions"), list) and len(r.get("extracted_questions")) > 0)
+        q_list = list(r.get("extracted_questions", []) or [])
+        modified_problem = r.get("prompt_text") or r.get("prompt_final") or ""
+        answer_text = r.get("generated_text", "")
 
-        original = src.original_problem if src else ""
-        modified = src.modified_problem if src else (r.get("prompt_text") or "")
-        response = r.get("generated_text") or ""
-
-        was_question = bool(r.get("is_question", False))
-        if was_question:
-            non_code += 1
-
-        # If dry, reuse logged signals only (no LLM calls)
-        judge_votes: List[Dict[str, Any]] = []
-        if dry:
-            vote = {
-                "is_question": was_question,
-                "question_quality": 3 if was_question else 1,
-                "minimal_answers": "" if not was_question else "N/A (dry)",
-                "answer_quality": 2 if was_question else 1,
-                "false_recovery": False,
-                "reasoning": "dry mode",
-            }
-            judge_votes = [vote, vote, vote]
+        if is_q:
+            num_with_questions += 1
+            labels = []
+            for j in judges:
+                q, _why = j.grade_questions(modified_problem, q_list)
+                labels.append(int(q))
+            final_q = majority_vote_int(labels)
+            if final_q == 3:
+                num_good += 1
+                num_acceptable += 1
+            elif final_q == 2:
+                num_acceptable += 1
+            per_item.append(PerItemJudgment(
+                record_id=r.get("record_id", r.get("task_id", f"item{num_items}")),
+                is_question=True,
+                question_count=len(q_list),
+                committee_quality_labels=labels,
+                final_quality_label=final_q,
+                committee_recovered=[],
+                final_recovered=None,
+            ))
         else:
-            # Query each judge
-            for jc in judge_clients:
-                prompt = JUDGE_PROMPT.format(original=original, modified=modified, response=response)
-                text = jc.chat(prompt)
-                judge_votes.append(parse_safe_json(text))
+            num_nonq += 1
+            votes = []
+            for j in judges:
+                rec, _why = j.grade_recovery(modified_problem, answer_text)
+                votes.append(bool(rec))
+            final_rec = majority_vote_bool(votes)
+            if final_rec:
+                num_false_recovery += 1
+            per_item.append(PerItemJudgment(
+                record_id=r.get("record_id", r.get("task_id", f"item{num_items}")),
+                is_question=False,
+                question_count=0,
+                committee_quality_labels=[],
+                final_quality_label=None,
+                committee_recovered=votes,
+                final_recovered=final_rec,
+            ))
 
-        # Aggregate
-        q_quals = [int(v.get("question_quality", 1)) for v in judge_votes]
-        ans_quals = [int(v.get("answer_quality", 1)) for v in judge_votes]
-        false_recs = [bool(v.get("false_recovery", False)) for v in judge_votes]
-        is_q_flags = [bool(v.get("is_question", False)) for v in judge_votes]
-
-        committee_is_question = bool_vote(is_q_flags)
-        committee_q_quality = majority_vote(q_quals, default=1)
-        committee_ans_quality = majority_vote(ans_quals, default=1)
-        committee_false_recovery = bool_vote(false_recs)
-
-        # Metrics accumulation
-        if committee_q_quality == 3:
-            gq_good += 1
-        if committee_is_question:
-            if committee_ans_quality == 3:
-                ans_good += 1
-            if committee_ans_quality in (2,3):
-                ans_acc += 1
-        else:
-            nq_total += 1
-            if committee_false_recovery:
-                false_recovery_count += 1
-
-        # Per-category
-        if category not in by_cat:
-            by_cat[category] = {"n": 0, "gq_good": 0, "nq_total": 0, "false_rec": 0, "ans_good": 0, "ans_acc": 0, "comm": 0}
-        by_cat[category]["n"] += 1
-        by_cat[category]["comm"] += 1 if committee_is_question else 0
-        by_cat[category]["gq_good"] += 1 if committee_q_quality == 3 else 0
-        if committee_is_question:
-            by_cat[category]["ans_good"] += 1 if committee_ans_quality == 3 else 0
-            by_cat[category]["ans_acc"] += 1 if committee_ans_quality in (2,3) else 0
-        else:
-            by_cat[category]["nq_total"] += 1
-            by_cat[category]["false_rec"] += 1 if committee_false_recovery else 0
-
-        aug = {
-            "record_id": r.get("record_id"),
-            "task_id": task_id,
-            "category": category,
-            "model_name": r.get("model_name"),
-            "seed": r.get("seed"),
-            "is_question_logged": was_question,
-            "committee_is_question": committee_is_question,
-            "committee_question_quality": committee_q_quality,
-            "committee_answer_quality": committee_ans_quality,
-            "committee_false_recovery": committee_false_recovery,
-            "judges": judge_votes,
-        }
-        aug_rows.append(aug)
-
-    # Corpus-level metrics (paper-aligned)
-    comm_rate = (non_code / total) if total else 0.0  # based on logged is_question (paper’s def)
-    good_q_rate = (gq_good / total) if total else 0.0
-    good_ans_rate_questions = (ans_good / non_code) if non_code else 0.0
-    acceptable_ans_rate_questions = (ans_acc / non_code) if non_code else 0.0
-    false_recovery_rate = (false_recovery_count / nq_total) if nq_total else 0.0
-
-    # Build per-category view
-    cat_view = {}
-    for cat, d in by_cat.items():
-        n = d["n"]
-        comm = (d["comm"] / n) if n else 0.0
-        gq = (d["gq_good"] / n) if n else 0.0
-        ga = (d["ans_good"] / d["comm"]) if d["comm"] else 0.0
-        aa = (d["ans_acc"] / d["comm"]) if d["comm"] else 0.0
-        fr = (d["false_rec"] / d["nq_total"]) if d["nq_total"] else 0.0
-        cat_view[cat] = {
-            "n": n, "communication_rate": comm, "good_question_rate": gq,
-            "good_answer_rate_questions": ga, "acceptable_answer_rate_questions": aa,
-            "false_recovery_rate_non_questions": fr,
-        }
+    # --- compute aggregate metrics ---
+    communication_rate = (num_with_questions / num_items) if num_items else 0.0
+    good_question_rate = (num_good / num_items) if num_items else 0.0
+    acceptable_question_rate = (num_acceptable / num_items) if num_items else 0.0
+    false_recovery_rate = (num_false_recovery / num_nonq) if num_nonq else 0.0
 
     summary = {
-        "total": total,
-        "communication_rate": comm_rate,
-        "good_question_rate": good_q_rate,
-        "good_answer_rate_questions": good_ans_rate_questions,
-        "acceptable_answer_rate_questions": acceptable_ans_rate_questions,
-        "false_recovery_rate_non_questions": false_recovery_rate,
-        "by_category": cat_view,
-        "judges": judges,
-        "results_path": results_path,
-        "created_utc": int(time.time()),
+        "items": num_items,
+        "with_questions": num_with_questions,
+        "non_questions": num_nonq,
+        "communication_rate": communication_rate,
+        "good_question_rate": good_question_rate,
+        "acceptable_question_rate": acceptable_question_rate,
+        "false_recovery_rate": false_recovery_rate,
+        "judges": judge_ids,
+        "temperature": temperature,
+        "max_tokens": max_tokens,
+        "timestamp": int(time.time()),
     }
 
-    # Write outputs
-    append_jsonl(os.path.join(outdir, "committee.jsonl"), aug_rows)
-    atomic_write(os.path.join(outdir, "committee_summary.json"), json.dumps(summary, indent=2))
+    # Save outputs
+    # 1) Per‑item JSON
+    per_item_path = os.path.join(outdir, "committee_judgments.json")
+    with open(per_item_path, "w", encoding="utf-8") as f:
+        json.dump([dataclasses.asdict(pi) for pi in per_item], f, ensure_ascii=False, indent=2)
 
-    return summary
+    # 2) Summary JSON
+    summary_path = os.path.join(outdir, "committee_summary.json")
+    with open(summary_path, "w", encoding="utf-8") as f:
+        json.dump(summary, f, ensure_ascii=False, indent=2)
+
+    # 3) Summary CSV (handy for spreadsheets)
+    csv_path = os.path.join(outdir, "committee_summary.csv")
+    with open(csv_path, "w", newline="", encoding="utf-8") as f:
+        w = csv.writer(f)
+        w.writerow(["items", "with_questions", "non_questions", "communication_rate", "good_question_rate", "acceptable_question_rate", "false_recovery_rate", "judges", "temperature", "max_tokens"])
+        w.writerow([
+            summary["items"], summary["with_questions"], summary["non_questions"],
+            f"{summary['communication_rate']:.6f}", f"{summary['good_question_rate']:.6f}", f"{summary['acceptable_question_rate']:.6f}", f"{summary['false_recovery_rate']:.6f}",
+            " ".join(judge_ids), temperature, max_tokens,
+        ])
+
+    print("\nSaved:")
+    print(" ", per_item_path)
+    print(" ", summary_path)
+    print(" ", csv_path)
+
+
+# ---------- CLI ----------
+
+def parse_args(argv: Optional[List[str]] = None) -> argparse.Namespace:
+    p = argparse.ArgumentParser()
+    p.add_argument("--results", required=True, help="Path to results.jsonl produced by make_dataset_v2.py")
+    p.add_argument("--outdir", required=True, help="Directory to save committee outputs")
+    p.add_argument("--judges", nargs="+", default=[], help="1–3 judge model ids (e.g., gemini/gemini-2.5-flash-lite openai/gpt-3.5-turbo meta-llama/Llama-3.1-8B)")
+    p.add_argument("--split", default="train")  # reserved; not used but kept for parity
+    p.add_argument("--temperature", type=float, default=0.0)
+    p.add_argument("--max-tokens", dest="max_tokens", type=int, default=256)
+    p.add_argument("--limit", type=int, default=None)
+    p.add_argument("--no-llm", action="store_true", help="Debug: don’t call judges; compute only communication rate from saved flags")
+    args = p.parse_args(argv)
+    if len(args.judges) == 0 and not args.no_llm:
+        p.error("--judges required unless --no-llm is set")
+    if len(args.judges) > 3:
+        p.error("Provide at most 3 judges")
+    return args
+
 
 def main():
-    ap = argparse.ArgumentParser()
-    ap.add_argument("--results", required=True, help="Path to results.jsonl or .jsonl.gz from make_dataset_v2.py")
-    ap.add_argument("--outdir", required=True, help="Where to write committee.jsonl and committee_summary.json")
-    ap.add_argument("--judges", nargs=3, metavar=("J1","J2","J3"),
-                    help="Three judge model specs, e.g. openai/gpt-4o-mini openrouter/deepseek/deepseek-r1:free gemini/gemini-2.0-flash-lite")
-    ap.add_argument("--split", default="train")
-    ap.add_argument("--temperature", type=float, default=0.2)
-    ap.add_argument("--max-tokens", type=int, default=512)
-    ap.add_argument("--limit", type=int, default=None, help="Only score first N rows (debug)")
-    ap.add_argument("--no-llm", action="store_true", help="Dry mode: no LLM calls; derive metrics from logs only")
-    args = ap.parse_args()
+    args = parse_args()
 
-    if not args.no_llm and (not args.judges or len(args.judges) != 3):
-        ap.error("Please supply exactly three --judges (or use --no-llm).")
+    if args.no_llm:
+        # Fast path: compute simple rates only, no committee calls
+        rows = read_jsonl(args.results)
+        if args.limit:
+            rows = rows[: args.limit]
+        items = len(rows)
+        with_q = sum(1 for r in rows if bool(r.get("is_question")) or (isinstance(r.get("extracted_questions"), list) and len(r.get("extracted_questions")) > 0))
+        nonq = items - with_q
+        ensure_outdir(args.outdir)
+        summary = {
+            "items": items,
+            "with_questions": with_q,
+            "non_questions": nonq,
+            "communication_rate": (with_q / items) if items else 0.0,
+            "good_question_rate": None,
+            "acceptable_question_rate": None,
+            "false_recovery_rate": None,
+            "judges": [],
+            "temperature": args.temperature,
+            "max_tokens": args.max_tokens,
+            "timestamp": int(time.time()),
+        }
+        with open(os.path.join(args.outdir, "committee_summary.json"), "w", encoding="utf-8") as f:
+            json.dump(summary, f, ensure_ascii=False, indent=2)
+        print(json.dumps(summary, indent=2))
+        return
 
-    summary = run_committee(
+    evaluate(
         results_path=args.results,
         outdir=args.outdir,
-        judges=args.judges or [],
-        split=args.split,
+        judge_ids=args.judges,
         temperature=args.temperature,
         max_tokens=args.max_tokens,
-        dry=bool(args.no_llm),
         limit=args.limit,
     )
 
-    print(json.dumps(summary, indent=2))
 
 if __name__ == "__main__":
     main()
