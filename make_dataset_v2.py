@@ -42,6 +42,12 @@ Usage example:
         --max-new-tokens 256 --temperature 1.0 --top-p 0.95 \
         --outdir ./runs/deepseek-r1-free
 
+    python make_dataset_v2.py \
+    --model gpt-3.5-turbo \
+    --categories 1a 1c 1p 2ac 2ap 2cp 3acp \
+    --max-new-tokens 256 --temperature 1.0 --top-p 0.95 \
+    --outdir ./runs/openai-gpt-3.5-turbo
+
 Outputs:
   outdir/
     run_manifest.json            # run config + dataset provenance + schema ver
@@ -488,7 +494,6 @@ def main():
     SECONDS_PER_REQUEST = 60.0 / REQUESTS_PER_MINUTE
     last_request_time = 0.0
 
-    lazy_imports()
     parser = argparse.ArgumentParser()
     parser.add_argument("--model", required=True)
     parser.add_argument("--split", default="train")
@@ -549,15 +554,6 @@ def main():
     if not (use_gemini or use_openrouter or use_openai):
         lazy_imports()
 
-    if use_gemini:
-        gen_pipe = prepare_generator_gemini(args.model, cfg)
-    elif use_openrouter:
-        gen_pipe = prepare_generator_openrouter(args.model, cfg)
-    elif use_openai:
-        gen_pipe = prepare_generator_openai(args.model, cfg)
-    else:
-        gen_pipe = prepare_generator(args.model)
-
     cfg = GenConfig(
         max_new_tokens=args.max_new_tokens,
         temperature=args.temperature,
@@ -570,6 +566,16 @@ def main():
         gen_pipe = prepare_generator_gemini(args.model, cfg)
     elif use_openrouter:
         gen_pipe = prepare_generator_openrouter(args.model, cfg)
+    elif use_openai:
+        gen_pipe = prepare_generator_openai(args.model, cfg)
+    else:
+        gen_pipe = prepare_generator(args.model)
+
+
+    # if use_gemini:
+    #     gen_pipe = prepare_generator_gemini(args.model, cfg)
+    # elif use_openrouter:
+    #     gen_pipe = prepare_generator_openrouter(args.model, cfg)
 
 
     # Paths
