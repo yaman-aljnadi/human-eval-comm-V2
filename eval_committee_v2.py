@@ -41,7 +41,11 @@ python eval_committee_v2.py \
   --checkpoint-every 10 \
   --log-every 5
 
-
+python eval_committee_v2.py \
+  --results ./runs/deepseek_coder_allcats/results.jsonl \
+  --outdir  ./runs/deepseek_coder_allcats \
+  --no-llm
+  
 """
 from __future__ import annotations
 
