@@ -33,7 +33,19 @@ python eval_committee_v2.py \
   --outdir ./runs/x \
   --judges openai/gpt-4o-mini gemini/gemini-2.5-flash-lite meta-llama/Llama-3.1-8B
 
+python eval_committee_v2.py \
+  --results ./runs/openai-gpt-3.5-turbo/results.jsonl \
+  --outdir ./runs/openai-gpt-3.5-turbo \
+  --judges meta-llama/Meta-Llama-3-8B-Instruct \
+  -v \
+  --checkpoint-every 10 \
+  --log-every 5
+
+
 """
+import logging
+import signal
+from pathlib import Path
 
 from __future__ import annotations
 import argparse
@@ -82,6 +94,27 @@ MODEL RESPONSE:
 """
 
 # ---------- I/O helpers ----------
+
+def setup_logging(verbosity: int) -> None:
+    """verbosity: 0=WARNING, 1=INFO, 2+=DEBUG"""
+    level = logging.WARNING if verbosity <= 0 else (logging.INFO if verbosity == 1 else logging.DEBUG)
+    logging.basicConfig(
+        level=level,
+        format="%(asctime)s | %(levelname)s | %(message)s",
+        datefmt="%H:%M:%S",
+    )
+
+def safe_write_json(path: str, obj: Any) -> None:
+    """Atomic-ish write: write to .tmp then replace."""
+    p = Path(path)
+    tmp = p.with_suffix(p.suffix + ".tmp")
+    with open(tmp, "w", encoding="utf-8") as f:
+        json.dump(obj, f, ensure_ascii=False, indent=2)
+    tmp.replace(p)
+
+def append_jsonl(path: str, obj: Any) -> None:
+    with open(path, "a", encoding="utf-8") as f:
+        f.write(json.dumps(obj, ensure_ascii=False) + "\n")
 
 def read_jsonl(path: str) -> List[Dict[str, Any]]:
     rows: List[Dict[str, Any]] = []
@@ -240,6 +273,22 @@ class Judge:
         raise RuntimeError("Unsupported provider")
 
     def judge_once(self, original: str, modified: str, response: str) -> Dict[str, Any]:
+        try:
+            raw = self._chat(self.build_prompt(original, modified, response))
+        except Exception as e:
+            logging.warning(f"Judge '{self.model_id}' failed: {e}")
+            return {
+                "is_question": False,
+                "question_quality": 1,
+                "minimal_answers": "",
+                "answer_quality": 1,
+                "false_recovery": False,
+                "reasoning": f"judge error: {e}",
+                "_raw": "",
+                "_error": str(e),
+            }
+        parsed = try_parse_json(raw) or {}
+
         raw = self._chat(self.build_prompt(original, modified, response))
         parsed = try_parse_json(raw) or {}
         # Coerce types / ranges robustly
@@ -285,10 +334,52 @@ class PerItemJudgment:
     final_answer_quality: Optional[int]
     final_false_recovery: Optional[bool]
 
+def save_partial_outputs(outdir: str,
+                         per_item: List[PerItemJudgment],
+                         counters: Dict[str, int],
+                         judge_ids: List[str],
+                         temperature: float,
+                         max_tokens: int,
+                         partial_reason: Optional[str] = None) -> None:
+    """Save whatever we have so far (committee_judgments.json + summary.json)."""
+    ensure_outdir(outdir)
+
+    per_item_path = os.path.join(outdir, "committee_judgments.json")
+    safe_write_json(per_item_path, [dataclasses.asdict(pi) for pi in per_item])
+
+    num_items = counters.get("num_items", 0)
+    num_with_questions = counters.get("num_with_questions", 0)
+    num_nonq = counters.get("num_nonq", 0)
+    num_good = counters.get("num_good", 0)
+    num_acceptable = counters.get("num_acceptable", 0)
+    num_false_recovery = counters.get("num_false_recovery", 0)
+
+    summary = {
+        "items": num_items,
+        "with_questions": num_with_questions,
+        "non_questions": num_nonq,
+        "communication_rate": (num_with_questions / num_items) if num_items else 0.0,
+        "good_question_rate": (num_good / num_items) if num_items else 0.0,
+        "acceptable_question_rate": (num_acceptable / num_items) if num_items else 0.0,
+        "false_recovery_rate": (num_false_recovery / num_nonq) if num_nonq else 0.0,
+        "judges": judge_ids,
+        "temperature": temperature,
+        "max_tokens": max_tokens,
+        "timestamp": int(time.time()),
+        "partial": True if partial_reason else False,
+        "partial_reason": partial_reason,
+    }
+    summary_path = os.path.join(outdir, "committee_summary.json")
+    safe_write_json(summary_path, summary)
+
+    logging.info("Partial outputs saved to:")
+    logging.info(f"  {per_item_path}")
+    logging.info(f"  {summary_path}")
 
 # ---------- Main evaluation ----------
 
-def evaluate(results_path: str, outdir: str, judge_ids: List[str], temperature: float, max_tokens: int, limit: Optional[int]) -> None:
+def evaluate(results_path: str, outdir: str, judge_ids: List[str], temperature: float, max_tokens: int, limit: Optional[int],
+             checkpoint_every: int = 10, log_every: int = 1, stream_jsonl: bool = True) -> None:
     ensure_outdir(outdir)
     rows = read_jsonl(results_path)
     if limit:
@@ -299,121 +390,157 @@ def evaluate(results_path: str, outdir: str, judge_ids: List[str], temperature: 
     per_item: List[PerItemJudgment] = []
 
     # aggregate counters
-    num_items = 0
-    num_with_questions = 0
-    num_good = 0            # question_quality==3 across all responses (using final_ aggregation)
-    num_acceptable = 0      # question_quality in {2,3}
-    num_nonq = 0
-    num_false_recovery = 0  # among non-question items
+    counters = dict(num_items=0, num_with_questions=0, num_good=0, num_acceptable=0, num_nonq=0, num_false_recovery=0)
 
-    for r in rows:
-        num_items += 1
-        # Try to map common field names gracefully
-        original = (
-            r.get("original_text")
-            or r.get("original")
-            or r.get("prompt_original")
-            or ""
-        )
-        modified = (
-            r.get("prompt_text")
-            or r.get("prompt_final")
-            or r.get("modified")
-            or ""
-        )
-        response = r.get("generated_text") or r.get("output_text") or r.get("response") or ""
+    # streaming file path
+    jsonl_path = os.path.join(outdir, "committee_judgments.jsonl")
+    if stream_jsonl:
+        # fresh file if exists
+        open(jsonl_path, "w").close()
 
-        com_is_q: List[bool] = []
-        com_qqual: List[int] = []
-        com_mins: List[str] = []
-        com_aqual: List[int] = []
-        com_frec: List[bool] = []
-        com_reas: List[str] = []
+    # graceful interrupt to trigger partial save
+    def _handle_interrupt(sig, frame):
+        logging.warning("Received interrupt, saving partial results...")
+        save_partial_outputs(outdir, per_item, counters, judge_ids, temperature, max_tokens, partial_reason="interrupt")
+        raise KeyboardInterrupt
 
-        for j in judges:
-            out = j.judge_once(original, modified, response)
-            com_is_q.append(bool(out["is_question"]))
-            com_qqual.append(int(out["question_quality"]))
-            com_mins.append(str(out["minimal_answers"]))
-            com_aqual.append(int(out["answer_quality"]))
-            com_frec.append(bool(out["false_recovery"]))
-            com_reas.append(str(out["reasoning"]))
+    signal.signal(signal.SIGINT, _handle_interrupt)
+    if hasattr(signal, "SIGTERM"):
+        signal.signal(signal.SIGTERM, _handle_interrupt)
 
-        # Aggregate
-        final_is_q = majority_vote_bool(com_is_q)
-        final_qqual = majority_vote_int(com_qqual) if final_is_q else None
-        final_aqual = majority_vote_int(com_aqual) if final_is_q else None
-        final_frec = (majority_vote_bool(com_frec) if not final_is_q else None)
+    try:
+        total = len(rows)
+        for idx, r in enumerate(rows, start=1):
+            counters["num_items"] += 1
 
-        if final_is_q:
-            num_with_questions += 1
-            if final_qqual == 3:
-                num_good += 1
-                num_acceptable += 1
-            elif final_qqual == 2:
-                num_acceptable += 1
-        else:
-            num_nonq += 1
-            if final_frec:
-                num_false_recovery += 1
+            original = (
+                r.get("original_text")
+                or r.get("original")
+                or r.get("prompt_original")
+                or ""
+            )
+            modified = (
+                r.get("prompt_text")
+                or r.get("prompt_final")
+                or r.get("modified")
+                or ""
+            )
+            response = r.get("generated_text") or r.get("output_text") or r.get("response") or ""
 
-        per_item.append(PerItemJudgment(
-            record_id=r.get("record_id", r.get("task_id", f"item{num_items}")),
-            committee_is_question=com_is_q,
-            committee_question_quality=com_qqual,
-            committee_minimal_answers=com_mins,
-            committee_answer_quality=com_aqual,
-            committee_false_recovery=com_frec,
-            committee_reasoning=com_reas,
-            final_is_question=final_is_q,
-            final_question_quality=final_qqual,
-            final_answer_quality=final_aqual,
-            final_false_recovery=final_frec,
-        ))
+            com_is_q: List[bool] = []
+            com_qqual: List[int] = []
+            com_mins: List[str] = []
+            com_aqual: List[int] = []
+            com_frec: List[bool] = []
+            com_reas: List[str] = []
 
-    # Rates
-    communication_rate = (num_with_questions / num_items) if num_items else 0.0
-    good_question_rate = (num_good / num_items) if num_items else 0.0
-    acceptable_question_rate = (num_acceptable / num_items) if num_items else 0.0
-    false_recovery_rate = (num_false_recovery / num_nonq) if num_nonq else 0.0
+            # judge calls wrapped individually (judge_once already logs on failure)
+            for j in judges:
+                out = j.judge_once(original, modified, response)
+                com_is_q.append(bool(out["is_question"]))
+                com_qqual.append(int(out["question_quality"]))
+                com_mins.append(str(out["minimal_answers"]))
+                com_aqual.append(int(out["answer_quality"]))
+                com_frec.append(bool(out["false_recovery"]))
+                com_reas.append(str(out["reasoning"]))
 
-    summary = {
-        "items": num_items,
-        "with_questions": num_with_questions,
-        "non_questions": num_nonq,
-        "communication_rate": communication_rate,
-        "good_question_rate": good_question_rate,
-        "acceptable_question_rate": acceptable_question_rate,
-        "false_recovery_rate": false_recovery_rate,
-        "judges": judge_ids,
-        "temperature": temperature,
-        "max_tokens": max_tokens,
-        "timestamp": int(time.time()),
-    }
+            # Aggregate (unchanged)
+            final_is_q = majority_vote_bool(com_is_q)
+            final_qqual = majority_vote_int(com_qqual) if final_is_q else None
+            final_aqual = majority_vote_int(com_aqual) if final_is_q else None
+            final_frec = (majority_vote_bool(com_frec) if not final_is_q else None)
 
-    # Save outputs
-    per_item_path = os.path.join(outdir, "committee_judgments.json")
-    with open(per_item_path, "w", encoding="utf-8") as f:
-        json.dump([dataclasses.asdict(pi) for pi in per_item], f, ensure_ascii=False, indent=2)
+            if final_is_q:
+                counters["num_with_questions"] += 1
+                if final_qqual == 3:
+                    counters["num_good"] += 1
+                    counters["num_acceptable"] += 1
+                elif final_qqual == 2:
+                    counters["num_acceptable"] += 1
+            else:
+                counters["num_nonq"] += 1
+                if final_frec:
+                    counters["num_false_recovery"] += 1
 
-    summary_path = os.path.join(outdir, "committee_summary.json")
-    with open(summary_path, "w", encoding="utf-8") as f:
-        json.dump(summary, f, ensure_ascii=False, indent=2)
+            pi = PerItemJudgment(
+                record_id=r.get("record_id", r.get("task_id", f"item{idx}")),
+                committee_is_question=com_is_q,
+                committee_question_quality=com_qqual,
+                committee_minimal_answers=com_mins,
+                committee_answer_quality=com_aqual,
+                committee_false_recovery=com_frec,
+                committee_reasoning=com_reas,
+                final_is_question=final_is_q,
+                final_question_quality=final_qqual,
+                final_answer_quality=final_aqual,
+                final_false_recovery=final_frec,
+            )
+            per_item.append(pi)
 
-    csv_path = os.path.join(outdir, "committee_summary.csv")
-    with open(csv_path, "w", newline="", encoding="utf-8") as f:
-        w = csv.writer(f)
-        w.writerow(["items", "with_questions", "non_questions", "communication_rate", "good_question_rate", "acceptable_question_rate", "false_recovery_rate", "judges", "temperature", "max_tokens"])
-        w.writerow([
-            summary["items"], summary["with_questions"], summary["non_questions"],
-            f"{summary['communication_rate']:.6f}", f"{summary['good_question_rate']:.6f}", f"{summary['acceptable_question_rate']:.6f}", f"{summary['false_recovery_rate']:.6f}",
-            " ".join(judge_ids), temperature, max_tokens,
-        ])
+            # Stream to JSONL and periodic checkpoints
+            if stream_jsonl:
+                append_jsonl(jsonl_path, dataclasses.asdict(pi))
 
-    print("\\nSaved:")
-    print(" ", per_item_path)
-    print(" ", summary_path)
-    print(" ", csv_path)
+            if checkpoint_every and (idx % checkpoint_every == 0):
+                logging.info(f"Checkpoint at {idx}/{total} items...")
+                safe_write_json(os.path.join(outdir, "committee_judgments.json"),
+                                [dataclasses.asdict(x) for x in per_item])
+
+            # progress log
+            if log_every and (idx % log_every == 0):
+                if final_is_q:
+                    logging.info(f"[{idx}/{total}] {pi.record_id}: is_q=1, qqual={final_qqual}, aqual={final_aqual}")
+                else:
+                    logging.info(f"[{idx}/{total}] {pi.record_id}: is_q=0, false_recovery={bool(final_frec)}")
+
+        # ---------- compute + save final outputs (your original block, slightly refactored) ----------
+        communication_rate = (counters["num_with_questions"] / counters["num_items"]) if counters["num_items"] else 0.0
+        good_question_rate = (counters["num_good"] / counters["num_items"]) if counters["num_items"] else 0.0
+        acceptable_question_rate = (counters["num_acceptable"] / counters["num_items"]) if counters["num_items"] else 0.0
+        false_recovery_rate = (counters["num_false_recovery"] / counters["num_nonq"]) if counters["num_nonq"] else 0.0
+
+        summary = {
+            "items": counters["num_items"],
+            "with_questions": counters["num_with_questions"],
+            "non_questions": counters["num_nonq"],
+            "communication_rate": communication_rate,
+            "good_question_rate": good_question_rate,
+            "acceptable_question_rate": acceptable_question_rate,
+            "false_recovery_rate": false_recovery_rate,
+            "judges": judge_ids,
+            "temperature": temperature,
+            "max_tokens": max_tokens,
+            "timestamp": int(time.time()),
+        }
+
+        per_item_path = os.path.join(outdir, "committee_judgments.json")
+        safe_write_json(per_item_path, [dataclasses.asdict(pi) for pi in per_item])
+
+        summary_path = os.path.join(outdir, "committee_summary.json")
+        safe_write_json(summary_path, summary)
+
+        csv_path = os.path.join(outdir, "committee_summary.csv")
+        with open(csv_path, "w", newline="", encoding="utf-8") as f:
+            w = csv.writer(f)
+            w.writerow(["items", "with_questions", "non_questions", "communication_rate", "good_question_rate", "acceptable_question_rate", "false_recovery_rate", "judges", "temperature", "max_tokens"])
+            w.writerow([
+                summary["items"], summary["with_questions"], summary["non_questions"],
+                f"{summary['communication_rate']:.6f}", f"{summary['good_question_rate']:.6f}", f"{summary['acceptable_question_rate']:.6f}", f"{summary['false_recovery_rate']:.6f}",
+                " ".join(judge_ids), temperature, max_tokens,
+            ])
+
+        logging.info("Saved:")
+        logging.info(f"  {per_item_path}")
+        logging.info(f"  {summary_path}")
+        logging.info(f"  {csv_path}")
+        if stream_jsonl:
+            logging.info(f"  {jsonl_path}")
+
+    except Exception as e:
+        logging.exception("Fatal error during evaluation.")
+        save_partial_outputs(outdir, per_item, counters, judge_ids, temperature, max_tokens, partial_reason=str(e))
+        # Re-raise so call sites/CI still see a failure code if desired.
+        raise
 
 
 # ---------- CLI ----------
@@ -427,6 +554,10 @@ def parse_args(argv: Optional[List[str]] = None) -> argparse.Namespace:
     p.add_argument("--max-tokens", dest="max_tokens", type=int, default=256)
     p.add_argument("--limit", type=int, default=None)
     p.add_argument("--no-llm", action="store_true", help="Debug: skip judge calls; compute only communication rate from saved flags (is_question/extracted_questions)")
+    p.add_argument("--verbose", "-v", action="count", default=0, help="-v for INFO, -vv for DEBUG")
+    p.add_argument("--checkpoint-every", type=int, default=10, help="Write a JSON checkpoint every N items")
+    p.add_argument("--log-every", type=int, default=1, help="Log progress every N items")
+    p.add_argument("--no-stream-jsonl", action="store_true", help="Disable streaming committee_judgments.jsonl")
     args = p.parse_args(argv)
     if len(args.judges) == 0 and not args.no_llm:
         p.error("--judges required unless --no-llm is set")
@@ -437,7 +568,7 @@ def parse_args(argv: Optional[List[str]] = None) -> argparse.Namespace:
 
 def main():
     args = parse_args()
-
+    setup_logging(args.verbose)
     if args.no_llm:
         rows = read_jsonl(args.results)
         if args.limit:
@@ -474,6 +605,9 @@ def main():
         temperature=args.temperature,
         max_tokens=args.max_tokens,
         limit=args.limit,
+        checkpoint_every=args.checkpoint_every,
+        log_every=args.log_every,
+        stream_jsonl=not args.no_stream_jsonl,
     )
 
 
