@@ -40,7 +40,7 @@ Usage example:
         --model deepseek/deepseek-r1:free \
         --categories 1a 1c 1p 2ac 2ap 2cp 3acp \
         --max-new-tokens 256 --temperature 1.0 --top-p 0.95 \
-        --outdir ./runs/openrouter/deepseek-r1-free
+        --outdir ./runs/deepseek-r1-free
 
 Outputs:
   outdir/
@@ -339,8 +339,14 @@ def prepare_generator_openrouter(model_name: str, cfg) -> Any:
         resp = client.chat.completions.create(
             model=model_name,
             messages=[{"role": "user", "content": prompt_text}],
-            reasoning={"exclude": True, "effort": "low"},
             extra_headers=extra_headers or None,
+            # Provider-specific fields belong in extra_body:
+            extra_body={
+                # Capture the model’s hidden “thinking”/reasoning tokens
+                "include_reasoning": True,
+                # Optional nudge for models that support it
+                "reasoning": {"effort": "low"},
+            },
             **generation_kwargs,
         )
         latency = time.time() - t0
