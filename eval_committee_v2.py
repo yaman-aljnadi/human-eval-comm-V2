@@ -19,7 +19,7 @@ Examples:
 python eval_committee_v2.py \
   --results ./runs/openai-gpt-3.5-turbo/results.jsonl \
   --outdir ./runs/openai-gpt-3.5-turbo \
-  --judges meta-llama/Llama-3.1-8B
+  --judges meta-llama/Meta-Llama-3-8B-Instruct
 
 # Double evaluators (majority/median aggregation)
 python eval_committee_v2.py \
@@ -64,12 +64,12 @@ Please do ALL of the following and answer in strict JSON (no extra text):
 - reasoning: 1-2 sentence justification.
 
 Return EXACTLY this JSON schema:
-{"is_question": <bool>,
+{{"is_question": <bool>,
  "question_quality": <1|2|3>,
  "minimal_answers": "<string>",
  "answer_quality": <1|2|3>,
  "false_recovery": <bool>,
- "reasoning": "<string>"}
+ "reasoning": "<string>"}}
 
 ORIGINAL:
 {original}
