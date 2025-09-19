@@ -43,11 +43,12 @@ python eval_committee_v2.py \
 
 
 """
+from __future__ import annotations
+
 import logging
 import signal
 from pathlib import Path
 
-from __future__ import annotations
 import argparse
 import csv
 import dataclasses
