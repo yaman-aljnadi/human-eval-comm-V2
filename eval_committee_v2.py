@@ -29,9 +29,14 @@ python eval_committee_v2.py \
 
 # Triple evaluators
 python eval_committee_v2.py \
-  --results ./runs/x/results.jsonl \
-  --outdir ./runs/x \
-  --judges openai/gpt-4o-mini gemini/gemini-2.5-flash-lite meta-llama/Llama-3.1-8B
+  --results ./runs/openai-gpt-3.5-turbo/results.jsonl \
+  --outdir ./runs/openai-gpt-3.5-turbo \
+  --judges openai/gpt-3.5-turbo gemini/gemini-2.5-flash-lite meta-llama/Meta-Llama-3-8B-Instruct \
+    -v \
+  --checkpoint-every 10 \
+  --log-every 5 \
+  --max-tokens 256 \
+  --temperature 1.0 
 
 python eval_committee_v2.py \
   --results ./runs/openai-gpt-3.5-turbo/results.jsonl \
