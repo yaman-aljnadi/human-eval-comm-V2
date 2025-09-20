@@ -291,10 +291,10 @@ class Judge:
                 "is_question": False,
                 "question_quality": 1,
                 "minimal_answers": "",
-                "answer_quality": 1,
+                "answer_quality": 1, 
                 "false_recovery": False,
-                "reasoning": f"judge error: {e}",
-                "_raw": "",
+                "reasoning": f"judge error: {e}", 
+                "_raw": "", 
                 "_error": str(e),
             }
         parsed = try_parse_json(raw) or {}
@@ -326,6 +326,22 @@ class Judge:
             "_raw": raw,
         }
         return out
+
+def _recompute_counters(per_item: List[PerItemJudgment]) -> Dict[str, int]:
+    c = dict(num_items=0, num_with_questions=0, num_good=0, num_acceptable=0, num_nonq=0, num_false_recovery=0)
+    for pi in per_item:
+        c["num_items"] += 1
+        if pi.final_is_question:
+            c["num_with_questions"] += 1
+            if (pi.final_question_quality or 1) >= 2:
+                c["num_acceptable"] += 1
+            if (pi.final_question_quality or 1) == 3:
+                c["num_good"] += 1
+        else:
+            c["num_nonq"] += 1
+            if bool(pi.final_false_recovery):
+                c["num_false_recovery"] += 1
+    return c
 
 
 # ---------- Data structures ----------
@@ -389,7 +405,7 @@ def save_partial_outputs(outdir: str,
 # ---------- Main evaluation ----------
 
 def evaluate(results_path: str, outdir: str, judge_ids: List[str], temperature: float, max_tokens: int, limit: Optional[int],
-             checkpoint_every: int = 10, log_every: int = 1, stream_jsonl: bool = True) -> None:
+             checkpoint_every: int = 10, log_every: int = 1, stream_jsonl: bool = True, resume: bool = False) -> None:
     ensure_outdir(outdir)
     rows = read_jsonl(results_path)
     if limit:
@@ -568,6 +584,7 @@ def parse_args(argv: Optional[List[str]] = None) -> argparse.Namespace:
     p.add_argument("--checkpoint-every", type=int, default=10, help="Write a JSON checkpoint every N items")
     p.add_argument("--log-every", type=int, default=1, help="Log progress every N items")
     p.add_argument("--no-stream-jsonl", action="store_true", help="Disable streaming committee_judgments.jsonl")
+    p.add_argument("--resume", action="store_true", help="Resume from existing per-item outputs in outdir")
     args = p.parse_args(argv)
     if len(args.judges) == 0 and not args.no_llm:
         p.error("--judges required unless --no-llm is set")
