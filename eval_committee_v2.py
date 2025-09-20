@@ -406,6 +406,50 @@ def save_partial_outputs(outdir: str,
 
 def evaluate(results_path: str, outdir: str, judge_ids: List[str], temperature: float, max_tokens: int, limit: Optional[int],
              checkpoint_every: int = 10, log_every: int = 1, stream_jsonl: bool = True, resume: bool = False) -> None:
+    
+    existing_per_item: List[PerItemJudgment] = []
+    processed_ids = set()
+    per_item: List[PerItemJudgment] = []
+    counters = dict(num_items=0, num_with_questions=0, num_good=0, num_acceptable=0, num_nonq=0, num_false_recovery=0)
+
+    per_item_path = os.path.join(outdir, "committee_judgments.json")
+    jsonl_path = os.path.join(outdir, "committee_judgments.jsonl")
+
+    if resume and os.path.exists(per_item_path):
+        try:
+            with open(per_item_path, "r", encoding="utf-8") as f:
+                data = json.load(f)
+            # load into PerItemJudgment objects
+            for d in data:
+                pi = PerItemJudgment(**d)
+                existing_per_item.append(pi)
+                processed_ids.add(pi.record_id)
+            counters = _recompute_counters(existing_per_item)
+            per_item.extend(existing_per_item)
+            logging.info(f"Resuming with {len(processed_ids)} items already done.")
+        except Exception as e:
+            logging.warning(f"Resume requested but failed to load existing per-item file: {e}")
+
+    rows = read_jsonl(results_path)
+    # Skip anything already processed (record_id heuristic mirrors creation)
+    def _rid(r, idx):
+        return r.get("record_id", r.get("task_id", f"item{idx}"))
+
+    rows_to_run = []
+    for idx, r in enumerate(rows, start=1):
+        rid = _rid(r, idx)
+        if rid not in processed_ids:
+            rows_to_run.append((idx, r))
+    total = len(rows_to_run)
+
+    judges = [Judge(mid, temperature=temperature, max_tokens=max_tokens) for mid in judge_ids]
+
+    # jsonl stream: truncate only if not resuming
+    if stream_jsonl:
+        if resume and os.path.exists(jsonl_path):
+            pass  # append
+        else:
+            open(jsonl_path, "w").close()
     ensure_outdir(outdir)
     rows = read_jsonl(results_path)
     if limit:
@@ -436,7 +480,7 @@ def evaluate(results_path: str, outdir: str, judge_ids: List[str], temperature: 
 
     try:
         total = len(rows)
-        for idx, r in enumerate(rows, start=1):
+        for idx, r in rows_to_run:
             counters["num_items"] += 1
 
             original = (
