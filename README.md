@@ -51,6 +51,11 @@ This yields more stable and trustworthy evaluation metrics.
   - Supports checkpointing, resuming, and configurable verbosity.
 
 ---
+## 🖥️ Resources Used
+* Operating System: Ubuntu 20.04.5 LTS
+* CPU: Intel(R) Xeon(R) Silver 4214 @ 2.20GHz
+* GPU: NVIDIA Tesla V100-PCIE-32GB
+
 
 ## ⚙️ Installation
 
@@ -58,6 +63,7 @@ Requirements:
 - Python ≥ 3.9
 - Recommended: virtual environment
 
+Note! python 3.12.11 was used in the setup
 Install dependencies:
 ```bash
 pip install -r requirements.txt
