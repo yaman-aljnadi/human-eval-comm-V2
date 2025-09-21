@@ -31,7 +31,7 @@ python eval_committee_v2.py \
 python eval_committee_v2.py \
   --results ./runs/openai-gpt-3.5-turbo/results.jsonl \
   --outdir ./runs/openai-gpt-3.5-turbo \
-  --judges openai/gpt-3.5-turbo gemini/gemini-2.5-flash-lite meta-llama/Meta-Llama-3-8B-Instruct \
+  --judges openai/gpt-3.5-turbo gemini/gemini-2.5-flash-lite deepseek-ai/deepseek-coder-6.7b-instruct \
     -v \
   --checkpoint-every 10 \
   --log-every 5 \
