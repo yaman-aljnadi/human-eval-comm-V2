@@ -158,5 +158,5 @@ Output:
 
 ## References
 Wu, Jie & Fard, Amin. HumanEvalComm: Benchmarking the Communication Competence of Code Generation for LLMs and LLM Agents. arXiv preprint, 2024. [paper](https://arxiv.org/pdf/2406.00215)
-Original repo: [[jie-jw-wu/human-eval-comm](jie-jw-wu/human-eval-comm)](https://github.com/jie-jw-wu/human-eval-comm)
+Original repo: [jie-jw-wu/human-eval-comm](jie-jw-wu/human-eval-comm)
 This continuation: [yaman-aljnadi/human-eval-comm-V2](yaman-aljnadi/human-eval-comm-V2)
