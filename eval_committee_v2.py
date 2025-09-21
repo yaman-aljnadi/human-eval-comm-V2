@@ -36,7 +36,8 @@ python eval_committee_v2.py \
   --checkpoint-every 10 \
   --log-every 5 \
   --max-tokens 256 \
-  --temperature 1.0 
+  --temperature 1.0 \
+  --resume
 
 python eval_committee_v2.py \
   --results ./runs/openai-gpt-3.5-turbo/results.jsonl \
