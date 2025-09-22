@@ -19,14 +19,26 @@ Examples:
 python eval_committee_v2.py \
   --results ./runs/openai-gpt-3.5-turbo/results.jsonl \
   --outdir ./runs/openai-gpt-3.5-turbo \
-  --judges meta-llama/Meta-Llama-3-8B-Instruct
+  --judges openai/gpt-3.5-turbo
+    -v \
+  --checkpoint-every 10 \
+  --log-every 5 \
+  --max-tokens 256 \
+  --temperature 1.0 \
+  --resume
 
 # Double evaluators (majority/median aggregation)
 python eval_committee_v2.py \
-  --results ./runs/x/results.jsonl \
-  --outdir ./runs/x \
-  --judges openai/gpt-4o-mini gemini/gemini-2.5-flash-lite
-
+  --results ./runs/openai-gpt-3.5-turbo/results.jsonl \
+  --outdir ./runs/openai-gpt-3.5-turbo \
+  --judges openai/gpt-3.5-turbo gemini/gemini-2.5-flash-lite
+    -v \
+  --checkpoint-every 10 \
+  --log-every 5 \
+  --max-tokens 256 \
+  --temperature 1.0 \
+  --resume
+  
 # Triple evaluators
 python eval_committee_v2.py \
   --results ./runs/openai-gpt-3.5-turbo/results.jsonl \
