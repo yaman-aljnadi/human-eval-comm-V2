@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_141::2cp::andrijdavid/Meta-Llama-3-13B-Instruct::seed0",
+  "task_id": "idx_141",
+  "category": "2cp",
+  "entry_point": "file_name_check",
+  "prompt_field": "prompt2cp",
+  "prompt_text": "\ndef file_name_check(file_name):\n    \"\"\"Create a function which takes a string representing a file's name, and returns\n    'Yes' if the the file's name is valid, and returns 'No' otherwise.\n    Examples:\n    file_name_check(\"example.txt\") # => 'No'\n    file_name_check(\"1example.dll\") # => 'Yes' (the name should start with a latin alphapet letter)\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef file_name_check(file_name):\n    \"\"\"Create a function which takes a string representing a file's name, and returns\n    'Yes' if the the file's name is valid, and returns 'No' otherwise.\n    Examples:\n    file_name_check(\"example.txt\") # => 'No'\n    file_name_check(\"1example.dll\") # => 'Yes' (the name should start with a latin alphapet letter)\n    \"\"\"",
+  "prompt_sha256": "7ddf885e15bf9a69011b0ab4319f678beab08e0427453212380692c9036e29cb",
+  "model_name": "andrijdavid/Meta-Llama-3-13B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef file_name_check(file_name):\n    \"\"\"Create a function which takes a string representing a file's name, and returns\n    'Yes' if the the file's name is valid, and returns 'No' otherwise.\n    Examples:\n    file_name_check(\"example.txt\") # => 'No'\n    file_name_check(\"1example.dll\") # => 'Yes' (the name should start with a latin alphapet letter)\n    \"\"\"enders with below:\n\nPlease note that file name should start with a letter (upper or lower) or number (0-9), then followed by any characters other than below:\n- Special characters such as back-slash(\\), forward-sslash(/\\), pipes(|), colons(:), or spaces(' '), tabs(' '), or reserved characters like < angle bracket(the less than sign), > angle bracket(the greater than sign), or Ampersand(&), or reserved characters like #<Commentaries' or other special characters like commentary signs such as triple back-slashes Commentaries triple-back-sleighs Kommentaries triple-back-sleighs triple-back-sleighs tripleback-sleighs triple-back-sleighs triple-back-sleighs triple-back-sleighs triple back-sleighs triple back-sleighs tripleback-sleighs triple-back-sleighs tripleback-sleighs triple-back-sleighs tripleBack-sleighs tripleBack-sleighs triple back-sleighs triple Back-sleighs triple back-sleighs triple Back-sleighs tripleback-sleighs tripleBack-sleighs tripleback-sleighs tripleBack-sleighs triple back-sleighs tripleBack-sleighs triple back-sleighs tripleBack-sleighs tripleBack-sleigh",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def file_name_check(file_name):\n    \"\"\"Create a function which takes a string representing a file's name, and returns\n    'Yes' if the the file's name is valid, and returns 'No' otherwise.\n    Examples:\n    file_name_check(\"example.txt\") # => 'No'\n    file_name_check(\"1example.dll\") # => 'Yes' (the name should start with a latin alphapet letter)\n    \"\"\"enders with below:\n\nPlease note that file name should start with a letter (upper or lower) or number (0-9), then followed by any characters other than below:\n- Special characters such as back-slash(\\), forward-sslash(/\\), pipes(|), colons(:), or spaces(' '), tabs(' '), or reserved characters like < angle bracket(the less than sign), > angle bracket(the greater than sign), or Ampersand(&), or reserved characters like #<Commentaries' or other special characters like commentary signs such as triple back-slashes Commentaries triple-back-sleighs Kommentaries triple-back-sleighs triple-back-sleighs tripleback-sleighs triple-back-sleighs triple-back-sleighs triple-back-sleighs triple back-sleighs triple back-sleighs tripleback-sleighs triple-back-sleighs tripleback-sleighs triple-back-sleighs tripleBack-sleighs tripleBack-sleighs triple back-sleighs triple Back-sleighs triple back-sleighs triple Back-sleighs tripleback-sleighs tripleBack-sleighs tripleback-sleighs tripleBack-sleighs triple back-sleighs tripleBack-sleighs triple back-sleighs tripleBack-sleighs tripleBack-sleigh",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 91.69254183769226,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

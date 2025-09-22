@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_54::2ac::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_54",
+  "category": "2ac",
+  "entry_point": "same_chars",
+  "prompt_field": "prompt2ac",
+  "prompt_text": "\n\ndef candidate(s0: str, s1: str):\n    \"\"\"\n    Check if two words satisfy a specific condition (such as having the same length, having the same characters, or meeting another specific condition).\n    >>> candidate('eabcdzzzz', 'dddzzzzzzzddeddabc')\n    False\n    >>> candidate('abcd', 'dddddddabc')\n    False\n    >>> candidate('dddddddabc', 'abcd')\n    False\n    >>> candidate('eabcd', 'dddddddabc')\n    True\n    >>> candidate('abcd', 'dddddddabce')\n    True\n    >>> candidate('eabcdzzzz', 'dddzzzzzzzddddabc')\n    True\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(s0: str, s1: str):\n    \"\"\"\n    Check if two words satisfy a specific condition (such as having the same length, having the same characters, or meeting another specific condition).\n    >>> candidate('eabcdzzzz', 'dddzzzzzzzddeddabc')\n    False\n    >>> candidate('abcd', 'dddddddabc')\n    False\n    >>> candidate('dddddddabc', 'abcd')\n    False\n    >>> candidate('eabcd', 'dddddddabc')\n    True\n    >>> candidate('abcd', 'dddddddabce')\n    True\n    >>> candidate('eabcdzzzz', 'dddzzzzzzzddddabc')\n    True\n    \"\"\"",
+  "prompt_sha256": "6cdd3b145cc9c55906edda7c517049cf0d9c760be1625b6f2931f6e186e6af5c",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef candidate(s0: str, s1: str):\n    \"\"\"\n    Check if two words satisfy a specific condition. The condition is that s1\n    must contain s0 as a subsequence, after removing all occurrences of 'd' from s1.\n\n    >>> candidate('eabcdzzzz', 'dddzzzzzzzddeddabc')\n    False\n    >>> candidate('abcd', 'dddddddabc')\n    False\n    >>> candidate('dddddddabc', 'abcd')\n    False\n    >>> candidate('eabcd', 'dddddddabc')\n    True\n    >>> candidate('abcd', 'dddddddabce')\n    True\n    >>> candidate('eabcdzzzz', 'dddzzzzzzzddddabc')\n    True\n    \"\"\"\n    s1_filtered = \"\".join(char for char in s1 if char != 'd')\n\n    i = 0  # Pointer for s0\n    j = 0  # Pointer for s1_filtered\n\n    while i < len(s0) and j < len(s1_filtered):\n        if s0[i] == s1_filtered[j]:\n",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def candidate(s0: str, s1: str):\n    \"\"\"\n    Check if two words satisfy a specific condition. The condition is that s1\n    must contain s0 as a subsequence, after removing all occurrences of 'd' from s1.\n\n    >>> candidate('eabcdzzzz', 'dddzzzzzzzddeddabc')\n    False\n    >>> candidate('abcd', 'dddddddabc')\n    False\n    >>> candidate('dddddddabc', 'abcd')\n    False\n    >>> candidate('eabcd', 'dddddddabc')\n    True\n    >>> candidate('abcd', 'dddddddabce')\n    True\n    >>> candidate('eabcdzzzz', 'dddzzzzzzzddddabc')\n    True\n    \"\"\"\n    s1_filtered = \"\".join(char for char in s1 if char != 'd')\n\n    i = 0  # Pointer for s0\n    j = 0  # Pointer for s1_filtered\n\n    while i < len(s0) and j < len(s1_filtered):\n        if s0[i] == s1_filtered[j]:",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 1.519089937210083,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

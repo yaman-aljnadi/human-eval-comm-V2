@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_0::1p::andrijdavid/Meta-Llama-3-13B-Instruct::seed0",
+  "task_id": "idx_0",
+  "category": "1p",
+  "entry_point": "has_close_elements",
+  "prompt_field": "prompt1p",
+  "prompt_text": "from typing import List\n\n\ndef candidate(...) -> bool:\n \"\"\" Check given a list of number.\"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List\n\n\ndef candidate(...) -> bool:\n \"\"\" Check given a list of number.\"\"\"",
+  "prompt_sha256": "e9cffff4364ca501b20e1774b3b444932e3f93cfdb9be2c8f1370bb2c2bdd386",
+  "model_name": "andrijdavid/Meta-Llama-3-13B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List\n\n\ndef candidate(...) -> bool:\n \"\"\" Check given a list of number.\"\"\"\n\n\n Candidate = List[int]\n\n def check_fibo candidacy -> bool:\n \"\"\" checks whether given number is_fibo or not\"\"\" Commentary: \n 1st: Please ensure that you're familiar with Fiboonacci sequence  \n2nd: Fiboonacci sequence is defined as follows: 0,1,1 stumbling upon Fibo sequence(n-th term−−> n-th−−> n-th−−> n-th−−> n-th−−> n-th−−> n-th−−> n-th−−> n-th−−> n-th−−> n-th−−> n-th−−> n-th−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def candidate(...) -> bool:\n \"\"\" Check given a list of number.\"\"\"\n\n\n Candidate = List[int]\n\n def check_fibo candidacy -> bool:\n \"\"\" checks whether given number is_fibo or not\"\"\" Commentary: \n 1st: Please ensure that you're familiar with Fiboonacci sequence  \n2nd: Fiboonacci sequence is defined as follows: 0,1,1 stumbling upon Fibo sequence(n-th term−−> n-th−−> n-th−−> n-th−−> n-th−−> n-th−−> n-th−−> n-th−−> n-th−−> n-th−−> n-th−−> n-th−−> n-th−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−−",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 107.48840475082397,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

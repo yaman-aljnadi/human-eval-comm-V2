@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_102::2ac::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_102",
+  "category": "2ac",
+  "entry_point": "choose_num",
+  "prompt_field": "prompt2ac",
+  "prompt_text": "\ndef choose_num(x, y):\n    \"\"\"This function takes two positive numbers x and y and returns the\n    biggest odd or even integer number that is in the range [x, y] inclusive. If \n    there's no such number, then the function should return -1.\n\n    For example:\n    choose_num(12, 15) = 12\n    choose_num(13, 12) = 13\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef choose_num(x, y):\n    \"\"\"This function takes two positive numbers x and y and returns the\n    biggest odd or even integer number that is in the range [x, y] inclusive. If \n    there's no such number, then the function should return -1.\n\n    For example:\n    choose_num(12, 15) = 12\n    choose_num(13, 12) = 13\n    \"\"\"",
+  "prompt_sha256": "6e17e73bcfa16caad195a3ec8dff5b9244fc76ec860a03e19898b69ebbd14d7b",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef choose_num(x, y):\n    \"\"\"This function takes two positive numbers x and y and returns the\n    biggest odd or even integer number that is in the range [x, y] inclusive. If\n    there's no such number, then the function should return -1.\n\n    For example:\n    choose_num(12, 15) = 12\n    choose_num(13, 12) = 13\n    \"\"\"\n    if x > y:\n        x, y = y, x  # Ensure x is the smaller number\n\n    # Iterate from the largest number in the range downwards\n    for num in range(y, x - 1, -1):\n        if num % 2 == 0:  # Check if the number is even\n            return num\n        elif num % 2 != 0:  # Check if the number is odd\n            return num\n\n    return -1  # No number found in the range\n```",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def choose_num(x, y):\n    \"\"\"This function takes two positive numbers x and y and returns the\n    biggest odd or even integer number that is in the range [x, y] inclusive. If\n    there's no such number, then the function should return -1.\n\n    For example:\n    choose_num(12, 15) = 12\n    choose_num(13, 12) = 13\n    \"\"\"\n    if x > y:\n        x, y = y, x  # Ensure x is the smaller number\n\n    # Iterate from the largest number in the range downwards\n    for num in range(y, x - 1, -1):\n        if num % 2 == 0:  # Check if the number is even\n            return num\n        elif num % 2 != 0:  # Check if the number is odd\n            return num\n\n    return -1  # No number found in the range",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 1.206758975982666,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

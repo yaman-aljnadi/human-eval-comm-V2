@@ -1,0 +1,40 @@
+{
+  "record_id": "idx_19::2ac::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_19",
+  "category": "2ac",
+  "entry_point": "sort_numbers",
+  "prompt_field": "prompt2ac",
+  "prompt_text": "from typing import List\n\n\ndef candidate(numbers: str) -> str:\n    \"\"\" Input is a space-delimited string of numberals from 'zero' to 'nine'.\n    Valid choices are 'zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight' and 'nine'.\n    Return the string with numbers in a certain order (sorted descendingly or ascendingly or another order)\n    >>> candidate('three one five')\n    'five three one'\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List\n\n\ndef candidate(numbers: str) -> str:\n    \"\"\" Input is a space-delimited string of numberals from 'zero' to 'nine'.\n    Valid choices are 'zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight' and 'nine'.\n    Return the string with numbers in a certain order (sorted descendingly or ascendingly or another order)\n    >>> candidate('three one five')\n    'five three one'\n    \"\"\"",
+  "prompt_sha256": "aa7bf28e0c1470715c566f4a834dc9487106c0dd60c4c5530dcc47dcf01235e6",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "I need clarification on the desired ordering. The docstring mentions \"sorted descendingly or ascendingly or another order\" but the example only shows a specific ordering ('five three one' from 'three one five').\n\nPlease clarify the exact ordering rule. For example:\n*   Is it always descending?\n*   Is it always ascending?\n*   Is it a specific custom order (e.g., based on the length of the word, or alphabetical)?\n\nOnce the ordering rule is clear, I can provide the complete Python code.",
+  "gen_raw": {},
+  "contains_code": false,
+  "code_detected_method": "none",
+  "extracted_code": null,
+  "is_question": true,
+  "extracted_questions": [
+    "I need clarification on the desired ordering. The docstring mentions \"sorted descendingly or ascendingly or another order\" but the example only shows a specific ordering ('five three one' from 'three one five').\n\nPlease clarify the exact ordering rule. For example:\n*   Is it always descending?",
+    "*   Is it always ascending?",
+    "*   Is it a specific custom order (e.g., based on the length of the word, or alphabetical)?",
+    "Once the ordering rule is clear, I can provide the complete Python code.?",
+    "For example:\n*   Is it always descending?",
+    ", based on the length of the word, or alphabetical)?"
+  ],
+  "question_count": 6,
+  "first_question": "I need clarification on the desired ordering. The docstring mentions \"sorted descendingly or ascendingly or another order\" but the example only shows a specific ordering ('five three one' from 'three one five').\n\nPlease clarify the exact ordering rule. For example:\n*   Is it always descending?",
+  "question_chars": 578,
+  "latency_sec": 1.1161038875579834,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

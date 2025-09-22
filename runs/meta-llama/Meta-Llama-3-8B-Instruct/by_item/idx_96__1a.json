@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_96::1a::meta-llama/Meta-Llama-3-8B-Instruct::seed0",
+  "task_id": "idx_96",
+  "category": "1a",
+  "entry_point": "count_up_to",
+  "prompt_field": "prompt1a",
+  "prompt_text": "\ndef count_up_to(n):\n    \"\"\"Implement a function that takes an non-negative integer and returns an array of the last or first n\n    integers that are prime numbers and more or less than n.\n    for example:\n    count_up_to(5) => [2,3]\n    count_up_to(11) => [2,3,5,7]\n    count_up_to(0) => []\n    count_up_to(20) => [2,3,5,7,11,13,17,19]\n    count_up_to(1) => []\n    count_up_to(18) => [2,3,5,7,11,13,17]\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef count_up_to(n):\n    \"\"\"Implement a function that takes an non-negative integer and returns an array of the last or first n\n    integers that are prime numbers and more or less than n.\n    for example:\n    count_up_to(5) => [2,3]\n    count_up_to(11) => [2,3,5,7]\n    count_up_to(0) => []\n    count_up_to(20) => [2,3,5,7,11,13,17,19]\n    count_up_to(1) => []\n    count_up_to(18) => [2,3,5,7,11,13,17]\n    \"\"\"",
+  "prompt_sha256": "6494dd88c25b4b1c22cdee54977ab80576067d7e13a8935bfbdfbed884c04f50",
+  "model_name": "meta-llama/Meta-Llama-3-8B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef count_up_to(n):\n    \"\"\"Implement a function that takes an non-negative integer and returns an array of the last or first n\n    integers that are prime numbers and more or less than n.\n    for example:\n    count_up_to(5) => [2,3]\n    count_up_to(11) => [2,3,5,7]\n    count_up_to(0) => []\n    count_up_to(20) => [2,3,5,7,11,13,17,19]\n    count_up_to(1) => []\n    count_up_to(18) => [2,3,5,7,11,13,17]\n    \"\"\"\n\n\n**Python3 code**\n\n\n\n**Code Explanation**\n\nThe function takes an integer `n` as an argument. If `n` is not a non-negative integer, it raises a ValueError. Then, it uses a helper function `is_prime` to check if a number is prime. If a number is prime, it adds it to the result list. The function returns the result list once it reaches or exceeds the `n` limit.\n\n**Code**\n\n\n\n```python\ndef count_up_to(n: int) -> list:\n    if not isinstance(n, int) or n < 0:\n        raise ValueError(\"n must be a non-negative integer\")\n\n    def is_prime(num: int) -> bool:\n        if num < 2:\n            return False\n        for i in range(2, int(num ** 0.5) + 1):\n            if num % i == 0:\n                return False\n        return True\n\n    result = []\n    for i in range(2, max(n, 20)):  # Start from 2 and max of 20 to avoid unnecessary checks\n        if is_prime(i):\n            if len(result) < n:\n                result.append(i)\n            else:\n                break\n    return result\n```",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def count_up_to(n: int) -> list:\n    if not isinstance(n, int) or n < 0:\n        raise ValueError(\"n must be a non-negative integer\")\n\n    def is_prime(num: int) -> bool:\n        if num < 2:\n            return False\n        for i in range(2, int(num ** 0.5) + 1):\n            if num % i == 0:\n                return False\n        return True\n\n    result = []\n    for i in range(2, max(n, 20)):  # Start from 2 and max of 20 to avoid unnecessary checks\n        if is_prime(i):\n            if len(result) < n:\n                result.append(i)\n            else:\n                break\n    return result",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 68.68897771835327,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

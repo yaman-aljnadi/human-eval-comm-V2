@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_76::1c::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_76",
+  "category": "1c",
+  "entry_point": "is_simple_power",
+  "prompt_field": "prompt1c",
+  "prompt_text": "\ndef is_simple_power(x, n):\n    \"\"\"Your task is to write a function that returns true if a number x is a simple\n    power of n and false in other cases.\n    x is a simple power of n if n**int=x\n    For example:\n    is_simple_power(1, 4) => false\n    is_simple_power(2, 2) => false\n    is_simple_power(8, 2) => false\n    is_simple_power(3, 2) => true\n    is_simple_power(3, 1) => true\n    is_simple_power(5, 3) => true\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef is_simple_power(x, n):\n    \"\"\"Your task is to write a function that returns true if a number x is a simple\n    power of n and false in other cases.\n    x is a simple power of n if n**int=x\n    For example:\n    is_simple_power(1, 4) => false\n    is_simple_power(2, 2) => false\n    is_simple_power(8, 2) => false\n    is_simple_power(3, 2) => true\n    is_simple_power(3, 1) => true\n    is_simple_power(5, 3) => true\n    \"\"\"",
+  "prompt_sha256": "ff4046d7c1d80fd6ef09871e9210b80764fe05cb067508fa09ad1435f9185301",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef is_simple_power(x, n):\n    \"\"\"\n    Checks if a number x is a simple power of n.\n\n    A number x is a simple power of n if n**k = x for some integer k.\n\n    Args:\n        x: The number to check.\n        n: The base.\n\n    Returns:\n        True if x is a simple power of n, False otherwise.\n    \"\"\"\n    if n == 1:\n        return x == 1  # 1^k is always 1 for any integer k\n    if x == 1:\n        return True  # n^0 is always 1 for any n (except for the edge case of 0^0 which is often considered 1)\n    if n == 0:\n        return x == 0 # 0^k is 0 for k > 0, and undefined/1 for k=0. We'll consider only positive powers.\n\n    power = 0\n    current_power = 1\n    while current_power < x:\n        current_power *= n\n        power += 1\n        if current_power == x",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def is_simple_power(x, n):\n    \"\"\"\n    Checks if a number x is a simple power of n.\n\n    A number x is a simple power of n if n**k = x for some integer k.\n\n    Args:\n        x: The number to check.\n        n: The base.\n\n    Returns:\n        True if x is a simple power of n, False otherwise.\n    \"\"\"\n    if n == 1:\n        return x == 1  # 1^k is always 1 for any integer k\n    if x == 1:\n        return True  # n^0 is always 1 for any n (except for the edge case of 0^0 which is often considered 1)\n    if n == 0:\n        return x == 0 # 0^k is 0 for k > 0, and undefined/1 for k=0. We'll consider only positive powers.\n\n    power = 0\n    current_power = 1\n    while current_power < x:\n        current_power *= n\n        power += 1\n        if current_power == x",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 1.699275255203247,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

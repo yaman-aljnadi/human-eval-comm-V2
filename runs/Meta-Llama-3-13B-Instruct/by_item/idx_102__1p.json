@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_102::1p::andrijdavid/Meta-Llama-3-13B-Instruct::seed0",
+  "task_id": "idx_102",
+  "category": "1p",
+  "entry_point": "choose_num",
+  "prompt_field": "prompt1p",
+  "prompt_text": "\ndef choose_num(x, y):\n    \"\"\"This function takes two positive numbers x and y and returns the\n    biggest even integer number\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef choose_num(x, y):\n    \"\"\"This function takes two positive numbers x and y and returns the\n    biggest even integer number\n    \"\"\"",
+  "prompt_sha256": "c27c5e31d395083fc580c7ae833a3103bb89675daa15fe40da4233a094ce3eb3",
+  "model_name": "andrijdavid/Meta-Llama-3-13B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef choose_num(x, y):\n    \"\"\"This function takes two positive numbers x and y and returns the\n    biggest even integer number\n    \"\"\"   \n    return x if x % y else y if y % x else None\nendcodeendcode�性istrovství\n\nPlease note that you are not allowed to use built-in functions like ` min()`, ` max()`, etcetera; you should write your own code.\n\nICODEPython3代码:`endcode�数aversableines code below:\n\n def choose_num(x, y):\n    return x if x % y else y if y % x else None\n\n def choose_num(x, y):\n    if x % y:\n        return y else xendcode�数readcrumbinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesines",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def choose_num(x, y):\n    \"\"\"This function takes two positive numbers x and y and returns the\n    biggest even integer number\n    \"\"\"   \n    return x if x % y else y if y % x else None\nendcodeendcode�性istrovství\n\nPlease note that you are not allowed to use built-in functions like ` min()`, ` max()`, etcetera; you should write your own code.\n\nICODEPython3代码:`endcode�数aversableines code below:\n\n def choose_num(x, y):\n    return x if x % y else y if y % x else None\n\n def choose_num(x, y):\n    if x % y:\n        return y else xendcode�数readcrumbinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesinesines",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 89.95537662506104,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

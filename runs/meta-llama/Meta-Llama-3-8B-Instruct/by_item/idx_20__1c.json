@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_20::1c::meta-llama/Meta-Llama-3-8B-Instruct::seed0",
+  "task_id": "idx_20",
+  "category": "1c",
+  "entry_point": "find_closest_elements",
+  "prompt_field": "prompt1c",
+  "prompt_text": "from typing import List, Tuple\n\n\ndef find_closest_elements(numbers: List[float]) -> Tuple[float, float]:\n    \"\"\" From a supplied list of numbers (of length at least two) select and return two that are the closest to each\n    other and return them in order (smaller number, larger number).\n    >>> find_closest_elements([1.0, 2.0, 3.0, 4.0, 5.0, 2.2])\n    (1.0, 5.0)\n    >>> find_closest_elements([1.0, 2.0, 3.0, 4.0, 5.0, 2.0])\n    (1.0, 5.0)\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List, Tuple\n\n\ndef find_closest_elements(numbers: List[float]) -> Tuple[float, float]:\n    \"\"\" From a supplied list of numbers (of length at least two) select and return two that are the closest to each\n    other and return them in order (smaller number, larger number).\n    >>> find_closest_elements([1.0, 2.0, 3.0, 4.0, 5.0, 2.2])\n    (1.0, 5.0)\n    >>> find_closest_elements([1.0, 2.0, 3.0, 4.0, 5.0, 2.0])\n    (1.0, 5.0)\n    \"\"\"",
+  "prompt_sha256": "abd2d1f5cd085cd01cbb8475d9c595e211e817121fcd0cb22a59a3edb14fc952",
+  "model_name": "meta-llama/Meta-Llama-3-8B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List, Tuple\n\n\ndef find_closest_elements(numbers: List[float]) -> Tuple[float, float]:\n    \"\"\" From a supplied list of numbers (of length at least two) select and return two that are the closest to each\n    other and return them in order (smaller number, larger number).\n    >>> find_closest_elements([1.0, 2.0, 3.0, 4.0, 5.0, 2.2])\n    (1.0, 5.0)\n    >>> find_closest_elements([1.0, 2.0, 3.0, 4.0, 5.0, 2.0])\n    (1.0, 5.0)\n    \"\"\"\n\n\nYou have been provided the following:\n- \n# Your Python3 code goes here. #\n# or #\n# Ask clarifying questions. #\n\n\nBest regards,\n[Your Name]\n  |\n\n\n## My response: # [Python3 code here]\n```\nfrom typing import List, Tuple\n\ndef find_closest_elements(numbers: List[float]) -> Tuple[float, float]:\n    numbers = sorted(numbers)\n    closest_distance = float('inf')\n    closest_pair = (None, None)\n\n    for i in range(len(numbers) - 1):\n        pair_distance = numbers[i + 1] - numbers[i]\n        if pair_distance < closest_distance:\n            closest_distance = pair_distance\n            closest_pair = (numbers[i], numbers[i + 1])\n\n    return tuple(sorted(closest_pair))\n```\nNote: I've been asked to generate a Python3 code snippet directly with markdown, hence the code is surrounded with single backticks. This ensures the code is nicely formatted when displayed in a Markdown document. \n\nLet me know if there's anything else I can help you with. Happy coding!  |\n\n\n## Clarification or further assistance (optional)?  |\n\n\n## Response with direct Python3 code # [Your Name]  |\n\n\n## End of",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "from typing import List, Tuple\n\ndef find_closest_elements(numbers: List[float]) -> Tuple[float, float]:\n    numbers = sorted(numbers)\n    closest_distance = float('inf')\n    closest_pair = (None, None)\n\n    for i in range(len(numbers) - 1):\n        pair_distance = numbers[i + 1] - numbers[i]\n        if pair_distance < closest_distance:\n            closest_distance = pair_distance\n            closest_pair = (numbers[i], numbers[i + 1])\n\n    return tuple(sorted(closest_pair))",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 71.17468643188477,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

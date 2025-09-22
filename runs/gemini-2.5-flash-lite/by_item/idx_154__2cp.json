@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_154::2cp::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_154",
+  "category": "2cp",
+  "entry_point": "cycpattern_check",
+  "prompt_field": "prompt2cp",
+  "prompt_text": "\ndef candidate(a , b):\n    \"\"\"\n    candidate(\"abcd\",\"abd\") => True\n    candidate(\"hello\",\"ell\") => False\n    candidate(\"whassup\",\"psus\") => True\n    candidate(\"abab\",\"baa\") => False\n    candidate(\"efef\",\"eeff\") => True\n    candidate(\"himenss\",\"simen\") => False\n\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(a , b):\n    \"\"\"\n    candidate(\"abcd\",\"abd\") => True\n    candidate(\"hello\",\"ell\") => False\n    candidate(\"whassup\",\"psus\") => True\n    candidate(\"abab\",\"baa\") => False\n    candidate(\"efef\",\"eeff\") => True\n    candidate(\"himenss\",\"simen\") => False\n\n    \"\"\"",
+  "prompt_sha256": "a16f14cddf0a0bb366bf6d0f4f1911d167e2b582c2822d2ff16ce72cc82aa0ab",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef candidate(a, b):\n    \"\"\"\n    Checks if string 'b' can be formed by deleting zero or more characters from string 'a'.\n    This is equivalent to checking if 'b' is a subsequence of 'a'.\n\n    Args:\n        a: The main string.\n        b: The potential subsequence string.\n\n    Returns:\n        True if 'b' is a subsequence of 'a', False otherwise.\n\n    Examples:\n        candidate(\"abcd\",\"abd\") => True\n        candidate(\"hello\",\"ell\") => False\n        candidate(\"whassup\",\"psus\") => True\n        candidate(\"abab\",\"baa\") => False\n        candidate(\"efef\",\"eeff\") => True\n        candidate(\"himenss\",\"simen\") => False\n    \"\"\"\n    i = 0  # Pointer for string 'a'\n    j = 0  # Pointer for string 'b'\n\n    while i < len(a) and j < len(b):\n        if a[i] == b[j]:\n            j += 1  # Move to the next character in 'b' if a match is found\n        i += 1  #",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def candidate(a, b):\n    \"\"\"\n    Checks if string 'b' can be formed by deleting zero or more characters from string 'a'.\n    This is equivalent to checking if 'b' is a subsequence of 'a'.\n\n    Args:\n        a: The main string.\n        b: The potential subsequence string.\n\n    Returns:\n        True if 'b' is a subsequence of 'a', False otherwise.\n\n    Examples:\n        candidate(\"abcd\",\"abd\") => True\n        candidate(\"hello\",\"ell\") => False\n        candidate(\"whassup\",\"psus\") => True\n        candidate(\"abab\",\"baa\") => False\n        candidate(\"efef\",\"eeff\") => True\n        candidate(\"himenss\",\"simen\") => False\n    \"\"\"\n    i = 0  # Pointer for string 'a'\n    j = 0  # Pointer for string 'b'\n\n    while i < len(a) and j < len(b):\n        if a[i] == b[j]:\n            j += 1  # Move to the next character in 'b' if a match is found\n        i += 1  #",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 1.6030597686767578,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

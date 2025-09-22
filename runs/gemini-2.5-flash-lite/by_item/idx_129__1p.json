@@ -1,0 +1,39 @@
+{
+  "record_id": "idx_129::1p::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_129",
+  "category": "1p",
+  "entry_point": "minPath",
+  "prompt_field": "prompt1p",
+  "prompt_text": "\ndef minPath(grid, k):\n    \"\"\"\n    Given a grid with N rows and N columns (N >= 2) and a positive integer k, \n    each cell of the grid contains a value. Every integer in the range [1, N * N]\n    inclusive appears exactly once on the cells of the grid.\n\n    You have to find the minimum path of length k in the grid. You can start\n    from any cell, and in each step you can move to any of the neighbor cells,\n    in other words, you can go to cells which share an edge with you current\n    cell.\n    Please note that a path of length k means visiting exactly k cells (not\n    necessarily distinct).\n    You CANNOT go off the grid.\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef minPath(grid, k):\n    \"\"\"\n    Given a grid with N rows and N columns (N >= 2) and a positive integer k, \n    each cell of the grid contains a value. Every integer in the range [1, N * N]\n    inclusive appears exactly once on the cells of the grid.\n\n    You have to find the minimum path of length k in the grid. You can start\n    from any cell, and in each step you can move to any of the neighbor cells,\n    in other words, you can go to cells which share an edge with you current\n    cell.\n    Please note that a path of length k means visiting exactly k cells (not\n    necessarily distinct).\n    You CANNOT go off the grid.\n    \"\"\"",
+  "prompt_sha256": "20ae45cde41e4e8fd1eb027d99ab44374de1b26eb8f4cae438f04ef24f89a705",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "The problem statement is a bit ambiguous regarding what constitutes the \"minimum path\". Generally, in grid problems, \"minimum path\" refers to minimizing the sum of values along the path, or minimizing the number of steps.\n\nHere are a few interpretations and the questions that arise from them:\n\n**Interpretation 1: Minimum Sum Path of Length k**\n\n*   **Assumption:** The goal is to find a path of exactly `k` cells such that the sum of the values in those `k` cells is minimized.\n*   **Questions:**\n    1.  Is the \"minimum path\" referring to the minimum sum of values along the path?\n    2.  If so, are we looking for the *absolute minimum sum* across all possible starting cells and all possible paths of length `k`?\n\n**Interpretation 2: Minimum Number of Steps to Reach a Specific Condition (Less Likely Given \"length k\")**\n\n*   **Assumption:** The phrasing \"path of length k\" strongly suggests a fixed number of steps, so this interpretation is less likely. However, if there was an unstated goal *after* reaching length `k`, this would be relevant.\n*   **Questions:**\n    1.  Is there any implicit",
+  "gen_raw": {},
+  "contains_code": false,
+  "code_detected_method": "none",
+  "extracted_code": null,
+  "is_question": true,
+  "extracted_questions": [
+    "The problem statement is a bit ambiguous regarding what constitutes the \"minimum path\". Generally, in grid problems, \"minimum path\" refers to minimizing the sum of values along the path, or minimizing the number of steps.\n\nHere are a few interpretations and the questions that arise from them:\n\n**Interpretation 1: Minimum Sum Path of Length k**\n\n*   **Assumption:** The goal is to find a path of exactly `k` cells such that the sum of the values in those `k` cells is minimized.\n*   **Questions:**\n    1.  Is the \"minimum path\" referring to the minimum sum of values along the path?",
+    "2.  If so, are we looking for the *absolute minimum sum* across all possible starting cells and all possible paths of length `k`?",
+    "**Interpretation 2: Minimum Number of Steps to Reach a Specific Condition (Less Likely Given \"length k\")**\n\n*   **Assumption:** The phrasing \"path of length k\" strongly suggests a fixed number of steps, so this interpretation is less likely. However, if there was an unstated goal *after* reaching length `k`, this would be relevant.\n*   **Questions:**\n    1.  Is there any implicit?",
+    "Is the \"minimum path\" referring to the minimum sum of values along the path?",
+    "If so, are we looking for the *absolute minimum sum* across all possible starting cells and all possible paths of length `k`?"
+  ],
+  "question_count": 5,
+  "first_question": "The problem statement is a bit ambiguous regarding what constitutes the \"minimum path\". Generally, in grid problems, \"minimum path\" refers to minimizing the sum of values along the path, or minimizing the number of steps.\n\nHere are a few interpretations and the questions that arise from them:\n\n**Interpretation 1: Minimum Sum Path of Length k**\n\n*   **Assumption:** The goal is to find a path of exactly `k` cells such that the sum of the values in those `k` cells is minimized.\n*   **Questions:**\n    1.  Is the \"minimum path\" referring to the minimum sum of values along the path?",
+  "question_chars": 1296,
+  "latency_sec": 2.1812305450439453,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_74::1a::andrijdavid/Meta-Llama-3-13B-Instruct::seed0",
+  "task_id": "idx_74",
+  "category": "1a",
+  "entry_point": "total_match",
+  "prompt_field": "prompt1a",
+  "prompt_text": "\ndef total_match(lst1, lst2):\n    '''\n    Write a function that accepts two lists of strings and returns the list that has \n    total number of chars in the all strings of the list more than or less than the other list.\n\n    if the two lists have the same number of chars, return the first list.\n\n    Examples\n    total_match([], []) ➞ []\n    total_match(['hi', 'admin'], ['hI', 'Hi']) ➞ ['hI', 'Hi']\n    total_match(['hi', 'admin'], ['hi', 'hi', 'admin', 'project']) ➞ ['hi', 'admin']\n    total_match(['hi', 'admin'], ['hI', 'hi', 'hi']) ➞ ['hI', 'hi', 'hi']\n    total_match(['4'], ['1', '2', '3', '4', '5']) ➞ ['4']\n    '''\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef total_match(lst1, lst2):\n    '''\n    Write a function that accepts two lists of strings and returns the list that has \n    total number of chars in the all strings of the list more than or less than the other list.\n\n    if the two lists have the same number of chars, return the first list.\n\n    Examples\n    total_match([], []) ➞ []\n    total_match(['hi', 'admin'], ['hI', 'Hi']) ➞ ['hI', 'Hi']\n    total_match(['hi', 'admin'], ['hi', 'hi', 'admin', 'project']) ➞ ['hi', 'admin']\n    total_match(['hi', 'admin'], ['hI', 'hi', 'hi']) ➞ ['hI', 'hi', 'hi']\n    total_match(['4'], ['1', '2', '3', '4', '5']) ➞ ['4']\n    '''",
+  "prompt_sha256": "64bf8b95c6055ee2aa8440f9fd02bdedf7d9c2b7e8cfa0abeaf729245cee9abb",
+  "model_name": "andrijdavid/Meta-Llama-3-13B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef total_match(lst1, lst2):\n    '''\n    Write a function that accepts two lists of strings and returns the list that has \n    total number of chars in the all strings of the list more than or less than the other list.\n\n    if the two lists have the same number of chars, return the first list.\n\n    Examples\n    total_match([], []) ➞ []\n    total_match(['hi', 'admin'], ['hI', 'Hi']) ➞ ['hI', 'Hi']\n    total_match(['hi', 'admin'], ['hi', 'hi', 'admin', 'project']) ➞ ['hi', 'admin']\n    total_match(['hi', 'admin'], ['hI', 'hi', 'hi']) ➞ ['hI', 'hi', 'hi']\n    total_match(['4'], ['1', '2', '3', '4', '5']) ➞ ['4']\n    '''DataExchangeclarifications:\nPlease feel free to ask if you need more information or codes to better understand this problem statement_UPDATED-answer:\n\ndef totalmatch(lst1,lsta):\n    return max if sum(len(i) for i insta) >= sum(len(i)for i inlst1 else None else None else None else None else None else None else None else None else None else None else None else None else None else None else None else None else None else None else None else None else None else None else None else None else None else None else None else None else None else None else None else None else None else None else None else None else None else None else None else None else None else None else None else None else None else None else None else None else None else None else None else None else None else None else None else None elseNone elseNone elseNone else None elseNone else None else None else None else None else None else None else None elseNone else None elseNone elseNone else None else None else None elseNone elseNone elseNone elseNone else None else None else None else None elseNone else None else None else None else None else None elseNone elseNone else None elseNone else None elseNone else None elseNone elseNone else None elseNone",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def total_match(lst1, lst2):\n    '''\n    Write a function that accepts two lists of strings and returns the list that has \n    total number of chars in the all strings of the list more than or less than the other list.\n\n    if the two lists have the same number of chars, return the first list.\n\n    Examples\n    total_match([], []) ➞ []\n    total_match(['hi', 'admin'], ['hI', 'Hi']) ➞ ['hI', 'Hi']\n    total_match(['hi', 'admin'], ['hi', 'hi', 'admin', 'project']) ➞ ['hi', 'admin']\n    total_match(['hi', 'admin'], ['hI', 'hi', 'hi']) ➞ ['hI', 'hi', 'hi']\n    total_match(['4'], ['1', '2', '3', '4', '5']) ➞ ['4']\n    '''DataExchangeclarifications:\nPlease feel free to ask if you need more information or codes to better understand this problem statement_UPDATED-answer:\n\ndef totalmatch(lst1,lsta):\n    return max if sum(len(i) for i insta) >= sum(len(i)for i inlst1 else None else None else None else None else None else None else None else None else None else None else None else None else None else None else None else None else None else None else None else None else None else None else None else None else None else None else None else None else None else None else None else None else None else None else None else None else None else None else None else None else None else None else None else None else None else None else None else None else None else None else None else None else None else None else None else None elseNone elseNone elseNone else None elseNone else None else None else None else None else None else None else None elseNone else None elseNone elseNone else None else None else None elseNone elseNone elseNone elseNone else None else None else None else None elseNone else None else None else None else None else None elseNone elseNone else None elseNone else None elseNone else None elseNone elseNone else None elseNone",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 91.13226699829102,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

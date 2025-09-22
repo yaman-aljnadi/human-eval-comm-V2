@@ -1,0 +1,40 @@
+{
+  "record_id": "idx_162::2cp::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_162",
+  "category": "2cp",
+  "entry_point": "string_to_md5",
+  "prompt_field": "prompt2cp",
+  "prompt_text": "\ndef candidate(text):\n    \"\"\"\n    >>> candidate('Hello world') == '12345'\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(text):\n    \"\"\"\n    >>> candidate('Hello world') == '12345'\n    \"\"\"",
+  "prompt_sha256": "6f3bb0c08c86a367f35b9303ebe0267e48f5f96f354f18abc07a2ca124ecdd06",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "This is a very interesting function signature! It takes a `text` string and is expected to return a string `'12345'`.\n\nThe docstring `>>> candidate('Hello world') == '12345'` provides a single test case.\n\n**Clarifying Questions:**\n\n1.  **What is the intended logic of the `candidate` function?** The provided example `candidate('Hello world') == '12345'` implies that the input text `'Hello world'` *should* result in the output `'12345'`.\n    *   Is this a fixed mapping, meaning *any* input string, when passed to `candidate`, should return `'12345'`? This seems unlikely for a function named `candidate` and taking `text` as an argument.\n    *   Is there a specific transformation or rule that transforms `'Hello world'` into `'12345'`? If so, what is that rule? (e.g., length of words, character codes, specific pattern matching, etc.)\n    *   Is the example `>>> candidate('Hello world') == '12345'` an assertion that needs to be *proven true*",
+  "gen_raw": {},
+  "contains_code": false,
+  "code_detected_method": "none",
+  "extracted_code": null,
+  "is_question": true,
+  "extracted_questions": [
+    "This seems unlikely for a function named `candidate` and taking `text` as an argument.\n    *   Is there a specific transformation or rule that transforms `'Hello world'` into `'12345'`?",
+    "If so, what is that rule?",
+    "(e.g., length of words, character codes, specific pattern matching, etc.)\n    *   Is the example `>>> candidate('Hello world') == '12345'` an assertion that needs to be *proven true*?",
+    "**What is the intended logic of the `candidate` function?",
+    "*   Is this a fixed mapping, meaning *any* input string, when passed to `candidate`, should return `'12345'`?",
+    "*   Is there a specific transformation or rule that transforms `'Hello world'` into `'12345'`?"
+  ],
+  "question_count": 6,
+  "first_question": "This seems unlikely for a function named `candidate` and taking `text` as an argument.\n    *   Is there a specific transformation or rule that transforms `'Hello world'` into `'12345'`?",
+  "question_chars": 653,
+  "latency_sec": 1.9155311584472656,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

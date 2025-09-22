@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_25::1c::meta-llama/Meta-Llama-3-8B-Instruct::seed0",
+  "task_id": "idx_25",
+  "category": "1c",
+  "entry_point": "factorize",
+  "prompt_field": "prompt1c",
+  "prompt_text": "from typing import List\n\n\ndef factorize(n: int) -> List[int]:\n    \"\"\" Return list of prime factors of given integer in the order from smallest to largest.\n    Each of the factors should be listed number of times corresponding to how many times it appeares in factorization.\n    Input number should be equal to the product of all factors\n    >>> factorize(8)\n    [2, 4, 8]\n    >>> factorize(25)\n    [5, 25]\n    >>> factorize(70)\n    [2, 10, 70]\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List\n\n\ndef factorize(n: int) -> List[int]:\n    \"\"\" Return list of prime factors of given integer in the order from smallest to largest.\n    Each of the factors should be listed number of times corresponding to how many times it appeares in factorization.\n    Input number should be equal to the product of all factors\n    >>> factorize(8)\n    [2, 4, 8]\n    >>> factorize(25)\n    [5, 25]\n    >>> factorize(70)\n    [2, 10, 70]\n    \"\"\"",
+  "prompt_sha256": "57bab7a2cf5719a04419b348d4db6b3d9969c46c90edce07ec3a2a7e9af3ce97",
+  "model_name": "meta-llama/Meta-Llama-3-8B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List\n\n\ndef factorize(n: int) -> List[int]:\n    \"\"\" Return list of prime factors of given integer in the order from smallest to largest.\n    Each of the factors should be listed number of times corresponding to how many times it appeares in factorization.\n    Input number should be equal to the product of all factors\n    >>> factorize(8)\n    [2, 4, 8]\n    >>> factorize(25)\n    [5, 25]\n    >>> factorize(70)\n    [2, 10, 70]\n    \"\"\"\n\n\n\n### \n#### Python code to factorize a given integer `n` into its prime factors in Python\n\n```python\nfrom typing import List\nimport math\n\ndef factorize(n: int) -> List[int]:\n    factors = []\n    while n > 1:\n        if n % 2 == 0:\n            factors.append(2)\n            n = n // 2\n        else:\n            factors.append(int(math.sqrt(n)))\n            for i in range(3, int(math.sqrt(n)) + 1, 2):\n                while n % i == 0:\n                    factors.append(i)\n                    n = n // i\n            if n > 1:\n                factors.append(n)\n            break\n    return factors\n```  \n\n\n\n\n    -   :    **Output of function:  \n\n\n\n####  Related Links\n\n\n\n-   -   *Factorization*  \n\n\n\n-   *Euler's Totient Function*  \n\n\n\n-   *Modular Arithmetic*  \n\n\n\n###  \n\n\n\n##   License: MIT  \n\n\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy,",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "from typing import List\nimport math\n\ndef factorize(n: int) -> List[int]:\n    factors = []\n    while n > 1:\n        if n % 2 == 0:\n            factors.append(2)\n            n = n // 2\n        else:\n            factors.append(int(math.sqrt(n)))\n            for i in range(3, int(math.sqrt(n)) + 1, 2):\n                while n % i == 0:\n                    factors.append(i)\n                    n = n // i\n            if n > 1:\n                factors.append(n)\n            break\n    return factors",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 68.95610475540161,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

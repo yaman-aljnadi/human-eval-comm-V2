@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_76::2ac::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_76",
+  "category": "2ac",
+  "entry_point": "is_simple_power",
+  "prompt_field": "prompt2ac",
+  "prompt_text": "\ndef candidate(a, b):\n    \"\"\"Your task is to write a function that returns true if a number x is a \n    power of n and false in other cases.\n    x is a simple power of n if n**k=x\n    For example:\n    candidate(1, 4) => false\n    candidate(2, 2) => false\n    candidate(8, 2) => false\n    candidate(3, 2) => true\n    candidate(3, 1) => true\n    candidate(5, 3) => true\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(a, b):\n    \"\"\"Your task is to write a function that returns true if a number x is a \n    power of n and false in other cases.\n    x is a simple power of n if n**k=x\n    For example:\n    candidate(1, 4) => false\n    candidate(2, 2) => false\n    candidate(8, 2) => false\n    candidate(3, 2) => true\n    candidate(3, 1) => true\n    candidate(5, 3) => true\n    \"\"\"",
+  "prompt_sha256": "7c9545b116dbab6f4b3dee311e004c974cd910933d5336ce81057648dfe053a3",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef candidate(a, b):\n    \"\"\"Your task is to write a function that returns true if a number x is a \n    power of n and false in other cases.\n    x is a simple power of n if n**k=x\n    For example:\n    candidate(1, 4) => false\n    candidate(2, 2) => false\n    candidate(8, 2) => false\n    candidate(3, 2) => true\n    candidate(3, 1) => true\n    candidate(5, 3) => true\n    \"\"\"\n    if b == 1:\n        return a == 1\n    \n    if a == 0 and b == 0:\n        return False\n    if a == 0:\n        return False\n    if b == 0:\n        return a == 0\n    \n    if a < b and a != 1:\n        return False\n    \n    while a > b:\n        if a % b != 0:\n            return False\n        a //= b\n    \n    return a == b or a == 1\n\n```",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def candidate(a, b):\n    \"\"\"Your task is to write a function that returns true if a number x is a \n    power of n and false in other cases.\n    x is a simple power of n if n**k=x\n    For example:\n    candidate(1, 4) => false\n    candidate(2, 2) => false\n    candidate(8, 2) => false\n    candidate(3, 2) => true\n    candidate(3, 1) => true\n    candidate(5, 3) => true\n    \"\"\"\n    if b == 1:\n        return a == 1\n    \n    if a == 0 and b == 0:\n        return False\n    if a == 0:\n        return False\n    if b == 0:\n        return a == 0\n    \n    if a < b and a != 1:\n        return False\n    \n    while a > b:\n        if a % b != 0:\n            return False\n        a //= b\n    \n    return a == b or a == 1",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 1.679999828338623,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

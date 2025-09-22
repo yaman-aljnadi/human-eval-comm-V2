@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_147::2ac::andrijdavid/Meta-Llama-3-13B-Instruct::seed0",
+  "task_id": "idx_147",
+  "category": "2ac",
+  "entry_point": "get_max_triples",
+  "prompt_field": "prompt2ac",
+  "prompt_text": "\ndef get_max_triples(n):\n    \"\"\"\n    You are given a positive integer n. You have to create an integer array a of length n.\n        For each i (1 ≤ i ≤ n), the value of a[i] = i * i + i - 1 or a[i] = i * i - i + 1.\n        Return the number of triples (a[i], a[j], a[k]) of a where i < j < k, \n    and a[i] + a[j] + a[k] is a multiple of 3.\n\n    Example :\n        Input: n = 5\n        Output: 0\n        Explanation: \n        a = [1, 3, 7, 13, 21]\n        There is no valid triple.\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef get_max_triples(n):\n    \"\"\"\n    You are given a positive integer n. You have to create an integer array a of length n.\n        For each i (1 ≤ i ≤ n), the value of a[i] = i * i + i - 1 or a[i] = i * i - i + 1.\n        Return the number of triples (a[i], a[j], a[k]) of a where i < j < k, \n    and a[i] + a[j] + a[k] is a multiple of 3.\n\n    Example :\n        Input: n = 5\n        Output: 0\n        Explanation: \n        a = [1, 3, 7, 13, 21]\n        There is no valid triple.\n    \"\"\"",
+  "prompt_sha256": "e8166b95ba6c8c9fc4080939a28961d3dfb63938e77ce98de3df3a453cffa511",
+  "model_name": "andrijdavid/Meta-Llama-3-13B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef get_max_triples(n):\n    \"\"\"\n    You are given a positive integer n. You have to create an integer array a of length n.\n        For each i (1 ≤ i ≤ n), the value of a[i] = i * i + i - 1 or a[i] = i * i - i + 1.\n        Return the number of triples (a[i], a[j], a[k]) of a where i < j < k, \n    and a[i] + a[j] + a[k] is a multiple of 3.\n\n    Example :\n        Input: n = 5\n        Output: 0\n        Explanation: \n        a = [1, 3, 7, 13, 21]\n        There is no valid triple.\n    \"\"\"\n\n\n\n Please provide Python3 code below:\n\n\ta = [ i **2 + i -1 for i in range(1 n+1)]\n print(len([ triple for i in range( n-1) for j in range(i+1 n-1) for k in range(i+1 n-1)]))\n\n\ta = [i **2 + i -1 for i in range(1 n+1]]\n\n print(a)\n print(len([ triple for i in range( n-1) for j in range(i+1 n-1) for k in range(i+1 n-1)])\n\n\n\n\n print(len([ triple for i in range( n-1) for j in range(i+1 n-1) for k in range(i+1 n-1)])\n\n print(len([ triple for i in range( n-1) for j in range(i+1 n-1) for k in range(i+ Three main points:\n\n1️ addCriterion: \n\n2️️ triples: \n\n3️️ triples: \n\n 💡 🔥💡691�atabpanel class=\"Codepen_embedded_codepen_embeddedCodepen codepen_embedded_codepen codepen codepen codepen codepen codepen codepen codepen codepen codepen code",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def get_max_triples(n):\n    \"\"\"\n    You are given a positive integer n. You have to create an integer array a of length n.\n        For each i (1 ≤ i ≤ n), the value of a[i] = i * i + i - 1 or a[i] = i * i - i + 1.\n        Return the number of triples (a[i], a[j], a[k]) of a where i < j < k, \n    and a[i] + a[j] + a[k] is a multiple of 3.\n\n    Example :\n        Input: n = 5\n        Output: 0\n        Explanation: \n        a = [1, 3, 7, 13, 21]\n        There is no valid triple.\n    \"\"\"\n\n\n\n Please provide Python3 code below:\n\n\ta = [ i **2 + i -1 for i in range(1 n+1)]\n print(len([ triple for i in range( n-1) for j in range(i+1 n-1) for k in range(i+1 n-1)]))\n\n\ta = [i **2 + i -1 for i in range(1 n+1]]\n\n print(a)\n print(len([ triple for i in range( n-1) for j in range(i+1 n-1) for k in range(i+1 n-1)])\n\n\n\n\n print(len([ triple for i in range( n-1) for j in range(i+1 n-1) for k in range(i+1 n-1)])\n\n print(len([ triple for i in range( n-1) for j in range(i+1 n-1) for k in range(i+ Three main points:\n\n1️ addCriterion: \n\n2️️ triples: \n\n3️️ triples: \n\n 💡 🔥💡691�atabpanel class=\"Codepen_embedded_codepen_embeddedCodepen codepen_embedded_codepen codepen codepen codepen codepen codepen codepen codepen codepen codepen code",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 89.63059115409851,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

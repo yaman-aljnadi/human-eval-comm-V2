@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_114::1a::andrijdavid/Meta-Llama-3-13B-Instruct::seed0",
+  "task_id": "idx_114",
+  "category": "1a",
+  "entry_point": "minSubArraySum",
+  "prompt_field": "prompt1a",
+  "prompt_text": "\ndef candidate(nums):\n    \"\"\"\n    Given an array of integers nums, find a certain sum of any non-empty sub-array\n    of nums.\n    Example\n    candidate([2, 3, 4, 1, 2, 4]) == 1\n    candidate([-1, -2, -3]) == -6\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(nums):\n    \"\"\"\n    Given an array of integers nums, find a certain sum of any non-empty sub-array\n    of nums.\n    Example\n    candidate([2, 3, 4, 1, 2, 4]) == 1\n    candidate([-1, -2, -3]) == -6\n    \"\"\"",
+  "prompt_sha256": "862d8b6d737ef31e7a54f46276967067695b9dc276f7a7396ee0404d7888bd15",
+  "model_name": "andrijdavid/Meta-Llama-3-13B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(nums):\n    \"\"\"\n    Given an array of integers nums, find a certain sum of any non-empty sub-array\n    of nums.\n    Example\n    candidate([2, 3, 4, 1, 2, 4]) == 1\n    candidate([-1, -2, -3]) == -6\n    \"\"\"oenclarification:-please provide both Python3 code Directly within code blocks below.mdblock:-codespen:-codespen:-codespen:-codespen:- Codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:-",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def candidate(nums):\n    \"\"\"\n    Given an array of integers nums, find a certain sum of any non-empty sub-array\n    of nums.\n    Example\n    candidate([2, 3, 4, 1, 2, 4]) == 1\n    candidate([-1, -2, -3]) == -6\n    \"\"\"oenclarification:-please provide both Python3 code Directly within code blocks below.mdblock:-codespen:-codespen:-codespen:-codespen:- Codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:- codespen:-",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 109.81253170967102,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_56::2cp::andrijdavid/Meta-Llama-3-13B-Instruct::seed0",
+  "task_id": "idx_56",
+  "category": "2cp",
+  "entry_point": "correct_bracketing",
+  "prompt_field": "prompt2cp",
+  "prompt_text": "\n\ndef correct_bracketing(brackets: str):\n    \"\"\" brackets is a string of \"<\" and \">\".\n\n    >>> correct_bracketing(\"<\")\n    True\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef correct_bracketing(brackets: str):\n    \"\"\" brackets is a string of \"<\" and \">\".\n\n    >>> correct_bracketing(\"<\")\n    True\n    \"\"\"",
+  "prompt_sha256": "521a3c599f7fb7de0b51cfc367c52e9f12cbfe232fb357577655d26cf1e5a996",
+  "model_name": "andrijdavid/Meta-Llama-3-13B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef correct_bracketing(brackets: str):\n    \"\"\" brackets is a string of \"<\" and \">\".\n\n    >>> correct_bracketing(\"<\")\n    True\n    \"\"\"\"\n\nuosfulness of this function is to check whether given string of\n    brackets contain balanced/-correspresented bracketing \n\n    @ GIVEN condition: \n    Bracketing string is either \n\n   1️�️�数量 of Odd number of closing bracketCounters급ly follow \n   2️�️ numbers of opening \n\n    @uisse condition :少�数量 of closing opening bracketing Fridly \n\n    @.scalablytyped condition :少 numbers of opening closing Fridly \n    Fridly opening Fridly Fridly Fridly opening Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def correct_bracketing(brackets: str):\n    \"\"\" brackets is a string of \"<\" and \">\".\n\n    >>> correct_bracketing(\"<\")\n    True\n    \"\"\"\"\n\nuosfulness of this function is to check whether given string of\n    brackets contain balanced/-correspresented bracketing \n\n    @ GIVEN condition: \n    Bracketing string is either \n\n   1️�️�数量 of Odd number of closing bracketCounters급ly follow \n   2️�️ numbers of opening \n\n    @uisse condition :少�数量 of closing opening bracketing Fridly \n\n    @.scalablytyped condition :少 numbers of opening closing Fridly \n    Fridly opening Fridly Fridly Fridly opening Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly Fridly",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 90.8838803768158,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

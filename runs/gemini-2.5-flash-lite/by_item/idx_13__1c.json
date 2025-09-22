@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_13::1c::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_13",
+  "category": "1c",
+  "entry_point": "greatest_common_divisor",
+  "prompt_field": "prompt1c",
+  "prompt_text": "\n\ndef greatest_common_divisor(a: int, b: int) -> int:\n    \"\"\" Return a greatest common divisor of two integers a and b\n    >>> greatest_common_divisor(3, 5)\n    3\n    >>> greatest_common_divisor(25, 15)\n    15\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef greatest_common_divisor(a: int, b: int) -> int:\n    \"\"\" Return a greatest common divisor of two integers a and b\n    >>> greatest_common_divisor(3, 5)\n    3\n    >>> greatest_common_divisor(25, 15)\n    15\n    \"\"\"",
+  "prompt_sha256": "6f547fda01bae0ec1960db1f0d894264bf0745a097b253f4d16cfded2bc83566",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "The provided doctests are incorrect. The greatest common divisor of 3 and 5 is 1, not 3. The greatest common divisor of 25 and 15 is 5, not 15.\n\nHere's the corrected Python code for `greatest_common_divisor` with correct doctests:\n\n```python\ndef greatest_common_divisor(a: int, b: int) -> int:\n    \"\"\" Return a greatest common divisor of two integers a and b\n    >>> greatest_common_divisor(3, 5)\n    1\n    >>> greatest_common_divisor(25, 15)\n    5\n    >>> greatest_common_divisor(12, 18)\n    6\n    >>> greatest_common_divisor(7, 7)\n    7\n    >>> greatest_common_divisor(0, 5)\n    5\n    >>> greatest_common_divisor(10, 0)\n    10\n    >>> greatest_common_divisor(0, 0)\n    0\n    \"\"\"\n    while b:\n        a, b = b, a % b\n    return a\n```",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def greatest_common_divisor(a: int, b: int) -> int:\n    \"\"\" Return a greatest common divisor of two integers a and b\n    >>> greatest_common_divisor(3, 5)\n    1\n    >>> greatest_common_divisor(25, 15)\n    5\n    >>> greatest_common_divisor(12, 18)\n    6\n    >>> greatest_common_divisor(7, 7)\n    7\n    >>> greatest_common_divisor(0, 5)\n    5\n    >>> greatest_common_divisor(10, 0)\n    10\n    >>> greatest_common_divisor(0, 0)\n    0\n    \"\"\"\n    while b:\n        a, b = b, a % b\n    return a",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 1.6663987636566162,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

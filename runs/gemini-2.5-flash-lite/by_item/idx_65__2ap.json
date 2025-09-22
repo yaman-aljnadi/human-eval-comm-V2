@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_65::2ap::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_65",
+  "category": "2ap",
+  "entry_point": "circular_shift",
+  "prompt_field": "prompt2ap",
+  "prompt_text": "\ndef circular_shift(x, shift):\n    \"\"\"Circular shift the digits of the integer x, shift the digits left or right by shift\n    and return the result as a string.\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef circular_shift(x, shift):\n    \"\"\"Circular shift the digits of the integer x, shift the digits left or right by shift\n    and return the result as a string.\n    \"\"\"",
+  "prompt_sha256": "b6f73fdd994a6c18c66e8065ed7372b13d488cd9d0f41a70d96df3cd0326034c",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef circular_shift(x, shift):\n    \"\"\"Circular shift the digits of the integer x, shift the digits left or right by shift\n    and return the result as a string.\n    \"\"\"\n    s = str(x)\n    n = len(s)\n    if n == 0:\n        return \"\"\n    \n    # Normalize shift to be within the range [0, n)\n    shift = shift % n\n    \n    if shift == 0:\n        return s\n    \n    # Perform the circular shift\n    # A positive shift means shifting left, a negative shift means shifting right.\n    # However, the prompt implies 'shift' is a magnitude and direction might be inferred.\n    # Let's assume positive shift is to the left.\n    # If shift is positive, we want to move the first 'shift' characters to the end.\n    # If shift is negative, we want to move the last 'abs(shift)' characters to the beginning.\n    # A more robust interpretation is that 'shift' is a magnitude and we need to know the direction.\n    # Given the docstring \"shift the digits left or right by shift",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def circular_shift(x, shift):\n    \"\"\"Circular shift the digits of the integer x, shift the digits left or right by shift\n    and return the result as a string.\n    \"\"\"\n    s = str(x)\n    n = len(s)\n    if n == 0:\n        return \"\"\n    \n    # Normalize shift to be within the range [0, n)\n    shift = shift % n\n    \n    if shift == 0:\n        return s\n    \n    # Perform the circular shift\n    # A positive shift means shifting left, a negative shift means shifting right.\n    # However, the prompt implies 'shift' is a magnitude and direction might be inferred.\n    # Let's assume positive shift is to the left.\n    # If shift is positive, we want to move the first 'shift' characters to the end.\n    # If shift is negative, we want to move the last 'abs(shift)' characters to the beginning.\n    # A more robust interpretation is that 'shift' is a magnitude and we need to know the direction.\n    # Given the docstring \"shift the digits left or right by shift",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 1.952146291732788,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

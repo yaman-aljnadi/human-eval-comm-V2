@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_50::2ac::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_50",
+  "category": "2ac",
+  "entry_point": "decode_shift",
+  "prompt_field": "prompt2ac",
+  "prompt_text": "\n\ndef encode_shift(s: str):\n    \"\"\"\n    returns encoded string by shifting every character by 5 in the alphabet.\n    \"\"\"\n    return \"\".join([chr(((ord(ch) + 5 - ord(\"a\")) % 26) + ord(\"a\")) for ch in s])\n\n\ndef candidate(s: str):\n    \"\"\"\n    takes as input string decoded or encoded with encode_shift function which shifts every character by 3. Returns decoded or encoded string.\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef encode_shift(s: str):\n    \"\"\"\n    returns encoded string by shifting every character by 5 in the alphabet.\n    \"\"\"\n    return \"\".join([chr(((ord(ch) + 5 - ord(\"a\")) % 26) + ord(\"a\")) for ch in s])\n\n\ndef candidate(s: str):\n    \"\"\"\n    takes as input string decoded or encoded with encode_shift function which shifts every character by 3. Returns decoded or encoded string.\n    \"\"\"",
+  "prompt_sha256": "9b1252d7b0a792c1219da8baec3ef199bec0bae39fab4ee547c9f68493502ee4",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef encode_shift(s: str):\n    \"\"\"\n    returns encoded string by shifting every character by 5 in the alphabet.\n    \"\"\"\n    return \"\".join([chr(((ord(ch) + 5 - ord(\"a\")) % 26) + ord(\"a\")) for ch in s])\n\n\ndef candidate(s: str):\n    \"\"\"\n    takes as input string decoded or encoded with encode_shift function which shifts every character by 3. Returns decoded or encoded string.\n    \"\"\"\n    # The docstring is contradictory. It says encode_shift shifts by 5,\n    # but then it says the candidate function handles strings shifted by 3.\n    #\n    # Assuming the intention is to reverse a shift of 3 (as stated in the\n    # candidate function's docstring), the shift amount to reverse is 3.\n    # To decode, we shift back by 3, which is equivalent to shifting forward\n    # by 26 - 3 = 23.\n    #\n    # If the intention was to reverse the encode_shift function (which shifts by 5),\n    # then the shift amount to reverse would",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def encode_shift(s: str):\n    \"\"\"\n    returns encoded string by shifting every character by 5 in the alphabet.\n    \"\"\"\n    return \"\".join([chr(((ord(ch) + 5 - ord(\"a\")) % 26) + ord(\"a\")) for ch in s])\n\n\ndef candidate(s: str):\n    \"\"\"\n    takes as input string decoded or encoded with encode_shift function which shifts every character by 3. Returns decoded or encoded string.\n    \"\"\"\n    # The docstring is contradictory. It says encode_shift shifts by 5,\n    # but then it says the candidate function handles strings shifted by 3.\n    #\n    # Assuming the intention is to reverse a shift of 3 (as stated in the\n    # candidate function's docstring), the shift amount to reverse is 3.\n    # To decode, we shift back by 3, which is equivalent to shifting forward\n    # by 26 - 3 = 23.\n    #\n    # If the intention was to reverse the encode_shift function (which shifts by 5),\n    # then the shift amount to reverse would",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 1.840688705444336,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

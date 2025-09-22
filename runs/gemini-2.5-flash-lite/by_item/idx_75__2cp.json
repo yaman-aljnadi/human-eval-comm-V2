@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_75::2cp::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_75",
+  "category": "2cp",
+  "entry_point": "is_multiply_prime",
+  "prompt_field": "prompt2cp",
+  "prompt_text": "\ndef is_multiply_prime(a):\n    \"\"\"Write a function that returns true if the given number is the multiplication of numbers\n    and false otherwise.\n    Knowing that (a) is less then 100. \n    Example:\n    is_multiply_prime(30) == False\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef is_multiply_prime(a):\n    \"\"\"Write a function that returns true if the given number is the multiplication of numbers\n    and false otherwise.\n    Knowing that (a) is less then 100. \n    Example:\n    is_multiply_prime(30) == False\n    \"\"\"",
+  "prompt_sha256": "76b578e4d1fe7beae0cee3ef8f944d74b6c0e31b4302e2134154a89b32f0ee41",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef is_multiply_prime(a):\n    \"\"\"Write a function that returns true if the given number is the multiplication of numbers\n    and false otherwise.\n    Knowing that (a) is less then 100. \n    Example:\n    is_multiply_prime(30) == False\n    \"\"\"\n    # The problem statement is a bit ambiguous. \n    # \"multiplication of numbers\" could mean:\n    # 1. The number is composite (i.e., has more than two factors other than 1 and itself).\n    # 2. The number is a product of two or more prime numbers.\n    # 3. The number is a product of *exactly* two or more *distinct* prime numbers.\n    # 4. The number is a product of two or more numbers (not necessarily prime).\n\n    # Given the example `is_multiply_prime(30) == False`, let's analyze 30:\n    # Prime factorization of 30 is 2 * 3 * 5.\n    # If the function should return True for numbers that are a product of prime numbers,\n    # then ",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def is_multiply_prime(a):\n    \"\"\"Write a function that returns true if the given number is the multiplication of numbers\n    and false otherwise.\n    Knowing that (a) is less then 100. \n    Example:\n    is_multiply_prime(30) == False\n    \"\"\"\n    # The problem statement is a bit ambiguous. \n    # \"multiplication of numbers\" could mean:\n    # 1. The number is composite (i.e., has more than two factors other than 1 and itself).\n    # 2. The number is a product of two or more prime numbers.\n    # 3. The number is a product of *exactly* two or more *distinct* prime numbers.\n    # 4. The number is a product of two or more numbers (not necessarily prime).\n\n    # Given the example `is_multiply_prime(30) == False`, let's analyze 30:\n    # Prime factorization of 30 is 2 * 3 * 5.\n    # If the function should return True for numbers that are a product of prime numbers,\n    # then",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 1.5791397094726562,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

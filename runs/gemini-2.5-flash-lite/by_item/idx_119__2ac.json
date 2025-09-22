@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_119::2ac::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_119",
+  "category": "2ac",
+  "entry_point": "match_parens",
+  "prompt_field": "prompt2ac",
+  "prompt_text": "\ndef candidate(lst):\n    '''\n    You are given a list of two strings, both strings consist of open\n    parentheses '(' or close parentheses ')' only.\n    Your job is to check if it is possible to process the two strings in\n    some order, that the resulting string will be good.\n    A string S is considered to be good if and only if all parentheses in S\n    are balanced. For example: the string '(())()' is good, while the string\n    '())' is not.\n    Return 'Yes' if there's a way to make a good string, and return 'No' otherwise.\n\n    Examples:\n    candidate(['()(', ')']) == 'No'\n    candidate([')', ')']) == 'Yes'\n    '''\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(lst):\n    '''\n    You are given a list of two strings, both strings consist of open\n    parentheses '(' or close parentheses ')' only.\n    Your job is to check if it is possible to process the two strings in\n    some order, that the resulting string will be good.\n    A string S is considered to be good if and only if all parentheses in S\n    are balanced. For example: the string '(())()' is good, while the string\n    '())' is not.\n    Return 'Yes' if there's a way to make a good string, and return 'No' otherwise.\n\n    Examples:\n    candidate(['()(', ')']) == 'No'\n    candidate([')', ')']) == 'Yes'\n    '''",
+  "prompt_sha256": "b459b3ee98b048c62420cdfca55b6bc6d904e9390b4434277ac81943e6a5cf86",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef candidate(lst):\n    \"\"\"\n    You are given a list of two strings, both strings consist of open\n    parentheses '(' or close parentheses ')' only.\n    Your job is to check if it is possible to process the two strings in\n    some order, that the resulting string will be good.\n    A string S is considered to be good if and only if all parentheses in S\n    are balanced. For example: the string '(())()' is good, while the string\n    '())' is not.\n    Return 'Yes' if there's a way to make a good string, and return 'No' otherwise.\n\n    Examples:\n    candidate(['()(', ')']) == 'No'\n    candidate([')', ')']) == 'Yes'\n    \"\"\"\n\n    s1, s2 = lst\n\n    # A balanced parenthesis string must have an equal number of open and close parentheses.\n    # If the total number of open parentheses across both strings does not equal\n    # the total number of close parentheses, it's impossible to form a balanced string.\n    total_open = s1.count('(') + s2.count('(')\n    ",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def candidate(lst):\n    \"\"\"\n    You are given a list of two strings, both strings consist of open\n    parentheses '(' or close parentheses ')' only.\n    Your job is to check if it is possible to process the two strings in\n    some order, that the resulting string will be good.\n    A string S is considered to be good if and only if all parentheses in S\n    are balanced. For example: the string '(())()' is good, while the string\n    '())' is not.\n    Return 'Yes' if there's a way to make a good string, and return 'No' otherwise.\n\n    Examples:\n    candidate(['()(', ')']) == 'No'\n    candidate([')', ')']) == 'Yes'\n    \"\"\"\n\n    s1, s2 = lst\n\n    # A balanced parenthesis string must have an equal number of open and close parentheses.\n    # If the total number of open parentheses across both strings does not equal\n    # the total number of close parentheses, it's impossible to form a balanced string.\n    total_open = s1.count('(') + s2.count('(')",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 1.5707933902740479,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

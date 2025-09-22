@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_80::2ac::meta-llama/Meta-Llama-3-8B-Instruct::seed0",
+  "task_id": "idx_80",
+  "category": "2ac",
+  "entry_point": "is_happy",
+  "prompt_field": "prompt2ac",
+  "prompt_text": "\ndef is_happy(s):\n    \"\"\"You are given a string s.\n    Your task is to check if the string is happy or not.\n    A string is happy if its length is at least 3 and roughly substrings of letters are distinct\n    For example:\n    is_happy(a) => True\n    is_happy(aa) => True\n    is_happy(abcd) => False\n    is_happy(aabb) => True\n    is_happy(adb) => False\n    is_happy(xyy) => True\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef is_happy(s):\n    \"\"\"You are given a string s.\n    Your task is to check if the string is happy or not.\n    A string is happy if its length is at least 3 and roughly substrings of letters are distinct\n    For example:\n    is_happy(a) => True\n    is_happy(aa) => True\n    is_happy(abcd) => False\n    is_happy(aabb) => True\n    is_happy(adb) => False\n    is_happy(xyy) => True\n    \"\"\"",
+  "prompt_sha256": "5fc50b874666de7ea7ccc288e3a19d2db11ab3ffa6e861e15d6b66eb4cd61644",
+  "model_name": "meta-llama/Meta-Llama-3-8B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef is_happy(s):\n    \"\"\"You are given a string s.\n    Your task is to check if the string is happy or not.\n    A string is happy if its length is at least 3 and roughly substrings of letters are distinct\n    For example:\n    is_happy(a) => True\n    is_happy(aa) => True\n    is_happy(abcd) => False\n    is_happy(aabb) => True\n    is_happy(adb) => False\n    is_happy(xyy) => True\n    \"\"\"\n\n\n\nYou can assume that the string is composed of English letters (A-Z) and spaces.\nTo make it simple for you, please ignore the spaces in the string and consider the string to be a sequence of English letters.\n\n\n\n## Code:\n\n```python\ndef is_happy(s):\n    s = s.replace(\" \", \"\")\n    for i in range(len(s) - 2):\n        substr = s[i:i+3]\n        if len(set(substr))!= 3:\n            return False\n    return True\n```  | is_happy definition |  |  |  | Code Definition |  Python 3 |  |  |  Happy strings |  | Python 3 |  |  |  |  |  |  8 more results |  hide | | show |  Hide the Answer.  Show the Answer.  Show the Answer.  Hide the Answer.  Show the Answer.  Hide the Answer.  Hide the Answer.  Show the Answer.  Show the Answer.  | |  |  |  |  |  | |  |  |  |  |  |  Hide the Answer.  Show the Answer. | more |  hide | | show |  1 less more Hide",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def is_happy(s):\n    s = s.replace(\" \", \"\")\n    for i in range(len(s) - 2):\n        substr = s[i:i+3]\n        if len(set(substr))!= 3:\n            return False\n    return True",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 71.5064148902893,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

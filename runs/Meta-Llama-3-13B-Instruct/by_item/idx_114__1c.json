@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_114::1c::andrijdavid/Meta-Llama-3-13B-Instruct::seed0",
+  "task_id": "idx_114",
+  "category": "1c",
+  "entry_point": "minSubArraySum",
+  "prompt_field": "prompt1c",
+  "prompt_text": "\ndef minSubArraySum(nums):\n    \"\"\"\n    Given an array of integers nums, find the minimum sum of any non-empty sub-array\n    of nums.\n    Example\n    minSubArraySum([2, 3, 4, 1, 2, 4]) == 3\n    minSubArraySum([-1, -2, -3]) == -5\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef minSubArraySum(nums):\n    \"\"\"\n    Given an array of integers nums, find the minimum sum of any non-empty sub-array\n    of nums.\n    Example\n    minSubArraySum([2, 3, 4, 1, 2, 4]) == 3\n    minSubArraySum([-1, -2, -3]) == -5\n    \"\"\"",
+  "prompt_sha256": "6c7367f96676984b2c6d72d08bba79440be0eeee0bda8a75a92bdc39f6f9bbe1",
+  "model_name": "andrijdavid/Meta-Llama-3-13B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef minSubArraySum(nums):\n    \"\"\"\n    Given an array of integers nums, find the minimum sum of any non-empty sub-array\n    of nums.\n    Example\n    minSubArraySum([2, 3, 4, 1, 2, 4]) == 3\n    minSubArraySum([-1, -2, -3]) == -5\n    \"\"\"\n\n\n\nPlease provide Python3 code that accomplishes this task below with the above input/output examples:\n\n PureComponently yours,\n Software DeveloperREENELOZzerREeporter-reiserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-r",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def minSubArraySum(nums):\n    \"\"\"\n    Given an array of integers nums, find the minimum sum of any non-empty sub-array\n    of nums.\n    Example\n    minSubArraySum([2, 3, 4, 1, 2, 4]) == 3\n    minSubArraySum([-1, -2, -3]) == -5\n    \"\"\"\n\n\n\nPlease provide Python3 code that accomplishes this task below with the above input/output examples:\n\n PureComponently yours,\n Software DeveloperREENELOZzerREeporter-reiserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-riserer-r",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 109.87255215644836,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

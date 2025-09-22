@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_92::1c::andrijdavid/Meta-Llama-3-13B-Instruct::seed0",
+  "task_id": "idx_92",
+  "category": "1c",
+  "entry_point": "any_int",
+  "prompt_field": "prompt1c",
+  "prompt_text": "\ndef any_int(x, y, z):\n    '''\n    Create a function that takes 3 numbers.\n    Returns true if one of the numbers is equal to the sum of the other two, and all numbers are integers.\n    Returns false in any other cases.\n    \n    Examples\n    any_int(5, 2, 7) ➞ False\n    \n    any_int(3, 2, 2) ➞ True\n\n    any_int(3, -2, 1) ➞ False\n    \n    any_int(3.6, -2.2, 2) ➞ True\n  \n\n    \n    '''\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef any_int(x, y, z):\n    '''\n    Create a function that takes 3 numbers.\n    Returns true if one of the numbers is equal to the sum of the other two, and all numbers are integers.\n    Returns false in any other cases.\n    \n    Examples\n    any_int(5, 2, 7) ➞ False\n    \n    any_int(3, 2, 2) ➞ True\n\n    any_int(3, -2, 1) ➞ False\n    \n    any_int(3.6, -2.2, 2) ➞ True\n  \n\n    \n    '''",
+  "prompt_sha256": "92d6d71198b490f47144b468775472f3765710354d1edb8c193983382b8ec7b2",
+  "model_name": "andrijdavid/Meta-Llama-3-13B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef any_int(x, y, z):\n    '''\n    Create a function that takes 3 numbers.\n    Returns true if one of the numbers is equal to the sum of the other two, and all numbers are integers.\n    Returns false in any other cases.\n    \n    Examples\n    any_int(5, 2, 7) ➞ False\n    \n    any_int(3, 2, 2) ➞ True\n\n    any_int(3, -2, 1) ➞ False\n    \n    any_int(3.6, -2.2, 2) ➞ True\n  \n\n    \n    '''\n\n\nCodes below:\n\n```python\ndef any_int(x, y, z):\n    return isinstance(x, int) and isinstance(y, int) and isinstance(z, int) and \\\n        ( x == y + z or x == y + z or y == x + z)\n```\n\nPlease provide a comment for each line of code explaining why you chose to implement it this way.\n\nCodes above:\n\n```python\ndef any_int(x, y, z):\n    return isinstance(x, int) and isinstance(y, int) and isinstance(z, int) and \\\n        ( x == y + z or x == y + z or y == x + z)\n```\nCodes below:\n\nCodes above:\nCodes below:\n\nCodes below:\nCodes above:\nCodes below:\nCodes above:\nCodes below:\n\n codes above:\n codes below:\n codes above:\n codes below:\n codes above:\n Codes below:\n codes above:\n codes below:\n codes below:\n codes above:\n codes below:\n codes below:\n codes above:\n codes below:\n codes below:\n codes below:\n codes above:\n codes below:\n codes above:\n codes below:\n codes below:\n codes above:\n codes below:\n codes above:\n codes below:\n codes below:\n codes above:\n codes below:\n codes below:\n codes above:\n codes below:\n codes below:\n",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def any_int(x, y, z):\n    return isinstance(x, int) and isinstance(y, int) and isinstance(z, int) and \\\n        ( x == y + z or x == y + z or y == x + z)",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 107.25397205352783,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

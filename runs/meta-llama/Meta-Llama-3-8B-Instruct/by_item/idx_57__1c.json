@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_57::1c::meta-llama/Meta-Llama-3-8B-Instruct::seed0",
+  "task_id": "idx_57",
+  "category": "1c",
+  "entry_point": "monotonic",
+  "prompt_field": "prompt1c",
+  "prompt_text": "\n\ndef monotonic(l: list):\n    \"\"\"Return True if list elements are monotonically increasing or decreasing.\n    >>> monotonic([1, 2, 4, 20])\n    False\n    >>> monotonic([1, 20, 4, 10])\n    True\n    >>> monotonic([4, 1, 0, -10])\n    False\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef monotonic(l: list):\n    \"\"\"Return True if list elements are monotonically increasing or decreasing.\n    >>> monotonic([1, 2, 4, 20])\n    False\n    >>> monotonic([1, 20, 4, 10])\n    True\n    >>> monotonic([4, 1, 0, -10])\n    False\n    \"\"\"",
+  "prompt_sha256": "7dc074ecd3a2a6f5f33be48754d40460325f2a64ba1285666a4f94852f325bcf",
+  "model_name": "meta-llama/Meta-Llama-3-8B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef monotonic(l: list):\n    \"\"\"Return True if list elements are monotonically increasing or decreasing.\n    >>> monotonic([1, 2, 4, 20])\n    False\n    >>> monotonic([1, 20, 4, 10])\n    True\n    >>> monotonic([4, 1, 0, -10])\n    False\n    \"\"\"\n\n\n# Start coding here:\n\n**Your code here**\n\n\n\nThis problem is an excellent example of a functional problem. It requires using a combination of list comprehensions, generators, and conditional statements to solve it efficiently.\n\nHere is a Python solution for the given problem:\n\n```python\ndef monotonic(l: list):\n    return all((l[i] <= l[i+1] for i in range(len(l)-1))) or all((l[i] >= l[i+1] for i in range(len(l)-1)))\n```\n\nIn this solution, we're using the built-in `all` function along with a generator expression inside it to verify whether all elements in the list are monotonically increasing or decreasing.\n\n1. The outer `or` operator ensures that either monotonically increasing or decreasing is considered.\n\n2. The inner parentheses define a generator expression for each condition.\n\n    - In the first parentheses, `l[i] <= l[i+1]` checks if an element is less than or equal to the next one, indicating a monotonic increasing sequence.\n\n    - In the second parentheses, `l[i] >= l[i+1]` checks if an element is greater than or equal to the next one, indicating a monotonic decreasing sequence.\n\n",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def monotonic(l: list):\n    return all((l[i] <= l[i+1] for i in range(len(l)-1))) or all((l[i] >= l[i+1] for i in range(len(l)-1)))",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 67.83400917053223,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

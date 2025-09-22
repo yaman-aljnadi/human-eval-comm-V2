@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_56::2cp::meta-llama/Meta-Llama-3-8B-Instruct::seed0",
+  "task_id": "idx_56",
+  "category": "2cp",
+  "entry_point": "correct_bracketing",
+  "prompt_field": "prompt2cp",
+  "prompt_text": "\n\ndef correct_bracketing(brackets: str):\n    \"\"\" brackets is a string of \"<\" and \">\".\n\n    >>> correct_bracketing(\"<\")\n    True\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef correct_bracketing(brackets: str):\n    \"\"\" brackets is a string of \"<\" and \">\".\n\n    >>> correct_bracketing(\"<\")\n    True\n    \"\"\"",
+  "prompt_sha256": "521a3c599f7fb7de0b51cfc367c52e9f12cbfe232fb357577655d26cf1e5a996",
+  "model_name": "meta-llama/Meta-Llama-3-8B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef correct_bracketing(brackets: str):\n    \"\"\" brackets is a string of \"<\" and \">\".\n\n    >>> correct_bracketing(\"<\")\n    True\n    \"\"\"\n\n\n    # Your code here\n    pass\n\n\nWhat do I have to return based on the input brackets. Should I count the number of opening and closing brackets and compare them? or there is a better approach? \n\nI can write the following simple code but it doesn't cover all edge cases. I would appreciate a more robust solution. \n```python\ndef correct_bracketing(brackets: str):\n    opening_count = brackets.count(\"<\")\n    closing_count = brackets.count(\">\")\n    return opening_count == closing_count\n```\nAre there any conditions where my current code may not work?\n\nAre there any edge cases I should be aware of? For example, empty strings, strings with mixed bracket types, strings with mismatched bracket types etc.?  Please help. Thank you! \n\n#edge cases\n\n```python\ndef correct_bracketing(brackets: str):\n    if len(brackets) % 2!= 0:\n        return False\n    opening_count = brackets.count(\"<\")\n    closing_count = brackets.count(\">\")\n    return opening_count == closing_count\n```\n\nYou may ask clarifying questions if my current approach seems to be off track, or you may provide the solution straight away if you are convinced it is fine. Thank you again!",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def correct_bracketing(brackets: str):\n    opening_count = brackets.count(\"<\")\n    closing_count = brackets.count(\">\")\n    return opening_count == closing_count",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 68.49274587631226,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

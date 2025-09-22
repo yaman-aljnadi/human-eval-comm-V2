@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_103::1p::andrijdavid/Meta-Llama-3-13B-Instruct::seed0",
+  "task_id": "idx_103",
+  "category": "1p",
+  "entry_point": "rounded_avg",
+  "prompt_field": "prompt1p",
+  "prompt_text": "\ndef candidate(n, m):\n    \"\"\"You are given two positive integers n and m, and your task is to compute the\n    average of the integers from n through m (including n and m). \n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(n, m):\n    \"\"\"You are given two positive integers n and m, and your task is to compute the\n    average of the integers from n through m (including n and m). \n    \"\"\"",
+  "prompt_sha256": "1c3d42496b7dadcb0c4de1ffa4dd43d33671b821c499b8fcba3e97fa12bf1a75",
+  "model_name": "andrijdavid/Meta-Llama-3-13B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(n, m):\n    \"\"\"You are given two positive integers n and m, and your task is to compute the\n    average of the integers from n through m (including n and m). \n    \"\"\"returns the average of the integers from n to m\"\"\"\nsenalints = range(n+1 m+1)\n averagerangelints = sum sentalents / len sentalents ​​\n\n​\n\n​\n\n​\n\nacenossiveints = range n m ​acenossiveints = range n m ​acenossiveints = range n m ​acenossiveints = range n m ​acenossiveints = range n m ​acenossiveints = range n m ​acenossiveints = range n m ​acenossiveints = range n m ​acenossiveints = range n m ​acenossiveints = range n m ​acenossiveints = range n m ​acenossiveirts = range n m ​acenossiveirts = range n m ​acenossiveirts = range n m ​acenossiveirts = range n m ​acenossiveirts = range n m ​acenossiveirts = range n m ​acenossiveirts = range n m ​acenossiveirts = range n m ​acenossiveirts = range n m ​acenossiveirts = range n m ​acenossiveirts = range n m ​acenossiveirts = range n m ​acenossiveirts = range n m",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def candidate(n, m):\n    \"\"\"You are given two positive integers n and m, and your task is to compute the\n    average of the integers from n through m (including n and m). \n    \"\"\"returns the average of the integers from n to m\"\"\"\nsenalints = range(n+1 m+1)\n averagerangelints = sum sentalents / len sentalents ​​\n\n​\n\n​\n\n​\n\nacenossiveints = range n m ​acenossiveints = range n m ​acenossiveints = range n m ​acenossiveints = range n m ​acenossiveints = range n m ​acenossiveints = range n m ​acenossiveints = range n m ​acenossiveints = range n m ​acenossiveints = range n m ​acenossiveints = range n m ​acenossiveints = range n m ​acenossiveirts = range n m ​acenossiveirts = range n m ​acenossiveirts = range n m ​acenossiveirts = range n m ​acenossiveirts = range n m ​acenossiveirts = range n m ​acenossiveirts = range n m ​acenossiveirts = range n m ​acenossiveirts = range n m ​acenossiveirts = range n m ​acenossiveirts = range n m ​acenossiveirts = range n m ​acenossiveirts = range n m",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 90.59758043289185,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

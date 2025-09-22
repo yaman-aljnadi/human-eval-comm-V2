@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_121::2ap::meta-llama/Meta-Llama-3-8B-Instruct::seed0",
+  "task_id": "idx_121",
+  "category": "2ap",
+  "entry_point": "solution",
+  "prompt_field": "prompt2ap",
+  "prompt_text": "\ndef solution(lst):\n    \"\"\"Given a non-empty list of integers, return the sum of all of the even or odd elements that are \n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef solution(lst):\n    \"\"\"Given a non-empty list of integers, return the sum of all of the even or odd elements that are \n    \"\"\"",
+  "prompt_sha256": "fbf1cb0556d57ae4c51f8e1b769a5b9f15e172a84fee809f82d1b72ee379cfb6",
+  "model_name": "meta-llama/Meta-Llama-3-8B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef solution(lst):\n    \"\"\"Given a non-empty list of integers, return the sum of all of the even or odd elements that are \n    \"\"\"even or odd, not divisible by 3, and greater than 0\"\"\"\n    \"\"\"\n    lst is a list of integers\n\nExample usage: `solution([1,2,4,5,7])` should return 6 (2+4)\n\nPlease, clarify what are the conditions for even or odd elements in the given problem statement. \nBased on my understanding of the problem, I can infer that we need to add all even or odd numbers greater than 0 and not divisible by 3. Is this correct? \n\nIf my understanding is correct, then I will generate the Python code. Otherwise, please clarify the conditions.\n\"\"\"\n\n|  | \n| ---|---|\n| **Code:** | ``\n```python\ndef solution(lst):\n    even_sum = sum(i for i in lst if i % 2 == 0 and i > 0 and i % 3!= 0)\n    odd_sum = sum(i for i in lst if i % 2!= 0 and i > 0 and i % 3!= 0)\n    return even_sum + odd_sum\n```\n|  | \n\n|---|\n|  | |---\n\n|---|\nPlease respond with the Python3 code.   |  |  |",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def solution(lst):\n    even_sum = sum(i for i in lst if i % 2 == 0 and i > 0 and i % 3!= 0)\n    odd_sum = sum(i for i in lst if i % 2!= 0 and i > 0 and i % 3!= 0)\n    return even_sum + odd_sum",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 69.90082836151123,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

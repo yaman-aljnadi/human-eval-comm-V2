@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_70::2ap::meta-llama/Meta-Llama-3-8B-Instruct::seed0",
+  "task_id": "idx_70",
+  "category": "2ap",
+  "entry_point": "strange_sort_list",
+  "prompt_field": "prompt2ap",
+  "prompt_text": "\ndef candidate(lst):\n    '''\n    Given list of integers, return list in a certain order (ascending, strange or another).\n\n    Examples:\n    candidate([1, 2, 3, 4]) == [1, 4, 2, 3]\n    candidate([5, 5, 5, 5]) == [5, 5, 5, 5]\n    candidate([]) == []\n    '''\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(lst):\n    '''\n    Given list of integers, return list in a certain order (ascending, strange or another).\n\n    Examples:\n    candidate([1, 2, 3, 4]) == [1, 4, 2, 3]\n    candidate([5, 5, 5, 5]) == [5, 5, 5, 5]\n    candidate([]) == []\n    '''",
+  "prompt_sha256": "0c4a3589cc06ea0d89302befbe360128a86c48c68d76c43f588b44a27011e720",
+  "model_name": "meta-llama/Meta-Llama-3-8B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(lst):\n    '''\n    Given list of integers, return list in a certain order (ascending, strange or another).\n\n    Examples:\n    candidate([1, 2, 3, 4]) == [1, 4, 2, 3]\n    candidate([5, 5, 5, 5]) == [5, 5, 5, 5]\n    candidate([]) == []\n    '''\n\n\nWrite a function in Python3 to solve this problem.\n\n### ``\nimport copy\ndef candidate(lst):\n    if not lst:\n        return []\n\n    sorted_lst = sorted(lst)\n    sorted_lst = sorted_lst[::-1]\n    sorted_lst = [sorted_lst.pop(0) if i % 2 else sorted_lst.pop() for i in range(len(sorted_lst))]\n    return sorted_lst\n### ```\n\nI've provided a working solution to this problem. This function first checks if the input list is empty, and if it is, it simply returns an empty list. \n\nIf the list is not empty, it sorts the list in ascending order, reverses it, then modifies it to return the desired order. The modification is done using a list comprehension with a conditional statement. The conditional statement checks if the index `i` is even or odd. If it's even, it takes the smallest element (the front of the reversed list), if it's odd, it takes the largest element (the back of the reversed list). \n\nThis modification ensures the desired order is maintained while preserving the relative order of equal elements. The modified list is then returned as the result.",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def candidate(lst):\n    '''\n    Given list of integers, return list in a certain order (ascending, strange or another).\n\n    Examples:\n    candidate([1, 2, 3, 4]) == [1, 4, 2, 3]\n    candidate([5, 5, 5, 5]) == [5, 5, 5, 5]\n    candidate([]) == []\n    '''\n\n\nWrite a function in Python3 to solve this problem.\n\n### ``\nimport copy\ndef candidate(lst):\n    if not lst:\n        return []\n\n    sorted_lst = sorted(lst)\n    sorted_lst = sorted_lst[::-1]\n    sorted_lst = [sorted_lst.pop(0) if i % 2 else sorted_lst.pop() for i in range(len(sorted_lst))]\n    return sorted_lst\n### ```\n\nI've provided a working solution to this problem. This function first checks if the input list is empty, and if it is, it simply returns an empty list. \n\nIf the list is not empty, it sorts the list in ascending order, reverses it, then modifies it to return the desired order. The modification is done using a list comprehension with a conditional statement. The conditional statement checks if the index `i` is even or odd. If it's even, it takes the smallest element (the front of the reversed list), if it's odd, it takes the largest element (the back of the reversed list). \n\nThis modification ensures the desired order is maintained while preserving the relative order of equal elements. The modified list is then returned as the result.",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 62.823681116104126,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

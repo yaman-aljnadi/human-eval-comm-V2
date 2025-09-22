@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_76::2ac::andrijdavid/Meta-Llama-3-13B-Instruct::seed0",
+  "task_id": "idx_76",
+  "category": "2ac",
+  "entry_point": "is_simple_power",
+  "prompt_field": "prompt2ac",
+  "prompt_text": "\ndef candidate(a, b):\n    \"\"\"Your task is to write a function that returns true if a number x is a \n    power of n and false in other cases.\n    x is a simple power of n if n**k=x\n    For example:\n    candidate(1, 4) => false\n    candidate(2, 2) => false\n    candidate(8, 2) => false\n    candidate(3, 2) => true\n    candidate(3, 1) => true\n    candidate(5, 3) => true\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(a, b):\n    \"\"\"Your task is to write a function that returns true if a number x is a \n    power of n and false in other cases.\n    x is a simple power of n if n**k=x\n    For example:\n    candidate(1, 4) => false\n    candidate(2, 2) => false\n    candidate(8, 2) => false\n    candidate(3, 2) => true\n    candidate(3, 1) => true\n    candidate(5, 3) => true\n    \"\"\"",
+  "prompt_sha256": "7c9545b116dbab6f4b3dee311e004c974cd910933d5336ce81057648dfe053a3",
+  "model_name": "andrijdavid/Meta-Llama-3-13B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(a, b):\n    \"\"\"Your task is to write a function that returns true if a number x is a \n    power of n and false in other cases.\n    x is a simple power of n if n**k=x\n    For example:\n    candidate(1, 4) => false\n    candidate(2, 2) => false\n    candidate(8, 2) => false\n    candidate(3, 2) => true\n    candidate(3, 1) => true\n    candidate(5, 3) => true\n    \"\"\"\n\n\n ##SSIP्प_TypeInfo_TypeInfo_TypeInfoSSIP_TypeInfo rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def candidate(a, b):\n    \"\"\"Your task is to write a function that returns true if a number x is a \n    power of n and false in other cases.\n    x is a simple power of n if n**k=x\n    For example:\n    candidate(1, 4) => false\n    candidate(2, 2) => false\n    candidate(8, 2) => false\n    candidate(3, 2) => true\n    candidate(3, 1) => true\n    candidate(5, 3) => true\n    \"\"\"\n\n\n ##SSIP्प_TypeInfo_TypeInfo_TypeInfoSSIP_TypeInfo rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid rid",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 92.88906621932983,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

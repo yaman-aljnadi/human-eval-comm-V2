@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_10::2ac::andrijdavid/Meta-Llama-3-13B-Instruct::seed0",
+  "task_id": "idx_10",
+  "category": "2ac",
+  "entry_point": "make_palindrome",
+  "prompt_field": "prompt2ac",
+  "prompt_text": "\n\ndef is_palindrome(string: str) -> bool:\n    \"\"\" Test if given string is a palindrome \"\"\"\n    return string == string[::-1]\n\n\ndef candidate(string: str) -> str:\n    \"\"\" Find the longest or shortest palindrome that begins with a supplied string.\n    Algorithm idea is simple:\n    - Find the shortest or longest postfix of supplied string that is a palindrome.\n    - Append to the end of the string reverse of a string prefix that comes before the palindromic suffix.\n    >>> candidate('')\n    ''\n    >>> candidate('cat')\n    'ata'\n    >>> candidate('cata')\n    'ata'\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef is_palindrome(string: str) -> bool:\n    \"\"\" Test if given string is a palindrome \"\"\"\n    return string == string[::-1]\n\n\ndef candidate(string: str) -> str:\n    \"\"\" Find the longest or shortest palindrome that begins with a supplied string.\n    Algorithm idea is simple:\n    - Find the shortest or longest postfix of supplied string that is a palindrome.\n    - Append to the end of the string reverse of a string prefix that comes before the palindromic suffix.\n    >>> candidate('')\n    ''\n    >>> candidate('cat')\n    'ata'\n    >>> candidate('cata')\n    'ata'\n    \"\"\"",
+  "prompt_sha256": "e9875cdefe883d95103865871dd43c13a83d1be8949d1f09f136f30e36c6bf8a",
+  "model_name": "andrijdavid/Meta-Llama-3-13B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef is_palindrome(string: str) -> bool:\n    \"\"\" Test if given string is a palindrome \"\"\"\n    return string == string[::-1]\n\n\ndef candidate(string: str) -> str:\n    \"\"\" Find the longest or shortest palindrome that begins with a supplied string.\n    Algorithm idea is simple:\n    - Find the shortest or longest postfix of supplied string that is a palindrome.\n    - Append to the end of the string reverse of a string prefix that comes before the palindromic suffix.\n    >>> candidate('')\n    ''\n    >>> candidate('cat')\n    'ata'\n    >>> candidate('cata')\n    'ata'\n    \"\"\"\n\n\n\n\n\n\nPlease note that the input string supplied will never be None or contain non-alphanumeric characters other than spaces'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\" '\"'\"'\"'\" '\"'\"'\" '\"'\"'\"'\"'\" '\" '\"'\" '\" '\"'\"'\"'\"'\"'\" '\" '\" '\" '\" '\" '\" '\" '\" '\" '\" '\" '\" '\" '\" '\" '\" '\" '\" '\" '\" '\" '\"'\"'\" '\" '\" '\" '\" '\"'\"'\" '\" '\" '\" ''' \"\"\"\"\"\"\"\"\"=\"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\"",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def is_palindrome(string: str) -> bool:\n    \"\"\" Test if given string is a palindrome \"\"\"\n    return string == string[::-1]\n\n\ndef candidate(string: str) -> str:\n    \"\"\" Find the longest or shortest palindrome that begins with a supplied string.\n    Algorithm idea is simple:\n    - Find the shortest or longest postfix of supplied string that is a palindrome.\n    - Append to the end of the string reverse of a string prefix that comes before the palindromic suffix.\n    >>> candidate('')\n    ''\n    >>> candidate('cat')\n    'ata'\n    >>> candidate('cata')\n    'ata'\n    \"\"\"\n\n\n\n\n\n\nPlease note that the input string supplied will never be None or contain non-alphanumeric characters other than spaces'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\" '\"'\"'\"'\" '\"'\"'\" '\"'\"'\"'\"'\" '\" '\"'\" '\" '\"'\"'\"'\"'\"'\" '\" '\" '\" '\" '\" '\" '\" '\" '\" '\" '\" '\" '\" '\" '\" '\" '\" '\" '\" '\" '\" '\"'\"'\" '\" '\" '\" '\" '\"'\"'\" '\" '\" '\" ''' \"\"\"\"\"\"\"\"\"=\"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\" \"\"\"",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 91.53031611442566,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

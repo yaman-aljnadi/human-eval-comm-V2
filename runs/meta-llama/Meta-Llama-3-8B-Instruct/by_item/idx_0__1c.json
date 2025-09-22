@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_0::1c::meta-llama/Meta-Llama-3-8B-Instruct::seed0",
+  "task_id": "idx_0",
+  "category": "1c",
+  "entry_point": "has_close_elements",
+  "prompt_field": "prompt1c",
+  "prompt_text": "from typing import List\n\n\ndef has_close_elements(numbers: List[float], threshold: float) -> bool:\n    \"\"\" Check if in given list of numbers, are any two numbers larger than each other than\n    given threshold.\n    >>> has_close_elements([1.0, 2.0, 3.0], 0.5)\n    False\n    >>> has_close_elements([1.0, 2.8, 3.0, 4.0, 5.0, 2.0], 0.3)\n    True\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List\n\n\ndef has_close_elements(numbers: List[float], threshold: float) -> bool:\n    \"\"\" Check if in given list of numbers, are any two numbers larger than each other than\n    given threshold.\n    >>> has_close_elements([1.0, 2.0, 3.0], 0.5)\n    False\n    >>> has_close_elements([1.0, 2.8, 3.0, 4.0, 5.0, 2.0], 0.3)\n    True\n    \"\"\"",
+  "prompt_sha256": "bac2450ed7024ce1e106a3ea3fb1b8c68c137370ca5f8ec090f52be33b9327ce",
+  "model_name": "meta-llama/Meta-Llama-3-8B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List\n\n\ndef has_close_elements(numbers: List[float], threshold: float) -> bool:\n    \"\"\" Check if in given list of numbers, are any two numbers larger than each other than\n    given threshold.\n    >>> has_close_elements([1.0, 2.0, 3.0], 0.5)\n    False\n    >>> has_close_elements([1.0, 2.8, 3.0, 4.0, 5.0, 2.0], 0.3)\n    True\n    \"\"\"\n\n\nFor the given code, how to properly check if in given list of numbers are any two numbers larger than each other than given threshold.\n\nHere is the explanation: The function checks if in given list of numbers are any two numbers larger than each other than given threshold. If yes, the function should return True, otherwise False.\n\nHere are the rules to check if any two numbers are larger than each other than given threshold:\n*   The given threshold is a floating point number which can be greater than 0.\n*   The two numbers must be adjacent in the list.\n*   The two numbers must be different.\n*   The difference between the two numbers must be greater than the given threshold.\n\nFor example, let's consider the case: has_close_elements([1.0, 2.0, 3.0, 4.0], 0.5)\nThis function will check if there are any two adjacent numbers in the list which are larger than each other than 0.5.\nIf it finds such a pair, then it should return True.\n\nThis problem is similar to \"The Closest Pair\" but it only requires pairs of adjacent numbers. \nHere is my solution in Python:\n\n    def has_close_elements(numbers: List[float], threshold:",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def has_close_elements(numbers: List[float], threshold: float) -> bool:\n    \"\"\" Check if in given list of numbers, are any two numbers larger than each other than\n    given threshold.\n    >>> has_close_elements([1.0, 2.0, 3.0], 0.5)\n    False\n    >>> has_close_elements([1.0, 2.8, 3.0, 4.0, 5.0, 2.0], 0.3)\n    True\n    \"\"\"\n\n\nFor the given code, how to properly check if in given list of numbers are any two numbers larger than each other than given threshold.\n\nHere is the explanation: The function checks if in given list of numbers are any two numbers larger than each other than given threshold. If yes, the function should return True, otherwise False.\n\nHere are the rules to check if any two numbers are larger than each other than given threshold:\n*   The given threshold is a floating point number which can be greater than 0.\n*   The two numbers must be adjacent in the list.\n*   The two numbers must be different.\n*   The difference between the two numbers must be greater than the given threshold.\n\nFor example, let's consider the case: has_close_elements([1.0, 2.0, 3.0, 4.0], 0.5)\nThis function will check if there are any two adjacent numbers in the list which are larger than each other than 0.5.\nIf it finds such a pair, then it should return True.\n\nThis problem is similar to \"The Closest Pair\" but it only requires pairs of adjacent numbers. \nHere is my solution in Python:\n\n    def has_close_elements(numbers: List[float], threshold:",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 69.51359462738037,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

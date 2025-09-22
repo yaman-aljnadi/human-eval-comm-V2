@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_12::1a::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_12",
+  "category": "1a",
+  "entry_point": "longest",
+  "prompt_field": "prompt1a",
+  "prompt_text": "from typing import List, Optional\n\n\ndef candidate(strings: List[str]) -> Optional[str]:\n    \"\"\" Out of list of strings, return a certain one (the shortest or longest or another). Return the first one in case of multiple\n    strings of the same length. Return None in case the input list is empty.\n    >>> candidate([])\n\n    >>> candidate(['a', 'b', 'c'])\n    'a'\n    >>> candidate(['a', 'bb', 'ccc'])\n    'ccc'\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List, Optional\n\n\ndef candidate(strings: List[str]) -> Optional[str]:\n    \"\"\" Out of list of strings, return a certain one (the shortest or longest or another). Return the first one in case of multiple\n    strings of the same length. Return None in case the input list is empty.\n    >>> candidate([])\n\n    >>> candidate(['a', 'b', 'c'])\n    'a'\n    >>> candidate(['a', 'bb', 'ccc'])\n    'ccc'\n    \"\"\"",
+  "prompt_sha256": "f95af29dc3ac5f90d5214003e0abcbf7b6b93215cb433c2304903fed88c5010a",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\nfrom typing import List, Optional\n\n\ndef candidate(strings: List[str]) -> Optional[str]:\n    \"\"\" Out of list of strings, return a certain one (the shortest or longest or another). Return the first one in case of multiple\n    strings of the same length. Return None in case the input list is empty.\n    >>> candidate([])\n\n    >>> candidate(['a', 'b', 'c'])\n    'a'\n    >>> candidate(['a', 'bb', 'ccc'])\n    'ccc'\n    \"\"\"\n    if not strings:\n        return None\n\n    # The docstring implies two different behaviors based on the examples:\n    # - The first example `candidate(['a', 'b', 'c'])` returns 'a', suggesting the shortest string.\n    # - The second example `candidate(['a', 'bb', 'ccc'])` returns 'ccc', suggesting the longest string.\n    #\n    # Given this ambiguity, I will prioritize returning the LONGEST string as it's a more common requirement\n    # when searching for a \"candidate\" that stands out. If the intention was strictly the shortest,\n    # the second example would likely return 'a'.",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def candidate(strings: List[str]) -> Optional[str]:\n    \"\"\" Out of list of strings, return a certain one (the shortest or longest or another). Return the first one in case of multiple\n    strings of the same length. Return None in case the input list is empty.\n    >>> candidate([])\n\n    >>> candidate(['a', 'b', 'c'])\n    'a'\n    >>> candidate(['a', 'bb', 'ccc'])\n    'ccc'\n    \"\"\"\n    if not strings:\n        return None\n\n    # The docstring implies two different behaviors based on the examples:\n    # - The first example `candidate(['a', 'b', 'c'])` returns 'a', suggesting the shortest string.\n    # - The second example `candidate(['a', 'bb', 'ccc'])` returns 'ccc', suggesting the longest string.\n    #\n    # Given this ambiguity, I will prioritize returning the LONGEST string as it's a more common requirement\n    # when searching for a \"candidate\" that stands out. If the intention was strictly the shortest,\n    # the second example would likely return 'a'.",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 1.638075828552246,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

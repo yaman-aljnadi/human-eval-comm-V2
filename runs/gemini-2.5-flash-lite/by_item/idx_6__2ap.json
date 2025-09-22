@@ -1,0 +1,36 @@
+{
+  "record_id": "idx_6::2ap::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_6",
+  "category": "2ap",
+  "entry_point": "parse_nested_parens",
+  "prompt_field": "prompt2ap",
+  "prompt_text": "from typing import List\n\n\ndef candidate(paren_string: str) -> List[int]:\n    \"\"\" Input to this function is a string represented multiple groups for nested parentheses separated by certain characters.\n    For each of the group, output an integer\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List\n\n\ndef candidate(paren_string: str) -> List[int]:\n    \"\"\" Input to this function is a string represented multiple groups for nested parentheses separated by certain characters.\n    For each of the group, output an integer\n    \"\"\"",
+  "prompt_sha256": "fcdeaf0bab9c7b6d5635d4105a485ed05190352fba6f553f45a86271cdb5c822",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "Could you please provide an example of the input string format and the expected output? This will help me understand the \"certain characters\" separating the groups and how to derive the integer for each group.",
+  "gen_raw": {},
+  "contains_code": false,
+  "code_detected_method": "none",
+  "extracted_code": null,
+  "is_question": true,
+  "extracted_questions": [
+    "Could you please provide an example of the input string format and the expected output?",
+    "This will help me understand the \"certain characters\" separating the groups and how to derive the integer for each group.?"
+  ],
+  "question_count": 2,
+  "first_question": "Could you please provide an example of the input string format and the expected output?",
+  "question_chars": 209,
+  "latency_sec": 1.1327078342437744,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

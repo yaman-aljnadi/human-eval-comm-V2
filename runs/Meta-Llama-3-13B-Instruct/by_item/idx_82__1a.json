@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_82::1a::andrijdavid/Meta-Llama-3-13B-Instruct::seed0",
+  "task_id": "idx_82",
+  "category": "1a",
+  "entry_point": "prime_length",
+  "prompt_field": "prompt1a",
+  "prompt_text": "\ndef candidate(string):\n    \"\"\"Write a function that takes a string and returns True if the string\n    length meets a certain condition (e.g. is an even or prime number or another type) or False otherwise\n    Examples\n    candidate('Hello') == True\n    candidate('abcdcba') == True\n    candidate('kittens') == True\n    candidate('orange') == False\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(string):\n    \"\"\"Write a function that takes a string and returns True if the string\n    length meets a certain condition (e.g. is an even or prime number or another type) or False otherwise\n    Examples\n    candidate('Hello') == True\n    candidate('abcdcba') == True\n    candidate('kittens') == True\n    candidate('orange') == False\n    \"\"\"",
+  "prompt_sha256": "f60bd4d963fe37b0051890c65eb3b345b5fec740e7c7f28d1016b010955984ef",
+  "model_name": "andrijdavid/Meta-Llama-3-13B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(string):\n    \"\"\"Write a function that takes a string and returns True if the string\n    length meets a certain condition (e.g. is an even or prime number or another type) or False otherwise\n    Examples\n    candidate('Hello') == True\n    candidate('abcdcba') == True\n    candidate('kittens') == True\n    candidate('orange') == False\n    \"\"\"\n\n\n\nPlease Provide direct code response or ask questions if more information is required\nclarify if anything else needed further\n appreciate your response\nthank you\nENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDEND",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def candidate(string):\n    \"\"\"Write a function that takes a string and returns True if the string\n    length meets a certain condition (e.g. is an even or prime number or another type) or False otherwise\n    Examples\n    candidate('Hello') == True\n    candidate('abcdcba') == True\n    candidate('kittens') == True\n    candidate('orange') == False\n    \"\"\"\n\n\n\nPlease Provide direct code response or ask questions if more information is required\nclarify if anything else needed further\n appreciate your response\nthank you\nENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDENDEND",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 91.75109648704529,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

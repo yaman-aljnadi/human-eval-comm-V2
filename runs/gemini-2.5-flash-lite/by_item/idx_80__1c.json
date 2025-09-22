@@ -1,0 +1,42 @@
+{
+  "record_id": "idx_80::1c::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_80",
+  "category": "1c",
+  "entry_point": "is_happy",
+  "prompt_field": "prompt1c",
+  "prompt_text": "\ndef is_happy(s):\n    \"\"\"You are given a string s.\n    Your task is to check if the string is happy or not.\n    A string is happy if its length is at least 3 and every 3 consecutive letters are distinct\n    For example:\n    is_happy(a) => True\n    is_happy(aa) => True\n    is_happy(abcd) => False\n    is_happy(aabb) => True\n    is_happy(adb) => False\n    is_happy(xyy) => True\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef is_happy(s):\n    \"\"\"You are given a string s.\n    Your task is to check if the string is happy or not.\n    A string is happy if its length is at least 3 and every 3 consecutive letters are distinct\n    For example:\n    is_happy(a) => True\n    is_happy(aa) => True\n    is_happy(abcd) => False\n    is_happy(aabb) => True\n    is_happy(adb) => False\n    is_happy(xyy) => True\n    \"\"\"",
+  "prompt_sha256": "b40f15656d73bb467b4d698db3e91e3f0fa2d7b5e0c2f61a8d0c375569412c22",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "### Clarifying Questions:\n\n1.  The provided examples `is_happy(a) => True` and `is_happy(aa) => True` contradict the condition \"every 3 consecutive letters are distinct\" because the strings have lengths less than 3. Does the condition \"every 3 consecutive letters are distinct\" only apply if the string's length is at least 3? Or are there separate rules for strings shorter than 3 characters?\n\n2.  The example `is_happy(aabb) => True` seems to contradict the \"every 3 consecutive letters are distinct\" rule. In `aabb`, the consecutive triplets are `aab` (not distinct) and `abb` (not distinct). Could you please clarify the intended logic for this example or provide a more precise definition of \"distinct\" in this context?\n\n3.  The example `is_happy(adb) => False` also seems to imply a rule beyond just the 3 consecutive letters being distinct. `adb` has length 3, and all characters are distinct. What makes this string \"not happy\"?\n\nAssuming the primary rule is \"length is at least 3 and every 3 consecutive letters are distinct\" and that the provided examples are meant",
+  "gen_raw": {},
+  "contains_code": false,
+  "code_detected_method": "none",
+  "extracted_code": null,
+  "is_question": true,
+  "extracted_questions": [
+    "### Clarifying Questions:\n\n1.  The provided examples `is_happy(a) => True` and `is_happy(aa) => True` contradict the condition \"every 3 consecutive letters are distinct\" because the strings have lengths less than 3. Does the condition \"every 3 consecutive letters are distinct\" only apply if the string's length is at least 3?",
+    "Or are there separate rules for strings shorter than 3 characters?",
+    "2.  The example `is_happy(aabb) => True` seems to contradict the \"every 3 consecutive letters are distinct\" rule. In `aabb`, the consecutive triplets are `aab` (not distinct) and `abb` (not distinct). Could you please clarify the intended logic for this example or provide a more precise definition of \"distinct\" in this context?",
+    "3.  The example `is_happy(adb) => False` also seems to imply a rule beyond just the 3 consecutive letters being distinct. `adb` has length 3, and all characters are distinct. What makes this string \"not happy\"?",
+    "Assuming the primary rule is \"length is at least 3 and every 3 consecutive letters are distinct\" and that the provided examples are meant?",
+    "Does the condition \"every 3 consecutive letters are distinct\" only apply if the string's length is at least 3?",
+    "Could you please clarify the intended logic for this example or provide a more precise definition of \"distinct\" in this context?",
+    "What makes this string \"not happy\"?"
+  ],
+  "question_count": 8,
+  "first_question": "### Clarifying Questions:\n\n1.  The provided examples `is_happy(a) => True` and `is_happy(aa) => True` contradict the condition \"every 3 consecutive letters are distinct\" because the strings have lengths less than 3. Does the condition \"every 3 consecutive letters are distinct\" only apply if the string's length is at least 3?",
+  "question_chars": 1342,
+  "latency_sec": 2.1796975135803223,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

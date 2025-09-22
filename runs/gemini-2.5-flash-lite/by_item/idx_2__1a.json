@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_2::1a::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_2",
+  "category": "1a",
+  "entry_point": "truncate_number",
+  "prompt_field": "prompt1a",
+  "prompt_text": "\n\ndef candidate(number: float) -> float:\n    \"\"\" Given a positive floating point number, it can be decomposed into\n    and integer part (largest integer smaller than given number) and decimals\n    (leftover part always smaller than 1).\n\n    Return a certain part of the number (e.g. integer or decimal or another).\n    >>> candidate(3.5)\n    0.5\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(number: float) -> float:\n    \"\"\" Given a positive floating point number, it can be decomposed into\n    and integer part (largest integer smaller than given number) and decimals\n    (leftover part always smaller than 1).\n\n    Return a certain part of the number (e.g. integer or decimal or another).\n    >>> candidate(3.5)\n    0.5\n    \"\"\"",
+  "prompt_sha256": "5c980bc8ce45d00876fe2f883405c9f6f4d4882f511cc9374fa2f8f85df61fe5",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef candidate(number: float) -> float:\n    \"\"\" Given a positive floating point number, it can be decomposed into\n    and integer part (largest integer smaller than given number) and decimals\n    (leftover part always smaller than 1).\n\n    Return a certain part of the number (e.g. integer or decimal or another).\n    >>> candidate(3.5)\n    0.5\n    \"\"\"\n    return number - int(number)\n```",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def candidate(number: float) -> float:\n    \"\"\" Given a positive floating point number, it can be decomposed into\n    and integer part (largest integer smaller than given number) and decimals\n    (leftover part always smaller than 1).\n\n    Return a certain part of the number (e.g. integer or decimal or another).\n    >>> candidate(3.5)\n    0.5\n    \"\"\"\n    return number - int(number)",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 0.45897531509399414,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

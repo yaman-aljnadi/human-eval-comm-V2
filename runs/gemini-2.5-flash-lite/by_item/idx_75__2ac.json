@@ -1,0 +1,35 @@
+{
+  "record_id": "idx_75::2ac::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_75",
+  "category": "2ac",
+  "entry_point": "is_multiply_prime",
+  "prompt_field": "prompt2ac",
+  "prompt_text": "\ndef is_multiply_prime(a):\n    \"\"\"Write a function that returns true if the given number is the multiplication of K prime numbers\n    and false otherwise.\n    Knowing that (a) is less then 100. \n    Example:\n    is_multiply_prime(30) == False\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef is_multiply_prime(a):\n    \"\"\"Write a function that returns true if the given number is the multiplication of K prime numbers\n    and false otherwise.\n    Knowing that (a) is less then 100. \n    Example:\n    is_multiply_prime(30) == False\n    \"\"\"",
+  "prompt_sha256": "0a4fe88c7cc99c5473b4a1ac5a334b85bb956c74e0ecedf6968b6b3e4410c8c5",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "Let's clarify the requirements for \"multiplication of K prime numbers\".\n\nThe example `is_multiply_prime(30) == False` is a crucial piece of information. The prime factorization of 30 is `2 * 3 * 5`. This is a product of *three* distinct prime numbers.\n\nThis suggests two possible interpretations for \"multiplication of K prime numbers\":\n\n1.  **The number must be the product of *exactly K* prime factors (counting multiplicity).**\n    *   If K=2, then `a` must be a semiprime (product of two primes, like 4 = 2*2, 6 = 2*3, 9 = 3*3, 10 = 2*5).\n    *   If K=3, then `a` must be the product of three primes (like 8 = 2*2*2, 12 = 2*2*3, 18 = 2*3*3, 20 = 2*2*5, 27 = 3*3*3, 30 = 2*3*5).\n\n    Under this interpretation",
+  "gen_raw": {},
+  "contains_code": false,
+  "code_detected_method": "none",
+  "extracted_code": null,
+  "is_question": true,
+  "extracted_questions": [
+    "Let's clarify the requirements for \"multiplication of K prime numbers\".\n\nThe example `is_multiply_prime(30) == False` is a crucial piece of information. The prime factorization of 30 is `2 * 3 * 5`. This is a product of *three* distinct prime numbers.\n\nThis suggests two possible interpretations for \"multiplication of K prime numbers\":\n\n1.  **The number must be the product of *exactly K* prime factors (counting multiplicity).**\n    *   If K=2, then `a` must be a semiprime (product of two primes, like 4 = 2*2, 6 = 2*3, 9 = 3*3, 10 = 2*5).\n    *   If K=3, then `a` must be the product of three primes (like 8 = 2*2*2, 12 = 2*2*3, 18 = 2*3*3, 20 = 2*2*5, 27 = 3*3*3, 30 = 2*3*5).\n\n    Under this interpretation?"
+  ],
+  "question_count": 1,
+  "first_question": "Let's clarify the requirements for \"multiplication of K prime numbers\".\n\nThe example `is_multiply_prime(30) == False` is a crucial piece of information. The prime factorization of 30 is `2 * 3 * 5`. This is a product of *three* distinct prime numbers.\n\nThis suggests two possible interpretations for \"multiplication of K prime numbers\":\n\n1.  **The number must be the product of *exactly K* prime factors (counting multiplicity).**\n    *   If K=2, then `a` must be a semiprime (product of two primes, like 4 = 2*2, 6 = 2*3, 9 = 3*3, 10 = 2*5).\n    *   If K=3, then `a` must be the product of three primes (like 8 = 2*2*2, 12 = 2*2*3, 18 = 2*3*3, 20 = 2*2*5, 27 = 3*3*3, 30 = 2*3*5).\n\n    Under this interpretation?",
+  "question_chars": 713,
+  "latency_sec": 1.703908920288086,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

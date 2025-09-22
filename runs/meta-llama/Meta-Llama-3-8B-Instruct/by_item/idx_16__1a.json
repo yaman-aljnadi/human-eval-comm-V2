@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_16::1a::meta-llama/Meta-Llama-3-8B-Instruct::seed0",
+  "task_id": "idx_16",
+  "category": "1a",
+  "entry_point": "count_distinct_characters",
+  "prompt_field": "prompt1a",
+  "prompt_text": "\n\ndef candidate(string: str) -> int:\n    \"\"\" Given a string, find out how many characters (regardless of case) does it consist of\n    >>> candidate('xyzXYZ')\n    3\n    >>> candidate('Jerry')\n    4\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(string: str) -> int:\n    \"\"\" Given a string, find out how many characters (regardless of case) does it consist of\n    >>> candidate('xyzXYZ')\n    3\n    >>> candidate('Jerry')\n    4\n    \"\"\"",
+  "prompt_sha256": "9e63b758f78c25e9e2e3628e286b1370b5c149c9c5c81d3f53d3d41a356b832a",
+  "model_name": "meta-llama/Meta-Llama-3-8B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(string: str) -> int:\n    \"\"\" Given a string, find out how many characters (regardless of case) does it consist of\n    >>> candidate('xyzXYZ')\n    3\n    >>> candidate('Jerry')\n    4\n    \"\"\"\n\n\n\n**Additional Information:**\n\nThe character set used here is ASCII.\n\n**Problem:**\n\nWrite a Python function to count the number of unique characters in a given string.\n\n**Input format:**\n\n*   The input is a string.\n*   The string contains only ASCII characters.\n*   The string may contain spaces.\n\n**Output format:**\n\n*   The output is an integer representing the number of unique characters in the given string.\n\nExample usage and expected output are provided in the problem description and in the code block respectively. Generate Python3 code to solve this problem.  ````python\n```python\n```\n```python\n```\n```python\n```  |  [Code Only]\n---|---\n```python\ndef candidate(string: str) -> int:\n    return len(set(string.lower()))\n```python\n```  |  [Code Only]\n````\n\nI hope it is correct. Let me know if I need to make any changes.",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "`python",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 51.5485200881958,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

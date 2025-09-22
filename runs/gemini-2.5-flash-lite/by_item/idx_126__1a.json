@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_126::1a::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_126",
+  "category": "1a",
+  "entry_point": "is_sorted",
+  "prompt_field": "prompt1a",
+  "prompt_text": "\ndef candidate(lst):\n    '''\n    Given a list of numbers, return whether or not they are sorted\n    in a specific order. If list has certain duplicate of the same\n    number, return False. Assume no negative numbers and only integers.\n\n    Examples\n    candidate([5]) ➞ True\n    candidate([1, 2, 3, 4, 5]) ➞ True\n    candidate([1, 3, 2, 4, 5]) ➞ False\n    candidate([1, 2, 3, 4, 5, 6]) ➞ True\n    candidate([1, 2, 3, 4, 5, 6, 7]) ➞ True\n    candidate([1, 3, 2, 4, 5, 6, 7]) ➞ False\n    candidate([1, 2, 2, 3, 3, 4]) ➞ True\n    candidate([1, 2, 2, 2, 3, 4]) ➞ False\n    '''\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(lst):\n    '''\n    Given a list of numbers, return whether or not they are sorted\n    in a specific order. If list has certain duplicate of the same\n    number, return False. Assume no negative numbers and only integers.\n\n    Examples\n    candidate([5]) ➞ True\n    candidate([1, 2, 3, 4, 5]) ➞ True\n    candidate([1, 3, 2, 4, 5]) ➞ False\n    candidate([1, 2, 3, 4, 5, 6]) ➞ True\n    candidate([1, 2, 3, 4, 5, 6, 7]) ➞ True\n    candidate([1, 3, 2, 4, 5, 6, 7]) ➞ False\n    candidate([1, 2, 2, 3, 3, 4]) ➞ True\n    candidate([1, 2, 2, 2, 3, 4]) ➞ False\n    '''",
+  "prompt_sha256": "6654597e5990da7eaa9994c9c53a3670124e5bf681546a401c87ef2f23878a39",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef candidate(lst):\n    '''\n    Given a list of numbers, return whether or not they are sorted\n    in a specific order. If list has certain duplicate of the same\n    number, return False. Assume no negative numbers and only integers.\n\n    Examples\n    candidate([5]) ➞ True\n    candidate([1, 2, 3, 4, 5]) ➞ True\n    candidate([1, 3, 2, 4, 5]) ➞ False\n    candidate([1, 2, 3, 4, 5, 6]) ➞ True\n    candidate([1, 2, 3, 4, 5, 6, 7]) ➞ True\n    candidate([1, 3, 2, 4, 5, 6, 7]) ➞ False\n    candidate([1, 2, 2, 3, 3, 4]) ➞ True\n    candidate([1, 2, 2, 2, 3, 4]) ➞ False\n    '''\n    n = len(lst)\n    if n <= 1:\n",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def candidate(lst):\n    '''\n    Given a list of numbers, return whether or not they are sorted\n    in a specific order. If list has certain duplicate of the same\n    number, return False. Assume no negative numbers and only integers.\n\n    Examples\n    candidate([5]) ➞ True\n    candidate([1, 2, 3, 4, 5]) ➞ True\n    candidate([1, 3, 2, 4, 5]) ➞ False\n    candidate([1, 2, 3, 4, 5, 6]) ➞ True\n    candidate([1, 2, 3, 4, 5, 6, 7]) ➞ True\n    candidate([1, 3, 2, 4, 5, 6, 7]) ➞ False\n    candidate([1, 2, 2, 3, 3, 4]) ➞ True\n    candidate([1, 2, 2, 2, 3, 4]) ➞ False\n    '''\n    n = len(lst)\n    if n <= 1:",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 1.1811976432800293,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

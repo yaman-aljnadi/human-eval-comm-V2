@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_140::2ap::andrijdavid/Meta-Llama-3-13B-Instruct::seed0",
+  "task_id": "idx_140",
+  "category": "2ap",
+  "entry_point": "fix_spaces",
+  "prompt_field": "prompt2ap",
+  "prompt_text": "\ndef fix_spaces(text):\n    \"\"\"\n    Given a string text, replace all spaces in it with underscores, \n    and if a string has certain consecutive spaces, \n    then \n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef fix_spaces(text):\n    \"\"\"\n    Given a string text, replace all spaces in it with underscores, \n    and if a string has certain consecutive spaces, \n    then \n    \"\"\"",
+  "prompt_sha256": "6b5873a717fbf339c86dedaab92c6b4bde123cc6aa56adfe441843155e06bfc4",
+  "model_name": "andrijdavid/Meta-Llama-3-13B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef fix_spaces(text):\n    \"\"\"\n    Given a string text, replace all spaces in it with underscores, \n    and if a string has certain consecutive spaces, \n    then \n    \"\"\"ạ\n\n<!--please fill-in the rest of the code description-->\r\nstederical spaces-->\n    return textisetef\r\r\n�数ical spaces-->\n    return textisetef\r\r\n�数ical spaces-->\n    return textisetef\r\r\n�数ical spaces-->\n    return textisetef\r\r\n�数ical spaces-->\n    return textisetef\r\r\n�数ical spaces-->\n    return textisetef\r\r\n�数ical spaces-->\n    return textisetef\r\r\n�数ical spaces-->\n    return textisetef\r\r\n�数ical spaces-->\n    return textisetef\r\r\n�数ical spaces-->\n    return textisetef\r\r\n�数ical spaces]]>�数ical spaces]]>�数ical spaces]]>�数ical spaces]]>�数ical spaces]]>�数ical spaces]]>�数ical spaces]]>�数ical spaces]]>�数ical spaces]]>�数ical spaces]]>�数ical spaces]]>�数ical spaces]]>�数ical spaces]]>�数ical spaces]]>�数ical spaces]]>�数ical spaces]]>�数ical spaces]]>�数ical spaces]]>�数ical spaces]]>�数ical spaces]]>�数ical spaces]]�数ical spaces]]>�数ical spaces]]>�数ical spaces]]>�数ical spaces]]�数ical spaces]]>�数ical spaces]]>�数ical spaces]]�数ical spaces]]�数ical spaces]]>�数ical spaces]]>�数ical spaces]]>�数ical spaces]]�数ical spaces]]>�数ical spaces]]�数ical spaces",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def fix_spaces(text):\n    \"\"\"\n    Given a string text, replace all spaces in it with underscores, \n    and if a string has certain consecutive spaces, \n    then \n    \"\"\"ạ\n\n<!--please fill-in the rest of the code description-->\nstederical spaces-->\n    return textisetef\n\n�数ical spaces-->\n    return textisetef\n\n�数ical spaces-->\n    return textisetef\n\n�数ical spaces-->\n    return textisetef\n\n�数ical spaces-->\n    return textisetef\n\n�数ical spaces-->\n    return textisetef\n\n�数ical spaces-->\n    return textisetef\n\n�数ical spaces-->\n    return textisetef\n\n�数ical spaces-->\n    return textisetef\n\n�数ical spaces-->\n    return textisetef\n\n�数ical spaces]]>�数ical spaces]]>�数ical spaces]]>�数ical spaces]]>�数ical spaces]]>�数ical spaces]]>�数ical spaces]]>�数ical spaces]]>�数ical spaces]]>�数ical spaces]]>�数ical spaces]]>�数ical spaces]]>�数ical spaces]]>�数ical spaces]]>�数ical spaces]]>�数ical spaces]]>�数ical spaces]]>�数ical spaces]]>�数ical spaces]]>�数ical spaces]]>�数ical spaces]]�数ical spaces]]>�数ical spaces]]>�数ical spaces]]>�数ical spaces]]�数ical spaces]]>�数ical spaces]]>�数ical spaces]]�数ical spaces]]�数ical spaces]]>�数ical spaces]]>�数ical spaces]]>�数ical spaces]]�数ical spaces]]>�数ical spaces]]�数ical spaces",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 90.15936756134033,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_69::2ac::meta-llama/Meta-Llama-3-8B-Instruct::seed0",
+  "task_id": "idx_69",
+  "category": "2ac",
+  "entry_point": "search",
+  "prompt_field": "prompt2ac",
+  "prompt_text": "\ndef search(lst):\n    '''\n    You are given a non-empty list of positive integers. Return the smallest or greatest integer that is greater than \n    zero, and has a frequency similar to the value of the integer itself. \n    The frequency of an integer is the number of times it appears in the list.\n    If no such a value exist, return -1.\n    Examples:\n        search([4, 1, 2, 2, 3, 1]) == 4\n        search([1, 2, 2, 3, 3, 3, 4, 4, 4]) == 4\n        search([5, 5, 4, 4, 4]) == 5\n    '''\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef search(lst):\n    '''\n    You are given a non-empty list of positive integers. Return the smallest or greatest integer that is greater than \n    zero, and has a frequency similar to the value of the integer itself. \n    The frequency of an integer is the number of times it appears in the list.\n    If no such a value exist, return -1.\n    Examples:\n        search([4, 1, 2, 2, 3, 1]) == 4\n        search([1, 2, 2, 3, 3, 3, 4, 4, 4]) == 4\n        search([5, 5, 4, 4, 4]) == 5\n    '''",
+  "prompt_sha256": "a0aa1139de5e789ff0c4aa22156207e8f4cdd3a2a22cc42f26b58a0594a1afd0",
+  "model_name": "meta-llama/Meta-Llama-3-8B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef search(lst):\n    '''\n    You are given a non-empty list of positive integers. Return the smallest or greatest integer that is greater than \n    zero, and has a frequency similar to the value of the integer itself. \n    The frequency of an integer is the number of times it appears in the list.\n    If no such a value exist, return -1.\n    Examples:\n        search([4, 1, 2, 2, 3, 1]) == 4\n        search([1, 2, 2, 3, 3, 3, 4, 4, 4]) == 4\n        search([5, 5, 4, 4, 4]) == 5\n    '''\n\n\n\n### Python3 solution\n```python\ndef search(lst):\n    freqs = {}\n    for i in set(lst):\n        freqs[i] = lst.count(i)\n    for i in sorted(freqs.keys()):\n        if i > 0 and i == sorted(freqs.values()):\n            return i\n    return -1\n```  ```   ```\n\nThis code works by first creating a dictionary where the keys are unique numbers in the list and the values are their frequencies. Then, it iterates over the keys (sorted in ascending order) and checks if a number is greater than 0 and has a frequency that matches its value. If such a number is found, it is returned immediately. If no such a number is found, it returns -1.  ```\n\n```\n\n```python\nfor i in sorted(freqs.keys()):\n    if i > 0 and i == sorted(freqs.values()):\n        return i\n```\n\nIn this code, `sorted(freqs.keys())` iterates over the unique numbers in the list and `sorted(freqs.values())` iterates over the frequencies of these numbers. If at any point, a number is found where both `i` (the number) and `sorted(freqs.values())` (the",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def search(lst):\n    freqs = {}\n    for i in set(lst):\n        freqs[i] = lst.count(i)\n    for i in sorted(freqs.keys()):\n        if i > 0 and i == sorted(freqs.values()):\n            return i\n    return -1",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 67.11634635925293,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_158::1c::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_158",
+  "category": "1c",
+  "entry_point": "find_max",
+  "prompt_field": "prompt1c",
+  "prompt_text": "\ndef find_max(words):\n    \"\"\"Write a function that accepts a list of strings.\n    The list contains different words. Return the word with maximum number\n    of unique characters. If multiple strings have maximum number of unique\n    characters, return the one which comes first in lexicographical order.\n\n    find_max([\"name\", \"of\", \"string\"]) == \"of\"\n    find_max([\"name\", \"enam\", \"game\"]) == \"name\"\n    find_max([\"aaaaaaa\", \"bb\" ,\"cc\"]) == \"\"bb\"\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef find_max(words):\n    \"\"\"Write a function that accepts a list of strings.\n    The list contains different words. Return the word with maximum number\n    of unique characters. If multiple strings have maximum number of unique\n    characters, return the one which comes first in lexicographical order.\n\n    find_max([\"name\", \"of\", \"string\"]) == \"of\"\n    find_max([\"name\", \"enam\", \"game\"]) == \"name\"\n    find_max([\"aaaaaaa\", \"bb\" ,\"cc\"]) == \"\"bb\"\n    \"\"\"",
+  "prompt_sha256": "dfe06efb50d9a28b5da15cdd9955914bebc9877709bbfbee3909c67630cdf08d",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef find_max(words):\n    \"\"\"Write a function that accepts a list of strings.\n    The list contains different words. Return the word with maximum number\n    of unique characters. If multiple strings have maximum number of unique\n    characters, return the one which comes first in lexicographical order.\n\n    find_max([\"name\", \"of\", \"string\"]) == \"of\"\n    find_max([\"name\", \"enam\", \"game\"]) == \"name\"\n    find_max([\"aaaaaaa\", \"bb\" ,\"cc\"]) == \"bb\"\n    \"\"\"\n    max_unique_count = -1\n    result_word = \"\"\n\n    for word in words:\n        unique_chars = set(word)\n        current_unique_count = len(unique_chars)\n\n        if current_unique_count > max_unique_count:\n            max_unique_count = current_unique_count\n            result_word = word\n        elif current_unique_count == max_unique_count:\n            if word < result_word:\n                result_word = word\n    \n    # Handle the case where the input list is empty or all words",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def find_max(words):\n    \"\"\"Write a function that accepts a list of strings.\n    The list contains different words. Return the word with maximum number\n    of unique characters. If multiple strings have maximum number of unique\n    characters, return the one which comes first in lexicographical order.\n\n    find_max([\"name\", \"of\", \"string\"]) == \"of\"\n    find_max([\"name\", \"enam\", \"game\"]) == \"name\"\n    find_max([\"aaaaaaa\", \"bb\" ,\"cc\"]) == \"bb\"\n    \"\"\"\n    max_unique_count = -1\n    result_word = \"\"\n\n    for word in words:\n        unique_chars = set(word)\n        current_unique_count = len(unique_chars)\n\n        if current_unique_count > max_unique_count:\n            max_unique_count = current_unique_count\n            result_word = word\n        elif current_unique_count == max_unique_count:\n            if word < result_word:\n                result_word = word\n    \n    # Handle the case where the input list is empty or all words",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 1.3015375137329102,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

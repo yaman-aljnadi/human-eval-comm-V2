@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_60::2ac::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_60",
+  "category": "2ac",
+  "entry_point": "sum_to_n",
+  "prompt_field": "prompt2ac",
+  "prompt_text": "\n\ndef candidate(n: int):\n    \"\"\"candidate is a function that sums up all numbers.\n    >>> candidate(30)\n    465\n    >>> candidate(100)\n    10100\n    >>> candidate(5)\n    30\n    >>> candidate(10)\n    110\n    >>> candidate(1)\n    2\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(n: int):\n    \"\"\"candidate is a function that sums up all numbers.\n    >>> candidate(30)\n    465\n    >>> candidate(100)\n    10100\n    >>> candidate(5)\n    30\n    >>> candidate(10)\n    110\n    >>> candidate(1)\n    2\n    \"\"\"",
+  "prompt_sha256": "0624edb4d1e6874feaa997f7c74d93d5732d5ed902731670c5bc795acf104dd0",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef candidate(n: int):\n    \"\"\"candidate is a function that sums up all numbers.\n    >>> candidate(30)\n    465\n    >>> candidate(100)\n    10100\n    >>> candidate(5)\n    30\n    >>> candidate(10)\n    110\n    >>> candidate(1)\n    2\n    \"\"\"\n    return n * (n + 1) // 2 + n\n```",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def candidate(n: int):\n    \"\"\"candidate is a function that sums up all numbers.\n    >>> candidate(30)\n    465\n    >>> candidate(100)\n    10100\n    >>> candidate(5)\n    30\n    >>> candidate(10)\n    110\n    >>> candidate(1)\n    2\n    \"\"\"\n    return n * (n + 1) // 2 + n",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 0.9146847724914551,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

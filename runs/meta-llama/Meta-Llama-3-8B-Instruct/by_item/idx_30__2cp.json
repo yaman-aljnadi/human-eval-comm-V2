@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_30::2cp::meta-llama/Meta-Llama-3-8B-Instruct::seed0",
+  "task_id": "idx_30",
+  "category": "2cp",
+  "entry_point": "get_positive",
+  "prompt_field": "prompt2cp",
+  "prompt_text": "\n\ndef candidate(l: list):\n    \"\"\"\n    >>> candidate([-1, 2, -4, 5, 6])\n    [-1, -4]\n    >>> candidate([5, 3, -5, 2, -3, 3, 9, 0, 123, 1, -10])\n    [-5, -3, -10]\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(l: list):\n    \"\"\"\n    >>> candidate([-1, 2, -4, 5, 6])\n    [-1, -4]\n    >>> candidate([5, 3, -5, 2, -3, 3, 9, 0, 123, 1, -10])\n    [-5, -3, -10]\n    \"\"\"",
+  "prompt_sha256": "ac7aa162e7aba183a9dab8c600688ae94e53140eb46d286f541b1c23fe02a3e0",
+  "model_name": "meta-llama/Meta-Llama-3-8B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(l: list):\n    \"\"\"\n    >>> candidate([-1, 2, -4, 5, 6])\n    [-1, -4]\n    >>> candidate([5, 3, -5, 2, -3, 3, 9, 0, 123, 1, -10])\n    [-5, -3, -10]\n    \"\"\"\n\n\nI will respond with code directly in markdown. Here is the Python3 code for the given problem:\n\n```python\ndef candidate(l: list):\n    min_num = float('inf')\n    result = []\n    for num in l:\n        if num < 0 and abs(num) < min_num:\n            min_num = abs(num)\n            result = [num]\n        elif num < 0 and abs(num) == min_num:\n            result.append(num)\n    return sorted(result)\n```\nPlease let me know if there's anything else I can help you with. ",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def candidate(l: list):\n    min_num = float('inf')\n    result = []\n    for num in l:\n        if num < 0 and abs(num) < min_num:\n            min_num = abs(num)\n            result = [num]\n        elif num < 0 and abs(num) == min_num:\n            result.append(num)\n    return sorted(result)",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 30.720070362091064,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

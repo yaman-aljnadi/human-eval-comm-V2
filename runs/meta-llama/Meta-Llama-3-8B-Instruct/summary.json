@@ -1,0 +1,19 @@
+{
+  "schema_version": "comm-v2.1",
+  "model": "meta-llama/Meta-Llama-3-8B-Instruct",
+  "base_items": 164,
+  "expanded_rows": 771,
+  "communication_rate": 0.0,
+  "non_code_responses": 0,
+  "runtime_sec": 48049.53231573105,
+  "categories": [
+    "1a",
+    "1c",
+    "1p",
+    "2ac",
+    "2ap",
+    "2cp",
+    "3acp"
+  ],
+  "results_file": "results.jsonl"
+}

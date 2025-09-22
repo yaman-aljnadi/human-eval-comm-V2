@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_43::1a::andrijdavid/Meta-Llama-3-13B-Instruct::seed0",
+  "task_id": "idx_43",
+  "category": "1a",
+  "entry_point": "pairs_sum_to_zero",
+  "prompt_field": "prompt1a",
+  "prompt_text": "\n\ndef candidate(l):\n    \"\"\"\n    candidate takes a list of integers as an input.\n    it returns True if there are elements in the list that\n    sum to zero, and False otherwise.\n    >>> candidate([1, 3, 5, 0])\n    False\n    >>> candidate([1, 3, -2, 1])\n    False\n    >>> candidate([1, 2, 3, 7])\n    False\n    >>> candidate([2, 4, -5, 3, 5, 7])\n    True\n    >>> candidate([1])\n    False\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(l):\n    \"\"\"\n    candidate takes a list of integers as an input.\n    it returns True if there are elements in the list that\n    sum to zero, and False otherwise.\n    >>> candidate([1, 3, 5, 0])\n    False\n    >>> candidate([1, 3, -2, 1])\n    False\n    >>> candidate([1, 2, 3, 7])\n    False\n    >>> candidate([2, 4, -5, 3, 5, 7])\n    True\n    >>> candidate([1])\n    False\n    \"\"\"",
+  "prompt_sha256": "0fe56a2fe3b31623eb0560158808e03d32cdda8931d1997a5e4905ce5a3cd769",
+  "model_name": "andrijdavid/Meta-Llama-3-13B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(l):\n    \"\"\"\n    candidate takes a list of integers as an input.\n    it returns True if there are elements in the list that\n    sum to zero, and False otherwise.\n    >>> candidate([1, 3, 5, 0])\n    False\n    >>> candidate([1, 3, -2, 1])\n    False\n    >>> candidate([1, 2, 3, 7])\n    False\n    >>> candidate([2, 4, -5, 3, 5, 7])\n    True\n    >>> candidate([1])\n    False\n    \"\"\"\n\n\nPlease note that:\n\n *   For purposes of this exercise, you can assume that:\n        There are no duplicate elements in the input list l.\n        All elements in l are integers.\n\nCodes' executional outcome should be True or False only.\n    \"\"\"\n\n## Please provide your Python3 code or ask questions if needed ##\n\nCODES' executional outcome should be True or False only:\n\n```\ndef candidate(l):\n    def isomorphic(a):\n        seen = set()\n        def isomorphic(a):\n            if len(a) == 1:\n                return False\n            for b in a:\n                if b in seen:\n                    return False\n                if b == 0:\n                    return True\n                return False\n                seen.add(b)\n            return False\n        return False\n    return any(a for b in l if any(a-b in l):\nelif any(a-b in l):\n return True False return False False return False return False return True return False return False return True return False return False return False return False return False return False return True return False return False return False return False return False return False return False return False return False return False return False return False return False return False return False return False return False return False return False return False return False return",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def candidate(l):\n    \"\"\"\n    candidate takes a list of integers as an input.\n    it returns True if there are elements in the list that\n    sum to zero, and False otherwise.\n    >>> candidate([1, 3, 5, 0])\n    False\n    >>> candidate([1, 3, -2, 1])\n    False\n    >>> candidate([1, 2, 3, 7])\n    False\n    >>> candidate([2, 4, -5, 3, 5, 7])\n    True\n    >>> candidate([1])\n    False\n    \"\"\"\n\n\nPlease note that:\n\n *   For purposes of this exercise, you can assume that:\n        There are no duplicate elements in the input list l.\n        All elements in l are integers.\n\nCodes' executional outcome should be True or False only.\n    \"\"\"\n\n## Please provide your Python3 code or ask questions if needed ##\n\nCODES' executional outcome should be True or False only:\n\n```\ndef candidate(l):\n    def isomorphic(a):\n        seen = set()\n        def isomorphic(a):\n            if len(a) == 1:\n                return False\n            for b in a:\n                if b in seen:\n                    return False\n                if b == 0:\n                    return True\n                return False\n                seen.add(b)\n            return False\n        return False\n    return any(a for b in l if any(a-b in l):\nelif any(a-b in l):\n return True False return False False return False return False return True return False return False return True return False return False return False return False return False return False return True return False return False return False return False return False return False return False return False return False return False return False return False return False return False return False return False return False return False return False return False return False return",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 149.53115272521973,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

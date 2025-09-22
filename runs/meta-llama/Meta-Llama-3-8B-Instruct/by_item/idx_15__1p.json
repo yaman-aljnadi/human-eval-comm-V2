@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_15::1p::meta-llama/Meta-Llama-3-8B-Instruct::seed0",
+  "task_id": "idx_15",
+  "category": "1p",
+  "entry_point": "string_sequence",
+  "prompt_field": "prompt1p",
+  "prompt_text": "\n\ndef string_sequence(n: int) -> str:\n    \"\"\" Return a string containing space-delimited numbers.\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef string_sequence(n: int) -> str:\n    \"\"\" Return a string containing space-delimited numbers.",
+  "prompt_sha256": "63f7d0ed674f7d6595183ddd39eda4079d8c7095e4e52942815f06ff22afc522",
+  "model_name": "meta-llama/Meta-Llama-3-8B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef string_sequence(n: int) -> str:\n    \"\"\" Return a string containing space-delimited numbers. \"\"\"\n    return \"\".join(map(str, range(1, n+1))))\n```\n1. **Task description**: Create a new function `string_sequence` that takes an integer `n` as input and returns a string containing space-delimited numbers from 1 to `n`.\n\n**Example output for n=5:**\n```\n\"1 2 3 4 5\"\n```\n**Example output for n=3:**\n```\n\"1 2 3\"\n```\n**Constraints**:\n- The function will be called with integers between 1 and 100 (inclusive).\n- The input value `n` will always be a positive integer.\n2. **Additional requirements**:\n- Your function should be able to handle large input values (up to 100).\n- It must work correctly for any positive integer `n` within the specified range.\n\nHere is an example of how the function could be called and the expected output: `print(string_sequence(5))` should return the string `\"1 2 3 4 5\"`.\n\n**Your code should be efficient and handle the large input values correctly.** Please note that it's not necessary to implement extra error-checking logic for invalid inputs (like non-positive integers) as",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "1. **Task description**: Create a new function `string_sequence` that takes an integer `n` as input and returns a string containing space-delimited numbers from 1 to `n`.\n\n**Example output for n=5:**",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 66.9900872707367,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

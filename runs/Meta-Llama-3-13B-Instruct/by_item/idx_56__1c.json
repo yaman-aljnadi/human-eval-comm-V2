@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_56::1c::andrijdavid/Meta-Llama-3-13B-Instruct::seed0",
+  "task_id": "idx_56",
+  "category": "1c",
+  "entry_point": "correct_bracketing",
+  "prompt_field": "prompt1c",
+  "prompt_text": "\n\ndef correct_bracketing(brackets: str):\n    \"\"\" brackets is a string of \"<\" and \">\".\n    return True if every opening bracket has a corresponding closing bracket.\n\n    >>> correct_bracketing(\"<\")\n    True\n    >>> correct_bracketing(\"<>\")\n    False\n    >>> correct_bracketing(\"<<><>>\")\n    False\n    >>> correct_bracketing(\"><<>\")\n    True\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef correct_bracketing(brackets: str):\n    \"\"\" brackets is a string of \"<\" and \">\".\n    return True if every opening bracket has a corresponding closing bracket.\n\n    >>> correct_bracketing(\"<\")\n    True\n    >>> correct_bracketing(\"<>\")\n    False\n    >>> correct_bracketing(\"<<><>>\")\n    False\n    >>> correct_bracketing(\"><<>\")\n    True\n    \"\"\"",
+  "prompt_sha256": "39a4060bda22f7007e9959e897b76c4bccd834056f20977ce1a6941784b35a40",
+  "model_name": "andrijdavid/Meta-Llama-3-13B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef correct_bracketing(brackets: str):\n    \"\"\" brackets is a string of \"<\" and \">\".\n    return True if every opening bracket has a corresponding closing bracket.\n\n    >>> correct_bracketing(\"<\")\n    True\n    >>> correct_bracketing(\"<>\")\n    False\n    >>> correct_bracketing(\"<<><>>\")\n    False\n    >>> correct_bracketing(\"><<>\")\n    True\n    \"\"\"\n\n\nplease provide Python3 code below:\n\ndef correct_bracketing brackety:\n    stack = []\n    for character in brackety:\n        if character ==]:\n            stack.appendcharacter]\n        else:\n            if stack:\n                stack.popcharacter]\n        return stackempty]\n\n please provide code below:\n\nAnswering clarifying questions:\n\n1. What do you mean by \"corresponding closing bracket\"?\n2. How do you handle situations where there are no closing bracket?\n\n please provide Python3 code below:\n```python\ndef correct Brcketing brcketing:\n    stack = []\n    for char in brcketing:\n        if char ==']:\n            stack.append(char)\n        else:\n            if stack:\n                stack.pop(char)\n        return stackempty()\n```gagefully await your response```gagefullyawaityour response ```\ngagefullyawaityour response```\ngagefully await your response ```\n\n Please provide Python3 code below:\n\n StackEmptyStack stack Stack stack stack Stack stack stack stack stack stack stack stack stack stack stack stack stack stack stack stack stack stack Stack Stack stack stack stack stack stack stack stack stack Stack stack stack stack stack stack stack stack Stack stack stack Stack stack stack stack stack Stack Stack stack Stack stack stack stack stack Stack stack stack stack stack Stack stack Stack",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def correct Brcketing brcketing:\n    stack = []\n    for char in brcketing:\n        if char ==']:\n            stack.append(char)\n        else:\n            if stack:\n                stack.pop(char)\n        return stackempty()",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 89.32776069641113,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

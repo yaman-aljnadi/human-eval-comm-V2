@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_150::2cp::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_150",
+  "category": "2cp",
+  "entry_point": "x_or_y",
+  "prompt_field": "prompt2cp",
+  "prompt_text": "\ndef x_or_y(n, x, y):\n    \"\"\"\n    Examples:\n    for x_or_y(7, 34, 12) == 12\n    for x_or_y(15, 8, 5) == 8\n    \n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef x_or_y(n, x, y):\n    \"\"\"\n    Examples:\n    for x_or_y(7, 34, 12) == 12\n    for x_or_y(15, 8, 5) == 8\n    \n    \"\"\"",
+  "prompt_sha256": "f91f3f1dbfb0465bcc674aed58d6cce6a0d219a1767b9252e81d303d56eded66",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef x_or_y(n, x, y):\n    \"\"\"\n    Given a non-negative integer n, and two integers x and y,\n    return x if the number of set bits in the binary representation of n is even,\n    and return y if the number of set bits in the binary representation of n is odd.\n\n    Examples:\n    for x_or_y(7, 34, 12) == 12\n    for x_or_y(15, 8, 5) == 8\n\n    \"\"\"\n    set_bits = bin(n).count('1')\n    if set_bits % 2 == 0:\n        return x\n    else:\n        return y\n```",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def x_or_y(n, x, y):\n    \"\"\"\n    Given a non-negative integer n, and two integers x and y,\n    return x if the number of set bits in the binary representation of n is even,\n    and return y if the number of set bits in the binary representation of n is odd.\n\n    Examples:\n    for x_or_y(7, 34, 12) == 12\n    for x_or_y(15, 8, 5) == 8\n\n    \"\"\"\n    set_bits = bin(n).count('1')\n    if set_bits % 2 == 0:\n        return x\n    else:\n        return y",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 1.2128312587738037,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

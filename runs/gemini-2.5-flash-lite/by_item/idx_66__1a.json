@@ -1,0 +1,36 @@
+{
+  "record_id": "idx_66::1a::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_66",
+  "category": "1a",
+  "entry_point": "digitSum",
+  "prompt_field": "prompt1a",
+  "prompt_text": "\ndef digitSum(s):\n    \"\"\"Task\n    Write a function that takes a string as input and returns the sum of the number of upper characters.\n\n    Examples:\n        digitSum(\"\") => 0\n        digitSum(\"abAB\") => 131\n        digitSum(\"abcCd\") => 67\n        digitSum(\"helloE\") => 69\n        digitSum(\"woArBld\") => 131\n        digitSum(\"aAaaaXa\") => 153\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef digitSum(s):\n    \"\"\"Task\n    Write a function that takes a string as input and returns the sum of the number of upper characters.\n\n    Examples:\n        digitSum(\"\") => 0\n        digitSum(\"abAB\") => 131\n        digitSum(\"abcCd\") => 67\n        digitSum(\"helloE\") => 69\n        digitSum(\"woArBld\") => 131\n        digitSum(\"aAaaaXa\") => 153\n    \"\"\"",
+  "prompt_sha256": "8d9b0b7da59f01f767dccb5a825207c6788465964615bd3cb75474ab93e9b5b2",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "Based on the provided examples, the `digitSum` function does not seem to be summing the *number* of uppercase characters. Instead, it appears to be summing the ASCII values of the uppercase characters.\n\nFor example:\n*   `digitSum(\"abAB\") => 131`\n    *   'A' has an ASCII value of 65.\n    *   'B' has an ASCII value of 66.\n    *   65 + 66 = 131\n\n*   `digitSum(\"abcCd\") => 67`\n    *   'C' has an ASCII value of 67.\n\n*   `digitSum(\"helloE\") => 69`\n    *   'E' has an ASCII value of 69.\n\nIf this interpretation is correct, the description \"returns the sum of the number of upper characters\" is misleading.\n\nCould you please confirm if the task is indeed to sum the ASCII values of uppercase characters, or if there's a different logic involved?",
+  "gen_raw": {},
+  "contains_code": false,
+  "code_detected_method": "none",
+  "extracted_code": null,
+  "is_question": true,
+  "extracted_questions": [
+    "Based on the provided examples, the `digitSum` function does not seem to be summing the *number* of uppercase characters. Instead, it appears to be summing the ASCII values of the uppercase characters.\n\nFor example:\n*   `digitSum(\"abAB\") => 131`\n    *   'A' has an ASCII value of 65.\n    *   'B' has an ASCII value of 66.\n    *   65 + 66 = 131\n\n*   `digitSum(\"abcCd\") => 67`\n    *   'C' has an ASCII value of 67.\n\n*   `digitSum(\"helloE\") => 69`\n    *   'E' has an ASCII value of 69.\n\nIf this interpretation is correct, the description \"returns the sum of the number of upper characters\" is misleading.\n\nCould you please confirm if the task is indeed to sum the ASCII values of uppercase characters, or if there's a different logic involved?",
+    "Could you please confirm if the task is indeed to sum the ASCII values of uppercase characters, or if there's a different logic involved?"
+  ],
+  "question_count": 2,
+  "first_question": "Based on the provided examples, the `digitSum` function does not seem to be summing the *number* of uppercase characters. Instead, it appears to be summing the ASCII values of the uppercase characters.\n\nFor example:\n*   `digitSum(\"abAB\") => 131`\n    *   'A' has an ASCII value of 65.\n    *   'B' has an ASCII value of 66.\n    *   65 + 66 = 131\n\n*   `digitSum(\"abcCd\") => 67`\n    *   'C' has an ASCII value of 67.\n\n*   `digitSum(\"helloE\") => 69`\n    *   'E' has an ASCII value of 69.\n\nIf this interpretation is correct, the description \"returns the sum of the number of upper characters\" is misleading.\n\nCould you please confirm if the task is indeed to sum the ASCII values of uppercase characters, or if there's a different logic involved?",
+  "question_chars": 877,
+  "latency_sec": 1.6393449306488037,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

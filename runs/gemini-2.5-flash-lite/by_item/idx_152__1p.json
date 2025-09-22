@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_152::1p::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_152",
+  "category": "1p",
+  "entry_point": "compare",
+  "prompt_field": "prompt1p",
+  "prompt_text": "\ndef compare(game,guess):\n    \"\"\"I think we all remember that feeling when the result of some long-awaited\n    event is finally known. The feelings and thoughts you have at that moment are\n    definitely worth noting down and comparing.\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef compare(game,guess):\n    \"\"\"I think we all remember that feeling when the result of some long-awaited\n    event is finally known. The feelings and thoughts you have at that moment are\n    definitely worth noting down and comparing.\n    \"\"\"",
+  "prompt_sha256": "46a58871e8d5990e0923e8c813cb89b8d4a3903b96d3c4174a90cd4157325964",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef compare(game, guess):\n    \"\"\"\n    Compares a 'game' value with a 'guess' value and returns a string\n    indicating whether the guess was too high, too low, or correct.\n\n    Args:\n        game: The correct or target value.\n        guess: The value being guessed.\n\n    Returns:\n        A string: \"too high\", \"too low\", or \"correct\".\n    \"\"\"\n    if guess > game:\n        return \"too high\"\n    elif guess < game:\n        return \"too low\"\n    else:\n        return \"correct\"\n```",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def compare(game, guess):\n    \"\"\"\n    Compares a 'game' value with a 'guess' value and returns a string\n    indicating whether the guess was too high, too low, or correct.\n\n    Args:\n        game: The correct or target value.\n        guess: The value being guessed.\n\n    Returns:\n        A string: \"too high\", \"too low\", or \"correct\".\n    \"\"\"\n    if guess > game:\n        return \"too high\"\n    elif guess < game:\n        return \"too low\"\n    else:\n        return \"correct\"",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 1.1142706871032715,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

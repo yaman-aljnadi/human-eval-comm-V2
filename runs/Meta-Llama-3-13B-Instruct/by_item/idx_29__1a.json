@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_29::1a::andrijdavid/Meta-Llama-3-13B-Instruct::seed0",
+  "task_id": "idx_29",
+  "category": "1a",
+  "entry_point": "filter_by_prefix",
+  "prompt_field": "prompt1a",
+  "prompt_text": "from typing import List\n\n\ndef candidate(strings: List[str], prefix: str) -> List[str]:\n    \"\"\" Filter an input list of strings only for ones that satisfy certain condition with a given prefix.\n    >>> candidate([], 'a')\n    []\n    >>> candidate(['abc', 'bcd', 'cde', 'array'], 'a')\n    ['abc', 'array']\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List\n\n\ndef candidate(strings: List[str], prefix: str) -> List[str]:\n    \"\"\" Filter an input list of strings only for ones that satisfy certain condition with a given prefix.\n    >>> candidate([], 'a')\n    []\n    >>> candidate(['abc', 'bcd', 'cde', 'array'], 'a')\n    ['abc', 'array']\n    \"\"\"",
+  "prompt_sha256": "57719aa8448608c060d553a6aa7e3d5d85cc992d5e5d03441d724b4bf5d19b09",
+  "model_name": "andrijdavid/Meta-Llama-3-13B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List\n\n\ndef candidate(strings: List[str], prefix: str) -> List[str]:\n    \"\"\" Filter an input list of strings only for ones that satisfy certain condition with a given prefix.\n    >>> candidate([], 'a')\n    []\n    >>> candidate(['abc', 'bcd', 'cde', 'array'], 'a')\n    ['abc', 'array']\n    \"\"\"\n\n\nplease provide Python3 code for the above problem statement:\nascoineso.github.io trademarked code contributions are subject to the terms and conditions of the MIT license agreementas follows:\n\n copyright noticesor equivalent notices have been removed from \nascoineso.github.io trademarked code contributionsas follows:\n\nascoineso.github.io trademarked code contributions are subject to \nascoineso.github.io terms and conditions agreementas follows:\n\nascoineso.github.io trademarked code contributions are subject to \nascoineso.github.io terms and conditions agreementas follows:\n\nascoineso.github.io trademarked code contributions are subject to \nascoineso.github.io terms and conditions agreementas follows:\n\nascoineso trademarked code contributions are subject to \nascoineso terms and conditions agreementas follows:\n\nascoineso trademarked code contributions are subject to \nascoineso terms and conditions agreementas follows:\n\nascoineso trademarked code contributions are subject to \nascoineso terms and conditions agreementas follows:\n\nascoineso trademarked code contributions are subject to \nascoineso terms and conditions agreementas follows:\n\nascoineso trademarked code contributions are subject to \nascoineso terms and conditions agreementas follows:\n\nascoineso trademarked code contributions are subject to \nascoineso terms and conditions agreement",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def candidate(strings: List[str], prefix: str) -> List[str]:\n    \"\"\" Filter an input list of strings only for ones that satisfy certain condition with a given prefix.\n    >>> candidate([], 'a')\n    []\n    >>> candidate(['abc', 'bcd', 'cde', 'array'], 'a')\n    ['abc', 'array']\n    \"\"\"\n\n\nplease provide Python3 code for the above problem statement:\nascoineso.github.io trademarked code contributions are subject to the terms and conditions of the MIT license agreementas follows:\n\n copyright noticesor equivalent notices have been removed from \nascoineso.github.io trademarked code contributionsas follows:\n\nascoineso.github.io trademarked code contributions are subject to \nascoineso.github.io terms and conditions agreementas follows:\n\nascoineso.github.io trademarked code contributions are subject to \nascoineso.github.io terms and conditions agreementas follows:\n\nascoineso.github.io trademarked code contributions are subject to \nascoineso.github.io terms and conditions agreementas follows:\n\nascoineso trademarked code contributions are subject to \nascoineso terms and conditions agreementas follows:\n\nascoineso trademarked code contributions are subject to \nascoineso terms and conditions agreementas follows:\n\nascoineso trademarked code contributions are subject to \nascoineso terms and conditions agreementas follows:\n\nascoineso trademarked code contributions are subject to \nascoineso terms and conditions agreementas follows:\n\nascoineso trademarked code contributions are subject to \nascoineso terms and conditions agreementas follows:\n\nascoineso trademarked code contributions are subject to \nascoineso terms and conditions agreement",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 91.339102268219,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_112::1p::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_112",
+  "category": "1p",
+  "entry_point": "reverse_delete",
+  "prompt_field": "prompt1p",
+  "prompt_text": "\ndef reverse_delete(s,c):\n    \"\"\"Task\n    We are given two strings s and c, you have to deleted all the characters in s that are equal to any character in c\n    then check if the result string is .\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef reverse_delete(s,c):\n    \"\"\"Task\n    We are given two strings s and c, you have to deleted all the characters in s that are equal to any character in c\n    then check if the result string is .\n    \"\"\"",
+  "prompt_sha256": "83234d20fd2167c76f7a547e8fce4fab5d079465eb38b55f41d0be872c5ee335",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef reverse_delete(s, c):\n    \"\"\"\n    Deletes all characters in s that are present in c and then checks if the\n    resulting string is a palindrome.\n\n    Args:\n        s: The input string to process.\n        c: A string containing characters to be deleted from s.\n\n    Returns:\n        True if the resulting string after deletion is a palindrome, False otherwise.\n    \"\"\"\n    chars_to_delete = set(c)\n    result_string = \"\".join([char for char in s if char not in chars_to_delete])\n    return result_string == result_string[::-1]\n\n```",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def reverse_delete(s, c):\n    \"\"\"\n    Deletes all characters in s that are present in c and then checks if the\n    resulting string is a palindrome.\n\n    Args:\n        s: The input string to process.\n        c: A string containing characters to be deleted from s.\n\n    Returns:\n        True if the resulting string after deletion is a palindrome, False otherwise.\n    \"\"\"\n    chars_to_delete = set(c)\n    result_string = \"\".join([char for char in s if char not in chars_to_delete])\n    return result_string == result_string[::-1]",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 2.0979275703430176,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

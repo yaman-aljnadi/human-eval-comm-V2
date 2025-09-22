@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_97::1p::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_97",
+  "category": "1p",
+  "entry_point": "multiply",
+  "prompt_field": "prompt1p",
+  "prompt_text": "\ndef multiply(a, b):\n    \"\"\"Complete the function that takes two integers and returns \n    the product of their.\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef multiply(a, b):\n    \"\"\"Complete the function that takes two integers and returns \n    the product of their.\n    \"\"\"",
+  "prompt_sha256": "01062be947493f1aaf51e1c7272a5ad206b8c742ec58a1231b9ff15e71473502",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef multiply(a, b):\n    \"\"\"Complete the function that takes two integers and returns \n    the product of their.\n    \"\"\"\n    return a * b\n```",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def multiply(a, b):\n    \"\"\"Complete the function that takes two integers and returns \n    the product of their.\n    \"\"\"\n    return a * b",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 0.6225314140319824,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

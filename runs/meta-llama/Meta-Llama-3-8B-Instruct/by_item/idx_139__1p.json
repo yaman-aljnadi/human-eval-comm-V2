@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_139::1p::meta-llama/Meta-Llama-3-8B-Instruct::seed0",
+  "task_id": "idx_139",
+  "category": "1p",
+  "entry_point": "special_factorial",
+  "prompt_field": "prompt1p",
+  "prompt_text": "\ndef special_factorial(n):\n    \"\"\"The Brazilian factorial is defined as:\n    brazilian_factorial(n) = \n   \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef special_factorial(n):\n    \"\"\"The Brazilian factorial is defined as:\n    brazilian_factorial(n) = \n   \"\"\"",
+  "prompt_sha256": "59ffcc3ad1d27a79bffc6843ef0d1643fdbe091ce7e2a8bebea43754cfd02e77",
+  "model_name": "meta-llama/Meta-Llama-3-8B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef special_factorial(n):\n    \"\"\"The Brazilian factorial is defined as:\n    brazilian_factorial(n) = \n   \"\"\"\n\n\n\n### What is the Brazilian factorial?\n\nThe Brazilian factorial, named after the country of its origin, is a unique mathematical operation that differs significantly from the traditional factorial. \n\nHere is the basic equation for calculating the Brazilian factorial:\n\nBrazilian_factorial(n) = 1 + 3! + 5! + 7! +... + (2*n+1)!\n\n\n\n### Python Implementation?\n\n```python\ndef special_factorial(n):\n    # code here\n```\n\n### Code Requirements\n\n1. Implement the Brazilian factorial function in Python.\n2. The function takes an integer `n` as input.\n3. Return the Brazilian factorial result for the given integer `n`.\n```\n```python\ndef special_factorial(n):\n    result = 1\n    for i in range(1, n+1):\n        if i % 2 == 1:\n            result += math.factorial(2*i+1)\n    return result\n``` ```\n\n\n\n\n\n1. Implement the Brazilian factorial function in Python.\n2. The function takes an integer `n` as input.\n3. Return the Brazilian factorial result for the given integer `n`.",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def special_factorial(n):\n    # code here",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 63.33693480491638,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

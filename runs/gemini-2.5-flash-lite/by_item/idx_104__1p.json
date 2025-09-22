@@ -1,0 +1,37 @@
+{
+  "record_id": "idx_104::1p::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_104",
+  "category": "1p",
+  "entry_point": "unique_digits",
+  "prompt_field": "prompt1p",
+  "prompt_text": "\ndef unique_digits(x):\n    \"\"\"Given a list of positive integers x. return a sorted list of all \n    elements that hasn't any.\n\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef unique_digits(x):\n    \"\"\"Given a list of positive integers x. return a sorted list of all \n    elements that hasn't any.\n\n    \"\"\"",
+  "prompt_sha256": "9b0e7704aa8b881ca3cf237fbd37f6f76f943c922a06aac513477ca519122a2e",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "The docstring for `unique_digits(x)` is a bit ambiguous. It says \"return a sorted list of all elements that hasn't any\". This could be interpreted in a few ways:\n\n1.  **Elements with unique digits:** Return numbers where all their digits are distinct (e.g., 123, 4567).\n2.  **Elements with *no* repeated digits:** This is the same as interpretation 1.\n3.  **Elements that *don't have* a specific property:** The phrasing \"hasn't any\" is unusual. It might be a typo and intended to be \"hasn't any *repeated* digits\".\n\nGiven the function name `unique_digits`, the most probable intention is to find numbers where all their constituent digits are unique.\n\nTo clarify, could you please confirm if the function should:\n\n*   **Return numbers where each digit within the number is unique (e.g., 123, 901)?**\n*   **Or does \"hasn't any\" refer to something else entirely?**\n\nOnce this is clarified, I can provide the Python3 code.",
+  "gen_raw": {},
+  "contains_code": false,
+  "code_detected_method": "none",
+  "extracted_code": null,
+  "is_question": true,
+  "extracted_questions": [
+    "**\n*   **Or does \"hasn't any\" refer to something else entirely?",
+    "**\n\nOnce this is clarified, I can provide the Python3 code.?",
+    ", 123, 901)?"
+  ],
+  "question_count": 3,
+  "first_question": "**\n*   **Or does \"hasn't any\" refer to something else entirely?",
+  "question_chars": 135,
+  "latency_sec": 1.9139914512634277,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

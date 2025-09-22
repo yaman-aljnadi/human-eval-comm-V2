@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_95::1a::meta-llama/Meta-Llama-3-8B-Instruct::seed0",
+  "task_id": "idx_95",
+  "category": "1a",
+  "entry_point": "check_dict_case",
+  "prompt_field": "prompt1a",
+  "prompt_text": "\ndef check_dict_case(dict):\n    \"\"\"\n    Given a dictionary, return True if some or all keys are strings in lower \n    case or some or all keys are strings in upper case, else return False.\n    The function should return False is the given dictionary is empty.\n    Examples:\n    check_dict_case({\"a\":\"apple\", \"b\":\"banana\"}) should return True.\n    check_dict_case({\"a\":\"apple\", \"A\":\"banana\", \"B\":\"banana\"}) should return False.\n    check_dict_case({\"a\":\"apple\", 8:\"banana\", \"a\":\"apple\"}) should return False.\n    check_dict_case({\"Name\":\"John\", \"Age\":\"36\", \"City\":\"Houston\"}) should return False.\n    check_dict_case({\"STATE\":\"NC\", \"ZIP\":\"12345\" }) should return True.\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef check_dict_case(dict):\n    \"\"\"\n    Given a dictionary, return True if some or all keys are strings in lower \n    case or some or all keys are strings in upper case, else return False.\n    The function should return False is the given dictionary is empty.\n    Examples:\n    check_dict_case({\"a\":\"apple\", \"b\":\"banana\"}) should return True.\n    check_dict_case({\"a\":\"apple\", \"A\":\"banana\", \"B\":\"banana\"}) should return False.\n    check_dict_case({\"a\":\"apple\", 8:\"banana\", \"a\":\"apple\"}) should return False.\n    check_dict_case({\"Name\":\"John\", \"Age\":\"36\", \"City\":\"Houston\"}) should return False.\n    check_dict_case({\"STATE\":\"NC\", \"ZIP\":\"12345\" }) should return True.\n    \"\"\"",
+  "prompt_sha256": "1914a4fbdf43f7e8e82b8cfa1dbe7a124ccc6d7b3542fc1dc2379092b0345ce0",
+  "model_name": "meta-llama/Meta-Llama-3-8B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef check_dict_case(dict):\n    \"\"\"\n    Given a dictionary, return True if some or all keys are strings in lower \n    case or some or all keys are strings in upper case, else return False.\n    The function should return False is the given dictionary is empty.\n    Examples:\n    check_dict_case({\"a\":\"apple\", \"b\":\"banana\"}) should return True.\n    check_dict_case({\"a\":\"apple\", \"A\":\"banana\", \"B\":\"banana\"}) should return False.\n    check_dict_case({\"a\":\"apple\", 8:\"banana\", \"a\":\"apple\"}) should return False.\n    check_dict_case({\"Name\":\"John\", \"Age\":\"36\", \"City\":\"Houston\"}) should return False.\n    check_dict_case({\"STATE\":\"NC\", \"ZIP\":\"12345\" }) should return True.\n    \"\"\"\n\n\n### Your answer should be in Python 3.\n### \n### Please respond with code directly within this markdown, or ask clarifying questions. \n\nHere is your Python3 code:\n```\ndef check_dict_case(d):\n    if not d: \n        return False\n    has_lower = any(key.islower() for key in d.keys())\n    has_upper = any(not key.islower() for key in d.keys())\n    return has_lower or has_upper\n```  | 1 Reply | 1 day ago by anonymous\n\n1 Reply | 1 day ago by anonymous 1. Reply | 1 day ago by anonymous\n\n## Answer (Source Code) in Markdown\nHere is your Python3 code:\n```\ndef check_dict_case(d):\n    if not d: \n        return False\n    has_lower = any(key.islower() for key in d.keys())\n    has_upper = any(not key.islower() for key in d.keys())\n    return has_lower or has_upper\n```  | 1 Reply | 1 day ago by anonymous\n\n1 Reply | 1 day ago by anonymous 1. Reply | 1 day ago by anonymous\n## Related Questions\n\n#### Share\n    •   [Python: Finding duplicate keys in a dictionary",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def check_dict_case(d):\n    if not d: \n        return False\n    has_lower = any(key.islower() for key in d.keys())\n    has_upper = any(not key.islower() for key in d.keys())\n    return has_lower or has_upper",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 68.951828956604,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

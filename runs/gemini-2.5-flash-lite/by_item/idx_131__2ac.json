@@ -1,0 +1,36 @@
+{
+  "record_id": "idx_131::2ac::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_131",
+  "category": "2ac",
+  "entry_point": "digits",
+  "prompt_field": "prompt2ac",
+  "prompt_text": "\ndef digits(n):\n    \"\"\"Given a positive integer n, return the sum or product of the odd digits.\n    Return 0 if all digits are even.\n    For example:\n    digits(1)  == 1\n    digits(4)  == 4\n    digits(235) == 30\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef digits(n):\n    \"\"\"Given a positive integer n, return the sum or product of the odd digits.\n    Return 0 if all digits are even.\n    For example:\n    digits(1)  == 1\n    digits(4)  == 4\n    digits(235) == 30\n    \"\"\"",
+  "prompt_sha256": "ab43672f7d2c99082761cf31a0585281cc12d6cd6b9185effb7f89d976453021",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "I need some clarification. The docstring states \"return the sum or product of the odd digits.\" This implies a choice needs to be made between summing and multiplying.\n\nCould you please specify whether to return the **sum** or the **product** of the odd digits? Or is there a condition that determines which operation to perform?",
+  "gen_raw": {},
+  "contains_code": false,
+  "code_detected_method": "none",
+  "extracted_code": null,
+  "is_question": true,
+  "extracted_questions": [
+    "Or is there a condition that determines which operation to perform?",
+    "Could you please specify whether to return the **sum** or the **product** of the odd digits?"
+  ],
+  "question_count": 2,
+  "first_question": "Or is there a condition that determines which operation to perform?",
+  "question_chars": 159,
+  "latency_sec": 0.9078159332275391,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

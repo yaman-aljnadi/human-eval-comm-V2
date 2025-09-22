@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_1::1a::meta-llama/Meta-Llama-3-8B-Instruct::seed0",
+  "task_id": "idx_1",
+  "category": "1a",
+  "entry_point": "separate_paren_groups",
+  "prompt_field": "prompt1a",
+  "prompt_text": "from typing import List\n\n\ndef candidate(paren_string: str) -> List[str]:\n    \"\"\" Input to this function is a string containing multiple groups of nested parentheses. Your goal is to\n    separate those group into separate strings and return the list of those.\n    Separate groups are balanced (each open brace has a certain requirement to meet) and not nested within each other\n   Keep or ignore any spaces in the input string.\n    >>> candidate('( ) (( )) (( )( ))')\n    ['()', '(())', '(()())']\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List\n\n\ndef candidate(paren_string: str) -> List[str]:\n    \"\"\" Input to this function is a string containing multiple groups of nested parentheses. Your goal is to\n    separate those group into separate strings and return the list of those.\n    Separate groups are balanced (each open brace has a certain requirement to meet) and not nested within each other\n   Keep or ignore any spaces in the input string.\n    >>> candidate('( ) (( )) (( )( ))')\n    ['()', '(())', '(()())']\n    \"\"\"",
+  "prompt_sha256": "23c7d313314361f1fa4959ef0fdffbccf2fcd299e0e8e0bf7e47fbbb47214c37",
+  "model_name": "meta-llama/Meta-Llama-3-8B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List\n\n\ndef candidate(paren_string: str) -> List[str]:\n    \"\"\" Input to this function is a string containing multiple groups of nested parentheses. Your goal is to\n    separate those group into separate strings and return the list of those.\n    Separate groups are balanced (each open brace has a certain requirement to meet) and not nested within each other\n   Keep or ignore any spaces in the input string.\n    >>> candidate('( ) (( )) (( )( ))')\n    ['()', '(())', '(()())']\n    \"\"\"\n\n\n\n#python 3\n#\n\n\n#Please write code here\n```\n\n\n\n1. The problem description does not specify what constitutes a valid group of parentheses. For example, in the given test case `candidate('( ) (( )) (( )( ))')`, is `'(( )( ))'` a valid group or not? Should we consider it as separate group or ignore it? Please clarify this with an example.\n2. The problem description does not specify how to handle overlapping groups. For example, if we have a string like `candidate('( ) ( ) (( )))'`, should we separate the groups as `['( )', '( )', '(( ))']` or should we group them as `['( ) ( )', '(( \"))'?\n3. Can the given string have more than two types of characters besides parentheses? If yes, should we ignore or remove those characters?\n4. Is there any restriction on the input string length? Is it expected to be a very large string or a relatively small one?\n5. Is there any restriction on the complexity of the input string. For example, should the code be able to handle strings where some groups have a very large nesting depth? Is this a possibility we should consider in the code.\n6. Should we",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def candidate(paren_string: str) -> List[str]:\n    \"\"\" Input to this function is a string containing multiple groups of nested parentheses. Your goal is to\n    separate those group into separate strings and return the list of those.\n    Separate groups are balanced (each open brace has a certain requirement to meet) and not nested within each other\n   Keep or ignore any spaces in the input string.\n    >>> candidate('( ) (( )) (( )( ))')\n    ['()', '(())', '(()())']\n    \"\"\"\n\n\n\n#python 3\n#\n\n\n#Please write code here\n```\n\n\n\n1. The problem description does not specify what constitutes a valid group of parentheses. For example, in the given test case `candidate('( ) (( )) (( )( ))')`, is `'(( )( ))'` a valid group or not? Should we consider it as separate group or ignore it? Please clarify this with an example.\n2. The problem description does not specify how to handle overlapping groups. For example, if we have a string like `candidate('( ) ( ) (( )))'`, should we separate the groups as `['( )', '( )', '(( ))']` or should we group them as `['( ) ( )', '(( \"))'?\n3. Can the given string have more than two types of characters besides parentheses? If yes, should we ignore or remove those characters?\n4. Is there any restriction on the input string length? Is it expected to be a very large string or a relatively small one?\n5. Is there any restriction on the complexity of the input string. For example, should the code be able to handle strings where some groups have a very large nesting depth? Is this a possibility we should consider in the code.\n6. Should we",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 68.48563718795776,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

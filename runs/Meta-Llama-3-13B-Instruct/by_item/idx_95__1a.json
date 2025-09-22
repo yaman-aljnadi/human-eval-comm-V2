@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_95::1a::andrijdavid/Meta-Llama-3-13B-Instruct::seed0",
+  "task_id": "idx_95",
+  "category": "1a",
+  "entry_point": "check_dict_case",
+  "prompt_field": "prompt1a",
+  "prompt_text": "\ndef check_dict_case(dict):\n    \"\"\"\n    Given a dictionary, return True if some or all keys are strings in lower \n    case or some or all keys are strings in upper case, else return False.\n    The function should return False is the given dictionary is empty.\n    Examples:\n    check_dict_case({\"a\":\"apple\", \"b\":\"banana\"}) should return True.\n    check_dict_case({\"a\":\"apple\", \"A\":\"banana\", \"B\":\"banana\"}) should return False.\n    check_dict_case({\"a\":\"apple\", 8:\"banana\", \"a\":\"apple\"}) should return False.\n    check_dict_case({\"Name\":\"John\", \"Age\":\"36\", \"City\":\"Houston\"}) should return False.\n    check_dict_case({\"STATE\":\"NC\", \"ZIP\":\"12345\" }) should return True.\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef check_dict_case(dict):\n    \"\"\"\n    Given a dictionary, return True if some or all keys are strings in lower \n    case or some or all keys are strings in upper case, else return False.\n    The function should return False is the given dictionary is empty.\n    Examples:\n    check_dict_case({\"a\":\"apple\", \"b\":\"banana\"}) should return True.\n    check_dict_case({\"a\":\"apple\", \"A\":\"banana\", \"B\":\"banana\"}) should return False.\n    check_dict_case({\"a\":\"apple\", 8:\"banana\", \"a\":\"apple\"}) should return False.\n    check_dict_case({\"Name\":\"John\", \"Age\":\"36\", \"City\":\"Houston\"}) should return False.\n    check_dict_case({\"STATE\":\"NC\", \"ZIP\":\"12345\" }) should return True.\n    \"\"\"",
+  "prompt_sha256": "1914a4fbdf43f7e8e82b8cfa1dbe7a124ccc6d7b3542fc1dc2379092b0345ce0",
+  "model_name": "andrijdavid/Meta-Llama-3-13B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef check_dict_case(dict):\n    \"\"\"\n    Given a dictionary, return True if some or all keys are strings in lower \n    case or some or all keys are strings in upper case, else return False.\n    The function should return False is the given dictionary is empty.\n    Examples:\n    check_dict_case({\"a\":\"apple\", \"b\":\"banana\"}) should return True.\n    check_dict_case({\"a\":\"apple\", \"A\":\"banana\", \"B\":\"banana\"}) should return False.\n    check_dict_case({\"a\":\"apple\", 8:\"banana\", \"a\":\"apple\"}) should return False.\n    check_dict_case({\"Name\":\"John\", \"Age\":\"36\", \"City\":\"Houston\"}) should return False.\n    check_dict_case({\"STATE\":\"NC\", \"ZIP\":\"12345\" }) should return True.\n    \"\"\"\n\n\n\nPlease provide Python3 code diretly below with MD code blocks:\n_mD_Lean_\n```Python3_MD_Lean.Blocks```\n_mD_Lean-end_\n ````Python3 MD codeblocks EndearEndearEndearEndearEndearEndearEndearEndearEndearEndearEndearEndearEndearEndearEndear EndearEndearEndear Endear Endear Endear Endear Endear Endear EndearEndearEndearEndearEndearEndear EndearEndearEndearEndearEndearEndearEndearEndearEndearEndearEndearEndear EndearEndearEndear Endear Endear Endear Endear Endear Endear Endear Endear Endear Endear Endear Endear Endear Endear EndearEndear EndearEndearEndear Endear Endear Endear EndearEndear Endear EndearEndear Endear EndearEndear EndearEndear Endear Endear Endear Endear Endear Endear Endear Endear Endear EndearEndearEndear Endear Endear Endear Endear Endear EndearEndear Endear EndearEndear Endear Endear Endear Endear Endear Endear Endear EndearEndear EndearEndear",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "3_MD_Lean.Blocks",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 110.39298844337463,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

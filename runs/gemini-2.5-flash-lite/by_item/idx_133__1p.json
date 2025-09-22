@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_133::1p::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_133",
+  "category": "1p",
+  "entry_point": "sum_squares",
+  "prompt_field": "prompt1p",
+  "prompt_text": "\n\ndef candidate(lst):\n    \"\"\"You are given a list of numbers.\n    You need to return the sum of squared \n\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(lst):\n    \"\"\"You are given a list of numbers.\n    You need to return the sum of squared \n\n    \"\"\"",
+  "prompt_sha256": "7afec18907f5e289ad336905194e1f5b594841669626ae2522a10c7a49e68513",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef candidate(lst):\n    \"\"\"You are given a list of numbers.\n    You need to return the sum of squared differences between adjacent elements.\n\n    For example:\n    candidate([1, 2, 3]) == (1-2)^2 + (2-3)^2 = (-1)^2 + (-1)^2 = 1 + 1 = 2\n    candidate([5, 1, 4]) == (5-1)^2 + (1-4)^2 = 4^2 + (-3)^2 = 16 + 9 = 25\n    candidate([1]) == 0 (no adjacent elements)\n    candidate([]) == 0 (no adjacent elements)\n    \"\"\"\n    if len(lst) < 2:\n        return 0\n\n    sum_of_squared_diffs = 0\n    for i in range(len(lst) - 1):\n        diff = lst[i] - lst[i+1]\n        sum_of_squared_diffs += diff ** 2\n    return sum_of_squared_diffs\n```",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def candidate(lst):\n    \"\"\"You are given a list of numbers.\n    You need to return the sum of squared differences between adjacent elements.\n\n    For example:\n    candidate([1, 2, 3]) == (1-2)^2 + (2-3)^2 = (-1)^2 + (-1)^2 = 1 + 1 = 2\n    candidate([5, 1, 4]) == (5-1)^2 + (1-4)^2 = 4^2 + (-3)^2 = 16 + 9 = 25\n    candidate([1]) == 0 (no adjacent elements)\n    candidate([]) == 0 (no adjacent elements)\n    \"\"\"\n    if len(lst) < 2:\n        return 0\n\n    sum_of_squared_diffs = 0\n    for i in range(len(lst) - 1):\n        diff = lst[i] - lst[i+1]\n        sum_of_squared_diffs += diff ** 2\n    return sum_of_squared_diffs",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 1.5737223625183105,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

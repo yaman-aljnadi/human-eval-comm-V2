@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_57::1p::meta-llama/Meta-Llama-3-8B-Instruct::seed0",
+  "task_id": "idx_57",
+  "category": "1p",
+  "entry_point": "monotonic",
+  "prompt_field": "prompt1p",
+  "prompt_text": "\n\ndef candidate(l: list):\n    \"\"\"\n    >>> candidate([1, 2, 4, 20])\n    True\n    >>> candidate([1, 20, 4, 10])\n    False\n    >>> candidate([4, 1, 0, -10])\n    True\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(l: list):\n    \"\"\"\n    >>> candidate([1, 2, 4, 20])\n    True\n    >>> candidate([1, 20, 4, 10])\n    False\n    >>> candidate([4, 1, 0, -10])\n    True\n    \"\"\"",
+  "prompt_sha256": "6be54dbb8e136fd819aca6880a01c7c11b053fe2a1b90f61386dd34b375a82e5",
+  "model_name": "meta-llama/Meta-Llama-3-8B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(l: list):\n    \"\"\"\n    >>> candidate([1, 2, 4, 20])\n    True\n    >>> candidate([1, 20, 4, 10])\n    False\n    >>> candidate([4, 1, 0, -10])\n    True\n    \"\"\"\n\n\n```python\ndef candidate(l: list):\n   ...\n```\n\nPlease note that the unit tests indicate that the function should return `True` for input lists where the elements are in increasing order, and `False` otherwise. \n\nAlso note that the list can contain negative numbers.  ```python\n```  |\n```python\n```\n\n| [1, 2, 4, 20] | True  |\n| [1, 20, 4, 10] | False |\n| [4, 1, 0, -10] | True  |\n\n\n|```python\n```  |\n```python\n```\n\n```python\ndef candidate(l: list):\n    for i in range(len(l) - 1):\n        if l[i+1] <= l[i]:\n            return False\n    return True\n``` | ```python | \n```python\ndef candidate(l: list):\n    for i in range(len(l) - 1):\n        if l[i+1] <= l[i]:\n            return False\n    return True\n```  |  ```python  | ```python\n```python\ndef candidate(l: list):\n    if len(l) < 2:\n        return True\n    prev = l[",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def candidate(l: list):\n   ...",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 69.85733556747437,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

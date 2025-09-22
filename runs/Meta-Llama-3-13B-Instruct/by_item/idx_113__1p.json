@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_113::1p::andrijdavid/Meta-Llama-3-13B-Instruct::seed0",
+  "task_id": "idx_113",
+  "category": "1p",
+  "entry_point": "odd_count",
+  "prompt_field": "prompt1p",
+  "prompt_text": "\ndef odd_count(lst):\n    \"\"\"Given a list of strings, where each string consists of only digits, return a list.\n    Each element i of the output should be \"the number of odd elements in the\n    string i of the input.\" where all the i's should be replaced by\n\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef odd_count(lst):\n    \"\"\"Given a list of strings, where each string consists of only digits, return a list.\n    Each element i of the output should be \"the number of odd elements in the\n    string i of the input.\" where all the i's should be replaced by\n\n    \"\"\"",
+  "prompt_sha256": "bb0c9d03a3f5453548b6c09bad1e8d0a23999e0e38f6fc22dd0dc06a523d85f2",
+  "model_name": "andrijdavid/Meta-Llama-3-13B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef odd_count(lst):\n    \"\"\"Given a list of strings, where each string consists of only digits, return a list.\n    Each element i of the output should be \"the number of odd elements in the\n    string i of the input.\" where all the i's should be replaced by\n\n    \"\"\"inja�数ouser'gcCallCheck\n   ouser'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def odd_count(lst):\n    \"\"\"Given a list of strings, where each string consists of only digits, return a list.\n    Each element i of the output should be \"the number of odd elements in the\n    string i of the input.\" where all the i's should be replaced by\n\n    \"\"\"inja�数ouser'gcCallCheck\n   ouser'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines'gcines",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 109.25687170028687,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

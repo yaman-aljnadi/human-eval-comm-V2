@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_66::2ac::meta-llama/Meta-Llama-3-8B-Instruct::seed0",
+  "task_id": "idx_66",
+  "category": "2ac",
+  "entry_point": "digitSum",
+  "prompt_field": "prompt2ac",
+  "prompt_text": "\ndef digitSum(s):\n    \"\"\"Task\n    Write a function that takes a string as input and returns the sum of the number of upper characters.\n\n    Examples:\n        digitSum(\"\") => 0\n        digitSum(\"abAB\") => 2\n        digitSum(\"abcCd\") => 1\n        digitSum(\"helloE\") => 1\n        digitSum(\"woArBld\") => 2\n        digitSum(\"aAaaaXa\") => 2\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef digitSum(s):\n    \"\"\"Task\n    Write a function that takes a string as input and returns the sum of the number of upper characters.\n\n    Examples:\n        digitSum(\"\") => 0\n        digitSum(\"abAB\") => 2\n        digitSum(\"abcCd\") => 1\n        digitSum(\"helloE\") => 1\n        digitSum(\"woArBld\") => 2\n        digitSum(\"aAaaaXa\") => 2\n    \"\"\"",
+  "prompt_sha256": "b71e0e4861d7c5017030537466b77db6f1b148a2e35d04ef189751460a1a2276",
+  "model_name": "meta-llama/Meta-Llama-3-8B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef digitSum(s):\n    \"\"\"Task\n    Write a function that takes a string as input and returns the sum of the number of upper characters.\n\n    Examples:\n        digitSum(\"\") => 0\n        digitSum(\"abAB\") => 2\n        digitSum(\"abcCd\") => 1\n        digitSum(\"helloE\") => 1\n        digitSum(\"woArBld\") => 2\n        digitSum(\"aAaaaXa\") => 2\n    \"\"\"\n\n\n\n### Code Here:\n\n### Write your Python3 code here:\n\n```\ndef digitSum(s):\n    upper_count = 0\n    for char in s:\n        if char.isupper():\n            upper_count += 1\n    return upper_count\n``` 1\nNote: `isupper()` is used to check if a character is uppercase, it returns True if the character is uppercase and False if it is lowercase.  |    |    |    |    |    |    |    |    |    |    |  | 1  |  | 1  | 1  | 1  | 1  | 1  | 1  | 1  | 1  | 1  | 1  | 1  | 1  | 1  | 1  | 1  | 1  | 1  | 1  | 1  | 1  | 1  | 1  | 1  | 1  | 1  | 1  | 1  | 1  | 1  | 1  | 1  | 1  | 1  | 1  | 1  |",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def digitSum(s):\n    upper_count = 0\n    for char in s:\n        if char.isupper():\n            upper_count += 1\n    return upper_count",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 71.90178322792053,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

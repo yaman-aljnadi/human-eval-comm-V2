@@ -1,0 +1,41 @@
+{
+  "record_id": "idx_101::1c::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_101",
+  "category": "1c",
+  "entry_point": "words_string",
+  "prompt_field": "prompt1c",
+  "prompt_text": "\ndef words_string(s):\n    \"\"\"\n    You will be given a string of words separated by commas or spaces. Your task is\n    to split the string into words and return an array of the words.\n    \n    For example:\n    words_string(\"Hi, my name is John\") == [\"John\"]\n    words_string(\"One, two, three, four, five, six\") == [\"six\"]\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef words_string(s):\n    \"\"\"\n    You will be given a string of words separated by commas or spaces. Your task is\n    to split the string into words and return an array of the words.\n    \n    For example:\n    words_string(\"Hi, my name is John\") == [\"John\"]\n    words_string(\"One, two, three, four, five, six\") == [\"six\"]\n    \"\"\"",
+  "prompt_sha256": "d3e2d1f5ed9b5df71ff82dcaf4be230f1de717723ede10e34e9c45205d654144",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "The provided examples for the `words_string` function are inconsistent with the function's description.\n\nThe description states: \"Your task is to split the string into words and return an array of the words.\"\nHowever, the examples show:\n* `words_string(\"Hi, my name is John\") == [\"John\"]` - This only returns the last word.\n* `words_string(\"One, two, three, four, five, six\") == [\"six\"]` - This also only returns the last word.\n\n**Clarifying Questions:**\n\n1.  **What is the desired output for `words_string(\"Hi, my name is John\")`?**\n    *   Should it be `[\"Hi\", \"my\", \"name\", \"is\", \"John\"]` (all words)?\n    *   Or is it intended to be only the last word, as suggested by the example?\n\n2.  **What is the desired output for `words_string(\"One, two, three, four, five, six\")`?**\n    *   Should it be `[\"One\", \"two\", \"three\", \"four\", \"five\", \"six\"]` (all words)?\n    *",
+  "gen_raw": {},
+  "contains_code": false,
+  "code_detected_method": "none",
+  "extracted_code": null,
+  "is_question": true,
+  "extracted_questions": [
+    "**\n    *   Should it be `[\"Hi\", \"my\", \"name\", \"is\", \"John\"]` (all words)?",
+    "*   Or is it intended to be only the last word, as suggested by the example?",
+    "2.  **What is the desired output for `words_string(\"One, two, three, four, five, six\")`?",
+    "**\n    *   Should it be `[\"One\", \"two\", \"three\", \"four\", \"five\", \"six\"]` (all words)?",
+    "*?",
+    "**What is the desired output for `words_string(\"Hi, my name is John\")`?",
+    "**What is the desired output for `words_string(\"One, two, three, four, five, six\")`?"
+  ],
+  "question_count": 7,
+  "first_question": "**\n    *   Should it be `[\"Hi\", \"my\", \"name\", \"is\", \"John\"]` (all words)?",
+  "question_chars": 479,
+  "latency_sec": 1.6314663887023926,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

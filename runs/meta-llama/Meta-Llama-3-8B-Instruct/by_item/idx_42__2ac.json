@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_42::2ac::meta-llama/Meta-Llama-3-8B-Instruct::seed0",
+  "task_id": "idx_42",
+  "category": "2ac",
+  "entry_point": "incr_list",
+  "prompt_field": "prompt2ac",
+  "prompt_text": "\n\ndef incr_list(l: list):\n    \"\"\"Return list with elements incremented by a number.\n    >>> incr_list([1, 2, 3])\n    [3, 4, 5]\n    >>> incr_list([5, 3, 5, 2, 3, 3, 9, 0, 123])\n    [7, 5, 7, 4, 5, 5, 11, 2, 125]\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef incr_list(l: list):\n    \"\"\"Return list with elements incremented by a number.\n    >>> incr_list([1, 2, 3])\n    [3, 4, 5]\n    >>> incr_list([5, 3, 5, 2, 3, 3, 9, 0, 123])\n    [7, 5, 7, 4, 5, 5, 11, 2, 125]\n    \"\"\"",
+  "prompt_sha256": "b982f0c345e219dad93db45e4c16c92edaf5b217c7e28945aa7d2d35c49edb82",
+  "model_name": "meta-llama/Meta-Llama-3-8B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef incr_list(l: list):\n    \"\"\"Return list with elements incremented by a number.\n    >>> incr_list([1, 2, 3])\n    [3, 4, 5]\n    >>> incr_list([5, 3, 5, 2, 3, 3, 9, 0, 123])\n    [7, 5, 7, 4, 5, 5, 11, 2, 125]\n    \"\"\"\n\n\nLet's see what we can do with `map()` function. Here's a basic code that increments each element in a list by 1:\n```\ndef incr_list(l: list):\n    return list(map(lambda x: x + 1, l))\n```\nThis code will increment each element in the list by 1. If you want to increment by a different number, you can change the 1 to whatever you want. For example, to increment by 2, you would change it to 2. If you want to increment by -1, you would change it to -1. And so on. Let me know if you have any questions or if you need further clarification. \n\nIf you want to increment by a specific number that is provided as a function argument, here is an example:\n```\ndef incr_list(l: list, num: int):\n    return list(map(lambda x: x + num, l))\n```\nThis version of the function will allow you to pass in a specific number to increment by. For example, if you call `incr_list([1, 2, 3], 2)`, it will return `[3, 4, 5]`. Let me know if you have any questions.",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def incr_list(l: list):\n    return list(map(lambda x: x + 1, l))",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 67.51858806610107,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

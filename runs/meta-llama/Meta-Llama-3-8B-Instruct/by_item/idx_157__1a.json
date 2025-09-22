@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_157::1a::meta-llama/Meta-Llama-3-8B-Instruct::seed0",
+  "task_id": "idx_157",
+  "category": "1a",
+  "entry_point": "right_angle_triangle",
+  "prompt_field": "prompt1a",
+  "prompt_text": "\ndef candidate(a, b, c):\n    '''\n    Given the lengths of the three sides of a triangle. Return True if the three\n    sides form a specific triangle, False otherwise.\n    A right-angled triangle is a triangle in which one angle is right angle or \n    90 degree.\n    Example:\n    candidate(3, 4, 5) == True\n    candidate(1, 2, 3) == False\n    '''\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(a, b, c):\n    '''\n    Given the lengths of the three sides of a triangle. Return True if the three\n    sides form a specific triangle, False otherwise.\n    A right-angled triangle is a triangle in which one angle is right angle or \n    90 degree.\n    Example:\n    candidate(3, 4, 5) == True\n    candidate(1, 2, 3) == False\n    '''",
+  "prompt_sha256": "681949dc49a2790512554d5ee8adf4bc09054345fa3f1357318464612f4801f5",
+  "model_name": "meta-llama/Meta-Llama-3-8B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(a, b, c):\n    '''\n    Given the lengths of the three sides of a triangle. Return True if the three\n    sides form a specific triangle, False otherwise.\n    A right-angled triangle is a triangle in which one angle is right angle or \n    90 degree.\n    Example:\n    candidate(3, 4, 5) == True\n    candidate(1, 2, 3) == False\n    '''\n\n\n[Your code here] \n\n# example\ncandidate(3, 4, 5)   #True\ncandidate(1, 2, 3)   #False \n\nPlease generate Python3 code to answer this problem.```python\n```python\ndef candidate(a, b, c):\n    if a**2 + b**2 == c**2 or a**2 + c**2 == b**2 or b**2 + c**2 == a**2:\n        return True\n    else:\n        return False\n```  #True\ncandidate(3, 4, 5)   #True\ncandidate(1, 2, 3)   #False\n```  #True\ncandidate(1, 2, 3)   #False\n\nIf you need more clarification, feel free to ask! I'll be happy to help.```python\n```python\ndef candidate(a, b, c):\n    if a**2 + b**2 == c**2 or a**2 + c**2 == b**2 or b**2 + c**2 == a**2:\n        return True\n    else:\n        return False\n```  #True\ncandidate(3, 4,",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 48.563050270080566,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

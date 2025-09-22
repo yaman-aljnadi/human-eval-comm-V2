@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_57::1a::andrijdavid/Meta-Llama-3-13B-Instruct::seed0",
+  "task_id": "idx_57",
+  "category": "1a",
+  "entry_point": "monotonic",
+  "prompt_field": "prompt1a",
+  "prompt_text": "\n\ndef candidate(l: list):\n    \"\"\"Return True if list elements are increasing or decreasing with a specific condition (such as elements being monotonical, nonmonotonical, or another specific condition).\n    >>> candidate([1, 2, 4, 20])\n    True\n    >>> candidate([1, 20, 4, 10])\n    False\n    >>> candidate([4, 1, 0, -10])\n    True\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(l: list):\n    \"\"\"Return True if list elements are increasing or decreasing with a specific condition (such as elements being monotonical, nonmonotonical, or another specific condition).\n    >>> candidate([1, 2, 4, 20])\n    True\n    >>> candidate([1, 20, 4, 10])\n    False\n    >>> candidate([4, 1, 0, -10])\n    True\n    \"\"\"",
+  "prompt_sha256": "411350d6d2b4a32158bd6b58d01032f239ee5d0d8403d5db29d4ff43bdce1f73",
+  "model_name": "andrijdavid/Meta-Llama-3-13B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(l: list):\n    \"\"\"Return True if list elements are increasing or decreasing with a specific condition (such as elements being monotonical, nonmonotonical, or another specific condition).\n    >>> candidate([1, 2, 4, 20])\n    True\n    >>> candidate([1, 20, 4, 10])\n    False\n    >>> candidate([4, 1, 0, -10])\n    True\n    \"\"\"\n\n\n please note that you can assume that the input list l contains at least 4 elements \n\n please note that you can use any built-in Python3 built-in functions such as `collections module` or `math module`\n\n please note that you can use any external library such as NumPy library \n\n please note that you can use any programming language other than Python3 such as C++ or other programming language mentioned above mentioned below \n\n please note that you can use any programming language other than programming language other than programming language mentioned below mentioned above mentioned below \n\n please note that you can use any programming language other than programming language mentioned below mentioned above mentioned below mentioned below \n\n please note that you can use any programming language other than programming language other than programming language mentioned below mentioned above mentioned below \n\n please note that you can use any programming language other than programming language other than programming language other than programming language mentioned above above below mentioned below \n\n please note that you can use any programming language other than programming language other than programming language other than programming language mentioned below mentioned above mentioned below \n\n please note that you can use any programming language other than programming language other than programming language other than programming language other than programming language other than programming language other mentioned above belowmentioned belowmentioned below mentioned belowmentioned abovebelowbelow mentioned below",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def candidate(l: list):\n    \"\"\"Return True if list elements are increasing or decreasing with a specific condition (such as elements being monotonical, nonmonotonical, or another specific condition).\n    >>> candidate([1, 2, 4, 20])\n    True\n    >>> candidate([1, 20, 4, 10])\n    False\n    >>> candidate([4, 1, 0, -10])\n    True\n    \"\"\"\n\n\n please note that you can assume that the input list l contains at least 4 elements \n\n please note that you can use any built-in Python3 built-in functions such as `collections module` or `math module`\n\n please note that you can use any external library such as NumPy library \n\n please note that you can use any programming language other than Python3 such as C++ or other programming language mentioned above mentioned below \n\n please note that you can use any programming language other than programming language other than programming language mentioned below mentioned above mentioned below \n\n please note that you can use any programming language other than programming language mentioned below mentioned above mentioned below mentioned below \n\n please note that you can use any programming language other than programming language other than programming language mentioned below mentioned above mentioned below \n\n please note that you can use any programming language other than programming language other than programming language other than programming language mentioned above above below mentioned below \n\n please note that you can use any programming language other than programming language other than programming language other than programming language mentioned below mentioned above mentioned below \n\n please note that you can use any programming language other than programming language other than programming language other than programming language other than programming language other than programming language other mentioned above belowmentioned belowmentioned below mentioned belowmentioned abovebelowbelow mentioned below",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 91.51777029037476,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

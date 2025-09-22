@@ -1,0 +1,39 @@
+{
+  "record_id": "idx_43::2ac::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_43",
+  "category": "2ac",
+  "entry_point": "pairs_sum_to_zero",
+  "prompt_field": "prompt2ac",
+  "prompt_text": "\n\ndef candidate(l):\n    \"\"\"\n    candidate takes a list of integers as an input.\n    it returns True if there are elements in the list that\n    sum to zero, and False otherwise.\n    >>> candidate([1, 3, 5, 0])\n    True\n    >>> candidate([1, 3, -2, 1])\n    True\n    >>> candidate([1, 2, 3, 7])\n    True\n    >>> candidate([2, 4, -5, 3, 5, 7])\n    False\n    >>> candidate([1])\n    True\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(l):\n    \"\"\"\n    candidate takes a list of integers as an input.\n    it returns True if there are elements in the list that\n    sum to zero, and False otherwise.\n    >>> candidate([1, 3, 5, 0])\n    True\n    >>> candidate([1, 3, -2, 1])\n    True\n    >>> candidate([1, 2, 3, 7])\n    True\n    >>> candidate([2, 4, -5, 3, 5, 7])\n    False\n    >>> candidate([1])\n    True\n    \"\"\"",
+  "prompt_sha256": "d506e27dfb36cd2bf316cf0b305e4f6cf42684a2f7a54da5506a3c7d5bf03baf",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "I need a clarification on the `candidate` function's behavior.\n\nThe docstring states: \"it returns True if there are elements in the list that sum to zero, and False otherwise.\"\n\nHowever, the provided doctests seem to have a different logic:\n\n*   `candidate([1, 3, 5, 0])` returns `True` (because of `0`)\n*   `candidate([1, 3, -2, 1])` returns `True` (because `1 + -2 + 1 = 0`)\n*   `candidate([1, 2, 3, 7])` returns `True` - This is confusing. How do these elements sum to zero?\n*   `candidate([2, 4, -5, 3, 5, 7])` returns `False` - This is also confusing if we're looking for *any* subset that sums to zero. For example, `2 + -5 + 3 = 0`.\n*   `candidate([1])` returns `True` - Again, how does a single element sum to zero unless it's `0` itself?\n\nIt seems the intended logic might",
+  "gen_raw": {},
+  "contains_code": false,
+  "code_detected_method": "none",
+  "extracted_code": null,
+  "is_question": true,
+  "extracted_questions": [
+    "I need a clarification on the `candidate` function's behavior.\n\nThe docstring states: \"it returns True if there are elements in the list that sum to zero, and False otherwise.\"\n\nHowever, the provided doctests seem to have a different logic:\n\n*   `candidate([1, 3, 5, 0])` returns `True` (because of `0`)\n*   `candidate([1, 3, -2, 1])` returns `True` (because `1 + -2 + 1 = 0`)\n*   `candidate([1, 2, 3, 7])` returns `True` - This is confusing. How do these elements sum to zero?",
+    "*   `candidate([2, 4, -5, 3, 5, 7])` returns `False` - This is also confusing if we're looking for *any* subset that sums to zero. For example, `2 + -5 + 3 = 0`.\n*   `candidate([1])` returns `True` - Again, how does a single element sum to zero unless it's `0` itself?",
+    "It seems the intended logic might?",
+    "How do these elements sum to zero?",
+    "*   `candidate([1])` returns `True` - Again, how does a single element sum to zero unless it's `0` itself?"
+  ],
+  "question_count": 5,
+  "first_question": "I need a clarification on the `candidate` function's behavior.\n\nThe docstring states: \"it returns True if there are elements in the list that sum to zero, and False otherwise.\"\n\nHowever, the provided doctests seem to have a different logic:\n\n*   `candidate([1, 3, 5, 0])` returns `True` (because of `0`)\n*   `candidate([1, 3, -2, 1])` returns `True` (because `1 + -2 + 1 = 0`)\n*   `candidate([1, 2, 3, 7])` returns `True` - This is confusing. How do these elements sum to zero?",
+  "question_chars": 919,
+  "latency_sec": 1.55684232711792,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

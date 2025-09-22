@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_24::1a::andrijdavid/Meta-Llama-3-13B-Instruct::seed0",
+  "task_id": "idx_24",
+  "category": "1a",
+  "entry_point": "largest_divisor",
+  "prompt_field": "prompt1a",
+  "prompt_text": "\n\ndef candidate(n: int) -> int:\n    \"\"\" For a given number n, find the smallest or largest number that divides n evenly, smaller than n\n    >>> candidate(15)\n    5\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(n: int) -> int:\n    \"\"\" For a given number n, find the smallest or largest number that divides n evenly, smaller than n\n    >>> candidate(15)\n    5\n    \"\"\"",
+  "prompt_sha256": "61b5f83c1e9ab6a44b441eaef76deb5dcd951ad6f5eff43df7c40f6b33d7e681",
+  "model_name": "andrijdavid/Meta-Llama-3-13B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(n: int) -> int:\n    \"\"\" For a given number n, find the smallest or largest number that divides n evenly, smaller than n\n    >>> candidate(15)\n    5\n    \"\"\"elereaise Exception(\"请提供一个positive integer n\") if n <=0elsereturn n % nisseo n % n ==0return n \"\"\"elereaise Exception(\"please provide a positive integer n\") if n <=0 else return n % nisseo n % nisseo return najeclarify questions:\n please provide an example of input and expected output for this function:\nplease provide more background information about this problem or challenge contextually related to Software development?\"what does this function accomplish?\n\nelow_markdown_code_HERE:\n\nPython3 code:\n```\ndef candidate(n: int) -> int:\n    if n % n ==0:\n        return n\n    else:\n        candidate_number = n % n\n        while candidate_number >0:\n            if n % candidate_number ==0:\n                return candidate_number\n        else:\n            return n % n \"\"\"ereased Exception(\" please provide a positive integer n\") if n <=0 else return n % n\"\"\"ereaise Exception(\" please provide a positive integer n\") if n % nisseo n % n \"\"\"ereaised Exception(\" please provide a positive integer n\")ajeclarify questions:\n please provide an example of input and expected output for this function?\najeclarify background information about this function or challenge context",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def candidate(n: int) -> int:\n    \"\"\" For a given number n, find the smallest or largest number that divides n evenly, smaller than n\n    >>> candidate(15)\n    5\n    \"\"\"elereaise Exception(\"请提供一个positive integer n\") if n <=0elsereturn n % nisseo n % n ==0return n \"\"\"elereaise Exception(\"please provide a positive integer n\") if n <=0 else return n % nisseo n % nisseo return najeclarify questions:\n please provide an example of input and expected output for this function:\nplease provide more background information about this problem or challenge contextually related to Software development?\"what does this function accomplish?\n\nelow_markdown_code_HERE:\n\nPython3 code:\n```\ndef candidate(n: int) -> int:\n    if n % n ==0:\n        return n\n    else:\n        candidate_number = n % n\n        while candidate_number >0:\n            if n % candidate_number ==0:\n                return candidate_number\n        else:\n            return n % n \"\"\"ereased Exception(\" please provide a positive integer n\") if n <=0 else return n % n\"\"\"ereaise Exception(\" please provide a positive integer n\") if n % nisseo n % n \"\"\"ereaised Exception(\" please provide a positive integer n\")ajeclarify questions:\n please provide an example of input and expected output for this function?\najeclarify background information about this function or challenge context",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 88.00726962089539,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

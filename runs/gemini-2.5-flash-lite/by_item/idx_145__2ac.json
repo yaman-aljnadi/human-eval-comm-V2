@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_145::2ac::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_145",
+  "category": "2ac",
+  "entry_point": "order_by_points",
+  "prompt_field": "prompt2ac",
+  "prompt_text": "\ndef candidate(nums):\n    \"\"\"\n    Write a function which sorts the given list of integers\n    in descending or ascending order according to the sum of their digits.\n    Note: if there are several items with similar sum of their digits,\n    order them based on their index in original list.\n\n    For example:\n    >>> candidate([1, 11, -1, -11, -12]) == [1, 11, -1, -12, -11]\n    >>> candidate([]) == []\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(nums):\n    \"\"\"\n    Write a function which sorts the given list of integers\n    in descending or ascending order according to the sum of their digits.\n    Note: if there are several items with similar sum of their digits,\n    order them based on their index in original list.\n\n    For example:\n    >>> candidate([1, 11, -1, -11, -12]) == [1, 11, -1, -12, -11]\n    >>> candidate([]) == []\n    \"\"\"",
+  "prompt_sha256": "781253ed2fae9474fee6ab268b3eb35326b62373267f35b7ac3627f06e17f969",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef candidate(nums):\n    \"\"\"\n    Write a function which sorts the given list of integers\n    in descending or ascending order according to the sum of their digits.\n    Note: if there are several items with similar sum of their digits,\n    order them based on their index in original list.\n\n    For example:\n    >>> candidate([1, 11, -1, -11, -12]) == [1, 11, -1, -12, -11]\n    >>> candidate([]) == []\n    \"\"\"\n    def sum_digits(n):\n        s = 0\n        for digit in str(abs(n)):\n            s += int(digit)\n        return s\n\n    # Create a list of tuples, where each tuple contains (sum_of_digits, original_index, number)\n    # We use negative original_index for descending order if sums are equal.\n    # If we wanted ascending order for sums, we would use sum_digits directly.\n    # The problem statement implies descending order for sums of digits if not specified otherwise.\n    # Let's assume descending order for sums of digits, and ascending",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def candidate(nums):\n    \"\"\"\n    Write a function which sorts the given list of integers\n    in descending or ascending order according to the sum of their digits.\n    Note: if there are several items with similar sum of their digits,\n    order them based on their index in original list.\n\n    For example:\n    >>> candidate([1, 11, -1, -11, -12]) == [1, 11, -1, -12, -11]\n    >>> candidate([]) == []\n    \"\"\"\n    def sum_digits(n):\n        s = 0\n        for digit in str(abs(n)):\n            s += int(digit)\n        return s\n\n    # Create a list of tuples, where each tuple contains (sum_of_digits, original_index, number)\n    # We use negative original_index for descending order if sums are equal.\n    # If we wanted ascending order for sums, we would use sum_digits directly.\n    # The problem statement implies descending order for sums of digits if not specified otherwise.\n    # Let's assume descending order for sums of digits, and ascending",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 1.6564393043518066,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

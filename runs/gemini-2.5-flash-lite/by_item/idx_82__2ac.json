@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_82::2ac::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_82",
+  "category": "2ac",
+  "entry_point": "prime_length",
+  "prompt_field": "prompt2ac",
+  "prompt_text": "\ndef candidate(string):\n    \"\"\"Write a function that takes a string and returns True if the string\n    length meets a certain condition (e.g. is an even or prime number or another type) or False otherwise\n    Examples\n    candidate('Hello') == False\n    candidate('abcdcba') == False\n    candidate('kittens') == False\n    candidate('orange') == True\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(string):\n    \"\"\"Write a function that takes a string and returns True if the string\n    length meets a certain condition (e.g. is an even or prime number or another type) or False otherwise\n    Examples\n    candidate('Hello') == False\n    candidate('abcdcba') == False\n    candidate('kittens') == False\n    candidate('orange') == True\n    \"\"\"",
+  "prompt_sha256": "3f2a9ad5b63bd10d74311d6ad3ba1cc2dba1d70d3e116fc061fda6d724ea7a30",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef candidate(string):\n    \"\"\"Write a function that takes a string and returns True if the string\n    length meets a certain condition (e.g. is an even or prime number or another type) or False otherwise\n    Examples\n    candidate('Hello') == False\n    candidate('abcdcba') == False\n    candidate('kittens') == False\n    candidate('orange') == True\n    \"\"\"\n    length = len(string)\n    # The condition for returning True based on the examples is that the length is an even number.\n    # 'Hello' has length 5 (odd) -> False\n    # 'abcdcba' has length 7 (odd) -> False\n    # 'kittens' has length 7 (odd) -> False\n    # 'orange' has length 6 (even) -> True\n    return length % 2 == 0\n```",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def candidate(string):\n    \"\"\"Write a function that takes a string and returns True if the string\n    length meets a certain condition (e.g. is an even or prime number or another type) or False otherwise\n    Examples\n    candidate('Hello') == False\n    candidate('abcdcba') == False\n    candidate('kittens') == False\n    candidate('orange') == True\n    \"\"\"\n    length = len(string)\n    # The condition for returning True based on the examples is that the length is an even number.\n    # 'Hello' has length 5 (odd) -> False\n    # 'abcdcba' has length 7 (odd) -> False\n    # 'kittens' has length 7 (odd) -> False\n    # 'orange' has length 6 (even) -> True\n    return length % 2 == 0",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 1.27655029296875,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

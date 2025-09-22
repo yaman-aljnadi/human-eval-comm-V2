@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_47::2ac::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_47",
+  "category": "2ac",
+  "entry_point": "median",
+  "prompt_field": "prompt2ac",
+  "prompt_text": "\n\ndef candidate(l: list):\n    \"\"\"Return max or median of elements in the list l.\n    >>> candidate([3, 1, 2, 4, 5])\n    5\n    >>> candidate([-10, 4, 6, 1000, 10, 20])\n    1000\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(l: list):\n    \"\"\"Return max or median of elements in the list l.\n    >>> candidate([3, 1, 2, 4, 5])\n    5\n    >>> candidate([-10, 4, 6, 1000, 10, 20])\n    1000\n    \"\"\"",
+  "prompt_sha256": "b67f120d84e6acecea4451b2c7e59a6ac97c4cfb62b06d8a5bc446183a9c4bdf",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef candidate(l: list):\n    \"\"\"Return max or median of elements in the list l.\n    >>> candidate([3, 1, 2, 4, 5])\n    5\n    >>> candidate([-10, 4, 6, 1000, 10, 20])\n    1000\n    \"\"\"\n    if not l:\n        return None  # Or raise an error, depending on desired behavior for empty lists\n\n    sorted_l = sorted(l)\n    n = len(sorted_l)\n\n    # The examples provided show returning the maximum element.\n    # If the intent was indeed to return the maximum, then the code is:\n    return sorted_l[-1]\n\n    # If the intent was to return the median (which is ambiguous for even length lists\n    # without further specification, but typically the average of the two middle elements\n    # or one of them), then the logic would be:\n    #\n    # if n % 2 == 1:\n    #     return sorted_l[n // 2]\n    # else:\n    #     # For even",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def candidate(l: list):\n    \"\"\"Return max or median of elements in the list l.\n    >>> candidate([3, 1, 2, 4, 5])\n    5\n    >>> candidate([-10, 4, 6, 1000, 10, 20])\n    1000\n    \"\"\"\n    if not l:\n        return None  # Or raise an error, depending on desired behavior for empty lists\n\n    sorted_l = sorted(l)\n    n = len(sorted_l)\n\n    # The examples provided show returning the maximum element.\n    # If the intent was indeed to return the maximum, then the code is:\n    return sorted_l[-1]\n\n    # If the intent was to return the median (which is ambiguous for even length lists\n    # without further specification, but typically the average of the two middle elements\n    # or one of them), then the logic would be:\n    #\n    # if n % 2 == 1:\n    #     return sorted_l[n // 2]\n    # else:\n    #     # For even",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 1.7217683792114258,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

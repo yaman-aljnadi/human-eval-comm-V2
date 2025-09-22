@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_55::1a::andrijdavid/Meta-Llama-3-13B-Instruct::seed0",
+  "task_id": "idx_55",
+  "category": "1a",
+  "entry_point": "fib",
+  "prompt_field": "prompt1a",
+  "prompt_text": "\n\ndef candidate(n: int):\n    \"\"\"Return a number that satisfies a specific condition (such as being n-th Prime number, being n-th Fibonacci number, or meeting another specific condition).\n    >>> candidate(10)\n    55\n    >>> candidate(1)\n    1\n    >>> candidate(8)\n    21\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(n: int):\n    \"\"\"Return a number that satisfies a specific condition (such as being n-th Prime number, being n-th Fibonacci number, or meeting another specific condition).\n    >>> candidate(10)\n    55\n    >>> candidate(1)\n    1\n    >>> candidate(8)\n    21\n    \"\"\"",
+  "prompt_sha256": "5392b719603b8b0ec5b4751d45023ef61f5b47d53b125fd0bd6012d5882c59dd",
+  "model_name": "andrijdavid/Meta-Llama-3-13B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(n: int):\n    \"\"\"Return a number that satisfies a specific condition (such as being n-th Prime number, being n-th Fibonacci number, or meeting another specific condition).\n    >>> candidate(10)\n    55\n    >>> candidate(1)\n    1\n    >>> candidate(8)\n    21\n    \"\"\"ODEV task requirements:\n    •   The function must return a number that meets specific conditions \n    •   Conditions could be:\n        o   being n-th Prime number\n        o   being n-th Fibbonacci number\n        o   meeting another specific condition\n    •   Function should return n-th Prime numbers or n-th Fibbonaci numbers \n    •   It should work for n-integersfrom1to1000000 \n    •   It should return None if n-thPrime number or n-thFibonacci number is beyond the range 1 to1000000 \n    •   For n-thFibonacci numbers, n-thFibonacci numbers should be written as n-thF(n) \n\n   „Punctualité\"\"\"        \n    \"\"\"ODEV task requirements\"\"\"        \n    •   Function should return n-th Prime numbers or n-thFibonacci numbers\"\"\"        \n    •   It should work for n-integersfrom1 to1000000\"\"\"        \n    •   Function should return None if n-thFPrime number or n-thFibonacci number is beyond the range1 to1000000 \n    •   For n-thFibonacci numbers, n-thF(n) should be written as n-thF(nी)\"\"\"        \n        \"\"\"ODEV",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def candidate(n: int):\n    \"\"\"Return a number that satisfies a specific condition (such as being n-th Prime number, being n-th Fibonacci number, or meeting another specific condition).\n    >>> candidate(10)\n    55\n    >>> candidate(1)\n    1\n    >>> candidate(8)\n    21\n    \"\"\"ODEV task requirements:\n    •   The function must return a number that meets specific conditions \n    •   Conditions could be:\n        o   being n-th Prime number\n        o   being n-th Fibbonacci number\n        o   meeting another specific condition\n    •   Function should return n-th Prime numbers or n-th Fibbonaci numbers \n    •   It should work for n-integersfrom1to1000000 \n    •   It should return None if n-thPrime number or n-thFibonacci number is beyond the range 1 to1000000 \n    •   For n-thFibonacci numbers, n-thFibonacci numbers should be written as n-thF(n) \n\n   „Punctualité\"\"\"        \n    \"\"\"ODEV task requirements\"\"\"        \n    •   Function should return n-th Prime numbers or n-thFibonacci numbers\"\"\"        \n    •   It should work for n-integersfrom1 to1000000\"\"\"        \n    •   Function should return None if n-thFPrime number or n-thFibonacci number is beyond the range1 to1000000 \n    •   For n-thFibonacci numbers, n-thF(n) should be written as n-thF(nी)\"\"\"        \n        \"\"\"ODEV",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 89.80727553367615,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

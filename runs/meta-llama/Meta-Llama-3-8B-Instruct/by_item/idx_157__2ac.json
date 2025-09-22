@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_157::2ac::meta-llama/Meta-Llama-3-8B-Instruct::seed0",
+  "task_id": "idx_157",
+  "category": "2ac",
+  "entry_point": "right_angle_triangle",
+  "prompt_field": "prompt2ac",
+  "prompt_text": "\ndef candidate(a, b, c):\n    '''\n    Given the lengths of the three sides of a triangle. Return True if the three\n    sides form a specific triangle, False otherwise.\n    A right-angled triangle is a triangle in which one angle is right angle or \n    90 degree.\n    Example:\n    candidate(3, 4, 5) == False\n    candidate(1, 2, 3) == True\n    '''\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(a, b, c):\n    '''\n    Given the lengths of the three sides of a triangle. Return True if the three\n    sides form a specific triangle, False otherwise.\n    A right-angled triangle is a triangle in which one angle is right angle or \n    90 degree.\n    Example:\n    candidate(3, 4, 5) == False\n    candidate(1, 2, 3) == True\n    '''",
+  "prompt_sha256": "b8bdc061d5ed7d0f8b4ebf7907df68e9694ec683e415f290aff66ee4e0293b84",
+  "model_name": "meta-llama/Meta-Llama-3-8B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(a, b, c):\n    '''\n    Given the lengths of the three sides of a triangle. Return True if the three\n    sides form a specific triangle, False otherwise.\n    A right-angled triangle is a triangle in which one angle is right angle or \n    90 degree.\n    Example:\n    candidate(3, 4, 5) == False\n    candidate(1, 2, 3) == True\n    '''\n\n\n### Your solution here:\n```\na = 3\nb = 4\nc = 5\nprint(candidates(a, b, c))\n```\nI'd like to create a function that will return True if given three sides of a right-angled triangle and false for others.\n```\n### Here is your Python3 code\n```\ndef is_right_angled(a, b, c):\n    if a**2 + b**2 == c**2:\n        return True\n    else:\n        return False\n\ndef is_triangle(a, b, c):\n    if a + b > c and a + c > b and b + c > a:\n        return True\n    else:\n        return False\n\ndef candidate(a, b, c):\n    return is_triangle(a, b, c) and not is_right_angled(a, b, c)\n\na = 3\nb = 4\nc = 5\nprint(candidate(a, b, c))  # Should print: False\n```\n\n\nI hope this meets your requirements. Let me know if you have any further clarifying questions. Please feel free to ask. Thank you for your prompt feedback. \n\n[If you want to add or clarify anything in your comment,",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "a = 3\nb = 4\nc = 5\nprint(candidates(a, b, c))",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 48.076573610305786,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_58::2cp::andrijdavid/Meta-Llama-3-13B-Instruct::seed0",
+  "task_id": "idx_58",
+  "category": "2cp",
+  "entry_point": "common",
+  "prompt_field": "prompt2cp",
+  "prompt_text": "\n\ndef common(l1: list, l2: list):\n    \"\"\"Return common.\n    >>> common([1, 4, 3, 34, 653, 2, 5], [5, 7, 1, 5, 9, 653, 121])\n    [653, 5, 1]\n    >>> common([5, 3, 2, 8], [3, 2])\n    [3, 2]\n\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef common(l1: list, l2: list):\n    \"\"\"Return common.\n    >>> common([1, 4, 3, 34, 653, 2, 5], [5, 7, 1, 5, 9, 653, 121])\n    [653, 5, 1]\n    >>> common([5, 3, 2, 8], [3, 2])\n    [3, 2]\n\n    \"\"\"",
+  "prompt_sha256": "f4fa8622c7ae6e12ae269c25204d84ac195570e24572d060fb61638f3e7fc28b",
+  "model_name": "andrijdavid/Meta-Llama-3-13B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef common(l1: list, l2: list):\n    \"\"\"Return common.\n    >>> common([1, 4, 3, 34, 653, 2, 5], [5, 7, 1, 5, 9, 653, 121])\n    [653, 5, 1]\n    >>> common([5, 3, 2, 8], [3, 2])\n    [3, 2]\n\n    \"\"\"TEGERation\"\"\"\n\n please provide Python3 code for common(l1: list, l2: listaerbeneerbeneerbeneerbeneeruperteteeruperteteeruperteteeruperteteeruperteteeruperteteeruperteteeruperteteeruperteteeruperteteeruperteteeruperteteeruperteteeruperteteeruperteteeruperteteeruperteteeruperteteeruperteteeruperteteeruperteteeruperteteeruperteteeruperteteeruperteteeruperteteeruperteteeruperteteeruperteteeruperteteeruperteteeruperteteeruperteteeruperteteeruperteteeruperteteeruperteteer Ruperteteeruperteteeruperteteeruperteteeruperteteer Ruperteteeruperteteer Ruperteteer Ruperteteer Ruperteteer Ruperteteeruperteteer Ruperteteeruperteteer Ruperteteeruperteteer Ruperteteer Ruperteteeruperteteer Ruperteteer Ruperteteer Ruperteteer Ruperteteeruperteteer Ruperteteer Ruperteteer Ruperteteer Ruperteteer Ruperteteer Ruperteteer Ruperteteeruperteteer Ruperteteer Ruperteteer Ruperteteer Ruperteteer Ruperteteer Ruperteteer Ruperteteer",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def common(l1: list, l2: list):\n    \"\"\"Return common.\n    >>> common([1, 4, 3, 34, 653, 2, 5], [5, 7, 1, 5, 9, 653, 121])\n    [653, 5, 1]\n    >>> common([5, 3, 2, 8], [3, 2])\n    [3, 2]\n\n    \"\"\"TEGERation\"\"\"\n\n please provide Python3 code for common(l1: list, l2: listaerbeneerbeneerbeneerbeneeruperteteeruperteteeruperteteeruperteteeruperteteeruperteteeruperteteeruperteteeruperteteeruperteteeruperteteeruperteteeruperteteeruperteteeruperteteeruperteteeruperteteeruperteteeruperteteeruperteteeruperteteeruperteteeruperteteeruperteteeruperteteeruperteteeruperteteeruperteteeruperteteeruperteteeruperteteeruperteteeruperteteeruperteteeruperteteeruperteteeruperteteer Ruperteteeruperteteeruperteteeruperteteeruperteteer Ruperteteeruperteteer Ruperteteer Ruperteteer Ruperteteer Ruperteteeruperteteer Ruperteteeruperteteer Ruperteteeruperteteer Ruperteteer Ruperteteeruperteteer Ruperteteer Ruperteteer Ruperteteer Ruperteteeruperteteer Ruperteteer Ruperteteer Ruperteteer Ruperteteer Ruperteteer Ruperteteer Ruperteteeruperteteer Ruperteteer Ruperteteer Ruperteteer Ruperteteer Ruperteteer Ruperteteer Ruperteteer",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 92.1423282623291,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

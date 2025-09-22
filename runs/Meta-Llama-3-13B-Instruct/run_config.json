@@ -1,0 +1,23 @@
+{
+  "model": "andrijdavid/Meta-Llama-3-13B-Instruct",
+  "split": "train",
+  "categories": [
+    "1a",
+    "1c",
+    "1p",
+    "2ac",
+    "2ap",
+    "2cp",
+    "3acp"
+  ],
+  "limit": null,
+  "seed": 0,
+  "max_new_tokens": 256,
+  "temperature": 1.0,
+  "top_p": 0.95,
+  "repetition_penalty": 1.0,
+  "outdir": "./runs/Meta-Llama-3-13B-Instruct",
+  "append": false,
+  "gzip": false,
+  "parquet": false
+}

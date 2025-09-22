@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_58::1a::meta-llama/Meta-Llama-3-8B-Instruct::seed0",
+  "task_id": "idx_58",
+  "category": "1a",
+  "entry_point": "common",
+  "prompt_field": "prompt1a",
+  "prompt_text": "\n\ndef candidate(l1: list, l2: list):\n    \"\"\"Return sorted (descendingly or ascendingly) unique common elements for two lists.\n    >>> candidate([1, 4, 3, 34, 653, 2, 5], [5, 7, 1, 5, 9, 653, 121])\n    [1, 5, 653]\n    >>> candidate([5, 3, 2, 8], [3, 2])\n    [2, 3]\n\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(l1: list, l2: list):\n    \"\"\"Return sorted (descendingly or ascendingly) unique common elements for two lists.\n    >>> candidate([1, 4, 3, 34, 653, 2, 5], [5, 7, 1, 5, 9, 653, 121])\n    [1, 5, 653]\n    >>> candidate([5, 3, 2, 8], [3, 2])\n    [2, 3]\n\n    \"\"\"",
+  "prompt_sha256": "6fc8b1d32932e4cd546e0927eb58e07d3ad0c0dfa3c2569b005665d9d149ce11",
+  "model_name": "meta-llama/Meta-Llama-3-8B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(l1: list, l2: list):\n    \"\"\"Return sorted (descendingly or ascendingly) unique common elements for two lists.\n    >>> candidate([1, 4, 3, 34, 653, 2, 5], [5, 7, 1, 5, 9, 653, 121])\n    [1, 5, 653]\n    >>> candidate([5, 3, 2, 8], [3, 2])\n    [2, 3]\n\n    \"\"\"\n\n\n# [Write the solution]\n\n## Solution for \" candidate\" problem\ndef candidate(l1, l2):\n    set1, set2 = set(l1), set(l2)\n    common_elements = set1 & set2\n    result = sorted(list(common_elements), reverse=True)\n    return result\n```\nNote: You can directly paste the code markdown or respond with clarifying questions.  Thank you.](https://docs.python.org/3/howto/)\n\nHere is the code:\n```python\ndef candidate(l1: list, l2: list):\n    \"\"\"Return sorted (descendingly or ascendingly) unique common elements for two lists.\n    >>> candidate([1, 4, 3, 34, 653, 2, 5], [5, 7, 1, 5, 9, 653, 121])\n    [1, 5, 653]\n    >>> candidate([5, 3, 2, 8], [3, 2])\n    [2, 3]\n\n    \"\"\"\n\n    set1, set2 = set(l1), set(l2)\n    common_elements = set1 & set2\n    result = sorted(list(common_elements), reverse=True)\n",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "Note: You can directly paste the code markdown or respond with clarifying questions.  Thank you.](https://docs.python.org/3/howto/)\n\nHere is the code:",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 72.02549338340759,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

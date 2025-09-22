@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_47::1a::meta-llama/Meta-Llama-3-8B-Instruct::seed0",
+  "task_id": "idx_47",
+  "category": "1a",
+  "entry_point": "median",
+  "prompt_field": "prompt1a",
+  "prompt_text": "\n\ndef candidate(l: list):\n    \"\"\"Return max or median of elements in the list l.\n    >>> candidate([3, 1, 2, 4, 5])\n    3\n    >>> candidate([-10, 4, 6, 1000, 10, 20])\n    15.0\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(l: list):\n    \"\"\"Return max or median of elements in the list l.\n    >>> candidate([3, 1, 2, 4, 5])\n    3\n    >>> candidate([-10, 4, 6, 1000, 10, 20])\n    15.0\n    \"\"\"",
+  "prompt_sha256": "86049b46912a5bced4c70ffd08195e7b5ce269c5ddf576f3881770b9e7fab1f2",
+  "model_name": "meta-llama/Meta-Llama-3-8B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(l: list):\n    \"\"\"Return max or median of elements in the list l.\n    >>> candidate([3, 1, 2, 4, 5])\n    3\n    >>> candidate([-10, 4, 6, 1000, 10, 20])\n    15.0\n    \"\"\"\n\n\n[Your Code Here]\n\nNote: Assume the input list is always sorted.\nYou should write a function named `candidate` that accepts a list of numbers as an argument and returns either the maximum or median of the numbers in the list. The function should return the maximum value if the median is a whole number, and the median if the median is not a whole number. In cases where the median is not a whole number, you should round the median to the nearest integer before returning it. \n\nFor example, given the input list `[3, 1, 2, 4, 5]`, your function should return `3`, which is the maximum value. Given the input list `[-10, 4, 6, 1000, 10, 20]`, your function should return `15.0`, which is the rounded median of the list. \n\nNote that you should assume that the input list is always sorted. \n\nPlease respond directly with code. For example:\n```\ndef my_function():\n   ...\n```  |  |\n```python\ndef candidate(l: list):\n    if len(l) % 2 == 1:\n        return max(l)\n    else:\n        mid = len(l) // 2\n       ",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def my_function():\n   ...",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 69.37411069869995,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

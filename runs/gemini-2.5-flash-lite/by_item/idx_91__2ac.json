@@ -1,0 +1,36 @@
+{
+  "record_id": "idx_91::2ac::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_91",
+  "category": "2ac",
+  "entry_point": "is_bored",
+  "prompt_field": "prompt2ac",
+  "prompt_text": "\ndef is_bored(S):\n    \"\"\"\n    You'll be given a string of words, and your task is to count the number\n    of boredoms. A boredom is a sentence that starts with a given word (such as \"W\", \"I\").\n    Sentences are delimited by '.', '?' or '!'.\n   \n    For example:\n    >>> is_bored(\"Hello world\")\n    1\n    >>> is_bored(\"The sky is blue. The sun is shining. I love this weather\")\n    3\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef is_bored(S):\n    \"\"\"\n    You'll be given a string of words, and your task is to count the number\n    of boredoms. A boredom is a sentence that starts with a given word (such as \"W\", \"I\").\n    Sentences are delimited by '.', '?' or '!'.\n   \n    For example:\n    >>> is_bored(\"Hello world\")\n    1\n    >>> is_bored(\"The sky is blue. The sun is shining. I love this weather\")\n    3\n    \"\"\"",
+  "prompt_sha256": "07792f2484fa57cd9f9c471b462c7ce2a4a7b1851d633742ae39be1fe8cdb09f",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "Could you please clarify what constitutes a \"given word\" that starts a boredom? The examples suggest that any sentence starting with *any* word is counted, not specific ones like \"W\" or \"I\". If the intention is to count *all* sentences, the prompt could be simplified to \"count the number of sentences\". If there are specific starting words, please provide the complete list.",
+  "gen_raw": {},
+  "contains_code": false,
+  "code_detected_method": "none",
+  "extracted_code": null,
+  "is_question": true,
+  "extracted_questions": [
+    "Could you please clarify what constitutes a \"given word\" that starts a boredom?",
+    "The examples suggest that any sentence starting with *any* word is counted, not specific ones like \"W\" or \"I\". If the intention is to count *all* sentences, the prompt could be simplified to \"count the number of sentences\". If there are specific starting words, please provide the complete list.?"
+  ],
+  "question_count": 2,
+  "first_question": "Could you please clarify what constitutes a \"given word\" that starts a boredom?",
+  "question_chars": 375,
+  "latency_sec": 1.1639220714569092,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

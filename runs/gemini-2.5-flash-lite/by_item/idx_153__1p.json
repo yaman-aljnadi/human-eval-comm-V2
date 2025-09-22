@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_153::1p::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_153",
+  "category": "1p",
+  "entry_point": "Strongest_Extension",
+  "prompt_field": "prompt1p",
+  "prompt_text": "\ndef Strongest_Extension(class_name, extensions):\n    \"\"\"You will be given the name of a class (a string) and a list of extensions.\n    The extensions are to be used to load additional classes to the class. The\n    strength of the extension is as follows: Let CAP be the number of the uppercase\n    letters in the extension's name, and let SM be the number of lowercase letters \n    in the extension's name, the strength is given by the fraction CAP - SM. \n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef Strongest_Extension(class_name, extensions):\n    \"\"\"You will be given the name of a class (a string) and a list of extensions.\n    The extensions are to be used to load additional classes to the class. The\n    strength of the extension is as follows: Let CAP be the number of the uppercase\n    letters in the extension's name, and let SM be the number of lowercase letters \n    in the extension's name, the strength is given by the fraction CAP - SM. \n    \"\"\"",
+  "prompt_sha256": "c6c5a7f74bf3adea0399156a2aba47a5a6262af57ef044fc1455d1363654ede2",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef Strongest_Extension(class_name, extensions):\n    \"\"\"You will be given the name of a class (a string) and a list of extensions.\n    The extensions are to be used to load additional classes to the class. The\n    strength of the extension is as follows: Let CAP be the number of the uppercase\n    letters in the extension's name, and let SM be the number of lowercase letters \n    in the extension's name, the strength is given by the fraction CAP - SM. \n    \"\"\"\n    strongest_extension = \"\"\n    max_strength = float('-inf')\n\n    for extension in extensions:\n        cap = sum(1 for char in extension if char.isupper())\n        sm = sum(1 for char in extension if char.islower())\n        strength = cap - sm\n\n        if strength > max_strength:\n            max_strength = strength\n            strongest_extension = extension\n        elif strength == max_strength:\n            # If strengths are equal, choose the lexicographically smallest extension\n            if strongest_extension == \"\" or extension < strongest_extension:\n                strongest_extension = extension\n\n    return strongest",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def Strongest_Extension(class_name, extensions):\n    \"\"\"You will be given the name of a class (a string) and a list of extensions.\n    The extensions are to be used to load additional classes to the class. The\n    strength of the extension is as follows: Let CAP be the number of the uppercase\n    letters in the extension's name, and let SM be the number of lowercase letters \n    in the extension's name, the strength is given by the fraction CAP - SM. \n    \"\"\"\n    strongest_extension = \"\"\n    max_strength = float('-inf')\n\n    for extension in extensions:\n        cap = sum(1 for char in extension if char.isupper())\n        sm = sum(1 for char in extension if char.islower())\n        strength = cap - sm\n\n        if strength > max_strength:\n            max_strength = strength\n            strongest_extension = extension\n        elif strength == max_strength:\n            # If strengths are equal, choose the lexicographically smallest extension\n            if strongest_extension == \"\" or extension < strongest_extension:\n                strongest_extension = extension\n\n    return strongest",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 1.6321778297424316,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

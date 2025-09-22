@@ -1,0 +1,35 @@
+{
+  "record_id": "idx_124::1p::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_124",
+  "category": "1p",
+  "entry_point": "valid_date",
+  "prompt_field": "prompt1p",
+  "prompt_text": "\ndef valid_date(date):\n    \"\"\"You have to write a function which validates a given date string and\n    returns True if the date is valid otherwise False.\n    The date is valid if all of the following rules are satisfied:\n    1.\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef valid_date(date):\n    \"\"\"You have to write a function which validates a given date string and\n    returns True if the date is valid otherwise False.\n    The date is valid if all of the following rules are satisfied:\n    1.\n    \"\"\"",
+  "prompt_sha256": "ffbcc39fa02eb502b12b4a020e7fa0ec8a7d20c0e3a1e12d4de7403a1b61407e",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "This is an incomplete prompt. The description for the `valid_date` function is missing the specific validation rules. Please provide the complete list of rules so I can generate the Python code.\n\nFor example, the rules might include:\n\n*   **Format:** The date string must be in a specific format (e.g., \"YYYY-MM-DD\", \"MM/DD/YYYY\").\n*   **Year range:** The year must fall within a certain range.\n*   **Month range:** The month must be between 1 and 12.\n*   **Day range:** The day must be valid for the given month and year (considering leap years).\n*   **No future dates:** The date cannot be in the future.\n\nOnce you provide the complete set of rules, I can write the `valid_date` function for you.",
+  "gen_raw": {},
+  "contains_code": false,
+  "code_detected_method": "none",
+  "extracted_code": null,
+  "is_question": true,
+  "extracted_questions": [
+    "This is an incomplete prompt. The description for the `valid_date` function is missing the specific validation rules. Please provide the complete list of rules so I can generate the Python code.\n\nFor example, the rules might include:\n\n*   **Format:** The date string must be in a specific format (e.g., \"YYYY-MM-DD\", \"MM/DD/YYYY\").\n*   **Year range:** The year must fall within a certain range.\n*   **Month range:** The month must be between 1 and 12.\n*   **Day range:** The day must be valid for the given month and year (considering leap years).\n*   **No future dates:** The date cannot be in the future.\n\nOnce you provide the complete set of rules, I can write the `valid_date` function for you.?"
+  ],
+  "question_count": 1,
+  "first_question": "This is an incomplete prompt. The description for the `valid_date` function is missing the specific validation rules. Please provide the complete list of rules so I can generate the Python code.\n\nFor example, the rules might include:\n\n*   **Format:** The date string must be in a specific format (e.g., \"YYYY-MM-DD\", \"MM/DD/YYYY\").\n*   **Year range:** The year must fall within a certain range.\n*   **Month range:** The month must be between 1 and 12.\n*   **Day range:** The day must be valid for the given month and year (considering leap years).\n*   **No future dates:** The date cannot be in the future.\n\nOnce you provide the complete set of rules, I can write the `valid_date` function for you.?",
+  "question_chars": 699,
+  "latency_sec": 1.2332634925842285,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

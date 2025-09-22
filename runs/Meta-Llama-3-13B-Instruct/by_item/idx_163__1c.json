@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_163::1c::andrijdavid/Meta-Llama-3-13B-Instruct::seed0",
+  "task_id": "idx_163",
+  "category": "1c",
+  "entry_point": "generate_integers",
+  "prompt_field": "prompt1c",
+  "prompt_text": "\ndef generate_integers(a, b):\n    \"\"\"\n    Given two positive integers a and b, return the even digits between a\n    and b, in ascending order.\n\n    For example:\n    generate_integers(2, 8) => [8]\n    generate_integers(8, 2) => [8]\n    generate_integers(10, 14) => [14]\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef generate_integers(a, b):\n    \"\"\"\n    Given two positive integers a and b, return the even digits between a\n    and b, in ascending order.\n\n    For example:\n    generate_integers(2, 8) => [8]\n    generate_integers(8, 2) => [8]\n    generate_integers(10, 14) => [14]\n    \"\"\"",
+  "prompt_sha256": "ec464bda00b4cf6776145e02bc26cb8f8e5abdc9e74a7965f0daefe9e2cea6e6",
+  "model_name": "andrijdavid/Meta-Llama-3-13B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef generate_integers(a, b):\n    \"\"\"\n    Given two positive integers a and b, return the even digits between a\n    and b, in ascending order.\n\n    For example:\n    generate_integers(2, 8) => [8]\n    generate_integers(8, 2) => [8]\n    generate_integers(10, 14) => [14]\n    \"\"\"\n\n\n\nPlease note that the provided function generate_integers should return a list of even numbers between a and b inclusive-exclusively meaning that b is not included in the range. For example, if b is 8, b should not be included in the range.banyways, I appreciate your help in providing Python3 code or any necessary questionsyou may need to guide me through this task.$$.$$.$$.$$.$$.$$.$$.$$.$$chwitzicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicic",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def generate_integers(a, b):\n    \"\"\"\n    Given two positive integers a and b, return the even digits between a\n    and b, in ascending order.\n\n    For example:\n    generate_integers(2, 8) => [8]\n    generate_integers(8, 2) => [8]\n    generate_integers(10, 14) => [14]\n    \"\"\"\n\n\n\nPlease note that the provided function generate_integers should return a list of even numbers between a and b inclusive-exclusively meaning that b is not included in the range. For example, if b is 8, b should not be included in the range.banyways, I appreciate your help in providing Python3 code or any necessary questionsyou may need to guide me through this task.$$.$$.$$.$$.$$.$$.$$.$$.$$chwitzicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicicic",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 90.64912366867065,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

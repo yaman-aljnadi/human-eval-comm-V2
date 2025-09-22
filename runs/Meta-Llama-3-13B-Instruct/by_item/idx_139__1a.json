@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_139::1a::andrijdavid/Meta-Llama-3-13B-Instruct::seed0",
+  "task_id": "idx_139",
+  "category": "1a",
+  "entry_point": "special_factorial",
+  "prompt_field": "prompt1a",
+  "prompt_text": "\ndef candidate(n):\n    \"\"\"The Brazilian factorial is defined as:\n    brazilian_factorial(n) = n!, or, brazilian_factorial(n) = n! * (n-1)! * (n-2)! * ... * 1!\n    where n > 0\n\n    For example:\n    >>> candidate(4)\n    288\n\n    The function will receive an integer as input and should return the special\n    factorial of this integer.\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(n):\n    \"\"\"The Brazilian factorial is defined as:\n    brazilian_factorial(n) = n!, or, brazilian_factorial(n) = n! * (n-1)! * (n-2)! * ... * 1!\n    where n > 0\n\n    For example:\n    >>> candidate(4)\n    288\n\n    The function will receive an integer as input and should return the special\n    factorial of this integer.\n    \"\"\"",
+  "prompt_sha256": "de439de3ac7a84206b5a1940f118879bdeedd69dbf306e743ea63a815bd447b2",
+  "model_name": "andrijdavid/Meta-Llama-3-13B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(n):\n    \"\"\"The Brazilian factorial is defined as:\n    brazilian_factorial(n) = n!, or, brazilian_factorial(n) = n! * (n-1)! * (n-2)! * ... * 1!\n    where n > 0\n\n    For example:\n    >>> candidate(4)\n    288\n\n    The function will receive an integer as input and should return the special\n    factorial of this integer.\n    \"\"\"\n\n\n\n Please note that you're not allowed to use built-in functions like `math(factorial)` or `functools.reduce()`\n\n(code)\n\nPlease provide your code or clarify any questions if needed further.Thank you. hailstones hailstones hailstones hailstones hailstones hailstones hailstones hailstones hailstones hailstones hailstones hailstones hailstones hailstones hailstones hailstones hailstones hailstones hailstones hailstones hailstones hailstones hailstones hailstones hailstones hailstones hailstones hailstones hailstones hailstones hailstones hailstones hailstones hailstones hailstones hailstones hailstones hailstones hailstones hailstones hailstones hailstones hailstones hailstones hailstones hail stones hail stones hail stones hail stones hail stones hail stones hail stones hail stones hail stones hail stones hail stones hail stones hail stones hail stones hail stones hail stones hail stones hail stones hail stones hail stones hail stones hail stones hail stones hail stones hail stones hail stones hail stones hail stones hail stones hail stones hail stones hail stones hail stones hail stones hail stones hail stones hail stones hail stones hail stones hail stones hail stones hail stones hail stones hail stones hail stones hail stones hail stones hail stones hail stones hail stones hail stones hail stones hail stones hail stones hail stones hail stones hail stones hail stones hail stones hail stones hail stones",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def candidate(n):\n    \"\"\"The Brazilian factorial is defined as:\n    brazilian_factorial(n) = n!, or, brazilian_factorial(n) = n! * (n-1)! * (n-2)! * ... * 1!\n    where n > 0\n\n    For example:\n    >>> candidate(4)\n    288\n\n    The function will receive an integer as input and should return the special\n    factorial of this integer.\n    \"\"\"\n\n\n\n Please note that you're not allowed to use built-in functions like `math(factorial)` or `functools.reduce()`\n\n(code)\n\nPlease provide your code or clarify any questions if needed further.Thank you. hailstones hailstones hailstones hailstones hailstones hailstones hailstones hailstones hailstones hailstones hailstones hailstones hailstones hailstones hailstones hailstones hailstones hailstones hailstones hailstones hailstones hailstones hailstones hailstones hailstones hailstones hailstones hailstones hailstones hailstones hailstones hailstones hailstones hailstones hailstones hailstones hailstones hailstones hailstones hailstones hailstones hailstones hailstones hailstones hailstones hail stones hail stones hail stones hail stones hail stones hail stones hail stones hail stones hail stones hail stones hail stones hail stones hail stones hail stones hail stones hail stones hail stones hail stones hail stones hail stones hail stones hail stones hail stones hail stones hail stones hail stones hail stones hail stones hail stones hail stones hail stones hail stones hail stones hail stones hail stones hail stones hail stones hail stones hail stones hail stones hail stones hail stones hail stones hail stones hail stones hail stones hail stones hail stones hail stones hail stones hail stones hail stones hail stones hail stones hail stones hail stones hail stones hail stones hail stones hail stones hail stones",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 91.54513835906982,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

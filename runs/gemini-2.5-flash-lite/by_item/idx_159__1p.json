@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_159::1p::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_159",
+  "category": "1p",
+  "entry_point": "eat",
+  "prompt_field": "prompt1p",
+  "prompt_text": "\ndef eat(number, need, remaining):\n    \"\"\"\n    You're a hungry rabbit, and you already have eaten a certain number of carrots,\n    but now you need to eat more carrots to complete the day's meals.\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef eat(number, need, remaining):\n    \"\"\"\n    You're a hungry rabbit, and you already have eaten a certain number of carrots,\n    but now you need to eat more carrots to complete the day's meals.\n    \"\"\"",
+  "prompt_sha256": "e4b533cbe651826cd96bf745c122554b9a7916b76d32efd79c9baa29a758f06b",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef eat(number, need, remaining):\n    \"\"\"\n    You're a hungry rabbit, and you already have eaten a certain number of carrots,\n    but now you need to eat more carrots to complete the day's meals.\n\n    Args:\n        number (int): The number of carrots you have already eaten.\n        need (int): The total number of carrots you need to eat for the day.\n        remaining (int): The number of carrots remaining in the garden.\n\n    Returns:\n        int: The number of carrots you need to eat now.\n             Returns 0 if you have already eaten enough or more than enough.\n             Returns -1 if there are not enough carrots remaining in the garden\n             to meet your needs.\n    \"\"\"\n    carrots_to_eat_now = need - number\n    if carrots_to_eat_now <= 0:\n        return 0\n    elif carrots_to_eat_now > remaining:\n        return -1\n    else:\n        return carrots_to_eat_now\n```",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def eat(number, need, remaining):\n    \"\"\"\n    You're a hungry rabbit, and you already have eaten a certain number of carrots,\n    but now you need to eat more carrots to complete the day's meals.\n\n    Args:\n        number (int): The number of carrots you have already eaten.\n        need (int): The total number of carrots you need to eat for the day.\n        remaining (int): The number of carrots remaining in the garden.\n\n    Returns:\n        int: The number of carrots you need to eat now.\n             Returns 0 if you have already eaten enough or more than enough.\n             Returns -1 if there are not enough carrots remaining in the garden\n             to meet your needs.\n    \"\"\"\n    carrots_to_eat_now = need - number\n    if carrots_to_eat_now <= 0:\n        return 0\n    elif carrots_to_eat_now > remaining:\n        return -1\n    else:\n        return carrots_to_eat_now",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 1.5157907009124756,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

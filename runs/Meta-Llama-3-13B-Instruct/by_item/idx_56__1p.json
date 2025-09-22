@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_56::1p::andrijdavid/Meta-Llama-3-13B-Instruct::seed0",
+  "task_id": "idx_56",
+  "category": "1p",
+  "entry_point": "correct_bracketing",
+  "prompt_field": "prompt1p",
+  "prompt_text": "\n\ndef correct_bracketing(brackets: str):\n    \"\"\" brackets is a string of \"<\" and \">\".\n\n    >>> correct_bracketing(\"<\")\n    False\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef correct_bracketing(brackets: str):\n    \"\"\" brackets is a string of \"<\" and \">\".\n\n    >>> correct_bracketing(\"<\")\n    False\n    \"\"\"",
+  "prompt_sha256": "36bb73b1fe8dd4ed8c0c713fd501133195df929865014a05d9a7f148fcbed7b0",
+  "model_name": "andrijdavid/Meta-Llama-3-13B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef correct_bracketing(brackets: str):\n    \"\"\" brackets is a string of \"<\" and \">\".\n\n    >>> correct_bracketing(\"<\")\n    False\n    \"\"\"\n\n\n\nplease note that your code should handle cases where there are no closing bracket present\neg: \n\n def correct_bracket­ing braket­s Str:\n    \"\"\" braket­s Str is a string of \"<\" and\">\".\n\n    >>> correct Brckett­ing braket­s Str\n    False \"\"\"\"\"\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\" '\"'\"'\"'\" '\"'\" '\"oltive\"\"\" '\"oltiveiltiveiltiveiltiveiltiveiltiveiltiveiltiveiltiveiltiveiltiveiltiveiltiveiltiveiltiveiltiveiltiveiltiveiltiveiltiveiltiveiltiveiltiveiltiveiltiveiltiveiltiveiltiveiltiveiltiveiltiveiltiveiltiveiltiveiltiveiltiveiltiveiltiveiltiveiltiveiltiveiltiveiltiveiltiveiltiveiltiveiltiveiltiveiltiveiltiveiltiveiltiveiltiveilt",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def correct_bracketing(brackets: str):\n    \"\"\" brackets is a string of \"<\" and \">\".\n\n    >>> correct_bracketing(\"<\")\n    False\n    \"\"\"\n\n\n\nplease note that your code should handle cases where there are no closing bracket present\neg: \n\n def correct_bracket­ing braket­s Str:\n    \"\"\" braket­s Str is a string of \"<\" and\">\".\n\n    >>> correct Brckett­ing braket­s Str\n    False \"\"\"\"\"\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\"'\" '\"'\"'\"'\" '\"'\" '\"oltive\"\"\" '\"oltiveiltiveiltiveiltiveiltiveiltiveiltiveiltiveiltiveiltiveiltiveiltiveiltiveiltiveiltiveiltiveiltiveiltiveiltiveiltiveiltiveiltiveiltiveiltiveiltiveiltiveiltiveiltiveiltiveiltiveiltiveiltiveiltiveiltiveiltiveiltiveiltiveiltiveiltiveiltiveiltiveiltiveiltiveiltiveiltiveiltiveiltiveiltiveiltiveiltiveiltiveiltiveiltiveilt",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 90.97498488426208,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

@@ -1,0 +1,37 @@
+{
+  "record_id": "idx_15::1p::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_15",
+  "category": "1p",
+  "entry_point": "string_sequence",
+  "prompt_field": "prompt1p",
+  "prompt_text": "\n\ndef string_sequence(n: int) -> str:\n    \"\"\" Return a string containing space-delimited numbers.\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef string_sequence(n: int) -> str:\n    \"\"\" Return a string containing space-delimited numbers.",
+  "prompt_sha256": "63f7d0ed674f7d6595183ddd39eda4079d8c7095e4e52942815f06ff22afc522",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "I can definitely help you write this Python function!\n\nBefore I generate the code, I have a clarifying question to ensure I'm creating exactly what you need:\n\n*   **What should happen if `n` is less than or equal to 0?** For example, should it return an empty string, raise an error, or handle it in some other way?",
+  "gen_raw": {},
+  "contains_code": false,
+  "code_detected_method": "none",
+  "extracted_code": null,
+  "is_question": true,
+  "extracted_questions": [
+    "I can definitely help you write this Python function!\n\nBefore I generate the code, I have a clarifying question to ensure I'm creating exactly what you need:\n\n*   **What should happen if `n` is less than or equal to 0?",
+    "Before I generate the code, I have a clarifying question to ensure I'm creating exactly what you need:\n\n*   **What should happen if `n` is less than or equal to 0?",
+    "** For example, should it return an empty string, raise an error, or handle it in some other way?"
+  ],
+  "question_count": 3,
+  "first_question": "I can definitely help you write this Python function!\n\nBefore I generate the code, I have a clarifying question to ensure I'm creating exactly what you need:\n\n*   **What should happen if `n` is less than or equal to 0?",
+  "question_chars": 478,
+  "latency_sec": 1.0425360202789307,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_145::1a::meta-llama/Meta-Llama-3-8B-Instruct::seed0",
+  "task_id": "idx_145",
+  "category": "1a",
+  "entry_point": "order_by_points",
+  "prompt_field": "prompt1a",
+  "prompt_text": "\ndef candidate(nums):\n    \"\"\"\n    Write a function which sorts the given list of integers\n    in descending or ascending order according to the sum of their digits.\n    Note: if there are several items with similar sum of their digits,\n    order them based on their index in original list.\n\n    For example:\n    >>> candidate([1, 11, -1, -11, -12]) == [-1, -11, 1, -12, 11]\n    >>> candidate([]) == []\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(nums):\n    \"\"\"\n    Write a function which sorts the given list of integers\n    in descending or ascending order according to the sum of their digits.\n    Note: if there are several items with similar sum of their digits,\n    order them based on their index in original list.\n\n    For example:\n    >>> candidate([1, 11, -1, -11, -12]) == [-1, -11, 1, -12, 11]\n    >>> candidate([]) == []\n    \"\"\"",
+  "prompt_sha256": "57c18a237279ab304602b424d4cc4be49b14a8cf4c0bc0637c712dc4fd244c72",
+  "model_name": "meta-llama/Meta-Llama-3-8B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(nums):\n    \"\"\"\n    Write a function which sorts the given list of integers\n    in descending or ascending order according to the sum of their digits.\n    Note: if there are several items with similar sum of their digits,\n    order them based on their index in original list.\n\n    For example:\n    >>> candidate([1, 11, -1, -11, -12]) == [-1, -11, 1, -12, 11]\n    >>> candidate([]) == []\n    \"\"\"\n\n\n[python code]```\ndef candidate(nums):\n    if not nums:\n        return nums\n\n    for num in nums:\n        if type(num)!= int:\n            raise TypeError(\"All elements in the input list must be of type int\")\n\n    sorted_nums = sorted(enumerate(nums), key=lambda x: (-sum(map(int, str(abs(x[1])))), x[0]))\n\n    return [i[1] for i in sorted_nums]\n```  ```\n\n**Note:** The provided answer doesn't handle the edge case where a non-integer value is present in the list. This answer could be improved with error handling. If you want to clarify any doubts or ask questions, feel free to do so.  ```\n\n```python\ndef candidate(nums):\n    if not nums:\n        return nums\n\n    for num in nums:\n        if not isinstance(num, int):\n            raise ValueError(\"All elements in the input list must be of type int\")\n\n    sorted_nums = sorted(((abs(num), index), sum(map(int, str(abs(num)))) for num, index in enumerate(nums)), reverse=True, key=lambda x: (-x[1], x[0]))\n\n    return [num for num, _ in sorted_nums]\n```\n\nPython 3 code",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def candidate(nums):\n    if not nums:\n        return nums\n\n    for num in nums:\n        if type(num)!= int:\n            raise TypeError(\"All elements in the input list must be of type int\")\n\n    sorted_nums = sorted(enumerate(nums), key=lambda x: (-sum(map(int, str(abs(x[1])))), x[0]))\n\n    return [i[1] for i in sorted_nums]",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 66.72938275337219,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

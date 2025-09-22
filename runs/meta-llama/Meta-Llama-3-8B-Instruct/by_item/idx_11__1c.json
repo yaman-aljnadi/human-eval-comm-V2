@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_11::1c::meta-llama/Meta-Llama-3-8B-Instruct::seed0",
+  "task_id": "idx_11",
+  "category": "1c",
+  "entry_point": "string_xor",
+  "prompt_field": "prompt1c",
+  "prompt_text": "from typing import List\n\n\ndef string_xor(a: str, b: str) -> str:\n    \"\"\" Input are two strings a and b consisting only of 1s and 0s.\n    Perform binary XOR on these inputs and return result also as a string.\n    >>> string_xor('010', '110')\n    '011'\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List\n\n\ndef string_xor(a: str, b: str) -> str:\n    \"\"\" Input are two strings a and b consisting only of 1s and 0s.\n    Perform binary XOR on these inputs and return result also as a string.\n    >>> string_xor('010', '110')\n    '011'\n    \"\"\"",
+  "prompt_sha256": "b8830e4088f692a9c5b82c5dd8c847dccbe2278843fcc53bb88312a9b454bf88",
+  "model_name": "meta-llama/Meta-Llama-3-8B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List\n\n\ndef string_xor(a: str, b: str) -> str:\n    \"\"\" Input are two strings a and b consisting only of 1s and 0s.\n    Perform binary XOR on these inputs and return result also as a string.\n    >>> string_xor('010', '110')\n    '011'\n    \"\"\"\n\n\ndef binary_list_xor(a_list: List[str], b_list: List[str]) -> List[str]:\n    \"\"\" Input is a list of strings a_list and another list of strings b_list.\n    Both a_list and b_list contain strings consisting only of 1s and 0s.\n    Perform binary XOR on corresponding elements of a_list and b_list.\n    Return result as a list of strings.\n    >>> binary_list_xor(['010', '100', '000'], ['110', '110', '010'])\n    ['011', '010', '010']\n    \"\"\"\nPlease clarify:\n1. The input strings in both problems are of the same length. Is this always true or could they potentially be of different lengths?\n2. How should we handle the case where the input lists contain strings of different lengths? Should the function just stop with an error if it encounters a mismatch, or should it pad or truncate the strings to match, and if so, how?\n3.  Should it assume that input strings are valid (i.e., consist only of '0' or '1')?\n4.  Can the strings contain multiple characters or should they be single character strings?````\n```python\n```python\n```python\n```python\n```python\n",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "`",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 67.96858954429626,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

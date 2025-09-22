@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_98::1a::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_98",
+  "category": "1a",
+  "entry_point": "count_upper",
+  "prompt_field": "prompt1a",
+  "prompt_text": "\ndef count_upper(s):\n    \"\"\"\n    Given a string s, count the number of uppercase vowels in odd or even indices.\n    \n    For example:\n    count_upper('aBCdEf') returns 1\n    count_upper('abcdefg') returns 0\n    count_upper('dBBE') returns 0\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef count_upper(s):\n    \"\"\"\n    Given a string s, count the number of uppercase vowels in odd or even indices.\n    \n    For example:\n    count_upper('aBCdEf') returns 1\n    count_upper('abcdefg') returns 0\n    count_upper('dBBE') returns 0\n    \"\"\"",
+  "prompt_sha256": "2e233149ef0964532337fbeab3e2dc26736940bfd522100791d2972ab088384e",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef count_upper(s):\n    \"\"\"\n    Given a string s, count the number of uppercase vowels in odd or even indices.\n    \n    For example:\n    count_upper('aBCdEf') returns 1\n    count_upper('abcdefg') returns 0\n    count_upper('dBBE') returns 0\n    \"\"\"\n    count = 0\n    uppercase_vowels = \"AEIOU\"\n    for i in range(len(s)):\n        if s[i] in uppercase_vowels:\n            if i % 2 == 0:  # Even index\n                count += 1\n            # The problem statement implies we should only count if the index is odd OR even.\n            # The examples clarify that we are interested in uppercase vowels AT either odd OR even indices.\n            # The example `count_upper('aBCdEf') returns 1` suggests 'B' at index 1 (odd) is not counted,\n            # but 'E' at index 4 (even) is counted.\n            # The example `count_upper('dBBE') returns 0` suggests 'B' at index",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def count_upper(s):\n    \"\"\"\n    Given a string s, count the number of uppercase vowels in odd or even indices.\n    \n    For example:\n    count_upper('aBCdEf') returns 1\n    count_upper('abcdefg') returns 0\n    count_upper('dBBE') returns 0\n    \"\"\"\n    count = 0\n    uppercase_vowels = \"AEIOU\"\n    for i in range(len(s)):\n        if s[i] in uppercase_vowels:\n            if i % 2 == 0:  # Even index\n                count += 1\n            # The problem statement implies we should only count if the index is odd OR even.\n            # The examples clarify that we are interested in uppercase vowels AT either odd OR even indices.\n            # The example `count_upper('aBCdEf') returns 1` suggests 'B' at index 1 (odd) is not counted,\n            # but 'E' at index 4 (even) is counted.\n            # The example `count_upper('dBBE') returns 0` suggests 'B' at index",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 1.6749069690704346,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

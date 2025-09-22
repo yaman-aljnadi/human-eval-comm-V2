@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_118::1p::andrijdavid/Meta-Llama-3-13B-Instruct::seed0",
+  "task_id": "idx_118",
+  "category": "1p",
+  "entry_point": "get_closest_vowel",
+  "prompt_field": "prompt1p",
+  "prompt_text": "\ndef get_closest_vowel(word):\n    \"\"\"You are given a word. Your task is to find the closest vowel that stands\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef get_closest_vowel(word):\n    \"\"\"You are given a word. Your task is to find the closest vowel that stands\n    \"\"\"",
+  "prompt_sha256": "1723c0cd00f6189a45f5cc203c4e4cedaee0dee1e999def23355dc0df649a3c5",
+  "model_name": "andrijdavid/Meta-Llama-3-13B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef get_closest_vowel(word):\n    \"\"\"You are given a word. Your task is to find the closest vowel that stands\n    \"\"\"TextWriteraston the left-hand side of the word.\"\"\"\n\nPlease provide code for this task without any imports or packages other than built-in ones in Python3:\nelow code will be appreciated:\n_Tis/stdc Python3 code:`\n_Tis//ERRU`\n\nclarify: \n_Tis//ERRU`\n_Tis//ERRU`\n\n_Tis// KUR tích`\n\n_Tis// KUR tích`\n\n_Tis// Kur`\n\n_Tis// Kur`\n\n_Tis// Kur`\n\n_Tis// Kur`\n\n_Tis// Kur`\n\n_Tis// Kur`\n\n_Tis// Kur`\n\n_Tis// Kur`\n\n_Tis// Kur`\n\n_Tis// Kur`\n\n_Tis// Kur`\n\nlogenics​ schedular​ schedule​ schedular​ schedular​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def get_closest_vowel(word):\n    \"\"\"You are given a word. Your task is to find the closest vowel that stands\n    \"\"\"TextWriteraston the left-hand side of the word.\"\"\"\n\nPlease provide code for this task without any imports or packages other than built-in ones in Python3:\nelow code will be appreciated:\n_Tis/stdc Python3 code:`\n_Tis//ERRU`\n\nclarify: \n_Tis//ERRU`\n_Tis//ERRU`\n\n_Tis// KUR tích`\n\n_Tis// KUR tích`\n\n_Tis// Kur`\n\n_Tis// Kur`\n\n_Tis// Kur`\n\n_Tis// Kur`\n\n_Tis// Kur`\n\n_Tis// Kur`\n\n_Tis// Kur`\n\n_Tis// Kur`\n\n_Tis// Kur`\n\n_Tis// Kur`\n\n_Tis// Kur`\n\nlogenics​ schedular​ schedule​ schedular​ schedular​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule​ Schedule",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 91.31293320655823,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

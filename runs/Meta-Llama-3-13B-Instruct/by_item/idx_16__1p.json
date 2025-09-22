@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_16::1p::andrijdavid/Meta-Llama-3-13B-Instruct::seed0",
+  "task_id": "idx_16",
+  "category": "1p",
+  "entry_point": "count_distinct_characters",
+  "prompt_field": "prompt1p",
+  "prompt_text": "\n\ndef candidate(string: str) -> int:\n    \"\"\" Given a string, find out how many distinct characters does it consist of\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(string: str) -> int:\n    \"\"\" Given a string, find out how many distinct characters does it consist of\n    \"\"\"",
+  "prompt_sha256": "f8ed121e7ff22a0d97fd5dc88da7b0f6932e1d70905cd9a6b8d9a0fbec9eafd8",
+  "model_name": "andrijdavid/Meta-Llama-3-13B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(string: str) -> int:\n    \"\"\" Given a string, find out how many distinct characters does it consist of\n    \"\"\"\n\n\n Please provide a Python3 code that counts distinct characters in a given string.\n\n##otennerly\n\n ###Below codeACKETED CODEčník\":\n\nstring = input(\"Enter a string:\\n\")\n\n def distinct characters Counter(string: str):\n    \"\"\" Python3 code to count distinct characters in a given string\"\"\"ELLOWingaland\nrtsenguage:\n\n distinct characters = set(string)\n print(\"Number of distinct characters in the string is:\", len(distinct characters))\n\nStackNavigator\nrippsenguageelowest�数量 Vernacular Vernacular Vernacular Vernacular Vernacular Vernacular Vernacular Vernacular Vernacular Vernacular Vernacular Vernacular Vernacular Vernacular Vernacular Vernacular Vernacular Vernacular Vernacular Vernacular Vernacular Vernacular Vernacular Vernacular Vernacular Vernacular Vernacular Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def candidate(string: str) -> int:\n    \"\"\" Given a string, find out how many distinct characters does it consist of\n    \"\"\"\n\n\n Please provide a Python3 code that counts distinct characters in a given string.\n\n##otennerly\n\n ###Below codeACKETED CODEčník\":\n\nstring = input(\"Enter a string:\\n\")\n\n def distinct characters Counter(string: str):\n    \"\"\" Python3 code to count distinct characters in a given string\"\"\"ELLOWingaland\nrtsenguage:\n\n distinct characters = set(string)\n print(\"Number of distinct characters in the string is:\", len(distinct characters))\n\nStackNavigator\nrippsenguageelowest�数量 Vernacular Vernacular Vernacular Vernacular Vernacular Vernacular Vernacular Vernacular Vernacular Vernacular Vernacular Vernacular Vernacular Vernacular Vernacular Vernacular Vernacular Vernacular Vernacular Vernacular Vernacular Vernacular Vernacular Vernacular Vernacular Vernacular Vernacular Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern Vern",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 90.83578610420227,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

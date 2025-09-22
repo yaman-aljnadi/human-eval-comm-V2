@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_4::3acp::andrijdavid/Meta-Llama-3-13B-Instruct::seed0",
+  "task_id": "idx_4",
+  "category": "3acp",
+  "entry_point": "mean_absolute_deviation",
+  "prompt_field": "prompt3acp",
+  "prompt_text": "from typing import List\n\n\ndef candidate(numbers: List[float]) -> float:\n    \"\"\" For a given list of input numbers, calculate Mean Absolute Deviation.   >>> mean_absolute_deviation([1.0, 2.0, 3.0, 4.0])\n    1.5\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List\n\n\ndef candidate(numbers: List[float]) -> float:\n    \"\"\" For a given list of input numbers, calculate Mean Absolute Deviation.   >>> mean_absolute_deviation([1.0, 2.0, 3.0, 4.0])\n    1.5\n    \"\"\"",
+  "prompt_sha256": "f0c976e914f71f1e004ebe9fae1035b8fcdb3b6fa6b181b8c3748ea33e649230",
+  "model_name": "andrijdavid/Meta-Llama-3-13B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List\n\n\ndef candidate(numbers: List[float]) -> float:\n    \"\"\" For a given list of input numbers, calculate Mean Absolute Deviation.   >>> mean_absolute_deviation([1.0, 2.0, 3.0, 4.0])\n    1.5\n    \"\"\"\n\n\n# 🔥 Please Provide below Python3 code implementation with clarifying questions if needed! 👇\n\n réponse :\nBelow code implementation :\nCodesandbox.com:\n.codesandbox.comcodesandbox.com_codesandbox.comCodesandbox.com codesandbox.comcodesandbox.comcodesandbox.comcodes sandboxcomcodes sandboxcomcodesandboxcom.codes sandboxcom.codes sandboxcom.codes sandboxcom.codes sandbox com.codes sandbox com.codes sandbox com.codes sandbox com.codes sandbox com.codesandbox com.codesandbox com.codesandbox com.codesandbox com.codes sand com.codes sand com.codes sand com.codes sand com.codes sand com codes sand com.codes sand com.codes sand com.codes sand com.codes sand com.codes sand com.codes sand com.codes sand com.codes sand com.codes sand com.codes sand com.codes sand com.codes sand com.codes sand com.codes sand com.codes sand com.codes sand com codes sand com.codes sand com.codes sand com.codes sand com.codes sand com.codes sand com.codes sand com codes sand com codes sand com codes sand com codes sand com codes sand com codes sand com codes sand com codes sand com codes sand com codes sand com codes sand com codes sand com codes sand com codes sand com codes sand com codes sand com codes sand com codes sand com codes sand com codes sand com codes sand com codes sand com codes sand com codes sand com",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def candidate(numbers: List[float]) -> float:\n    \"\"\" For a given list of input numbers, calculate Mean Absolute Deviation.   >>> mean_absolute_deviation([1.0, 2.0, 3.0, 4.0])\n    1.5\n    \"\"\"\n\n\n# 🔥 Please Provide below Python3 code implementation with clarifying questions if needed! 👇\n\n réponse :\nBelow code implementation :\nCodesandbox.com:\n.codesandbox.comcodesandbox.com_codesandbox.comCodesandbox.com codesandbox.comcodesandbox.comcodesandbox.comcodes sandboxcomcodes sandboxcomcodesandboxcom.codes sandboxcom.codes sandboxcom.codes sandboxcom.codes sandbox com.codes sandbox com.codes sandbox com.codes sandbox com.codes sandbox com.codesandbox com.codesandbox com.codesandbox com.codesandbox com.codes sand com.codes sand com.codes sand com.codes sand com.codes sand com codes sand com.codes sand com.codes sand com.codes sand com.codes sand com.codes sand com.codes sand com.codes sand com.codes sand com.codes sand com.codes sand com.codes sand com.codes sand com.codes sand com.codes sand com.codes sand com.codes sand com codes sand com.codes sand com.codes sand com.codes sand com.codes sand com.codes sand com.codes sand com codes sand com codes sand com codes sand com codes sand com codes sand com codes sand com codes sand com codes sand com codes sand com codes sand com codes sand com codes sand com codes sand com codes sand com codes sand com codes sand com codes sand com codes sand com codes sand com codes sand com codes sand com codes sand com codes sand com codes sand com",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 91.686603307724,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

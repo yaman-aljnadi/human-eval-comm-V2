@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_94::2ac::meta-llama/Meta-Llama-3-8B-Instruct::seed0",
+  "task_id": "idx_94",
+  "category": "2ac",
+  "entry_point": "skjkasdkd",
+  "prompt_field": "prompt2ac",
+  "prompt_text": "\n\ndef skjkasdkd(lst):\n    \"\"\"You are given a list of integers.\n    You need to find the smallest or largest prime value and return.\n\n    Examples:\n    For lst = [0,3,2,1,3,5,7,4,5,5,5,2,181,32,4,32,3,2,32,324,4,3] the output should be 2\n    For lst = [1,0,1,8,2,4597,2,1,3,40,1,2,1,2,4,2,5,1] the output should be 2\n    For lst = [1,3,1,32,5107,34,83278,109,163,23,2323,32,30,1,9,3] the output should be 3\n    For lst = [0,724,32,71,99,32,6,0,5,91,83,0,5,6] the output should be 5\n    For lst = [0,81,12,3,1,21] the output should be 3\n    For lst = [0,8,1,2,1,7] the output should be 2\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef skjkasdkd(lst):\n    \"\"\"You are given a list of integers.\n    You need to find the smallest or largest prime value and return.\n\n    Examples:\n    For lst = [0,3,2,1,3,5,7,4,5,5,5,2,181,32,4,32,3,2,32,324,4,3] the output should be 2\n    For lst = [1,0,1,8,2,4597,2,1,3,40,1,2,1,2,4,2,5,1] the output should be 2\n    For lst = [1,3,1,32,5107,34,83278,109,163,23,2323,32,30,1,9,3] the output should be 3\n    For lst = [0,724,32,71,99,32,6,0,5,91,83,0,5,6] the output should be 5\n    For lst = [0,81,12,3,1,21] the output should be 3\n    For lst = [0,8,1,2,1,7] the output should be 2\n    \"\"\"",
+  "prompt_sha256": "95605fda078cffdc8b12da5c0605dc3de62928c5f78decfab2bf9055f795565f",
+  "model_name": "meta-llama/Meta-Llama-3-8B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef skjkasdkd(lst):\n    \"\"\"You are given a list of integers.\n    You need to find the smallest or largest prime value and return.\n\n    Examples:\n    For lst = [0,3,2,1,3,5,7,4,5,5,5,2,181,32,4,32,3,2,32,324,4,3] the output should be 2\n    For lst = [1,0,1,8,2,4597,2,1,3,40,1,2,1,2,4,2,5,1] the output should be 2\n    For lst = [1,3,1,32,5107,34,83278,109,163,23,2323,32,30,1,9,3] the output should be 3\n    For lst = [0,724,32,71,99,32,6,0,5,91,83,0,5,6] the output should be 5\n    For lst = [0,81,12,3,1,21] the output should be 3\n    For lst = [0,8,1,2,1,7] the output should be 2\n    \"\"\"\n\n\n# Your code goes here\n````\n```\n## Problem Explanation\nI need to find the smallest prime number in a given list of integers.\n\nFor example, if the input list is [0,3,2,1,3,5,7,4,5,5,5,2,181,32,4,32,3,2,32,324,4,3], the function should return 2 because 2 is the smallest prime number in the list. If no prime number is found, the function should return None.\n\nPlease write a Python function that takes a list of integers as an argument and returns the smallest prime number in the list. If no prime number is found, it should return None.\n\nNote that this problem involves finding prime numbers. Prime numbers are positive integers that are divisible only by themselves and 1. For example, 2, 3, 5, and 7 are all prime numbers. \n\n## Clarifying Questions\nDo I need to find prime numbers in a specific range or among all the numbers in the list? Should I consider 0 as a prime number or not? If a number is divisible by 1 and itself, can I consider it as prime or not? Please provide more clarification",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "`",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 68.97687721252441,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_76::1a::andrijdavid/Meta-Llama-3-13B-Instruct::seed0",
+  "task_id": "idx_76",
+  "category": "1a",
+  "entry_point": "is_simple_power",
+  "prompt_field": "prompt1a",
+  "prompt_text": "\ndef candidate(a, b):\n    \"\"\"Your task is to write a function that returns true if a number x is a \n    power of n and false in other cases.\n    x is a simple power of n if n**k=x\n    For example:\n    candidate(1, 4) => true\n    candidate(2, 2) => true\n    candidate(8, 2) => true\n    candidate(3, 2) => false\n    candidate(3, 1) => false\n    candidate(5, 3) => false\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(a, b):\n    \"\"\"Your task is to write a function that returns true if a number x is a \n    power of n and false in other cases.\n    x is a simple power of n if n**k=x\n    For example:\n    candidate(1, 4) => true\n    candidate(2, 2) => true\n    candidate(8, 2) => true\n    candidate(3, 2) => false\n    candidate(3, 1) => false\n    candidate(5, 3) => false\n    \"\"\"",
+  "prompt_sha256": "2248e162f6fdf335aaf79bf83e1afc7fed3d0acb53a47af5387fc03b48ac225f",
+  "model_name": "andrijdavid/Meta-Llama-3-13B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(a, b):\n    \"\"\"Your task is to write a function that returns true if a number x is a \n    power of n and false in other cases.\n    x is a simple power of n if n**k=x\n    For example:\n    candidate(1, 4) => true\n    candidate(2, 2) => true\n    candidate(8, 2) => true\n    candidate(3, 2) => false\n    candidate(3, 1) => false\n    candidate(5, 3) => false\n    \"\"\"\n\n\n\n請-do not hesitate to ask if you need further information or if you have any questions about this taskutenly appreciated! dankeschickenajeans pecailly appreciate your assistanceive regardsajeansajeansajeansajeansajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeins",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def candidate(a, b):\n    \"\"\"Your task is to write a function that returns true if a number x is a \n    power of n and false in other cases.\n    x is a simple power of n if n**k=x\n    For example:\n    candidate(1, 4) => true\n    candidate(2, 2) => true\n    candidate(8, 2) => true\n    candidate(3, 2) => false\n    candidate(3, 1) => false\n    candidate(5, 3) => false\n    \"\"\"\n\n\n\n請-do not hesitate to ask if you need further information or if you have any questions about this taskutenly appreciated! dankeschickenajeans pecailly appreciate your assistanceive regardsajeansajeansajeansajeansajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeinsajeins",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 92.1653413772583,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

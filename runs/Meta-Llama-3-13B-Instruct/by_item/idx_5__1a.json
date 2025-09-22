@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_5::1a::andrijdavid/Meta-Llama-3-13B-Instruct::seed0",
+  "task_id": "idx_5",
+  "category": "1a",
+  "entry_point": "intersperse",
+  "prompt_field": "prompt1a",
+  "prompt_text": "from typing import List\n\n\ndef candidate(numbers: List[int], x: int) -> List[int]:\n    \"\"\" Insert a number 'x' for a certain number of times in the input list `numbers'\n    >>> candidate([], 4)\n    []\n    >>> candidate([1, 2, 3], 4)\n    [1, 4, 2, 4, 3]\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List\n\n\ndef candidate(numbers: List[int], x: int) -> List[int]:\n    \"\"\" Insert a number 'x' for a certain number of times in the input list `numbers'\n    >>> candidate([], 4)\n    []\n    >>> candidate([1, 2, 3], 4)\n    [1, 4, 2, 4, 3]\n    \"\"\"",
+  "prompt_sha256": "2a1267e482a326c599f86c7d87c81aa3ea729bd6a466b885328c5ada2a600de7",
+  "model_name": "andrijdavid/Meta-Llama-3-13B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List\n\n\ndef candidate(numbers: List[int], x: int) -> List[int]:\n    \"\"\" Insert a number 'x' for a certain number of times in the input list `numbers'\n    >>> candidate([], 4)\n    []\n    >>> candidate([1, 2, 3], 4)\n    [1, 4, 2, 4, 3]\n    \"\"\"\n\n\nPlease note that you can use any built-in Python built-in functions like `extend`, `copy`, etc., but do not use any third-party libraries or packages apart from built-in ones like ` List`.\n\nacíate your response with code directly:\nacíate your response with code directly:\nacíate your response with code directly:\nacíate your response with code directly:\n```python\ndef candidate numbers x:\n numbers.extend numbers x x numbers extend numbers x x numbers extend numbers x x numbers extend numbers x x numbers extend numbers x x numbers extend numbers x x numbers extend numbers x x numbers extend numbers x x numbers extend numbers x x numbers extend numbers x x numbers extend numbers x x numbers extend numbers x x numbers extend numbers x x numbers extend numbers x x numbers extend numbers x x numbers extend numbers x x numbers extend numbers x x numbers extend numbers x x numbers extend numbers x x numbers extendnumbers numbers x numbers numbers numbers x numbers numbers numbers numbers numbers numbers x numbers numbers numbers numbers x numbers numbers numbers numbers numbers x numbers numbers numbers numbers numbers x numbers numbers numbers numbers x numbers numbers numbers xnumbers numbers x numbers numbers numbers numbers xnumbers numbers xnumbers numbers xnumbers xnumbers numbers xnumbers numbers xnumbers numbers xnumbers xnumbers xnumbers x numbers x numbers xnumbers numbers",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def candidate(numbers: List[int], x: int) -> List[int]:\n    \"\"\" Insert a number 'x' for a certain number of times in the input list `numbers'\n    >>> candidate([], 4)\n    []\n    >>> candidate([1, 2, 3], 4)\n    [1, 4, 2, 4, 3]\n    \"\"\"\n\n\nPlease note that you can use any built-in Python built-in functions like `extend`, `copy`, etc., but do not use any third-party libraries or packages apart from built-in ones like ` List`.\n\nacíate your response with code directly:\nacíate your response with code directly:\nacíate your response with code directly:\nacíate your response with code directly:\n```python\ndef candidate numbers x:\n numbers.extend numbers x x numbers extend numbers x x numbers extend numbers x x numbers extend numbers x x numbers extend numbers x x numbers extend numbers x x numbers extend numbers x x numbers extend numbers x x numbers extend numbers x x numbers extend numbers x x numbers extend numbers x x numbers extend numbers x x numbers extend numbers x x numbers extend numbers x x numbers extend numbers x x numbers extend numbers x x numbers extend numbers x x numbers extend numbers x x numbers extend numbers x x numbers extendnumbers numbers x numbers numbers numbers x numbers numbers numbers numbers numbers numbers x numbers numbers numbers numbers x numbers numbers numbers numbers numbers x numbers numbers numbers numbers numbers x numbers numbers numbers numbers x numbers numbers numbers xnumbers numbers x numbers numbers numbers numbers xnumbers numbers xnumbers numbers xnumbers xnumbers numbers xnumbers numbers xnumbers numbers xnumbers xnumbers xnumbers x numbers x numbers xnumbers numbers",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 90.38780617713928,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

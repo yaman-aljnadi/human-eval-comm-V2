@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_115::2ap::andrijdavid/Meta-Llama-3-13B-Instruct::seed0",
+  "task_id": "idx_115",
+  "category": "2ap",
+  "entry_point": "max_fill",
+  "prompt_field": "prompt2ap",
+  "prompt_text": "\ndef max_fill(grid, capacity):\n    import math\n    \"\"\"\n    You are given a rectangular grid of wells. Each row represents a single well,\n    and each 0 or 1 in a row represents a single unit of water.\n    Each well has a corresponding bucket that can be used to extract water from it, \n    and all buckets have the same capacity.\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef max_fill(grid, capacity):\n    import math\n    \"\"\"\n    You are given a rectangular grid of wells. Each row represents a single well,\n    and each 0 or 1 in a row represents a single unit of water.\n    Each well has a corresponding bucket that can be used to extract water from it, \n    and all buckets have the same capacity.\n    \"\"\"",
+  "prompt_sha256": "efb901f45bcd43c01252f34500dd4225e802a868b21a7e7ce21bb6cc10acbaf5",
+  "model_name": "andrijdavid/Meta-Llama-3-13B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef max_fill(grid, capacity):\n    import math\n    \"\"\"\n    You are given a rectangular grid of wells. Each row represents a single well,\n    and each 0 or 1 in a row represents a single unit of water.\n    Each well has a corresponding bucket that can be used to extract water from it, \n    and all buckets have the same capacity.\n    \"\"\"\n\n\n\n please provide code blocks that fill the grid as much as possible while sticking to the given capacity constraint per well. \n\n Below information:\n\n    **Grid layout**\n\n    Well 1:  ivalued.grid layout: ROWS x Colums\n    ROWS x colums = 4 x 4\n    Well  water level per well: 4 x 4 wells\n\n    **Grid filling constraint**\n\n    Each well's water level per well must notexceed its capacity\n    Capacity per well = ivalued gridsized'gc capacity'gc.capacity'gc.capacity'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def max_fill(grid, capacity):\n    import math\n    \"\"\"\n    You are given a rectangular grid of wells. Each row represents a single well,\n    and each 0 or 1 in a row represents a single unit of water.\n    Each well has a corresponding bucket that can be used to extract water from it, \n    and all buckets have the same capacity.\n    \"\"\"\n\n\n\n please provide code blocks that fill the grid as much as possible while sticking to the given capacity constraint per well. \n\n Below information:\n\n    **Grid layout**\n\n    Well 1:  ivalued.grid layout: ROWS x Colums\n    ROWS x colums = 4 x 4\n    Well  water level per well: 4 x 4 wells\n\n    **Grid filling constraint**\n\n    Each well's water level per well must notexceed its capacity\n    Capacity per well = ivalued gridsized'gc capacity'gc.capacity'gc.capacity'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc'gc",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 90.55351328849792,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

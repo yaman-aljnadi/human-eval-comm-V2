@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_161::1a::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_161",
+  "category": "1a",
+  "entry_point": "solve",
+  "prompt_field": "prompt1a",
+  "prompt_text": "\ndef solve(s):\n    \"\"\"You are given a string s.\n    if s[i] is a letter, reverse its case from lower to upper or vise versa, \n    otherwise keep it as it is.\n    If the string contains no letters, perform some transformation.\n    The function should return the resulted string.\n    Examples\n    solve(\"1234\") = \"4321\"\n    solve(\"ab\") = \"AB\"\n    solve(\"#a@C\") = \"#A@c\"\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef solve(s):\n    \"\"\"You are given a string s.\n    if s[i] is a letter, reverse its case from lower to upper or vise versa, \n    otherwise keep it as it is.\n    If the string contains no letters, perform some transformation.\n    The function should return the resulted string.\n    Examples\n    solve(\"1234\") = \"4321\"\n    solve(\"ab\") = \"AB\"\n    solve(\"#a@C\") = \"#A@c\"\n    \"\"\"",
+  "prompt_sha256": "ceafeaa0b8c1ad77dd33eda10617fc253adbf8d49b865f348b2415cae4f6cb17",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef solve(s):\n    \"\"\"You are given a string s.\n    if s[i] is a letter, reverse its case from lower to upper or vise versa, \n    otherwise keep it as it is.\n    If the string contains no letters, perform some transformation.\n    The function should return the resulted string.\n    Examples\n    solve(\"1234\") = \"4321\"\n    solve(\"ab\") = \"AB\"\n    solve(\"#a@C\") = \"#A@c\"\n    \"\"\"\n    transformed_s = \"\"\n    has_letter = False\n    for char in s:\n        if 'a' <= char <= 'z':\n            transformed_s += char.upper()\n            has_letter = True\n        elif 'A' <= char <= 'Z':\n            transformed_s += char.lower()\n            has_letter = True\n        else:\n            transformed_s += char\n\n    if not has_letter:\n        return s[::-1]  # Reverse the string if it contains no letters\n    else:\n        return transformed_s\n```",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def solve(s):\n    \"\"\"You are given a string s.\n    if s[i] is a letter, reverse its case from lower to upper or vise versa, \n    otherwise keep it as it is.\n    If the string contains no letters, perform some transformation.\n    The function should return the resulted string.\n    Examples\n    solve(\"1234\") = \"4321\"\n    solve(\"ab\") = \"AB\"\n    solve(\"#a@C\") = \"#A@c\"\n    \"\"\"\n    transformed_s = \"\"\n    has_letter = False\n    for char in s:\n        if 'a' <= char <= 'z':\n            transformed_s += char.upper()\n            has_letter = True\n        elif 'A' <= char <= 'Z':\n            transformed_s += char.lower()\n            has_letter = True\n        else:\n            transformed_s += char\n\n    if not has_letter:\n        return s[::-1]  # Reverse the string if it contains no letters\n    else:\n        return transformed_s",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 1.4464828968048096,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

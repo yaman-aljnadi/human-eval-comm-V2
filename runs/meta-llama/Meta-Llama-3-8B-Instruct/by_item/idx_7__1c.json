@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_7::1c::meta-llama/Meta-Llama-3-8B-Instruct::seed0",
+  "task_id": "idx_7",
+  "category": "1c",
+  "entry_point": "filter_by_substring",
+  "prompt_field": "prompt1c",
+  "prompt_text": "from typing import List\n\n\ndef filter_by_substring(strings: List[str], substring: str) -> List[str]:\n    \"\"\" Filter an input list of strings only for ones that contain given substring\n    >>> filter_by_substring([], 'a')\n    ['a']\n    >>> filter_by_substring(['abc', 'bacd', 'cde', 'array'], 'a')\n    ['cde']\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List\n\n\ndef filter_by_substring(strings: List[str], substring: str) -> List[str]:\n    \"\"\" Filter an input list of strings only for ones that contain given substring\n    >>> filter_by_substring([], 'a')\n    ['a']\n    >>> filter_by_substring(['abc', 'bacd', 'cde', 'array'], 'a')\n    ['cde']\n    \"\"\"",
+  "prompt_sha256": "ef6be822f14f81693c0429ade30a5d657c660cd6d660652af3c89be1fadff9d5",
+  "model_name": "meta-llama/Meta-Llama-3-8B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List\n\n\ndef filter_by_substring(strings: List[str], substring: str) -> List[str]:\n    \"\"\" Filter an input list of strings only for ones that contain given substring\n    >>> filter_by_substring([], 'a')\n    ['a']\n    >>> filter_by_substring(['abc', 'bacd', 'cde', 'array'], 'a')\n    ['cde']\n    \"\"\"\n\n\n    return\n# Write your answer in Markdown format\n\n```python\ndef filter_by_substring(strings: List[str], substring: str) -> List[str]:\n    return [s for s in strings if substring in s]\n```\n\n\n\n\n\nThis code will return a list of strings in the'strings' input which contain the given'substring'. If you want it to return an empty list when the substring is not found, it will still return the same empty list.",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def filter_by_substring(strings: List[str], substring: str) -> List[str]:\n    return [s for s in strings if substring in s]",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 24.862844705581665,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

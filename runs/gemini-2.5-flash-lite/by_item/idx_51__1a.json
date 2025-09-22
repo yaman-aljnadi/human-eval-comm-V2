@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_51::1a::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_51",
+  "category": "1a",
+  "entry_point": "remove_vowels",
+  "prompt_field": "prompt1a",
+  "prompt_text": "\n\ndef candidate(text):\n    \"\"\"\n    candidate is a function that takes string and returns string with or without vowels.\n    >>> candidate('')\n    ''\n    >>> candidate(\"abcdef\\nghijklm\")\n    'bcdf\\nghjklm'\n    >>> candidate('abcdef')\n    'bcdf'\n    >>> candidate('aaaaa')\n    'aaaaa'\n    >>> candidate('aaBAA')\n    'B'\n    >>> candidate('zbcd')\n    'zbcd'\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(text):\n    \"\"\"\n    candidate is a function that takes string and returns string with or without vowels.\n    >>> candidate('')\n    ''\n    >>> candidate(\"abcdef\\nghijklm\")\n    'bcdf\\nghjklm'\n    >>> candidate('abcdef')\n    'bcdf'\n    >>> candidate('aaaaa')\n    'aaaaa'\n    >>> candidate('aaBAA')\n    'B'\n    >>> candidate('zbcd')\n    'zbcd'\n    \"\"\"",
+  "prompt_sha256": "d52a42983cf66e8993c1f36265a62a167819997d9e79c894219c4019ca38a7c2",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef candidate(text):\n    \"\"\"\n    candidate is a function that takes string and returns string with or without vowels.\n    >>> candidate('')\n    ''\n    >>> candidate(\"abcdef\\nghijklm\")\n    'bcdf\\nghjklm'\n    >>> candidate('abcdef')\n    'bcdf'\n    >>> candidate('aaaaa')\n    'aaaaa'\n    >>> candidate('aaBAA')\n    'B'\n    >>> candidate('zbcd')\n    'zbcd'\n    \"\"\"\n    vowels = \"aeiouAEIOU\"\n    result = \"\"\n    for char in text:\n        if char not in vowels:\n            result += char\n    return result\n```",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def candidate(text):\n    \"\"\"\n    candidate is a function that takes string and returns string with or without vowels.\n    >>> candidate('')\n    ''\n    >>> candidate(\"abcdef\\nghijklm\")\n    'bcdf\\nghjklm'\n    >>> candidate('abcdef')\n    'bcdf'\n    >>> candidate('aaaaa')\n    'aaaaa'\n    >>> candidate('aaBAA')\n    'B'\n    >>> candidate('zbcd')\n    'zbcd'\n    \"\"\"\n    vowels = \"aeiouAEIOU\"\n    result = \"\"\n    for char in text:\n        if char not in vowels:\n            result += char\n    return result",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 1.0212452411651611,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

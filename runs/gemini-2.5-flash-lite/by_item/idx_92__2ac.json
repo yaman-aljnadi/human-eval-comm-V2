@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_92::2ac::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_92",
+  "category": "2ac",
+  "entry_point": "any_int",
+  "prompt_field": "prompt2ac",
+  "prompt_text": "\ndef any_int(x, y, z):\n    '''\n    Create a function that takes 3 numbers.\n    Returns true if one of the numbers meets certain condition (such as larger than, or equal to the sum of the other two), and all numbers are integers.\n    Returns false in any other cases.\n    \n    Examples\n    any_int(5, 2, 7) ➞ False\n    \n    any_int(3, 2, 2) ➞ True\n\n    any_int(3, -2, 1) ➞ False\n    \n    any_int(3.6, -2.2, 2) ➞ True\n  \n\n    \n    '''\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef any_int(x, y, z):\n    '''\n    Create a function that takes 3 numbers.\n    Returns true if one of the numbers meets certain condition (such as larger than, or equal to the sum of the other two), and all numbers are integers.\n    Returns false in any other cases.\n    \n    Examples\n    any_int(5, 2, 7) ➞ False\n    \n    any_int(3, 2, 2) ➞ True\n\n    any_int(3, -2, 1) ➞ False\n    \n    any_int(3.6, -2.2, 2) ➞ True\n  \n\n    \n    '''",
+  "prompt_sha256": "a1b6614476336bb844d339712ab4d8aca43d8e55460fbd314a86adf6dc2a360d",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef any_int(x, y, z):\n    '''\n    Create a function that takes 3 numbers.\n    Returns true if one of the numbers meets certain condition (such as larger than, or equal to the sum of the other two), and all numbers are integers.\n    Returns false in any other cases.\n    \n    Examples\n    any_int(5, 2, 7) ➞ False\n    \n    any_int(3, 2, 2) ➞ True\n\n    any_int(3, -2, 1) ➞ False\n    \n    any_int(3.6, -2.2, 2) ➞ True\n    '''\n    if not (isinstance(x, int) and isinstance(y, int) and isinstance(z, int)):\n        # Check if any of the numbers are floats, and if so, return True if they satisfy the condition.\n        # This interpretation is based on the last example any_int(3.6, -2.2, 2) ➞ True\n        # If the intent was strictly integers, this check would be different.\n        if x >=",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def any_int(x, y, z):\n    '''\n    Create a function that takes 3 numbers.\n    Returns true if one of the numbers meets certain condition (such as larger than, or equal to the sum of the other two), and all numbers are integers.\n    Returns false in any other cases.\n    \n    Examples\n    any_int(5, 2, 7) ➞ False\n    \n    any_int(3, 2, 2) ➞ True\n\n    any_int(3, -2, 1) ➞ False\n    \n    any_int(3.6, -2.2, 2) ➞ True\n    '''\n    if not (isinstance(x, int) and isinstance(y, int) and isinstance(z, int)):\n        # Check if any of the numbers are floats, and if so, return True if they satisfy the condition.\n        # This interpretation is based on the last example any_int(3.6, -2.2, 2) ➞ True\n        # If the intent was strictly integers, this check would be different.\n        if x >=",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 1.4749059677124023,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

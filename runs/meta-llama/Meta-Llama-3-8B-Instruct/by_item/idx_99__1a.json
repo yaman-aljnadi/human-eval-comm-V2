@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_99::1a::meta-llama/Meta-Llama-3-8B-Instruct::seed0",
+  "task_id": "idx_99",
+  "category": "1a",
+  "entry_point": "closest_integer",
+  "prompt_field": "prompt1a",
+  "prompt_text": "\ndef candidate(value):\n    '''\n    Create a function that takes a value (string) representing a number\n    and returns the farthest or closest integer to it. If the number is equidistant\n    from two integers, round it away from zero.\n\n    Examples\n    >>> candidate(\"10\")\n    10\n    >>> candidate(\"15.3\")\n    15\n\n    Note:\n    Rounding away from zero means that if the given number is equidistant\n    from two integers, the one you should return is the one that is the\n    farthest from zero. For example candidate(\"14.5\") should\n    return 15 and candidate(\"-14.5\") should return -15.\n    '''\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(value):\n    '''\n    Create a function that takes a value (string) representing a number\n    and returns the farthest or closest integer to it. If the number is equidistant\n    from two integers, round it away from zero.\n\n    Examples\n    >>> candidate(\"10\")\n    10\n    >>> candidate(\"15.3\")\n    15\n\n    Note:\n    Rounding away from zero means that if the given number is equidistant\n    from two integers, the one you should return is the one that is the\n    farthest from zero. For example candidate(\"14.5\") should\n    return 15 and candidate(\"-14.5\") should return -15.\n    '''",
+  "prompt_sha256": "291b6e23c1b8974f27fc405f27930f289f8a89fe13526a37f4dddb953f1fee6d",
+  "model_name": "meta-llama/Meta-Llama-3-8B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(value):\n    '''\n    Create a function that takes a value (string) representing a number\n    and returns the farthest or closest integer to it. If the number is equidistant\n    from two integers, round it away from zero.\n\n    Examples\n    >>> candidate(\"10\")\n    10\n    >>> candidate(\"15.3\")\n    15\n\n    Note:\n    Rounding away from zero means that if the given number is equidistant\n    from two integers, the one you should return is the one that is the\n    farthest from zero. For example candidate(\"14.5\") should\n    return 15 and candidate(\"-14.5\") should return -15.\n    '''\n\n\n```\n```\n\nI will assume the input will always be a string. My answer for this problem is as follows:\n\n```python\ndef candidate(value):\n    num = float(value)\n    integer_part = int(num)\n    fractional_part = abs(num - integer_part)\n    \n    if fractional_part >= 0.5 or fractional_part == 0.5:\n        if integer_part % 2 == 0:\n            if num < 0:\n                return integer_part - 1\n            else:\n                return integer_part + 1\n        else:\n            return integer_part\n    else:\n        return integer_part\n``` ```\n\n\nThis code assumes the input is a string. It first converts it to a float and separates it into its integer part and fractional part. Then, it checks whether the fractional part is greater than or equal to 0.5, or whether it is exactly 0.5. This determines the rounding behavior. If the fractional part is greater than or equal to 0.5, or if it is exactly 0.5, the code rounds up. Otherwise, it rounds down. It also handles the special cases where the number is equidistant from two integers and needs to be rounded away from zero.",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 66.43339991569519,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

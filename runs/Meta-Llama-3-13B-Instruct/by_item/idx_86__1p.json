@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_86::1p::andrijdavid/Meta-Llama-3-13B-Instruct::seed0",
+  "task_id": "idx_86",
+  "category": "1p",
+  "entry_point": "anti_shuffle",
+  "prompt_field": "prompt1p",
+  "prompt_text": "\ndef anti_shuffle(s):\n    \"\"\"\n    Write a function that takes a string and returns an ordered version of it.\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef anti_shuffle(s):\n    \"\"\"\n    Write a function that takes a string and returns an ordered version of it.\n    \"\"\"",
+  "prompt_sha256": "a9e6b4e0e28b2c782dfb25300a85c88eb2fb7c2eba9b20ca88dc7c446e4a9bdb",
+  "model_name": "andrijdavid/Meta-Llama-3-13B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef anti_shuffle(s):\n    \"\"\"\n    Write a function that takes a string and returns an ordered version of it.\n    \"\"\"ended-up meaninglessly-shuffling- the- characters-  in- the string-  itself-   uevo-together-   uevo-together-   uevo-together-   uevo-together-   ivo-together-   ivo-together-   ivo-together-   ivo-together-   ivo-together-   ivo-together-   ivo-together-   ivo-together-   ivo-together-   ivo-together-   ivo-together-   ivo-together-   ivo-together-   ivo-together-   ivo-together-   ivo-together-   ivo-together-   ivo-together-   ivo-together-   ivo-together-   ivo-together-   ivo-together-   ivo-together-   ivo-together-   ivo-together-   ivo-together-   ivo-together-   ivo-together-   ivo-together-   ivo-together-   ivo-together-   ivo-together-   ivo-together-   ivo-together-   ivo-together-   ivo-together-   ivo-together-   ivo-together-   ivo-together-   ivo-together-   ivo-together-   ivo-together-   ivo-together-   ",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def anti_shuffle(s):\n    \"\"\"\n    Write a function that takes a string and returns an ordered version of it.\n    \"\"\"ended-up meaninglessly-shuffling- the- characters-  in- the string-  itself-   uevo-together-   uevo-together-   uevo-together-   uevo-together-   ivo-together-   ivo-together-   ivo-together-   ivo-together-   ivo-together-   ivo-together-   ivo-together-   ivo-together-   ivo-together-   ivo-together-   ivo-together-   ivo-together-   ivo-together-   ivo-together-   ivo-together-   ivo-together-   ivo-together-   ivo-together-   ivo-together-   ivo-together-   ivo-together-   ivo-together-   ivo-together-   ivo-together-   ivo-together-   ivo-together-   ivo-together-   ivo-together-   ivo-together-   ivo-together-   ivo-together-   ivo-together-   ivo-together-   ivo-together-   ivo-together-   ivo-together-   ivo-together-   ivo-together-   ivo-together-   ivo-together-   ivo-together-   ivo-together-   ivo-together-",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 91.6150062084198,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

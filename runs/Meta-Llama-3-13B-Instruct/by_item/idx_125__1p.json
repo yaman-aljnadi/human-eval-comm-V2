@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_125::1p::andrijdavid/Meta-Llama-3-13B-Instruct::seed0",
+  "task_id": "idx_125",
+  "category": "1p",
+  "entry_point": "split_words",
+  "prompt_field": "prompt1p",
+  "prompt_text": "\ndef split_words(txt):\n    '''\n    Given a string of words, return a list of words split on whitespace, if no whitespaces exists in the text you\n    should split on commas ',' if no commas exists you should return the number of \n    '''\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef split_words(txt):\n    '''\n    Given a string of words, return a list of words split on whitespace, if no whitespaces exists in the text you\n    should split on commas ',' if no commas exists you should return the number of \n    '''",
+  "prompt_sha256": "e5a789b9c582a56c4eceb62b14b1a56076497958f304a4c1a140c0fc00dfec67",
+  "model_name": "andrijdavid/Meta-Llama-3-13B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef split_words(txt):\n    '''\n    Given a string of words, return a list of words split on whitespace, if no whitespaces exists in the text you\n    should split on commas ',' if no commas exists you should return the number of \n    '''\n\n\n Please provide Python3 code as per requirements above without any further information or explainations.\n\n```python\ndef split_words(txt):\n    return [word for word in txt.split() if word] if not any(char WHitespace) else \\\n           [word for word in word if word!='] else \\\n           len(txt)\n```endersings\n\nPlease note: Above code is for educational purposes only and should not be used directly in production environments without proper testing and/or further development\n\nPlease provide further feedback or improvements if any needed further development is required endersingsendings endings endingsendings endings endings endings endings endings endings endings endings endings endings endings endings endings endings endings endings endings endings endings endings endings endings endings endings endings endings endings endings endings endings endings endings endings endings endings endings endings endings endings endings endings endings endings endings endings endings endings endings endings endings endings endings endings endings endings endings endings endings endings endings endings endings endings endings endings endings endings endings",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def split_words(txt):\n    return [word for word in txt.split() if word] if not any(char WHitespace) else \\\n           [word for word in word if word!='] else \\\n           len(txt)",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 89.6885769367218,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

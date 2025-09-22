@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_119::1p::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_119",
+  "category": "1p",
+  "entry_point": "match_parens",
+  "prompt_field": "prompt1p",
+  "prompt_text": "\ndef candidate(lst):\n    '''\n    You are given a list of two strings, both strings consist of open\n    parentheses '(' or close parentheses ')' only.\n    Your job is to check if it is possible to concatenate the two strings in\n    some order, that the resulting string will be good.\n    '''\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(lst):\n    '''\n    You are given a list of two strings, both strings consist of open\n    parentheses '(' or close parentheses ')' only.\n    Your job is to check if it is possible to concatenate the two strings in\n    some order, that the resulting string will be good.\n    '''",
+  "prompt_sha256": "fb2b60b8977bb88629388f72253d7fe7ec06bab8c885f1f05994c6a053680495",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef candidate(lst):\n    '''\n    You are given a list of two strings, both strings consist of open\n    parentheses '(' or close parentheses ')' only.\n    Your job is to check if it is possible to concatenate the two strings in\n    some order, that the resulting string will be good.\n\n    A string of parentheses is considered \"good\" if:\n    1. The total number of open parentheses '(' is equal to the total number of close parentheses ')'.\n    2. At any point while scanning the string from left to right, the number of open parentheses encountered so far is greater than or equal to the number of close parentheses.\n\n    Example:\n    candidate([\"(())\", \"()\"]) == True  # Possible concatenations: \"(())()\" or \"()(())\". Both are good.\n    candidate([\")(\", \"()\"]) == True  # Possible concatenations: \")()(\" or \"()()(\". \"()()\" is good.\n    candidate([\"(\", \")\"]) == True  # Possible concatenations: \"()\" or \")(\". \"()\" is good.\n    candidate([\"))\", \"((\"]) == False # Possible concatenations: \"))((\" or \"(())\". Neither is good.\n",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def candidate(lst):\n    '''\n    You are given a list of two strings, both strings consist of open\n    parentheses '(' or close parentheses ')' only.\n    Your job is to check if it is possible to concatenate the two strings in\n    some order, that the resulting string will be good.\n\n    A string of parentheses is considered \"good\" if:\n    1. The total number of open parentheses '(' is equal to the total number of close parentheses ')'.\n    2. At any point while scanning the string from left to right, the number of open parentheses encountered so far is greater than or equal to the number of close parentheses.\n\n    Example:\n    candidate([\"(())\", \"()\"]) == True  # Possible concatenations: \"(())()\" or \"()(())\". Both are good.\n    candidate([\")(\", \"()\"]) == True  # Possible concatenations: \")()(\" or \"()()(\". \"()()\" is good.\n    candidate([\"(\", \")\"]) == True  # Possible concatenations: \"()\" or \")(\". \"()\" is good.\n    candidate([\"))\", \"((\"]) == False # Possible concatenations: \"))((\" or \"(())\". Neither is good.",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 1.8337910175323486,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

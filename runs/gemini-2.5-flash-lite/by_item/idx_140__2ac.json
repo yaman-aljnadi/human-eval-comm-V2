@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_140::2ac::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_140",
+  "category": "2ac",
+  "entry_point": "fix_spaces",
+  "prompt_field": "prompt2ac",
+  "prompt_text": "\ndef fix_spaces(text):\n    \"\"\"\n    Given a string text, replace all spaces in it with underscores, \n    and if a string has certain consecutive spaces, \n    then replace all consecutive spaces with - \n    \n    fix_spaces(\"Example\") == \"_Example\"\n    fix_spaces(\"Example 1\") == \"Example-1\"\n    fix_spaces(\" Example 2\") == \"-Example-2\"\n    fix_spaces(\" Example   3\") == \"-Example_3\"\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef fix_spaces(text):\n    \"\"\"\n    Given a string text, replace all spaces in it with underscores, \n    and if a string has certain consecutive spaces, \n    then replace all consecutive spaces with - \n    \n    fix_spaces(\"Example\") == \"_Example\"\n    fix_spaces(\"Example 1\") == \"Example-1\"\n    fix_spaces(\" Example 2\") == \"-Example-2\"\n    fix_spaces(\" Example   3\") == \"-Example_3\"\n    \"\"\"",
+  "prompt_sha256": "d3f32142b88f1ccca93e54633152df20d7029ad18d9b0a481f1a727109539a6e",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\nimport re\n\ndef fix_spaces(text):\n    \"\"\"\n    Given a string text, replace all spaces in it with underscores, \n    and if a string has certain consecutive spaces, \n    then replace all consecutive spaces with - \n    \n    fix_spaces(\"Example\") == \"_Example\"\n    fix_spaces(\"Example 1\") == \"Example-1\"\n    fix_spaces(\" Example 2\") == \"-Example-2\"\n    fix_spaces(\" Example   3\") == \"-Example_3\"\n    \"\"\"\n    # Replace multiple consecutive spaces with a single hyphen\n    processed_text = re.sub(r'\\s{2,}', '-', text)\n    \n    # Replace any remaining single spaces with an underscore\n    processed_text = processed_text.replace(' ', '_')\n    \n    # Handle leading spaces: if the original string started with a space, \n    # the first character after processing might be '-' or '_'. \n    # The examples suggest a leading space should become a leading '-'.\n    if text.startswith(' '):\n        # If there were multiple leading spaces, re.sub would have made it a '-'.",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def fix_spaces(text):\n    \"\"\"\n    Given a string text, replace all spaces in it with underscores, \n    and if a string has certain consecutive spaces, \n    then replace all consecutive spaces with - \n    \n    fix_spaces(\"Example\") == \"_Example\"\n    fix_spaces(\"Example 1\") == \"Example-1\"\n    fix_spaces(\" Example 2\") == \"-Example-2\"\n    fix_spaces(\" Example   3\") == \"-Example_3\"\n    \"\"\"\n    # Replace multiple consecutive spaces with a single hyphen\n    processed_text = re.sub(r'\\s{2,}', '-', text)\n    \n    # Replace any remaining single spaces with an underscore\n    processed_text = processed_text.replace(' ', '_')\n    \n    # Handle leading spaces: if the original string started with a space, \n    # the first character after processing might be '-' or '_'. \n    # The examples suggest a leading space should become a leading '-'.\n    if text.startswith(' '):\n        # If there were multiple leading spaces, re.sub would have made it a '-'.",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 1.588393211364746,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

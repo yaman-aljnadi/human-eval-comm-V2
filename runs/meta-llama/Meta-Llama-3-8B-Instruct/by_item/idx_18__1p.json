@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_18::1p::meta-llama/Meta-Llama-3-8B-Instruct::seed0",
+  "task_id": "idx_18",
+  "category": "1p",
+  "entry_point": "how_many_times",
+  "prompt_field": "prompt1p",
+  "prompt_text": "\n\ndef how_many_times(string: str, substring: str) -> int:\n    \"\"\" Find how many times a given substring can be found in the original string.\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef how_many_times(string: str, substring: str) -> int:\n    \"\"\" Find how many times a given substring can be found in the original string.\n    \"\"\"",
+  "prompt_sha256": "3456312c667895647bb9b028110b6311a30d175716bcf95741ff922df6c36b3e",
+  "model_name": "meta-llama/Meta-Llama-3-8B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef how_many_times(string: str, substring: str) -> int:\n    \"\"\" Find how many times a given substring can be found in the original string.\n    \"\"\"\n\n\n**Problem:**\n\nWrite a Python function that takes a string and a substring as input and returns the number of times the substring appears in the string.\n\n**Test Cases:**\n\n- how_many_times('Hello World Hello', 'Hello') should return 2\n- how_many_times('Python is cool Python', 'Python') should return 2\n- how_many_times('Hello', 'goodbye') should return 0\n\n**Challenge:**\n\nWrite this function without using any string methods like `find()`, `index()`, or slicing. The goal is to manually search for the substring in the string and count the occurrences.\n\n[Your Code Here](#) [/Your Code Here] \n\n\n\nCode:\n```\ndef how_many_times(string: str, substring: str) -> int:\n    count = 0\n    string_length = len(string)\n    substring_length = len(substring)\n    \n    for i in range(string_length):\n        if string[i:i+substring_length] == substring:\n            count += 1\n            i += substring_length - 1\n    return count\n```\n[/Code] [/Your Code Here]  [/markdown] [/markdown]  [/markdown] [/markdown] [/markdown] [/markdown] [/markdown] [/markdown",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def how_many_times(string: str, substring: str) -> int:\n    count = 0\n    string_length = len(string)\n    substring_length = len(substring)\n    \n    for i in range(string_length):\n        if string[i:i+substring_length] == substring:\n            count += 1\n            i += substring_length - 1\n    return count",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 69.06409192085266,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

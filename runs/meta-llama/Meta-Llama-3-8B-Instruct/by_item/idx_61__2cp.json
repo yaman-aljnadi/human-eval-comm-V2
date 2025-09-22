@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_61::2cp::meta-llama/Meta-Llama-3-8B-Instruct::seed0",
+  "task_id": "idx_61",
+  "category": "2cp",
+  "entry_point": "correct_bracketing",
+  "prompt_field": "prompt2cp",
+  "prompt_text": "\n\ndef correct_bracketing(brackets: str):\n    \"\"\" brackets is a string of \"(\" and \")\".\n\n    >>> correct_bracketing(\"(\")\n    True\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef correct_bracketing(brackets: str):\n    \"\"\" brackets is a string of \"(\" and \")\".\n\n    >>> correct_bracketing(\"(\")\n    True\n    \"\"\"",
+  "prompt_sha256": "b3776f8e38b17c5b7076bc729d85497e373406d49219a785d6b47e39995bf5d2",
+  "model_name": "meta-llama/Meta-Llama-3-8B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef correct_bracketing(brackets: str):\n    \"\"\" brackets is a string of \"(\" and \")\".\n\n    >>> correct_bracketing(\"(\")\n    True\n    \"\"\" # Correcting this is unnecessary, but it could be considered correct.\n    pass\n    # Return False for now\n    return False\n    # Return True for now\n\n    # How to check if the string is already correctly bracketed?\n\n    # How to check if the string is correctly bracketed, so no need to correct it.\n    # return False or True\n\ndef main():\n    import unittest\n    import re\n\n    # testing for correct_bracketing function\n\n    def test_correct_bracketing(unittest.TestCase):\n        test_cases = [(\"a(b)\", True), (\"(a\", False), (\"(a(b(c\", True), (\"(a(b))\", True)]\n        # Implement your tests here\n\n    if __name__ == \"__main__\":\n        unittest.main()\n\n**Additional information:**\n\n1. The problem statement is, given a string of \"(\" and \")\" which may or may not be balanced and correctly bracketed, return a boolean indicating whether the string is correctly bracketed.\n2. For the purpose of this exercise, correctly bracketed means that every \"(\" is eventually paired with a \")\" and there are no unmatched \"(\" or \")\" characters in the string.\n3. The goal is to generate a Python3 code that fulfills this problem statement.\n4",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def correct_bracketing(brackets: str):\n    \"\"\" brackets is a string of \"(\" and \")\".\n\n    >>> correct_bracketing(\"(\")\n    True\n    \"\"\" # Correcting this is unnecessary, but it could be considered correct.\n    pass\n    # Return False for now\n    return False\n    # Return True for now\n\n    # How to check if the string is already correctly bracketed?\n\n    # How to check if the string is correctly bracketed, so no need to correct it.\n    # return False or True\n\ndef main():\n    import unittest\n    import re\n\n    # testing for correct_bracketing function\n\n    def test_correct_bracketing(unittest.TestCase):\n        test_cases = [(\"a(b)\", True), (\"(a\", False), (\"(a(b(c\", True), (\"(a(b))\", True)]\n        # Implement your tests here\n\n    if __name__ == \"__main__\":\n        unittest.main()\n\n**Additional information:**\n\n1. The problem statement is, given a string of \"(\" and \")\" which may or may not be balanced and correctly bracketed, return a boolean indicating whether the string is correctly bracketed.\n2. For the purpose of this exercise, correctly bracketed means that every \"(\" is eventually paired with a \")\" and there are no unmatched \"(\" or \")\" characters in the string.\n3. The goal is to generate a Python3 code that fulfills this problem statement.\n4",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 68.09512782096863,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

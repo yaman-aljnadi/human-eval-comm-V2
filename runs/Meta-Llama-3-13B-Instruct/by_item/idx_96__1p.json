@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_96::1p::andrijdavid/Meta-Llama-3-13B-Instruct::seed0",
+  "task_id": "idx_96",
+  "category": "1p",
+  "entry_point": "count_up_to",
+  "prompt_field": "prompt1p",
+  "prompt_text": "\ndef count_up_to(n):\n    \"\"\"Implement a function that takes an non-negative integer and returns an array of the first n\n    integers that are prime numbers and\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef count_up_to(n):\n    \"\"\"Implement a function that takes an non-negative integer and returns an array of the first n\n    integers that are prime numbers and\n    \"\"\"",
+  "prompt_sha256": "e57d93591c85af8ba06a8ebd591ccd724d7f0ed7157ffec6d3c7a82f7bc20ac9",
+  "model_name": "andrijdavid/Meta-Llama-3-13B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef count_up_to(n):\n    \"\"\"Implement a function that takes an non-negative integer and returns an array of the first n\n    integers that are prime numbers and\n    \"\"\"ODEV.Stack Overflow answer's codepen.io solution's codepen.io solution's Peerigon's solution's Peerigon's solution's Peerigon's solution's Peerigon's solution's Peerigon's solution's Peerigon's solution's Peerigon's solution's Peerigon's solution's Peerigon's solution's Peerigon's solution's Peerigon's solution's Peerigon's solution's Peerigon's solution's Peerigon's solution's Peerigon's solution's Peerigon's solution's Peerigon's solution's Peerigon's solution's Peerigon's solution's Peerigon's solution's Peerigon's solution's Peerigon's solution's Peerigon's solution's Peerigon's solution's Peerigon's solution's Peerigon's solution's Peerigon's solution's Peerigon's solution's Peerigon's solution's Peerigon's solution's Peerigon's solution's Peerigon's solution's Peerigon's solution's Peerigon's solution's Peerigon's solution's Peerigon's solution's Peerigon's solution's Peerathon's solution's Peerathon's solution's Peerathon's solution's Peerathon's solution's Peerathon's solution's Peerathon's solution's Peerathon's solution's Peerathon's solution's Peerathon's solution's Peerathon's solution's Peerathon's solution's Peer",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def count_up_to(n):\n    \"\"\"Implement a function that takes an non-negative integer and returns an array of the first n\n    integers that are prime numbers and\n    \"\"\"ODEV.Stack Overflow answer's codepen.io solution's codepen.io solution's Peerigon's solution's Peerigon's solution's Peerigon's solution's Peerigon's solution's Peerigon's solution's Peerigon's solution's Peerigon's solution's Peerigon's solution's Peerigon's solution's Peerigon's solution's Peerigon's solution's Peerigon's solution's Peerigon's solution's Peerigon's solution's Peerigon's solution's Peerigon's solution's Peerigon's solution's Peerigon's solution's Peerigon's solution's Peerigon's solution's Peerigon's solution's Peerigon's solution's Peerigon's solution's Peerigon's solution's Peerigon's solution's Peerigon's solution's Peerigon's solution's Peerigon's solution's Peerigon's solution's Peerigon's solution's Peerigon's solution's Peerigon's solution's Peerigon's solution's Peerigon's solution's Peerigon's solution's Peerigon's solution's Peerigon's solution's Peerathon's solution's Peerathon's solution's Peerathon's solution's Peerathon's solution's Peerathon's solution's Peerathon's solution's Peerathon's solution's Peerathon's solution's Peerathon's solution's Peerathon's solution's Peerathon's solution's Peer",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 92.3756160736084,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

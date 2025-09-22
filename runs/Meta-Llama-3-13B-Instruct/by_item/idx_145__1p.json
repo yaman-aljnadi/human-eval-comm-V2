@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_145::1p::andrijdavid/Meta-Llama-3-13B-Instruct::seed0",
+  "task_id": "idx_145",
+  "category": "1p",
+  "entry_point": "order_by_points",
+  "prompt_field": "prompt1p",
+  "prompt_text": "\ndef candidate(nums):\n    \"\"\"\n    Note: if there are several items with similar sum of their digits,\n    order them based on their index in original list.\n\n    For example:\n    >>> candidate([1, 11, -1, -11, -12]) == [-1, -11, 1, -12, 11]\n    >>> candidate([]) == []\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(nums):\n    \"\"\"\n    Note: if there are several items with similar sum of their digits,\n    order them based on their index in original list.\n\n    For example:\n    >>> candidate([1, 11, -1, -11, -12]) == [-1, -11, 1, -12, 11]\n    >>> candidate([]) == []\n    \"\"\"",
+  "prompt_sha256": "435a87252b9ede05dd0ed0978611c3d4ed5d16146688f4e53385c35eb65d90fe",
+  "model_name": "andrijdavid/Meta-Llama-3-13B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(nums):\n    \"\"\"\n    Note: if there are several items with similar sum of their digits,\n    order them based on their index in original list.\n\n    For example:\n    >>> candidate([1, 11, -1, -11, -12]) == [-1, -11, 1, -12, 11]\n    >>> candidate([]) == []\n    \"\"\"\n\n\n Please provide Python3 code to filter out the given input ` nums` based on the above rules mentioned above without any further clarifications.\n\ncode:\")\nemdited code:\n import operator\n\n def candidate(nums):\n    def calculateckett_sum(x):\n        return sum map lambda y: int(y), map str x)\n    return sorted\tfilter(lambda y: yigitality(ymathrmity(y) >= max map lambda z: zigitality(z), map strnums), key lambda w: wigitality wDigitalities Digitalities Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def candidate(nums):\n    \"\"\"\n    Note: if there are several items with similar sum of their digits,\n    order them based on their index in original list.\n\n    For example:\n    >>> candidate([1, 11, -1, -11, -12]) == [-1, -11, 1, -12, 11]\n    >>> candidate([]) == []\n    \"\"\"\n\n\n Please provide Python3 code to filter out the given input ` nums` based on the above rules mentioned above without any further clarifications.\n\ncode:\")\nemdited code:\n import operator\n\n def candidate(nums):\n    def calculateckett_sum(x):\n        return sum map lambda y: int(y), map str x)\n    return sorted\tfilter(lambda y: yigitality(ymathrmity(y) >= max map lambda z: zigitality(z), map strnums), key lambda w: wigitality wDigitalities Digitalities Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital Digital",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 90.15773916244507,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

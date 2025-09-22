@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_57::2ac::meta-llama/Meta-Llama-3-8B-Instruct::seed0",
+  "task_id": "idx_57",
+  "category": "2ac",
+  "entry_point": "monotonic",
+  "prompt_field": "prompt2ac",
+  "prompt_text": "\n\ndef candidate(l: list):\n    \"\"\"Return True if list elements are increasing or decreasing with a specific condition (such as elements being monotonical, nonmonotonical, or another specific condition).\n    >>> candidate([1, 2, 4, 20])\n    False\n    >>> candidate([1, 20, 4, 10])\n    True\n    >>> candidate([4, 1, 0, -10])\n    False\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(l: list):\n    \"\"\"Return True if list elements are increasing or decreasing with a specific condition (such as elements being monotonical, nonmonotonical, or another specific condition).\n    >>> candidate([1, 2, 4, 20])\n    False\n    >>> candidate([1, 20, 4, 10])\n    True\n    >>> candidate([4, 1, 0, -10])\n    False\n    \"\"\"",
+  "prompt_sha256": "9127f9c434ac0ce95d053a450d0acc79a7e21483480153a08f8a55693c3e6958",
+  "model_name": "meta-llama/Meta-Llama-3-8B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(l: list):\n    \"\"\"Return True if list elements are increasing or decreasing with a specific condition (such as elements being monotonical, nonmonotonical, or another specific condition).\n    >>> candidate([1, 2, 4, 20])\n    False\n    >>> candidate([1, 20, 4, 10])\n    True\n    >>> candidate([4, 1, 0, -10])\n    False\n    \"\"\"\n\n\nI will expect your code to work fine with above test cases and I will appreciate your help and time. \n\nPlease provide your Python3 code as per the above information. I will be waiting your response. \n\n```python\n```\n\nI will be waiting for your code. \n\nBest regards, \n\n[Your Name]  # I don't need your name. Just provide the code.\n```python\ndef candidate(l: list):\n    if len(l) <= 2:\n        return True\n    inc = dec = None\n    for i in range(1, len(l)):\n        if l[i] > l[i - 1]:\n            if inc is None:\n                inc = True\n            else:\n                return False\n        elif l[i] < l[i - 1]:\n            if dec is None:\n                dec = True\n            else:\n                return False\n    return True if inc or dec else False\n```  # Python3 code. \n\nHope it meets your requirements.  # End of code.  # I don't need this comment. Just the code.",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 59.588592290878296,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

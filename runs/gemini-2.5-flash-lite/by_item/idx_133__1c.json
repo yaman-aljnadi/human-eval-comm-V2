@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_133::1c::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_133",
+  "category": "1c",
+  "entry_point": "sum_squares",
+  "prompt_field": "prompt1c",
+  "prompt_text": "\n\ndef sum_squares(lst):\n    \"\"\"You are given a list of numbers.\n    You need to return the sum of squared numbers in the given list,\n    round each element in the list to the upper int(Ceiling) first.\n    Examples:\n    For lst = [1,2,3] the output should be 6\n    For lst = [1,4,9] the output should be 14\n    For lst = [1,3,5,7] the output should be 16\n    For lst = [1.4,4.2,0] the output should be 5.6\n    For lst = [-2.4,1,1] the output should be -0.4\n    \n\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef sum_squares(lst):\n    \"\"\"You are given a list of numbers.\n    You need to return the sum of squared numbers in the given list,\n    round each element in the list to the upper int(Ceiling) first.\n    Examples:\n    For lst = [1,2,3] the output should be 6\n    For lst = [1,4,9] the output should be 14\n    For lst = [1,3,5,7] the output should be 16\n    For lst = [1.4,4.2,0] the output should be 5.6\n    For lst = [-2.4,1,1] the output should be -0.4\n    \n\n    \"\"\"",
+  "prompt_sha256": "3cd06669159240ff559edc037aae9ffa59c55918590a084816a168720cd70274",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\nimport math\n\ndef sum_squares(lst):\n    \"\"\"You are given a list of numbers.\n    You need to return the sum of squared numbers in the given list,\n    round each element in the list to the upper int(Ceiling) first.\n    Examples:\n    For lst = [1,2,3] the output should be 6\n    For lst = [1,4,9] the output should be 14\n    For lst = [1,3,5,7] the output should be 16\n    For lst = [1.4,4.2,0] the output should be 5.6\n    For lst = [-2.4,1,1] the output should be -0.4\n    \n\n    \"\"\"\n    sum_of_squares = 0\n    for num in lst:\n        # Round each element to the nearest integer (ceiling)\n        rounded_num = math.ceil(num)\n        # Square the rounded number and add it to the sum\n        sum_of_squares += rounded_num ** 2\n    return sum_of_squares\n```",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "import math\n\ndef sum_squares(lst):\n    \"\"\"You are given a list of numbers.\n    You need to return the sum of squared numbers in the given list,\n    round each element in the list to the upper int(Ceiling) first.\n    Examples:\n    For lst = [1,2,3] the output should be 6\n    For lst = [1,4,9] the output should be 14\n    For lst = [1,3,5,7] the output should be 16\n    For lst = [1.4,4.2,0] the output should be 5.6\n    For lst = [-2.4,1,1] the output should be -0.4\n    \n\n    \"\"\"\n    sum_of_squares = 0\n    for num in lst:\n        # Round each element to the nearest integer (ceiling)\n        rounded_num = math.ceil(num)\n        # Square the rounded number and add it to the sum\n        sum_of_squares += rounded_num ** 2\n    return sum_of_squares",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 1.5432946681976318,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

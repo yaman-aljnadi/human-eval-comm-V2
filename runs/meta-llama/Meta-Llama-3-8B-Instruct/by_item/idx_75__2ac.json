@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_75::2ac::meta-llama/Meta-Llama-3-8B-Instruct::seed0",
+  "task_id": "idx_75",
+  "category": "2ac",
+  "entry_point": "is_multiply_prime",
+  "prompt_field": "prompt2ac",
+  "prompt_text": "\ndef is_multiply_prime(a):\n    \"\"\"Write a function that returns true if the given number is the multiplication of K prime numbers\n    and false otherwise.\n    Knowing that (a) is less then 100. \n    Example:\n    is_multiply_prime(30) == False\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef is_multiply_prime(a):\n    \"\"\"Write a function that returns true if the given number is the multiplication of K prime numbers\n    and false otherwise.\n    Knowing that (a) is less then 100. \n    Example:\n    is_multiply_prime(30) == False\n    \"\"\"",
+  "prompt_sha256": "0a4fe88c7cc99c5473b4a1ac5a334b85bb956c74e0ecedf6968b6b3e4410c8c5",
+  "model_name": "meta-llama/Meta-Llama-3-8B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef is_multiply_prime(a):\n    \"\"\"Write a function that returns true if the given number is the multiplication of K prime numbers\n    and false otherwise.\n    Knowing that (a) is less then 100. \n    Example:\n    is_multiply_prime(30) == False\n    \"\"\"\n\n\n### Code\n```python\ndef is_multiply_prime(a):\n    def is_prime(x):\n        if x < 2:\n            return False\n        for i in range(2, int(x**0.5) + 1):\n            if x % i == 0:\n                return False\n        return True\n\n    primes = [i for i in range(2, 100) if is_prime(i)]\n    for prime in primes:\n        while a > prime:\n            if a % prime == 0:\n                a //= prime\n                if a == 1:\n                    return True\n            else:\n                break\n    return False\n``` \n\n\n\n\n\n\n\n**Output:**\n```\nis_multiply_prime(30)\n# False\n``` \n\n\n\n\n\n\n\n**Explanation:**\nIn this code, we first define a helper function `is_prime` to check if a number is prime. Then, we generate all prime numbers less than 100 using a list comprehension.\n\nNext, we iterate over the prime numbers and repeatedly divide `a` by each prime number as long as it's divisible. If we're left with 1 after the division process, we return `True` as `a` is the product of prime numbers. If none of the above conditions are",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def is_multiply_prime(a):\n    def is_prime(x):\n        if x < 2:\n            return False\n        for i in range(2, int(x**0.5) + 1):\n            if x % i == 0:\n                return False\n        return True\n\n    primes = [i for i in range(2, 100) if is_prime(i)]\n    for prime in primes:\n        while a > prime:\n            if a % prime == 0:\n                a //= prime\n                if a == 1:\n                    return True\n            else:\n                break\n    return False",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 66.55222392082214,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

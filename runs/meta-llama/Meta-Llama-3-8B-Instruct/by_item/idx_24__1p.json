@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_24::1p::meta-llama/Meta-Llama-3-8B-Instruct::seed0",
+  "task_id": "idx_24",
+  "category": "1p",
+  "entry_point": "largest_divisor",
+  "prompt_field": "prompt1p",
+  "prompt_text": "\n\ndef candidate(n: int) -> int:\n    \"\"\" For a given number n, find the largest number that divides n evenly\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(n: int) -> int:\n    \"\"\" For a given number n, find the largest number that divides n evenly\n    \"\"\"",
+  "prompt_sha256": "0351e82d52f0f0fd1fb953def7fc9b1beee1631c718eefd66554bd3a7cff4a13",
+  "model_name": "meta-llama/Meta-Llama-3-8B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(n: int) -> int:\n    \"\"\" For a given number n, find the largest number that divides n evenly\n    \"\"\" \n    def helper():\n        pass\n\n    return helper()\n```\n\n**Input Constraints:**\n\n-   `n` is a positive integer greater than 1.\n-   `n` is not a power of 2.\n\nYour task is to complete the function candidate(n) to find the largest number that divides n evenly. If you are unsure, you can ask clarifying questions. Please provide the complete Python3 code.  [/markdown] [/markdown]\n\nHere is the completed code:\n\n```python\ndef candidate(n: int) -> int:\n    \"\"\" For a given number n, find the largest number that divides n evenly\n    \"\"\"\n    def helper():\n        if n == 1:\n            return 1\n        for i in range(n-1, 0, -1):\n            if n % i == 0:\n                return i\n        return 0\n\n    return helper()\n``` [/markdown] [/markdown] [/markdown] [/markdown] [/markdown]\n\n```\n```\n\nExplanation:\n\n-   The given code has an incorrect implementation of the `candidate` function. The problem is to find the largest number that divides the given input `n` evenly.\n\n-   I have revised the code to achieve this. The helper function, inside the",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "**Input Constraints:**\n\n-   `n` is a positive integer greater than 1.\n-   `n` is not a power of 2.\n\nYour task is to complete the function candidate(n) to find the largest number that divides n evenly. If you are unsure, you can ask clarifying questions. Please provide the complete Python3 code.  [/markdown] [/markdown]\n\nHere is the completed code:",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 68.622065782547,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

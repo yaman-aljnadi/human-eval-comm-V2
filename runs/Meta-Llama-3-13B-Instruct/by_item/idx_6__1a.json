@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_6::1a::andrijdavid/Meta-Llama-3-13B-Instruct::seed0",
+  "task_id": "idx_6",
+  "category": "1a",
+  "entry_point": "parse_nested_parens",
+  "prompt_field": "prompt1a",
+  "prompt_text": "from typing import List\n\n\ndef candidate(paren_string: str) -> List[int]:\n    \"\"\" Input to this function is a string represented multiple groups for nested parentheses separated by certain characters.\n    For each of the group, output the deepest level of nesting of parentheses.\n    E.g. (()()) has maximum two levels of nesting while ((())) has three.\n\n    >>> candidate('(()()) ((())) () ((())()())')\n    [2, 3, 1, 3]\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List\n\n\ndef candidate(paren_string: str) -> List[int]:\n    \"\"\" Input to this function is a string represented multiple groups for nested parentheses separated by certain characters.\n    For each of the group, output the deepest level of nesting of parentheses.\n    E.g. (()()) has maximum two levels of nesting while ((())) has three.\n\n    >>> candidate('(()()) ((())) () ((())()())')\n    [2, 3, 1, 3]\n    \"\"\"",
+  "prompt_sha256": "cc513998f07365782d953dfbb0066175f7917412b1e284d4edee22daf2f801df",
+  "model_name": "andrijdavid/Meta-Llama-3-13B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List\n\n\ndef candidate(paren_string: str) -> List[int]:\n    \"\"\" Input to this function is a string represented multiple groups for nested parentheses separated by certain characters.\n    For each of the group, output the deepest level of nesting of parentheses.\n    E.g. (()()) has maximum two levels of nesting while ((())) has three.\n\n    >>> candidate('(()()) ((())) () ((())()())')\n    [2, 3, 1, 3]\n    \"\"\"\n\n\n\n Please note that you can assume that:\n   1️‍amelength of input string is limited to10000 characters\n\nAnswering questions instead of providing code:\n please feel free to ask questions if you're not clear about any part of the problem description or requirements mentioned above.\n\nPlease provide code with comments or else explain how you'll proceed with this problem statement.ěležeottsбудь�示ortonMENTMENTMENTMENTMENTMENTMENTMENTMENTMENTmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentment",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def candidate(paren_string: str) -> List[int]:\n    \"\"\" Input to this function is a string represented multiple groups for nested parentheses separated by certain characters.\n    For each of the group, output the deepest level of nesting of parentheses.\n    E.g. (()()) has maximum two levels of nesting while ((())) has three.\n\n    >>> candidate('(()()) ((())) () ((())()())')\n    [2, 3, 1, 3]\n    \"\"\"\n\n\n\n Please note that you can assume that:\n   1️‍amelength of input string is limited to10000 characters\n\nAnswering questions instead of providing code:\n please feel free to ask questions if you're not clear about any part of the problem description or requirements mentioned above.\n\nPlease provide code with comments or else explain how you'll proceed with this problem statement.ěležeottsбудь�示ortonMENTMENTMENTMENTMENTMENTMENTMENTMENTMENTmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentmentment",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 108.947998046875,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

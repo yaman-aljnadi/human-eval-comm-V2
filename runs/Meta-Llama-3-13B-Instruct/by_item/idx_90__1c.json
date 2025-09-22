@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_90::1c::andrijdavid/Meta-Llama-3-13B-Instruct::seed0",
+  "task_id": "idx_90",
+  "category": "1c",
+  "entry_point": "next_smallest",
+  "prompt_field": "prompt1c",
+  "prompt_text": "\ndef next_smallest(lst):\n    \"\"\"\n    You are given a list of integers.\n    Write a function next_smallest() that returns the 2nd smallest element of the list.\n    Return None if there is no such element.\n    \n    next_smallest([1, 2, 3, 4, 5]) == 1\n    next_smallest([5, 1, 4, 3, 2]) == 1\n    next_smallest([]) == None\n    next_smallest([1, 1]) == 1\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef next_smallest(lst):\n    \"\"\"\n    You are given a list of integers.\n    Write a function next_smallest() that returns the 2nd smallest element of the list.\n    Return None if there is no such element.\n    \n    next_smallest([1, 2, 3, 4, 5]) == 1\n    next_smallest([5, 1, 4, 3, 2]) == 1\n    next_smallest([]) == None\n    next_smallest([1, 1]) == 1\n    \"\"\"",
+  "prompt_sha256": "3cbeb2aa3d02e3dc01bbbc2156e080bccd856f59ffad40c5557863b0553cd63b",
+  "model_name": "andrijdavid/Meta-Llama-3-13B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef next_smallest(lst):\n    \"\"\"\n    You are given a list of integers.\n    Write a function next_smallest() that returns the 2nd smallest element of the list.\n    Return None if there is no such element.\n    \n    next_smallest([1, 2, 3, 4, 5]) == 1\n    next_smallest([5, 1, 4, 3, 2]) == 1\n    next_smallest([]) == None\n    next_smallest([1, 1]) == 1\n    \"\"\"-Zaubereto's answer\n\nPlease provide the Python3 code below:\n\n def next_smallest(lst):\n    if len(lst) ==0:\n        return None\n    else:\n        return min sorted filter(lambda x: x!= None or x.__Greater__ None, sorted filter(lambda x: x.__ Greater__ None or x.__ Greater__ None, filter(lambda x__Greater__None __ Greater__ None__  x__ __ Greater__ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def next_smallest(lst):\n    \"\"\"\n    You are given a list of integers.\n    Write a function next_smallest() that returns the 2nd smallest element of the list.\n    Return None if there is no such element.\n    \n    next_smallest([1, 2, 3, 4, 5]) == 1\n    next_smallest([5, 1, 4, 3, 2]) == 1\n    next_smallest([]) == None\n    next_smallest([1, 1]) == 1\n    \"\"\"-Zaubereto's answer\n\nPlease provide the Python3 code below:\n\n def next_smallest(lst):\n    if len(lst) ==0:\n        return None\n    else:\n        return min sorted filter(lambda x: x!= None or x.__Greater__ None, sorted filter(lambda x: x.__ Greater__ None or x.__ Greater__ None, filter(lambda x__Greater__None __ Greater__ None__  x__ __ Greater__ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __ __",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 108.48750472068787,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

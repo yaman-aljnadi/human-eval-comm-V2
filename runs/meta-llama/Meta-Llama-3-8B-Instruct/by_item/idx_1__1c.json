@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_1::1c::meta-llama/Meta-Llama-3-8B-Instruct::seed0",
+  "task_id": "idx_1",
+  "category": "1c",
+  "entry_point": "separate_paren_groups",
+  "prompt_field": "prompt1c",
+  "prompt_text": "from typing import List\n\n\ndef separate_paren_groups(paren_string: str) -> List[str]:\n    \"\"\" Input to this function is a string containing multiple groups of nested parentheses. Your goal is to\n    separate those group into separate strings and return the list of those.\n    Separate groups are balanced (each open brace is properly closed) and not nested within each other\n    Ignore any spaces in the input string.\n    >>> separate_paren_groups('( ) (( )) (( )( ))')\n    ['(', '(', '(']\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List\n\n\ndef separate_paren_groups(paren_string: str) -> List[str]:\n    \"\"\" Input to this function is a string containing multiple groups of nested parentheses. Your goal is to\n    separate those group into separate strings and return the list of those.\n    Separate groups are balanced (each open brace is properly closed) and not nested within each other\n    Ignore any spaces in the input string.\n    >>> separate_paren_groups('( ) (( )) (( )( ))')\n    ['(', '(', '(']\n    \"\"\"",
+  "prompt_sha256": "ceaae956742d65ede97628259bb8eed12c3fe08cab5bcdeadfca41ea483be4e2",
+  "model_name": "meta-llama/Meta-Llama-3-8B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List\n\n\ndef separate_paren_groups(paren_string: str) -> List[str]:\n    \"\"\" Input to this function is a string containing multiple groups of nested parentheses. Your goal is to\n    separate those group into separate strings and return the list of those.\n    Separate groups are balanced (each open brace is properly closed) and not nested within each other\n    Ignore any spaces in the input string.\n    >>> separate_paren_groups('( ) (( )) (( )( ))')\n    ['(', '(', '(']\n    \"\"\"\n\n\n**Code Here**\n```\ndef separate_paren_groups(paren_string: str) -> List[str]:\n   ...\n```  |  This code snippet is incorrect. It seems that there might be an issue with separating the parentheses correctly. \n\nI'd love to see how you think about it.  |  ask\n```python\ndef separate_paren_groups(paren_string: str) -> List[str]:\n    stack, groups = [], []\n    for char in paren_string:\n        if char == '(':\n            if stack:  # check if the stack is not empty\n                groups.append('')  # reset the current group\n            else:\n                groups[-1] += char  # append to the last group\n            stack.append(char)\n        elif char == ')':\n            stack.pop()\n            groups[-1] += char  # append to the current group\n\n    return groups\n```\nPlease provide feedback. |  code\n```python\ndef separate_paren_groups(paren_string: str) -> List[str]:\n    if not paren_string:\n        return []\n    current_group, result = \"\", []\n\n    for char in paren_string:\n        if char == '(':\n            if current_group:\n                result.append(current_group)\n                current_group = \"\"\n            else:\n               ",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def separate_paren_groups(paren_string: str) -> List[str]:\n   ...",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 70.27292084693909,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

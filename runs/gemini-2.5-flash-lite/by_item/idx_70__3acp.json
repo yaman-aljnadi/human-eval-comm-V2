@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_70::3acp::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_70",
+  "category": "3acp",
+  "entry_point": "strange_sort_list",
+  "prompt_field": "prompt3acp",
+  "prompt_text": "\ndef candidate(lst):\n    '''\n    Given list of integers, return list in a certain order (ascending, strange or another).\n\n    Examples:\n    candidate([1, 2, 3, 4]) == [1, 2, 3, 4]\n    candidate([5, 5, 5, 5]) == [5]\n    candidate([]) == []\n    '''\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(lst):\n    '''\n    Given list of integers, return list in a certain order (ascending, strange or another).\n\n    Examples:\n    candidate([1, 2, 3, 4]) == [1, 2, 3, 4]\n    candidate([5, 5, 5, 5]) == [5]\n    candidate([]) == []\n    '''",
+  "prompt_sha256": "66c2921616454e02bfa956a7af6f88defd5f192d377d0dccf393123044af9fae",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef candidate(lst):\n    '''\n    Given list of integers, return list in a certain order (ascending, strange or another).\n\n    Examples:\n    candidate([1, 2, 3, 4]) == [1, 2, 3, 4]\n    candidate([5, 5, 5, 5]) == [5]\n    candidate([]) == []\n    '''\n    if not lst:\n        return []\n    \n    # The examples suggest that duplicates are removed and the remaining elements are sorted.\n    # The first example, [1, 2, 3, 4] -> [1, 2, 3, 4], shows ascending order.\n    # The second example, [5, 5, 5, 5] -> [5], shows duplicate removal.\n    # The third example, [] -> [], shows handling of an empty list.\n\n    # Convert to a set to remove duplicates, then convert back to a list.\n    # Sorting is implicitly handled by converting a set to a list in Python for simple data types like integers.\n    # However, to guarantee ascending order as seen in the first example",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def candidate(lst):\n    '''\n    Given list of integers, return list in a certain order (ascending, strange or another).\n\n    Examples:\n    candidate([1, 2, 3, 4]) == [1, 2, 3, 4]\n    candidate([5, 5, 5, 5]) == [5]\n    candidate([]) == []\n    '''\n    if not lst:\n        return []\n    \n    # The examples suggest that duplicates are removed and the remaining elements are sorted.\n    # The first example, [1, 2, 3, 4] -> [1, 2, 3, 4], shows ascending order.\n    # The second example, [5, 5, 5, 5] -> [5], shows duplicate removal.\n    # The third example, [] -> [], shows handling of an empty list.\n\n    # Convert to a set to remove duplicates, then convert back to a list.\n    # Sorting is implicitly handled by converting a set to a list in Python for simple data types like integers.\n    # However, to guarantee ascending order as seen in the first example",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 2.1238081455230713,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

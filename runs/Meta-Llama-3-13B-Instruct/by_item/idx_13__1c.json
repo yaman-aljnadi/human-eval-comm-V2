@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_13::1c::andrijdavid/Meta-Llama-3-13B-Instruct::seed0",
+  "task_id": "idx_13",
+  "category": "1c",
+  "entry_point": "greatest_common_divisor",
+  "prompt_field": "prompt1c",
+  "prompt_text": "\n\ndef greatest_common_divisor(a: int, b: int) -> int:\n    \"\"\" Return a greatest common divisor of two integers a and b\n    >>> greatest_common_divisor(3, 5)\n    3\n    >>> greatest_common_divisor(25, 15)\n    15\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef greatest_common_divisor(a: int, b: int) -> int:\n    \"\"\" Return a greatest common divisor of two integers a and b\n    >>> greatest_common_divisor(3, 5)\n    3\n    >>> greatest_common_divisor(25, 15)\n    15\n    \"\"\"",
+  "prompt_sha256": "6f547fda01bae0ec1960db1f0d894264bf0745a097b253f4d16cfded2bc83566",
+  "model_name": "andrijdavid/Meta-Llama-3-13B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef greatest_common_divisor(a: int, b: int) -> int:\n    \"\"\" Return a greatest common divisor of two integers a and b\n    >>> greatest_common_divisor(3, 5)\n    3\n    >>> greatest_common_divisor(25, 15)\n    15\n    \"\"\"\n\n\nplease note that I am expecting a Python3 code below with proper indentations and/or clarifying questions if any.\n\nplease provide your code below without any further ado. Below code should be able to handle any two integers provided as inputted values.\nYour inputs are appreciable.\n\nbelow is an example of inputs:\n\ndef greatest_common_dividend(a: int, b: int) -> int:\n    import mathematics Module library\n    import fractions module library\n\n    import math Module library\n\n    import operator Module library\n\n    import statistics module library\n\n    import bisect Module library\n\n    import collections module library\n\n    import re Module library\n    import random Module library\n    import os module library\n    import operator Module library\n\n    import statistics Module library\n\n    import operator Module library\n\n    import collections Module library\n    import random Module library\n\n    import bisect Module library\n    import re Module library\n    import os module library\n\n    import math Module library\n    import random Module library\n    import operator Module library\n    import statistics module library\n    import collections Module library\n    import re Module library\n    import random Module library\n    import operator Module library\n    import random Module library\n    import random Module library\n    import random Module library\n",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def greatest_common_divisor(a: int, b: int) -> int:\n    \"\"\" Return a greatest common divisor of two integers a and b\n    >>> greatest_common_divisor(3, 5)\n    3\n    >>> greatest_common_divisor(25, 15)\n    15\n    \"\"\"\n\n\nplease note that I am expecting a Python3 code below with proper indentations and/or clarifying questions if any.\n\nplease provide your code below without any further ado. Below code should be able to handle any two integers provided as inputted values.\nYour inputs are appreciable.\n\nbelow is an example of inputs:\n\ndef greatest_common_dividend(a: int, b: int) -> int:\n    import mathematics Module library\n    import fractions module library\n\n    import math Module library\n\n    import operator Module library\n\n    import statistics module library\n\n    import bisect Module library\n\n    import collections module library\n\n    import re Module library\n    import random Module library\n    import os module library\n    import operator Module library\n\n    import statistics Module library\n\n    import operator Module library\n\n    import collections Module library\n    import random Module library\n\n    import bisect Module library\n    import re Module library\n    import os module library\n\n    import math Module library\n    import random Module library\n    import operator Module library\n    import statistics module library\n    import collections Module library\n    import re Module library\n    import random Module library\n    import operator Module library\n    import random Module library\n    import random Module library\n    import random Module library",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 90.27103781700134,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

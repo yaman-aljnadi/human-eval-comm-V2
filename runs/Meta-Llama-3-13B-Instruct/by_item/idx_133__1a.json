@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_133::1a::andrijdavid/Meta-Llama-3-13B-Instruct::seed0",
+  "task_id": "idx_133",
+  "category": "1a",
+  "entry_point": "sum_squares",
+  "prompt_field": "prompt1a",
+  "prompt_text": "\n\ndef candidate(lst):\n    \"\"\"You are given a list of numbers.\n    You need to return the product or sum of squared numbers in the given list,\n    round each element in the list to the upper int(Ceiling) first.\n    Examples:\n    For lst = [1,2,3] the output should be 14\n    For lst = [1,4,9] the output should be 98\n    For lst = [1,3,5,7] the output should be 84\n    For lst = [1.4,4.2,0] the output should be 29\n    For lst = [-2.4,1,1] the output should be 6\n    \n\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(lst):\n    \"\"\"You are given a list of numbers.\n    You need to return the product or sum of squared numbers in the given list,\n    round each element in the list to the upper int(Ceiling) first.\n    Examples:\n    For lst = [1,2,3] the output should be 14\n    For lst = [1,4,9] the output should be 98\n    For lst = [1,3,5,7] the output should be 84\n    For lst = [1.4,4.2,0] the output should be 29\n    For lst = [-2.4,1,1] the output should be 6\n    \n\n    \"\"\"",
+  "prompt_sha256": "bd6b0293a8df07b0e51b7b3a89dbb421ea30623c3c5adb0cc1a31b621da977e5",
+  "model_name": "andrijdavid/Meta-Llama-3-13B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(lst):\n    \"\"\"You are given a list of numbers.\n    You need to return the product or sum of squared numbers in the given list,\n    round each element in the list to the upper int(Ceiling) first.\n    Examples:\n    For lst = [1,2,3] the output should be 14\n    For lst = [1,4,9] the output should be 98\n    For lst = [1,3,5,7] the output should be 84\n    For lst = [1.4,4.2,0] the output should be 29\n    For lst = [-2.4,1,1] the output should be 6\n    \n\n    \"\"\"InParameter:\n    \"\"\"\n    inputlst : list of numbers\n    \"\"\"\n.scalablytyped:\n    \"\"\" output: integer or float\n    \"\"\"\nchwitz:\n    \"\"\" round each element in the input list to upper int(Ceiling) first\n    \"\"\"\n    \n\n    # Write your Python3 code below:\n    import mathplotlib libriryplotlib librrietymath librrietymath librrietymathmath librrietymathmath math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def candidate(lst):\n    \"\"\"You are given a list of numbers.\n    You need to return the product or sum of squared numbers in the given list,\n    round each element in the list to the upper int(Ceiling) first.\n    Examples:\n    For lst = [1,2,3] the output should be 14\n    For lst = [1,4,9] the output should be 98\n    For lst = [1,3,5,7] the output should be 84\n    For lst = [1.4,4.2,0] the output should be 29\n    For lst = [-2.4,1,1] the output should be 6\n    \n\n    \"\"\"InParameter:\n    \"\"\"\n    inputlst : list of numbers\n    \"\"\"\n.scalablytyped:\n    \"\"\" output: integer or float\n    \"\"\"\nchwitz:\n    \"\"\" round each element in the input list to upper int(Ceiling) first\n    \"\"\"\n    \n\n    # Write your Python3 code below:\n    import mathplotlib libriryplotlib librrietymath librrietymath librrietymathmath librrietymathmath math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math math",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 91.24373483657837,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_7::1a::andrijdavid/Meta-Llama-3-13B-Instruct::seed0",
+  "task_id": "idx_7",
+  "category": "1a",
+  "entry_point": "filter_by_substring",
+  "prompt_field": "prompt1a",
+  "prompt_text": "from typing import List\n\n\ndef candidate(strings: List[str], x: str) -> List[str]:\n    \"\"\" Process an input list of strings given string x\n    >>> candidate([], 'a')\n    []\n    >>> candidate(['abc', 'bacd', 'cde', 'array'], 'a')\n    ['abc', 'bacd', 'array']\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List\n\n\ndef candidate(strings: List[str], x: str) -> List[str]:\n    \"\"\" Process an input list of strings given string x\n    >>> candidate([], 'a')\n    []\n    >>> candidate(['abc', 'bacd', 'cde', 'array'], 'a')\n    ['abc', 'bacd', 'array']\n    \"\"\"",
+  "prompt_sha256": "b583e9824481ec6b24c43343493a29d483936fb05a85fe0b123891a50f01f86a",
+  "model_name": "andrijdavid/Meta-Llama-3-13B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List\n\n\ndef candidate(strings: List[str], x: str) -> List[str]:\n    \"\"\" Process an input list of strings given string x\n    >>> candidate([], 'a')\n    []\n    >>> candidate(['abc', 'bacd', 'cde', 'array'], 'a')\n    ['abc', 'bacd', 'array']\n    \"\"\"\n\n\nPlease note that you can assume that:\n\n1️⩰️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️-urlencodedinputstringswillcontainonly Lowercase lettersand whitespacesas separates characters\n\n2️⩱�数﻿#�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数量�数�数�数�数量�数量�数量�数�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量量�数量�数量�数量量�数量�数量�数量�数量�数量�数量量�数量量�数量量�数量量�数量量�数量量�数量量�数量量量�数量量�数量量�数量量�数量量�数量量�数量量�数量量�数量量�数量量�数量量�数量量�数量量量�数量量�数量量�数量量�数量量�数量量",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def candidate(strings: List[str], x: str) -> List[str]:\n    \"\"\" Process an input list of strings given string x\n    >>> candidate([], 'a')\n    []\n    >>> candidate(['abc', 'bacd', 'cde', 'array'], 'a')\n    ['abc', 'bacd', 'array']\n    \"\"\"\n\n\nPlease note that you can assume that:\n\n1️⩰️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️-urlencodedinputstringswillcontainonly Lowercase lettersand whitespacesas separates characters\n\n2️⩱�数﻿#�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数量�数�数�数�数量�数量�数量�数�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量量�数量�数量�数量量�数量�数量�数量�数量�数量�数量量�数量量�数量量�数量量�数量量�数量量�数量量�数量量量�数量量�数量量�数量量�数量量�数量量�数量量�数量量�数量量�数量量�数量量�数量量�数量量量�数量量�数量量�数量量�数量量�数量量",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 91.40253186225891,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

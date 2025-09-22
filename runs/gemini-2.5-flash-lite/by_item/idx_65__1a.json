@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_65::1a::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_65",
+  "category": "1a",
+  "entry_point": "circular_shift",
+  "prompt_field": "prompt1a",
+  "prompt_text": "\ndef circular_shift(x, shift):\n    \"\"\"Circular shift the digits of the integer x, shift the digits left or right by shift\n    and return the result as a string.\n    If shift > number of digits, return digits reversed.\n    >>> circular_shift(12, 1)\n    \"21\"\n    >>> circular_shift(12, 2)\n    \"12\"\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef circular_shift(x, shift):\n    \"\"\"Circular shift the digits of the integer x, shift the digits left or right by shift\n    and return the result as a string.\n    If shift > number of digits, return digits reversed.\n    >>> circular_shift(12, 1)\n    \"21\"\n    >>> circular_shift(12, 2)\n    \"12\"\n    \"\"\"",
+  "prompt_sha256": "45167d6a1c495c78b7a819c394d0c5e54ae3bd80076893e1506edf146213b0a1",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef circular_shift(x, shift):\n    \"\"\"Circular shift the digits of the integer x, shift the digits left or right by shift\n    and return the result as a string.\n    If shift > number of digits, return digits reversed.\n    >>> circular_shift(12, 1)\n    \"21\"\n    >>> circular_shift(12, 2)\n    \"12\"\n    \"\"\"\n    s = str(x)\n    n = len(s)\n    if shift > n:\n        return s[::-1]\n    \n    # Normalize shift to be within the length of the string\n    effective_shift = shift % n\n\n    # Perform the circular shift\n    # A left shift of k is equivalent to a right shift of n-k\n    # We'll implement it as a right shift for simplicity of slicing\n    # If shift is positive, it's a right shift\n    # If shift is negative, it's a left shift, so we'll adjust effective_shift\n    \n    # The prompt implies shift is positive and refers to left/right.\n    # Let's interpret positive shift as",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def circular_shift(x, shift):\n    \"\"\"Circular shift the digits of the integer x, shift the digits left or right by shift\n    and return the result as a string.\n    If shift > number of digits, return digits reversed.\n    >>> circular_shift(12, 1)\n    \"21\"\n    >>> circular_shift(12, 2)\n    \"12\"\n    \"\"\"\n    s = str(x)\n    n = len(s)\n    if shift > n:\n        return s[::-1]\n    \n    # Normalize shift to be within the length of the string\n    effective_shift = shift % n\n\n    # Perform the circular shift\n    # A left shift of k is equivalent to a right shift of n-k\n    # We'll implement it as a right shift for simplicity of slicing\n    # If shift is positive, it's a right shift\n    # If shift is negative, it's a left shift, so we'll adjust effective_shift\n    \n    # The prompt implies shift is positive and refers to left/right.\n    # Let's interpret positive shift as",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 1.653287649154663,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

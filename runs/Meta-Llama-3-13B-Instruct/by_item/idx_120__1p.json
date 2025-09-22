@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_120::1p::andrijdavid/Meta-Llama-3-13B-Instruct::seed0",
+  "task_id": "idx_120",
+  "category": "1p",
+  "entry_point": "maximum",
+  "prompt_field": "prompt1p",
+  "prompt_text": "\ndef maximum(arr, k):\n    \"\"\"\n    Given an array arr of integers and a positive integer k, return a sorted list \n    of length k with \n\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef maximum(arr, k):\n    \"\"\"\n    Given an array arr of integers and a positive integer k, return a sorted list \n    of length k with \n\n    \"\"\"",
+  "prompt_sha256": "e90b3805554ca26b1a9103484517519353280c0a0420d5fea8598cc2f5d05d18",
+  "model_name": "andrijdavid/Meta-Llama-3-13B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef maximum(arr, k):\n    \"\"\"\n    Given an array arr of integers and a positive integer k, return a sorted list \n    of length k with \n\n    \"\"\"531 PartialView:clarification needed\"\"\"531 Fuller explanation:\n    \"\"\"\n    🔥 maximum(arr, k):\n    \"\"\"\n    🔥 🔥 🔥 🔥 🔥 🔥 🔥 🔥 🔥 🔥 🔥 🔥 🔥 🔥 🔥 🔥 \n\n531 Fuller explanation:\n531 Fuller explanation:\n531 Fuller explanation:\n531 Fuller explanation:\n531 Fuller explanation:\n531 Fuller explanation:\n531 Fuller explanation:\n531 Fuller explanation:\n531 Fuller explanation:\n531 Fuller explanation:\n531 Fuller explanation:\n531 Fuller explanation:\n531 Fuller explanation:\n531 Fuller explanation:\n531 Fuller explanation:\n531 Fuller explanation:\n531 Fuller explanation:\n531 Fuller explanation:\n531 Fuller explanation:\n531 Fuller explanation:\n531 Fuller explanation:\n531 Fuller explanation:\n531 Fuller explanation:\n531 Fuller explanation:\n531 Fuller explanation:\n531 Fuller explanation:\n531 Fuller explanation:\n531 Fuller explanation:\n531 Fuller explanation:\n531 Fuller explanation:\n531 Fuller explanation:\n531 Fuller explanation:\n531 Fuller explanation:\n531 Fuller explanation:\n531 Fuller explanation:\n531 Fuller explanation:\n531 Fuller explanation:\n531 Fuller explanation:\n531 Fuller explanation:\n531 Fuller explanation:\n531 Fuller explanation:\n531 Fuller explanation:\n531 Fuller explanation:\n531 Fuller explanation:\n531 Fuller explanation:\n531 Fuller explanation:\n531 Fuller explanation:\n531 Fuller explanation:\n531 Fuller explanation:\n531 Fuller explanation",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def maximum(arr, k):\n    \"\"\"\n    Given an array arr of integers and a positive integer k, return a sorted list \n    of length k with \n\n    \"\"\"531 PartialView:clarification needed\"\"\"531 Fuller explanation:\n    \"\"\"\n    🔥 maximum(arr, k):\n    \"\"\"\n    🔥 🔥 🔥 🔥 🔥 🔥 🔥 🔥 🔥 🔥 🔥 🔥 🔥 🔥 🔥 🔥 \n\n531 Fuller explanation:\n531 Fuller explanation:\n531 Fuller explanation:\n531 Fuller explanation:\n531 Fuller explanation:\n531 Fuller explanation:\n531 Fuller explanation:\n531 Fuller explanation:\n531 Fuller explanation:\n531 Fuller explanation:\n531 Fuller explanation:\n531 Fuller explanation:\n531 Fuller explanation:\n531 Fuller explanation:\n531 Fuller explanation:\n531 Fuller explanation:\n531 Fuller explanation:\n531 Fuller explanation:\n531 Fuller explanation:\n531 Fuller explanation:\n531 Fuller explanation:\n531 Fuller explanation:\n531 Fuller explanation:\n531 Fuller explanation:\n531 Fuller explanation:\n531 Fuller explanation:\n531 Fuller explanation:\n531 Fuller explanation:\n531 Fuller explanation:\n531 Fuller explanation:\n531 Fuller explanation:\n531 Fuller explanation:\n531 Fuller explanation:\n531 Fuller explanation:\n531 Fuller explanation:\n531 Fuller explanation:\n531 Fuller explanation:\n531 Fuller explanation:\n531 Fuller explanation:\n531 Fuller explanation:\n531 Fuller explanation:\n531 Fuller explanation:\n531 Fuller explanation:\n531 Fuller explanation:\n531 Fuller explanation:\n531 Fuller explanation:\n531 Fuller explanation:\n531 Fuller explanation:\n531 Fuller explanation:\n531 Fuller explanation",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 90.99220204353333,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_65::2ap::meta-llama/Meta-Llama-3-8B-Instruct::seed0",
+  "task_id": "idx_65",
+  "category": "2ap",
+  "entry_point": "circular_shift",
+  "prompt_field": "prompt2ap",
+  "prompt_text": "\ndef circular_shift(x, shift):\n    \"\"\"Circular shift the digits of the integer x, shift the digits left or right by shift\n    and return the result as a string.\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef circular_shift(x, shift):\n    \"\"\"Circular shift the digits of the integer x, shift the digits left or right by shift\n    and return the result as a string.\n    \"\"\"",
+  "prompt_sha256": "b6f73fdd994a6c18c66e8065ed7372b13d488cd9d0f41a70d96df3cd0326034c",
+  "model_name": "meta-llama/Meta-Llama-3-8B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef circular_shift(x, shift):\n    \"\"\"Circular shift the digits of the integer x, shift the digits left or right by shift\n    and return the result as a string.\n    \"\"\"\n\n\nPlease provide an implementation in Python 3.0. #Example usage of this function:\nprint(circular_shift(1234, 1))  #Output: \"2341\"\nprint(circular_shift(1234, 2))  #Output: \"3412\"\n```\n\n**Code**:\n```python\ndef circular_shift(x, shift):\n    digits = [int(d) for d in str(x)]\n    shift = shift % len(digits)\n    if shift < 0:\n        shift += len(digits)\n    return ''.join(digits[shift:] + digits[:shift])\n```  |  See more at: [https://pastebin.com/fwF4WYwK](https://pastebin.com/fwF4WYwK)  |  14 days ago  | 3 views | 0 comments | 0 likes  |  0 votes |  Share |   0   0  |\n\nI will be more than happy to assist you with your request. \n\nBased on your description, I understand that you are looking for a Python3 code that performs a circular shift on a given integer. By circular shift, I assume you mean rotating the digits of the integer a certain number of times to the",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "**Code**:",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 67.90015959739685,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

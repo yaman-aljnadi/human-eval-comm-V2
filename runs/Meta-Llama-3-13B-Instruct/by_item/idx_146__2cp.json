@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_146::2cp::andrijdavid/Meta-Llama-3-13B-Instruct::seed0",
+  "task_id": "idx_146",
+  "category": "2cp",
+  "entry_point": "specialFilter",
+  "prompt_field": "prompt2cp",
+  "prompt_text": "\ndef specialFilter(nums):\n    \"\"\"Write a function that takes an array of numbers as input.\n    For example:\n    specialFilter([15, -73, 14, -15]) => 15 \n    specialFilter([33, -2, -3, 45, 21, 109]) => 45\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef specialFilter(nums):\n    \"\"\"Write a function that takes an array of numbers as input.\n    For example:\n    specialFilter([15, -73, 14, -15]) => 15 \n    specialFilter([33, -2, -3, 45, 21, 109]) => 45\n    \"\"\"",
+  "prompt_sha256": "a98a9e16f1a275ec0638601abd02e4bc795740c0ed39d0ac15ee12e24057489e",
+  "model_name": "andrijdavid/Meta-Llama-3-13B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef specialFilter(nums):\n    \"\"\"Write a function that takes an array of numbers as input.\n    For example:\n    specialFilter([15, -73, 14, -15]) => 15 \n    specialFilter([33, -2, -3, 45, 21, 109]) => 45\n    \"\"\"ountywide  \"\"\"\n    \"\"\"\n\nPlease respond with Python3 code alone or provide clarifying questions if needed.\"\"\"idente \n\n特殊 filternums ​​​​​​】【�数�자数组】【�数�자】【�数�자数组�数量�数量�数�자�数量�数量�数量�数�자�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数�자�数�자�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def specialFilter(nums):\n    \"\"\"Write a function that takes an array of numbers as input.\n    For example:\n    specialFilter([15, -73, 14, -15]) => 15 \n    specialFilter([33, -2, -3, 45, 21, 109]) => 45\n    \"\"\"ountywide  \"\"\"\n    \"\"\"\n\nPlease respond with Python3 code alone or provide clarifying questions if needed.\"\"\"idente \n\n特殊 filternums ​​​​​​】【�数�자数组】【�数�자】【�数�자数组�数量�数量�数�자�数量�数量�数量�数�자�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数�자�数�자�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 92.24083518981934,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

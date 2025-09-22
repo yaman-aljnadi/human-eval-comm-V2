@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_59::1p::meta-llama/Meta-Llama-3-8B-Instruct::seed0",
+  "task_id": "idx_59",
+  "category": "1p",
+  "entry_point": "largest_prime_factor",
+  "prompt_field": "prompt1p",
+  "prompt_text": "\n\ndef candidate(n: int):\n    \"\"\"Return the prime factor of n. Assume n > 1 and is not a prime.\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(n: int):\n    \"\"\"Return the prime factor of n. Assume n > 1 and is not a prime.\n    \"\"\"",
+  "prompt_sha256": "638a656638f068b7c8b98dd4190fce20f0f9f664dca45bed0a9d701d8fc8c356",
+  "model_name": "meta-llama/Meta-Llama-3-8B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(n: int):\n    \"\"\"Return the prime factor of n. Assume n > 1 and is not a prime.\n    \"\"\"\n\n\n## Code only\n```\ndef candidate(n: int):\n    factors = []\n    i = 2\n    while i * i <= n:\n        if n % i:\n            i += 1\n        else:\n            n //= i\n            factors.append(i)\n    if n > 1:\n        factors.append(n)\n    return factors\n``` 1\n\n(Note: Code should be directly responsive, with Markdown format)\n```python\ndef candidate(n: int):\n    factors = []\n    i = 2\n    while i * i <= n:\n        if n % i:\n            i += 1\n        else:\n            n //= i\n            factors.append(i)\n    if n > 1:\n        factors.append(n)\n    return factors\n``` 1\n1. 1. 1\n1. 1\n1. 1. 1\n1. 1 1. 1\n1. 1. 1\n1. 1\n1. 1\n1. 1. 1. 1\n1. 1. 1\n1. 1\n1. 1. 1\n1. 1. 1\n1. 1. 1",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def candidate(n: int):\n    factors = []\n    i = 2\n    while i * i <= n:\n        if n % i:\n            i += 1\n        else:\n            n //= i\n            factors.append(i)\n    if n > 1:\n        factors.append(n)\n    return factors",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 70.0387589931488,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_77::1p::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_77",
+  "category": "1p",
+  "entry_point": "iscube",
+  "prompt_field": "prompt1p",
+  "prompt_text": "\ndef candidate(a):\n    '''\n    Write a function that takes an integer a and returns True \n    if this integer is.\n    Note: you may assume the input is always valid.\n    Examples:\n    candidate(1) ==> True\n    candidate(2) ==> False\n    candidate(-1) ==> True\n    candidate(64) ==> True\n    candidate(0) ==> True\n    candidate(180) ==> False\n    '''\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(a):\n    '''\n    Write a function that takes an integer a and returns True \n    if this integer is.\n    Note: you may assume the input is always valid.\n    Examples:\n    candidate(1) ==> True\n    candidate(2) ==> False\n    candidate(-1) ==> True\n    candidate(64) ==> True\n    candidate(0) ==> True\n    candidate(180) ==> False\n    '''",
+  "prompt_sha256": "cfa0b7dc93eff3a4b0aacc2e7e3ba42ba25789acbe530deef0f4b5360e533e8b",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef candidate(a):\n    '''\n    Write a function that takes an integer a and returns True\n    if this integer is.\n    Note: you may assume the input is always valid.\n    Examples:\n    candidate(1) ==> True\n    candidate(2) ==> False\n    candidate(-1) ==> True\n    candidate(64) ==> True\n    candidate(0) ==> True\n    candidate(180) ==> False\n    '''\n    # The pattern appears to be that the function returns True for numbers\n    # that are either perfect squares or negative numbers.\n    # 0 is a perfect square (0*0 = 0).\n    # 1 is a perfect square (1*1 = 1).\n    # -1 is negative.\n    # 64 is a perfect square (8*8 = 64).\n    # 2 is neither.\n    # 180 is neither.\n\n    if a < 0:\n        return True\n    \n    # Check if 'a' is a perfect square\n    # We can do this by taking the square root, converting to an integer,\n    # and",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def candidate(a):\n    '''\n    Write a function that takes an integer a and returns True\n    if this integer is.\n    Note: you may assume the input is always valid.\n    Examples:\n    candidate(1) ==> True\n    candidate(2) ==> False\n    candidate(-1) ==> True\n    candidate(64) ==> True\n    candidate(0) ==> True\n    candidate(180) ==> False\n    '''\n    # The pattern appears to be that the function returns True for numbers\n    # that are either perfect squares or negative numbers.\n    # 0 is a perfect square (0*0 = 0).\n    # 1 is a perfect square (1*1 = 1).\n    # -1 is negative.\n    # 64 is a perfect square (8*8 = 64).\n    # 2 is neither.\n    # 180 is neither.\n\n    if a < 0:\n        return True\n    \n    # Check if 'a' is a perfect square\n    # We can do this by taking the square root, converting to an integer,\n    # and",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 1.3790335655212402,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

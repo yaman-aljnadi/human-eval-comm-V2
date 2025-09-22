@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_36::1p::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_36",
+  "category": "1p",
+  "entry_point": "fizz_buzz",
+  "prompt_field": "prompt1p",
+  "prompt_text": "\n\ndef fizz_buzz(n: int):\n    \"\"\"Return the number of times the digit 7 appears in integers less than n which are divisible.\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef fizz_buzz(n: int):\n    \"\"\"Return the number of times the digit 7 appears in integers less than n which are divisible.\n    \"\"\"",
+  "prompt_sha256": "08f551e2b2027dc214b11d28a6a8baed408a42bde6a30562b381f1d1e8789fd0",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef fizz_buzz(n: int):\n    \"\"\"Return the number of times the digit 7 appears in integers less than n which are divisible.\n\n    This function is misnamed based on its docstring. The docstring describes a function\n    that counts the occurrences of the digit '7' in numbers less than 'n' that are\n    divisible by 3 or 5 (based on the common FizzBuzz problem).\n\n    Args:\n        n: An integer representing the upper bound (exclusive).\n\n    Returns:\n        The total count of the digit '7' within the numbers that satisfy the\n        FizzBuzz divisibility rules and are less than n.\n    \"\"\"\n    count_of_sevens = 0\n    for i in range(1, n):\n        if i % 3 == 0 or i % 5 == 0:\n            count_of_sevens += str(i).count('7')\n    return count_of_sevens\n```",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def fizz_buzz(n: int):\n    \"\"\"Return the number of times the digit 7 appears in integers less than n which are divisible.\n\n    This function is misnamed based on its docstring. The docstring describes a function\n    that counts the occurrences of the digit '7' in numbers less than 'n' that are\n    divisible by 3 or 5 (based on the common FizzBuzz problem).\n\n    Args:\n        n: An integer representing the upper bound (exclusive).\n\n    Returns:\n        The total count of the digit '7' within the numbers that satisfy the\n        FizzBuzz divisibility rules and are less than n.\n    \"\"\"\n    count_of_sevens = 0\n    for i in range(1, n):\n        if i % 3 == 0 or i % 5 == 0:\n            count_of_sevens += str(i).count('7')\n    return count_of_sevens",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 1.5032453536987305,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

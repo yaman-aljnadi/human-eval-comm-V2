@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_119::1c::meta-llama/Meta-Llama-3-8B-Instruct::seed0",
+  "task_id": "idx_119",
+  "category": "1c",
+  "entry_point": "match_parens",
+  "prompt_field": "prompt1c",
+  "prompt_text": "\ndef match_parens(lst):\n    '''\n    You are given a list of two strings, both strings consist of open\n    parentheses '(' or close parentheses ')' only.\n    Your job is to check if it is possible to concatenate the two strings in\n    some order, that the resulting string will be good.\n    A string S is considered to be good if and only if all parentheses in S\n    are balanced. For example: the string '(())()' is good, while the string\n    '())' is not.\n    Return 'Yes' if there's a way to make a good string, and return 'No' otherwise.\n\n    Examples:\n    match_parens(['()(', ')']) == 'No'\n    match_parens([')', ')']) == 'Yes'\n    '''\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef match_parens(lst):\n    '''\n    You are given a list of two strings, both strings consist of open\n    parentheses '(' or close parentheses ')' only.\n    Your job is to check if it is possible to concatenate the two strings in\n    some order, that the resulting string will be good.\n    A string S is considered to be good if and only if all parentheses in S\n    are balanced. For example: the string '(())()' is good, while the string\n    '())' is not.\n    Return 'Yes' if there's a way to make a good string, and return 'No' otherwise.\n\n    Examples:\n    match_parens(['()(', ')']) == 'No'\n    match_parens([')', ')']) == 'Yes'\n    '''",
+  "prompt_sha256": "1608ef81d018e9fc09213588aa76ab0a1ea6bfc3c6c0d6c741b9c6774cdf192e",
+  "model_name": "meta-llama/Meta-Llama-3-8B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef match_parens(lst):\n    '''\n    You are given a list of two strings, both strings consist of open\n    parentheses '(' or close parentheses ')' only.\n    Your job is to check if it is possible to concatenate the two strings in\n    some order, that the resulting string will be good.\n    A string S is considered to be good if and only if all parentheses in S\n    are balanced. For example: the string '(())()' is good, while the string\n    '())' is not.\n    Return 'Yes' if there's a way to make a good string, and return 'No' otherwise.\n\n    Examples:\n    match_parens(['()(', ')']) == 'No'\n    match_parens([')', ')']) == 'Yes'\n    '''\n\n\n# Add your code here...\n\n```\nfrom collections import deque\n\ndef match_parens(lst):\n    open_parens, close_parens = [lst[0], lst[1]].count('('), [lst[0], lst[1]].count(')')\n    return 'Yes' if open_parens <= close_parens else 'No'\n```\n\n\n\nYou can run and test the code directly with the given examples.\n\nIf you need further clarification, kindly let me know.",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "from collections import deque\n\ndef match_parens(lst):\n    open_parens, close_parens = [lst[0], lst[1]].count('('), [lst[0], lst[1]].count(')')\n    return 'Yes' if open_parens <= close_parens else 'No'",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 27.84940767288208,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

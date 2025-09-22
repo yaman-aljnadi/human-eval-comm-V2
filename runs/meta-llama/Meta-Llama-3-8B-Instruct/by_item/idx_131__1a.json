@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_131::1a::meta-llama/Meta-Llama-3-8B-Instruct::seed0",
+  "task_id": "idx_131",
+  "category": "1a",
+  "entry_point": "digits",
+  "prompt_field": "prompt1a",
+  "prompt_text": "\ndef digits(n):\n    \"\"\"Given a positive integer n, return the sum or product of the odd digits.\n    Return 0 if all digits are even.\n    For example:\n    digits(1)  == 1\n    digits(4)  == 0\n    digits(235) == 15\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef digits(n):\n    \"\"\"Given a positive integer n, return the sum or product of the odd digits.\n    Return 0 if all digits are even.\n    For example:\n    digits(1)  == 1\n    digits(4)  == 0\n    digits(235) == 15\n    \"\"\"",
+  "prompt_sha256": "a2d05b33793c7567e635d8c895acea385c969461825169265c922634d822d355",
+  "model_name": "meta-llama/Meta-Llama-3-8B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef digits(n):\n    \"\"\"Given a positive integer n, return the sum or product of the odd digits.\n    Return 0 if all digits are even.\n    For example:\n    digits(1)  == 1\n    digits(4)  == 0\n    digits(235) == 15\n    \"\"\"\n\n\n# Please provide your solution based on this prompt.\n# Write Python code directly below.\n```\n\nHere is my Python code solution:\n\n```python\ndef digits(n):\n    odd_sum = 0\n    for digit in str(n):\n        if int(digit) % 2!= 0:\n            odd_sum += int(digit)\n    return odd_sum if odd_sum else 0\n```",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "Here is my Python code solution:",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 21.70551872253418,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

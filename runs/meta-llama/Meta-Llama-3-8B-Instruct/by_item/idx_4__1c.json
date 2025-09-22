@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_4::1c::meta-llama/Meta-Llama-3-8B-Instruct::seed0",
+  "task_id": "idx_4",
+  "category": "1c",
+  "entry_point": "mean_absolute_deviation",
+  "prompt_field": "prompt1c",
+  "prompt_text": "from typing import List\n\n\ndef mean_absolute_deviation(numbers: List[float]) -> float:\n    \"\"\" For a given list of input numbers, calculate Mean Absolute Deviation\n    around the mean of this dataset.\n    Mean Absolute Deviation is the average absolute difference between each\n    element and a centerpoint (mean in this case):\n    MAD = average | x - x_mean |\n    >>> mean_absolute_deviation([1.0, 2.0, 3.0, 4.0])\n    1.5\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List\n\n\ndef mean_absolute_deviation(numbers: List[float]) -> float:\n    \"\"\" For a given list of input numbers, calculate Mean Absolute Deviation\n    around the mean of this dataset.\n    Mean Absolute Deviation is the average absolute difference between each\n    element and a centerpoint (mean in this case):\n    MAD = average | x - x_mean |\n    >>> mean_absolute_deviation([1.0, 2.0, 3.0, 4.0])\n    1.5\n    \"\"\"",
+  "prompt_sha256": "69e55f381f7272023dbdd3643c32a2088a0867d857b0a51854fc577a878c4561",
+  "model_name": "meta-llama/Meta-Llama-3-8B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List\n\n\ndef mean_absolute_deviation(numbers: List[float]) -> float:\n    \"\"\" For a given list of input numbers, calculate Mean Absolute Deviation\n    around the mean of this dataset.\n    Mean Absolute Deviation is the average absolute difference between each\n    element and a centerpoint (mean in this case):\n    MAD = average | x - x_mean |\n    >>> mean_absolute_deviation([1.0, 2.0, 3.0, 4.0])\n    1.5\n    \"\"\"\n\n\n    pass  # implement your code here\n\n---\n\nYou are asked to implement the Mean Absolute Deviation (MAD) function as per the description provided. This MAD function should be implemented in Python 3.0 or above. The function will be passed a list of floating-point numbers, and it should return the MAD of those numbers. The description also provides a simple test case, which is to be run with Python 3.0 or above. The expected output of this test case is 1.5. Write the code based on your understanding of Mean Absolute Deviation and the provided test case. (python)\n```\n**mean_absolute_deviation = def**\n```\n\n\n\nCode explanation:\nThe given code is implementing the Mean Absolute Deviation (MAD) function in Python. The function takes a list of floating-point numbers as input and calculates the MAD around the mean of that dataset. The MAD is calculated by taking the average of the absolute differences between each element and the mean of the dataset.\n\nHere's how it works:\n\n1.  The function is defined as `def mean_absolute_deviation(numbers: List[float]) -> float:`. This function definition indicates that it takes a list of floating-point numbers (`List[float]`) as an argument and returns a",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "**mean_absolute_deviation = def**",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 67.81511449813843,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

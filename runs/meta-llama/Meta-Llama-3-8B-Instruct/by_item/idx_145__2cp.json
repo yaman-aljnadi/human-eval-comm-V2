@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_145::2cp::meta-llama/Meta-Llama-3-8B-Instruct::seed0",
+  "task_id": "idx_145",
+  "category": "2cp",
+  "entry_point": "order_by_points",
+  "prompt_field": "prompt2cp",
+  "prompt_text": "\ndef candidate(nums):\n    \"\"\"\n    Note: if there are several items with similar sum of their digits,\n    order them based on their index in original list.\n\n    For example:\n    >>> candidate([1, 11, -1, -11, -12]) == [1, 11, -1, -12, -11]\n    >>> candidate([]) == []\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(nums):\n    \"\"\"\n    Note: if there are several items with similar sum of their digits,\n    order them based on their index in original list.\n\n    For example:\n    >>> candidate([1, 11, -1, -11, -12]) == [1, 11, -1, -12, -11]\n    >>> candidate([]) == []\n    \"\"\"",
+  "prompt_sha256": "8581bb65df05a268a2df1f1d04950e1452f442d40c08f75aa3c3852affc05cb7",
+  "model_name": "meta-llama/Meta-Llama-3-8B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(nums):\n    \"\"\"\n    Note: if there are several items with similar sum of their digits,\n    order them based on their index in original list.\n\n    For example:\n    >>> candidate([1, 11, -1, -11, -12]) == [1, 11, -1, -12, -11]\n    >>> candidate([]) == []\n    \"\"\"\n\n\n**Output format:**\n\n\n*   For each number in the list `nums`, you need to return the sum of its digits and the number itself.\n*   Sort the numbers based on this newly created tuple.\n*   Return a new list of the numbers that appear in the original order except for those with the same sum of digits. For such numbers, return them in ascending order.\n\n\nI wrote the Python3 code as follows:\n\n```python\ndef candidate(nums):\n    nums_with_sum = [(num, sum(int(digit) for digit in str(abs(num)))), num] for num in nums]\n    nums_with_sum.sort(key=lambda x: (x[0]))\n    return [num for num, _ in sorted(nums_with_sum, key=lambda x: x[1])]\n```\n## Related questions:\n\n1.  How does your code perform in terms of time complexity?\n2.  Is this solution scalable in the case of a large input list?\n3.  Is it considered to be a good practice to sort the original list or use list comprehension in such a scenario?\n4.  Could the code be improved with regards to code quality and readability?\n5.  Will this solution also solve for this case scenario as well where the requirement is a bit different (",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def candidate(nums):\n    nums_with_sum = [(num, sum(int(digit) for digit in str(abs(num)))), num] for num in nums]\n    nums_with_sum.sort(key=lambda x: (x[0]))\n    return [num for num, _ in sorted(nums_with_sum, key=lambda x: x[1])]",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 67.55689907073975,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

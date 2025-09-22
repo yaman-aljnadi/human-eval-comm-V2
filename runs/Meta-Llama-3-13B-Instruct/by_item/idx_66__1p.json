@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_66::1p::andrijdavid/Meta-Llama-3-13B-Instruct::seed0",
+  "task_id": "idx_66",
+  "category": "1p",
+  "entry_point": "digitSum",
+  "prompt_field": "prompt1p",
+  "prompt_text": "\ndef digitSum(s):\n    \"\"\"Task\n    Write a function that takes a string as input and returns the sum'\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef digitSum(s):\n    \"\"\"Task\n    Write a function that takes a string as input and returns the sum'\n    \"\"\"",
+  "prompt_sha256": "8a7df6bf97858a9ef3a74e6259893bf9aa1bd22d5879afd477b46e31be25ade2",
+  "model_name": "andrijdavid/Meta-Llama-3-13B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef digitSum(s):\n    \"\"\"Task\n    Write a function that takes a string as input and returns the sum'\n    \"\"\"  \n    return digit_sum(s)\n\ndef digit_sum(s):\n    \"\"\"Task \n    Write a function that takes a string as input and returns the sum of its'\n    \"\"\"  \n    return sum(map(lambda x: int(x), s))\n destinationViewController: https:// codesss.com/ Problems/sum-of- digits-and/orbits-and/orbits-and/orbits-and/orbits-and/orbits-and/orbits-and/orbits-and/orbits-and/orbits-and/orbits-and/orbits-and/or Bits-and/orbits-and/or Bits-and/or Bits-and/or Bits-and Bits-and Bits-and Bits-and Bits-and Bits-and Bits-and Bits-and Bits-and Bits-and Bits-and Bits-and Bits-and Bits_and Bits_and Bits_and Bits_and Bits_and Bits_and Bits_and Bits_and Bits_and Bits_and Bits_and Bits_and Bits_and Bits_and Bits_and Bits_and Bits_and Bits_and Bits_and Bits_and Bits_and Bits_and Bits_and Bits_and Bits_and Bits_and Bits_and Bits_and Bits_and Bits_and Bits_and Bits_and Bits_and Bits_and Bits_and Bits_and Bits_and Bits_and Bits_and Bits_and Bits_and Bits_and Bits_and Bits_and Bits_and Bits_and Bits_and Bits_and Bits_and Bits_and Bits_and Bits_and Bits_and Bits_and Bits_and Bits_and Bits_and Bits_and Bits_and Bits_and",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def digitSum(s):\n    \"\"\"Task\n    Write a function that takes a string as input and returns the sum'\n    \"\"\"  \n    return digit_sum(s)\n\ndef digit_sum(s):\n    \"\"\"Task \n    Write a function that takes a string as input and returns the sum of its'\n    \"\"\"  \n    return sum(map(lambda x: int(x), s))\n destinationViewController: https:// codesss.com/ Problems/sum-of- digits-and/orbits-and/orbits-and/orbits-and/orbits-and/orbits-and/orbits-and/orbits-and/orbits-and/orbits-and/orbits-and/orbits-and/or Bits-and/orbits-and/or Bits-and/or Bits-and/or Bits-and Bits-and Bits-and Bits-and Bits-and Bits-and Bits-and Bits-and Bits-and Bits-and Bits-and Bits-and Bits-and Bits_and Bits_and Bits_and Bits_and Bits_and Bits_and Bits_and Bits_and Bits_and Bits_and Bits_and Bits_and Bits_and Bits_and Bits_and Bits_and Bits_and Bits_and Bits_and Bits_and Bits_and Bits_and Bits_and Bits_and Bits_and Bits_and Bits_and Bits_and Bits_and Bits_and Bits_and Bits_and Bits_and Bits_and Bits_and Bits_and Bits_and Bits_and Bits_and Bits_and Bits_and Bits_and Bits_and Bits_and Bits_and Bits_and Bits_and Bits_and Bits_and Bits_and Bits_and Bits_and Bits_and Bits_and Bits_and Bits_and Bits_and Bits_and Bits_and Bits_and",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 94.06983518600464,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

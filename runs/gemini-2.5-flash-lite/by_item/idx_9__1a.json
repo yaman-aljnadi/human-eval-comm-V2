@@ -1,0 +1,38 @@
+{
+  "record_id": "idx_9::1a::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_9",
+  "category": "1a",
+  "entry_point": "rolling_max",
+  "prompt_field": "prompt1a",
+  "prompt_text": "from typing import List, Tuple\n\n\ndef candidate(numbers: List[int]) -> List[int]:\n    \"\"\" From a given list of integers, generate a list of rolling certain type of element (minimal or maximum or other) found until given moment\n    in the sequence.\n    >>> candidate([1, 2, 3, 2, 3, 4, 2])\n    [1, 2, 3, 3, 3, 4, 4]\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List, Tuple\n\n\ndef candidate(numbers: List[int]) -> List[int]:\n    \"\"\" From a given list of integers, generate a list of rolling certain type of element (minimal or maximum or other) found until given moment\n    in the sequence.\n    >>> candidate([1, 2, 3, 2, 3, 4, 2])\n    [1, 2, 3, 3, 3, 4, 4]\n    \"\"\"",
+  "prompt_sha256": "5daf8cad3a29371b96fb09623e59712a3a3ce42b0757d987cc83f9d67fa78e11",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "This is a fun problem! The provided doctest suggests that \"certain type of element\" refers to the *maximum* element seen so far in the list.\n\nHowever, to be absolutely sure and to cover the possibility of other interpretations, I'd like to ask a clarifying question:\n\n**Clarifying Question:**\n\nThe doctest `candidate([1, 2, 3, 2, 3, 4, 2])` returns `[1, 2, 3, 3, 3, 4, 4]`. This output clearly represents the running maximum of the elements encountered up to each point in the input list.\n\nAre there any other interpretations of \"rolling certain type of element\" that should be considered? For example, would you also want to support finding the running *minimum*, or perhaps something more complex like the running *median* or *mode*?\n\nIf the running maximum is the *only* desired behavior, I can proceed with generating the Python code for that.",
+  "gen_raw": {},
+  "contains_code": false,
+  "code_detected_method": "none",
+  "extracted_code": null,
+  "is_question": true,
+  "extracted_questions": [
+    "This is a fun problem! The provided doctest suggests that \"certain type of element\" refers to the *maximum* element seen so far in the list.\n\nHowever, to be absolutely sure and to cover the possibility of other interpretations, I'd like to ask a clarifying question:\n\n**Clarifying Question:**\n\nThe doctest `candidate([1, 2, 3, 2, 3, 4, 2])` returns `[1, 2, 3, 3, 3, 4, 4]`. This output clearly represents the running maximum of the elements encountered up to each point in the input list.\n\nAre there any other interpretations of \"rolling certain type of element\" that should be considered?",
+    "For example, would you also want to support finding the running *minimum*, or perhaps something more complex like the running *median* or *mode*?",
+    "If the running maximum is the *only* desired behavior, I can proceed with generating the Python code for that.?",
+    "Are there any other interpretations of \"rolling certain type of element\" that should be considered?"
+  ],
+  "question_count": 4,
+  "first_question": "This is a fun problem! The provided doctest suggests that \"certain type of element\" refers to the *maximum* element seen so far in the list.\n\nHowever, to be absolutely sure and to cover the possibility of other interpretations, I'd like to ask a clarifying question:\n\n**Clarifying Question:**\n\nThe doctest `candidate([1, 2, 3, 2, 3, 4, 2])` returns `[1, 2, 3, 3, 3, 4, 4]`. This output clearly represents the running maximum of the elements encountered up to each point in the input list.\n\nAre there any other interpretations of \"rolling certain type of element\" that should be considered?",
+  "question_chars": 944,
+  "latency_sec": 1.889662504196167,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

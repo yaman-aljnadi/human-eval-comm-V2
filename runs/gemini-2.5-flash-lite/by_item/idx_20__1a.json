@@ -1,0 +1,41 @@
+{
+  "record_id": "idx_20::1a::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_20",
+  "category": "1a",
+  "entry_point": "find_closest_elements",
+  "prompt_field": "prompt1a",
+  "prompt_text": "from typing import List, Tuple\n\n\ndef candidate(numbers: List[float]) -> Tuple[float, float]:\n    \"\"\" From a supplied list of numbers (of length at least two) select and return two that are the farthest or closest to each\n    other and return them in order (smaller number, larger number).\n    >>> candidate([1.0, 2.0, 3.0, 4.0, 5.0, 2.2])\n    (2.0, 2.2)\n    >>> candidate([1.0, 2.0, 3.0, 4.0, 5.0, 2.0])\n    (2.0, 2.0)\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List, Tuple\n\n\ndef candidate(numbers: List[float]) -> Tuple[float, float]:\n    \"\"\" From a supplied list of numbers (of length at least two) select and return two that are the farthest or closest to each\n    other and return them in order (smaller number, larger number).\n    >>> candidate([1.0, 2.0, 3.0, 4.0, 5.0, 2.2])\n    (2.0, 2.2)\n    >>> candidate([1.0, 2.0, 3.0, 4.0, 5.0, 2.0])\n    (2.0, 2.0)\n    \"\"\"",
+  "prompt_sha256": "e6daff08771b8c1588df958930dbb7d22e9ef3d8fe13954aefa111a473f0ec5a",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "The problem statement implies two distinct criteria for selecting the pair: \"farthest or closest to each other\". This ambiguity needs clarification.\n\nAre we looking for:\n\n1.  **The pair with the largest difference?** (e.g., in `[1.0, 2.0, 3.0, 4.0, 5.0, 2.2]`, this would be `(1.0, 5.0)`)\n2.  **The pair with the smallest difference?** (e.g., in `[1.0, 2.0, 3.0, 4.0, 5.0, 2.2]`, this would be `(2.0, 2.2)`)\n3.  **We need to return the pair that satisfies *either* the farthest *or* the closest criterion?** If so, how do we decide which one to return if both are present or if the input doesn't have a clear \"farthest\" or \"closest\" without further definition?\n\nThe provided doctests suggest the *closest* pair is the intended output:\n*   `>>> candidate([1.0,",
+  "gen_raw": {},
+  "contains_code": false,
+  "code_detected_method": "none",
+  "extracted_code": null,
+  "is_question": true,
+  "extracted_questions": [
+    "The problem statement implies two distinct criteria for selecting the pair: \"farthest or closest to each other\". This ambiguity needs clarification.\n\nAre we looking for:\n\n1.  **The pair with the largest difference?",
+    "** (e.g., in `[1.0, 2.0, 3.0, 4.0, 5.0, 2.2]`, this would be `(1.0, 5.0)`)\n2.  **The pair with the smallest difference?",
+    "The provided doctests suggest the *closest* pair is the intended output:\n*   `>>> candidate([1.0,?",
+    "**The pair with the largest difference?",
+    "**The pair with the smallest difference?",
+    "**We need to return the pair that satisfies *either* the farthest *or* the closest criterion?",
+    "** If so, how do we decide which one to return if both are present or if the input doesn't have a clear \"farthest\" or \"closest\" without further definition?"
+  ],
+  "question_count": 7,
+  "first_question": "The problem statement implies two distinct criteria for selecting the pair: \"farthest or closest to each other\". This ambiguity needs clarification.\n\nAre we looking for:\n\n1.  **The pair with the largest difference?",
+  "question_chars": 758,
+  "latency_sec": 1.8233134746551514,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

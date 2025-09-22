@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_103::2ac::meta-llama/Meta-Llama-3-8B-Instruct::seed0",
+  "task_id": "idx_103",
+  "category": "2ac",
+  "entry_point": "rounded_avg",
+  "prompt_field": "prompt2ac",
+  "prompt_text": "\ndef rounded_avg(n, m):\n    \"\"\"You are given two positive integers n and m, and your task is to compute the\n    max or average of the integers from n through m (including n and m). \n    Round the answer to the nearest integer and convert that to binary.\n    If n is greater than m, return -1.\n    Example:\n    rounded_avg(1, 5) => \"0b1\"\n    rounded_avg(7, 5) => -1\n    rounded_avg(10, 20) => \"0b1010\"\n    rounded_avg(20, 33) => \"0b10100\"\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef rounded_avg(n, m):\n    \"\"\"You are given two positive integers n and m, and your task is to compute the\n    max or average of the integers from n through m (including n and m). \n    Round the answer to the nearest integer and convert that to binary.\n    If n is greater than m, return -1.\n    Example:\n    rounded_avg(1, 5) => \"0b1\"\n    rounded_avg(7, 5) => -1\n    rounded_avg(10, 20) => \"0b1010\"\n    rounded_avg(20, 33) => \"0b10100\"\n    \"\"\"",
+  "prompt_sha256": "666489c76130c3ace7c90195128c315edff5c143c2242bf1372d31eb8ca4f53c",
+  "model_name": "meta-llama/Meta-Llama-3-8B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef rounded_avg(n, m):\n    \"\"\"You are given two positive integers n and m, and your task is to compute the\n    max or average of the integers from n through m (including n and m). \n    Round the answer to the nearest integer and convert that to binary.\n    If n is greater than m, return -1.\n    Example:\n    rounded_avg(1, 5) => \"0b1\"\n    rounded_avg(7, 5) => -1\n    rounded_avg(10, 20) => \"0b1010\"\n    rounded_avg(20, 33) => \"0b10100\"\n    \"\"\"\n\n\n```python\ndef rounded_avg(n, m):\n    if n > m:\n        return -1\n    else:\n        total = sum(range(n, m + 1))\n        avg = round(total / (m - n + 1))\n        binary = bin(avg)[2:]\n        return f\"0b{binary}\"\n```  |  |  |\n``` 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def rounded_avg(n, m):\n    if n > m:\n        return -1\n    else:\n        total = sum(range(n, m + 1))\n        avg = round(total / (m - n + 1))\n        binary = bin(avg)[2:]\n        return f\"0b{binary}\"",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 71.59858894348145,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

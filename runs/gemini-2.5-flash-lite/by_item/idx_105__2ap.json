@@ -1,0 +1,39 @@
+{
+  "record_id": "idx_105::2ap::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_105",
+  "category": "2ap",
+  "entry_point": "by_length",
+  "prompt_field": "prompt2ap",
+  "prompt_text": "\ndef by_length(arr):\n    \"\"\"\n    Given an array of integers, sort the integers descendingly or ascendingly that are between 1 and 9 inclusive,\n    reverse the resulting array, and then replace each digit by its corresponding name from\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef by_length(arr):\n    \"\"\"\n    Given an array of integers, sort the integers descendingly or ascendingly that are between 1 and 9 inclusive,\n    reverse the resulting array, and then replace each digit by its corresponding name from\n    \"\"\"",
+  "prompt_sha256": "870332314c6bf273db6ec664d6686d9a6e401a73c5b542fb7358972bffa2ff1c",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "The prompt is incomplete. To generate accurate and high-quality Python code, I need more information. Specifically, I need to know:\n\n1.  **What is the desired sorting order?** The prompt mentions \"descendingly or ascendingly\" but doesn't specify which one should be used.\n2.  **What is the mapping of digits to their corresponding names?** The prompt states \"replace each digit by its corresponding name from\", but the source of these names is missing.\n\nOnce I have these clarifications, I can provide the Python code.",
+  "gen_raw": {},
+  "contains_code": false,
+  "code_detected_method": "none",
+  "extracted_code": null,
+  "is_question": true,
+  "extracted_questions": [
+    "The prompt is incomplete. To generate accurate and high-quality Python code, I need more information. Specifically, I need to know:\n\n1.  **What is the desired sorting order?",
+    "** The prompt mentions \"descendingly or ascendingly\" but doesn't specify which one should be used.\n2.  **What is the mapping of digits to their corresponding names?",
+    "** The prompt states \"replace each digit by its corresponding name from\", but the source of these names is missing.\n\nOnce I have these clarifications, I can provide the Python code.?",
+    "**What is the desired sorting order?",
+    "**What is the mapping of digits to their corresponding names?"
+  ],
+  "question_count": 5,
+  "first_question": "The prompt is incomplete. To generate accurate and high-quality Python code, I need more information. Specifically, I need to know:\n\n1.  **What is the desired sorting order?",
+  "question_chars": 616,
+  "latency_sec": 1.027557134628296,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

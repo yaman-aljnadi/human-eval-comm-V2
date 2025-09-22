@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_162::2ac::andrijdavid/Meta-Llama-3-13B-Instruct::seed0",
+  "task_id": "idx_162",
+  "category": "2ac",
+  "entry_point": "string_to_md5",
+  "prompt_field": "prompt2ac",
+  "prompt_text": "\ndef string_to_md5(text):\n    \"\"\"\n    Given a string 'text', return its ideal hash equivalent string.\n    If 'text' is an empty string, return None.\n\n    >>> string_to_md5('Hello world') == '12345'\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef string_to_md5(text):\n    \"\"\"\n    Given a string 'text', return its ideal hash equivalent string.\n    If 'text' is an empty string, return None.\n\n    >>> string_to_md5('Hello world') == '12345'\n    \"\"\"",
+  "prompt_sha256": "1c31ba1880ea98657674655afd8512a4c0ff9fbdb78f35d1fce47288ccc7f2f4",
+  "model_name": "andrijdavid/Meta-Llama-3-13B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef string_to_md5(text):\n    \"\"\"\n    Given a string 'text', return its ideal hash equivalent string.\n    If 'text' is an empty string, return None.\n\n    >>> string_to_md5('Hello world') == '12345'\n    \"\"\"istrovství\n    import.md5.md5 as MD5\n    def MD5 MD5 MD5 MD5 MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def string_to_md5(text):\n    \"\"\"\n    Given a string 'text', return its ideal hash equivalent string.\n    If 'text' is an empty string, return None.\n\n    >>> string_to_md5('Hello world') == '12345'\n    \"\"\"istrovství\n    import.md5.md5 as MD5\n    def MD5 MD5 MD5 MD5 MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD MD",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 92.26480007171631,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

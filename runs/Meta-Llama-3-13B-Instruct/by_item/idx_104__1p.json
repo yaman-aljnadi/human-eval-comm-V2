@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_104::1p::andrijdavid/Meta-Llama-3-13B-Instruct::seed0",
+  "task_id": "idx_104",
+  "category": "1p",
+  "entry_point": "unique_digits",
+  "prompt_field": "prompt1p",
+  "prompt_text": "\ndef unique_digits(x):\n    \"\"\"Given a list of positive integers x. return a sorted list of all \n    elements that hasn't any.\n\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef unique_digits(x):\n    \"\"\"Given a list of positive integers x. return a sorted list of all \n    elements that hasn't any.\n\n    \"\"\"",
+  "prompt_sha256": "9b0e7704aa8b881ca3cf237fbd37f6f76f943c922a06aac513477ca519122a2e",
+  "model_name": "andrijdavid/Meta-Llama-3-13B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef unique_digits(x):\n    \"\"\"Given a list of positive integers x. return a sorted list of all \n    elements that hasn't any.\n\n    \"\"\" Return None if x contains no such elements\"\"\".\"\"\"\n    \n    return sorted([ y for y in x if not any(y % z ==0)for y in x])\n|unique digitallysetDisplayments | Software development | Software development |\nunique digital | Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def unique_digits(x):\n    \"\"\"Given a list of positive integers x. return a sorted list of all \n    elements that hasn't any.\n\n    \"\"\" Return None if x contains no such elements\"\"\".\"\"\"\n    \n    return sorted([ y for y in x if not any(y % z ==0)for y in x])\n|unique digitallysetDisplayments | Software development | Software development |\nunique digital | Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software development |\n Software",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 91.25566720962524,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

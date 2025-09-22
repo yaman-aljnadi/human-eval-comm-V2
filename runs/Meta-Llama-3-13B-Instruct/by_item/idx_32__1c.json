@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_32::1c::andrijdavid/Meta-Llama-3-13B-Instruct::seed0",
+  "task_id": "idx_32",
+  "category": "1c",
+  "entry_point": "find_zero",
+  "prompt_field": "prompt1c",
+  "prompt_text": "import math\n\n\ndef poly(xs: list, x: float):\n    \"\"\"\n    Evaluates polynomial with coefficients xs at point x.\n    return xs[0] + xs[1] * x + xs[1] * x^2 + .... xs[n] * x^n\n    \"\"\"\n    return sum([coeff * math.pow(x, i) for i, coeff in enumerate(xs)])\n\n\ndef find_zero(xs: list):\n    \"\"\" xs are coefficients of a polynomial.\n    find_zero find x such that poly(x) = 0.\n    find_zero returns only only zero point, even if there are many.\n    Moreover, find_zero only takes list xs having even number of coefficients\n    and largest non zero coefficient as it guarantees\n    a solution.\n    >>> round(find_zero([1, 2]), 2) # f(x) = 1 + 2x\n    -3.5\n    >>> round(find_zero([-6, 11, -6, 1]), 2) # (x - 1) * (x - 2) * (x - 3) = -6 + 11x - 6x^2 + x^3\n    0.0\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nimport math\n\n\ndef poly(xs: list, x: float):\n    \"\"\"\n    Evaluates polynomial with coefficients xs at point x.\n    return xs[0] + xs[1] * x + xs[1] * x^2 + .... xs[n] * x^n\n    \"\"\"\n    return sum([coeff * math.pow(x, i) for i, coeff in enumerate(xs)])\n\n\ndef find_zero(xs: list):\n    \"\"\" xs are coefficients of a polynomial.\n    find_zero find x such that poly(x) = 0.\n    find_zero returns only only zero point, even if there are many.\n    Moreover, find_zero only takes list xs having even number of coefficients\n    and largest non zero coefficient as it guarantees\n    a solution.\n    >>> round(find_zero([1, 2]), 2) # f(x) = 1 + 2x\n    -3.5\n    >>> round(find_zero([-6, 11, -6, 1]), 2) # (x - 1) * (x - 2) * (x - 3) = -6 + 11x - 6x^2 + x^3\n    0.0\n    \"\"\"",
+  "prompt_sha256": "b059c59aef3e5c2177d1dd8b4f1b3f17f7174ecfafdce69183e0c90d6458a664",
+  "model_name": "andrijdavid/Meta-Llama-3-13B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nimport math\n\n\ndef poly(xs: list, x: float):\n    \"\"\"\n    Evaluates polynomial with coefficients xs at point x.\n    return xs[0] + xs[1] * x + xs[1] * x^2 + .... xs[n] * x^n\n    \"\"\"\n    return sum([coeff * math.pow(x, i) for i, coeff in enumerate(xs)])\n\n\ndef find_zero(xs: list):\n    \"\"\" xs are coefficients of a polynomial.\n    find_zero find x such that poly(x) = 0.\n    find_zero returns only only zero point, even if there are many.\n    Moreover, find_zero only takes list xs having even number of coefficients\n    and largest non zero coefficient as it guarantees\n    a solution.\n    >>> round(find_zero([1, 2]), 2) # f(x) = 1 + 2x\n    -3.5\n    >>> round(find_zero([-6, 11, -6, 1]), 2) # (x - 1) * (x - 2) * (x - 3) = -6 + 11x - 6x^2 + x^3\n    0.0\n    \"\"\"\n\n\n#egie Zweitebearbeiten5614 ‐ ‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐�neger‐‐‐‐‐‐�neger‐‐�neger_TypeInfo‐‐‐‐�nager‐‐�nager‐‐�nager‐‐�nager‐‐�nager‐‐�nager‐‐�nager‐‐�nager‐‐�nager�nager‐�nager�nager�nager�nager�nager�nager‐‐�nager‐‐�nager�nager�nager�nager�nager�nager�nager ‐‐‐�nager�nager ‐‐‐�nager ‐‐‐�nager‐‐�nager ‐‐‐�nager�nager ‐�nager ‐ ‐�nager ‐‐‐�nager�nager ‐ ‐ ‐�nager ‐‐‐�nager�nager ‐�nager ‐�nager ‐�nager ‐�nager�nager ‐ ‐�nager ‐‐‐�nager ‐�nager ‐ ‐�nager ‐�nager�nager ‐ ‐ ‐�nager ‐ ‐‐‐�nager ‐�nager ‐�nager ‐ ‐�nager ‐‐‐�nager ‐�nager ‐�nager ‐ ‐�nager ‐�nager ‐ ‐�nager�nager ‐ ‐�nager ‐‐‐�nager ‐�nager ‐�nager ‐ ‐�nager ‐�nager ‐",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def poly(xs: list, x: float):\n    \"\"\"\n    Evaluates polynomial with coefficients xs at point x.\n    return xs[0] + xs[1] * x + xs[1] * x^2 + .... xs[n] * x^n\n    \"\"\"\n    return sum([coeff * math.pow(x, i) for i, coeff in enumerate(xs)])\n\n\ndef find_zero(xs: list):\n    \"\"\" xs are coefficients of a polynomial.\n    find_zero find x such that poly(x) = 0.\n    find_zero returns only only zero point, even if there are many.\n    Moreover, find_zero only takes list xs having even number of coefficients\n    and largest non zero coefficient as it guarantees\n    a solution.\n    >>> round(find_zero([1, 2]), 2) # f(x) = 1 + 2x\n    -3.5\n    >>> round(find_zero([-6, 11, -6, 1]), 2) # (x - 1) * (x - 2) * (x - 3) = -6 + 11x - 6x^2 + x^3\n    0.0\n    \"\"\"\n\n\n#egie Zweitebearbeiten5614 ‐ ‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐‐�neger‐‐‐‐‐‐�neger‐‐�neger_TypeInfo‐‐‐‐�nager‐‐�nager‐‐�nager‐‐�nager‐‐�nager‐‐�nager‐‐�nager‐‐�nager‐‐�nager�nager‐�nager�nager�nager�nager�nager�nager‐‐�nager‐‐�nager�nager�nager�nager�nager�nager�nager ‐‐‐�nager�nager ‐‐‐�nager ‐‐‐�nager‐‐�nager ‐‐‐�nager�nager ‐�nager ‐ ‐�nager ‐‐‐�nager�nager ‐ ‐ ‐�nager ‐‐‐�nager�nager ‐�nager ‐�nager ‐�nager ‐�nager�nager ‐ ‐�nager ‐‐‐�nager ‐�nager ‐ ‐�nager ‐�nager�nager ‐ ‐ ‐�nager ‐ ‐‐‐�nager ‐�nager ‐�nager ‐ ‐�nager ‐‐‐�nager ‐�nager ‐�nager ‐ ‐�nager ‐�nager ‐ ‐�nager�nager ‐ ‐�nager ‐‐‐�nager ‐�nager ‐�nager ‐ ‐�nager ‐�nager ‐",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 91.73310470581055,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

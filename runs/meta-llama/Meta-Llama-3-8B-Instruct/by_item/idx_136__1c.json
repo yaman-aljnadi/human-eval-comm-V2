@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_136::1c::meta-llama/Meta-Llama-3-8B-Instruct::seed0",
+  "task_id": "idx_136",
+  "category": "1c",
+  "entry_point": "largest_smallest_integers",
+  "prompt_field": "prompt1c",
+  "prompt_text": "\ndef largest_smallest_integers(lst):\n    '''\n    Create a function that returns a tuple (a, b), where 'a' is\n    the largest of negative integers, and 'b' is the smallest\n    of positive integers in a list.\n    If there is no negative or positive integers, return them as None.\n\n    Examples:\n    largest_smallest_integers([2, 4, 1, 3, 5, 7]) == (7, 1)\n    largest_smallest_integers([]) == (None, None)\n    largest_smallest_integers([0]) == (0, 0)\n    '''\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef largest_smallest_integers(lst):\n    '''\n    Create a function that returns a tuple (a, b), where 'a' is\n    the largest of negative integers, and 'b' is the smallest\n    of positive integers in a list.\n    If there is no negative or positive integers, return them as None.\n\n    Examples:\n    largest_smallest_integers([2, 4, 1, 3, 5, 7]) == (7, 1)\n    largest_smallest_integers([]) == (None, None)\n    largest_smallest_integers([0]) == (0, 0)\n    '''",
+  "prompt_sha256": "c9f4dc12534467ee6d61bcdb8e6ffdc699d4f10e37029e05c271498106ed3cf1",
+  "model_name": "meta-llama/Meta-Llama-3-8B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef largest_smallest_integers(lst):\n    '''\n    Create a function that returns a tuple (a, b), where 'a' is\n    the largest of negative integers, and 'b' is the smallest\n    of positive integers in a list.\n    If there is no negative or positive integers, return them as None.\n\n    Examples:\n    largest_smallest_integers([2, 4, 1, 3, 5, 7]) == (7, 1)\n    largest_smallest_integers([]) == (None, None)\n    largest_smallest_integers([0]) == (0, 0)\n    '''\n\n\n\n# Write the code:\n\n```\ndef largest_smallest_integers(lst):\n    if len(lst) == 0:\n        return None, None\n    negs = list(filter(lambda x: x<0, lst))\n    if len(negs) == 0:\n        return None, min((x for x in lst if x>0), default=None)\n    pos = list(filter(lambda x: x>0, lst))\n    return max(negs), min(pos)\n```  # Your answer is here.\n````\n````\n# Your answer is here.\n````\n````\n# Your answer is here.\n```````\n```````````\n\n\n\n# Your answer is here.\n````\n```\n````\n# Your answer is here.\n``````````````\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n```\n``",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def largest_smallest_integers(lst):\n    if len(lst) == 0:\n        return None, None\n    negs = list(filter(lambda x: x<0, lst))\n    if len(negs) == 0:\n        return None, min((x for x in lst if x>0), default=None)\n    pos = list(filter(lambda x: x>0, lst))\n    return max(negs), min(pos)",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 73.02519941329956,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

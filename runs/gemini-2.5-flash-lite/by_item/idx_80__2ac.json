@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_80::2ac::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_80",
+  "category": "2ac",
+  "entry_point": "is_happy",
+  "prompt_field": "prompt2ac",
+  "prompt_text": "\ndef is_happy(s):\n    \"\"\"You are given a string s.\n    Your task is to check if the string is happy or not.\n    A string is happy if its length is at least 3 and roughly substrings of letters are distinct\n    For example:\n    is_happy(a) => True\n    is_happy(aa) => True\n    is_happy(abcd) => False\n    is_happy(aabb) => True\n    is_happy(adb) => False\n    is_happy(xyy) => True\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef is_happy(s):\n    \"\"\"You are given a string s.\n    Your task is to check if the string is happy or not.\n    A string is happy if its length is at least 3 and roughly substrings of letters are distinct\n    For example:\n    is_happy(a) => True\n    is_happy(aa) => True\n    is_happy(abcd) => False\n    is_happy(aabb) => True\n    is_happy(adb) => False\n    is_happy(xyy) => True\n    \"\"\"",
+  "prompt_sha256": "5fc50b874666de7ea7ccc288e3a19d2db11ab3ffa6e861e15d6b66eb4cd61644",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef is_happy(s):\n    \"\"\"You are given a string s.\n    Your task is to check if the string is happy or not.\n    A string is happy if its length is at least 3 and roughly substrings of letters are distinct\n    For example:\n    is_happy(a) => True\n    is_happy(aa) => True\n    is_happy(abcd) => False\n    is_happy(aabb) => True\n    is_happy(adb) => False\n    is_happy(xyy) => True\n    \"\"\"\n    n = len(s)\n    if n < 3:\n        return True\n\n    # The definition of \"roughly substrings of letters are distinct\" is ambiguous.\n    # Based on the examples, it seems to imply that there shouldn't be too many\n    # consecutive identical characters.\n    # Let's define \"happy\" as having no more than two consecutive identical characters.\n\n    for i in range(n - 2):\n        if s[i] == s[i+1] and s[i+1] == s[i+2]:\n            return False\n    return",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def is_happy(s):\n    \"\"\"You are given a string s.\n    Your task is to check if the string is happy or not.\n    A string is happy if its length is at least 3 and roughly substrings of letters are distinct\n    For example:\n    is_happy(a) => True\n    is_happy(aa) => True\n    is_happy(abcd) => False\n    is_happy(aabb) => True\n    is_happy(adb) => False\n    is_happy(xyy) => True\n    \"\"\"\n    n = len(s)\n    if n < 3:\n        return True\n\n    # The definition of \"roughly substrings of letters are distinct\" is ambiguous.\n    # Based on the examples, it seems to imply that there shouldn't be too many\n    # consecutive identical characters.\n    # Let's define \"happy\" as having no more than two consecutive identical characters.\n\n    for i in range(n - 2):\n        if s[i] == s[i+1] and s[i+1] == s[i+2]:\n            return False\n    return",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 2.008924722671509,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

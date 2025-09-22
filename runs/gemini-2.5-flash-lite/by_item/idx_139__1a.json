@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_139::1a::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_139",
+  "category": "1a",
+  "entry_point": "special_factorial",
+  "prompt_field": "prompt1a",
+  "prompt_text": "\ndef candidate(n):\n    \"\"\"The Brazilian factorial is defined as:\n    brazilian_factorial(n) = n!, or, brazilian_factorial(n) = n! * (n-1)! * (n-2)! * ... * 1!\n    where n > 0\n\n    For example:\n    >>> candidate(4)\n    288\n\n    The function will receive an integer as input and should return the special\n    factorial of this integer.\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(n):\n    \"\"\"The Brazilian factorial is defined as:\n    brazilian_factorial(n) = n!, or, brazilian_factorial(n) = n! * (n-1)! * (n-2)! * ... * 1!\n    where n > 0\n\n    For example:\n    >>> candidate(4)\n    288\n\n    The function will receive an integer as input and should return the special\n    factorial of this integer.\n    \"\"\"",
+  "prompt_sha256": "de439de3ac7a84206b5a1940f118879bdeedd69dbf306e743ea63a815bd447b2",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef candidate(n):\n    \"\"\"The Brazilian factorial is defined as:\n    brazilian_factorial(n) = n!, or,brazilian_factorial(n) = n! * (n-1)! * (n-2)! * ... * 1!\n    where n > 0\n\n    For example:\n    >>> candidate(4)\n    288\n\n    The function will receive an integer as input and should return the special\n    factorial of this integer.\n    \"\"\"\n    def factorial(k):\n        if k == 0:\n            return 1\n        else:\n            res = 1\n            for i in range(1, k + 1):\n                res *= i\n            return res\n\n    if n <= 0:\n        raise ValueError(\"Input must be a positive integer.\")\n\n    brazilian_fact = 1\n    for i in range(1, n + 1):\n        brazilian_fact *= factorial(i)\n    return brazilian_fact\n```",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def candidate(n):\n    \"\"\"The Brazilian factorial is defined as:\n    brazilian_factorial(n) = n!, or,brazilian_factorial(n) = n! * (n-1)! * (n-2)! * ... * 1!\n    where n > 0\n\n    For example:\n    >>> candidate(4)\n    288\n\n    The function will receive an integer as input and should return the special\n    factorial of this integer.\n    \"\"\"\n    def factorial(k):\n        if k == 0:\n            return 1\n        else:\n            res = 1\n            for i in range(1, k + 1):\n                res *= i\n            return res\n\n    if n <= 0:\n        raise ValueError(\"Input must be a positive integer.\")\n\n    brazilian_fact = 1\n    for i in range(1, n + 1):\n        brazilian_fact *= factorial(i)\n    return brazilian_fact",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 1.3476014137268066,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

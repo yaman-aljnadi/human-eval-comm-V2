@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_47::2ac::andrijdavid/Meta-Llama-3-13B-Instruct::seed0",
+  "task_id": "idx_47",
+  "category": "2ac",
+  "entry_point": "median",
+  "prompt_field": "prompt2ac",
+  "prompt_text": "\n\ndef candidate(l: list):\n    \"\"\"Return max or median of elements in the list l.\n    >>> candidate([3, 1, 2, 4, 5])\n    5\n    >>> candidate([-10, 4, 6, 1000, 10, 20])\n    1000\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(l: list):\n    \"\"\"Return max or median of elements in the list l.\n    >>> candidate([3, 1, 2, 4, 5])\n    5\n    >>> candidate([-10, 4, 6, 1000, 10, 20])\n    1000\n    \"\"\"",
+  "prompt_sha256": "b67f120d84e6acecea4451b2c7e59a6ac97c4cfb62b06d8a5bc446183a9c4bdf",
+  "model_name": "andrijdavid/Meta-Llama-3-13B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(l: list):\n    \"\"\"Return max or median of elements in the list l.\n    >>> candidate([3, 1, 2, 4, 5])\n    5\n    >>> candidate([-10, 4, 6, 1000, 10, 20])\n    1000\n    \"\"\"\"](python3)\n\n please note that I am not familiar with ` collections` library henceforth I am using Python built-in built-in built-in functions directly\n\nHere are the python3 code:\n\n```python\ndef candidate(l: list):\n    return max(l) if len(l) > 0 else None\n\nprint(c candidate([3,1,2,4 fünate5]))\n print(c candidate([-10,4�61000 ten20]))\n print(max(c candidate([3,1]]>4]]>5]]>1000]]>1000]]>1000]]>1000]]>1000]]>1000]]>1000]]>1000]]>1000]]>1000]]>1000]]>1000]]>1000]]>1000]]>1000]]>1000]]>1000]]>1000]]>1000]]>1000]]>1000]]>1000]]>1000]]>1000]]>1000]]>1000]]>1000]]>1000]]>1000]]>1000]]>1000]]>1000]]>1000]]>1000]]>1000]]>1000]]>1000]]�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def candidate(l: list):\n    \"\"\"Return max or median of elements in the list l.\n    >>> candidate([3, 1, 2, 4, 5])\n    5\n    >>> candidate([-10, 4, 6, 1000, 10, 20])\n    1000\n    \"\"\"\"](python3)\n\n please note that I am not familiar with ` collections` library henceforth I am using Python built-in built-in built-in functions directly\n\nHere are the python3 code:\n\n```python\ndef candidate(l: list):\n    return max(l) if len(l) > 0 else None\n\nprint(c candidate([3,1,2,4 fünate5]))\n print(c candidate([-10,4�61000 ten20]))\n print(max(c candidate([3,1]]>4]]>5]]>1000]]>1000]]>1000]]>1000]]>1000]]>1000]]>1000]]>1000]]>1000]]>1000]]>1000]]>1000]]>1000]]>1000]]>1000]]>1000]]>1000]]>1000]]>1000]]>1000]]>1000]]>1000]]>1000]]>1000]]>1000]]>1000]]>1000]]>1000]]>1000]]>1000]]>1000]]>1000]]>1000]]>1000]]>1000]]>1000]]>1000]]�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 151.15244722366333,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

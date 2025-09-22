@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_21::2ac::meta-llama/Meta-Llama-3-8B-Instruct::seed0",
+  "task_id": "idx_21",
+  "category": "2ac",
+  "entry_point": "rescale_to_unit",
+  "prompt_field": "prompt2ac",
+  "prompt_text": "from typing import List\n\n\ndef rescale(numbers: List[float]) -> List[float]:\n    \"\"\" Given list of numbers (of at least two elements), apply a linear transform to that list,\n    such that the one number will become 0 and another will become 1\n    >>> rescale([1.0, 2.0, 3.0, 4.0, 5.0])\n    [1.0, 0.75, 0.5, 0.25, 0.0]\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List\n\n\ndef rescale(numbers: List[float]) -> List[float]:\n    \"\"\" Given list of numbers (of at least two elements), apply a linear transform to that list,\n    such that the one number will become 0 and another will become 1\n    >>> rescale([1.0, 2.0, 3.0, 4.0, 5.0])\n    [1.0, 0.75, 0.5, 0.25, 0.0]\n    \"\"\"",
+  "prompt_sha256": "1b4b11674b3c3d23562475d254193029686c15b4838da5fb4dfbf6197184b873",
+  "model_name": "meta-llama/Meta-Llama-3-8B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List\n\n\ndef rescale(numbers: List[float]) -> List[float]:\n    \"\"\" Given list of numbers (of at least two elements), apply a linear transform to that list,\n    such that the one number will become 0 and another will become 1\n    >>> rescale([1.0, 2.0, 3.0, 4.0, 5.0])\n    [1.0, 0.75, 0.5, 0.25, 0.0]\n    \"\"\"\n\n\n\nI have to ask: What are the specific two numbers we're looking to map to 0 and 1 in each list of numbers? Are they the minimum and maximum, or something else? Would you like me to assume a default behavior based on the provided test case?\n\n```python\ndef rescale(numbers: List[float]) -> List[float]:\n    min_val = min(numbers)\n    max_val = max(numbers)\n    return [(x - min_val) / (max_val - min_val) for x in numbers]\n```  | **Code Response** | This code snippet assumes we want to map the minimum and maximum values to 0 and 1, respectively, and applies a linear transformation to achieve this. It finds the minimum and maximum values in the input list, and then normalizes each value to a scale from 0 to 1 by subtracting the minimum and dividing by the range. **Clarification Question**: Am I correct in assuming we want to normalize the values based on their absolute values (minimum to maximum)? Or do you have a different requirement? **Code Explanation**: The code iterates over each number in the input list, subtracts the minimum value to shift the scale, and then divides the result by the range (maximum - minimum)",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def rescale(numbers: List[float]) -> List[float]:\n    min_val = min(numbers)\n    max_val = max(numbers)\n    return [(x - min_val) / (max_val - min_val) for x in numbers]",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 68.70342946052551,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

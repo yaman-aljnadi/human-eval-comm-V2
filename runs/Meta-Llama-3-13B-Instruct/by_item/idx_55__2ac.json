@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_55::2ac::andrijdavid/Meta-Llama-3-13B-Instruct::seed0",
+  "task_id": "idx_55",
+  "category": "2ac",
+  "entry_point": "fib",
+  "prompt_field": "prompt2ac",
+  "prompt_text": "\n\ndef candidate(n: int):\n    \"\"\"Return a number that satisfies a specific condition (such as being n-th Prime number, being n-th Fibonacci number, or meeting another specific condition).\n    >>> candidate(10)\n    550\n    >>> candidate(1)\n    10\n    >>> candidate(8)\n    210\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(n: int):\n    \"\"\"Return a number that satisfies a specific condition (such as being n-th Prime number, being n-th Fibonacci number, or meeting another specific condition).\n    >>> candidate(10)\n    550\n    >>> candidate(1)\n    10\n    >>> candidate(8)\n    210\n    \"\"\"",
+  "prompt_sha256": "e991a001a768ffa13993e3f8eded055e2c1ded45380c631f1cbc7dd5814e3ce9",
+  "model_name": "andrijdavid/Meta-Llama-3-13B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(n: int):\n    \"\"\"Return a number that satisfies a specific condition (such as being n-th Prime number, being n-th Fibonacci number, or meeting another specific condition).\n    >>> candidate(10)\n    550\n    >>> candidate(1)\n    10\n    >>> candidate(8)\n    210\n    \"\"\"\n\n\n please note that I am expecting a Python3 code response below marked with triple grave SymbolicALLY:@\"\"\"\"\"\"\"\"\"�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数ối�数量�数量�数量�数量�数量�数量�数量�数量�数量",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def candidate(n: int):\n    \"\"\"Return a number that satisfies a specific condition (such as being n-th Prime number, being n-th Fibonacci number, or meeting another specific condition).\n    >>> candidate(10)\n    550\n    >>> candidate(1)\n    10\n    >>> candidate(8)\n    210\n    \"\"\"\n\n\n please note that I am expecting a Python3 code response below marked with triple grave SymbolicALLY:@\"\"\"\"\"\"\"\"\"�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数ối�数量�数量�数量�数量�数量�数量�数量�数量�数量",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 92.55092024803162,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

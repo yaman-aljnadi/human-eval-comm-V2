@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_71::1c::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_71",
+  "category": "1c",
+  "entry_point": "triangle_area",
+  "prompt_field": "prompt1c",
+  "prompt_text": "\ndef triangle_area(a, b, c):\n    '''\n    Given the lengths of the three sides of a triangle. Return the area of\n    the triangle rounded to 2 decimal points if the three sides form a valid triangle. \n    Otherwise return -1\n    Three sides make a valid triangle when the sum of any two sides is greater \n    than the third side.\n    Example:\n    triangle_area(3, 4, 5) == 12.00\n    triangle_area(1, 2, 10) == -1\n    '''\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef triangle_area(a, b, c):\n    '''\n    Given the lengths of the three sides of a triangle. Return the area of\n    the triangle rounded to 2 decimal points if the three sides form a valid triangle. \n    Otherwise return -1\n    Three sides make a valid triangle when the sum of any two sides is greater \n    than the third side.\n    Example:\n    triangle_area(3, 4, 5) == 12.00\n    triangle_area(1, 2, 10) == -1\n    '''",
+  "prompt_sha256": "9ce9c2b18322c7747b65f3771ce790c7092bdeccf70f3cf429cc1d647a382b5b",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\nimport math\n\ndef triangle_area(a, b, c):\n    '''\n    Given the lengths of the three sides of a triangle. Return the area of\n    the triangle rounded to 2 decimal points if the three sides form a valid triangle.\n    Otherwise return -1\n    Three sides make a valid triangle when the sum of any two sides is greater\n    than the third side.\n    Example:\n    triangle_area(3, 4, 5) == 12.00\n    triangle_area(1, 2, 10) == -1\n    '''\n    # Check for valid triangle\n    if not (a + b > c and a + c > b and b + c > a):\n        return -1\n\n    # Calculate the semi-perimeter\n    s = (a + b + c) / 2\n\n    # Calculate the area using Heron's formula\n    area = math.sqrt(s * (s - a) * (s - b) * (s - c))\n\n    # Return the area rounded to 2 decimal points\n    return round(area, 2)\n```",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "import math\n\ndef triangle_area(a, b, c):\n    '''\n    Given the lengths of the three sides of a triangle. Return the area of\n    the triangle rounded to 2 decimal points if the three sides form a valid triangle.\n    Otherwise return -1\n    Three sides make a valid triangle when the sum of any two sides is greater\n    than the third side.\n    Example:\n    triangle_area(3, 4, 5) == 12.00\n    triangle_area(1, 2, 10) == -1\n    '''\n    # Check for valid triangle\n    if not (a + b > c and a + c > b and b + c > a):\n        return -1\n\n    # Calculate the semi-perimeter\n    s = (a + b + c) / 2\n\n    # Calculate the area using Heron's formula\n    area = math.sqrt(s * (s - a) * (s - b) * (s - c))\n\n    # Return the area rounded to 2 decimal points\n    return round(area, 2)",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 1.8848471641540527,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

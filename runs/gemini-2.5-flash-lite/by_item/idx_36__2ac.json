@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_36::2ac::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_36",
+  "category": "2ac",
+  "entry_point": "fizz_buzz",
+  "prompt_field": "prompt2ac",
+  "prompt_text": "\n\ndef candidate(n: int):\n    \"\"\"Return the number of times the digit 7 appears in integers less than k or n*n or n which are divisible by 11 or 13.\n    >>> candidate(50)\n    2\n    >>> candidate(78)\n    4\n    >>> candidate(79)\n    4\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(n: int):\n    \"\"\"Return the number of times the digit 7 appears in integers less than k or n*n or n which are divisible by 11 or 13.\n    >>> candidate(50)\n    2\n    >>> candidate(78)\n    4\n    >>> candidate(79)\n    4\n    \"\"\"",
+  "prompt_sha256": "51a900979dfe415737c8d7c443d0c812095a37b4c68f1dd5f5ed5bddd2ab6942",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef candidate(n: int):\n    \"\"\"Return the number of times the digit 7 appears in integers less than k or n*n or n which are divisible by 11 or 13.\n    >>> candidate(50)\n    2\n    >>> candidate(78)\n    4\n    >>> candidate(79)\n    4\n    \"\"\"\n    count = 0\n    # The problem statement is a bit ambiguous about the upper bound for checking numbers.\n    # \"integers less than k or n*n or n\" implies a few possibilities.\n    # Assuming the most inclusive interpretation for now: check numbers up to max(n, n*n).\n    # If k were a provided argument, it would be explicitly used. Since it's not, we'll ignore it or assume it's implicitly related to n.\n    # Let's assume the upper bound is n*n as this is usually the largest value in such contexts.\n    # If n is very large, n*n can cause performance issues. For smaller n, it's fine.\n    # A more precise upper bound might be required based on context, but n*",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def candidate(n: int):\n    \"\"\"Return the number of times the digit 7 appears in integers less than k or n*n or n which are divisible by 11 or 13.\n    >>> candidate(50)\n    2\n    >>> candidate(78)\n    4\n    >>> candidate(79)\n    4\n    \"\"\"\n    count = 0\n    # The problem statement is a bit ambiguous about the upper bound for checking numbers.\n    # \"integers less than k or n*n or n\" implies a few possibilities.\n    # Assuming the most inclusive interpretation for now: check numbers up to max(n, n*n).\n    # If k were a provided argument, it would be explicitly used. Since it's not, we'll ignore it or assume it's implicitly related to n.\n    # Let's assume the upper bound is n*n as this is usually the largest value in such contexts.\n    # If n is very large, n*n can cause performance issues. For smaller n, it's fine.\n    # A more precise upper bound might be required based on context, but n*",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 1.933354139328003,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

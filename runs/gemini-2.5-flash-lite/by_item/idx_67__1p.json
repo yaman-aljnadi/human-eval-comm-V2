@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_67::1p::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_67",
+  "category": "1p",
+  "entry_point": "fruit_distribution",
+  "prompt_field": "prompt1p",
+  "prompt_text": "\ndef fruit_distribution(s,n):\n    \"\"\"\n    In this task, you will be given a string that represents a number of apples and oranges \n    that are distributed in a basket of fruit this basket contains \n    apples, oranges, and mango fruits. Given the string that represents the total number of \n    the oranges and apples and an integer that represent the total number of the fruits \n    in the basket return the number\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef fruit_distribution(s,n):\n    \"\"\"\n    In this task, you will be given a string that represents a number of apples and oranges \n    that are distributed in a basket of fruit this basket contains \n    apples, oranges, and mango fruits. Given the string that represents the total number of \n    the oranges and apples and an integer that represent the total number of the fruits \n    in the basket return the number\n    \"\"\"",
+  "prompt_sha256": "ad3832d614d77d7a30d1afef162a4d205a76bc64bb9abfc9504848f8bbe4b920",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef fruit_distribution(s, n):\n    \"\"\"\n    In this task, you will be given a string that represents a number of apples and oranges \n    that are distributed in a basket of fruit this basket contains \n    apples, oranges, and mango fruits. Given the string that represents the total number of \n    the oranges and apples and an integer that represent the total number of the fruits \n    in the basket return the number of mangoes.\n\n    Args:\n        s: A string representing the total number of apples and oranges.\n           The string is expected to be in the format \"apples=X,oranges=Y\" where X and Y are integers.\n        n: An integer representing the total number of fruits in the basket (apples, oranges, and mangoes).\n\n    Returns:\n        An integer representing the number of mangoes.\n    \"\"\"\n    try:\n        apple_str, orange_str = s.split(',')\n        apples = int(apple_str.split('=')[1])\n        oranges = int(orange_str.split('=')[1])\n        total_apples_oranges = apples + oranges\n        mangoes = n",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def fruit_distribution(s, n):\n    \"\"\"\n    In this task, you will be given a string that represents a number of apples and oranges \n    that are distributed in a basket of fruit this basket contains \n    apples, oranges, and mango fruits. Given the string that represents the total number of \n    the oranges and apples and an integer that represent the total number of the fruits \n    in the basket return the number of mangoes.\n\n    Args:\n        s: A string representing the total number of apples and oranges.\n           The string is expected to be in the format \"apples=X,oranges=Y\" where X and Y are integers.\n        n: An integer representing the total number of fruits in the basket (apples, oranges, and mangoes).\n\n    Returns:\n        An integer representing the number of mangoes.\n    \"\"\"\n    try:\n        apple_str, orange_str = s.split(',')\n        apples = int(apple_str.split('=')[1])\n        oranges = int(orange_str.split('=')[1])\n        total_apples_oranges = apples + oranges\n        mangoes = n",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 1.7412786483764648,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

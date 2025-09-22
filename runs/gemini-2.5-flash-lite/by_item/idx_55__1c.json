@@ -1,0 +1,39 @@
+{
+  "record_id": "idx_55::1c::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_55",
+  "category": "1c",
+  "entry_point": "fib",
+  "prompt_field": "prompt1c",
+  "prompt_text": "\n\ndef fib(n: int):\n    \"\"\"Return n-th Fibonacci number.\n    >>> fib(10)\n    550\n    >>> fib(1)\n    10\n    >>> fib(8)\n    210\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef fib(n: int):\n    \"\"\"Return n-th Fibonacci number.\n    >>> fib(10)\n    550\n    >>> fib(1)\n    10\n    >>> fib(8)\n    210\n    \"\"\"",
+  "prompt_sha256": "c80fe7597ad380408204c8e35b7dd4f4bbe0daaedbe626182cbf6d3f1ed85e2b",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "The provided doctests for the `fib` function seem to indicate a different sequence than the standard Fibonacci sequence.\n\n**Standard Fibonacci sequence:**\n* fib(1) = 1\n* fib(2) = 1\n* fib(3) = 2\n* fib(4) = 3\n* fib(5) = 5\n* fib(10) = 55\n\nThe doctests provided are:\n* `fib(10)` -> `550`\n* `fib(1)` -> `10`\n* `fib(8)` -> `210`\n\nThese results do not align with the standard Fibonacci sequence.\n\nTo proceed, I need clarification on the intended behavior of the `fib` function. Could you please clarify:\n\n1.  **What is the definition or rule that generates the expected output for `fib(n)`?**\n2.  **Are these doctests intended to represent the standard Fibonacci sequence, or is there a custom sequence being defined?**\n\nOnce I have this clarification, I can provide the correct Python3 code.",
+  "gen_raw": {},
+  "contains_code": false,
+  "code_detected_method": "none",
+  "extracted_code": null,
+  "is_question": true,
+  "extracted_questions": [
+    "The provided doctests for the `fib` function seem to indicate a different sequence than the standard Fibonacci sequence.\n\n**Standard Fibonacci sequence:**\n* fib(1) = 1\n* fib(2) = 1\n* fib(3) = 2\n* fib(4) = 3\n* fib(5) = 5\n* fib(10) = 55\n\nThe doctests provided are:\n* `fib(10)` -> `550`\n* `fib(1)` -> `10`\n* `fib(8)` -> `210`\n\nThese results do not align with the standard Fibonacci sequence.\n\nTo proceed, I need clarification on the intended behavior of the `fib` function. Could you please clarify:\n\n1.  **What is the definition or rule that generates the expected output for `fib(n)`?",
+    "**\n2.  **Are these doctests intended to represent the standard Fibonacci sequence, or is there a custom sequence being defined?",
+    "**\n\nOnce I have this clarification, I can provide the correct Python3 code.?",
+    "**What is the definition or rule that generates the expected output for `fib(n)`?",
+    "**Are these doctests intended to represent the standard Fibonacci sequence, or is there a custom sequence being defined?"
+  ],
+  "question_count": 5,
+  "first_question": "The provided doctests for the `fib` function seem to indicate a different sequence than the standard Fibonacci sequence.\n\n**Standard Fibonacci sequence:**\n* fib(1) = 1\n* fib(2) = 1\n* fib(3) = 2\n* fib(4) = 3\n* fib(5) = 5\n* fib(10) = 55\n\nThe doctests provided are:\n* `fib(10)` -> `550`\n* `fib(1)` -> `10`\n* `fib(8)` -> `210`\n\nThese results do not align with the standard Fibonacci sequence.\n\nTo proceed, I need clarification on the intended behavior of the `fib` function. Could you please clarify:\n\n1.  **What is the definition or rule that generates the expected output for `fib(n)`?",
+  "question_chars": 987,
+  "latency_sec": 1.305532693862915,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

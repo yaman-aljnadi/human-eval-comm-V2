@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_131::2ac::meta-llama/Meta-Llama-3-8B-Instruct::seed0",
+  "task_id": "idx_131",
+  "category": "2ac",
+  "entry_point": "digits",
+  "prompt_field": "prompt2ac",
+  "prompt_text": "\ndef digits(n):\n    \"\"\"Given a positive integer n, return the sum or product of the odd digits.\n    Return 0 if all digits are even.\n    For example:\n    digits(1)  == 1\n    digits(4)  == 4\n    digits(235) == 30\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef digits(n):\n    \"\"\"Given a positive integer n, return the sum or product of the odd digits.\n    Return 0 if all digits are even.\n    For example:\n    digits(1)  == 1\n    digits(4)  == 4\n    digits(235) == 30\n    \"\"\"",
+  "prompt_sha256": "ab43672f7d2c99082761cf31a0585281cc12d6cd6b9185effb7f89d976453021",
+  "model_name": "meta-llama/Meta-Llama-3-8B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef digits(n):\n    \"\"\"Given a positive integer n, return the sum or product of the odd digits.\n    Return 0 if all digits are even.\n    For example:\n    digits(1)  == 1\n    digits(4)  == 4\n    digits(235) == 30\n    \"\"\"\n\n\nWhat is your response?\n\n**Code:**\n```python\ndef digits(n):\n    sum_of_odds = 0\n    for digit in str(n):\n        if int(digit) % 2!= 0:\n            if sum_of_odds == 0:\n                sum_of_odds = int(digit)\n            else:\n                sum_of_odds *= int(digit)\n    return sum_of_odds\n```\n\n\nI'll be glad to answer any follow-up questions.",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def digits(n):\n    sum_of_odds = 0\n    for digit in str(n):\n        if int(digit) % 2!= 0:\n            if sum_of_odds == 0:\n                sum_of_odds = int(digit)\n            else:\n                sum_of_odds *= int(digit)\n    return sum_of_odds",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 26.357049703598022,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

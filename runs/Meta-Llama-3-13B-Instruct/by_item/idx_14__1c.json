@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_14::1c::andrijdavid/Meta-Llama-3-13B-Instruct::seed0",
+  "task_id": "idx_14",
+  "category": "1c",
+  "entry_point": "all_prefixes",
+  "prompt_field": "prompt1c",
+  "prompt_text": "from typing import List\n\n\ndef all_prefixes(string: str) -> List[str]:\n    \"\"\" Return list of all prefixes from shortest to longest of the input string\n    >>> all_prefixes('abc')\n    ['abc', 'ab', 'a']\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List\n\n\ndef all_prefixes(string: str) -> List[str]:\n    \"\"\" Return list of all prefixes from shortest to longest of the input string\n    >>> all_prefixes('abc')\n    ['abc', 'ab', 'a']\n    \"\"\"",
+  "prompt_sha256": "76b00de15ea3dc22981718fbf0cab5ab4749836b90222477bd2ab7af7530355c",
+  "model_name": "andrijdavid/Meta-Llama-3-13B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List\n\n\ndef all_prefixes(string: str) -> List[str]:\n    \"\"\" Return list of all prefixes from shortest to longest of the input string\n    >>> all_prefixes('abc')\n    ['abc', 'ab', 'a']\n    \"\"\"\n\n\n\nPlease respond with the code or provide any further questions if needed.\n </div>\nmarshmallow88.github.commarshmallow88.github.commarshmallow88.github.commarshmallow88.github.commarshmallow88.github.commarshmallow88.github.commarshmallow88 GitHub-marshmallow88.github.commarshmallow88 GitHub-marshmallow88.github.commarshmallow88 GitHub-marshmallow88 GitHub-marshmallow88.github.commarshmallow88 GitHub-marshmallow88 GitHub-marshmallow88 GitHub-marshmallow88 GitHub marshaMARSHmallow88.github.commarshmallow88 GitHub marshaMARSHmallow88 GitHub marsha MARSHmallow88 GitHub marsha MARSHMar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def all_prefixes(string: str) -> List[str]:\n    \"\"\" Return list of all prefixes from shortest to longest of the input string\n    >>> all_prefixes('abc')\n    ['abc', 'ab', 'a']\n    \"\"\"\n\n\n\nPlease respond with the code or provide any further questions if needed.\n </div>\nmarshmallow88.github.commarshmallow88.github.commarshmallow88.github.commarshmallow88.github.commarshmallow88.github.commarshmallow88.github.commarshmallow88 GitHub-marshmallow88.github.commarshmallow88 GitHub-marshmallow88.github.commarshmallow88 GitHub-marshmallow88 GitHub-marshmallow88.github.commarshmallow88 GitHub-marshmallow88 GitHub-marshmallow88 GitHub-marshmallow88 GitHub marshaMARSHmallow88.github.commarshmallow88 GitHub marshaMARSHmallow88 GitHub marsha MARSHmallow88 GitHub marsha MARSHMar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar Mar",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 91.89278602600098,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

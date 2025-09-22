@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_6::1p::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_6",
+  "category": "1p",
+  "entry_point": "parse_nested_parens",
+  "prompt_field": "prompt1p",
+  "prompt_text": "from typing import List\n\n\ndef parse_nested_parens(paren_string: str) -> List[int]:\n    \"\"\" Input to this function is a string represented multiple groups for nested parentheses separated by spaces.\n    For each of the group, output an integer\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List\n\n\ndef parse_nested_parens(paren_string: str) -> List[int]:\n    \"\"\" Input to this function is a string represented multiple groups for nested parentheses separated by spaces.\n    For each of the group, output an integer\n    \"\"\"",
+  "prompt_sha256": "7dd62bfb90bee0dde28583e5160fefd67975be0d54828803b9dc7d434fe4155e",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\nfrom typing import List\n\n\ndef parse_nested_parens(paren_string: str) -> List[int]:\n    \"\"\" Input to this function is a string represented multiple groups for nested parentheses separated by spaces.\n    For each of the group, output an integer representing the maximum nesting depth of that group.\n    \"\"\"\n    results = []\n    groups = paren_string.split()\n\n    for group in groups:\n        max_depth = 0\n        current_depth = 0\n        for char in group:\n            if char == '(':\n                current_depth += 1\n                max_depth = max(max_depth, current_depth)\n            elif char == ')':\n                current_depth -= 1\n            # Ignore any characters that are not parentheses within a group.\n            # If we want to raise an error for invalid characters, we'd add an else here.\n        \n        # It's good practice to ensure the parentheses are balanced, though the prompt\n        # doesn't explicitly require error handling for malformed groups.\n        # If current_depth is not 0, the group is malformed.\n        # For this implementation",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def parse_nested_parens(paren_string: str) -> List[int]:\n    \"\"\" Input to this function is a string represented multiple groups for nested parentheses separated by spaces.\n    For each of the group, output an integer representing the maximum nesting depth of that group.\n    \"\"\"\n    results = []\n    groups = paren_string.split()\n\n    for group in groups:\n        max_depth = 0\n        current_depth = 0\n        for char in group:\n            if char == '(':\n                current_depth += 1\n                max_depth = max(max_depth, current_depth)\n            elif char == ')':\n                current_depth -= 1\n            # Ignore any characters that are not parentheses within a group.\n            # If we want to raise an error for invalid characters, we'd add an else here.\n        \n        # It's good practice to ensure the parentheses are balanced, though the prompt\n        # doesn't explicitly require error handling for malformed groups.\n        # If current_depth is not 0, the group is malformed.\n        # For this implementation",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 1.7898530960083008,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

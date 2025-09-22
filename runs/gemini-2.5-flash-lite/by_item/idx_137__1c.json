@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_137::1c::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_137",
+  "category": "1c",
+  "entry_point": "compare_one",
+  "prompt_field": "prompt1c",
+  "prompt_text": "\ndef compare_one(a, b):\n    \"\"\"\n    Create a function that takes integers, floats, or strings representing\n    real numbers, and returns the larger variable in its given variable type.\n    Return None if the values are equal.\n    Note: If a real number is represented as a string, the floating point might be . or ,\n\n    compare_one(1, 2.5) ➞ 1\n    compare_one(1, \"2,3\") ➞ \"1\"\n    compare_one(\"5,1\", \"6\") ➞ \"5,1\"\n    compare_one(\"1\", 1) ➞ \"1\"\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef compare_one(a, b):\n    \"\"\"\n    Create a function that takes integers, floats, or strings representing\n    real numbers, and returns the larger variable in its given variable type.\n    Return None if the values are equal.\n    Note: If a real number is represented as a string, the floating point might be . or ,\n\n    compare_one(1, 2.5) ➞ 1\n    compare_one(1, \"2,3\") ➞ \"1\"\n    compare_one(\"5,1\", \"6\") ➞ \"5,1\"\n    compare_one(\"1\", 1) ➞ \"1\"\n    \"\"\"",
+  "prompt_sha256": "382a5d1601e67266d4e69cb6ef911a720f2656fc71fe2926d97eaf35f5e7590f",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef compare_one(a, b):\n    \"\"\"\n    Create a function that takes integers, floats, or strings representing\n    real numbers, and returns the larger variable in its given variable type.\n    Return None if the values are equal.\n    Note: If a real number is represented as a string, the floating point might be . or ,\n\n    compare_one(1, 2.5) ➞ 1\n    compare_one(1, \"2,3\") ➞ \"1\"\n    compare_one(\"5,1\", \"6\") ➞ \"5,1\"\n    compare_one(\"1\", 1) ➞ \"1\"\n    \"\"\"\n    def parse_real_number(val):\n        if isinstance(val, (int, float)):\n            return float(val)\n        elif isinstance(val, str):\n            # Replace comma with dot for consistent float parsing\n            cleaned_val = val.replace(',', '.')\n            try:\n                return float(cleaned_val)\n            except ValueError:\n                # If parsing fails, treat as a non-numeric string for comparison\n                return val\n        return val # Return",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def compare_one(a, b):\n    \"\"\"\n    Create a function that takes integers, floats, or strings representing\n    real numbers, and returns the larger variable in its given variable type.\n    Return None if the values are equal.\n    Note: If a real number is represented as a string, the floating point might be . or ,\n\n    compare_one(1, 2.5) ➞ 1\n    compare_one(1, \"2,3\") ➞ \"1\"\n    compare_one(\"5,1\", \"6\") ➞ \"5,1\"\n    compare_one(\"1\", 1) ➞ \"1\"\n    \"\"\"\n    def parse_real_number(val):\n        if isinstance(val, (int, float)):\n            return float(val)\n        elif isinstance(val, str):\n            # Replace comma with dot for consistent float parsing\n            cleaned_val = val.replace(',', '.')\n            try:\n                return float(cleaned_val)\n            except ValueError:\n                # If parsing fails, treat as a non-numeric string for comparison\n                return val\n        return val # Return",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 1.5897016525268555,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

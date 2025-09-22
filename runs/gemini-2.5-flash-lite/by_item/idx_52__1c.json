@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_52::1c::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_52",
+  "category": "1c",
+  "entry_point": "below_threshold",
+  "prompt_field": "prompt1c",
+  "prompt_text": "\n\ndef below_threshold(l: list, t: int):\n    \"\"\"Return True if all numbers in the list l are below threshold t.\n    >>> below_threshold([1, 2, 4, 10], 100)\n    False\n    >>> below_threshold([1, 20, 4, 10], 5)\n    True\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef below_threshold(l: list, t: int):\n    \"\"\"Return True if all numbers in the list l are below threshold t.\n    >>> below_threshold([1, 2, 4, 10], 100)\n    False\n    >>> below_threshold([1, 20, 4, 10], 5)\n    True\n    \"\"\"",
+  "prompt_sha256": "97d51dd9dfa473048e96d51f582078175ca72aebf1077632074a7948f26515bf",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef below_threshold(l: list, t: int):\n    \"\"\"Return True if all numbers in the list l are below threshold t.\n    >>> below_threshold([1, 2, 4, 10], 100)\n    False\n    >>> below_threshold([1, 20, 4, 10], 5)\n    True\n    \"\"\"\n    for num in l:\n        if num >= t:\n            return False\n    return True\n```",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def below_threshold(l: list, t: int):\n    \"\"\"Return True if all numbers in the list l are below threshold t.\n    >>> below_threshold([1, 2, 4, 10], 100)\n    False\n    >>> below_threshold([1, 20, 4, 10], 5)\n    True\n    \"\"\"\n    for num in l:\n        if num >= t:\n            return False\n    return True",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 0.8458304405212402,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

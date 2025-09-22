@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_141::2cp::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_141",
+  "category": "2cp",
+  "entry_point": "file_name_check",
+  "prompt_field": "prompt2cp",
+  "prompt_text": "\ndef file_name_check(file_name):\n    \"\"\"Create a function which takes a string representing a file's name, and returns\n    'Yes' if the the file's name is valid, and returns 'No' otherwise.\n    Examples:\n    file_name_check(\"example.txt\") # => 'No'\n    file_name_check(\"1example.dll\") # => 'Yes' (the name should start with a latin alphapet letter)\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef file_name_check(file_name):\n    \"\"\"Create a function which takes a string representing a file's name, and returns\n    'Yes' if the the file's name is valid, and returns 'No' otherwise.\n    Examples:\n    file_name_check(\"example.txt\") # => 'No'\n    file_name_check(\"1example.dll\") # => 'Yes' (the name should start with a latin alphapet letter)\n    \"\"\"",
+  "prompt_sha256": "7ddf885e15bf9a69011b0ab4319f678beab08e0427453212380692c9036e29cb",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\nimport re\n\ndef file_name_check(file_name):\n    \"\"\"Create a function which takes a string representing a file's name, and returns\n    'Yes' if the the file's name is valid, and returns 'No' otherwise.\n    Examples:\n    file_name_check(\"example.txt\") # => 'No'\n    file_name_check(\"1example.dll\") # => 'Yes' (the name should start with a latin alphapet letter)\n    \"\"\"\n    # The name should start with a latin alphabet letter\n    if not file_name or not file_name[0].isalpha():\n        return 'No'\n\n    # The rest of the name can contain latin alphabet letters, digits, underscores, or dots\n    # A valid file name should not start with a dot\n    if file_name.startswith('.'):\n        return 'No'\n\n    # Check for invalid characters. The examples suggest we only care about the first character\n    # being a letter, and then implicitly allowing alphanumeric, underscores, and dots.\n    # If there are further constraints not explicitly stated, this regex might need adjustment.\n    # Based on the",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def file_name_check(file_name):\n    \"\"\"Create a function which takes a string representing a file's name, and returns\n    'Yes' if the the file's name is valid, and returns 'No' otherwise.\n    Examples:\n    file_name_check(\"example.txt\") # => 'No'\n    file_name_check(\"1example.dll\") # => 'Yes' (the name should start with a latin alphapet letter)\n    \"\"\"\n    # The name should start with a latin alphabet letter\n    if not file_name or not file_name[0].isalpha():\n        return 'No'\n\n    # The rest of the name can contain latin alphabet letters, digits, underscores, or dots\n    # A valid file name should not start with a dot\n    if file_name.startswith('.'):\n        return 'No'\n\n    # Check for invalid characters. The examples suggest we only care about the first character\n    # being a letter, and then implicitly allowing alphanumeric, underscores, and dots.\n    # If there are further constraints not explicitly stated, this regex might need adjustment.\n    # Based on the",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 1.5541534423828125,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

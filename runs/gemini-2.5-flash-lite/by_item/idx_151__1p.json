@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_151::1p::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_151",
+  "category": "1p",
+  "entry_point": "double_the_difference",
+  "prompt_field": "prompt1p",
+  "prompt_text": "\ndef double_the_difference(lst):\n    '''\n    Given a list of numbers, return the sum of squares of the numbers\n    in the list that are \n    \n    double_the_difference([1, 3, 2, 0]) == 1 + 9 + 0 + 0 = 10\n    double_the_difference([-1, -2, 0]) == 0\n    double_the_difference([9, -2]) == 81\n    double_the_difference([0]) == 0  \n   \n    If the input list is empty, return 0.\n    '''\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef double_the_difference(lst):\n    '''\n    Given a list of numbers, return the sum of squares of the numbers\n    in the list that are \n    \n    double_the_difference([1, 3, 2, 0]) == 1 + 9 + 0 + 0 = 10\n    double_the_difference([-1, -2, 0]) == 0\n    double_the_difference([9, -2]) == 81\n    double_the_difference([0]) == 0  \n   \n    If the input list is empty, return 0.\n    '''",
+  "prompt_sha256": "e536ac1d7deaab27592dcffd43de6519ac0b2557b2a276ad05b10b06abf6c42e",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "The provided docstring for the `double_the_difference` function is a bit ambiguous and the examples don't perfectly align with the description.\n\nLet's clarify the intended behavior:\n\n**Ambiguity:**\n\n*   \"return the sum of squares of the numbers in the list that are\" - This sentence is incomplete. It's missing a condition for which numbers should be squared and summed.\n\n**Discrepancies in Examples:**\n\n*   `double_the_difference([1, 3, 2, 0]) == 1 + 9 + 0 + 0 = 10`\n    *   If the logic is \"sum of squares of all numbers\", then it should be `1^2 + 3^2 + 2^2 + 0^2 = 1 + 9 + 4 + 0 = 14`.\n    *   The example `1 + 9 + 0 + 0 = 10` suggests that `2` might have been excluded for some reason.\n*   `double_the_difference([-1, -2, 0]) == 0`\n    *   If the logic is \"sum of squares of",
+  "gen_raw": {},
+  "contains_code": false,
+  "code_detected_method": "none",
+  "extracted_code": null,
+  "is_question": true,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 1.60044527053833,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_31::1c::andrijdavid/Meta-Llama-3-13B-Instruct::seed0",
+  "task_id": "idx_31",
+  "category": "1c",
+  "entry_point": "is_prime",
+  "prompt_field": "prompt1c",
+  "prompt_text": "\n\ndef is_prime(n):\n    \"\"\"Return true if a given number is prime, and false otherwise.\n    >>> is_prime(6)\n    True\n    >>> is_prime(101)\n    False\n    >>> is_prime(11)\n    False\n    >>> is_prime(13441)\n    False\n    >>> is_prime(61)\n    False\n    >>> is_prime(4)\n    True\n    >>> is_prime(1)\n    True\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef is_prime(n):\n    \"\"\"Return true if a given number is prime, and false otherwise.\n    >>> is_prime(6)\n    True\n    >>> is_prime(101)\n    False\n    >>> is_prime(11)\n    False\n    >>> is_prime(13441)\n    False\n    >>> is_prime(61)\n    False\n    >>> is_prime(4)\n    True\n    >>> is_prime(1)\n    True\n    \"\"\"",
+  "prompt_sha256": "ed5d7c9d38cb888ac9e9a0641148b87272a9cb309297da0b39d13694b83213e2",
+  "model_name": "andrijdavid/Meta-Llama-3-13B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef is_prime(n):\n    \"\"\"Return true if a given number is prime, and false otherwise.\n    >>> is_prime(6)\n    True\n    >>> is_prime(101)\n    False\n    >>> is_prime(11)\n    False\n    >>> is_prime(13441)\n    False\n    >>> is_prime(61)\n    False\n    >>> is_prime(4)\n    True\n    >>> is_prime(1)\n    True\n    \"\"\"\n\n\n\n Please note that you can use built-in functions like ` isinstance()` or built-in functions like ` isinstance()` but you cannot use built-in functions like `math-library` like `built-in functions like math library functions` \n Please let me know if you need any further information or if you want me to generate code based on your given input or if you want me to provide more information about prime numbers or any other related concepts that might be helpful for your code generation please let me knowaise any further questions or any clarifying questions please feel free to ask questions or provide more information so that I can assist you better \nIFESTOËLTERËËËËËendersËendersËendersËendersËendersËendersËendersëlenderedialsËendersËendersëlenderedialsëendersërenderrorendersër_ends-enders Lindendenders Lindendenders Lindendend Lindend Lindend Lindend Lindend Lindend Lindend Lindend Lindend Lindend Lindend Lindend Lindend Lindend Lindend Lindend Lindend Lindend Lindend Lindend Lindend Lindend Lindend Lindend Lindend Lindend Lindend Lindend Lindend Lindend Lindend Lindend Lindend Lindend Lindend Lindend Lindend Lindend Lindend Lindend Lind",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def is_prime(n):\n    \"\"\"Return true if a given number is prime, and false otherwise.\n    >>> is_prime(6)\n    True\n    >>> is_prime(101)\n    False\n    >>> is_prime(11)\n    False\n    >>> is_prime(13441)\n    False\n    >>> is_prime(61)\n    False\n    >>> is_prime(4)\n    True\n    >>> is_prime(1)\n    True\n    \"\"\"\n\n\n\n Please note that you can use built-in functions like ` isinstance()` or built-in functions like ` isinstance()` but you cannot use built-in functions like `math-library` like `built-in functions like math library functions` \n Please let me know if you need any further information or if you want me to generate code based on your given input or if you want me to provide more information about prime numbers or any other related concepts that might be helpful for your code generation please let me knowaise any further questions or any clarifying questions please feel free to ask questions or provide more information so that I can assist you better \nIFESTOËLTERËËËËËendersËendersËendersËendersËendersËendersËendersëlenderedialsËendersËendersëlenderedialsëendersërenderrorendersër_ends-enders Lindendenders Lindendenders Lindendend Lindend Lindend Lindend Lindend Lindend Lindend Lindend Lindend Lindend Lindend Lindend Lindend Lindend Lindend Lindend Lindend Lindend Lindend Lindend Lindend Lindend Lindend Lindend Lindend Lindend Lindend Lindend Lindend Lindend Lindend Lindend Lindend Lindend Lindend Lindend Lindend Lindend Lindend Lindend Lind",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 202.28705620765686,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

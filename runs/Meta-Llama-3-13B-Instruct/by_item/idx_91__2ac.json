@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_91::2ac::andrijdavid/Meta-Llama-3-13B-Instruct::seed0",
+  "task_id": "idx_91",
+  "category": "2ac",
+  "entry_point": "is_bored",
+  "prompt_field": "prompt2ac",
+  "prompt_text": "\ndef is_bored(S):\n    \"\"\"\n    You'll be given a string of words, and your task is to count the number\n    of boredoms. A boredom is a sentence that starts with a given word (such as \"W\", \"I\").\n    Sentences are delimited by '.', '?' or '!'.\n   \n    For example:\n    >>> is_bored(\"Hello world\")\n    1\n    >>> is_bored(\"The sky is blue. The sun is shining. I love this weather\")\n    3\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef is_bored(S):\n    \"\"\"\n    You'll be given a string of words, and your task is to count the number\n    of boredoms. A boredom is a sentence that starts with a given word (such as \"W\", \"I\").\n    Sentences are delimited by '.', '?' or '!'.\n   \n    For example:\n    >>> is_bored(\"Hello world\")\n    1\n    >>> is_bored(\"The sky is blue. The sun is shining. I love this weather\")\n    3\n    \"\"\"",
+  "prompt_sha256": "07792f2484fa57cd9f9c471b462c7ce2a4a7b1851d633742ae39be1fe8cdb09f",
+  "model_name": "andrijdavid/Meta-Llama-3-13B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef is_bored(S):\n    \"\"\"\n    You'll be given a string of words, and your task is to count the number\n    of boredoms. A boredom is a sentence that starts with a given word (such as \"W\", \"I\").\n    Sentences are delimited by '.', '?' or '!'.\n   \n    For example:\n    >>> is_bored(\"Hello world\")\n    1\n    >>> is_bored(\"The sky is blue. The sun is shining. I love this weather\")\n    3\n    \"\"\"\n\n\n\nPlease note that this problem-solving task must be done without any built-in libraries or built-in functions other than built-in functions like built-in functions likebuilt-in functions like len() functionetceteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraetera",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def is_bored(S):\n    \"\"\"\n    You'll be given a string of words, and your task is to count the number\n    of boredoms. A boredom is a sentence that starts with a given word (such as \"W\", \"I\").\n    Sentences are delimited by '.', '?' or '!'.\n   \n    For example:\n    >>> is_bored(\"Hello world\")\n    1\n    >>> is_bored(\"The sky is blue. The sun is shining. I love this weather\")\n    3\n    \"\"\"\n\n\n\nPlease note that this problem-solving task must be done without any built-in libraries or built-in functions other than built-in functions like built-in functions likebuilt-in functions like len() functionetceteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraeteraetera",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 109.01894474029541,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

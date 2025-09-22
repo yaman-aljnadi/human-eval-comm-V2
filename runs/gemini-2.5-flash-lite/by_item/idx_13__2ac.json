@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_13::2ac::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_13",
+  "category": "2ac",
+  "entry_point": "greatest_common_divisor",
+  "prompt_field": "prompt2ac",
+  "prompt_text": "\n\ndef candidate(a: int, b: int) -> int:\n    \"\"\" Return a common divisor of two integers a and b\n    >>> candidate(3, 5)\n    3\n    >>> candidate(25, 15)\n    15\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(a: int, b: int) -> int:\n    \"\"\" Return a common divisor of two integers a and b\n    >>> candidate(3, 5)\n    3\n    >>> candidate(25, 15)\n    15\n    \"\"\"",
+  "prompt_sha256": "b50450444cf31e302e23d8ff6efeed3fd9caba557a911523a441de5c19568c0c",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef candidate(a: int, b: int) -> int:\n    \"\"\" Return a common divisor of two integers a and b\n    >>> candidate(3, 5)\n    3\n    >>> candidate(25, 15)\n    15\n    \"\"\"\n    # The provided doctests seem to imply returning one of the input numbers\n    # if it divides the other, or a specific number in other cases.\n    # This is not a standard definition of a \"common divisor\".\n    # A common divisor is a number that divides both a and b without a remainder.\n    #\n    # Based on the doctests, the behavior is:\n    # - If a divides b, return a.\n    # - If b divides a, return b.\n    # - If neither divides the other, it's unclear from the doctests.\n    #   The doctest `candidate(3, 5) -> 3` is confusing as 3 does not divide 5.\n    #   If the intention was to return the *greatest* common divisor (GCD),\n    #   then `candidate(3, 5)` should return 1,",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def candidate(a: int, b: int) -> int:\n    \"\"\" Return a common divisor of two integers a and b\n    >>> candidate(3, 5)\n    3\n    >>> candidate(25, 15)\n    15\n    \"\"\"\n    # The provided doctests seem to imply returning one of the input numbers\n    # if it divides the other, or a specific number in other cases.\n    # This is not a standard definition of a \"common divisor\".\n    # A common divisor is a number that divides both a and b without a remainder.\n    #\n    # Based on the doctests, the behavior is:\n    # - If a divides b, return a.\n    # - If b divides a, return b.\n    # - If neither divides the other, it's unclear from the doctests.\n    #   The doctest `candidate(3, 5) -> 3` is confusing as 3 does not divide 5.\n    #   If the intention was to return the *greatest* common divisor (GCD),\n    #   then `candidate(3, 5)` should return 1,",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 2.054222822189331,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

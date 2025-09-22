@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_155::1c::meta-llama/Meta-Llama-3-8B-Instruct::seed0",
+  "task_id": "idx_155",
+  "category": "1c",
+  "entry_point": "even_odd_count",
+  "prompt_field": "prompt1c",
+  "prompt_text": "\ndef even_odd_count(num):\n    \"\"\"Given an integer. return a tuple that has the number of even and odd digits respectively.\n\n     Example:\n        even_odd_count(-12) ==> (1, 1)\n        even_odd_count(123) ==> (2, 1)\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef even_odd_count(num):\n    \"\"\"Given an integer. return a tuple that has the number of even and odd digits respectively.\n\n     Example:\n        even_odd_count(-12) ==> (1, 1)\n        even_odd_count(123) ==> (2, 1)\n    \"\"\"",
+  "prompt_sha256": "af19c177cc06cf842a4d88c5b6416f85276d8f42db4d15e88f00195ce31576e3",
+  "model_name": "meta-llama/Meta-Llama-3-8B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef even_odd_count(num):\n    \"\"\"Given an integer. return a tuple that has the number of even and odd digits respectively.\n\n     Example:\n        even_odd_count(-12) ==> (1, 1)\n        even_odd_count(123) ==> (2, 1)\n    \"\"\"\n\n\n### Solution Here:\n\n```\ndef even_odd_count(num):\n    even = 0\n    odd = 0\n    while abs(num) > 0:\n        if num % 2 == 0:\n            even += 1\n        else:\n            odd += 1\n        num = num // 2 if num > 0 else num // -2\n    return (even, odd)\n```  | **Code only** |\n\n\n\nPlease respond with Python3 code only without explanations or clarification requests. | 1 answer | 0 votes | Asked 14 hours ago  | Updated 2 hours ago  | More like this  | No more questions | Answer requested | Please respond with Python3 code only without explanations or clarification requests. 1 answer | More like this No more questions Asked 14 hours ago Updated 2 hours ago |  | | | 0 votes | Respond directly with code only with markdown  |  |  |  | More questions on the topic 1 answer 0 votes Asked 14 hours ago Updated 2 hours ago Respond directly with code only with markdown  More like this No more questions |  | | 0 votes Asked 14 hours ago Updated 2 hours ago Respond directly with code only with",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def even_odd_count(num):\n    even = 0\n    odd = 0\n    while abs(num) > 0:\n        if num % 2 == 0:\n            even += 1\n        else:\n            odd += 1\n        num = num // 2 if num > 0 else num // -2\n    return (even, odd)",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 48.62743902206421,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

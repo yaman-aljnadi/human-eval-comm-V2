@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_123::1p::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_123",
+  "category": "1p",
+  "entry_point": "get_odd_collatz",
+  "prompt_field": "prompt1p",
+  "prompt_text": "\ndef get_odd_collatz(n):\n    \"\"\"\n    Given a positive integer n, return a sorted list that has the odd numbers in collatz sequence.\n\n    The Collatz conjecture is a conjecture in mathematics that concerns a sequence defined\n    as follows: start with any positive integer n. \n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef get_odd_collatz(n):\n    \"\"\"\n    Given a positive integer n, return a sorted list that has the odd numbers in collatz sequence.\n\n    The Collatz conjecture is a conjecture in mathematics that concerns a sequence defined\n    as follows: start with any positive integer n. \n    \"\"\"",
+  "prompt_sha256": "de910a8186e66a77465dc79aad4604038139b58f2b8979a5412c8a5656e1b8c0",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef get_odd_collatz(n):\n    \"\"\"\n    Given a positive integer n, return a sorted list that has the odd numbers in collatz sequence.\n\n    The Collatz conjecture is a conjecture in mathematics that concerns a sequence defined\n    as follows: start with any positive integer n.\n    If n is even, the next term is n / 2.\n    If n is odd, the next term is 3n + 1.\n    The conjecture is that for all positive integers n, the sequence eventually reaches 1.\n\n    Args:\n        n: A positive integer.\n\n    Returns:\n        A sorted list of odd numbers in the Collatz sequence starting from n.\n    \"\"\"\n    if not isinstance(n, int) or n <= 0:\n        raise ValueError(\"Input must be a positive integer.\")\n\n    odd_numbers = []\n    current = n\n\n    while current != 1:\n        if current % 2 != 0:\n            odd_numbers.append(current)\n        if current % 2 == 0:\n            current //= 2\n        else:\n            current = 3 *",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def get_odd_collatz(n):\n    \"\"\"\n    Given a positive integer n, return a sorted list that has the odd numbers in collatz sequence.\n\n    The Collatz conjecture is a conjecture in mathematics that concerns a sequence defined\n    as follows: start with any positive integer n.\n    If n is even, the next term is n / 2.\n    If n is odd, the next term is 3n + 1.\n    The conjecture is that for all positive integers n, the sequence eventually reaches 1.\n\n    Args:\n        n: A positive integer.\n\n    Returns:\n        A sorted list of odd numbers in the Collatz sequence starting from n.\n    \"\"\"\n    if not isinstance(n, int) or n <= 0:\n        raise ValueError(\"Input must be a positive integer.\")\n\n    odd_numbers = []\n    current = n\n\n    while current != 1:\n        if current % 2 != 0:\n            odd_numbers.append(current)\n        if current % 2 == 0:\n            current //= 2\n        else:\n            current = 3 *",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 1.1440770626068115,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

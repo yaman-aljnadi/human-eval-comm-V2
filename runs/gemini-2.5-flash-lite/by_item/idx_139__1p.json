@@ -1,0 +1,37 @@
+{
+  "record_id": "idx_139::1p::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_139",
+  "category": "1p",
+  "entry_point": "special_factorial",
+  "prompt_field": "prompt1p",
+  "prompt_text": "\ndef special_factorial(n):\n    \"\"\"The Brazilian factorial is defined as:\n    brazilian_factorial(n) = \n   \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef special_factorial(n):\n    \"\"\"The Brazilian factorial is defined as:\n    brazilian_factorial(n) = \n   \"\"\"",
+  "prompt_sha256": "59ffcc3ad1d27a79bffc6843ef0d1643fdbe091ce7e2a8bebea43754cfd02e77",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "To provide you with the correct Python3 code for `special_factorial`, I need the complete definition of the Brazilian factorial. The docstring is incomplete.\n\nPlease provide the full definition of `brazilian_factorial(n)` so I can generate the code. For example, is it a recursive definition? Does it involve other operations like sums, products, or divisions?",
+  "gen_raw": {},
+  "contains_code": false,
+  "code_detected_method": "none",
+  "extracted_code": null,
+  "is_question": true,
+  "extracted_questions": [
+    "To provide you with the correct Python3 code for `special_factorial`, I need the complete definition of the Brazilian factorial. The docstring is incomplete.\n\nPlease provide the full definition of `brazilian_factorial(n)` so I can generate the code. For example, is it a recursive definition?",
+    "Does it involve other operations like sums, products, or divisions?",
+    "For example, is it a recursive definition?"
+  ],
+  "question_count": 3,
+  "first_question": "To provide you with the correct Python3 code for `special_factorial`, I need the complete definition of the Brazilian factorial. The docstring is incomplete.\n\nPlease provide the full definition of `brazilian_factorial(n)` so I can generate the code. For example, is it a recursive definition?",
+  "question_chars": 401,
+  "latency_sec": 0.961052656173706,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

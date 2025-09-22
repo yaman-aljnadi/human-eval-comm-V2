@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_139::2ac::meta-llama/Meta-Llama-3-8B-Instruct::seed0",
+  "task_id": "idx_139",
+  "category": "2ac",
+  "entry_point": "special_factorial",
+  "prompt_field": "prompt2ac",
+  "prompt_text": "\ndef special_factorial(n):\n    \"\"\"The Brazilian factorial is defined as:\n    brazilian_factorial(n) = n!, or, brazilian_factorial(n) = n! * (n-1)! * (n-2)! * ... * 1!\n    where n > 0\n\n    For example:\n    >>> special_factorial(4)\n    2\n\n    The function will receive an integer as input and should return the special\n    factorial of this integer.\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef special_factorial(n):\n    \"\"\"The Brazilian factorial is defined as:\n    brazilian_factorial(n) = n!, or, brazilian_factorial(n) = n! * (n-1)! * (n-2)! * ... * 1!\n    where n > 0\n\n    For example:\n    >>> special_factorial(4)\n    2\n\n    The function will receive an integer as input and should return the special\n    factorial of this integer.\n    \"\"\"",
+  "prompt_sha256": "b3375beeaa7f0ed075027d3e33d0754fda7b9dc375d02920105c9815e17ba5de",
+  "model_name": "meta-llama/Meta-Llama-3-8B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef special_factorial(n):\n    \"\"\"The Brazilian factorial is defined as:\n    brazilian_factorial(n) = n!, or, brazilian_factorial(n) = n! * (n-1)! * (n-2)! * ... * 1!\n    where n > 0\n\n    For example:\n    >>> special_factorial(4)\n    2\n\n    The function will receive an integer as input and should return the special\n    factorial of this integer.\n    \"\"\"\n\n\n**Code:**\n\n\n```\ndef special_factorial(n):\n    if n <= 0:\n        raise ValueError(\"n must be a positive integer.\")\n    result = 1\n    for i in range(1, n+1):\n        result *= math.factorial(i)\n    return 1.0 / result\n```  | special_factorial(4) | Python 3 | mathematical-factorial | programming-challenge | software-development | code-review | problem-solution | math | python | factorial | numerical-computation | software-coding | computational-complexity | computation-theory | code-generation | computer-science | computer-programming | programming-problem | programming-exercise | problem-solving | programming | algorithmic-efficiency | algorithms | computational-efficiency | computational-complexity-theory | 1.0.0 | 1.0.1.0 | 1.0.1.1 | 1.0.1.2 | 1.0.1.3 | 1.0.1.4 | 1.0.1.5 | 1.0.1.6 | 1.0.1.7 | 1.0.1.8 | 1.0.",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def special_factorial(n):\n    if n <= 0:\n        raise ValueError(\"n must be a positive integer.\")\n    result = 1\n    for i in range(1, n+1):\n        result *= math.factorial(i)\n    return 1.0 / result",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 70.48068904876709,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

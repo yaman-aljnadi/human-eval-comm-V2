@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_158::2ac::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_158",
+  "category": "2ac",
+  "entry_point": "find_max",
+  "prompt_field": "prompt2ac",
+  "prompt_text": "\ndef candidate(words):\n    \"\"\"Write a function that accepts a list of strings.\n    The list contains different words. Return the word with minimum or maximum number\n    of unique characters. If multiple strings have minimum or maximum number of unique\n    characters, return the one which comes first in lexicographical order.\n\n    candidate([\"name\", \"of\", \"string\"]) == \"of\"\n    candidate([\"name\", \"enam\", \"game\"]) == \"name\"\n    candidate([\"aaaaaaa\", \"bb\" ,\"cc\"]) == \"\"bb\"\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(words):\n    \"\"\"Write a function that accepts a list of strings.\n    The list contains different words. Return the word with minimum or maximum number\n    of unique characters. If multiple strings have minimum or maximum number of unique\n    characters, return the one which comes first in lexicographical order.\n\n    candidate([\"name\", \"of\", \"string\"]) == \"of\"\n    candidate([\"name\", \"enam\", \"game\"]) == \"name\"\n    candidate([\"aaaaaaa\", \"bb\" ,\"cc\"]) == \"\"bb\"\n    \"\"\"",
+  "prompt_sha256": "94070bf9cad3ef4d7d978283ebe57112268650fd4967c475f960280e879aaec8",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef candidate(words):\n    \"\"\"Write a function that accepts a list of strings.\n    The list contains different words. Return the word with minimum or maximum number\n    of unique characters. If multiple strings have minimum or maximum number of unique\n    characters, return the one which comes first in lexicographical order.\n\n    candidate([\"name\", \"of\", \"string\"]) == \"of\"\n    candidate([\"name\", \"enam\", \"game\"]) == \"name\"\n    candidate([\"aaaaaaa\", \"bb\" ,\"cc\"]) == \"bb\"\n    \"\"\"\n    if not words:\n        return \"\"\n\n    min_unique_count = float('inf')\n    max_unique_count = -float('inf')\n    min_word = \"\"\n    max_word = \"\"\n\n    for word in words:\n        unique_chars = set(word)\n        current_unique_count = len(unique_chars)\n\n        # Check for minimum\n        if current_unique_count < min_unique_count:\n            min_unique_count = current_unique_count\n            min_word = word\n        elif current_unique_count == min_unique_count",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def candidate(words):\n    \"\"\"Write a function that accepts a list of strings.\n    The list contains different words. Return the word with minimum or maximum number\n    of unique characters. If multiple strings have minimum or maximum number of unique\n    characters, return the one which comes first in lexicographical order.\n\n    candidate([\"name\", \"of\", \"string\"]) == \"of\"\n    candidate([\"name\", \"enam\", \"game\"]) == \"name\"\n    candidate([\"aaaaaaa\", \"bb\" ,\"cc\"]) == \"bb\"\n    \"\"\"\n    if not words:\n        return \"\"\n\n    min_unique_count = float('inf')\n    max_unique_count = -float('inf')\n    min_word = \"\"\n    max_word = \"\"\n\n    for word in words:\n        unique_chars = set(word)\n        current_unique_count = len(unique_chars)\n\n        # Check for minimum\n        if current_unique_count < min_unique_count:\n            min_unique_count = current_unique_count\n            min_word = word\n        elif current_unique_count == min_unique_count",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 1.4959940910339355,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

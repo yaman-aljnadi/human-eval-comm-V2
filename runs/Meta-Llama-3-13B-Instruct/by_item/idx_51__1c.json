@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_51::1c::andrijdavid/Meta-Llama-3-13B-Instruct::seed0",
+  "task_id": "idx_51",
+  "category": "1c",
+  "entry_point": "remove_vowels",
+  "prompt_field": "prompt1c",
+  "prompt_text": "\n\ndef remove_vowels(text):\n    \"\"\"\n    remove_vowels is a function that takes string and returns string without vowels.\n    >>> remove_vowels('')\n    ''\n    >>> remove_vowels(\"abcdef\\nghijklm\")\n    'aei'\n    >>> remove_vowels('abcdef')\n    'ae'\n    >>> remove_vowels('aaaaa')\n    'aaaaa'\n    >>> remove_vowels('aaBAA')\n    'aaAA'\n    >>> remove_vowels('zbcd')\n    ''\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef remove_vowels(text):\n    \"\"\"\n    remove_vowels is a function that takes string and returns string without vowels.\n    >>> remove_vowels('')\n    ''\n    >>> remove_vowels(\"abcdef\\nghijklm\")\n    'aei'\n    >>> remove_vowels('abcdef')\n    'ae'\n    >>> remove_vowels('aaaaa')\n    'aaaaa'\n    >>> remove_vowels('aaBAA')\n    'aaAA'\n    >>> remove_vowels('zbcd')\n    ''\n    \"\"\"",
+  "prompt_sha256": "5f98431598768d07430de70431d2fc0ba688bdc05ba039a7ff75a793ad0360f4",
+  "model_name": "andrijdavid/Meta-Llama-3-13B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef remove_vowels(text):\n    \"\"\"\n    remove_vowels is a function that takes string and returns string without vowels.\n    >>> remove_vowels('')\n    ''\n    >>> remove_vowels(\"abcdef\\nghijklm\")\n    'aei'\n    >>> remove_vowels('abcdef')\n    'ae'\n    >>> remove_vowels('aaaaa')\n    'aaaaa'\n    >>> remove_vowels('aaBAA')\n    'aaAA'\n    >>> remove_vowels('zbcd')\n    ''\n    \"\"\"\n\n\n\nPlease note that you can use built-in built-in functions like `lower()`, ` isinstance()`, etcetera\n\nHere are some clarifying questions:\n\n1. How would you check whether a character is a vowelin Python?\n2How would youremovevowels from a given string?\n\n3 How would you cater for different types of input like integers or float values?\n\n4 How would you handle cases where the input string contains non-English characters?\n5 How would you Account for different ways of representation of spaces such as tabs or newlines? \n\n please provide your Python3 code below or ask questions if you need more informationclarificationxxxxxxxxxxxx ​​​ ​​​ ​​​ ​​​ ​​​ ​ ​​​ ​​​ ​ ​​​ ​​​ ​ ​​​ ​​​ ​​​ ​ ​​​ ​ ​​​ ​​​ ​​​ ​ ​​​ ​ ​​​ ​​​ ​ ​​​ ​ ​​​ ​​​ ​ ​​​ ​ ​​​ ​ ​​​ ​ ​​​ ​​​ ​ ​​​ ​ ​​​ ​ ​​​ ​​​ ​ ​​​ ​ ​​​ ​ ​​​ ​ ​​​ ​ ​​​ ​ ​​​ ​ ​​​ ​​​ ​​​ ​ ​​​ ​ ​​​ ​​​ ​ ​​​ ​ ​​​ ​ ​​​ ​ ​​​ ​ ​​​ ​ ​​​ ​ ​​​ ​ ​​​ ​ ​ ​​​ ​​​ ​ ​​​ ​ ​​​ ​ ​​​ ​ ​​​ ​ ​ ​​​ ​​​ ​ ​​​ ​ ​​​ ​​​ ​​​ ​ ​​​ ​ ​​​ ​ ​​​ ​ ​​​ ​ ​​​ ​ ​​​ ​ ​​​",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def remove_vowels(text):\n    \"\"\"\n    remove_vowels is a function that takes string and returns string without vowels.\n    >>> remove_vowels('')\n    ''\n    >>> remove_vowels(\"abcdef\\nghijklm\")\n    'aei'\n    >>> remove_vowels('abcdef')\n    'ae'\n    >>> remove_vowels('aaaaa')\n    'aaaaa'\n    >>> remove_vowels('aaBAA')\n    'aaAA'\n    >>> remove_vowels('zbcd')\n    ''\n    \"\"\"\n\n\n\nPlease note that you can use built-in built-in functions like `lower()`, ` isinstance()`, etcetera\n\nHere are some clarifying questions:\n\n1. How would you check whether a character is a vowelin Python?\n2How would youremovevowels from a given string?\n\n3 How would you cater for different types of input like integers or float values?\n\n4 How would you handle cases where the input string contains non-English characters?\n5 How would you Account for different ways of representation of spaces such as tabs or newlines? \n\n please provide your Python3 code below or ask questions if you need more informationclarificationxxxxxxxxxxxx ​​​ ​​​ ​​​ ​​​ ​​​ ​ ​​​ ​​​ ​ ​​​ ​​​ ​ ​​​ ​​​ ​​​ ​ ​​​ ​ ​​​ ​​​ ​​​ ​ ​​​ ​ ​​​ ​​​ ​ ​​​ ​ ​​​ ​​​ ​ ​​​ ​ ​​​ ​ ​​​ ​ ​​​ ​​​ ​ ​​​ ​ ​​​ ​ ​​​ ​​​ ​ ​​​ ​ ​​​ ​ ​​​ ​ ​​​ ​ ​​​ ​ ​​​ ​ ​​​ ​​​ ​​​ ​ ​​​ ​ ​​​ ​​​ ​ ​​​ ​ ​​​ ​ ​​​ ​ ​​​ ​ ​​​ ​ ​​​ ​ ​​​ ​ ​​​ ​ ​ ​​​ ​​​ ​ ​​​ ​ ​​​ ​ ​​​ ​ ​​​ ​ ​ ​​​ ​​​ ​ ​​​ ​ ​​​ ​​​ ​​​ ​ ​​​ ​ ​​​ ​ ​​​ ​ ​​​ ​ ​​​ ​ ​​​ ​ ​​​",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 90.5240364074707,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

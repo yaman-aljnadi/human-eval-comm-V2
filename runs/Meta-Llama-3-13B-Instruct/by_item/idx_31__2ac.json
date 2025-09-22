@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_31::2ac::andrijdavid/Meta-Llama-3-13B-Instruct::seed0",
+  "task_id": "idx_31",
+  "category": "2ac",
+  "entry_point": "is_prime",
+  "prompt_field": "prompt2ac",
+  "prompt_text": "\n\ndef candidate(n):\n    \"\"\"Return true if a given number is composite or prime, and false otherwise.\n    >>> candidate(6)\n    True\n    >>> candidate(101)\n    False\n    >>> candidate(11)\n    False\n    >>> candidate(13441)\n    False\n    >>> candidate(61)\n    False\n    >>> candidate(4)\n    True\n    >>> candidate(1)\n    True\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(n):\n    \"\"\"Return true if a given number is composite or prime, and false otherwise.\n    >>> candidate(6)\n    True\n    >>> candidate(101)\n    False\n    >>> candidate(11)\n    False\n    >>> candidate(13441)\n    False\n    >>> candidate(61)\n    False\n    >>> candidate(4)\n    True\n    >>> candidate(1)\n    True\n    \"\"\"",
+  "prompt_sha256": "aa5c15f796ea03513b38eddbf78108386e37dffd390dda8443dede76ebf9721f",
+  "model_name": "andrijdavid/Meta-Llama-3-13B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(n):\n    \"\"\"Return true if a given number is composite or prime, and false otherwise.\n    >>> candidate(6)\n    True\n    >>> candidate(101)\n    False\n    >>> candidate(11)\n    False\n    >>> candidate(13441)\n    False\n    >>> candidate(61)\n    False\n    >>> candidate(4)\n    True\n    >>> candidate(1)\n    True\n    \"\"\"]\n\n\nPlease note that composite numbers are numbers that are not prime numbers themselves neitherprime numbers themselves nor prime numbers themselves \n\nHere are the rules for composite numbers:\n1️️️️️️️️️️️️️️️️️�数adata_numsattering_Numbers�数adata�数�数adata�数�数adata�数adata�数�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def candidate(n):\n    \"\"\"Return true if a given number is composite or prime, and false otherwise.\n    >>> candidate(6)\n    True\n    >>> candidate(101)\n    False\n    >>> candidate(11)\n    False\n    >>> candidate(13441)\n    False\n    >>> candidate(61)\n    False\n    >>> candidate(4)\n    True\n    >>> candidate(1)\n    True\n    \"\"\"]\n\n\nPlease note that composite numbers are numbers that are not prime numbers themselves neitherprime numbers themselves nor prime numbers themselves \n\nHere are the rules for composite numbers:\n1️️️️️️️️️️️️️️️️️�数adata_numsattering_Numbers�数adata�数�数adata�数�数adata�数adata�数�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata�数adata",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 207.07590174674988,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

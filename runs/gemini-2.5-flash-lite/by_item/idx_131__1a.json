@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_131::1a::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_131",
+  "category": "1a",
+  "entry_point": "digits",
+  "prompt_field": "prompt1a",
+  "prompt_text": "\ndef digits(n):\n    \"\"\"Given a positive integer n, return the sum or product of the odd digits.\n    Return 0 if all digits are even.\n    For example:\n    digits(1)  == 1\n    digits(4)  == 0\n    digits(235) == 15\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef digits(n):\n    \"\"\"Given a positive integer n, return the sum or product of the odd digits.\n    Return 0 if all digits are even.\n    For example:\n    digits(1)  == 1\n    digits(4)  == 0\n    digits(235) == 15\n    \"\"\"",
+  "prompt_sha256": "a2d05b33793c7567e635d8c895acea385c969461825169265c922634d822d355",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef digits(n):\n    \"\"\"Given a positive integer n, return the sum or product of the odd digits.\n    Return 0 if all digits are even.\n    For example:\n    digits(1)  == 1\n    digits(4)  == 0\n    digits(235) == 15\n    \"\"\"\n    odd_digits = [int(d) for d in str(n) if int(d) % 2 != 0]\n\n    if not odd_digits:\n        return 0\n    elif len(odd_digits) == 1:\n        return odd_digits[0]\n    else:\n        product = 1\n        for digit in odd_digits:\n            product *= digit\n        return product\n```",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def digits(n):\n    \"\"\"Given a positive integer n, return the sum or product of the odd digits.\n    Return 0 if all digits are even.\n    For example:\n    digits(1)  == 1\n    digits(4)  == 0\n    digits(235) == 15\n    \"\"\"\n    odd_digits = [int(d) for d in str(n) if int(d) % 2 != 0]\n\n    if not odd_digits:\n        return 0\n    elif len(odd_digits) == 1:\n        return odd_digits[0]\n    else:\n        product = 1\n        for digit in odd_digits:\n            product *= digit\n        return product",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 1.0786306858062744,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

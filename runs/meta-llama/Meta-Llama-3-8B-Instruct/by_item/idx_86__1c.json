@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_86::1c::meta-llama/Meta-Llama-3-8B-Instruct::seed0",
+  "task_id": "idx_86",
+  "category": "1c",
+  "entry_point": "anti_shuffle",
+  "prompt_field": "prompt1c",
+  "prompt_text": "\ndef anti_shuffle(s):\n    \"\"\"\n    Write a function that takes a string and returns an ordered version of it.\n    Ordered version of string, is a string where all words (separated by space)\n    are replaced by a new word where all the characters arranged in\n    ascending order based on ascii value.\n    Note: You should keep the order of words and blank spaces in the sentence.\n\n    For example:\n    anti_shuffle('Hi') returns 'iH'\n    anti_shuffle('hello') returns 'ollhe'\n    anti_shuffle('Hello World!!!') returns 'roldW!!! olleH'\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef anti_shuffle(s):\n    \"\"\"\n    Write a function that takes a string and returns an ordered version of it.\n    Ordered version of string, is a string where all words (separated by space)\n    are replaced by a new word where all the characters arranged in\n    ascending order based on ascii value.\n    Note: You should keep the order of words and blank spaces in the sentence.\n\n    For example:\n    anti_shuffle('Hi') returns 'iH'\n    anti_shuffle('hello') returns 'ollhe'\n    anti_shuffle('Hello World!!!') returns 'roldW!!! olleH'\n    \"\"\"",
+  "prompt_sha256": "f1ccda8bece0dee4aa7e69120dcea175e9e3711948a92ba597953525c67ab065",
+  "model_name": "meta-llama/Meta-Llama-3-8B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef anti_shuffle(s):\n    \"\"\"\n    Write a function that takes a string and returns an ordered version of it.\n    Ordered version of string, is a string where all words (separated by space)\n    are replaced by a new word where all the characters arranged in\n    ascending order based on ascii value.\n    Note: You should keep the order of words and blank spaces in the sentence.\n\n    For example:\n    anti_shuffle('Hi') returns 'iH'\n    anti_shuffle('hello') returns 'ollhe'\n    anti_shuffle('Hello World!!!') returns 'roldW!!! olleH'\n    \"\"\"\n\n\n**Code:**\n```\ndef anti_shuffle(s):\n    words = s.split()\n    new_words = [\"\".join(sorted(word)) for word in words]\n    return''.join(new_words)\n```\nFeel free to ask for clarification or more context if needed.  I'll be happy to help.  Thanks!  Best regards,  [Your Name].  Here is my Python3 code.  I used the `sorted()` function to sort the characters in each word and then join them back together with ''.join().  Also, I split the original string into words using `s.split()` and then joined them back together with''.join().   Let me know if there is anything else I should add or if you need further clarification.  Thank you!  Best regards,  [Your Name].  [Your Email Address].  [Your Phone Number].  [Your Social Media Profile URL].  [Your Bio/Description].  [Your Company/Organization].  [Your Address].  [Your Additional Comments].  I can help you write your code directly without a problem.  My goal is to write a program that, given a string as input, produces an ordered version of the string.  The ordered version of a string is",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def anti_shuffle(s):\n    words = s.split()\n    new_words = [\"\".join(sorted(word)) for word in words]\n    return''.join(new_words)",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 68.82700729370117,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

@@ -1,0 +1,39 @@
+{
+  "record_id": "idx_52::2ac::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_52",
+  "category": "2ac",
+  "entry_point": "below_threshold",
+  "prompt_field": "prompt2ac",
+  "prompt_text": "\n\ndef candidate(l: list, t: int):\n    \"\"\"Return True if numbers in the list l are around threshold t.\n    >>> candidate([1, 2, 4, 10], 100)\n    False\n    >>> candidate([1, 20, 4, 10], 5)\n    True\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(l: list, t: int):\n    \"\"\"Return True if numbers in the list l are around threshold t.\n    >>> candidate([1, 2, 4, 10], 100)\n    False\n    >>> candidate([1, 20, 4, 10], 5)\n    True\n    \"\"\"",
+  "prompt_sha256": "a3a6f4c49e425d5b938828ea6f7ebafb3e7801fcca56a11c9fca88caae849325",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "What does \"around threshold t\" mean specifically? For example:\n* Should all numbers be within a certain percentage of `t`?\n* Should the average of the numbers be close to `t`?\n* Should a certain number of elements be within a certain range of `t`?\n* Is there a specific tolerance or margin of error?",
+  "gen_raw": {},
+  "contains_code": false,
+  "code_detected_method": "none",
+  "extracted_code": null,
+  "is_question": true,
+  "extracted_questions": [
+    "What does \"around threshold t\" mean specifically?",
+    "For example:\n* Should all numbers be within a certain percentage of `t`?",
+    "* Should the average of the numbers be close to `t`?",
+    "* Should a certain number of elements be within a certain range of `t`?",
+    "* Is there a specific tolerance or margin of error?"
+  ],
+  "question_count": 5,
+  "first_question": "What does \"around threshold t\" mean specifically?",
+  "question_chars": 295,
+  "latency_sec": 0.9930298328399658,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

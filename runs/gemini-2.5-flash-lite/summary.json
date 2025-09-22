@@ -1,0 +1,19 @@
+{
+  "schema_version": "comm-v2.1",
+  "model": "gemini-2.5-flash-lite",
+  "base_items": 164,
+  "expanded_rows": 771,
+  "communication_rate": 0.21011673151750973,
+  "non_code_responses": 162,
+  "runtime_sec": 3081.716199159622,
+  "categories": [
+    "1a",
+    "1c",
+    "1p",
+    "2ac",
+    "2ap",
+    "2cp",
+    "3acp"
+  ],
+  "results_file": "results.jsonl"
+}

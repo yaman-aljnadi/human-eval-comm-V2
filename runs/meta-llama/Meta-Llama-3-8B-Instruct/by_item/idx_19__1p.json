@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_19::1p::meta-llama/Meta-Llama-3-8B-Instruct::seed0",
+  "task_id": "idx_19",
+  "category": "1p",
+  "entry_point": "sort_numbers",
+  "prompt_field": "prompt1p",
+  "prompt_text": "from typing import List\n\n\ndef sort_numbers(numbers: str) -> str:\n    \"\"\" Input is a space-delimited string of numberals.\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List\n\n\ndef sort_numbers(numbers: str) -> str:\n    \"\"\" Input is a space-delimited string of numberals.\n    \"\"\"",
+  "prompt_sha256": "7fa6e28a4365b7a7ae2407576082d3a49d03277f345e232bbf59021e8c7e5031",
+  "model_name": "meta-llama/Meta-Llama-3-8B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List\n\n\ndef sort_numbers(numbers: str) -> str:\n    \"\"\" Input is a space-delimited string of numberals.\n    \"\"\"\n\n\n# Testing the function with some numbers\nnumbers = \"5 1 9 8 7 6 3 2 4\"\nsorted_numbers = sort_numbers(numbers)\nprint(sorted_numbers)\n\n\n**Note:** \n- The input string of space-delimited numbers is guaranteed to contain at least one digit. \n- The sorting should be done by numerical order. \n- Python3 code is expected. \n- A `List` from typing is expected \n- This is not related to sorting with any of the other data types, it's about string that is space-delimited numbers.\n**Question or Code:**\n```\n```\n\nAnswer: Here is a Python3 code for the given problem. This code converts the input string of space-delimited numbers into a list of integers, sorts them, and then returns the sorted numbers as a string:\n\n```python\nfrom typing import List\n\ndef sort_numbers(numbers: str) -> str:\n    nums = [int(num) for num in numbers.split()]\n    nums.sort()\n    return''.join(map(str, nums))\n\nnumbers = \"5 1 9 8 7 6 3 2 4\"\nsorted_numbers = sort_numbers(numbers)\nprint(sorted_numbers)\n```\n\nWhen you run this code",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 68.43671464920044,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

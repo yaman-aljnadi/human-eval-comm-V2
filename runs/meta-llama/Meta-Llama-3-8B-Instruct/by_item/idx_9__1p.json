@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_9::1p::meta-llama/Meta-Llama-3-8B-Instruct::seed0",
+  "task_id": "idx_9",
+  "category": "1p",
+  "entry_point": "rolling_max",
+  "prompt_field": "prompt1p",
+  "prompt_text": "from typing import List, Tuple\n\n\ndef rolling_max(numbers: List[int]) -> List[int]:\n    \"\"\" From a given list of integers, generate a list of rolling element.\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List, Tuple\n\n\ndef rolling_max(numbers: List[int]) -> List[int]:\n    \"\"\" From a given list of integers, generate a list of rolling element.\n    \"\"\"",
+  "prompt_sha256": "419983dc014275ac6680dd8e87cb8d4d44f09e8bb81e85d43bb855b783629b0a",
+  "model_name": "meta-llama/Meta-Llama-3-8B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List, Tuple\n\n\ndef rolling_max(numbers: List[int]) -> List[int]:\n    \"\"\" From a given list of integers, generate a list of rolling element.\n    \"\"\"\n\n\n    roll = [0,0,0,0,0]\n    maxval = 0\n    res = []\n\n    # generate rolling maxima\n    for i in range(len(roll)):\n        if numbers[i] > maxval:\n            maxval = numbers[i]\n        if numbers[i] > roll[i]:\n            roll[i] = numbers[i]\n        if numbers[i] > roll[(i+1) % len(roll)]:\n            roll[(i+1) % len(roll)] = numbers[i]\n\n    for n in roll:\n        res.extend([n]*4)\n\n    return res\n\n# Rolling max is when considering current and 3 previous elements, you need to determine which one is maximum.  Then, you roll 4 times, and keep track of previous 4 maximum.\n# rolling_max([1, 2, 4, 3]) output should be [2, 4, 4, 4]\n# rolling_max([2, 4, 2, 4]) output should be [4, 4, 4, 4]\n\nNote: The above comments were provided for clarification but did not impact the code-generation task.   |  Python\n```python\ndef rolling_max",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def rolling_max(numbers: List[int]) -> List[int]:\n    \"\"\" From a given list of integers, generate a list of rolling element.\n    \"\"\"\n\n\n    roll = [0,0,0,0,0]\n    maxval = 0\n    res = []\n\n    # generate rolling maxima\n    for i in range(len(roll)):\n        if numbers[i] > maxval:\n            maxval = numbers[i]\n        if numbers[i] > roll[i]:\n            roll[i] = numbers[i]\n        if numbers[i] > roll[(i+1) % len(roll)]:\n            roll[(i+1) % len(roll)] = numbers[i]\n\n    for n in roll:\n        res.extend([n]*4)\n\n    return res\n\n# Rolling max is when considering current and 3 previous elements, you need to determine which one is maximum.  Then, you roll 4 times, and keep track of previous 4 maximum.\n# rolling_max([1, 2, 4, 3]) output should be [2, 4, 4, 4]\n# rolling_max([2, 4, 2, 4]) output should be [4, 4, 4, 4]\n\nNote: The above comments were provided for clarification but did not impact the code-generation task.   |  Python\n```python\ndef rolling_max",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 68.19285845756531,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

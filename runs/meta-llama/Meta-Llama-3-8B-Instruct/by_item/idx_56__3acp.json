@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_56::3acp::meta-llama/Meta-Llama-3-8B-Instruct::seed0",
+  "task_id": "idx_56",
+  "category": "3acp",
+  "entry_point": "correct_bracketing",
+  "prompt_field": "prompt3acp",
+  "prompt_text": "\n\ndef candidate(brackets: str):\n    \"\"\" brackets is a string of \"<\" and \">\".\n\n    >>> candidate(\"<\")\n    True\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(brackets: str):\n    \"\"\" brackets is a string of \"<\" and \">\".\n\n    >>> candidate(\"<\")\n    True\n    \"\"\"",
+  "prompt_sha256": "cd68cb1b4e22026a1e3a9e7caa4b7826d0a8abb2d2598e88cbe6016ea3d8ba06",
+  "model_name": "meta-llama/Meta-Llama-3-8B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(brackets: str):\n    \"\"\" brackets is a string of \"<\" and \">\".\n\n    >>> candidate(\"<\")\n    True\n    \"\"\" \n    # code\n    if condition1:\n        return True\n    elif condition2:\n        return True\n    else:\n        return False\n```\nWhat should be the condition(s) inside the if-elif-else statement to determine whether the given string is a valid input for a stack-based problem (e.g., HTML/XML parsing, parsing of a bracket-based language)?\n\n\nPlease note that here 'candidate' is a function which filters for potential stack-based problem inputs. Its main goal is to check whether the given input string can be successfully parsed by a hypothetical stack-based parser. In other words, it's a validity check for a string. \nFor example, if a hypothetical stack-based parser can successfully parse the string \"</>\", it will return True; otherwise, it will return False. \n\nGiven that the hypothetical parser would stop as soon as it encounters a \">\", this code should return True for strings ending with \">\", False for strings starting with \"<\", and possibly return False for strings like \"<><\" or \"><\". \n\nRemember, the input string solely consists of \"<\" and \">\". Please ensure your Python code accurately captures the essence of this condition. \n\n(Note: Although your code should accurately capture the essence, it is essential to note that it may",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def candidate(brackets: str):\n    \"\"\" brackets is a string of \"<\" and \">\".\n\n    >>> candidate(\"<\")\n    True\n    \"\"\" \n    # code\n    if condition1:\n        return True\n    elif condition2:\n        return True\n    else:\n        return False\n```\nWhat should be the condition(s) inside the if-elif-else statement to determine whether the given string is a valid input for a stack-based problem (e.g., HTML/XML parsing, parsing of a bracket-based language)?\n\n\nPlease note that here 'candidate' is a function which filters for potential stack-based problem inputs. Its main goal is to check whether the given input string can be successfully parsed by a hypothetical stack-based parser. In other words, it's a validity check for a string. \nFor example, if a hypothetical stack-based parser can successfully parse the string \"</>\", it will return True; otherwise, it will return False. \n\nGiven that the hypothetical parser would stop as soon as it encounters a \">\", this code should return True for strings ending with \">\", False for strings starting with \"<\", and possibly return False for strings like \"<><\" or \"><\". \n\nRemember, the input string solely consists of \"<\" and \">\". Please ensure your Python code accurately captures the essence of this condition. \n\n(Note: Although your code should accurately capture the essence, it is essential to note that it may",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 64.92198705673218,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_137::1p::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_137",
+  "category": "1p",
+  "entry_point": "compare_one",
+  "prompt_field": "prompt1p",
+  "prompt_text": "\ndef compare_one(a, b):\n    \"\"\"\n    Create a function that takes integers, floats, or strings representing\n    real numbers, and returns the \n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef compare_one(a, b):\n    \"\"\"\n    Create a function that takes integers, floats, or strings representing\n    real numbers, and returns the \n    \"\"\"",
+  "prompt_sha256": "49ee36e1e291d0cb8bf317b5eed87e92067f33b8e5072a8fb9a45c7c64c68cd7",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef compare_one(a, b):\n    \"\"\"\n    Compares two numbers (integers, floats, or strings representing real numbers)\n    and returns:\n    -1 if a < b\n     0 if a == b\n     1 if a > b\n\n    Handles potential ValueError if strings cannot be converted to floats.\n    \"\"\"\n    try:\n        num_a = float(a)\n        num_b = float(b)\n    except (ValueError, TypeError):\n        # If conversion to float fails for either, we can't reliably compare\n        # numerically in this context. Returning None or raising an error\n        # would be other options, but for this problem, we assume valid inputs\n        # or that non-numeric strings should be treated distinctly.\n        # For string comparison when numbers fail, we fall back to direct comparison.\n        if a < b:\n            return -1\n        elif a == b:\n            return 0\n        else:\n            return 1\n\n    if num_a < num_b:\n        return -1\n    elif num_a == num_b:\n        return 0\n    else:",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def compare_one(a, b):\n    \"\"\"\n    Compares two numbers (integers, floats, or strings representing real numbers)\n    and returns:\n    -1 if a < b\n     0 if a == b\n     1 if a > b\n\n    Handles potential ValueError if strings cannot be converted to floats.\n    \"\"\"\n    try:\n        num_a = float(a)\n        num_b = float(b)\n    except (ValueError, TypeError):\n        # If conversion to float fails for either, we can't reliably compare\n        # numerically in this context. Returning None or raising an error\n        # would be other options, but for this problem, we assume valid inputs\n        # or that non-numeric strings should be treated distinctly.\n        # For string comparison when numbers fail, we fall back to direct comparison.\n        if a < b:\n            return -1\n        elif a == b:\n            return 0\n        else:\n            return 1\n\n    if num_a < num_b:\n        return -1\n    elif num_a == num_b:\n        return 0\n    else:",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 1.350935697555542,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

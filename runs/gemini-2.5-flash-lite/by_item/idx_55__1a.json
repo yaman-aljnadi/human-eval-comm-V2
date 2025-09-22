@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_55::1a::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_55",
+  "category": "1a",
+  "entry_point": "fib",
+  "prompt_field": "prompt1a",
+  "prompt_text": "\n\ndef candidate(n: int):\n    \"\"\"Return a number that satisfies a specific condition (such as being n-th Prime number, being n-th Fibonacci number, or meeting another specific condition).\n    >>> candidate(10)\n    55\n    >>> candidate(1)\n    1\n    >>> candidate(8)\n    21\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(n: int):\n    \"\"\"Return a number that satisfies a specific condition (such as being n-th Prime number, being n-th Fibonacci number, or meeting another specific condition).\n    >>> candidate(10)\n    55\n    >>> candidate(1)\n    1\n    >>> candidate(8)\n    21\n    \"\"\"",
+  "prompt_sha256": "5392b719603b8b0ec5b4751d45023ef61f5b47d53b125fd0bd6012d5882c59dd",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef candidate(n: int):\n    \"\"\"Return a number that satisfies a specific condition (such as being n-th Prime number, being n-th Fibonacci number, or meeting another specific condition).\n    >>> candidate(10)\n    55\n    >>> candidate(1)\n    1\n    >>> candidate(8)\n    21\n    \"\"\"\n    if n <= 0:\n        raise ValueError(\"Input must be a positive integer.\")\n    if n == 1:\n        return 1\n    \n    a, b = 0, 1\n    for _ in range(2, n + 1):\n        a, b = b, a + b\n    return b\n\n```",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def candidate(n: int):\n    \"\"\"Return a number that satisfies a specific condition (such as being n-th Prime number, being n-th Fibonacci number, or meeting another specific condition).\n    >>> candidate(10)\n    55\n    >>> candidate(1)\n    1\n    >>> candidate(8)\n    21\n    \"\"\"\n    if n <= 0:\n        raise ValueError(\"Input must be a positive integer.\")\n    if n == 1:\n        return 1\n    \n    a, b = 0, 1\n    for _ in range(2, n + 1):\n        a, b = b, a + b\n    return b",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 1.5690569877624512,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

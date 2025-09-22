@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_47::2ac::meta-llama/Meta-Llama-3-8B-Instruct::seed0",
+  "task_id": "idx_47",
+  "category": "2ac",
+  "entry_point": "median",
+  "prompt_field": "prompt2ac",
+  "prompt_text": "\n\ndef candidate(l: list):\n    \"\"\"Return max or median of elements in the list l.\n    >>> candidate([3, 1, 2, 4, 5])\n    5\n    >>> candidate([-10, 4, 6, 1000, 10, 20])\n    1000\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(l: list):\n    \"\"\"Return max or median of elements in the list l.\n    >>> candidate([3, 1, 2, 4, 5])\n    5\n    >>> candidate([-10, 4, 6, 1000, 10, 20])\n    1000\n    \"\"\"",
+  "prompt_sha256": "b67f120d84e6acecea4451b2c7e59a6ac97c4cfb62b06d8a5bc446183a9c4bdf",
+  "model_name": "meta-llama/Meta-Llama-3-8B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(l: list):\n    \"\"\"Return max or median of elements in the list l.\n    >>> candidate([3, 1, 2, 4, 5])\n    5\n    >>> candidate([-10, 4, 6, 1000, 10, 20])\n    1000\n    \"\"\"\"\n\n# Additional information (if provided):\n\n* This function can handle empty lists and should return None in these cases.\n* It would also be great if this function could handle non-integer numbers.\n* You do not need to worry about the time complexity of the solution.\n\n# Example of an empty list and a list with non-integer numbers:\n\ncandidate([])\ncandidate([1, 2, 'a', 3, 4])\ncandidate([1, 2, 3, 4, 'a', 5])\n\n# Here is a simple implementation that fails to handle the empty list and non-integer numbers. This is provided to help us better understand what the function should do.\n\ndef old_candidate(l: list):\n    if not l:\n        return None\n    l.sort()\n    if len(l) % 2 == 1:\n        return l[-1]\n    else:\n        return (l[-1] + l[-2]) / 2\n````\n</pre>\n<p align=\"center\">\n[<img src=\"https://res.cloudinary.com/practicaldev/image/fetch/f-auto,dpr-auto,q_90,w_1600/crs0%2Ca_240X400%2Cfl_progressive_from_proxy,fl_inter",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def candidate(l: list):\n    \"\"\"Return max or median of elements in the list l.\n    >>> candidate([3, 1, 2, 4, 5])\n    5\n    >>> candidate([-10, 4, 6, 1000, 10, 20])\n    1000\n    \"\"\"\"\n\n# Additional information (if provided):\n\n* This function can handle empty lists and should return None in these cases.\n* It would also be great if this function could handle non-integer numbers.\n* You do not need to worry about the time complexity of the solution.\n\n# Example of an empty list and a list with non-integer numbers:\n\ncandidate([])\ncandidate([1, 2, 'a', 3, 4])\ncandidate([1, 2, 3, 4, 'a', 5])\n\n# Here is a simple implementation that fails to handle the empty list and non-integer numbers. This is provided to help us better understand what the function should do.\n\ndef old_candidate(l: list):\n    if not l:\n        return None\n    l.sort()\n    if len(l) % 2 == 1:\n        return l[-1]\n    else:\n        return (l[-1] + l[-2]) / 2\n````\n</pre>\n<p align=\"center\">\n[<img src=\"https://res.cloudinary.com/practicaldev/image/fetch/f-auto,dpr-auto,q_90,w_1600/crs0%2Ca_240X400%2Cfl_progressive_from_proxy,fl_inter",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 69.33946228027344,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

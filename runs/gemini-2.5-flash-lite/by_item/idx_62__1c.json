@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_62::1c::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_62",
+  "category": "1c",
+  "entry_point": "derivative",
+  "prompt_field": "prompt1c",
+  "prompt_text": "\n\ndef derivative(xs: list):\n    \"\"\" xs represent coefficients of a polynomial.\n    xs[0] + xs[1] * x + xs[2] * x^2 + ....\n     Return derivative of this polynomial in the same form.\n    >>> derivative([3, 1, 2, 4, 5])\n    [20, 12, 4, 1]\n    >>> derivative([1, 2, 3])\n    [6, 2]\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef derivative(xs: list):\n    \"\"\" xs represent coefficients of a polynomial.\n    xs[0] + xs[1] * x + xs[2] * x^2 + ....\n     Return derivative of this polynomial in the same form.\n    >>> derivative([3, 1, 2, 4, 5])\n    [20, 12, 4, 1]\n    >>> derivative([1, 2, 3])\n    [6, 2]\n    \"\"\"",
+  "prompt_sha256": "cf19de558df86129ae6ec8b0414a3e42c3ceee7ec480e5538d6286443ecfd2ef",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef derivative(xs: list):\n    \"\"\" xs represent coefficients of a polynomial.\n    xs[0] + xs[1] * x + xs[2] * x^2 + ....\n     Return derivative of this polynomial in the same form.\n    >>> derivative([3, 1, 2, 4, 5])\n    [20, 12, 4, 1]\n    >>> derivative([1, 2, 3])\n    [6, 2]\n    \"\"\"\n    if not xs or len(xs) == 1:\n        return []\n\n    # The derivative of a constant term (xs[0]) is 0.\n    # The derivative of xs[i] * x^i is i * xs[i] * x^(i-1)\n    # So, the new coefficient for x^(i-1) will be i * xs[i].\n    # We iterate from the second element of xs (index 1).\n    return [i * xs[i] for i in range(1, len(xs))]\n```",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def derivative(xs: list):\n    \"\"\" xs represent coefficients of a polynomial.\n    xs[0] + xs[1] * x + xs[2] * x^2 + ....\n     Return derivative of this polynomial in the same form.\n    >>> derivative([3, 1, 2, 4, 5])\n    [20, 12, 4, 1]\n    >>> derivative([1, 2, 3])\n    [6, 2]\n    \"\"\"\n    if not xs or len(xs) == 1:\n        return []\n\n    # The derivative of a constant term (xs[0]) is 0.\n    # The derivative of xs[i] * x^i is i * xs[i] * x^(i-1)\n    # So, the new coefficient for x^(i-1) will be i * xs[i].\n    # We iterate from the second element of xs (index 1).\n    return [i * xs[i] for i in range(1, len(xs))]",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 1.840078592300415,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

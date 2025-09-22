@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_19::1a::andrijdavid/Meta-Llama-3-13B-Instruct::seed0",
+  "task_id": "idx_19",
+  "category": "1a",
+  "entry_point": "sort_numbers",
+  "prompt_field": "prompt1a",
+  "prompt_text": "from typing import List\n\n\ndef candidate(numbers: str) -> str:\n    \"\"\" Input is a space-delimited string of numberals from 'zero' to 'nine'.\n    Valid choices are 'zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight' and 'nine'.\n    Return the string with numbers in a certain order (sorted descendingly or ascendingly or another order) \n    >>> candidate('three one five')\n    'one three five'\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List\n\n\ndef candidate(numbers: str) -> str:\n    \"\"\" Input is a space-delimited string of numberals from 'zero' to 'nine'.\n    Valid choices are 'zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight' and 'nine'.\n    Return the string with numbers in a certain order (sorted descendingly or ascendingly or another order) \n    >>> candidate('three one five')\n    'one three five'\n    \"\"\"",
+  "prompt_sha256": "e646a6b5eb83ad942c0e93b6148500e55203add1570502728bcd99f61ab04aaa",
+  "model_name": "andrijdavid/Meta-Llama-3-13B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List\n\n\ndef candidate(numbers: str) -> str:\n    \"\"\" Input is a space-delimited string of numberals from 'zero' to 'nine'.\n    Valid choices are 'zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight' and 'nine'.\n    Return the string with numbers in a certain order (sorted descendingly or ascendingly or another order) \n    >>> candidate('three one five')\n    'one three five'\n    \"\"\"�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量№№�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量láda�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量láda�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量 Numeric�数量�数量�数�数�数�数�数�数�数�数�数�数�数�数�数�数",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def candidate(numbers: str) -> str:\n    \"\"\" Input is a space-delimited string of numberals from 'zero' to 'nine'.\n    Valid choices are 'zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight' and 'nine'.\n    Return the string with numbers in a certain order (sorted descendingly or ascendingly or another order) \n    >>> candidate('three one five')\n    'one three five'\n    \"\"\"�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量№№�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量láda�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量láda�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量�数量 Numeric�数量�数量�数�数�数�数�数�数�数�数�数�数�数�数�数�数",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 92.57085275650024,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

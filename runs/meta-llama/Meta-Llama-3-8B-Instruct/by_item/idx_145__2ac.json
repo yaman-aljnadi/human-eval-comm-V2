@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_145::2ac::meta-llama/Meta-Llama-3-8B-Instruct::seed0",
+  "task_id": "idx_145",
+  "category": "2ac",
+  "entry_point": "order_by_points",
+  "prompt_field": "prompt2ac",
+  "prompt_text": "\ndef candidate(nums):\n    \"\"\"\n    Write a function which sorts the given list of integers\n    in descending or ascending order according to the sum of their digits.\n    Note: if there are several items with similar sum of their digits,\n    order them based on their index in original list.\n\n    For example:\n    >>> candidate([1, 11, -1, -11, -12]) == [1, 11, -1, -12, -11]\n    >>> candidate([]) == []\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(nums):\n    \"\"\"\n    Write a function which sorts the given list of integers\n    in descending or ascending order according to the sum of their digits.\n    Note: if there are several items with similar sum of their digits,\n    order them based on their index in original list.\n\n    For example:\n    >>> candidate([1, 11, -1, -11, -12]) == [1, 11, -1, -12, -11]\n    >>> candidate([]) == []\n    \"\"\"",
+  "prompt_sha256": "781253ed2fae9474fee6ab268b3eb35326b62373267f35b7ac3627f06e17f969",
+  "model_name": "meta-llama/Meta-Llama-3-8B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(nums):\n    \"\"\"\n    Write a function which sorts the given list of integers\n    in descending or ascending order according to the sum of their digits.\n    Note: if there are several items with similar sum of their digits,\n    order them based on their index in original list.\n\n    For example:\n    >>> candidate([1, 11, -1, -11, -12]) == [1, 11, -1, -12, -11]\n    >>> candidate([]) == []\n    \"\"\"\n\n\n```python\ndef candidate(nums):\n    # TO DO\n    pass\n```\n```\n\nPlease ask clarifying questions before attempting to solve the problem. What I would like to know is whether my understanding of the problem is correct. For instance, are we allowed to use built-in sorting functions? Or are we required to implement a sorting algorithm manually? Are there any specific edge cases that we should be aware of, such as what to do with an empty input list or a list containing only one element? \n\nThank you for pointing out any mistakes I might make. I'll make sure to write clean and readable code, and explain my thought process. \n\nI will be writing code in Python 3. \n\nPlease clarify the following:\n* Are we allowed to use built-in sorting functions or do we need to implement a custom sorting algorithm?\n* How do we handle ties (e.g., if two or more elements have the same sum of digits, but are in different order in the original list)?\n* Are there any specific edge cases we should be aware of, like what to do with an empty input list or a list containing only one element?\n* Are there any specific requirements for performance, like time or space complexity?\n\nOnce I have clarified my understanding, I will",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def candidate(nums):\n    # TO DO\n    pass",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 67.40983843803406,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

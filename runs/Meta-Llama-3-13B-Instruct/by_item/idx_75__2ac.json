@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_75::2ac::andrijdavid/Meta-Llama-3-13B-Instruct::seed0",
+  "task_id": "idx_75",
+  "category": "2ac",
+  "entry_point": "is_multiply_prime",
+  "prompt_field": "prompt2ac",
+  "prompt_text": "\ndef is_multiply_prime(a):\n    \"\"\"Write a function that returns true if the given number is the multiplication of K prime numbers\n    and false otherwise.\n    Knowing that (a) is less then 100. \n    Example:\n    is_multiply_prime(30) == False\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef is_multiply_prime(a):\n    \"\"\"Write a function that returns true if the given number is the multiplication of K prime numbers\n    and false otherwise.\n    Knowing that (a) is less then 100. \n    Example:\n    is_multiply_prime(30) == False\n    \"\"\"",
+  "prompt_sha256": "0a4fe88c7cc99c5473b4a1ac5a334b85bb956c74e0ecedf6968b6b3e4410c8c5",
+  "model_name": "andrijdavid/Meta-Llama-3-13B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef is_multiply_prime(a):\n    \"\"\"Write a function that returns true if the given number is the multiplication of K prime numbers\n    and false otherwise.\n    Knowing that (a) is less then 100. \n    Example:\n    is_multiply_prime(30) == False\n    \"\"\"ascuscription:- \n    The function should return true if given number is the product of K prime numbers \n    otherwise false \n    K prime numbers means \n   prime numbers less than 100 \n\negs:\nprime numbers less than 100 are \n2nd prime number 3rd prime number 4thprime numbers \nprime numbers less than100 \n\nPrime numbers less than100 \negs:- \nprime numbers less than100 \n eggs:- \n prime numbers less than100 \n prime numbers less than100 \n prime numbers less than100 \n prime numbers less than100 \n prime numbers less than100 \n prime numbers less than100 \n\nprime numbers less than100 \n prime numbers less than100 \n prime numbers less than100 \n prime numbers less than100 \n prime numbers less than100 \n prime numbers less than100 \n prime numbers less than100 \nprime numbers less than100 \n\nprime numbers less than100 \nprime numbers less than100 \n prime numbers less than100 \n prime numbers less than100 \n prime numbers less than100 \n\n prime numbers less than100 \nprime numbers less than100 \n\nprime numbers less than100 \n prime numbers less than100 \n prime numbers less than100 \nprime numbers less than100 \n\n prime numbers less than100 \n prime numbers less than100 \n\n prime numbers less",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def is_multiply_prime(a):\n    \"\"\"Write a function that returns true if the given number is the multiplication of K prime numbers\n    and false otherwise.\n    Knowing that (a) is less then 100. \n    Example:\n    is_multiply_prime(30) == False\n    \"\"\"ascuscription:- \n    The function should return true if given number is the product of K prime numbers \n    otherwise false \n    K prime numbers means \n   prime numbers less than 100 \n\negs:\nprime numbers less than 100 are \n2nd prime number 3rd prime number 4thprime numbers \nprime numbers less than100 \n\nPrime numbers less than100 \negs:- \nprime numbers less than100 \n eggs:- \n prime numbers less than100 \n prime numbers less than100 \n prime numbers less than100 \n prime numbers less than100 \n prime numbers less than100 \n prime numbers less than100 \n\nprime numbers less than100 \n prime numbers less than100 \n prime numbers less than100 \n prime numbers less than100 \n prime numbers less than100 \n prime numbers less than100 \n prime numbers less than100 \nprime numbers less than100 \n\nprime numbers less than100 \nprime numbers less than100 \n prime numbers less than100 \n prime numbers less than100 \n prime numbers less than100 \n\n prime numbers less than100 \nprime numbers less than100 \n\nprime numbers less than100 \n prime numbers less than100 \n prime numbers less than100 \nprime numbers less than100 \n\n prime numbers less than100 \n prime numbers less than100 \n\n prime numbers less",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 90.76701927185059,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

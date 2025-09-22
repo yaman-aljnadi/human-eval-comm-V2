@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_82::2cp::andrijdavid/Meta-Llama-3-13B-Instruct::seed0",
+  "task_id": "idx_82",
+  "category": "2cp",
+  "entry_point": "prime_length",
+  "prompt_field": "prompt2cp",
+  "prompt_text": "\ndef candidate(string):\n    \"\"\"\n    Examples\n    candidate('Hello') == False\n    candidate('abcdcba') == False\n    candidate('kittens') == False\n    candidate('orange') == True\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(string):\n    \"\"\"\n    Examples\n    candidate('Hello') == False\n    candidate('abcdcba') == False\n    candidate('kittens') == False\n    candidate('orange') == True\n    \"\"\"",
+  "prompt_sha256": "690dceb0a659dd96692a2205aed224021e3ff66ac5cc4f1850ece1a3dad14b07",
+  "model_name": "andrijdavid/Meta-Llama-3-13B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(string):\n    \"\"\"\n    Examples\n    candidate('Hello') == False\n    candidate('abcdcba') == False\n    candidate('kittens') == False\n    candidate('orange') == True\n    \"\"\"\n\n\nplease provide your code answer within 180 characters or less directly below this question mark \nascoypthon codeasaertosascoypthon codeasaertsasoascoypthon codeasaertsasoascoypthon codeasaertsasoascoyphtoascoyphto codeasaertosascoyphto codeasaertsasoascoyphto codeasaertsasoascoyphto codeasaertsasoascoyphto codeasaertsasoascoyphto codeasaertsasoascoyphto codeasaertsasoascoyphto codeasaertsasoascoyphto codeasaertsasoascoyphto codeasaertsasoascoyphto codeasaertsasoascoyphto codeasaertsasoascoyphto codeasaertsasoascoyphto codeasaertsasoascoyphto codeasaertsasoascoyphto codeasaertsasoascoyphto codeasaertsasoascoyphto codeasaertsasoascoyphto codeasaertsasoascoyphto codeasaertsasoascoyphto codeasaertsasoascoyphto codeasaertsasoascoyphto codeasaertsasoascoyphto codeasaertsasoascoyphto codeasaertsasaertosascoyphto codeasaerts",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def candidate(string):\n    \"\"\"\n    Examples\n    candidate('Hello') == False\n    candidate('abcdcba') == False\n    candidate('kittens') == False\n    candidate('orange') == True\n    \"\"\"\n\n\nplease provide your code answer within 180 characters or less directly below this question mark \nascoypthon codeasaertosascoypthon codeasaertsasoascoypthon codeasaertsasoascoypthon codeasaertsasoascoyphtoascoyphto codeasaertosascoyphto codeasaertsasoascoyphto codeasaertsasoascoyphto codeasaertsasoascoyphto codeasaertsasoascoyphto codeasaertsasoascoyphto codeasaertsasoascoyphto codeasaertsasoascoyphto codeasaertsasoascoyphto codeasaertsasoascoyphto codeasaertsasoascoyphto codeasaertsasoascoyphto codeasaertsasoascoyphto codeasaertsasoascoyphto codeasaertsasoascoyphto codeasaertsasoascoyphto codeasaertsasoascoyphto codeasaertsasoascoyphto codeasaertsasoascoyphto codeasaertsasoascoyphto codeasaertsasoascoyphto codeasaertsasoascoyphto codeasaertsasoascoyphto codeasaertsasoascoyphto codeasaertsasaertosascoyphto codeasaerts",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 92.613356590271,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

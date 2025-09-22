@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_91::1c::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_91",
+  "category": "1c",
+  "entry_point": "is_bored",
+  "prompt_field": "prompt1c",
+  "prompt_text": "\ndef is_bored(S):\n    \"\"\"\n    You'll be given a string of words, and your task is to count the number\n    of boredoms. A boredom is a sentence that starts with the word \"I\".\n    Sentences are delimited by '.', '?' or '!'.\n   \n    For example:\n    >>> is_bored(\"Hello world\")\n    1\n    >>> is_bored(\"The sky is blue. The sun is shining. I love this weather\")\n    3\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef is_bored(S):\n    \"\"\"\n    You'll be given a string of words, and your task is to count the number\n    of boredoms. A boredom is a sentence that starts with the word \"I\".\n    Sentences are delimited by '.', '?' or '!'.\n   \n    For example:\n    >>> is_bored(\"Hello world\")\n    1\n    >>> is_bored(\"The sky is blue. The sun is shining. I love this weather\")\n    3\n    \"\"\"",
+  "prompt_sha256": "e64fc21632b3b9e3424a4d55f4b25cd1fb9632d443c278d655f17ba0b1134f0d",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "No clarifying questions. I will generate Python3 code.\n\n```python\ndef is_bored(S):\n    \"\"\"\n    You'll be given a string of words, and your task is to count the number\n    of boredoms. A boredom is a sentence that starts with the word \"I\".\n    Sentences are delimited by '.', '?' or '!'.\n\n    For example:\n    >>> is_bored(\"Hello world\")\n    1\n    >>> is_bored(\"The sky is blue. The sun is shining. I love this weather\")\n    3\n    \"\"\"\n    sentence_enders = ['.', '?', '!']\n    sentences = []\n    current_sentence = \"\"\n    for char in S:\n        current_sentence += char\n        if char in sentence_enders:\n            sentences.append(current_sentence.strip())\n            current_sentence = \"\"\n    if current_sentence.strip(): # Add any remaining part of the string as a sentence\n        sentences.append(current_sentence.strip())\n\n    boredom_count = 0\n    for sentence in sentences:\n        if sentence.startswith(\"I \"):\n            boredom_",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def is_bored(S):\n    \"\"\"\n    You'll be given a string of words, and your task is to count the number\n    of boredoms. A boredom is a sentence that starts with the word \"I\".\n    Sentences are delimited by '.', '?' or '!'.\n\n    For example:\n    >>> is_bored(\"Hello world\")\n    1\n    >>> is_bored(\"The sky is blue. The sun is shining. I love this weather\")\n    3\n    \"\"\"\n    sentence_enders = ['.', '?', '!']\n    sentences = []\n    current_sentence = \"\"\n    for char in S:\n        current_sentence += char\n        if char in sentence_enders:\n            sentences.append(current_sentence.strip())\n            current_sentence = \"\"\n    if current_sentence.strip(): # Add any remaining part of the string as a sentence\n        sentences.append(current_sentence.strip())\n\n    boredom_count = 0\n    for sentence in sentences:\n        if sentence.startswith(\"I \"):\n            boredom_",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 1.6507489681243896,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

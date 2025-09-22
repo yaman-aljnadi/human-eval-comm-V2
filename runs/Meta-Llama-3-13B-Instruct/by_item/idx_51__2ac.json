@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_51::2ac::andrijdavid/Meta-Llama-3-13B-Instruct::seed0",
+  "task_id": "idx_51",
+  "category": "2ac",
+  "entry_point": "remove_vowels",
+  "prompt_field": "prompt2ac",
+  "prompt_text": "\n\ndef candidate(text):\n    \"\"\"\n    candidate is a function that takes string and returns string with or without vowels.\n    >>> candidate('')\n    ''\n    >>> candidate(\"abcdef\\nghijklm\")\n    'aei'\n    >>> candidate('abcdef')\n    'ae'\n    >>> candidate('aaaaa')\n    'aaaaa'\n    >>> candidate('aaBAA')\n    'aaAA'\n    >>> candidate('zbcd')\n    ''\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(text):\n    \"\"\"\n    candidate is a function that takes string and returns string with or without vowels.\n    >>> candidate('')\n    ''\n    >>> candidate(\"abcdef\\nghijklm\")\n    'aei'\n    >>> candidate('abcdef')\n    'ae'\n    >>> candidate('aaaaa')\n    'aaaaa'\n    >>> candidate('aaBAA')\n    'aaAA'\n    >>> candidate('zbcd')\n    ''\n    \"\"\"",
+  "prompt_sha256": "4997c7db3def965389597a89628a962d92789705192bd2442b5eab99bf7d5637",
+  "model_name": "andrijdavid/Meta-Llama-3-13B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(text):\n    \"\"\"\n    candidate is a function that takes string and returns string with or without vowels.\n    >>> candidate('')\n    ''\n    >>> candidate(\"abcdef\\nghijklm\")\n    'aei'\n    >>> candidate('abcdef')\n    'ae'\n    >>> candidate('aaaaa')\n    'aaaaa'\n    >>> candidate('aaBAA')\n    'aaAA'\n    >>> candidate('zbcd')\n    ''\n    \"\"\"TEGERations\n\n please provide a Python3 code that processes these \n\n827 views\n asked Octobersoberly\n accepted Octobersoberly\n asked Octobersoberly\n closed Octobersoberly\n accepted Octobersoberly\n accepted Octobersoberly\n accepted Octobersoberly\n accepted Octobersoberly\n accepted Octobersoberly\n accepted Octobersoberly\n accepted Octobersoberly\n accepted Octobersoberly\n accepted Octobersoberly\n accepted Octobersoberly\n accepted OctoborsOberly\n accepted Octobersoberly\n accepted Octobersoberly\n accepted Octobersoberly\n accepted Octobersoberly\n accepted Octobersoberly\n accepted Octobersoberly\n accepted Octobersoberly\n accepted Octobersoberly\n accepted Octobersoberly\n accepted Octobersoberly\n accepted Octobersoberly\n accepted Octobersoberly\n accepted Octobersoberly\n accepted Octobersoberly\n accepted Octobersoberly\n accepted",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def candidate(text):\n    \"\"\"\n    candidate is a function that takes string and returns string with or without vowels.\n    >>> candidate('')\n    ''\n    >>> candidate(\"abcdef\\nghijklm\")\n    'aei'\n    >>> candidate('abcdef')\n    'ae'\n    >>> candidate('aaaaa')\n    'aaaaa'\n    >>> candidate('aaBAA')\n    'aaAA'\n    >>> candidate('zbcd')\n    ''\n    \"\"\"TEGERations\n\n please provide a Python3 code that processes these \n\n827 views\n asked Octobersoberly\n accepted Octobersoberly\n asked Octobersoberly\n closed Octobersoberly\n accepted Octobersoberly\n accepted Octobersoberly\n accepted Octobersoberly\n accepted Octobersoberly\n accepted Octobersoberly\n accepted Octobersoberly\n accepted Octobersoberly\n accepted Octobersoberly\n accepted Octobersoberly\n accepted Octobersoberly\n accepted OctoborsOberly\n accepted Octobersoberly\n accepted Octobersoberly\n accepted Octobersoberly\n accepted Octobersoberly\n accepted Octobersoberly\n accepted Octobersoberly\n accepted Octobersoberly\n accepted Octobersoberly\n accepted Octobersoberly\n accepted Octobersoberly\n accepted Octobersoberly\n accepted Octobersoberly\n accepted Octobersoberly\n accepted Octobersoberly\n accepted Octobersoberly\n accepted",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 90.96641659736633,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

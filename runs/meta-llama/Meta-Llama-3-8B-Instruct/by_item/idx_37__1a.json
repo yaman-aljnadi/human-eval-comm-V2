@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_37::1a::meta-llama/Meta-Llama-3-8B-Instruct::seed0",
+  "task_id": "idx_37",
+  "category": "1a",
+  "entry_point": "sort_even",
+  "prompt_field": "prompt1a",
+  "prompt_text": "\n\ndef candidate(l: list):\n    \"\"\"This function takes a list l and returns a list l' such that\n    l' is identical to l in the odd indicies, while its values at the even indicies are equal\n    to the values of the even indicies of l, but sorted descendingly or ascendingly.\n    >>> candidate([1, 2, 3])\n    [1, 2, 3]\n    >>> candidate([5, 6, 3, 4])\n    [3, 6, 5, 4]\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(l: list):\n    \"\"\"This function takes a list l and returns a list l' such that\n    l' is identical to l in the odd indicies, while its values at the even indicies are equal\n    to the values of the even indicies of l, but sorted descendingly or ascendingly.\n    >>> candidate([1, 2, 3])\n    [1, 2, 3]\n    >>> candidate([5, 6, 3, 4])\n    [3, 6, 5, 4]\n    \"\"\"",
+  "prompt_sha256": "0d04b229de463a2c206452ae0b07fae1d656614db66b9f9be9b4c4e9a5dd8be8",
+  "model_name": "meta-llama/Meta-Llama-3-8B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(l: list):\n    \"\"\"This function takes a list l and returns a list l' such that\n    l' is identical to l in the odd indicies, while its values at the even indicies are equal\n    to the values of the even indicies of l, but sorted descendingly or ascendingly.\n    >>> candidate([1, 2, 3])\n    [1, 2, 3]\n    >>> candidate([5, 6, 3, 4])\n    [3, 6, 5, 4]\n    \"\"\"\n\n\n\n# Code here\n```python\n```\n\nPlease note: Code should be easy to understand, readable and maintainable. Error handling and documentation should also be considered. ```python\n``` ```python\ndef candidate(l: list):\n    return [x if i % 2!= 0 else sorted([i for i in l if i % 2 == 0])[-1] if sorted([i for i in l if i % 2 == 0]).index(i % 2!= 0) else min([i for i in l if i % 2 == 0]) for i, x in enumerate(l)]\n``` ```python\n``` ```python\n#Explanation of code above \nFor any given input, the function goes through the list and checks if the current index (i) is odd. \nIf it is odd, it simply keeps the value at that index.\nIf it is even, it first creates a sorted list of all the elements at even indices, then selects the first or the last element from this sorted list based on whether it was a descending or ascending sort.\nThis ensures that if there are multiple elements at even indices, the one at the beginning or end (depending on the sort order) is taken.\nLastly, for",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 67.3308527469635,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

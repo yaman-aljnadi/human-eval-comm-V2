@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_1::1p::meta-llama/Meta-Llama-3-8B-Instruct::seed0",
+  "task_id": "idx_1",
+  "category": "1p",
+  "entry_point": "separate_paren_groups",
+  "prompt_field": "prompt1p",
+  "prompt_text": "from typing import List\n\n\ndef separate_paren_groups(paren_string: str) -> List[str]:\n    \"\"\" Input to this function is a string containing multiple groups of nested parentheses. Your goal is to\n \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List\n\n\ndef separate_paren_groups(paren_string: str) -> List[str]:\n    \"\"\" Input to this function is a string containing multiple groups of nested parentheses. Your goal is to\n \"\"\"",
+  "prompt_sha256": "75b7237aab987cbac7eaa562f6dfe23829eb1cd8ed4d2a0b6222ca9e4d99fb3d",
+  "model_name": "meta-llama/Meta-Llama-3-8B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List\n\n\ndef separate_paren_groups(paren_string: str) -> List[str]:\n    \"\"\" Input to this function is a string containing multiple groups of nested parentheses. Your goal is to\n \"\"\"\n\n\n# Example of how the function should work\nprint(separate_paren_groups(\"abc((def)ghi)(jkl)\"))  # Output: [\"abc\", \"defghi\", \"jkl\"]\nprint(separate_paren_groups(\"(abc)\"))  # Output: [\"abc\"]\nprint(separate_paren_groups(\"(abc)(def)ghi\"))  # Output: [\"abc\", \"defghi\"]\n\n\n**Explanation of Requirements**:\n- This function takes a string as an input. This string contains multiple groups of nested parentheses.\n- Each group of nested parentheses represents a single entity in the string (e.g., a block of code or a statement).\n- Each entity is separated by other nested groups, and they should also be separated by non-parenthesis characters in the string (like letters, numbers, spaces, etc.).\n- Your goal is to separate these groups into distinct strings, excluding the outer parentheses that encapsulate each group.\n- The function should return a list of these separated strings.\n\n**Example Test Cases:**\n\n- `separate_paren_groups(\"abc((def)ghi)(jkl)\")` should return `[\"abc\", \"defghi\", \"jkl\"]`\n- `separate_paren_groups(\"(abc)\")` should return",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def separate_paren_groups(paren_string: str) -> List[str]:\n    \"\"\" Input to this function is a string containing multiple groups of nested parentheses. Your goal is to\n \"\"\"\n\n\n# Example of how the function should work\nprint(separate_paren_groups(\"abc((def)ghi)(jkl)\"))  # Output: [\"abc\", \"defghi\", \"jkl\"]\nprint(separate_paren_groups(\"(abc)\"))  # Output: [\"abc\"]\nprint(separate_paren_groups(\"(abc)(def)ghi\"))  # Output: [\"abc\", \"defghi\"]\n\n\n**Explanation of Requirements**:\n- This function takes a string as an input. This string contains multiple groups of nested parentheses.\n- Each group of nested parentheses represents a single entity in the string (e.g., a block of code or a statement).\n- Each entity is separated by other nested groups, and they should also be separated by non-parenthesis characters in the string (like letters, numbers, spaces, etc.).\n- Your goal is to separate these groups into distinct strings, excluding the outer parentheses that encapsulate each group.\n- The function should return a list of these separated strings.\n\n**Example Test Cases:**\n\n- `separate_paren_groups(\"abc((def)ghi)(jkl)\")` should return `[\"abc\", \"defghi\", \"jkl\"]`\n- `separate_paren_groups(\"(abc)\")` should return",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 69.91444373130798,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

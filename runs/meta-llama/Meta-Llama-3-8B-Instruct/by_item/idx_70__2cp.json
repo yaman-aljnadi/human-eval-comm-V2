@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_70::2cp::meta-llama/Meta-Llama-3-8B-Instruct::seed0",
+  "task_id": "idx_70",
+  "category": "2cp",
+  "entry_point": "strange_sort_list",
+  "prompt_field": "prompt2cp",
+  "prompt_text": "\ndef strange_sort_list(lst):\n    '''\n    Given list of integers, return list in strange order.\n\n    Examples:\n    strange_sort_list([1, 2, 3, 4]) == [1, 2, 3, 4]\n    strange_sort_list([5, 5, 5, 5]) == [5]\n    strange_sort_list([]) == []\n    '''\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef strange_sort_list(lst):\n    '''\n    Given list of integers, return list in strange order.\n\n    Examples:\n    strange_sort_list([1, 2, 3, 4]) == [1, 2, 3, 4]\n    strange_sort_list([5, 5, 5, 5]) == [5]\n    strange_sort_list([]) == []\n    '''",
+  "prompt_sha256": "4424926cb617fdaf1fa69cc027367fe97cc1cbe39a99da2df3aef05236439f9f",
+  "model_name": "meta-llama/Meta-Llama-3-8B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef strange_sort_list(lst):\n    '''\n    Given list of integers, return list in strange order.\n\n    Examples:\n    strange_sort_list([1, 2, 3, 4]) == [1, 2, 3, 4]\n    strange_sort_list([5, 5, 5, 5]) == [5]\n    strange_sort_list([]) == []\n    '''\n\n\nNote: This is a challenging problem. If you're stuck, consider using a helper function or two. Think about what kind of sorting strategy might be involved here. (Remember, the goal of this challenge is to have fun while learning and growing as a developer!)\n\n**Solution:**\n```python\ndef strange_sort_list(lst):\n    if not lst:\n        return []\n    result = [lst[0]]\n    for i in range(1, len(lst)):\n        if lst[i]!= result[-1]:\n            result.append(lst[i])\n    return result\n```  | [View Solution](https://www.hackerrank.com/challenges/python-string-split-and-join/problem) |\n[Hide Solution](https://www.hackerrank.com/challenges/python-string-split-and-join/problem) |\n\n```\ndef strange_sort_list(lst):\n    if not lst:\n        return []\n    result = [lst[0]]\n    for i in range(1, len(lst)):\n        if lst[i]!= result[-1]:\n            result.append(lst[i])\n    return result\n```\n```  | [View Solution](https://www.hackerrank.com/challenges/python-string-split-and-join/problem) |\n[Hide Solution](https://www.hackerr",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def strange_sort_list(lst):\n    if not lst:\n        return []\n    result = [lst[0]]\n    for i in range(1, len(lst)):\n        if lst[i]!= result[-1]:\n            result.append(lst[i])\n    return result",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 66.5419991016388,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

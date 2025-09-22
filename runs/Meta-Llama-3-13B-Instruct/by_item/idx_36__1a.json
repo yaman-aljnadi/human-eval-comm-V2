@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_36::1a::andrijdavid/Meta-Llama-3-13B-Instruct::seed0",
+  "task_id": "idx_36",
+  "category": "1a",
+  "entry_point": "fizz_buzz",
+  "prompt_field": "prompt1a",
+  "prompt_text": "\n\ndef candidate(n: int):\n    \"\"\"Return the number of times the digit 7 appears in integers less than k or n*n or n which are divisible by 11 or 13.\n    >>> candidate(50)\n    0\n    >>> candidate(78)\n    2\n    >>> candidate(79)\n    3\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(n: int):\n    \"\"\"Return the number of times the digit 7 appears in integers less than k or n*n or n which are divisible by 11 or 13.\n    >>> candidate(50)\n    0\n    >>> candidate(78)\n    2\n    >>> candidate(79)\n    3\n    \"\"\"",
+  "prompt_sha256": "9965e7665a6c117ea31172d0268628bbcdd5842d7ca5508c0295eb12a4d70fdc",
+  "model_name": "andrijdavid/Meta-Llama-3-13B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(n: int):\n    \"\"\"Return the number of times the digit 7 appears in integers less than k or n*n or n which are divisible by 11 or 13.\n    >>> candidate(50)\n    0\n    >>> candidate(78)\n    2\n    >>> candidate(79)\n    3\n    \"\"\"\n\n\n\n Please note that you may use built-in functions like built-in functions like built-in functions like built-in functions like built-in functions like built-in functions like built-in functions like built-in functions like built-in functions like built-in functions like built-in functions like built-in functions like built-in functions like built-in functions like built-in functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def candidate(n: int):\n    \"\"\"Return the number of times the digit 7 appears in integers less than k or n*n or n which are divisible by 11 or 13.\n    >>> candidate(50)\n    0\n    >>> candidate(78)\n    2\n    >>> candidate(79)\n    3\n    \"\"\"\n\n\n\n Please note that you may use built-in functions like built-in functions like built-in functions like built-in functions like built-in functions like built-in functions like built-in functions like built-in functions like built-in functions like built-in functions like built-in functions like built-in functions like built-in functions like built-in functions like built-in functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 186.6433870792389,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

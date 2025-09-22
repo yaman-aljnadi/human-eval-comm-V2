@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_138::2ac::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_138",
+  "category": "2ac",
+  "entry_point": "is_equal_to_sum_even",
+  "prompt_field": "prompt2ac",
+  "prompt_text": "\ndef candidate(n):\n    \"\"\"Evaluate whether the given number n can be written as the sum of 4 numbers\n    Example\n    candidate(4) == True\n    candidate(6) == True\n    candidate(8) == False\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(n):\n    \"\"\"Evaluate whether the given number n can be written as the sum of 4 numbers\n    Example\n    candidate(4) == True\n    candidate(6) == True\n    candidate(8) == False\n    \"\"\"",
+  "prompt_sha256": "d05194a4ea67c10fab0b5258e7c38e8456f8de4ac0f67ecc3a422abaedfe1960",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef candidate(n):\n    \"\"\"Evaluate whether the given number n can be written as the sum of 4 numbers\n    Example\n    candidate(4) == True\n    candidate(6) == True\n    candidate(8) == False\n    \"\"\"\n    # The smallest possible sum of 4 numbers (assuming non-negative integers) is 0 + 0 + 0 + 0 = 0.\n    # Any number less than 0 cannot be represented as the sum of 4 non-negative numbers.\n    if n < 0:\n        return False\n\n    # We need to find if there exist non-negative integers a, b, c, and d such that a + b + c + d = n.\n    # This is always possible for any non-negative integer n.\n    # We can always choose a = n, b = 0, c = 0, d = 0.\n    # Therefore, any non-negative integer n can be written as the sum of 4 non-negative numbers.\n\n    # The examples provided seem to imply a constraint on the *type* of numbers\n    # or a specific set of numbers from which these",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def candidate(n):\n    \"\"\"Evaluate whether the given number n can be written as the sum of 4 numbers\n    Example\n    candidate(4) == True\n    candidate(6) == True\n    candidate(8) == False\n    \"\"\"\n    # The smallest possible sum of 4 numbers (assuming non-negative integers) is 0 + 0 + 0 + 0 = 0.\n    # Any number less than 0 cannot be represented as the sum of 4 non-negative numbers.\n    if n < 0:\n        return False\n\n    # We need to find if there exist non-negative integers a, b, c, and d such that a + b + c + d = n.\n    # This is always possible for any non-negative integer n.\n    # We can always choose a = n, b = 0, c = 0, d = 0.\n    # Therefore, any non-negative integer n can be written as the sum of 4 non-negative numbers.\n\n    # The examples provided seem to imply a constraint on the *type* of numbers\n    # or a specific set of numbers from which these",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 1.7762951850891113,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

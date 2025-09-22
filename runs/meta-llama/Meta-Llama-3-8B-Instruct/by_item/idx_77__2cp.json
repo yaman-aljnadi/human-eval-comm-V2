@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_77::2cp::meta-llama/Meta-Llama-3-8B-Instruct::seed0",
+  "task_id": "idx_77",
+  "category": "2cp",
+  "entry_point": "iscube",
+  "prompt_field": "prompt2cp",
+  "prompt_text": "\ndef candidate(a):\n    '''\n    Write a function that takes an integer a and returns True \n    if this integer is.\n    Note: you may assume the input is always valid.\n    Examples:\n    candidate(1) ==> False\n    candidate(2) ==> True\n    candidate(-1) ==> False\n    candidate(64) ==> False\n    candidate(0) ==> False\n    candidate(180) ==> True\n    '''\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(a):\n    '''\n    Write a function that takes an integer a and returns True \n    if this integer is.\n    Note: you may assume the input is always valid.\n    Examples:\n    candidate(1) ==> False\n    candidate(2) ==> True\n    candidate(-1) ==> False\n    candidate(64) ==> False\n    candidate(0) ==> False\n    candidate(180) ==> True\n    '''",
+  "prompt_sha256": "9db029738e95696c884609243e8932ab041078d1ed12f3599b3de0be580e1117",
+  "model_name": "meta-llama/Meta-Llama-3-8B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(a):\n    '''\n    Write a function that takes an integer a and returns True \n    if this integer is.\n    Note: you may assume the input is always valid.\n    Examples:\n    candidate(1) ==> False\n    candidate(2) ==> True\n    candidate(-1) ==> False\n    candidate(64) ==> False\n    candidate(0) ==> False\n    candidate(180) ==> True\n    '''\n\n\n\n## Here's the code\n```python\ndef candidate(a: int) -> bool:\n    return a % 180 == 0 and a!= 0\n```\n\n\n# Clarifying questions:\n\n\nPlease respond with only the code or clarifying questions in markdown format.",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def candidate(a: int) -> bool:\n    return a % 180 == 0 and a!= 0",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 15.227611064910889,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

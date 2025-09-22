@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_102::1p::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_102",
+  "category": "1p",
+  "entry_point": "choose_num",
+  "prompt_field": "prompt1p",
+  "prompt_text": "\ndef choose_num(x, y):\n    \"\"\"This function takes two positive numbers x and y and returns the\n    biggest even integer number\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef choose_num(x, y):\n    \"\"\"This function takes two positive numbers x and y and returns the\n    biggest even integer number\n    \"\"\"",
+  "prompt_sha256": "c27c5e31d395083fc580c7ae833a3103bb89675daa15fe40da4233a094ce3eb3",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef choose_num(x, y):\n    \"\"\"This function takes two positive numbers x and y and returns the\n    biggest even integer number\n    \"\"\"\n    # Determine the smaller and larger of the two numbers\n    smaller = min(x, y)\n    larger = max(x, y)\n\n    # Check if the larger number is even\n    if larger % 2 == 0:\n        return larger\n    # If the larger number is odd, check if the smaller number is even\n    elif smaller % 2 == 0:\n        return smaller\n    # If both are odd, there's no even number to return among them\n    # The prompt implies returning an even integer *number*, and given\n    # x and y are positive, the largest even integer strictly less than\n    # the smallest odd number would be that number minus 1.\n    # However, the wording \"returns the biggest even integer number\"\n    # could be interpreted as \"the biggest even integer among x and y\".\n    # If that's the case, and both are odd, then there isn't one.\n    # Assuming we need to return an even number derived from",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def choose_num(x, y):\n    \"\"\"This function takes two positive numbers x and y and returns the\n    biggest even integer number\n    \"\"\"\n    # Determine the smaller and larger of the two numbers\n    smaller = min(x, y)\n    larger = max(x, y)\n\n    # Check if the larger number is even\n    if larger % 2 == 0:\n        return larger\n    # If the larger number is odd, check if the smaller number is even\n    elif smaller % 2 == 0:\n        return smaller\n    # If both are odd, there's no even number to return among them\n    # The prompt implies returning an even integer *number*, and given\n    # x and y are positive, the largest even integer strictly less than\n    # the smallest odd number would be that number minus 1.\n    # However, the wording \"returns the biggest even integer number\"\n    # could be interpreted as \"the biggest even integer among x and y\".\n    # If that's the case, and both are odd, then there isn't one.\n    # Assuming we need to return an even number derived from",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 2.0797178745269775,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

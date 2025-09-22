@@ -1,0 +1,43 @@
+{
+  "record_id": "idx_76::1p::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_76",
+  "category": "1p",
+  "entry_point": "is_simple_power",
+  "prompt_field": "prompt1p",
+  "prompt_text": "\ndef is_simple_power(x, n):\n    \"\"\"Your task is to write a function that returns true if a number x is a simple\n    power of n and false in other cases.\n    x is a simple power of n if \n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef is_simple_power(x, n):\n    \"\"\"Your task is to write a function that returns true if a number x is a simple\n    power of n and false in other cases.\n    x is a simple power of n if \n    \"\"\"",
+  "prompt_sha256": "02649cac6514ffdb15a01e6690ce04e34772302f37781e01b80d6ced1b006bcd",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "The problem description is incomplete. To determine if `x` is a simple power of `n`, we need a clear definition of what \"simple power\" means. Here are some possibilities, and I need clarification on which one applies:\n\n1.  **Is `x` equal to `n` raised to some integer power (i.e., `x = n^k` for some integer `k >= 0`)?** This is the most common interpretation of \"power of n\".\n\n2.  **Is `x` equal to `n` raised to some *positive* integer power (i.e., `x = n^k` for some integer `k > 0`)?** This excludes the case where `k=0` (i.e., `x = 1`).\n\n3.  **Does `x` have *only* prime factors that are also prime factors of `n`?** This is a less common definition, but possible.\n\n4.  **Is `x` equal to `n` itself (i.e., `x = n`)?** This is a very simple interpretation.\n\n**Please clarify the definition of \"simple power\" in the docstring. For example,",
+  "gen_raw": {},
+  "contains_code": false,
+  "code_detected_method": "none",
+  "extracted_code": null,
+  "is_question": true,
+  "extracted_questions": [
+    "The problem description is incomplete. To determine if `x` is a simple power of `n`, we need a clear definition of what \"simple power\" means. Here are some possibilities, and I need clarification on which one applies:\n\n1.  **Is `x` equal to `n` raised to some integer power (i.e., `x = n^k` for some integer `k >= 0`)?",
+    "** This is the most common interpretation of \"power of n\".\n\n2.  **Is `x` equal to `n` raised to some *positive* integer power (i.e., `x = n^k` for some integer `k > 0`)?",
+    "** This excludes the case where `k=0` (i.e., `x = 1`).\n\n3.  **Does `x` have *only* prime factors that are also prime factors of `n`?",
+    "** This is a less common definition, but possible.\n\n4.  **Is `x` equal to `n` itself (i.e., `x = n`)?",
+    "** This is a very simple interpretation.\n\n**Please clarify the definition of \"simple power\" in the docstring. For example,?",
+    ", `x = n^k` for some integer `k >= 0`)?",
+    ", `x = n^k` for some integer `k > 0`)?",
+    "**Does `x` have *only* prime factors that are also prime factors of `n`?",
+    ", `x = n`)?"
+  ],
+  "question_count": 9,
+  "first_question": "The problem description is incomplete. To determine if `x` is a simple power of `n`, we need a clear definition of what \"simple power\" means. Here are some possibilities, and I need clarification on which one applies:\n\n1.  **Is `x` equal to `n` raised to some integer power (i.e., `x = n^k` for some integer `k >= 0`)?",
+  "question_chars": 1003,
+  "latency_sec": 1.8790411949157715,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

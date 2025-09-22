@@ -1,0 +1,43 @@
+{
+  "record_id": "idx_85::1p::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_85",
+  "category": "1p",
+  "entry_point": "add",
+  "prompt_field": "prompt1p",
+  "prompt_text": "\ndef add(lst):\n    \"\"\"Given a non-empty list of integers lst. add the even elements that..\n\n\n    Examples:\n        add([4, 2, 6, 7]) ==> 2 \n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef add(lst):\n    \"\"\"Given a non-empty list of integers lst. add the even elements that..\n\n\n    Examples:\n        add([4, 2, 6, 7]) ==> 2 \n    \"\"\"",
+  "prompt_sha256": "586f23cd32d99557e91af9b5508e9bb73b6eb08704e8f9b6b19f40a3292c11b4",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "I need some clarification to complete the `add` function. The docstring states: \"add the even elements that..\". The \"that..\" part is incomplete.\n\nTo proceed, please specify the condition for adding the even elements. For example, do you want to add:\n\n*   **All** even elements?\n*   Even elements that are **less than** a certain value?\n*   Even elements that are **greater than** a certain value?\n*   Even elements that are **at an even index**?\n*   Even elements that are **at an odd index**?\n*   Even elements that appear **a certain number of times**?\n*   Something else entirely?\n\nOnce you provide the complete condition, I can generate the Python code.",
+  "gen_raw": {},
+  "contains_code": false,
+  "code_detected_method": "none",
+  "extracted_code": null,
+  "is_question": true,
+  "extracted_questions": [
+    "I need some clarification to complete the `add` function. The docstring states: \"add the even elements that..\". The \"that..\" part is incomplete.\n\nTo proceed, please specify the condition for adding the even elements. For example, do you want to add:\n\n*   **All** even elements?",
+    "*   Even elements that are **less than** a certain value?",
+    "*   Even elements that are **greater than** a certain value?",
+    "*   Even elements that are **at an even index**?",
+    "*   Even elements that are **at an odd index**?",
+    "*   Even elements that appear **a certain number of times**?",
+    "*   Something else entirely?",
+    "Once you provide the complete condition, I can generate the Python code.?",
+    "For example, do you want to add:\n\n*   **All** even elements?"
+  ],
+  "question_count": 9,
+  "first_question": "I need some clarification to complete the `add` function. The docstring states: \"add the even elements that..\". The \"that..\" part is incomplete.\n\nTo proceed, please specify the condition for adding the even elements. For example, do you want to add:\n\n*   **All** even elements?",
+  "question_chars": 710,
+  "latency_sec": 1.4424734115600586,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

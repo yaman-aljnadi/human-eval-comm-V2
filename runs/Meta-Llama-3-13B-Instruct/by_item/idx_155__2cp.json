@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_155::2cp::andrijdavid/Meta-Llama-3-13B-Instruct::seed0",
+  "task_id": "idx_155",
+  "category": "2cp",
+  "entry_point": "even_odd_count",
+  "prompt_field": "prompt2cp",
+  "prompt_text": "\ndef candidate(num):\n    \"\"\"Example:\n        candidate(-12) ==> (1, 1)\n        candidate(123) ==> (2, 1)\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(num):\n    \"\"\"Example:\n        candidate(-12) ==> (1, 1)\n        candidate(123) ==> (2, 1)\n    \"\"\"",
+  "prompt_sha256": "026b22640522b805b4b230005e1639be40f4eadecb9d3d6decc4190984d7b3fa",
+  "model_name": "andrijdavid/Meta-Llama-3-13B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(num):\n    \"\"\"Example:\n        candidate(-12) ==> (1, 1)\n        candidate(123) ==> (2, 1)\n    \"\"\"\n\n\n\n Please note that:\n\n num should be an integer\n\n PLEASE NOTE THAT YOU MUST-use built-in built-in functionsbuilt-in functions ONLY ( NO external libraries or packages allowed)\n\n Please refrain fromusing built-inbuilt-in functions like built-in built-in functions like built-in built-in functions like built-in built functionslike built-in functions like built-in functions like built-in functions like built-in functions like built-in functions like built-in functions like built-in functions like built-in functions like built-in functions like built-in functions like built-in functions like built-in functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functionslike built functionslike built functionslike built functionslike built functionslike built functionslike built functionslike built functionslike built functionslike built functionslike built functionslike built functionslike built functionslike built functionslike built functionslike built functionslike built functionslike built functionslike built functionslike built functionslike built functionslike built functionslike built functionslike built functionslike built functionslike built functionslike built functionslike built functionslike built functionslike built functionslike built functionslike built functionslike built functionslike",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def candidate(num):\n    \"\"\"Example:\n        candidate(-12) ==> (1, 1)\n        candidate(123) ==> (2, 1)\n    \"\"\"\n\n\n\n Please note that:\n\n num should be an integer\n\n PLEASE NOTE THAT YOU MUST-use built-in built-in functionsbuilt-in functions ONLY ( NO external libraries or packages allowed)\n\n Please refrain fromusing built-inbuilt-in functions like built-in built-in functions like built-in built-in functions like built-in built functionslike built-in functions like built-in functions like built-in functions like built-in functions like built-in functions like built-in functions like built-in functions like built-in functions like built-in functions like built-in functions like built-in functions like built-in functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functions like built functionslike built functionslike built functionslike built functionslike built functionslike built functionslike built functionslike built functionslike built functionslike built functionslike built functionslike built functionslike built functionslike built functionslike built functionslike built functionslike built functionslike built functionslike built functionslike built functionslike built functionslike built functionslike built functionslike built functionslike built functionslike built functionslike built functionslike built functionslike built functionslike built functionslike built functionslike built functionslike built functionslike",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 109.34265875816345,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

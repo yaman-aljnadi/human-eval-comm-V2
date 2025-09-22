@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_91::2ac::meta-llama/Meta-Llama-3-8B-Instruct::seed0",
+  "task_id": "idx_91",
+  "category": "2ac",
+  "entry_point": "is_bored",
+  "prompt_field": "prompt2ac",
+  "prompt_text": "\ndef is_bored(S):\n    \"\"\"\n    You'll be given a string of words, and your task is to count the number\n    of boredoms. A boredom is a sentence that starts with a given word (such as \"W\", \"I\").\n    Sentences are delimited by '.', '?' or '!'.\n   \n    For example:\n    >>> is_bored(\"Hello world\")\n    1\n    >>> is_bored(\"The sky is blue. The sun is shining. I love this weather\")\n    3\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef is_bored(S):\n    \"\"\"\n    You'll be given a string of words, and your task is to count the number\n    of boredoms. A boredom is a sentence that starts with a given word (such as \"W\", \"I\").\n    Sentences are delimited by '.', '?' or '!'.\n   \n    For example:\n    >>> is_bored(\"Hello world\")\n    1\n    >>> is_bored(\"The sky is blue. The sun is shining. I love this weather\")\n    3\n    \"\"\"",
+  "prompt_sha256": "07792f2484fa57cd9f9c471b462c7ce2a4a7b1851d633742ae39be1fe8cdb09f",
+  "model_name": "meta-llama/Meta-Llama-3-8B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef is_bored(S):\n    \"\"\"\n    You'll be given a string of words, and your task is to count the number\n    of boredoms. A boredom is a sentence that starts with a given word (such as \"W\", \"I\").\n    Sentences are delimited by '.', '?' or '!'.\n   \n    For example:\n    >>> is_bored(\"Hello world\")\n    1\n    >>> is_bored(\"The sky is blue. The sun is shining. I love this weather\")\n    3\n    \"\"\"\n\n\n**Code below (using regular expressions and Python's built-in string and list functions)**\n\n\n```python\nimport re\n\ndef is_bored(S):\n    if not S:\n        return 0\n\n    boredoms = 0\n    sentences = re.split('[\\.\\?!]+', S)\n    for sentence in sentences:\n        sentence = sentence.strip()\n        if sentence:\n            boredoms += 1\n            start_with = sentence[0]\n            if start_with in 'WI':\n                boredoms -= 1\n    return boredoms\n```\n\n\nPlease let me know if the provided code meets your expectations or if I need to make changes. This code assumes sentences are separated by '.', '?', or '!' and words are separated by spaces. Also, the given words (W, I) should be used to filter the boredoms. It counts the number of sentences that start with given words and subtracts those from the total count of sentences, thus effectively counting the number of boredoms. ",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "import re\n\ndef is_bored(S):\n    if not S:\n        return 0\n\n    boredoms = 0\n    sentences = re.split('[\\.\\?!]+', S)\n    for sentence in sentences:\n        sentence = sentence.strip()\n        if sentence:\n            boredoms += 1\n            start_with = sentence[0]\n            if start_with in 'WI':\n                boredoms -= 1\n    return boredoms",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 53.7954158782959,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

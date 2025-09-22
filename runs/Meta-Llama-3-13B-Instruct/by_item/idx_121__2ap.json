@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_121::2ap::andrijdavid/Meta-Llama-3-13B-Instruct::seed0",
+  "task_id": "idx_121",
+  "category": "2ap",
+  "entry_point": "solution",
+  "prompt_field": "prompt2ap",
+  "prompt_text": "\ndef solution(lst):\n    \"\"\"Given a non-empty list of integers, return the sum of all of the even or odd elements that are \n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef solution(lst):\n    \"\"\"Given a non-empty list of integers, return the sum of all of the even or odd elements that are \n    \"\"\"",
+  "prompt_sha256": "fbf1cb0556d57ae4c51f8e1b769a5b9f15e172a84fee809f82d1b72ee379cfb6",
+  "model_name": "andrijdavid/Meta-Llama-3-13B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef solution(lst):\n    \"\"\"Given a non-empty list of integers, return the sum of all of the even or odd elements that are \n    \"\"\"  \n    \"\"\"\n\n    \"\"\"\n        \n        INPUTS:\n            lst: list of integers\n        OUTPUTS:\n            sum_of_evens_or.odds: Sum of even or odd elements within the given list\n\n        NOTE:\n            You can assume that all elements in the given list are integers\n            Please note that the given code provided will not account for edge cases like empty lists or non- empty lists with no even or odd elements\n            You can presume that the provided input will be correct i.e., there will be at least one even or one odd element within the given list provided\n\n           evenodd or oddness within this provided input list \n            Please note that you should not account for edge cases like empty lists or non- empty lists with no even or odd elements\n            You can presume that there will be at least one even or one odd element within the given input provided\n            PLEASE NOTE that you should not account for edge cases like empty lists or non- empty lists with no even or odd elements\n            You can assume that there will be at least one even or one odd element within the given input provided\n            # sharedApplication​eks​ ​​​ ​​​ ​​​ ​​​ ​​​ ​​​ ​​​ ​​​ ​​​ ​​​ ​​​ ​​​ ​​​ ​​​ ​​​ ​​​ ​​​ ​​​ ​​​ ​​​ ​​​_UNSplugged​",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def solution(lst):\n    \"\"\"Given a non-empty list of integers, return the sum of all of the even or odd elements that are \n    \"\"\"  \n    \"\"\"\n\n    \"\"\"\n        \n        INPUTS:\n            lst: list of integers\n        OUTPUTS:\n            sum_of_evens_or.odds: Sum of even or odd elements within the given list\n\n        NOTE:\n            You can assume that all elements in the given list are integers\n            Please note that the given code provided will not account for edge cases like empty lists or non- empty lists with no even or odd elements\n            You can presume that the provided input will be correct i.e., there will be at least one even or one odd element within the given list provided\n\n           evenodd or oddness within this provided input list \n            Please note that you should not account for edge cases like empty lists or non- empty lists with no even or odd elements\n            You can presume that there will be at least one even or one odd element within the given input provided\n            PLEASE NOTE that you should not account for edge cases like empty lists or non- empty lists with no even or odd elements\n            You can assume that there will be at least one even or one odd element within the given input provided\n            # sharedApplication​eks​ ​​​ ​​​ ​​​ ​​​ ​​​ ​​​ ​​​ ​​​ ​​​ ​​​ ​​​ ​​​ ​​​ ​​​ ​​​ ​​​ ​​​ ​​​ ​​​ ​​​ ​​​_UNSplugged​",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 89.7326271533966,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

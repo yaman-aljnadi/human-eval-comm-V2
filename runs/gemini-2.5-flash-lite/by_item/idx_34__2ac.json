@@ -1,0 +1,41 @@
+{
+  "record_id": "idx_34::2ac::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_34",
+  "category": "2ac",
+  "entry_point": "unique",
+  "prompt_field": "prompt2ac",
+  "prompt_text": "\n\ndef candidate(l: list):\n    \"\"\"Return descending or ascending sorted unique elements in a list\n    >>> candidate([5, 3, 5, 2, 3, 3, 9, 0, 123])\n    [3, 5, 9, 123]\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(l: list):\n    \"\"\"Return descending or ascending sorted unique elements in a list\n    >>> candidate([5, 3, 5, 2, 3, 3, 9, 0, 123])\n    [3, 5, 9, 123]\n    \"\"\"",
+  "prompt_sha256": "774aac67df561704d9d3ea5e5269b658a38eb072c5ab26b934bd41afa2c44c16",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "This is a good start! The docstring implies the function should return unique elements from the input list. However, it doesn't specify *whether* it should be sorted in descending or ascending order, and the example output `[3, 5, 9, 123]` is *ascending*.\n\nTo provide the best code, I need a bit more clarification:\n\n1.  **Sorting Order:** Should the function *always* return the unique elements in ascending order, as suggested by the example, or should it have a parameter to control descending vs. ascending order? If a parameter, what should it be named and what values should it accept (e.g., a boolean `descending=False`, or a string `order='asc'`/`'desc'`)?\n2.  **Ambiguity Resolution:** The prompt \"Return descending or ascending sorted unique elements\" is a bit ambiguous. Does it mean:\n    *   It should *try* to determine which sorting order is more appropriate based on the input (which is quite complex and likely not the intention)?\n    *   It should have a way to *choose* between descending and ascending?\n\nAssuming the most common interpretation and based on the provided doctest,",
+  "gen_raw": {},
+  "contains_code": false,
+  "code_detected_method": "none",
+  "extracted_code": null,
+  "is_question": true,
+  "extracted_questions": [
+    "If a parameter, what should it be named and what values should it accept (e.g., a boolean `descending=False`, or a string `order='asc'`/`'desc'`)?",
+    "2.  **Ambiguity Resolution:** The prompt \"Return descending or ascending sorted unique elements\" is a bit ambiguous. Does it mean:\n    *   It should *try* to determine which sorting order is more appropriate based on the input (which is quite complex and likely not the intention)?",
+    "*   It should have a way to *choose* between descending and ascending?",
+    "Assuming the most common interpretation and based on the provided doctest,?",
+    "ascending order?",
+    ", a boolean `descending=False`, or a string `order='asc'`/`'desc'`)?",
+    "Does it mean:\n    *   It should *try* to determine which sorting order is more appropriate based on the input (which is quite complex and likely not the intention)?"
+  ],
+  "question_count": 7,
+  "first_question": "If a parameter, what should it be named and what values should it accept (e.g., a boolean `descending=False`, or a string `order='asc'`/`'desc'`)?",
+  "question_chars": 820,
+  "latency_sec": 2.29206919670105,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

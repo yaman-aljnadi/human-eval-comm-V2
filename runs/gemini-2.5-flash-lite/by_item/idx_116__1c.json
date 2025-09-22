@@ -1,0 +1,41 @@
+{
+  "record_id": "idx_116::1c::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_116",
+  "category": "1c",
+  "entry_point": "sort_array",
+  "prompt_field": "prompt1c",
+  "prompt_text": "\ndef sort_array(arr):\n    \"\"\"\n    In this Kata, you have to sort an array of non-negative integers according to\n    number of ones in their binary representation in descending order.\n    For similar number of ones, sort based on decimal value.\n\n    It must be implemented like this:\n    >>> sort_array([1, 5, 2, 3, 4]) == [1, 2, 3, 4, 5]\n    >>> sort_array([-2, -3, -4, -5, -6]) == [-6, -5, -4, -3, -2]\n    >>> sort_array([1, 0, 2, 3, 4]) [0, 1, 2, 3, 4]\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef sort_array(arr):\n    \"\"\"\n    In this Kata, you have to sort an array of non-negative integers according to\n    number of ones in their binary representation in descending order.\n    For similar number of ones, sort based on decimal value.\n\n    It must be implemented like this:\n    >>> sort_array([1, 5, 2, 3, 4]) == [1, 2, 3, 4, 5]\n    >>> sort_array([-2, -3, -4, -5, -6]) == [-6, -5, -4, -3, -2]\n    >>> sort_array([1, 0, 2, 3, 4]) [0, 1, 2, 3, 4]\n    \"\"\"",
+  "prompt_sha256": "9e9c7f5f1cf7b841948f6865e3949b33c9411c1788a61bfd5d5be8777a50e0fd",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "I need some clarification on the expected behavior for negative numbers. The problem description states \"non-negative integers\", but one of the provided examples includes negative numbers: `sort_array([-2, -3, -4, -5, -6]) == [-6, -5, -4, -3, -2]`.\n\nCould you please confirm:\n\n1.  **Should the function handle negative integers, or are they a typo in the example?**\n2.  **If negative integers are to be handled, what is the logic for sorting them based on the number of ones in their binary representation?** (e.g., do we consider the two's complement representation, or is there a different interpretation?)\n3.  **The example `sort_array([1, 0, 2, 3, 4]) [0, 1, 2, 3, 4]` seems to have a typo in the expected output. Should it be `[0, 1, 2, 4, 3]` based on the sorting criteria (0 has 0 ones, 1 has 1 one, 2 has 1 one, 3 has 2 ones, 4 has",
+  "gen_raw": {},
+  "contains_code": false,
+  "code_detected_method": "none",
+  "extracted_code": null,
+  "is_question": true,
+  "extracted_questions": [
+    "I need some clarification on the expected behavior for negative numbers. The problem description states \"non-negative integers\", but one of the provided examples includes negative numbers: `sort_array([-2, -3, -4, -5, -6]) == [-6, -5, -4, -3, -2]`.\n\nCould you please confirm:\n\n1.  **Should the function handle negative integers, or are they a typo in the example?",
+    "**\n2.  **If negative integers are to be handled, what is the logic for sorting them based on the number of ones in their binary representation?",
+    "** (e.g., do we consider the two's complement representation, or is there a different interpretation?",
+    ")\n3.  **The example `sort_array([1, 0, 2, 3, 4]) [0, 1, 2, 3, 4]` seems to have a typo in the expected output. Should it be `[0, 1, 2, 4, 3]` based on the sorting criteria (0 has 0 ones, 1 has 1 one, 2 has 1 one, 3 has 2 ones, 4 has?",
+    "**Should the function handle negative integers, or are they a typo in the example?",
+    "**If negative integers are to be handled, what is the logic for sorting them based on the number of ones in their binary representation?",
+    ", do we consider the two's complement representation, or is there a different interpretation?"
+  ],
+  "question_count": 7,
+  "first_question": "I need some clarification on the expected behavior for negative numbers. The problem description states \"non-negative integers\", but one of the provided examples includes negative numbers: `sort_array([-2, -3, -4, -5, -6]) == [-6, -5, -4, -3, -2]`.\n\nCould you please confirm:\n\n1.  **Should the function handle negative integers, or are they a typo in the example?",
+  "question_chars": 1151,
+  "latency_sec": 1.6798090934753418,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

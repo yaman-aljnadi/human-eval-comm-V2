@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_158::1a::meta-llama/Meta-Llama-3-8B-Instruct::seed0",
+  "task_id": "idx_158",
+  "category": "1a",
+  "entry_point": "find_max",
+  "prompt_field": "prompt1a",
+  "prompt_text": "\ndef candidate(words):\n    \"\"\"Write a function that accepts a list of strings.\n    The list contains different words. Return the word with minimum or maximum number\n    of unique characters. If multiple strings have minimum or maximum number of unique\n    characters, return the one which comes first in lexicographical order.\n\n    candidate([\"name\", \"of\", \"string\"]) == \"string\"\n    candidate([\"name\", \"enam\", \"game\"]) == \"enam\"\n    candidate([\"aaaaaaa\", \"bb\" ,\"cc\"]) == \"\"aaaaaaa\"\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(words):\n    \"\"\"Write a function that accepts a list of strings.\n    The list contains different words. Return the word with minimum or maximum number\n    of unique characters. If multiple strings have minimum or maximum number of unique\n    characters, return the one which comes first in lexicographical order.\n\n    candidate([\"name\", \"of\", \"string\"]) == \"string\"\n    candidate([\"name\", \"enam\", \"game\"]) == \"enam\"\n    candidate([\"aaaaaaa\", \"bb\" ,\"cc\"]) == \"\"aaaaaaa\"\n    \"\"\"",
+  "prompt_sha256": "8fb324cf5c234f1542843d392ef211343213a6a03f9f8b70d22c3e81076aaf51",
+  "model_name": "meta-llama/Meta-Llama-3-8B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(words):\n    \"\"\"Write a function that accepts a list of strings.\n    The list contains different words. Return the word with minimum or maximum number\n    of unique characters. If multiple strings have minimum or maximum number of unique\n    characters, return the one which comes first in lexicographical order.\n\n    candidate([\"name\", \"of\", \"string\"]) == \"string\"\n    candidate([\"name\", \"enam\", \"game\"]) == \"enam\"\n    candidate([\"aaaaaaa\", \"bb\" ,\"cc\"]) == \"\"aaaaaaa\"\n    \"\"\"\n\n\nHere's my answer. I'll be using a dictionary to count the frequency of each character in each word, and then compare those frequencies:\n\n```python\ndef candidate(words):\n    min_count = float('inf')\n    max_count = float('-inf')\n    min_word = None\n    for word in words:\n        count = len(set(word.lower()))\n        if count < min_count:\n            min_count = count\n            min_word = word\n        elif count > max_count:\n            max_count = count\n            min_word = word if word < min_word else min_word\n    return min_word\n```\n\n\nI hope this answer is correct. If it's not, please let me know what's wrong and how to fix it.",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def candidate(words):\n    min_count = float('inf')\n    max_count = float('-inf')\n    min_word = None\n    for word in words:\n        count = len(set(word.lower()))\n        if count < min_count:\n            min_count = count\n            min_word = word\n        elif count > max_count:\n            max_count = count\n            min_word = word if word < min_word else min_word\n    return min_word",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 27.970351934432983,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

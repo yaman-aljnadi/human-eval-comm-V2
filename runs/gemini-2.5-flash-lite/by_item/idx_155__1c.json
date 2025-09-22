@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_155::1c::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_155",
+  "category": "1c",
+  "entry_point": "even_odd_count",
+  "prompt_field": "prompt1c",
+  "prompt_text": "\ndef even_odd_count(num):\n    \"\"\"Given an integer. return a tuple that has the number of even and odd digits respectively.\n\n     Example:\n        even_odd_count(-12) ==> (1, 1)\n        even_odd_count(123) ==> (2, 1)\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef even_odd_count(num):\n    \"\"\"Given an integer. return a tuple that has the number of even and odd digits respectively.\n\n     Example:\n        even_odd_count(-12) ==> (1, 1)\n        even_odd_count(123) ==> (2, 1)\n    \"\"\"",
+  "prompt_sha256": "af19c177cc06cf842a4d88c5b6416f85276d8f42db4d15e88f00195ce31576e3",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef even_odd_count(num):\n    \"\"\"Given an integer. return a tuple that has the number of even and odd digits respectively.\n\n     Example:\n        even_odd_count(-12) ==> (1, 1)\n        even_odd_count(123) ==> (2, 1)\n    \"\"\"\n    even_count = 0\n    odd_count = 0\n    # Handle negative numbers by taking the absolute value\n    num_str = str(abs(num))\n\n    for digit_char in num_str:\n        digit = int(digit_char)\n        if digit % 2 == 0:\n            even_count += 1\n        else:\n            odd_count += 1\n    return (even_count, odd_count)\n```",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def even_odd_count(num):\n    \"\"\"Given an integer. return a tuple that has the number of even and odd digits respectively.\n\n     Example:\n        even_odd_count(-12) ==> (1, 1)\n        even_odd_count(123) ==> (2, 1)\n    \"\"\"\n    even_count = 0\n    odd_count = 0\n    # Handle negative numbers by taking the absolute value\n    num_str = str(abs(num))\n\n    for digit_char in num_str:\n        digit = int(digit_char)\n        if digit % 2 == 0:\n            even_count += 1\n        else:\n            odd_count += 1\n    return (even_count, odd_count)",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 1.0593559741973877,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

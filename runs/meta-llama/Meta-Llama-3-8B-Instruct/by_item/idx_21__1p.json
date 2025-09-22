@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_21::1p::meta-llama/Meta-Llama-3-8B-Instruct::seed0",
+  "task_id": "idx_21",
+  "category": "1p",
+  "entry_point": "rescale_to_unit",
+  "prompt_field": "prompt1p",
+  "prompt_text": "from typing import List\n\n\ndef rescale(numbers: List[float]) -> List[float]:\n    \"\"\" Given list of numbers (of at least two elements), apply a linear transform to that list\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List\n\n\ndef rescale(numbers: List[float]) -> List[float]:\n    \"\"\" Given list of numbers (of at least two elements), apply a linear transform to that list\n    \"\"\"",
+  "prompt_sha256": "894b1daecff220bfdab96a592f5658e3042fcaf203bacef74d22f67f36fd78d3",
+  "model_name": "meta-llama/Meta-Llama-3-8B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List\n\n\ndef rescale(numbers: List[float]) -> List[float]:\n    \"\"\" Given list of numbers (of at least two elements), apply a linear transform to that list\n    \"\"\"\n\n\n# Test the rescale function\nnumbers = [0.0, 1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0]\nresult = rescale(numbers)\n\n# Sanity Check\nassert len(result) == len(numbers)\nassert all(x <= 10.0 for x in result)\n\n# Output (print or return)\nprint(result)\n\n    I am given two float inputs x and y representing two different scales. I need to implement the rescale function that transforms numbers in `numbers` list from scale `x` to scale `y`. For example, if `x` is 10 and `y` is 100, then I need to map 0.0 to 0.0, 1.0 to 10.0, 2.0 to 20.0,... 9.0 to 90.0. So, `rescale([0.0, 1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0,",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def rescale(numbers: List[float]) -> List[float]:\n    \"\"\" Given list of numbers (of at least two elements), apply a linear transform to that list\n    \"\"\"\n\n\n# Test the rescale function\nnumbers = [0.0, 1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0]\nresult = rescale(numbers)\n\n# Sanity Check\nassert len(result) == len(numbers)\nassert all(x <= 10.0 for x in result)\n\n# Output (print or return)\nprint(result)\n\n    I am given two float inputs x and y representing two different scales. I need to implement the rescale function that transforms numbers in `numbers` list from scale `x` to scale `y`. For example, if `x` is 10 and `y` is 100, then I need to map 0.0 to 0.0, 1.0 to 10.0, 2.0 to 20.0,... 9.0 to 90.0. So, `rescale([0.0, 1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0,",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 70.3250617980957,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

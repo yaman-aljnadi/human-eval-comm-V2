@@ -1,0 +1,35 @@
+{
+  "record_id": "idx_55::2ac::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_55",
+  "category": "2ac",
+  "entry_point": "fib",
+  "prompt_field": "prompt2ac",
+  "prompt_text": "\n\ndef candidate(n: int):\n    \"\"\"Return a number that satisfies a specific condition (such as being n-th Prime number, being n-th Fibonacci number, or meeting another specific condition).\n    >>> candidate(10)\n    550\n    >>> candidate(1)\n    10\n    >>> candidate(8)\n    210\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(n: int):\n    \"\"\"Return a number that satisfies a specific condition (such as being n-th Prime number, being n-th Fibonacci number, or meeting another specific condition).\n    >>> candidate(10)\n    550\n    >>> candidate(1)\n    10\n    >>> candidate(8)\n    210\n    \"\"\"",
+  "prompt_sha256": "e991a001a768ffa13993e3f8eded055e2c1ded45380c631f1cbc7dd5814e3ce9",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "The provided doctests suggest that the `candidate(n)` function might be returning a number related to the sequence 10, 210, 550, ...\n\nLet's analyze the relationship between `n` and the expected output:\n- `candidate(1)` -> `10`\n- `candidate(8)` -> `210`\n- `candidate(10)` -> `550`\n\nThe differences between consecutive terms (assuming `n` is sequential) are not immediately obvious if we consider the input `n` as a simple index.\n\nHowever, if we consider the sequence of outputs: 10, 210, 550.\nDifferences:\n210 - 10 = 200\n550 - 210 = 340\n\nSecond differences:\n340 - 200 = 140\n\nThis quadratic pattern might suggest a formula of the form `an^2 + bn + c`. However, we only have three data points, which is insufficient to uniquely determine a quadratic equation.\n\nLet's try to find a simpler pattern or a common sequence.\n\nConsider the prime factorization of",
+  "gen_raw": {},
+  "contains_code": false,
+  "code_detected_method": "none",
+  "extracted_code": null,
+  "is_question": true,
+  "extracted_questions": [
+    "The provided doctests suggest that the `candidate(n)` function might be returning a number related to the sequence 10, 210, 550, ...\n\nLet's analyze the relationship between `n` and the expected output:\n- `candidate(1)` -> `10`\n- `candidate(8)` -> `210`\n- `candidate(10)` -> `550`\n\nThe differences between consecutive terms (assuming `n` is sequential) are not immediately obvious if we consider the input `n` as a simple index.\n\nHowever, if we consider the sequence of outputs: 10, 210, 550.\nDifferences:\n210 - 10 = 200\n550 - 210 = 340\n\nSecond differences:\n340 - 200 = 140\n\nThis quadratic pattern might suggest a formula of the form `an^2 + bn + c`. However, we only have three data points, which is insufficient to uniquely determine a quadratic equation.\n\nLet's try to find a simpler pattern or a common sequence.\n\nConsider the prime factorization of?"
+  ],
+  "question_count": 1,
+  "first_question": "The provided doctests suggest that the `candidate(n)` function might be returning a number related to the sequence 10, 210, 550, ...\n\nLet's analyze the relationship between `n` and the expected output:\n- `candidate(1)` -> `10`\n- `candidate(8)` -> `210`\n- `candidate(10)` -> `550`\n\nThe differences between consecutive terms (assuming `n` is sequential) are not immediately obvious if we consider the input `n` as a simple index.\n\nHowever, if we consider the sequence of outputs: 10, 210, 550.\nDifferences:\n210 - 10 = 200\n550 - 210 = 340\n\nSecond differences:\n340 - 200 = 140\n\nThis quadratic pattern might suggest a formula of the form `an^2 + bn + c`. However, we only have three data points, which is insufficient to uniquely determine a quadratic equation.\n\nLet's try to find a simpler pattern or a common sequence.\n\nConsider the prime factorization of?",
+  "question_chars": 853,
+  "latency_sec": 2.1450178623199463,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_85::1a::meta-llama/Meta-Llama-3-8B-Instruct::seed0",
+  "task_id": "idx_85",
+  "category": "1a",
+  "entry_point": "add",
+  "prompt_field": "prompt1a",
+  "prompt_text": "\ndef add(lst):\n    \"\"\"Given a non-empty list of integers lst. add the even elements that are at certain indices..\n\n\n    Examples:\n        add([4, 2, 6, 7]) ==> 2 \n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef add(lst):\n    \"\"\"Given a non-empty list of integers lst. add the even elements that are at certain indices..\n\n\n    Examples:\n        add([4, 2, 6, 7]) ==> 2 \n    \"\"\"",
+  "prompt_sha256": "f2c0f162a9a154b64b48b2d0460b0aba25c09402ca1e3458b7720406b48b9960",
+  "model_name": "meta-llama/Meta-Llama-3-8B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef add(lst):\n    \"\"\"Given a non-empty list of integers lst. add the even elements that are at certain indices..\n\n\n    Examples:\n        add([4, 2, 6, 7]) ==> 2 \n    \"\"\"\n\n\n    # Your code here\n    pass\n\n## Code:\n\n```python\ndef add(lst):\n    even_sum = 0\n    for i in range(len(lst)):\n        if i % 2 == 0 and lst[i] % 2 == 0:\n            even_sum += lst[i]\n    return even_sum\n```  |  **Code**  |\n\nPlease let me know if I need to clarify anything.  |  **Yes/No**  |\n\n\n\n##  |  **Python**  |\n\n\n\n**Code:** |  |  **Respond**  |\n\n\n\n**clarifying Questions:** |  **Yes/No**  |\n\n\n\n## Code:\n```\ndef add(lst):\n    even_sum = 0\n    for i in range(len(lst)):\n        if i % 2 == 0 and lst[i] % 2 == 0:\n            even_sum += lst[i]\n    return even_sum\n```  |  **Code**  |\n\n## What do you mean by \"at certain indices\"?\n\n\nI am referring to the even elements in the list at indices that are themselves even.   |  **Yes/No**  |\n\n\n\n## Can I assume that the input will always be a non-empty list?",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def add(lst):\n    even_sum = 0\n    for i in range(len(lst)):\n        if i % 2 == 0 and lst[i] % 2 == 0:\n            even_sum += lst[i]\n    return even_sum",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 69.93829917907715,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_161::1c::meta-llama/Meta-Llama-3-8B-Instruct::seed0",
+  "task_id": "idx_161",
+  "category": "1c",
+  "entry_point": "solve",
+  "prompt_field": "prompt1c",
+  "prompt_text": "\ndef solve(s):\n    \"\"\"You are given a string s.\n    if s[i] is a letter, reverse its case from lower to upper or vise versa, \n    otherwise keep it as it is.\n    If the string contains no letters, reverse the string.\n    The function should return the resulted string.\n    Examples\n    solve(\"1234\") = \"1234\"\n    solve(\"ab\") = \"ab\"\n    solve(\"#a@C\") = \"#a@C\"\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef solve(s):\n    \"\"\"You are given a string s.\n    if s[i] is a letter, reverse its case from lower to upper or vise versa, \n    otherwise keep it as it is.\n    If the string contains no letters, reverse the string.\n    The function should return the resulted string.\n    Examples\n    solve(\"1234\") = \"1234\"\n    solve(\"ab\") = \"ab\"\n    solve(\"#a@C\") = \"#a@C\"\n    \"\"\"",
+  "prompt_sha256": "d588a53b8e557557430aa0854b18951fceca89a31b0a2437b337b3036c8a24c0",
+  "model_name": "meta-llama/Meta-Llama-3-8B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef solve(s):\n    \"\"\"You are given a string s.\n    if s[i] is a letter, reverse its case from lower to upper or vise versa, \n    otherwise keep it as it is.\n    If the string contains no letters, reverse the string.\n    The function should return the resulted string.\n    Examples\n    solve(\"1234\") = \"1234\"\n    solve(\"ab\") = \"ab\"\n    solve(\"#a@C\") = \"#a@C\"\n    \"\"\"\n\n\nHere's the code:\n\n```python\ndef solve(s):\n    result = []\n    for char in s:\n        if char.isalpha():\n            if char.islower():\n                result.append(char.upper())\n            else:\n                result.append(char.lower())\n        else:\n            result.append(char)\n    if all(not c.isalpha() for c in s):\n        return s[::-1]\n    return \"\".join(result)\n```\n\n\n\n**Explanation:**\n\n- I first create an empty list `result` where I'll append the transformed characters.\n- Then, for each character in the input string, I check if it's a letter using the `isalpha` method.\n- If it's a letter and in lowercase, I append its uppercase version; otherwise, I append its lowercase version.\n- If it's not a letter, I simply append it as is.\n- After processing the entire string, I check if all characters were non-letters (i.e., if the string contained no letters). If that's the case, I reverse the string using slicing with a step of -1.\n- Finally, I return the joined characters of the `result` list, unless all characters were non-letters, in which case I return the reversed original string.",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def solve(s):\n    result = []\n    for char in s:\n        if char.isalpha():\n            if char.islower():\n                result.append(char.upper())\n            else:\n                result.append(char.lower())\n        else:\n            result.append(char)\n    if all(not c.isalpha() for c in s):\n        return s[::-1]\n    return \"\".join(result)",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 47.11373972892761,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

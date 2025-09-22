@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_17::2ac::andrijdavid/Meta-Llama-3-13B-Instruct::seed0",
+  "task_id": "idx_17",
+  "category": "2ac",
+  "entry_point": "parse_music",
+  "prompt_field": "prompt2ac",
+  "prompt_text": "from typing import List\n\n\ndef parse_music(music_string: str) -> List[int]:\n    \"\"\" Input to this function is a string representing musical notes in a special ASCII format.\n    Your task is to parse this string and return list of integers corresponding to how many beats does each\n    not last.\n\n    Here is a legend:\n    'o' - whole note, lasts A beats\n    'o|' - half note, lasts B beats\n    '.|' - quater note, lasts C beat\n\n    >>> parse_music('o o| .| o| o| .| .| .| .| o o')\n    [1, 4, 2, 4, 4, 2, 2, 2, 2, 1, 1]\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List\n\n\ndef parse_music(music_string: str) -> List[int]:\n    \"\"\" Input to this function is a string representing musical notes in a special ASCII format.\n    Your task is to parse this string and return list of integers corresponding to how many beats does each\n    not last.\n\n    Here is a legend:\n    'o' - whole note, lasts A beats\n    'o|' - half note, lasts B beats\n    '.|' - quater note, lasts C beat\n\n    >>> parse_music('o o| .| o| o| .| .| .| .| o o')\n    [1, 4, 2, 4, 4, 2, 2, 2, 2, 1, 1]\n    \"\"\"",
+  "prompt_sha256": "2509bdb7f32af98e35796fe28a3ad61890db5c93b48101abea2cdae1dcb10118",
+  "model_name": "andrijdavid/Meta-Llama-3-13B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List\n\n\ndef parse_music(music_string: str) -> List[int]:\n    \"\"\" Input to this function is a string representing musical notes in a special ASCII format.\n    Your task is to parse this string and return list of integers corresponding to how many beats does each\n    not last.\n\n    Here is a legend:\n    'o' - whole note, lasts A beats\n    'o|' - half note, lasts B beats\n    '.|' - quater note, lasts C beat\n\n    >>> parse_music('o o| .| o| o| .| .| .| .| o o')\n    [1, 4, 2, 4, 4, 2, 2, 2, 2, 1, 1]\n    \"\"\"elerements = music_string.split(' ')\n    beats_per_note = {\n        'o': 1,\n        'o|': 4,\n       clasifications = {\n        '.': 2,\n        '|': 2,\n        }\n    def parse note beats_per note note_beats Per note:\n        note = noteBeatsPer note noteBeatsPer note[\n        beats Per note = beats Per note noteBeatsPer note noteBeatsPer note[\n        return Beats Per note noteBeats Per note noteBeatsPer note noteBeatsPer note noteBeats Per note noteBeats Per note noteBeats Per note noteBeats Per note noteBeats Per note noteBeats Per note noteBeats Per note noteBeats Per note noteBeats Per note noteBeats Per note noteBeats Per note noteBeats Per note noteBeats Per note noteBeBeats Per note noteBeBeBeats Per note noteBeBeats Per note noteBeBeBeats Per note noteBeBeBeats Per note noteBeBeBeats Per note noteBeBeBeats Per note noteBeBeBeBeats Per note noteBeBeBeBeats Per note noteBeBeBeBeBeBeats Per note noteBeBeBe",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def parse_music(music_string: str) -> List[int]:\n    \"\"\" Input to this function is a string representing musical notes in a special ASCII format.\n    Your task is to parse this string and return list of integers corresponding to how many beats does each\n    not last.\n\n    Here is a legend:\n    'o' - whole note, lasts A beats\n    'o|' - half note, lasts B beats\n    '.|' - quater note, lasts C beat\n\n    >>> parse_music('o o| .| o| o| .| .| .| .| o o')\n    [1, 4, 2, 4, 4, 2, 2, 2, 2, 1, 1]\n    \"\"\"elerements = music_string.split(' ')\n    beats_per_note = {\n        'o': 1,\n        'o|': 4,\n       clasifications = {\n        '.': 2,\n        '|': 2,\n        }\n    def parse note beats_per note note_beats Per note:\n        note = noteBeatsPer note noteBeatsPer note[\n        beats Per note = beats Per note noteBeatsPer note noteBeatsPer note[\n        return Beats Per note noteBeats Per note noteBeatsPer note noteBeatsPer note noteBeats Per note noteBeats Per note noteBeats Per note noteBeats Per note noteBeats Per note noteBeats Per note noteBeats Per note noteBeats Per note noteBeats Per note noteBeats Per note noteBeats Per note noteBeats Per note noteBeats Per note noteBeBeats Per note noteBeBeBeats Per note noteBeBeats Per note noteBeBeBeats Per note noteBeBeBeats Per note noteBeBeBeats Per note noteBeBeBeats Per note noteBeBeBeBeats Per note noteBeBeBeBeats Per note noteBeBeBeBeBeBeats Per note noteBeBeBe",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 92.92334055900574,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_59::1a::andrijdavid/Meta-Llama-3-13B-Instruct::seed0",
+  "task_id": "idx_59",
+  "category": "1a",
+  "entry_point": "largest_prime_factor",
+  "prompt_field": "prompt1a",
+  "prompt_text": "\n\ndef candidate(n: int):\n    \"\"\"Return the smallest or largest prime factor of n. Assume n > 1 and is not a prime.\n    >>> candidate(13195)\n    29\n    >>> candidate(2048)\n    2\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(n: int):\n    \"\"\"Return the smallest or largest prime factor of n. Assume n > 1 and is not a prime.\n    >>> candidate(13195)\n    29\n    >>> candidate(2048)\n    2\n    \"\"\"",
+  "prompt_sha256": "b381239a1989ffd7db02af934eddaf2f19253c72288a9f56e79d5c3068e1922d",
+  "model_name": "andrijdavid/Meta-Llama-3-13B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(n: int):\n    \"\"\"Return the smallest or largest prime factor of n. Assume n > 1 and is not a prime.\n    >>> candidate(13195)\n    29\n    >>> candidate(2048)\n    2\n    \"\"\"inionized prime factorization of n.\"\"\"\n\nPlease provide Python3 code to achieve this task\n\nacíez：\n\nacíez：\n\n candidacy：\n\norton：\n\ndef candidacy(n: int):\n    importmath primessosive Factorsizes largesosive Factorsizes prime Factorsizes Factorsizes Factorsizes Factorsizes Factorsizes Factorsizes Factorsizes Factorsizes Factorsizes Factorsizes Factorsizes Factorsizes Factorsizes Factorsizes Factorsizes Factorsizes Factorsizes Factorsizes Factorsizes Factorsizes Factorsizes Factorsizes Factorsizes Factorsizes Factorsizes Factorsizes FactorsizesFactors Factorsizes Factorsizes Factorsizes Factorsizes Factorsizes Factors Factors FactorsFactors Factors Factors Factors FactorsFactors Factors Factors Factors Factors Factors Factors Factors Factors Factors Factors Factors Factors Factors Factors Factors Factors Factors Factors Factors Factors Factors Factors Factors Factors Factors Factors Factors Factors Factors Factors Factors Factors Factors Factors Factors Factors Factors Factors FactorsFactors FactorsFactors Factors Factors Factors Factors Factors Factors Factors Factors Factors Factors Factors Factors Factors FactorsFactors Factors Factors Factors FactorsFactorsFactors Factors Factors Factors Factors FactorsFactors Factors Factors Factors Factors Factors Factors FactorsFactors Factors Factors FactorsFactors FactorsFactors Factors Factors Factors Factors Factors Factors Factors Factors Factors Factors FactorsFactors Factors Factors Factors Factors FactorsFactors FactorsFactors Factors FactorsFactors Factors Factors FactorsFactors Factors Factors Factors Factors FactorsFactors Factors Factors Factors Factors Factors Factors factors Factors Factors Factors Factors Factors Factors Factors Factors",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def candidate(n: int):\n    \"\"\"Return the smallest or largest prime factor of n. Assume n > 1 and is not a prime.\n    >>> candidate(13195)\n    29\n    >>> candidate(2048)\n    2\n    \"\"\"inionized prime factorization of n.\"\"\"\n\nPlease provide Python3 code to achieve this task\n\nacíez：\n\nacíez：\n\n candidacy：\n\norton：\n\ndef candidacy(n: int):\n    importmath primessosive Factorsizes largesosive Factorsizes prime Factorsizes Factorsizes Factorsizes Factorsizes Factorsizes Factorsizes Factorsizes Factorsizes Factorsizes Factorsizes Factorsizes Factorsizes Factorsizes Factorsizes Factorsizes Factorsizes Factorsizes Factorsizes Factorsizes Factorsizes Factorsizes Factorsizes Factorsizes Factorsizes Factorsizes Factorsizes FactorsizesFactors Factorsizes Factorsizes Factorsizes Factorsizes Factorsizes Factors Factors FactorsFactors Factors Factors Factors FactorsFactors Factors Factors Factors Factors Factors Factors Factors Factors Factors Factors Factors Factors Factors Factors Factors Factors Factors Factors Factors Factors Factors Factors Factors Factors Factors Factors Factors Factors Factors Factors Factors Factors Factors Factors Factors Factors Factors Factors FactorsFactors FactorsFactors Factors Factors Factors Factors Factors Factors Factors Factors Factors Factors Factors Factors Factors FactorsFactors Factors Factors Factors FactorsFactorsFactors Factors Factors Factors Factors FactorsFactors Factors Factors Factors Factors Factors Factors FactorsFactors Factors Factors FactorsFactors FactorsFactors Factors Factors Factors Factors Factors Factors Factors Factors Factors Factors FactorsFactors Factors Factors Factors Factors FactorsFactors FactorsFactors Factors FactorsFactors Factors Factors FactorsFactors Factors Factors Factors Factors FactorsFactors Factors Factors Factors Factors Factors Factors factors Factors Factors Factors Factors Factors Factors Factors Factors",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 91.2012619972229,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

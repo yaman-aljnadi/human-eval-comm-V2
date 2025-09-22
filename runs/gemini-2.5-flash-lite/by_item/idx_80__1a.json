@@ -1,0 +1,43 @@
+{
+  "record_id": "idx_80::1a::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_80",
+  "category": "1a",
+  "entry_point": "is_happy",
+  "prompt_field": "prompt1a",
+  "prompt_text": "\ndef is_happy(s):\n    \"\"\"You are given a string s.\n    Your task is to check if the string is happy or not.\n    A string is happy if its length is at least 3 and roughly substrings of letters are distinct\n    For example:\n    is_happy(a) => False\n    is_happy(aa) => False\n    is_happy(abcd) => True\n    is_happy(aabb) => False\n    is_happy(adb) => True\n    is_happy(xyy) => False\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef is_happy(s):\n    \"\"\"You are given a string s.\n    Your task is to check if the string is happy or not.\n    A string is happy if its length is at least 3 and roughly substrings of letters are distinct\n    For example:\n    is_happy(a) => False\n    is_happy(aa) => False\n    is_happy(abcd) => True\n    is_happy(aabb) => False\n    is_happy(adb) => True\n    is_happy(xyy) => False\n    \"\"\"",
+  "prompt_sha256": "a89946d37c0ef64054a006458f73720a1b9919c11a9212dae96e1db3a4fa47cd",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "The problem statement \"roughly substrings of letters are distinct\" is a bit ambiguous. To provide the most accurate and high-quality code, I need some clarification.\n\nCould you please define \"roughly substrings of letters are distinct\" more precisely? For instance:\n\n*   **What is the minimum length of a substring to consider?** Are we looking at substrings of length 2, 3, or something else?\n*   **What does \"distinct\" mean in this context?**\n    *   Does it mean that *no* two substrings of a certain length can be identical?\n    *   Or does it mean that the *count* of distinct substrings of a certain length must be above a certain threshold?\n    *   Or is there another interpretation?\n\nFor example, with `aabb`:\n*   Substrings of length 2: `aa`, `ab`, `bb`. These are distinct.\n*   Substrings of length 3: `aab`, `abb`. These are distinct.\n*   Substrings of length 4: `aabb`. This is distinct.\n\nHowever, the example `is_happy(aabb) => False` suggests that simply having distinct substrings of a certain length might not be enough,",
+  "gen_raw": {},
+  "contains_code": false,
+  "code_detected_method": "none",
+  "extracted_code": null,
+  "is_question": true,
+  "extracted_questions": [
+    "The problem statement \"roughly substrings of letters are distinct\" is a bit ambiguous. To provide the most accurate and high-quality code, I need some clarification.\n\nCould you please define \"roughly substrings of letters are distinct\" more precisely?",
+    "For instance:\n\n*   **What is the minimum length of a substring to consider?",
+    "** Are we looking at substrings of length 2, 3, or something else?",
+    "*   **What does \"distinct\" mean in this context?",
+    "**\n    *   Does it mean that *no* two substrings of a certain length can be identical?",
+    "*   Or does it mean that the *count* of distinct substrings of a certain length must be above a certain threshold?",
+    "*   Or is there another interpretation?",
+    "For example, with `aabb`:\n*   Substrings of length 2: `aa`, `ab`, `bb`. These are distinct.\n*   Substrings of length 3: `aab`, `abb`. These are distinct.\n*   Substrings of length 4: `aabb`. This is distinct.\n\nHowever, the example `is_happy(aabb) => False` suggests that simply having distinct substrings of a certain length might not be enough,?",
+    "Could you please define \"roughly substrings of letters are distinct\" more precisely?"
+  ],
+  "question_count": 9,
+  "first_question": "The problem statement \"roughly substrings of letters are distinct\" is a bit ambiguous. To provide the most accurate and high-quality code, I need some clarification.\n\nCould you please define \"roughly substrings of letters are distinct\" more precisely?",
+  "question_chars": 1108,
+  "latency_sec": 1.6543262004852295,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

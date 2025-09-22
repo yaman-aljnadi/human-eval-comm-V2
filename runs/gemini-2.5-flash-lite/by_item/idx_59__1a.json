@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_59::1a::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_59",
+  "category": "1a",
+  "entry_point": "largest_prime_factor",
+  "prompt_field": "prompt1a",
+  "prompt_text": "\n\ndef candidate(n: int):\n    \"\"\"Return the smallest or largest prime factor of n. Assume n > 1 and is not a prime.\n    >>> candidate(13195)\n    29\n    >>> candidate(2048)\n    2\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(n: int):\n    \"\"\"Return the smallest or largest prime factor of n. Assume n > 1 and is not a prime.\n    >>> candidate(13195)\n    29\n    >>> candidate(2048)\n    2\n    \"\"\"",
+  "prompt_sha256": "b381239a1989ffd7db02af934eddaf2f19253c72288a9f56e79d5c3068e1922d",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef candidate(n: int):\n    \"\"\"Return the smallest or largest prime factor of n. Assume n > 1 and is not a prime.\n    >>> candidate(13195)\n    29\n    >>> candidate(2048)\n    2\n    \"\"\"\n    factors = []\n    d = 2\n    temp = n\n    while d * d <= temp:\n        if temp % d == 0:\n            factors.append(d)\n            while temp % d == 0:\n                temp //= d\n        d += 1\n    if temp > 1:\n        factors.append(temp)\n    \n    # Based on the provided doctests, the function appears to be intended to return the *largest* prime factor.\n    # If the intention was the smallest, it would be factors[0] if factors is not empty.\n    # However, the prompt explicitly states \"smallest or largest\", and the doctests point to largest.\n    # Assuming the doctests are the definitive requirement for this function's behavior.\n    \n    return factors[-1] \n```",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def candidate(n: int):\n    \"\"\"Return the smallest or largest prime factor of n. Assume n > 1 and is not a prime.\n    >>> candidate(13195)\n    29\n    >>> candidate(2048)\n    2\n    \"\"\"\n    factors = []\n    d = 2\n    temp = n\n    while d * d <= temp:\n        if temp % d == 0:\n            factors.append(d)\n            while temp % d == 0:\n                temp //= d\n        d += 1\n    if temp > 1:\n        factors.append(temp)\n    \n    # Based on the provided doctests, the function appears to be intended to return the *largest* prime factor.\n    # If the intention was the smallest, it would be factors[0] if factors is not empty.\n    # However, the prompt explicitly states \"smallest or largest\", and the doctests point to largest.\n    # Assuming the doctests are the definitive requirement for this function's behavior.\n    \n    return factors[-1]",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 1.5189855098724365,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

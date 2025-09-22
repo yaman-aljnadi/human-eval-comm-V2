@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_134::2cp::andrijdavid/Meta-Llama-3-13B-Instruct::seed0",
+  "task_id": "idx_134",
+  "category": "2cp",
+  "entry_point": "check_if_last_char_is_a_letter",
+  "prompt_field": "prompt2cp",
+  "prompt_text": "\ndef candidate(txt):\n    '''\n    Create a function that returns True if the last character\n    of a given string is , and False otherwise.\n    Note: \"word\" is a group of characters separated by space.\n\n    Examples:\n    candidate(\"apple pie\") ➞ True\n    candidate(\"apple pi e\") ➞ False\n    candidate(\"apple pi e \") ➞ True\n    candidate(\"\") ➞ True \n    '''\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(txt):\n    '''\n    Create a function that returns True if the last character\n    of a given string is , and False otherwise.\n    Note: \"word\" is a group of characters separated by space.\n\n    Examples:\n    candidate(\"apple pie\") ➞ True\n    candidate(\"apple pi e\") ➞ False\n    candidate(\"apple pi e \") ➞ True\n    candidate(\"\") ➞ True \n    '''",
+  "prompt_sha256": "e42c6651ab09e71b836bac8aa683c5f8584a2cda5c43e0d70bb98fdb5e653c47",
+  "model_name": "andrijdavid/Meta-Llama-3-13B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(txt):\n    '''\n    Create a function that returns True if the last character\n    of a given string is , and False otherwise.\n    Note: \"word\" is a group of characters separated by space.\n\n    Examples:\n    candidate(\"apple pie\") ➞ True\n    candidate(\"apple pi e\") ➞ False\n    candidate(\"apple pi e \") ➞ True\n    candidate(\"\") ➞ True \n    '''\n\n\n\nPlease provide code or specify any further questions necessary to generate the Python3 code. Thank you for your time!geházi geházieh MetroFramework\neh MetroFramework\neh MetroFramework\neheh MetroFramework\nehهheeheh/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw-fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw Greggory\nehahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahah",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def candidate(txt):\n    '''\n    Create a function that returns True if the last character\n    of a given string is , and False otherwise.\n    Note: \"word\" is a group of characters separated by space.\n\n    Examples:\n    candidate(\"apple pie\") ➞ True\n    candidate(\"apple pi e\") ➞ False\n    candidate(\"apple pi e \") ➞ True\n    candidate(\"\") ➞ True \n    '''\n\n\n\nPlease provide code or specify any further questions necessary to generate the Python3 code. Thank you for your time!geházi geházieh MetroFramework\neh MetroFramework\neh MetroFramework\neheh MetroFramework\nehهheeheh/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw-fw/fw/fw/fw/fw/fw/fw/fw/fw/fw/fw Greggory\nehahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahahah",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 91.97719287872314,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

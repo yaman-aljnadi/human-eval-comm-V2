@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_36::1p::andrijdavid/Meta-Llama-3-13B-Instruct::seed0",
+  "task_id": "idx_36",
+  "category": "1p",
+  "entry_point": "fizz_buzz",
+  "prompt_field": "prompt1p",
+  "prompt_text": "\n\ndef fizz_buzz(n: int):\n    \"\"\"Return the number of times the digit 7 appears in integers less than n which are divisible.\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef fizz_buzz(n: int):\n    \"\"\"Return the number of times the digit 7 appears in integers less than n which are divisible.\n    \"\"\"",
+  "prompt_sha256": "08f551e2b2027dc214b11d28a6a8baed408a42bde6a30562b381f1d1e8789fd0",
+  "model_name": "andrijdavid/Meta-Llama-3-13B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef fizz_buzz(n: int):\n    \"\"\"Return the number of times the digit 7 appears in integers less than n which are divisible.\n    \"\"\"\"\"\"\n\n@n: int)\ndef buzz_fizz(n: int):\n    \"\"\"Return the number of times the digit 7 appears in integers less than n which are \n    \"\"\"\n    \nPlease note that n could be any positive integer.  \nguna Fatefully: 2023-07-26T00:00:00ZBitte generieren Sie die Python3- code direkt mit dem unten angleiten/preferences.md.markdown Code BELOW.md(markdown):\n\n>n: int):\ndef Buzz_fizz(n: int):\n    def Fize_fize(n: int):\n        def Fize_fize(n: int):\n            def Fize_fize(n: int):\n                def Fize_fize(n: int):\n                    n=int_nmodxmodxmodxmodx ActionTypes int nmodxmodxmodx n int n int n int n int n int n int n int n int n int n int n int n int n int n int n int n int n int n int n int n int n int n int n int n int n int n int n int n int n int n int n int n int n int n int n int n int n int n int n int n int n int n int n int n int n int n int n int n int n int n int",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def fizz_buzz(n: int):\n    \"\"\"Return the number of times the digit 7 appears in integers less than n which are divisible.\n    \"\"\"\"\"\"\n\n@n: int)\ndef buzz_fizz(n: int):\n    \"\"\"Return the number of times the digit 7 appears in integers less than n which are \n    \"\"\"\n    \nPlease note that n could be any positive integer.  \nguna Fatefully: 2023-07-26T00:00:00ZBitte generieren Sie die Python3- code direkt mit dem unten angleiten/preferences.md.markdown Code BELOW.md(markdown):\n\n>n: int):\ndef Buzz_fizz(n: int):\n    def Fize_fize(n: int):\n        def Fize_fize(n: int):\n            def Fize_fize(n: int):\n                def Fize_fize(n: int):\n                    n=int_nmodxmodxmodxmodx ActionTypes int nmodxmodxmodx n int n int n int n int n int n int n int n int n int n int n int n int n int n int n int n int n int n int n int n int n int n int n int n int n int n int n int n int n int n int n int n int n int n int n int n int n int n int n int n int n int n int n int n int n int n int n int n int n int n int",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 175.2953815460205,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

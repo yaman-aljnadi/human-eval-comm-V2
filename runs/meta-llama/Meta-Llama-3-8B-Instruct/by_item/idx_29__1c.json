@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_29::1c::meta-llama/Meta-Llama-3-8B-Instruct::seed0",
+  "task_id": "idx_29",
+  "category": "1c",
+  "entry_point": "filter_by_prefix",
+  "prompt_field": "prompt1c",
+  "prompt_text": "from typing import List\n\n\ndef filter_by_prefix(strings: List[str], prefix: str) -> List[str]:\n    \"\"\" Filter an input list of strings only for ones that start with a given prefix.\n    >>> filter_by_prefix([], 'a')\n    []\n    >>> filter_by_prefix(['abc', 'bcd', 'cde', 'array'], 'a')\n    ['bcd', 'cde']\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List\n\n\ndef filter_by_prefix(strings: List[str], prefix: str) -> List[str]:\n    \"\"\" Filter an input list of strings only for ones that start with a given prefix.\n    >>> filter_by_prefix([], 'a')\n    []\n    >>> filter_by_prefix(['abc', 'bcd', 'cde', 'array'], 'a')\n    ['bcd', 'cde']\n    \"\"\"",
+  "prompt_sha256": "c36db69ca86aade1f29b3bfdc92a4014d6497ed2ce61038ce360326afae02abe",
+  "model_name": "meta-llama/Meta-Llama-3-8B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List\n\n\ndef filter_by_prefix(strings: List[str], prefix: str) -> List[str]:\n    \"\"\" Filter an input list of strings only for ones that start with a given prefix.\n    >>> filter_by_prefix([], 'a')\n    []\n    >>> filter_by_prefix(['abc', 'bcd', 'cde', 'array'], 'a')\n    ['bcd', 'cde']\n    \"\"\"\n\n\n```python\n# here your code\n```\n\nKindly let me know if you need any further clarification. Thank you!  –  Suresh Kumar\n2022-08-14 17:53:03\ntags:   [python, list, filtering] +1\nedited 8\n**Code** \n```python\ndef filter_by_prefix(strings: List[str], prefix: str) -> List[str]:\n    return [s for s in strings if s.startswith(prefix)]\n```\nFinal Answer: The final answer was provided by Alexei Yavorsky\n\nPlease let me know if you need further clarification or the Python3 code is as you expected. I shall be happy to assist you further.  –  Suresh Kumar\n2022-08-14 18:14:16\ntags:   [python, list, filtering] 0\n\n# Please respond to this comment.\n\nPlease mark the answer as accepted if it meets your requirements. –  Suresh Kumar\n2022-08-14 18:14:16\ntags:   [python, list, filtering] 0\n\nFinal Answer: The final answer was provided by Suresh Kumar  –  Suresh Kumar\n2022",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "# here your code",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 69.70889568328857,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

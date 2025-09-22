@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_61::1c::andrijdavid/Meta-Llama-3-13B-Instruct::seed0",
+  "task_id": "idx_61",
+  "category": "1c",
+  "entry_point": "correct_bracketing",
+  "prompt_field": "prompt1c",
+  "prompt_text": "\n\ndef correct_bracketing(brackets: str):\n    \"\"\" brackets is a string of \"(\" and \")\".\n    return True if every opening bracket has a corresponding closing bracket.\n\n    >>> correct_bracketing(\"(\")\n    True\n    >>> correct_bracketing(\"()\")\n    False\n    >>> correct_bracketing(\"(()())\")\n    False\n    >>> correct_bracketing(\")(()\")\n    True\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef correct_bracketing(brackets: str):\n    \"\"\" brackets is a string of \"(\" and \")\".\n    return True if every opening bracket has a corresponding closing bracket.\n\n    >>> correct_bracketing(\"(\")\n    True\n    >>> correct_bracketing(\"()\")\n    False\n    >>> correct_bracketing(\"(()())\")\n    False\n    >>> correct_bracketing(\")(()\")\n    True\n    \"\"\"",
+  "prompt_sha256": "7c7947ebf212e19544abd8545954dd4176b693b78488bf1f48966beb06af94a0",
+  "model_name": "andrijdavid/Meta-Llama-3-13B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef correct_bracketing(brackets: str):\n    \"\"\" brackets is a string of \"(\" and \")\".\n    return True if every opening bracket has a corresponding closing bracket.\n\n    >>> correct_bracketing(\"(\")\n    True\n    >>> correct_bracketing(\"()\")\n    False\n    >>> correct_bracketing(\"(()())\")\n    False\n    >>> correct_bracketing(\")(()\")\n    True\n    \"\"\"\n\n\nPlease note that \n- Bracketing rules are based on http:// en.wikipedia.org wiki/ Brunching#LR_(Bottom-up)# stacks \n\ncktually, you shoulderingly write this code as follows:\n    \n    def correct_bracketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcket",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def correct_bracketing(brackets: str):\n    \"\"\" brackets is a string of \"(\" and \")\".\n    return True if every opening bracket has a corresponding closing bracket.\n\n    >>> correct_bracketing(\"(\")\n    True\n    >>> correct_bracketing(\"()\")\n    False\n    >>> correct_bracketing(\"(()())\")\n    False\n    >>> correct_bracketing(\")(()\")\n    True\n    \"\"\"\n\n\nPlease note that \n- Bracketing rules are based on http:// en.wikipedia.org wiki/ Brunching#LR_(Bottom-up)# stacks \n\ncktually, you shoulderingly write this code as follows:\n    \n    def correct_bracketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcketing brcket",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 91.58318185806274,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

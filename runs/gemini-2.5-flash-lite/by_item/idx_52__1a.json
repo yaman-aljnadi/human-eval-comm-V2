@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_52::1a::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_52",
+  "category": "1a",
+  "entry_point": "below_threshold",
+  "prompt_field": "prompt1a",
+  "prompt_text": "\n\ndef candidate(l: list, t: int):\n    \"\"\"Return True if numbers in the list l are around threshold t.\n    >>> candidate([1, 2, 4, 10], 100)\n    True\n    >>> candidate([1, 20, 4, 10], 5)\n    False\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(l: list, t: int):\n    \"\"\"Return True if numbers in the list l are around threshold t.\n    >>> candidate([1, 2, 4, 10], 100)\n    True\n    >>> candidate([1, 20, 4, 10], 5)\n    False\n    \"\"\"",
+  "prompt_sha256": "4c477527e144b85626c14fba6ea5fb59e6af70b808b602864d082d7eff55e58b",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef candidate(l: list, t: int):\n    \"\"\"Return True if numbers in the list l are around threshold t.\n    >>> candidate([1, 2, 4, 10], 100)\n    True\n    >>> candidate([1, 20, 4, 10], 5)\n    False\n    \"\"\"\n    # Determine what \"around threshold t\" means.\n    # For now, let's assume it means that all numbers in the list\n    # are less than or equal to the threshold t.\n    for num in l:\n        if num > t:\n            return False\n    return True\n```",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def candidate(l: list, t: int):\n    \"\"\"Return True if numbers in the list l are around threshold t.\n    >>> candidate([1, 2, 4, 10], 100)\n    True\n    >>> candidate([1, 20, 4, 10], 5)\n    False\n    \"\"\"\n    # Determine what \"around threshold t\" means.\n    # For now, let's assume it means that all numbers in the list\n    # are less than or equal to the threshold t.\n    for num in l:\n        if num > t:\n            return False\n    return True",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 0.9101099967956543,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

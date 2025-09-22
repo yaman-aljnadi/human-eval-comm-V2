@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_122::1p::meta-llama/Meta-Llama-3-8B-Instruct::seed0",
+  "task_id": "idx_122",
+  "category": "1p",
+  "entry_point": "add_elements",
+  "prompt_field": "prompt1p",
+  "prompt_text": "\ndef add_elements(arr, k):\n    \"\"\"\n    Given a non-empty array of integers arr and an integer k, return\n    the sum of the elements with at most two digits from\n\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef add_elements(arr, k):\n    \"\"\"\n    Given a non-empty array of integers arr and an integer k, return\n    the sum of the elements with at most two digits from\n\n    \"\"\"",
+  "prompt_sha256": "8fdcedb9b33e1dbbe031d04db39f0bd32819380038da8ed148224ce9cbd53a3e",
+  "model_name": "meta-llama/Meta-Llama-3-8B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef add_elements(arr, k):\n    \"\"\"\n    Given a non-empty array of integers arr and an integer k, return\n    the sum of the elements with at most two digits from\n\n    \"\"\"\n\n\n---\n\n* `arr`: a list of integers (not empty, not zero).\n* `k`: an integer (not zero).\n* `arr` and `k` are inputs to the function. No assumptions should be made about them beyond their types.\n* If you are unsure how to proceed with this question, see this example:\n    ```\n    >>> add_elements([1, 12, 12345], 2)\n    1 + 12 = 13, so 13\n    ```\n    In other words, the elements with at most two digits are 1 and 12. The sum of 1 and 12 is 13.\n    ```\n    \n    # Solution Code Here\n```\n\nPlease ensure that the solution code is functionally equivalent to the mathematical operations. Be mindful of corner cases like: What if there are no elements with at most two digits? What if there are multiple elements with at most two digits? What if one or both of them have no more than two digits? Answer with Python3 code only. ",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": ">>> add_elements([1, 12, 12345], 2)\n    1 + 12 = 13, so 13",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 56.193551540374756,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

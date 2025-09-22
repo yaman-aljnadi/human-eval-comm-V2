@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_124::2ac::meta-llama/Meta-Llama-3-8B-Instruct::seed0",
+  "task_id": "idx_124",
+  "category": "2ac",
+  "entry_point": "valid_date",
+  "prompt_field": "prompt2ac",
+  "prompt_text": "\ndef valid_date(date):\n    \"\"\"You have to write a function which validates a given date string and\n    returns True if the date is valid otherwise False.\n    The date is valid if all of the following rules are satisfied:\n    1. The date string is not empty.\n    2. The number of days is not less than 1 or higher than 31 days for months 1,3,5,7,8,10,12. And the number of days is not less than 1 or higher than 30 days for months 4,6,9,11. And, the number of days is not less than 1 or higher than 29 for the month 2.\n    3. The months should not be less than 1 or higher than 12.\n    4. The date should be in the format: dd-mm-yyyy or mm-dd-yyyy\n\n    for example: \n    valid_date('03-11-2000') => False\n\n    valid_date('15-01-2012') => True\n\n    valid_date('04-0-2040') => True\n\n    valid_date('06-04-2020') => False\n\n    valid_date('06/04/2020') => True\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef valid_date(date):\n    \"\"\"You have to write a function which validates a given date string and\n    returns True if the date is valid otherwise False.\n    The date is valid if all of the following rules are satisfied:\n    1. The date string is not empty.\n    2. The number of days is not less than 1 or higher than 31 days for months 1,3,5,7,8,10,12. And the number of days is not less than 1 or higher than 30 days for months 4,6,9,11. And, the number of days is not less than 1 or higher than 29 for the month 2.\n    3. The months should not be less than 1 or higher than 12.\n    4. The date should be in the format: dd-mm-yyyy or mm-dd-yyyy\n\n    for example: \n    valid_date('03-11-2000') => False\n\n    valid_date('15-01-2012') => True\n\n    valid_date('04-0-2040') => True\n\n    valid_date('06-04-2020') => False\n\n    valid_date('06/04/2020') => True\n    \"\"\"",
+  "prompt_sha256": "8dc6ccc0c94c0f07d5b5489aac1389d4379767993ec0b0689c58e24f6ce134be",
+  "model_name": "meta-llama/Meta-Llama-3-8B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef valid_date(date):\n    \"\"\"You have to write a function which validates a given date string and\n    returns True if the date is valid otherwise False.\n    The date is valid if all of the following rules are satisfied:\n    1. The date string is not empty.\n    2. The number of days is not less than 1 or higher than 31 days for months 1,3,5,7,8,10,12. And the number of days is not less than 1 or higher than 30 days for months 4,6,9,11. And, the number of days is not less than 1 or higher than 29 for the month 2.\n    3. The months should not be less than 1 or higher than 12.\n    4. The date should be in the format: dd-mm-yyyy or mm-dd-yyyy\n\n    for example: \n    valid_date('03-11-2000') => False\n\n    valid_date('15-01-2012') => True\n\n    valid_date('04-0-2040') => True\n\n    valid_date('06-04-2020') => False\n\n    valid_date('06/04/2020') => True\n    \"\"\"\n\n\n```\n```\n\n**Here's the code:**\n```python\nimport re\nfrom datetime import datetime\n\ndef valid_date(date):\n    try:\n        datetime.strptime(date, \"%d-%m-%Y\" if '-' in date else \"%m-%d-%Y\")\n    except ValueError:\n        return False\n    return True\n```\nThis Python function, named `valid_date`, validates the input date string and returns `True` if it's valid according to the provided rules and `False` otherwise. The date is expected to be in one of the following formats: \"dd-mm-yyyy\" or \"mm-dd-yyyy\". \n\nHere's a breakdown of the implementation:\n- It uses the built-in Python `datetime` module to parse and validate dates.\n- If the date string is not in a valid format, or if it contains invalid values, `strptime` raises a `ValueError` exception, and the function returns `False`. If the date string is valid, the function returns `True`. \n\nHowever, the provided rules don't explicitly specify the supported date formats. Although the problem mentions \"dd-mm-yyyy\" and \"mm-dd-yyyy\" as the expected formats, it doesn't explicitly state that \"dd-mm-yyyy\" is a supported format. For",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 67.16005849838257,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_8::2ac::meta-llama/Meta-Llama-3-8B-Instruct::seed0",
+  "task_id": "idx_8",
+  "category": "2ac",
+  "entry_point": "sum_product",
+  "prompt_field": "prompt2ac",
+  "prompt_text": "from typing import List, Tuple\n\n\ndef candidate(numbers: List[int]) -> Tuple[int, int]:\n    \"\"\" For a given list of integers, return a tuple consisting of a sum and a product of a certain given subset of the integers in a list.\n    Empty sum or product should be equal to either 0 or 1.\n    >>> candidate([])\n    (1, 0)\n    >>> candidate([1, 2, 3, 4])\n    (24, 10)\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List, Tuple\n\n\ndef candidate(numbers: List[int]) -> Tuple[int, int]:\n    \"\"\" For a given list of integers, return a tuple consisting of a sum and a product of a certain given subset of the integers in a list.\n    Empty sum or product should be equal to either 0 or 1.\n    >>> candidate([])\n    (1, 0)\n    >>> candidate([1, 2, 3, 4])\n    (24, 10)\n    \"\"\"",
+  "prompt_sha256": "6884a3ac62056d5cf6559125cc3f7691d1359afea437ea58bff4d9d44d408245",
+  "model_name": "meta-llama/Meta-Llama-3-8B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List, Tuple\n\n\ndef candidate(numbers: List[int]) -> Tuple[int, int]:\n    \"\"\" For a given list of integers, return a tuple consisting of a sum and a product of a certain given subset of the integers in a list.\n    Empty sum or product should be equal to either 0 or 1.\n    >>> candidate([])\n    (1, 0)\n    >>> candidate([1, 2, 3, 4])\n    (24, 10)\n    \"\"\"\n\n\nHere is Python3 code:\n\n```\ndef candidate(numbers: List[int]) -> Tuple[int, int]:\n    if not numbers:\n        return 1, 0\n    total_sum = sum(numbers)\n    product = 1\n    for num in numbers:\n        if total_sum == 0:\n            return 0, 0\n        product *= num\n        total_sum -= num\n    return product, total_sum\n```\n\nThis function works by iterating over all given numbers, and at each step subtracting a given number from the sum, and multiplying the current product by the given number. It also checks if sum equals to 0 at any point and if so, returns a tuple with both 0's. Finally, it returns the calculated product and the remaining sum. This code handles edge cases of empty list and empty sum by returning 1 and 0 respectively. It also handles cases of sum being 0 by returning 0 for both sum and product. This code should pass all given unit tests.\n```python\n```\n\nThis code directly responds with the markdown code in Python.  Ask clarifying questions if you need further details.  Happy coding! ```python 3.0.0```\n\nPlease clarify if there are any specific",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def candidate(numbers: List[int]) -> Tuple[int, int]:\n    if not numbers:\n        return 1, 0\n    total_sum = sum(numbers)\n    product = 1\n    for num in numbers:\n        if total_sum == 0:\n            return 0, 0\n        product *= num\n        total_sum -= num\n    return product, total_sum",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 68.09439730644226,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

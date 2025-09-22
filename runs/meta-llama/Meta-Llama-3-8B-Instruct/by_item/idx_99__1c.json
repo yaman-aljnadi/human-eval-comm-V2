@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_99::1c::meta-llama/Meta-Llama-3-8B-Instruct::seed0",
+  "task_id": "idx_99",
+  "category": "1c",
+  "entry_point": "closest_integer",
+  "prompt_field": "prompt1c",
+  "prompt_text": "\ndef closest_integer(value):\n    '''\n    Create a function that takes a value (string) representing a number\n    and returns the closest integer to it. If the number is equidistant\n    from two integers, round it away from zero.\n\n    Examples\n    >>> closest_integer(\"10\")\n    10\n    >>> closest_integer(\"15.3\")\n    20\n\n    Note:\n    Rounding away from zero means that if the given number is equidistant\n    from two integers, the one you should return is the one that is the\n    farthest from zero. For example closest_integer(\"14.5\") should\n    return 10 and closest_integer(\"-14.5\") should return -10.\n    '''\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef closest_integer(value):\n    '''\n    Create a function that takes a value (string) representing a number\n    and returns the closest integer to it. If the number is equidistant\n    from two integers, round it away from zero.\n\n    Examples\n    >>> closest_integer(\"10\")\n    10\n    >>> closest_integer(\"15.3\")\n    20\n\n    Note:\n    Rounding away from zero means that if the given number is equidistant\n    from two integers, the one you should return is the one that is the\n    farthest from zero. For example closest_integer(\"14.5\") should\n    return 10 and closest_integer(\"-14.5\") should return -10.\n    '''",
+  "prompt_sha256": "b5833ee4aacd998e0d6a1c27bc86ce6fdf06c07042b26ab32b3d85ac61d2cfc0",
+  "model_name": "meta-llama/Meta-Llama-3-8B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef closest_integer(value):\n    '''\n    Create a function that takes a value (string) representing a number\n    and returns the closest integer to it. If the number is equidistant\n    from two integers, round it away from zero.\n\n    Examples\n    >>> closest_integer(\"10\")\n    10\n    >>> closest_integer(\"15.3\")\n    20\n\n    Note:\n    Rounding away from zero means that if the given number is equidistant\n    from two integers, the one you should return is the one that is the\n    farthest from zero. For example closest_integer(\"14.5\") should\n    return 10 and closest_integer(\"-14.5\") should return -10.\n    '''\n\n\n\n```\n**Please respond with Python3 code**\n\n\n\n```\n\n: `python\n```python\ndef closest_integer(value):\n    num = float(value)\n    return round(num + 0.5) if num % 1 >= 0.5 else round(num - 0.5)\n``` `**\n\n\n\n```\n```python\ndef closest_integer(value):\n    num = float(value)\n    return round(num + 0.5) if num % 1 >= 0.5 else round(num - 0.5)\n```  | https://colab.research.google.com/gist/jasonjck/4a4b85a3e4b0a8f23a7fe2a7f35a9f9e/Untitled.txt | 0\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30\n31\n32\n33\n34\n35\n36\n37\n38\n39\n40\n41\n42\n43\n44\n45\n46\n47",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "**Please respond with Python3 code**",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 70.1499490737915,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

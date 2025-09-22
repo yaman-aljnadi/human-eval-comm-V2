@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_125::1c::andrijdavid/Meta-Llama-3-13B-Instruct::seed0",
+  "task_id": "idx_125",
+  "category": "1c",
+  "entry_point": "split_words",
+  "prompt_field": "prompt1c",
+  "prompt_text": "\ndef split_words(txt):\n    '''\n    Given a string of words, return a list of words split on whitespace, if no whitespaces exists in the text you\n    should split on commas ',' if no commas exists you should return the number of lower-case letters with odd order in the\n    alphabet, ord('a') = 10, ord('b') = 11, ... ord('z') = 125\n    Examples\n    split_words(\"Hello world!\") ➞ [\"Hello\"]\n    split_words(\"Hello,world!\") ➞ [\"world!\"]\n    split_words(\"abcdef\") == 3 \n    '''\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef split_words(txt):\n    '''\n    Given a string of words, return a list of words split on whitespace, if no whitespaces exists in the text you\n    should split on commas ',' if no commas exists you should return the number of lower-case letters with odd order in the\n    alphabet, ord('a') = 10, ord('b') = 11, ... ord('z') = 125\n    Examples\n    split_words(\"Hello world!\") ➞ [\"Hello\"]\n    split_words(\"Hello,world!\") ➞ [\"world!\"]\n    split_words(\"abcdef\") == 3 \n    '''",
+  "prompt_sha256": "3bd189daeed490786eb78258cb62cb46fc55919dd5e460b6d60533126d648683",
+  "model_name": "andrijdavid/Meta-Llama-3-13B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef split_words(txt):\n    '''\n    Given a string of words, return a list of words split on whitespace, if no whitespaces exists in the text you\n    should split on commas ',' if no commas exists you should return the number of lower-case letters with odd order in the\n    alphabet, ord('a') = 10, ord('b') = 11, ... ord('z') = 125\n    Examples\n    split_words(\"Hello world!\") ➞ [\"Hello\"]\n    split_words(\"Hello,world!\") ➞ [\"world!\"]\n    split_words(\"abcdef\") == 3 \n    '''\n\n\n\n please provide Python3 code or ask questions if you need more informationclarification regarding this problem statement\n\n\n\n below code:\n```python\n def split words(txt):\n    words = txt.split()\n    if not words:\n        words = words.replace (\"'\", \"\")\n        if not words:\n            return sum([ True if ord(i %amp;ord('a') % amp;ampord(' z') % amp;ampord(i % amp;ampord(' z') % amp amp;ampord(i % amp amp AMP AMP amp AMP AMP amp AMP amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def split_words(txt):\n    '''\n    Given a string of words, return a list of words split on whitespace, if no whitespaces exists in the text you\n    should split on commas ',' if no commas exists you should return the number of lower-case letters with odd order in the\n    alphabet, ord('a') = 10, ord('b') = 11, ... ord('z') = 125\n    Examples\n    split_words(\"Hello world!\") ➞ [\"Hello\"]\n    split_words(\"Hello,world!\") ➞ [\"world!\"]\n    split_words(\"abcdef\") == 3 \n    '''\n\n\n\n please provide Python3 code or ask questions if you need more informationclarification regarding this problem statement\n\n\n\n below code:\n```python\n def split words(txt):\n    words = txt.split()\n    if not words:\n        words = words.replace (\"'\", \"\")\n        if not words:\n            return sum([ True if ord(i %amp;ord('a') % amp;ampord(' z') % amp;ampord(i % amp;ampord(' z') % amp amp;ampord(i % amp amp AMP AMP amp AMP AMP amp AMP amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp amp",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 90.62018322944641,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

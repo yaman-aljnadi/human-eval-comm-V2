@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_97::2ap::meta-llama/Meta-Llama-3-8B-Instruct::seed0",
+  "task_id": "idx_97",
+  "category": "2ap",
+  "entry_point": "multiply",
+  "prompt_field": "prompt2ap",
+  "prompt_text": "\ndef candidate(a, b):\n    \"\"\"Complete the function that takes two integers and returns \n    the sum or product of their.\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(a, b):\n    \"\"\"Complete the function that takes two integers and returns \n    the sum or product of their.\n    \"\"\"",
+  "prompt_sha256": "78a716380bfd51dac135b68b56d0ec4aa06ec0f72eb6c66f9f374974b4ecfa6c",
+  "model_name": "meta-llama/Meta-Llama-3-8B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(a, b):\n    \"\"\"Complete the function that takes two integers and returns \n    the sum or product of their.\n    \"\"\"\n\n\n**Input/Output examples:**\n\n*   `candidate(1, 2)` should return 3 (1 + 2)\n*   `candidate(1, 3)` should return 4 (1 + 3)\n*   `candidate(2, 3)` should return 6 (2 + 3)\n*   `candidate(4, 2)` should return 6 (4 + 2)\n*   `candidate(1, 1)` should return 2 (1 + 1)\n*   `candidate(2, 1)` should return 3 (2 + 1)\n*   `candidate(3, 2)` should return 5 (3 + 2)\n*   `candidate(-3, 2)` should return -1 (because -3 + 2 = -1)\n    \"\"\"\n\n**Explanation:**\n\n*   The output will be either the sum or product of the two given integers.\n    \"\"\"\n\n**Constraints:**\n\n*   The input integers will be within the range -100,000 to 100,000.\n    \"\"\"\n\n**Code solution:**\n\n```\n### Your code here:\n```\n\n\nPlease provide a direct Python3 code solution that meets the given requirements. If you need further",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "### Your code here:",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 69.79989695549011,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_75::1p::andrijdavid/Meta-Llama-3-13B-Instruct::seed0",
+  "task_id": "idx_75",
+  "category": "1p",
+  "entry_point": "is_multiply_prime",
+  "prompt_field": "prompt1p",
+  "prompt_text": "\ndef is_multiply_prime(a):\n    \"\"\"Write a function that returns true if the given number is the multiplication of numbers\n    and false otherwise.\n    Knowing that (a) is less then 100. \n    Example:\n    is_multiply_prime(30) == True\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef is_multiply_prime(a):\n    \"\"\"Write a function that returns true if the given number is the multiplication of numbers\n    and false otherwise.\n    Knowing that (a) is less then 100. \n    Example:\n    is_multiply_prime(30) == True\n    \"\"\"",
+  "prompt_sha256": "e69f14c2eb8dbff172f706fc8f4623cb80802d5032a43fb877cbd92eef7f69a0",
+  "model_name": "andrijdavid/Meta-Llama-3-13B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef is_multiply_prime(a):\n    \"\"\"Write a function that returns true if the given number is the multiplication of numbers\n    and false otherwise.\n    Knowing that (a) is less then 100. \n    Example:\n    is_multiply_prime(30) == True\n    \"\"\"elereätering\n_MetaData:\n\n-istrovstvíodal:- None\n-itage:- None\n\n:@\"\"istrovstvíodal:- None\n:@\"\"iněeinne):- None\n:@\"\"iněeinne):- None\n:@\"\"iněeine:- None\n_MetaData:\n\n_MetaData:\n\n-iněeine:- None\n\n_MetaData:\n\n-orgeinne:- None\n\n_MetaData:\n\n-orgeine:- None\n\n_MetaData:\n\norgeine:- None\n\norgeine:- None\n\norgeine:- None\n\norgeine:- None\n\norgeine:- None\n\norgeine:- None\n\norgeine:- None\n\norgeine:- None\n\norgeine:- None\n\norgeine:- None\n\norgeine:- None\n\norgeine:- None\n\norgeine:- None\n\norgeine:- None\n\norgeine:- None\n\norgeine:- None\n\norgeine:- None\n\norgeine:- None\n\norgeine:- None\n\norgeine:- None\n\norgeine:- None\n\norgeine:- None\n\norgeine:- None\n\norgeine:- None\n\norgeine:- None\n\norgeine:- None\n\norgeine:- None\n\norgeine:- None\n\norgeine:- None\n\norgeine:- None\n\norgeine:- None\n\norgeine:- None\n\norgeine:- None\n\norgeine:-None\n\norgeine:- None\n\norgeine:- None\n\norgeine",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def is_multiply_prime(a):\n    \"\"\"Write a function that returns true if the given number is the multiplication of numbers\n    and false otherwise.\n    Knowing that (a) is less then 100. \n    Example:\n    is_multiply_prime(30) == True\n    \"\"\"elereätering\n_MetaData:\n\n-istrovstvíodal:- None\n-itage:- None\n\n:@\"\"istrovstvíodal:- None\n:@\"\"iněeinne):- None\n:@\"\"iněeinne):- None\n:@\"\"iněeine:- None\n_MetaData:\n\n_MetaData:\n\n-iněeine:- None\n\n_MetaData:\n\n-orgeinne:- None\n\n_MetaData:\n\n-orgeine:- None\n\n_MetaData:\n\norgeine:- None\n\norgeine:- None\n\norgeine:- None\n\norgeine:- None\n\norgeine:- None\n\norgeine:- None\n\norgeine:- None\n\norgeine:- None\n\norgeine:- None\n\norgeine:- None\n\norgeine:- None\n\norgeine:- None\n\norgeine:- None\n\norgeine:- None\n\norgeine:- None\n\norgeine:- None\n\norgeine:- None\n\norgeine:- None\n\norgeine:- None\n\norgeine:- None\n\norgeine:- None\n\norgeine:- None\n\norgeine:- None\n\norgeine:- None\n\norgeine:- None\n\norgeine:- None\n\norgeine:- None\n\norgeine:- None\n\norgeine:- None\n\norgeine:- None\n\norgeine:- None\n\norgeine:- None\n\norgeine:- None\n\norgeine:-None\n\norgeine:- None\n\norgeine:- None\n\norgeine",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 92.04737973213196,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

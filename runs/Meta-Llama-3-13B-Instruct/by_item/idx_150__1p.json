@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_150::1p::andrijdavid/Meta-Llama-3-13B-Instruct::seed0",
+  "task_id": "idx_150",
+  "category": "1p",
+  "entry_point": "x_or_y",
+  "prompt_field": "prompt1p",
+  "prompt_text": "\ndef x_or_y(n, x, y):\n    \"\"\"\n    Examples:\n    for x_or_y(7, 34, 12) == 34\n    for x_or_y(15, 8, 5) == 5\n    \n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef x_or_y(n, x, y):\n    \"\"\"\n    Examples:\n    for x_or_y(7, 34, 12) == 34\n    for x_or_y(15, 8, 5) == 5\n    \n    \"\"\"",
+  "prompt_sha256": "479997857ac7ac8ef7c1c229dba5f560b3ca94ac5e506ea865b807290937d6ed",
+  "model_name": "andrijdavid/Meta-Llama-3-13B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef x_or_y(n, x, y):\n    \"\"\"\n    Examples:\n    for x_or_y(7, 34, 12) == 34\n    for x_or_y(15, 8, 5) == 5\n    \n    \"\"\"istrovství pamatomy proášení je needed proásciency pamatriatoriality Pamatriatoriality Pamatriatoriality Pamatriatoriality Pamatriatoriality Pamatriatoriality Pamatriatoriality Pamatriatoriality Pamatriatoriality Pamatriatoriality Pamtriatoriality Pamtriatoriality Pamtriatoriality Pamtriatoriality Pamtriatoriality Pamtriatoriality Pamtriatoriality Pamtriatoriality Pamtriatoriality Pamtriatoriality Pamtriatoriality Pamtriatoriality Pamtriatoriality Pamtriatoriality Pamtriatoriality Pamtriatoriality Pamtriatoriality Pamtriatoriality Pamtriatoriality Pamtriatoriality Pamtriatoriality Pamtriatoriality Pamtriatoriality Pamtriatoriality Pamtriatoriality Pamtriatoriality Pamtriatoriality Pamtriatoriality Pamtriatoriality Pamtriatoriality Pamtriatoriality Pamtriatoriality Pamtriatoriality Pamtriatoriality Pamtriatoriality Pamtriatoriality Pamtriatoriality Pamtriatoriality Pamtriatorial",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def x_or_y(n, x, y):\n    \"\"\"\n    Examples:\n    for x_or_y(7, 34, 12) == 34\n    for x_or_y(15, 8, 5) == 5\n    \n    \"\"\"istrovství pamatomy proášení je needed proásciency pamatriatoriality Pamatriatoriality Pamatriatoriality Pamatriatoriality Pamatriatoriality Pamatriatoriality Pamatriatoriality Pamatriatoriality Pamatriatoriality Pamatriatoriality Pamtriatoriality Pamtriatoriality Pamtriatoriality Pamtriatoriality Pamtriatoriality Pamtriatoriality Pamtriatoriality Pamtriatoriality Pamtriatoriality Pamtriatoriality Pamtriatoriality Pamtriatoriality Pamtriatoriality Pamtriatoriality Pamtriatoriality Pamtriatoriality Pamtriatoriality Pamtriatoriality Pamtriatoriality Pamtriatoriality Pamtriatoriality Pamtriatoriality Pamtriatoriality Pamtriatoriality Pamtriatoriality Pamtriatoriality Pamtriatoriality Pamtriatoriality Pamtriatoriality Pamtriatoriality Pamtriatoriality Pamtriatoriality Pamtriatoriality Pamtriatoriality Pamtriatoriality Pamtriatoriality Pamtriatoriality Pamtriatoriality Pamtriatorial",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 109.55413889884949,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

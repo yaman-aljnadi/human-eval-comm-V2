@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_118::1p::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_118",
+  "category": "1p",
+  "entry_point": "get_closest_vowel",
+  "prompt_field": "prompt1p",
+  "prompt_text": "\ndef get_closest_vowel(word):\n    \"\"\"You are given a word. Your task is to find the closest vowel that stands\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef get_closest_vowel(word):\n    \"\"\"You are given a word. Your task is to find the closest vowel that stands\n    \"\"\"",
+  "prompt_sha256": "1723c0cd00f6189a45f5cc203c4e4cedaee0dee1e999def23355dc0df649a3c5",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef get_closest_vowel(word):\n    \"\"\"You are given a word. Your task is to find the closest vowel that stands\n    closest to the middle of the word.\n\n    Args:\n        word: A string representing the word.\n\n    Returns:\n        The closest vowel to the middle of the word. If there are multiple vowels\n        equally close, return the first one encountered. If there are no vowels,\n        return None.\n    \"\"\"\n    vowels = \"aeiouAEIOU\"\n    n = len(word)\n    middle_index = (n - 1) / 2  # Using float for precise middle calculation\n\n    closest_vowel = None\n    min_distance = float('inf')\n\n    for i, char in enumerate(word):\n        if char in vowels:\n            distance = abs(i - middle_index)\n            if distance < min_distance:\n                min_distance = distance\n                closest_vowel = char\n            # If distances are equal, we keep the first one encountered as per requirement\n            # implicitly handled by '<' comparison.\n\n    return closest_vowel\n```",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def get_closest_vowel(word):\n    \"\"\"You are given a word. Your task is to find the closest vowel that stands\n    closest to the middle of the word.\n\n    Args:\n        word: A string representing the word.\n\n    Returns:\n        The closest vowel to the middle of the word. If there are multiple vowels\n        equally close, return the first one encountered. If there are no vowels,\n        return None.\n    \"\"\"\n    vowels = \"aeiouAEIOU\"\n    n = len(word)\n    middle_index = (n - 1) / 2  # Using float for precise middle calculation\n\n    closest_vowel = None\n    min_distance = float('inf')\n\n    for i, char in enumerate(word):\n        if char in vowels:\n            distance = abs(i - middle_index)\n            if distance < min_distance:\n                min_distance = distance\n                closest_vowel = char\n            # If distances are equal, we keep the first one encountered as per requirement\n            # implicitly handled by '<' comparison.\n\n    return closest_vowel",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 1.660560131072998,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

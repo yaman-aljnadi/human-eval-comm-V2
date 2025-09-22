@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_8::1c::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_8",
+  "category": "1c",
+  "entry_point": "sum_product",
+  "prompt_field": "prompt1c",
+  "prompt_text": "from typing import List, Tuple\n\n\ndef sum_product(numbers: List[int]) -> Tuple[int, int]:\n    \"\"\" For a given list of integers, return a tuple consisting of a sum and a product of all the integers in a list.\n    Empty sum should be equal to 0 and empty product should be equal to 1.\n    >>> sum_product([])\n    (1, 0)\n    >>> sum_product([1, 2, 3, 4])\n    (24, 10)\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List, Tuple\n\n\ndef sum_product(numbers: List[int]) -> Tuple[int, int]:\n    \"\"\" For a given list of integers, return a tuple consisting of a sum and a product of all the integers in a list.\n    Empty sum should be equal to 0 and empty product should be equal to 1.\n    >>> sum_product([])\n    (1, 0)\n    >>> sum_product([1, 2, 3, 4])\n    (24, 10)\n    \"\"\"",
+  "prompt_sha256": "091b8b67849aa838176b69a51300da3e586bbe3a838f787bbf26e02c0417e114",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\nfrom typing import List, Tuple\n\n\ndef sum_product(numbers: List[int]) -> Tuple[int, int]:\n    \"\"\" For a given list of integers, return a tuple consisting of a sum and a product of all the integers in a list.\n    Empty sum should be equal to 0 and empty product should be equal to 1.\n    >>> sum_product([])\n    (0, 1)\n    >>> sum_product([1, 2, 3, 4])\n    (10, 24)\n    \"\"\"\n    current_sum = 0\n    current_product = 1\n\n    if not numbers:\n        return current_sum, current_product\n\n    for number in numbers:\n        current_sum += number\n        current_product *= number\n\n    return current_sum, current_product\n```",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "from typing import List, Tuple\n\n\ndef sum_product(numbers: List[int]) -> Tuple[int, int]:\n    \"\"\" For a given list of integers, return a tuple consisting of a sum and a product of all the integers in a list.\n    Empty sum should be equal to 0 and empty product should be equal to 1.\n    >>> sum_product([])\n    (0, 1)\n    >>> sum_product([1, 2, 3, 4])\n    (10, 24)\n    \"\"\"\n    current_sum = 0\n    current_product = 1\n\n    if not numbers:\n        return current_sum, current_product\n\n    for number in numbers:\n        current_sum += number\n        current_product *= number\n\n    return current_sum, current_product",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 1.2717618942260742,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

@@ -1,0 +1,35 @@
+{
+  "record_id": "idx_8::2ac::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_8",
+  "category": "2ac",
+  "entry_point": "sum_product",
+  "prompt_field": "prompt2ac",
+  "prompt_text": "from typing import List, Tuple\n\n\ndef candidate(numbers: List[int]) -> Tuple[int, int]:\n    \"\"\" For a given list of integers, return a tuple consisting of a sum and a product of a certain given subset of the integers in a list.\n    Empty sum or product should be equal to either 0 or 1.\n    >>> candidate([])\n    (1, 0)\n    >>> candidate([1, 2, 3, 4])\n    (24, 10)\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List, Tuple\n\n\ndef candidate(numbers: List[int]) -> Tuple[int, int]:\n    \"\"\" For a given list of integers, return a tuple consisting of a sum and a product of a certain given subset of the integers in a list.\n    Empty sum or product should be equal to either 0 or 1.\n    >>> candidate([])\n    (1, 0)\n    >>> candidate([1, 2, 3, 4])\n    (24, 10)\n    \"\"\"",
+  "prompt_sha256": "6884a3ac62056d5cf6559125cc3f7691d1359afea437ea58bff4d9d44d408245",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "I can help you with that! However, the problem description is a bit ambiguous. The key missing piece of information is *how to determine the \"certain given subset\"*. The docstrings provide examples, but they don't explicitly state the rule for subset selection.\n\nLet's analyze the examples to try and infer the rule:\n\n*   **`candidate([])` returns `(1, 0)`**:\n    *   An empty list has no subsets.\n    *   An empty sum is typically 0.\n    *   An empty product is typically 1.\n    *   This output seems to be the default for an empty list, where the \"subset\" is effectively empty.\n\n*   **`candidate([1, 2, 3, 4])` returns `(24, 10)`**:\n    *   The sum is 24.\n    *   The product is 10.\n    *   Let's consider subsets of `[1, 2, 3, 4]`:\n        *   If the subset was `[1, 2, 3, 4]`, the sum would be 10 and the product would be ",
+  "gen_raw": {},
+  "contains_code": false,
+  "code_detected_method": "none",
+  "extracted_code": null,
+  "is_question": true,
+  "extracted_questions": [
+    "I can help you with that! However, the problem description is a bit ambiguous. The key missing piece of information is *how to determine the \"certain given subset\"*. The docstrings provide examples, but they don't explicitly state the rule for subset selection.\n\nLet's analyze the examples to try and infer the rule:\n\n*   **`candidate([])` returns `(1, 0)`**:\n    *   An empty list has no subsets.\n    *   An empty sum is typically 0.\n    *   An empty product is typically 1.\n    *   This output seems to be the default for an empty list, where the \"subset\" is effectively empty.\n\n*   **`candidate([1, 2, 3, 4])` returns `(24, 10)`**:\n    *   The sum is 24.\n    *   The product is 10.\n    *   Let's consider subsets of `[1, 2, 3, 4]`:\n        *   If the subset was `[1, 2, 3, 4]`, the sum would be 10 and the product would be?"
+  ],
+  "question_count": 1,
+  "first_question": "I can help you with that! However, the problem description is a bit ambiguous. The key missing piece of information is *how to determine the \"certain given subset\"*. The docstrings provide examples, but they don't explicitly state the rule for subset selection.\n\nLet's analyze the examples to try and infer the rule:\n\n*   **`candidate([])` returns `(1, 0)`**:\n    *   An empty list has no subsets.\n    *   An empty sum is typically 0.\n    *   An empty product is typically 1.\n    *   This output seems to be the default for an empty list, where the \"subset\" is effectively empty.\n\n*   **`candidate([1, 2, 3, 4])` returns `(24, 10)`**:\n    *   The sum is 24.\n    *   The product is 10.\n    *   Let's consider subsets of `[1, 2, 3, 4]`:\n        *   If the subset was `[1, 2, 3, 4]`, the sum would be 10 and the product would be?",
+  "question_chars": 826,
+  "latency_sec": 1.9185819625854492,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

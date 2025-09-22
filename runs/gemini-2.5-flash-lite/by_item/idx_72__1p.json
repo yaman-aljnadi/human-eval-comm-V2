@@ -1,0 +1,39 @@
+{
+  "record_id": "idx_72::1p::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_72",
+  "category": "1p",
+  "entry_point": "will_it_fly",
+  "prompt_field": "prompt1p",
+  "prompt_text": "\ndef will_it_fly(q,w):\n    '''\n    Write a function that returns True if the object q will fly, and False otherwise.\n\n    Example:\n    will_it_fly([1, 2], 5) ➞ False \n    # 1+2 is less than the maximum possible weight, but it's unbalanced.\n\n    will_it_fly([3, 2, 3], 1) ➞ False\n\n    will_it_fly([3, 2, 3], 9) ➞ True\n\n    will_it_fly([3], 5) ➞ True\n\n    '''\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef will_it_fly(q,w):\n    '''\n    Write a function that returns True if the object q will fly, and False otherwise.\n\n    Example:\n    will_it_fly([1, 2], 5) ➞ False \n    # 1+2 is less than the maximum possible weight, but it's unbalanced.\n\n    will_it_fly([3, 2, 3], 1) ➞ False\n\n    will_it_fly([3, 2, 3], 9) ➞ True\n\n    will_it_fly([3], 5) ➞ True\n\n    '''",
+  "prompt_sha256": "878f1adf55a2d445ef4cb724a19f8a9347a85bdf1337e7c112c95bb82987f62b",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "This is an interesting problem that requires more context to definitively solve! The provided examples hint at two primary conditions for an object to \"fly\":\n\n1.  **Weight limit:** The total weight of the object must be less than or equal to a maximum possible weight. This is represented by the input `w`.\n2.  **Balance:** The object must be balanced. This is where the ambiguity lies. The examples suggest that a single item list (e.g., `[3]`) is balanced, but a multi-item list like `[1, 2]` is not balanced in the first example, while `[3, 2, 3]` seems to be balanced in the third example.\n\nTo write a truly robust `will_it_fly` function, I need a clearer definition of what constitutes \"balance\" for a list of items.\n\nHere are a few clarifying questions:\n\n*   **How is \"balance\" defined for the list `q`?**\n    *   Is it about the distribution of weights? For example, if `q` represents weights of different parts of an object, how do we determine if those parts are balanced?\n    *   Does \"balance\" relate to the *number*",
+  "gen_raw": {},
+  "contains_code": false,
+  "code_detected_method": "none",
+  "extracted_code": null,
+  "is_question": true,
+  "extracted_questions": [
+    "This is an interesting problem that requires more context to definitively solve! The provided examples hint at two primary conditions for an object to \"fly\":\n\n1.  **Weight limit:** The total weight of the object must be less than or equal to a maximum possible weight. This is represented by the input `w`.\n2.  **Balance:** The object must be balanced. This is where the ambiguity lies. The examples suggest that a single item list (e.g., `[3]`) is balanced, but a multi-item list like `[1, 2]` is not balanced in the first example, while `[3, 2, 3]` seems to be balanced in the third example.\n\nTo write a truly robust `will_it_fly` function, I need a clearer definition of what constitutes \"balance\" for a list of items.\n\nHere are a few clarifying questions:\n\n*   **How is \"balance\" defined for the list `q`?",
+    "**\n    *   Is it about the distribution of weights?",
+    "For example, if `q` represents weights of different parts of an object, how do we determine if those parts are balanced?",
+    "*   Does \"balance\" relate to the *number*?",
+    "Here are a few clarifying questions:\n\n*   **How is \"balance\" defined for the list `q`?"
+  ],
+  "question_count": 5,
+  "first_question": "This is an interesting problem that requires more context to definitively solve! The provided examples hint at two primary conditions for an object to \"fly\":\n\n1.  **Weight limit:** The total weight of the object must be less than or equal to a maximum possible weight. This is represented by the input `w`.\n2.  **Balance:** The object must be balanced. This is where the ambiguity lies. The examples suggest that a single item list (e.g., `[3]`) is balanced, but a multi-item list like `[1, 2]` is not balanced in the first example, while `[3, 2, 3]` seems to be balanced in the third example.\n\nTo write a truly robust `will_it_fly` function, I need a clearer definition of what constitutes \"balance\" for a list of items.\n\nHere are a few clarifying questions:\n\n*   **How is \"balance\" defined for the list `q`?",
+  "question_chars": 1108,
+  "latency_sec": 2.1661343574523926,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

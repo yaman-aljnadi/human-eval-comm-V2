@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_30::1p::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_30",
+  "category": "1p",
+  "entry_point": "get_positive",
+  "prompt_field": "prompt1p",
+  "prompt_text": "\n\ndef candidate(l: list):\n    \"\"\"\n    >>> candidate([-1, 2, -4, 5, 6])\n    [2, 5, 6]\n    >>> candidate([5, 3, -5, 2, -3, 3, 9, 0, 123, 1, -10])\n    [5, 3, 2, 3, 9, 123, 1]\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(l: list):\n    \"\"\"\n    >>> candidate([-1, 2, -4, 5, 6])\n    [2, 5, 6]\n    >>> candidate([5, 3, -5, 2, -3, 3, 9, 0, 123, 1, -10])\n    [5, 3, 2, 3, 9, 123, 1]\n    \"\"\"",
+  "prompt_sha256": "48c4a662dde0f6534df43ea84f98404a8dbc5d38edf93d8b3833c576d2241f53",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef candidate(l: list):\n    \"\"\"\n    >>> candidate([-1, 2, -4, 5, 6])\n    [2, 5, 6]\n    >>> candidate([5, 3, -5, 2, -3, 3, 9, 0, 123, 1, -10])\n    [5, 3, 2, 3, 9, 123, 1]\n    \"\"\"\n    return [x for x in l if x >= 0]\n```",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def candidate(l: list):\n    \"\"\"\n    >>> candidate([-1, 2, -4, 5, 6])\n    [2, 5, 6]\n    >>> candidate([5, 3, -5, 2, -3, 3, 9, 0, 123, 1, -10])\n    [5, 3, 2, 3, 9, 123, 1]\n    \"\"\"\n    return [x for x in l if x >= 0]",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 0.8674404621124268,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

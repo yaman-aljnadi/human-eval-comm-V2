@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_114::1p::andrijdavid/Meta-Llama-3-13B-Instruct::seed0",
+  "task_id": "idx_114",
+  "category": "1p",
+  "entry_point": "minSubArraySum",
+  "prompt_field": "prompt1p",
+  "prompt_text": "\ndef candidate(nums):\n    \"\"\"\n    Given an array of integers nums, find the minimum sum\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(nums):\n    \"\"\"\n    Given an array of integers nums, find the minimum sum\n    \"\"\"",
+  "prompt_sha256": "62a45b3a7978dad677b11a8bc69c9d44926d585ed0145fd7b44a30b833ffb647",
+  "model_name": "andrijdavid/Meta-Llama-3-13B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(nums):\n    \"\"\"\n    Given an array of integers nums, find the minimum sum\n    \"\"\"orum\"\"\"\n\n    \"\"\"\n    nums = [1, 2,odata]\n    \"\"\"\n    \"\"\"\n    \"\"\"\n    \"\"\"\n    \"\"\"\n    \"\"\"\n\n### clarifying questions\nPlease provide examples of input/output and/or what you mean by \"minimum sum\"\n\n### example of input-output\nnums = [1,2]\n expected output: 3\n nums = [1]\n expected output: 1\n\n ### python3 code generation\nnums = [1,2]\nexpected output =3 Explanation:\n min_sum = 1 +2 =3\n ### code below:\n Importing necessary libraries and/or functions\n def candidate(nums):\n    return min_sum = sumnumsillsprint(\"minimum sum of given arraynumsillscribeillsprintnumsillsprint numsillsprintillsprintillsprintillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsills",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def candidate(nums):\n    \"\"\"\n    Given an array of integers nums, find the minimum sum\n    \"\"\"orum\"\"\"\n\n    \"\"\"\n    nums = [1, 2,odata]\n    \"\"\"\n    \"\"\"\n    \"\"\"\n    \"\"\"\n    \"\"\"\n    \"\"\"\n\n### clarifying questions\nPlease provide examples of input/output and/or what you mean by \"minimum sum\"\n\n### example of input-output\nnums = [1,2]\n expected output: 3\n nums = [1]\n expected output: 1\n\n ### python3 code generation\nnums = [1,2]\nexpected output =3 Explanation:\n min_sum = 1 +2 =3\n ### code below:\n Importing necessary libraries and/or functions\n def candidate(nums):\n    return min_sum = sumnumsillsprint(\"minimum sum of given arraynumsillscribeillsprintnumsillsprint numsillsprintillsprintillsprintillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsillsills",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 107.56115555763245,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

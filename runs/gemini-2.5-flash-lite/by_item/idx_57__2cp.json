@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_57::2cp::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_57",
+  "category": "2cp",
+  "entry_point": "monotonic",
+  "prompt_field": "prompt2cp",
+  "prompt_text": "\n\ndef candidate(l: list):\n    \"\"\"Return True if list elements are monotonic.\n    >>> candidate([1, 2, 4, 20])\n    False\n    >>> candidate([1, 20, 4, 10])\n    True\n    >>> candidate([4, 1, 0, -10])\n    False\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(l: list):\n    \"\"\"Return True if list elements are monotonic.\n    >>> candidate([1, 2, 4, 20])\n    False\n    >>> candidate([1, 20, 4, 10])\n    True\n    >>> candidate([4, 1, 0, -10])\n    False\n    \"\"\"",
+  "prompt_sha256": "2ff8d9ca995039484b4bb621a957b388fc0f22f1e55ff0e82999fa86a673a8a1",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef candidate(l: list):\n    \"\"\"Return True if list elements are monotonic.\n    >>> candidate([1, 2, 4, 20])\n    False\n    >>> candidate([1, 20, 4, 10])\n    True\n    >>> candidate([4, 1, 0, -10])\n    False\n    \"\"\"\n    if len(l) < 2:\n        return True\n\n    # Determine the trend of the first two elements\n    increasing = None\n    for i in range(len(l) - 1):\n        if l[i] < l[i+1]:\n            if increasing is None:\n                increasing = True\n            elif not increasing:\n                return False\n        elif l[i] > l[i+1]:\n            if increasing is None:\n                increasing = False\n            elif increasing:\n                return False\n\n    return True\n```",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def candidate(l: list):\n    \"\"\"Return True if list elements are monotonic.\n    >>> candidate([1, 2, 4, 20])\n    False\n    >>> candidate([1, 20, 4, 10])\n    True\n    >>> candidate([4, 1, 0, -10])\n    False\n    \"\"\"\n    if len(l) < 2:\n        return True\n\n    # Determine the trend of the first two elements\n    increasing = None\n    for i in range(len(l) - 1):\n        if l[i] < l[i+1]:\n            if increasing is None:\n                increasing = True\n            elif not increasing:\n                return False\n        elif l[i] > l[i+1]:\n            if increasing is None:\n                increasing = False\n            elif increasing:\n                return False\n\n    return True",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 1.009974479675293,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

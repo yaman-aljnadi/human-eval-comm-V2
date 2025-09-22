@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_22::1a::meta-llama/Meta-Llama-3-8B-Instruct::seed0",
+  "task_id": "idx_22",
+  "category": "1a",
+  "entry_point": "filter_integers",
+  "prompt_field": "prompt1a",
+  "prompt_text": "from typing import List, Any\n\n\ndef candidate(values: List[Any]) -> List[int]:\n    \"\"\" Filter given list of any python values only for certain types\n    >>> candidate(['a', 3.14, 5])\n    [5]\n    >>> candidate([1, 2, 3, 'abc', {}, []])\n    [1, 2, 3]\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List, Any\n\n\ndef candidate(values: List[Any]) -> List[int]:\n    \"\"\" Filter given list of any python values only for certain types\n    >>> candidate(['a', 3.14, 5])\n    [5]\n    >>> candidate([1, 2, 3, 'abc', {}, []])\n    [1, 2, 3]\n    \"\"\"",
+  "prompt_sha256": "04f36323e21ad16c0cd507da74af0241bece16ff84e4a5bce6a4441636645bc7",
+  "model_name": "meta-llama/Meta-Llama-3-8B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List, Any\n\n\ndef candidate(values: List[Any]) -> List[int]:\n    \"\"\" Filter given list of any python values only for certain types\n    >>> candidate(['a', 3.14, 5])\n    [5]\n    >>> candidate([1, 2, 3, 'abc', {}, []])\n    [1, 2, 3]\n    \"\"\"\n\n\n## Clarifying Questions\n\n* Is the input always a list?\n* Are there any constraints on the specific types I should filter?\n* Are there any specific errors I should handle? \n\n(Or directly give the code as per your understanding based on the prompt)\n\n### Code\n```python\nfrom typing import List, Any\n\ndef candidate(values: List[Any]) -> List[int]:\n    return [value for value in values if isinstance(value, int)]\n```\n(Feel free to update the code as per the clarification you received)  | [Answer this question](https://stackoverflow.com/questions/74033591/filter-a-list-in-python-with-python-type-hinting/74033604#74033604) | [Ask another question](https://stackoverflow.com/questions/ask?sourcebody=I%20am%20an%20expert%20software%20developer%20who%20writes%20high%20quality%20code.%20With%20below%20information,%20please%20either%20generate%20Python3%20code%20(Respond%20directly%20with%20code%20only%20with%20markdown),%20or%20ask%20clarifying%20questions:%) |",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "from typing import List, Any\n\ndef candidate(values: List[Any]) -> List[int]:\n    return [value for value in values if isinstance(value, int)]",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 71.17764854431152,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

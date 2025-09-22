@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_162::1a::andrijdavid/Meta-Llama-3-13B-Instruct::seed0",
+  "task_id": "idx_162",
+  "category": "1a",
+  "entry_point": "string_to_md5",
+  "prompt_field": "prompt1a",
+  "prompt_text": "\ndef candidate(text):\n    \"\"\"\n    Given a string 'text', return its ideal hash equivalent string.\n    If 'text' is an empty string, return None.\n\n    >>> candidate('Hello world') == '3e25960a79dbc69b674cd4ec67a72c62'\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(text):\n    \"\"\"\n    Given a string 'text', return its ideal hash equivalent string.\n    If 'text' is an empty string, return None.\n\n    >>> candidate('Hello world') == '3e25960a79dbc69b674cd4ec67a72c62'\n    \"\"\"",
+  "prompt_sha256": "d1cf1c344080776c6f30a33dc124e91367371a9bcbee80b99cec934e6eca84b4",
+  "model_name": "andrijdavid/Meta-Llama-3-13B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(text):\n    \"\"\"\n    Given a string 'text', return its ideal hash equivalent string.\n    If 'text' is an empty string, return None.\n\n    >>> candidate('Hello world') == '3e25960a79dbc69b674cd4ec67a72c62'\n    \"\"\"istrovství (https://www.cavigate.com.au blogs/ hash-codes-% E2% Alv Datum-% E2% Alv%E2% Alv%E2% Alv[E2 Alv Dat[E2 Alv Dat[E2 Alv Dat[E2 Alv Dat[E2 Alv Dat[E2 Alv Dat[E2 Alv Dat[E2 Alv Dat[E2 Alv Dat[E2 Alv Dat[E2 Alv Dat E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def candidate(text):\n    \"\"\"\n    Given a string 'text', return its ideal hash equivalent string.\n    If 'text' is an empty string, return None.\n\n    >>> candidate('Hello world') == '3e25960a79dbc69b674cd4ec67a72c62'\n    \"\"\"istrovství (https://www.cavigate.com.au blogs/ hash-codes-% E2% Alv Datum-% E2% Alv%E2% Alv%E2% Alv[E2 Alv Dat[E2 Alv Dat[E2 Alv Dat[E2 Alv Dat[E2 Alv Dat[E2 Alv Dat[E2 Alv Dat[E2 Alv Dat[E2 Alv Dat[E2 Alv Dat[E2 Alv Dat E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E E",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 92.01225709915161,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

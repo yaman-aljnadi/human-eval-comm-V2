@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_131::1c::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_131",
+  "category": "1c",
+  "entry_point": "digits",
+  "prompt_field": "prompt1c",
+  "prompt_text": "\ndef digits(n):\n    \"\"\"Given a positive integer n, return the product of the odd digits.\n    Return 0 if all digits are even.\n    For example:\n    digits(1)  == 1\n    digits(4)  == 4\n    digits(235) == 30\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef digits(n):\n    \"\"\"Given a positive integer n, return the product of the odd digits.\n    Return 0 if all digits are even.\n    For example:\n    digits(1)  == 1\n    digits(4)  == 4\n    digits(235) == 30\n    \"\"\"",
+  "prompt_sha256": "54d3545d355f114514f033622b3ee71cb3831e59e638028a6abd03a644db61f5",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef digits(n):\n    \"\"\"Given a positive integer n, return the product of the odd digits.\n    Return 0 if all digits are even.\n    For example:\n    digits(1)  == 1\n    digits(4)  == 4\n    digits(235) == 30\n    \"\"\"\n    product = 1\n    has_odd_digit = False\n    for digit in str(n):\n        digit_int = int(digit)\n        if digit_int % 2 != 0:\n            product *= digit_int\n            has_odd_digit = True\n\n    if has_odd_digit:\n        return product\n    else:\n        # If all digits are even, the product will still be 1\n        # We need to return 0 in this specific case as per the problem description.\n        # However, the examples imply if there's only one even digit, it should be returned.\n        # Let's re-evaluate the example `digits(4) == 4`. This implies if all digits are even,\n        # we might return the number itself if it has only one even",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def digits(n):\n    \"\"\"Given a positive integer n, return the product of the odd digits.\n    Return 0 if all digits are even.\n    For example:\n    digits(1)  == 1\n    digits(4)  == 4\n    digits(235) == 30\n    \"\"\"\n    product = 1\n    has_odd_digit = False\n    for digit in str(n):\n        digit_int = int(digit)\n        if digit_int % 2 != 0:\n            product *= digit_int\n            has_odd_digit = True\n\n    if has_odd_digit:\n        return product\n    else:\n        # If all digits are even, the product will still be 1\n        # We need to return 0 in this specific case as per the problem description.\n        # However, the examples imply if there's only one even digit, it should be returned.\n        # Let's re-evaluate the example `digits(4) == 4`. This implies if all digits are even,\n        # we might return the number itself if it has only one even",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 1.847834825515747,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

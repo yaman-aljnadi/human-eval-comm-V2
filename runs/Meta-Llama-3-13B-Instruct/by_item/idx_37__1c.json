@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_37::1c::andrijdavid/Meta-Llama-3-13B-Instruct::seed0",
+  "task_id": "idx_37",
+  "category": "1c",
+  "entry_point": "sort_even",
+  "prompt_field": "prompt1c",
+  "prompt_text": "\n\ndef sort_even(l: list):\n    \"\"\"This function takes a list l and returns a list l' such that\n    l' is identical to l in the odd indicies, while its values at the even indicies are equal\n    to the values of the even indicies of l, but sorted.\n    >>> sort_even([1, 2, 3])\n    [3, 2, 1]\n    >>> sort_even([5, 6, 3, 4])\n    [6, 5, 4, 3]\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef sort_even(l: list):\n    \"\"\"This function takes a list l and returns a list l' such that\n    l' is identical to l in the odd indicies, while its values at the even indicies are equal\n    to the values of the even indicies of l, but sorted.\n    >>> sort_even([1, 2, 3])\n    [3, 2, 1]\n    >>> sort_even([5, 6, 3, 4])\n    [6, 5, 4, 3]\n    \"\"\"",
+  "prompt_sha256": "80a1635e2ef4cb9bc8716cb1295d1c491cec4b2a64a52f29606bdc6b3f74763e",
+  "model_name": "andrijdavid/Meta-Llama-3-13B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef sort_even(l: list):\n    \"\"\"This function takes a list l and returns a list l' such that\n    l' is identical to l in the odd indicies, while its values at the even indicies are equal\n    to the values of the even indicies of l, but sorted.\n    >>> sort_even([1, 2, 3])\n    [3, 2, 1]\n    >>> sort_even([5, 6, 3, 4])\n    [6, 5, 4, 3]\n    \"\"\"\n\n\nTEMPLATESkills needed:\nSoftware development\nAskedBy: user\n\n###[User]: Please provide a Python3 code that sorts the even--indexed elements of a list based on their values ######endirmental skills requiredSoftware development三级�数量Skills needed Software development AskedBy userascarmentalisteneedservaluedSkills needed Software developmentSEQUENTIAL.skills needed Software developmentSEQUENTIAL Skills needed Software developmentSEQUENTIAL Skills needed Software development Skills needed Software developmentSEQUENTIAL Skills needed Software development Skills needed Software development Skills needed Software development Skills needed Software development Skills needed Software development Skills needed Software development Skills needed Software development Skills needed Software development Skills needed Software development Skills needed Software development Skills needed software development Skills needed Software development Skills needed Software development Skills needed Software development Skills needed Software development Skills needed Software development Skills needed software development Skills needed Software development Skills needed Software development Skills needed Software development Skills needed Software development Skills needed Software development Skills needed Software development Skills needed Software development Skills needed Software development Skills needed Software development Skills needed Software development Skills needed Software development Skills needed Software development Skills needed Software development Skills needed Software development Skills needed Software development Skills needed Software development Skills needed Software development Skills needed Software development Skills needed Software development Skills needed Software development Skills needed Software development Skills needed Software development Skills needed Software development Skills needed Software development Skills needed",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def sort_even(l: list):\n    \"\"\"This function takes a list l and returns a list l' such that\n    l' is identical to l in the odd indicies, while its values at the even indicies are equal\n    to the values of the even indicies of l, but sorted.\n    >>> sort_even([1, 2, 3])\n    [3, 2, 1]\n    >>> sort_even([5, 6, 3, 4])\n    [6, 5, 4, 3]\n    \"\"\"\n\n\nTEMPLATESkills needed:\nSoftware development\nAskedBy: user\n\n###[User]: Please provide a Python3 code that sorts the even--indexed elements of a list based on their values ######endirmental skills requiredSoftware development三级�数量Skills needed Software development AskedBy userascarmentalisteneedservaluedSkills needed Software developmentSEQUENTIAL.skills needed Software developmentSEQUENTIAL Skills needed Software developmentSEQUENTIAL Skills needed Software development Skills needed Software developmentSEQUENTIAL Skills needed Software development Skills needed Software development Skills needed Software development Skills needed Software development Skills needed Software development Skills needed Software development Skills needed Software development Skills needed Software development Skills needed Software development Skills needed Software development Skills needed software development Skills needed Software development Skills needed Software development Skills needed Software development Skills needed Software development Skills needed Software development Skills needed software development Skills needed Software development Skills needed Software development Skills needed Software development Skills needed Software development Skills needed Software development Skills needed Software development Skills needed Software development Skills needed Software development Skills needed Software development Skills needed Software development Skills needed Software development Skills needed Software development Skills needed Software development Skills needed Software development Skills needed Software development Skills needed Software development Skills needed Software development Skills needed Software development Skills needed Software development Skills needed Software development Skills needed Software development Skills needed Software development Skills needed Software development Skills needed Software development Skills needed",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 181.18684840202332,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

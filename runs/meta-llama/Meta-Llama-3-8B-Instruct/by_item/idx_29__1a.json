@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_29::1a::meta-llama/Meta-Llama-3-8B-Instruct::seed0",
+  "task_id": "idx_29",
+  "category": "1a",
+  "entry_point": "filter_by_prefix",
+  "prompt_field": "prompt1a",
+  "prompt_text": "from typing import List\n\n\ndef candidate(strings: List[str], prefix: str) -> List[str]:\n    \"\"\" Filter an input list of strings only for ones that satisfy certain condition with a given prefix.\n    >>> candidate([], 'a')\n    []\n    >>> candidate(['abc', 'bcd', 'cde', 'array'], 'a')\n    ['abc', 'array']\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List\n\n\ndef candidate(strings: List[str], prefix: str) -> List[str]:\n    \"\"\" Filter an input list of strings only for ones that satisfy certain condition with a given prefix.\n    >>> candidate([], 'a')\n    []\n    >>> candidate(['abc', 'bcd', 'cde', 'array'], 'a')\n    ['abc', 'array']\n    \"\"\"",
+  "prompt_sha256": "57719aa8448608c060d553a6aa7e3d5d85cc992d5e5d03441d724b4bf5d19b09",
+  "model_name": "meta-llama/Meta-Llama-3-8B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List\n\n\ndef candidate(strings: List[str], prefix: str) -> List[str]:\n    \"\"\" Filter an input list of strings only for ones that satisfy certain condition with a given prefix.\n    >>> candidate([], 'a')\n    []\n    >>> candidate(['abc', 'bcd', 'cde', 'array'], 'a')\n    ['abc', 'array']\n    \"\"\"\n\n\n```\n```python\ndef candidate(strings, prefix):\n    return [s for s in strings if s.startswith(prefix)]\n```\nExplanation: \nThe candidate function is a simple Python program that filters a list of strings based on a given prefix. It accomplishes this task using a list comprehension, which is an efficient and Pythonic way to create a new list by applying a function to each element of an existing list. The function here is checking if each string in the input list starts with the given prefix using the `startswith` method. If it does, the string is included in the resulting list; otherwise, it is not. The output is a new list containing only the strings that meet this condition.  ```\n```\nThis Python code defines a function called `candidate` which filters a list of strings based on a given prefix. It uses a list comprehension to create a new list containing only the strings in the input list that start with the given prefix. If no strings in the input list match the prefix, an empty list is returned. This is demonstrated in the provided unit tests.",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 59.24609327316284,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

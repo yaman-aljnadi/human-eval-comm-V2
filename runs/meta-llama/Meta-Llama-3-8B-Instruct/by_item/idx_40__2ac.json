@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_40::2ac::meta-llama/Meta-Llama-3-8B-Instruct::seed0",
+  "task_id": "idx_40",
+  "category": "2ac",
+  "entry_point": "triples_sum_to_zero",
+  "prompt_field": "prompt2ac",
+  "prompt_text": "\n\ndef candidate(l: list):\n    \"\"\"\n    candidate takes a list of integers as an input.\n    it returns True if there are three elements in a list that\n    sum to zero and meet a certain condition (such as they are distinct, they are odd, they are prime, or another condition), and False otherwise.\n\n    >>> candidate([1, 3, 5, 0])\n    True\n    >>> candidate([1, 3, -2, 1])\n    False\n    >>> candidate([1, 2, 3, 7])\n    True\n    >>> candidate([2, 4, -5, 3, 9, 7])\n    False\n    >>> candidate([1])\n    True\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(l: list):\n    \"\"\"\n    candidate takes a list of integers as an input.\n    it returns True if there are three elements in a list that\n    sum to zero and meet a certain condition (such as they are distinct, they are odd, they are prime, or another condition), and False otherwise.\n\n    >>> candidate([1, 3, 5, 0])\n    True\n    >>> candidate([1, 3, -2, 1])\n    False\n    >>> candidate([1, 2, 3, 7])\n    True\n    >>> candidate([2, 4, -5, 3, 9, 7])\n    False\n    >>> candidate([1])\n    True\n    \"\"\"",
+  "prompt_sha256": "eb19518fcb59d9f4237a9299d655ac0baed29602cafac74645d7608b2ec1d86e",
+  "model_name": "meta-llama/Meta-Llama-3-8B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(l: list):\n    \"\"\"\n    candidate takes a list of integers as an input.\n    it returns True if there are three elements in a list that\n    sum to zero and meet a certain condition (such as they are distinct, they are odd, they are prime, or another condition), and False otherwise.\n\n    >>> candidate([1, 3, 5, 0])\n    True\n    >>> candidate([1, 3, -2, 1])\n    False\n    >>> candidate([1, 2, 3, 7])\n    True\n    >>> candidate([2, 4, -5, 3, 9, 7])\n    False\n    >>> candidate([1])\n    True\n    \"\"\"\n\n\nHere is a Python3 code snippet for the above problem:\n\n```python\ndef is_prime(n: int):\n    if n < 2:\n        return False\n    if n == 2:\n        return True\n    if n % 2 == 0:\n        return False\n    max_divisor = int(n**0.5) + 1\n    for d in range(3, max_divisor, 2):\n        if n % d == 0:\n            return False\n    return True\n\ndef candidate(l: list):\n    for i in range(len(l)):\n        for j in range(i+1, len(l)):\n            for k in range(j+1, len(l)):\n                if l[i] + l[j] + l[k] == 0 and is_prime(l[i]) and is_prime(l[j]) and is_prime(k):\n                    return True\n    return False\n```\n\nIn the above code snippet, the `candidate` function iterates over the input list `l` three times with nested loops to generate all possible combinations of three numbers. For each combination, it checks if the sum of the three numbers is equal to zero and if all three numbers are prime. If such a combination is found, the function",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def is_prime(n: int):\n    if n < 2:\n        return False\n    if n == 2:\n        return True\n    if n % 2 == 0:\n        return False\n    max_divisor = int(n**0.5) + 1\n    for d in range(3, max_divisor, 2):\n        if n % d == 0:\n            return False\n    return True\n\ndef candidate(l: list):\n    for i in range(len(l)):\n        for j in range(i+1, len(l)):\n            for k in range(j+1, len(l)):\n                if l[i] + l[j] + l[k] == 0 and is_prime(l[i]) and is_prime(l[j]) and is_prime(k):\n                    return True\n    return False",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 68.2529366016388,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

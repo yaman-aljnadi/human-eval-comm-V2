@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_5::1c::andrijdavid/Meta-Llama-3-13B-Instruct::seed0",
+  "task_id": "idx_5",
+  "category": "1c",
+  "entry_point": "intersperse",
+  "prompt_field": "prompt1c",
+  "prompt_text": "from typing import List\n\n\ndef intersperse(numbers: List[int], delimeter: int) -> List[int]:\n    \"\"\" Insert a number 'delimeter' between every two consecutive elements of input list `numbers'\n    >>> intersperse([], 4)\n    [4]\n    >>> intersperse([1, 2, 3], 4)\n    [1, 2, 3, 4]\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List\n\n\ndef intersperse(numbers: List[int], delimeter: int) -> List[int]:\n    \"\"\" Insert a number 'delimeter' between every two consecutive elements of input list `numbers'\n    >>> intersperse([], 4)\n    [4]\n    >>> intersperse([1, 2, 3], 4)\n    [1, 2, 3, 4]\n    \"\"\"",
+  "prompt_sha256": "25769b8311691a945e10168a1e96598cb62484a68bd705f086e8e7b1323c5c9a",
+  "model_name": "andrijdavid/Meta-Llama-3-13B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List\n\n\ndef intersperse(numbers: List[int], delimeter: int) -> List[int]:\n    \"\"\" Insert a number 'delimeter' between every two consecutive elements of input list `numbers'\n    >>> intersperse([], 4)\n    [4]\n    >>> intersperse([1, 2, 3], 4)\n    [1, 2, 3, 4]\n    \"\"\"\n\n\nCodes.gsintersperse numbers delimeter Listintegersintegersintegersintegersintegersintegersintegersintegersintegersintegersintegersintegersintegersintegersintintegersintint int int int int int int int int int int intintint int int intintint int int int int int int int int int int int int int int int intintint intint int int int intintintintintint int int intint intintint int int intintintint int intintint int int intintintintintintint intint int int int intintintintint intint int int int int int int intint int int intintintintint intintint intint intintintintint int int int intintint int int intintint intintint intint int intintintintintint intintintintintint intintint int intintintintint int int int int int int int intint int intintint int intintint int int intint intintintintint intintint int intintint int intintint int intintintintintint intintintint int int intintintintintint intintintint int intint int int",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def intersperse(numbers: List[int], delimeter: int) -> List[int]:\n    \"\"\" Insert a number 'delimeter' between every two consecutive elements of input list `numbers'\n    >>> intersperse([], 4)\n    [4]\n    >>> intersperse([1, 2, 3], 4)\n    [1, 2, 3, 4]\n    \"\"\"\n\n\nCodes.gsintersperse numbers delimeter Listintegersintegersintegersintegersintegersintegersintegersintegersintegersintegersintegersintegersintegersintegersintintegersintint int int int int int int int int int int intintint int int intintint int int int int int int int int int int int int int int int intintint intint int int int intintintintintint int int intint intintint int int intintintint int intintint int int intintintintintintint intint int int int intintintintint intint int int int int int int intint int int intintintintint intintint intint intintintintint int int int intintint int int intintint intintint intint int intintintintintint intintintintintint intintint int intintintintint int int int int int int int intint int intintint int intintint int int intint intintintintint intintint int intintint int intintint int intintintintintint intintintint int int intintintintintint intintintint int intint int int",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 109.77380180358887,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

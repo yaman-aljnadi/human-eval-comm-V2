@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_13::1a::meta-llama/Meta-Llama-3-8B-Instruct::seed0",
+  "task_id": "idx_13",
+  "category": "1a",
+  "entry_point": "greatest_common_divisor",
+  "prompt_field": "prompt1a",
+  "prompt_text": "\n\ndef candidate(a: int, b: int) -> int:\n    \"\"\" Return a common divisor of two integers a and b\n    >>> candidate(3, 5)\n    1\n    >>> candidate(25, 15)\n    5\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(a: int, b: int) -> int:\n    \"\"\" Return a common divisor of two integers a and b\n    >>> candidate(3, 5)\n    1\n    >>> candidate(25, 15)\n    5\n    \"\"\"",
+  "prompt_sha256": "71b36b5f670f440570c07adf29fab5ed14edd9d4794b4c308dfa294439da08cd",
+  "model_name": "meta-llama/Meta-Llama-3-8B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(a: int, b: int) -> int:\n    \"\"\" Return a common divisor of two integers a and b\n    >>> candidate(3, 5)\n    1\n    >>> candidate(25, 15)\n    5\n    \"\"\"\n\n\n## Output:\nOutput should be displayed in markdown format below the code block:\n\n```\n candidate(3, 5) -> 1\n candidate(25, 15) -> 5\n```\n\n\n## Code\n```python\n# Python code goes here\n```  ```python\nimport math\n\ndef candidate(a: int, b: int) -> int:\n    a_divisors = []\n    for i in range(1, a + 1):\n        if a % i == 0:\n            a_divisors.append(i)\n    b_divisors = []\n    for i in range(1, b + 1):\n        if b % i == 0:\n            b_divisors.append(i)\n    common_divisors = set(a_divisors) & set(b_divisors)\n    return max(common_divisors)\n\ncandidate(3, 5)  # Output: 1\ncandidate(25, 15)  # Output: 5\n```\n\n[Output]\n```\ncandidate(3, 5) -> 1\ncandidate(25, 15) -> 5\n```  ```python\n```  ```python\nimport math\n\ndef candidate(a: int, b: int) -> int:\n    a_divisors =",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "candidate(3, 5) -> 1\n candidate(25, 15) -> 5",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 71.91405057907104,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

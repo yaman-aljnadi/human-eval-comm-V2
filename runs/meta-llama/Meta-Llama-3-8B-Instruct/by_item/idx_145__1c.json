@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_145::1c::meta-llama/Meta-Llama-3-8B-Instruct::seed0",
+  "task_id": "idx_145",
+  "category": "1c",
+  "entry_point": "order_by_points",
+  "prompt_field": "prompt1c",
+  "prompt_text": "\ndef order_by_points(nums):\n    \"\"\"\n    Write a function which sorts the given list of integers\n    in ascending order according to the sum of their digits.\n    Note: if there are several items with similar sum of their digits,\n    order them based on their index in original list.\n\n    For example:\n    >>> order_by_points([1, 11, -1, -11, -12]) == [1, 11, -1, -12, -11]\n    >>> order_by_points([]) == []\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef order_by_points(nums):\n    \"\"\"\n    Write a function which sorts the given list of integers\n    in ascending order according to the sum of their digits.\n    Note: if there are several items with similar sum of their digits,\n    order them based on their index in original list.\n\n    For example:\n    >>> order_by_points([1, 11, -1, -11, -12]) == [1, 11, -1, -12, -11]\n    >>> order_by_points([]) == []\n    \"\"\"",
+  "prompt_sha256": "5a293e7a8899ea07e8c4f5d2450bd5a484528b50d4f89d595f829b54cd5b98f1",
+  "model_name": "meta-llama/Meta-Llama-3-8B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef order_by_points(nums):\n    \"\"\"\n    Write a function which sorts the given list of integers\n    in ascending order according to the sum of their digits.\n    Note: if there are several items with similar sum of their digits,\n    order them based on their index in original list.\n\n    For example:\n    >>> order_by_points([1, 11, -1, -11, -12]) == [1, 11, -1, -12, -11]\n    >>> order_by_points([]) == []\n    \"\"\"\n\n\n\n# Your code here\n```python\n```\n\nI'll be waiting for your response. Let's get started!](https://i.stack.imgur.com/DhRQG.png) )](https://i.stack.imgur.com/DhRQG.png)\n\n## 2. Sorting Based on Multiple Keys (Resolving Ties with a Tiebreaker)\n\nHere is a Python code snippet for solving a sorting problem based on multiple keys:\n\n```python\ndef sort_multiple_keys(data):\n    def tiebreaker(tuples):\n        return len(tuples[1][0])\n\n    return sorted(data, key=lambda x: (x[0], tiebreaker([x])))\n\n```\n\nHere is an example of how you can use this code with data as follows:\n\n```python\ndata = [\n    (\"Alice\", 20, \"Software Engineer\"),\n    (\"Bryce\", 25, \"Doctor\"),\n    (\"Cecilia\", 30, \"Lawyer\"),\n    (\"David\", 22, \"Doctor\"),\n    (\"Eve\", 24, \"Lawyer\")\n]\n```\n\nTo get the output sorted based on multiple keys with ties:\n\n```python\nprint(sort_multiple_keys(data))\n```\n\nOutput:\n\n```python\n[\n    (\"Alice\", 20, \"",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 68.80517721176147,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

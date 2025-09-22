@@ -1,0 +1,35 @@
+{
+  "record_id": "idx_4::2ac::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_4",
+  "category": "2ac",
+  "entry_point": "mean_absolute_deviation",
+  "prompt_field": "prompt2ac",
+  "prompt_text": "from typing import List\n\n\ndef candidate(numbers: List[float]) -> float:\n    \"\"\" For a given list of input numbers, calculate Mean Absolute Deviation\n    around a certain attribute (e.g. max or mean or other) of this dataset.\n    Mean Absolute Deviation is the average absolute difference between each\n    element and a centerpoint (e.g. max or mean in this case):\n    MAD = average | x - (e.g. max or mean or other) |\n    >>> mean_absolute_deviation([1.0, 2.0, 3.0, 4.0])\n    1.5\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List\n\n\ndef candidate(numbers: List[float]) -> float:\n    \"\"\" For a given list of input numbers, calculate Mean Absolute Deviation\n    around a certain attribute (e.g. max or mean or other) of this dataset.\n    Mean Absolute Deviation is the average absolute difference between each\n    element and a centerpoint (e.g. max or mean in this case):\n    MAD = average | x - (e.g. max or mean or other) |\n    >>> mean_absolute_deviation([1.0, 2.0, 3.0, 4.0])\n    1.5\n    \"\"\"",
+  "prompt_sha256": "4f5ba2931cc44e918cdfd191e8b69d3565b542636b40ab1b4971bd5941e47702",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "The provided docstring is a bit ambiguous about the \"certain attribute\" around which the Mean Absolute Deviation (MAD) should be calculated. The example `mean_absolute_deviation([1.0, 2.0, 3.0, 4.0])` returning `1.5` strongly suggests that the \"certain attribute\" is the **mean** of the dataset.\n\nLet's verify this assumption with the example:\nDataset: `[1.0, 2.0, 3.0, 4.0]`\nMean of the dataset: `(1.0 + 2.0 + 3.0 + 4.0) / 4 = 10.0 / 4 = 2.5`\n\nAbsolute deviations from the mean:\n* `|1.0 - 2.5| = 1.5`\n* `|2.0 - 2.5| = 0.5`\n* `|3.0 - 2.5| = 0.5`\n* `|4.0 - 2.5| = 1.5`\n\nSum of absolute deviations: `1.5 + 0.",
+  "gen_raw": {},
+  "contains_code": false,
+  "code_detected_method": "none",
+  "extracted_code": null,
+  "is_question": true,
+  "extracted_questions": [
+    "The provided docstring is a bit ambiguous about the \"certain attribute\" around which the Mean Absolute Deviation (MAD) should be calculated. The example `mean_absolute_deviation([1.0, 2.0, 3.0, 4.0])` returning `1.5` strongly suggests that the \"certain attribute\" is the **mean** of the dataset.\n\nLet's verify this assumption with the example:\nDataset: `[1.0, 2.0, 3.0, 4.0]`\nMean of the dataset: `(1.0 + 2.0 + 3.0 + 4.0) / 4 = 10.0 / 4 = 2.5`\n\nAbsolute deviations from the mean:\n* `|1.0 - 2.5| = 1.5`\n* `|2.0 - 2.5| = 0.5`\n* `|3.0 - 2.5| = 0.5`\n* `|4.0 - 2.5| = 1.5`\n\nSum of absolute deviations: `1.5 + 0.?"
+  ],
+  "question_count": 1,
+  "first_question": "The provided docstring is a bit ambiguous about the \"certain attribute\" around which the Mean Absolute Deviation (MAD) should be calculated. The example `mean_absolute_deviation([1.0, 2.0, 3.0, 4.0])` returning `1.5` strongly suggests that the \"certain attribute\" is the **mean** of the dataset.\n\nLet's verify this assumption with the example:\nDataset: `[1.0, 2.0, 3.0, 4.0]`\nMean of the dataset: `(1.0 + 2.0 + 3.0 + 4.0) / 4 = 10.0 / 4 = 2.5`\n\nAbsolute deviations from the mean:\n* `|1.0 - 2.5| = 1.5`\n* `|2.0 - 2.5| = 0.5`\n* `|3.0 - 2.5| = 0.5`\n* `|4.0 - 2.5| = 1.5`\n\nSum of absolute deviations: `1.5 + 0.?",
+  "question_chars": 607,
+  "latency_sec": 1.9667620658874512,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

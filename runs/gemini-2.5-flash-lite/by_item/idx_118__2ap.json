@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_118::2ap::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_118",
+  "category": "2ap",
+  "entry_point": "get_closest_vowel",
+  "prompt_field": "prompt2ap",
+  "prompt_text": "\ndef candidate(word):\n    \"\"\"You are given a word. Your task is to find the farthest or closest vowel that stands\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(word):\n    \"\"\"You are given a word. Your task is to find the farthest or closest vowel that stands\n    \"\"\"",
+  "prompt_sha256": "ff0315f8ca1b69e1174bc21adf2a579f299c61cf782d37f2b4bdfcf922d6be90",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef candidate(word):\n    \"\"\"\n    Given a word, find the farthest or closest vowel that stands.\n\n    This function needs further clarification on what \"stands\" means and\n    what \"farthest or closest\" refers to.\n\n    Please clarify:\n    1. What does \"stands\" refer to? Does it mean the vowel itself, or a character in a specific position relative to the vowel?\n    2. What is the reference point for \"farthest or closest\"? Is it the beginning of the word, the end of the word, or some other specific character/position?\n    3. Are we looking for the farthest/closest vowel from a particular character, or from the word's extremities?\n    4. If there are multiple vowels that satisfy the criteria, which one should be returned? (e.g., the first one encountered, the last one, etc.)\n    5. What should be returned if no vowels are present in the word?\n    6. What should be returned if the word is empty?\n    \"\"\"\n    pass\n```",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def candidate(word):\n    \"\"\"\n    Given a word, find the farthest or closest vowel that stands.\n\n    This function needs further clarification on what \"stands\" means and\n    what \"farthest or closest\" refers to.\n\n    Please clarify:\n    1. What does \"stands\" refer to? Does it mean the vowel itself, or a character in a specific position relative to the vowel?\n    2. What is the reference point for \"farthest or closest\"? Is it the beginning of the word, the end of the word, or some other specific character/position?\n    3. Are we looking for the farthest/closest vowel from a particular character, or from the word's extremities?\n    4. If there are multiple vowels that satisfy the criteria, which one should be returned? (e.g., the first one encountered, the last one, etc.)\n    5. What should be returned if no vowels are present in the word?\n    6. What should be returned if the word is empty?\n    \"\"\"\n    pass",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 1.7959599494934082,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

@@ -1,0 +1,2 @@
+items,with_questions,non_questions,communication_rate,good_question_rate,acceptable_question_rate,false_recovery_rate,judges,temperature,max_tokens
+771,283,488,0.367056,0.333333,0.354086,0.409836,openai/gpt-3.5-turbo gemini/gemini-2.5-flash-lite deepseek-ai/deepseek-coder-6.7b-instruct,1.0,256

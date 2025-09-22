@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_43::1c::andrijdavid/Meta-Llama-3-13B-Instruct::seed0",
+  "task_id": "idx_43",
+  "category": "1c",
+  "entry_point": "pairs_sum_to_zero",
+  "prompt_field": "prompt1c",
+  "prompt_text": "\n\ndef pairs_sum_to_zero(l):\n    \"\"\"\n    pairs_sum_to_zero takes a list of integers as an input.\n    it returns True if there are two distinct elements in the list that\n    sum to zero, and False otherwise.\n    >>> pairs_sum_to_zero([1, 3, 5, 0])\n    True\n    >>> pairs_sum_to_zero([1, 3, -2, 1])\n    True\n    >>> pairs_sum_to_zero([1, 2, 3, 7])\n    True\n    >>> pairs_sum_to_zero([2, 4, -5, 3, 5, 7])\n    False\n    >>> pairs_sum_to_zero([1])\n    True\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef pairs_sum_to_zero(l):\n    \"\"\"\n    pairs_sum_to_zero takes a list of integers as an input.\n    it returns True if there are two distinct elements in the list that\n    sum to zero, and False otherwise.\n    >>> pairs_sum_to_zero([1, 3, 5, 0])\n    True\n    >>> pairs_sum_to_zero([1, 3, -2, 1])\n    True\n    >>> pairs_sum_to_zero([1, 2, 3, 7])\n    True\n    >>> pairs_sum_to_zero([2, 4, -5, 3, 5, 7])\n    False\n    >>> pairs_sum_to_zero([1])\n    True\n    \"\"\"",
+  "prompt_sha256": "8395462bacd0b4b074474ae211568ea7f1bd46d76b5f0cdf33f9791271194c07",
+  "model_name": "andrijdavid/Meta-Llama-3-13B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef pairs_sum_to_zero(l):\n    \"\"\"\n    pairs_sum_to_zero takes a list of integers as an input.\n    it returns True if there are two distinct elements in the list that\n    sum to zero, and False otherwise.\n    >>> pairs_sum_to_zero([1, 3, 5, 0])\n    True\n    >>> pairs_sum_to_zero([1, 3, -2, 1])\n    True\n    >>> pairs_sum_to_zero([1, 2, 3, 7])\n    True\n    >>> pairs_sum_to_zero([2, 4, -5, 3, 5, 7])\n    False\n    >>> pairs_sum_to_zero([1])\n    True\n    \"\"\"\n\n\n\nPlease note that you can assume that the input list contains at least one element \nIFESTUALLY:|\n\n\n\n please respond with code below MARKdown:|�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�자�数�数�자�数oveloveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveove",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def pairs_sum_to_zero(l):\n    \"\"\"\n    pairs_sum_to_zero takes a list of integers as an input.\n    it returns True if there are two distinct elements in the list that\n    sum to zero, and False otherwise.\n    >>> pairs_sum_to_zero([1, 3, 5, 0])\n    True\n    >>> pairs_sum_to_zero([1, 3, -2, 1])\n    True\n    >>> pairs_sum_to_zero([1, 2, 3, 7])\n    True\n    >>> pairs_sum_to_zero([2, 4, -5, 3, 5, 7])\n    False\n    >>> pairs_sum_to_zero([1])\n    True\n    \"\"\"\n\n\n\nPlease note that you can assume that the input list contains at least one element \nIFESTUALLY:|\n\n\n\n please respond with code below MARKdown:|�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�数�자�数�数�자�数oveloveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveoveove",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 158.52471685409546,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

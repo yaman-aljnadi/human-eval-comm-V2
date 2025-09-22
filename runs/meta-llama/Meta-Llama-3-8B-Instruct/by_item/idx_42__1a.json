@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_42::1a::meta-llama/Meta-Llama-3-8B-Instruct::seed0",
+  "task_id": "idx_42",
+  "category": "1a",
+  "entry_point": "incr_list",
+  "prompt_field": "prompt1a",
+  "prompt_text": "\n\ndef incr_list(l: list):\n    \"\"\"Return list with elements incremented by a number.\n    >>> incr_list([1, 2, 3])\n    [2, 3, 4]\n    >>> incr_list([5, 3, 5, 2, 3, 3, 9, 0, 123])\n    [6, 4, 6, 3, 4, 4, 10, 1, 124]\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef incr_list(l: list):\n    \"\"\"Return list with elements incremented by a number.\n    >>> incr_list([1, 2, 3])\n    [2, 3, 4]\n    >>> incr_list([5, 3, 5, 2, 3, 3, 9, 0, 123])\n    [6, 4, 6, 3, 4, 4, 10, 1, 124]\n    \"\"\"",
+  "prompt_sha256": "0e99dded75f6e65168c25863d9138f697e73fac6bdf85fe516004797649c8ec1",
+  "model_name": "meta-llama/Meta-Llama-3-8B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef incr_list(l: list):\n    \"\"\"Return list with elements incremented by a number.\n    >>> incr_list([1, 2, 3])\n    [2, 3, 4]\n    >>> incr_list([5, 3, 5, 2, 3, 3, 9, 0, 123])\n    [6, 4, 6, 3, 4, 4, 10, 1, 124]\n    \"\"\"\n\n\n# Example usage:\n\nincr = incr_list([1, 2, 3])  # Create instance with default number 1\nprint(incr)  # Output: [2, 3, 4]\n\nincr = incr_list([1, 2, 3], 2)  # Create instance with specified increment number 2\nprint(incr)  # Output: [3, 4, 5]\n\n\nYou may assume default number is 1. In code, we could choose 1 as default and use optional argument `increment=1` (default=1).\n\nHere is Python code I came up with based on the provided requirements:\n\n```\ndef incr_list(l: list, increment=1) -> list:\n    return [i + increment for i in l]\n```\n\nNow it's your turn. I'll be looking forward to your response.",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def incr_list(l: list, increment=1) -> list:\n    return [i + increment for i in l]",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 48.02723026275635,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

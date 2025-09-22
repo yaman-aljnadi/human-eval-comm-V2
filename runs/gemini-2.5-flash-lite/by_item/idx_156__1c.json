@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_156::1c::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_156",
+  "category": "1c",
+  "entry_point": "int_to_mini_roman",
+  "prompt_field": "prompt1c",
+  "prompt_text": "\ndef int_to_mini_roman(number):\n    \"\"\"\n    Given a positive integer, obtain its roman numeral equivalent as a string,\n    and return it in lowercase.\n    Restrictions: 1 <= num <= 1000\n\n    Examples:\n    >>> int_to_mini_roman(19) == 'xix'\n    >>> int_to_mini_roman(152) == 'iilc'\n    >>> int_to_mini_roman(426) == 'ivxxdc'\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef int_to_mini_roman(number):\n    \"\"\"\n    Given a positive integer, obtain its roman numeral equivalent as a string,\n    and return it in lowercase.\n    Restrictions: 1 <= num <= 1000\n\n    Examples:\n    >>> int_to_mini_roman(19) == 'xix'\n    >>> int_to_mini_roman(152) == 'iilc'\n    >>> int_to_mini_roman(426) == 'ivxxdc'\n    \"\"\"",
+  "prompt_sha256": "941a99451fdcd2ce7c5097609f8abf0312844a41f2515c69dc6b0f2aeaa6e368",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef int_to_mini_roman(number):\n    \"\"\"\n    Given a positive integer, obtain its roman numeral equivalent as a string,\n    and return it in lowercase.\n    Restrictions: 1 <= num <= 1000\n\n    Examples:\n    >>> int_to_mini_roman(19) == 'xix'\n    >>> int_to_mini_roman(152) == 'iilc'\n    >>> int_to_mini_roman(426) == 'ivxxdc'\n    \"\"\"\n    if not (1 <= number <= 1000):\n        raise ValueError(\"Number must be between 1 and 1000\")\n\n    # This is a simplified and non-standard Roman numeral representation.\n    # It appears to be a greedy approach without adhering to standard rules\n    # like subtractive notation (e.g., IV for 4, IX for 9).\n    # The examples provided suggest a different logic than standard Roman numerals.\n    # For instance, 152 is 'iilc' which would imply i=1, l=50, c=10",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def int_to_mini_roman(number):\n    \"\"\"\n    Given a positive integer, obtain its roman numeral equivalent as a string,\n    and return it in lowercase.\n    Restrictions: 1 <= num <= 1000\n\n    Examples:\n    >>> int_to_mini_roman(19) == 'xix'\n    >>> int_to_mini_roman(152) == 'iilc'\n    >>> int_to_mini_roman(426) == 'ivxxdc'\n    \"\"\"\n    if not (1 <= number <= 1000):\n        raise ValueError(\"Number must be between 1 and 1000\")\n\n    # This is a simplified and non-standard Roman numeral representation.\n    # It appears to be a greedy approach without adhering to standard rules\n    # like subtractive notation (e.g., IV for 4, IX for 9).\n    # The examples provided suggest a different logic than standard Roman numerals.\n    # For instance, 152 is 'iilc' which would imply i=1, l=50, c=10",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 1.4991304874420166,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

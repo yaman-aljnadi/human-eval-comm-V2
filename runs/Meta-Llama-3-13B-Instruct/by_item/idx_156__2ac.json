@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_156::2ac::andrijdavid/Meta-Llama-3-13B-Instruct::seed0",
+  "task_id": "idx_156",
+  "category": "2ac",
+  "entry_point": "int_to_mini_roman",
+  "prompt_field": "prompt2ac",
+  "prompt_text": "\ndef candidate(number):\n    \"\"\"\n    Given a positive integer, obtain its binary or hexadecimal or roman numeral equivalent as a string,\n    and return it in lowercase.\n    Restrictions: 1 <= num <= 1000\n\n    Examples:\n    >>> candidate(19) == 'xix'\n    >>> candidate(152) == 'iilc'\n    >>> candidate(426) == 'ivxxdc'\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(number):\n    \"\"\"\n    Given a positive integer, obtain its binary or hexadecimal or roman numeral equivalent as a string,\n    and return it in lowercase.\n    Restrictions: 1 <= num <= 1000\n\n    Examples:\n    >>> candidate(19) == 'xix'\n    >>> candidate(152) == 'iilc'\n    >>> candidate(426) == 'ivxxdc'\n    \"\"\"",
+  "prompt_sha256": "ca22bc8dbd786d22852eff9b6888efb019713da77886a10fb547b3b0df267279",
+  "model_name": "andrijdavid/Meta-Llama-3-13B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(number):\n    \"\"\"\n    Given a positive integer, obtain its binary or hexadecimal or roman numeral equivalent as a string,\n    and return it in lowercase.\n    Restrictions: 1 <= num <= 1000\n\n    Examples:\n    >>> candidate(19) == 'xix'\n    >>> candidate(152) == 'iilc'\n    >>> candidate(426) == 'ivxxdc'\n    \"\"\"\n\n\n\nPlease provide the Python3 code above without anyoeness or comments. Code should be directly presented below:\n```\n def candidate(number):\n    if number < 10:\n        return{\n            1:'one',\n            2:'two',\n           3:'three',\n           4:'four',\n           5:'five',\n           6:'six',\n           7:'seven',\n           8:'eight',\n           9:'nine'\n       }[ number]\n    elif number % 10 < 10:\n        if number % 10 < 4:\n            return{\n                number %10:'' + str(number %10)\n           }[ number %10]\n        else:\n            if number %10 <100:\n                if number %10 <900:\n                    if number %10 %1000 <1000:\n                        return{\n                            number %10 //1000: number %10//1000 +' '+'Thousand'\n                       }[number %10//1000]\n                    else:\n                        if number %10 %1000 %1000 <1000:\n                            return{\n                                number %10//1000: number %10//1000 +' '''.''''''.''CallCheck:'':'':'':'':'':'':'':'':'':'':'':''",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def candidate(number):\n    \"\"\"\n    Given a positive integer, obtain its binary or hexadecimal or roman numeral equivalent as a string,\n    and return it in lowercase.\n    Restrictions: 1 <= num <= 1000\n\n    Examples:\n    >>> candidate(19) == 'xix'\n    >>> candidate(152) == 'iilc'\n    >>> candidate(426) == 'ivxxdc'\n    \"\"\"\n\n\n\nPlease provide the Python3 code above without anyoeness or comments. Code should be directly presented below:\n```\n def candidate(number):\n    if number < 10:\n        return{\n            1:'one',\n            2:'two',\n           3:'three',\n           4:'four',\n           5:'five',\n           6:'six',\n           7:'seven',\n           8:'eight',\n           9:'nine'\n       }[ number]\n    elif number % 10 < 10:\n        if number % 10 < 4:\n            return{\n                number %10:'' + str(number %10)\n           }[ number %10]\n        else:\n            if number %10 <100:\n                if number %10 <900:\n                    if number %10 %1000 <1000:\n                        return{\n                            number %10 //1000: number %10//1000 +' '+'Thousand'\n                       }[number %10//1000]\n                    else:\n                        if number %10 %1000 %1000 <1000:\n                            return{\n                                number %10//1000: number %10//1000 +' '''.''''''.''CallCheck:'':'':'':'':'':'':'':'':'':'':'':''",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 105.35694646835327,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

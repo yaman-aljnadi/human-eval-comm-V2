@@ -1,0 +1,17 @@
+{
+  "items": 771,
+  "with_questions": 297,
+  "non_questions": 474,
+  "communication_rate": 0.3852140077821012,
+  "good_question_rate": 0.17639429312581065,
+  "acceptable_question_rate": 0.21530479896238652,
+  "false_recovery_rate": 0.10548523206751055,
+  "judges": [
+    "openai/gpt-3.5-turbo",
+    "gemini/gemini-2.5-flash-lite",
+    "deepseek-ai/deepseek-coder-6.7b-instruct"
+  ],
+  "temperature": 1.0,
+  "max_tokens": 256,
+  "timestamp": 1758534053
+}

@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_87::1p::andrijdavid/Meta-Llama-3-13B-Instruct::seed0",
+  "task_id": "idx_87",
+  "category": "1p",
+  "entry_point": "get_row",
+  "prompt_field": "prompt1p",
+  "prompt_text": "\ndef get_row(lst, x):\n    \"\"\"\n    You are given a 2 dimensional data, as a nested lists,\n    which is similar to matrix, however, unlike matrices,\n    each row may contain a different number of columns.\n    Given lst, and integer x, find integers x in the list.\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef get_row(lst, x):\n    \"\"\"\n    You are given a 2 dimensional data, as a nested lists,\n    which is similar to matrix, however, unlike matrices,\n    each row may contain a different number of columns.\n    Given lst, and integer x, find integers x in the list.\n    \"\"\"",
+  "prompt_sha256": "b7b22e2f0f3f042b9f292a6cd651588cabf02bee36305088e0e58041491b2f09",
+  "model_name": "andrijdavid/Meta-Llama-3-13B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef get_row(lst, x):\n    \"\"\"\n    You are given a 2 dimensional data, as a nested lists,\n    which is similar to matrix, however, unlike matrices,\n    each row may contain a different number of columns.\n    Given lst, and integer x, find integers x in the list.\n    \"\"\"riday\"\"\"return the row number where x is found else return None\n\n def get_row(lst, x):\n    \"\"\"\n    >>>get_row([ [1,2], [3]],[3]\n    Traceable outcome: [0]\n    Traceable outcome: [3]\n    Traceable outcome: None Traceable outcome: None Traceable outcome: None Traceable outcome: None Traceable outcome: None Traceable outcome: None Traceable outcome: None Traceable outcome: None Traceable outcome: None Traceable outcome: None Traceable outcome: None Traceable outcome: None Traceable outcome: None Traceable outcome: None Traceable outcome: None Traceable outcome: None Traceable outcome: None Traceable outcome: None Traceable outcome: None Traceable outcome: None Traceable outcome: None Traceable outcome: None Traceable outcome: None Traceable outcome: None Traceable outcome: None Traceable outcome: None Traceable outcome: None Traceable outcome: None Traceable outcome: None Traceable outcome: None Traceable outcome: None Traceable outcome: None Traceable outcome: None Traceable outcome: None Traceable outcome: None Traceable outcome: None Traceable outcome: None Traceable outcome: None Traceable outcome: None Traceable outcome: None",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def get_row(lst, x):\n    \"\"\"\n    You are given a 2 dimensional data, as a nested lists,\n    which is similar to matrix, however, unlike matrices,\n    each row may contain a different number of columns.\n    Given lst, and integer x, find integers x in the list.\n    \"\"\"riday\"\"\"return the row number where x is found else return None\n\n def get_row(lst, x):\n    \"\"\"\n    >>>get_row([ [1,2], [3]],[3]\n    Traceable outcome: [0]\n    Traceable outcome: [3]\n    Traceable outcome: None Traceable outcome: None Traceable outcome: None Traceable outcome: None Traceable outcome: None Traceable outcome: None Traceable outcome: None Traceable outcome: None Traceable outcome: None Traceable outcome: None Traceable outcome: None Traceable outcome: None Traceable outcome: None Traceable outcome: None Traceable outcome: None Traceable outcome: None Traceable outcome: None Traceable outcome: None Traceable outcome: None Traceable outcome: None Traceable outcome: None Traceable outcome: None Traceable outcome: None Traceable outcome: None Traceable outcome: None Traceable outcome: None Traceable outcome: None Traceable outcome: None Traceable outcome: None Traceable outcome: None Traceable outcome: None Traceable outcome: None Traceable outcome: None Traceable outcome: None Traceable outcome: None Traceable outcome: None Traceable outcome: None Traceable outcome: None Traceable outcome: None Traceable outcome: None",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 91.30223894119263,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

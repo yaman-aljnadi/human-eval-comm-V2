@@ -1,0 +1,38 @@
+{
+  "record_id": "idx_77::1c::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_77",
+  "category": "1c",
+  "entry_point": "iscube",
+  "prompt_field": "prompt1c",
+  "prompt_text": "\ndef iscube(a):\n    '''\n    Write a function that takes an integer a and returns True \n    if this integer is a cube of some integer number.\n    Note: you may assume the input is always valid.\n    Examples:\n    iscube(1) ==> False\n    iscube(2) ==> True\n    iscube(-1) ==> False\n    iscube(64) ==> False\n    iscube(0) ==> False\n    iscube(180) ==> True\n    '''\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef iscube(a):\n    '''\n    Write a function that takes an integer a and returns True \n    if this integer is a cube of some integer number.\n    Note: you may assume the input is always valid.\n    Examples:\n    iscube(1) ==> False\n    iscube(2) ==> True\n    iscube(-1) ==> False\n    iscube(64) ==> False\n    iscube(0) ==> False\n    iscube(180) ==> True\n    '''",
+  "prompt_sha256": "78631ea68f3112eddda466b2743e4ba70c0f2813516ccc2c1726df7721b95301",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "The provided examples seem to contradict the function's description. For instance, `iscube(2)` is expected to return `True`, but 2 is not a perfect cube of any integer. Similarly, `iscube(1)` is expected to return `False`, but 1 is the cube of 1.\n\nCould you please clarify the intended behavior of the `iscube` function and provide accurate examples? For example, do you mean to check if a number is a perfect cube (i.e., the result of cubing an integer)?\n\nIf the intention is to check for perfect cubes, here are some correct examples:\n*   `iscube(1)` should be `True` (1 = 1^3)\n*   `iscube(8)` should be `True` (8 = 2^3)\n*   `iscube(-27)` should be `True` (-27 = -3^3)\n*   `iscube(10)` should be `False`\n*   `iscube(0)` should be `True` (0 = 0^3)\n\nPlease let me know how you'd like to proceed!",
+  "gen_raw": {},
+  "contains_code": false,
+  "code_detected_method": "none",
+  "extracted_code": null,
+  "is_question": true,
+  "extracted_questions": [
+    "For example, do you mean to check if a number is a perfect cube (i.e., the result of cubing an integer)?",
+    "If the intention is to check for perfect cubes, here are some correct examples:\n*   `iscube(1)` should be `True` (1 = 1^3)\n*   `iscube(8)` should be `True` (8 = 2^3)\n*   `iscube(-27)` should be `True` (-27 = -3^3)\n*   `iscube(10)` should be `False`\n*   `iscube(0)` should be `True` (0 = 0^3)\n\nPlease let me know how you'd like to proceed!?",
+    "Could you please clarify the intended behavior of the `iscube` function and provide accurate examples?",
+    ", the result of cubing an integer)?"
+  ],
+  "question_count": 4,
+  "first_question": "For example, do you mean to check if a number is a perfect cube (i.e., the result of cubing an integer)?",
+  "question_chars": 580,
+  "latency_sec": 1.5157835483551025,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

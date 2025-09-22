@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_64::2ac::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_64",
+  "category": "2ac",
+  "entry_point": "vowels_count",
+  "prompt_field": "prompt2ac",
+  "prompt_text": "\nFIX = \"\"\"\nAdd more test cases.\n\"\"\"\n\ndef candidate(s):\n    \"\"\"Write a function candidate which takes a string representing\n    a word as input and returns the number of characters or vowels in the string.\n    Vowels in this case are 'a', 'e', 'i', 'o', 'u'. Here, 'y' is also a\n    vowel, but only when it is at the end of the given word.\n\n    Example:\n    >>> candidate(\"abcde\")\n    5\n    >>> candidate(\"ACEDY\")\n    5\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nFIX = \"\"\"\nAdd more test cases.\n\"\"\"\n\ndef candidate(s):\n    \"\"\"Write a function candidate which takes a string representing\n    a word as input and returns the number of characters or vowels in the string.\n    Vowels in this case are 'a', 'e', 'i', 'o', 'u'. Here, 'y' is also a\n    vowel, but only when it is at the end of the given word.\n\n    Example:\n    >>> candidate(\"abcde\")\n    5\n    >>> candidate(\"ACEDY\")\n    5\n    \"\"\"",
+  "prompt_sha256": "94ef092e33a4caf3d470069cb6bb6a8ee91384605310973c172814685d231b30",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\nimport unittest\n\ndef candidate(s):\n    \"\"\"Write a function candidate which takes a string representing\n    a word as input and returns the number of characters or vowels in the string.\n    Vowels in this case are 'a', 'e', 'i', 'o', 'u'. Here, 'y' is also a\n    vowel, but only when it is at the end of the given word.\n\n    Example:\n    >>> candidate(\"abcde\")\n    5\n    >>> candidate(\"ACEDY\")\n    5\n    \"\"\"\n    vowels = \"aeiouAEIOU\"\n    count = 0\n    for i, char in enumerate(s):\n        if char in vowels:\n            count += 1\n        elif char.lower() == 'y' and i == len(s) - 1:\n            count += 1\n    return count\n\nclass TestCandidate(unittest.TestCase):\n\n    def test_example_1(self):\n        self.assertEqual(candidate(\"abcde\"), 5)\n\n    def test_example_2(self):\n        self.assertEqual(candidate(\"ACEDY\"), 5)\n\n    def test",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def candidate(s):\n    \"\"\"Write a function candidate which takes a string representing\n    a word as input and returns the number of characters or vowels in the string.\n    Vowels in this case are 'a', 'e', 'i', 'o', 'u'. Here, 'y' is also a\n    vowel, but only when it is at the end of the given word.\n\n    Example:\n    >>> candidate(\"abcde\")\n    5\n    >>> candidate(\"ACEDY\")\n    5\n    \"\"\"\n    vowels = \"aeiouAEIOU\"\n    count = 0\n    for i, char in enumerate(s):\n        if char in vowels:\n            count += 1\n        elif char.lower() == 'y' and i == len(s) - 1:\n            count += 1\n    return count\n\nclass TestCandidate(unittest.TestCase):\n\n    def test_example_1(self):\n        self.assertEqual(candidate(\"abcde\"), 5)\n\n    def test_example_2(self):\n        self.assertEqual(candidate(\"ACEDY\"), 5)\n\n    def test",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 1.323962688446045,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

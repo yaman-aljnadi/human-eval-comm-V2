@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_30::2ac::meta-llama/Meta-Llama-3-8B-Instruct::seed0",
+  "task_id": "idx_30",
+  "category": "2ac",
+  "entry_point": "get_positive",
+  "prompt_field": "prompt2ac",
+  "prompt_text": "\n\ndef candidate(l: list):\n    \"\"\"Return only negative or positive numbers in the list.\n    >>> candidate([-1, 2, -4, 5, 6])\n    [-1, -4]\n    >>> candidate([5, 3, -5, 2, -3, 3, 9, 0, 123, 1, -10])\n    [-5, -3, -10]\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(l: list):\n    \"\"\"Return only negative or positive numbers in the list.\n    >>> candidate([-1, 2, -4, 5, 6])\n    [-1, -4]\n    >>> candidate([5, 3, -5, 2, -3, 3, 9, 0, 123, 1, -10])\n    [-5, -3, -10]\n    \"\"\"",
+  "prompt_sha256": "be2f9c8b1d9ce6b2eb321a7a2ee123f853cfbf1f69c11d562921b4849b002f49",
+  "model_name": "meta-llama/Meta-Llama-3-8B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(l: list):\n    \"\"\"Return only negative or positive numbers in the list.\n    >>> candidate([-1, 2, -4, 5, 6])\n    [-1, -4]\n    >>> candidate([5, 3, -5, 2, -3, 3, 9, 0, 123, 1, -10])\n    [-5, -3, -10]\n    \"\"\"\n\n\n\nThe task is to write a Python function `candidate` that takes a list of integers as input. The function should return a new list containing only the negative or positive numbers from the input list. The order of the numbers in the new list should be the same as the order in which they appear in the input list. If a zero is present in the input list, it should also be included in the output list. \n\nFor example, if we input `candidate([-1, 2, -4, 5, 6])`, it should return `[-1, -4]` because these are the only negative numbers in the list, and if we input `candidate([5, 3, -5, 2, -3, 3, 9, 0, 123, 1, -10])`, it should return `[-5, -3, -10]` because these are all the negative numbers in the list, and the zero should also be included.\n\nHere's a sample Python3 code to solve the problem:\n```\ndef candidate(l: list):\n    return [x for x in l if x < 0 or x > 0 or x == 0]\n``` \n\n\n\n\n\nPlease let me know",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def candidate(l: list):\n    return [x for x in l if x < 0 or x > 0 or x == 0]",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 71.68769693374634,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

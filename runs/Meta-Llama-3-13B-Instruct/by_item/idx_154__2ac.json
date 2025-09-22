@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_154::2ac::andrijdavid/Meta-Llama-3-13B-Instruct::seed0",
+  "task_id": "idx_154",
+  "category": "2ac",
+  "entry_point": "cycpattern_check",
+  "prompt_field": "prompt2ac",
+  "prompt_text": "\ndef cycpattern_check(a , b):\n    \"\"\"You are given 2 words. You need to return True if the second word or any of its rotations is related to the first word\n    cycpattern_check(\"abcd\",\"abd\") => True\n    cycpattern_check(\"hello\",\"ell\") => False\n    cycpattern_check(\"whassup\",\"psus\") => True\n    cycpattern_check(\"abab\",\"baa\") => False\n    cycpattern_check(\"efef\",\"eeff\") => True\n    cycpattern_check(\"himenss\",\"simen\") => False\n\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef cycpattern_check(a , b):\n    \"\"\"You are given 2 words. You need to return True if the second word or any of its rotations is related to the first word\n    cycpattern_check(\"abcd\",\"abd\") => True\n    cycpattern_check(\"hello\",\"ell\") => False\n    cycpattern_check(\"whassup\",\"psus\") => True\n    cycpattern_check(\"abab\",\"baa\") => False\n    cycpattern_check(\"efef\",\"eeff\") => True\n    cycpattern_check(\"himenss\",\"simen\") => False\n\n    \"\"\"",
+  "prompt_sha256": "eddd4aa1a9741761fbb78425b0f794f06ee778ea69b8d2516c3927e4adeda4fd",
+  "model_name": "andrijdavid/Meta-Llama-3-13B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef cycpattern_check(a , b):\n    \"\"\"You are given 2 words. You need to return True if the second word or any of its rotations is related to the first word\n    cycpattern_check(\"abcd\",\"abd\") => True\n    cycpattern_check(\"hello\",\"ell\") => False\n    cycpattern_check(\"whassup\",\"psus\") => True\n    cycpattern_check(\"abab\",\"baa\") => False\n    cycpattern_check(\"efef\",\"eeff\") => True\n    cycpattern_check(\"himenss\",\"simen\") => False\n\n    \"\"\"ODEV\"\"\"\n\n    # Please respond with Python3 code below Directly WITH marked-down code format \"\" cdeclines.ctrlled.ctrlled(ctrlled(ctrlled(ctrlled(ctrlled(ctrlled(ctrlled(ctrlled(ctrlled(ctrlled(ctrlled(ctrlled(ctrlled(ctrlled(ctrlled(ctrlled(ctrlled(ctrlled.ctrlledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledled",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def cycpattern_check(a , b):\n    \"\"\"You are given 2 words. You need to return True if the second word or any of its rotations is related to the first word\n    cycpattern_check(\"abcd\",\"abd\") => True\n    cycpattern_check(\"hello\",\"ell\") => False\n    cycpattern_check(\"whassup\",\"psus\") => True\n    cycpattern_check(\"abab\",\"baa\") => False\n    cycpattern_check(\"efef\",\"eeff\") => True\n    cycpattern_check(\"himenss\",\"simen\") => False\n\n    \"\"\"ODEV\"\"\"\n\n    # Please respond with Python3 code below Directly WITH marked-down code format \"\" cdeclines.ctrlled.ctrlled(ctrlled(ctrlled(ctrlled(ctrlled(ctrlled(ctrlled(ctrlled(ctrlled(ctrlled(ctrlled(ctrlled(ctrlled(ctrlled(ctrlled(ctrlled(ctrlled(ctrlled.ctrlledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledledled",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 110.69669938087463,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

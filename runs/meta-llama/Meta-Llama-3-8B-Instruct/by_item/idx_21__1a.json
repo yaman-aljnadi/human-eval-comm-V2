@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_21::1a::meta-llama/Meta-Llama-3-8B-Instruct::seed0",
+  "task_id": "idx_21",
+  "category": "1a",
+  "entry_point": "rescale_to_unit",
+  "prompt_field": "prompt1a",
+  "prompt_text": "from typing import List\n\n\ndef rescale(numbers: List[float]) -> List[float]:\n    \"\"\" Given list of numbers (of at least two elements), apply a linear transform to that list,\n    such that the one number will become 0 and another will become 1\n    >>> rescale([1.0, 2.0, 3.0, 4.0, 5.0])\n    [0.0, 0.25, 0.5, 0.75, 1.0]\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List\n\n\ndef rescale(numbers: List[float]) -> List[float]:\n    \"\"\" Given list of numbers (of at least two elements), apply a linear transform to that list,\n    such that the one number will become 0 and another will become 1\n    >>> rescale([1.0, 2.0, 3.0, 4.0, 5.0])\n    [0.0, 0.25, 0.5, 0.75, 1.0]\n    \"\"\"",
+  "prompt_sha256": "14634f6cc81a9c57c22e53c6ddb47413ec617026ae9925051f79b4985ba88dab",
+  "model_name": "meta-llama/Meta-Llama-3-8B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List\n\n\ndef rescale(numbers: List[float]) -> List[float]:\n    \"\"\" Given list of numbers (of at least two elements), apply a linear transform to that list,\n    such that the one number will become 0 and another will become 1\n    >>> rescale([1.0, 2.0, 3.0, 4.0, 5.0])\n    [0.0, 0.25, 0.5, 0.75, 1.0]\n    \"\"\"\n\n\nPlease clarify the following:\n\n1. Are there any specific requirements for the choice of the two numbers that will become 0 and 1 (e.g., the difference between them, their proximity to the overall mean, etc.)?\n2. Are there any specific edge cases that need to be handled (e.g., input with less than two elements, negative numbers, NaNs, etc.)?\n\n```python\n```  # Replace with actual code\n```  # Replace with actual code\n```\n```\n\nPlease confirm if this meets your request. Waiting for your response.`````\n• 8\n• edit: The code snippet below does not provide all the necessary information for your query. Here is the Python3 code you requested with markdown: \\*Please clarify the following: \\*1. Are there any specific requirements for the choice of the two numbers that will become 0 and 1 (e.g., the difference between them, their proximity to the overall mean, etc.)? \\*2. Are there any specific edge cases that need to be handled (e.g., input with less than two elements, negative numbers, NaNs, etc.)?`````\n```python\ndef rescale(numbers: List[float]) -> List[float]:\n   ",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 68.23804593086243,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

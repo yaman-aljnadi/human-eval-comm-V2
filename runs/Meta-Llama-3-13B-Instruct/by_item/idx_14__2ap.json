@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_14::2ap::andrijdavid/Meta-Llama-3-13B-Instruct::seed0",
+  "task_id": "idx_14",
+  "category": "2ap",
+  "entry_point": "all_prefixes",
+  "prompt_field": "prompt2ap",
+  "prompt_text": "from typing import List\n\n\ndef candidate(string: str) -> List[str]:\n    \"\"\" Return list of a certain patter\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List\n\n\ndef candidate(string: str) -> List[str]:\n    \"\"\" Return list of a certain patter\n    \"\"\"",
+  "prompt_sha256": "a644262f1e80cbd8b439b148ff3657fedcfd43425ee1238bebe4e0bb6140b8ea",
+  "model_name": "andrijdavid/Meta-Llama-3-13B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List\n\n\ndef candidate(string: str) -> List[str]:\n    \"\"\" Return list of a certain patter\n    \"\"\"\n\n\nclass Pattern:\n    \"\"\" class forattern\"\"\"\n    def __init__( self):\n        pass\n\nclass Patternator:\n    \"\"\"class foratternator\"\"\"\n    def __init__( self):\n        pass\n\nclass patternator:\n    \"\"\"class foratternator\"\"\"\n\nclass Patternator:\n    \"\"\" class foratternator\"\"\"\n\nclasspatternator:\n    \"\"\"class foratternator\"\"\"\n\n\n\n please note that above provided classes and/or functions are just mere examples not real-world patterns\nascoapacible patterns\n\n Please note that you are an expert software developer who write high quality code\n\nplease generate python3 code below code ONLY WITH_MD-markdown/codeaterns_directly_with.md-codeaterns_directly_with.mdclarifying questions:\n\nPlease note that below INFORMATION given below Information provided below Information given below Information given below Information given below Information given below Information given below Information given below Information given below Information given below Information given below Information given below Information given below Information given below Information given below Information given below Information given below Information given below Information given below Information given below Information given below Information given below Information given below Information given below Information given below Information given below Information given below Information given below Information given below Information given below Information given below Information given below Information given below Information given below Information given below Information given below",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def candidate(string: str) -> List[str]:\n    \"\"\" Return list of a certain patter\n    \"\"\"\n\n\nclass Pattern:\n    \"\"\" class forattern\"\"\"\n    def __init__( self):\n        pass\n\nclass Patternator:\n    \"\"\"class foratternator\"\"\"\n    def __init__( self):\n        pass\n\nclass patternator:\n    \"\"\"class foratternator\"\"\"\n\nclass Patternator:\n    \"\"\" class foratternator\"\"\"\n\nclasspatternator:\n    \"\"\"class foratternator\"\"\"\n\n\n\n please note that above provided classes and/or functions are just mere examples not real-world patterns\nascoapacible patterns\n\n Please note that you are an expert software developer who write high quality code\n\nplease generate python3 code below code ONLY WITH_MD-markdown/codeaterns_directly_with.md-codeaterns_directly_with.mdclarifying questions:\n\nPlease note that below INFORMATION given below Information provided below Information given below Information given below Information given below Information given below Information given below Information given below Information given below Information given below Information given below Information given below Information given below Information given below Information given below Information given below Information given below Information given below Information given below Information given below Information given below Information given below Information given below Information given below Information given below Information given below Information given below Information given below Information given below Information given below Information given below Information given below Information given below Information given below Information given below Information given below",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 90.920166015625,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

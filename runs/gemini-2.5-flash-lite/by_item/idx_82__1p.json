@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_82::1p::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_82",
+  "category": "1p",
+  "entry_point": "prime_length",
+  "prompt_field": "prompt1p",
+  "prompt_text": "\ndef candidate(string):\n    \"\"\"\n    Examples\n    candidate('Hello') == True\n    candidate('abcdcba') == True\n    candidate('kittens') == True\n    candidate('orange') == False\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(string):\n    \"\"\"\n    Examples\n    candidate('Hello') == True\n    candidate('abcdcba') == True\n    candidate('kittens') == True\n    candidate('orange') == False\n    \"\"\"",
+  "prompt_sha256": "d07052d912af10eb5d318c19b99cc4c142d748d91c2a7cb58fe0d8d735458bb9",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef candidate(string):\n    \"\"\"\n    Checks if a string is a \"candidate\" string. A string is a candidate if it\n    is either a palindrome or if all characters in the string are the same.\n\n    Examples:\n    candidate('Hello') == True  # 'l' appears twice, 'o' appears twice\n    candidate('abcdcba') == True # Palindrome\n    candidate('kittens') == True # 't' appears twice, 'e' appears twice\n    candidate('orange') == False # No character appears more than once\n    \"\"\"\n    n = len(string)\n    if n == 0:\n        return True\n\n    # Check if all characters are the same\n    if len(set(string)) == 1:\n        return True\n\n    # Check for palindromic property with allowed character repetition\n    # We allow a character to be \"out of place\" if its pair is also out of place\n    # or if it's the middle character of an odd-length string.\n    # Essentially, we are looking for at most one character that appears an odd number of times.\n    char_counts = {}\n    for",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def candidate(string):\n    \"\"\"\n    Checks if a string is a \"candidate\" string. A string is a candidate if it\n    is either a palindrome or if all characters in the string are the same.\n\n    Examples:\n    candidate('Hello') == True  # 'l' appears twice, 'o' appears twice\n    candidate('abcdcba') == True # Palindrome\n    candidate('kittens') == True # 't' appears twice, 'e' appears twice\n    candidate('orange') == False # No character appears more than once\n    \"\"\"\n    n = len(string)\n    if n == 0:\n        return True\n\n    # Check if all characters are the same\n    if len(set(string)) == 1:\n        return True\n\n    # Check for palindromic property with allowed character repetition\n    # We allow a character to be \"out of place\" if its pair is also out of place\n    # or if it's the middle character of an odd-length string.\n    # Essentially, we are looking for at most one character that appears an odd number of times.\n    char_counts = {}\n    for",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 2.004051923751831,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

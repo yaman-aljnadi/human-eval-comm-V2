@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_93::1a::andrijdavid/Meta-Llama-3-13B-Instruct::seed0",
+  "task_id": "idx_93",
+  "category": "1a",
+  "entry_point": "encode",
+  "prompt_field": "prompt1a",
+  "prompt_text": "\ndef encode(message):\n    \"\"\"\n    Write a function that takes a message, and encodes in such a \n    way that it swaps case of all letters, replaces all vowels in \n    the message with the letter that appears several places ahead of that \n    vowel in the english alphabet. \n    Assume only letters. \n    \n    Examples:\n    >>> encode('test')\n    'TGST'\n    >>> encode('This is a message')\n    'tHKS KS C MGSSCGG'\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef encode(message):\n    \"\"\"\n    Write a function that takes a message, and encodes in such a \n    way that it swaps case of all letters, replaces all vowels in \n    the message with the letter that appears several places ahead of that \n    vowel in the english alphabet. \n    Assume only letters. \n    \n    Examples:\n    >>> encode('test')\n    'TGST'\n    >>> encode('This is a message')\n    'tHKS KS C MGSSCGG'\n    \"\"\"",
+  "prompt_sha256": "b7ba52db90c10a0a8d84f9a8ce4d4624de771df7bc70ca7851f6618e682746a1",
+  "model_name": "andrijdavid/Meta-Llama-3-13B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef encode(message):\n    \"\"\"\n    Write a function that takes a message, and encodes in such a \n    way that it swaps case of all letters, replaces all vowels in \n    the message with the letter that appears several places ahead of that \n    vowel in the english alphabet. \n    Assume only letters. \n    \n    Examples:\n    >>> encode('test')\n    'TGST'\n    >>> encode('This is a message')\n    'tHKS KS C MGSSCGG'\n    \"\"\"\n\n\nPlease note that:\n\n*   Upper case letters are converted to lower case and vice versa\n*   Vowels are replaced with the letters that appear several places ahead of them in the English alphabet\n*   For example, 'a' is replaced with 'c' which is '3 places ahead' (considering the English-alphabetic order)\n\n Please note that:\n\nLOWER-case letters are converted to UPPER-case letters and vice versa\n　Viparantly, Vวรders are substituted with the Vวรders that V――V――VŌVŌVŌVŌVŌVŌVŗVŒVŗVŒVŗVŒVŗVŒVŗVŒVŗVŒVŗVŒVŒVŒVŒVŒVŒVŒVŒVŒVŒVŒVŒVŒVŒVŒVŒVŒVŒVŒVŒVŒVŒVŒVŒVŒVŒVŒVŒVŒVŒ",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def encode(message):\n    \"\"\"\n    Write a function that takes a message, and encodes in such a \n    way that it swaps case of all letters, replaces all vowels in \n    the message with the letter that appears several places ahead of that \n    vowel in the english alphabet. \n    Assume only letters. \n    \n    Examples:\n    >>> encode('test')\n    'TGST'\n    >>> encode('This is a message')\n    'tHKS KS C MGSSCGG'\n    \"\"\"\n\n\nPlease note that:\n\n*   Upper case letters are converted to lower case and vice versa\n*   Vowels are replaced with the letters that appear several places ahead of them in the English alphabet\n*   For example, 'a' is replaced with 'c' which is '3 places ahead' (considering the English-alphabetic order)\n\n Please note that:\n\nLOWER-case letters are converted to UPPER-case letters and vice versa\n　Viparantly, Vวรders are substituted with the Vวรders that V――V――VŌVŌVŌVŌVŌVŌVŗVŒVŗVŒVŗVŒVŗVŒVŗVŒVŗVŒVŗVŒVŒVŒVŒVŒVŒVŒVŒVŒVŒVŒVŒVŒVŒVŒVŒVŒVŒVŒVŒVŒVŒVŒVŒVŒVŒVŒVŒVŒVŒ",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 107.83535623550415,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

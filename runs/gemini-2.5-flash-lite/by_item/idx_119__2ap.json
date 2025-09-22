@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_119::2ap::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_119",
+  "category": "2ap",
+  "entry_point": "match_parens",
+  "prompt_field": "prompt2ap",
+  "prompt_text": "\ndef candidate(lst):\n    '''\n    You are given a list of two strings, both strings consist of open\n    parentheses '(' or close parentheses ')' only.\n    Your job is to check if it is possible to process the two strings in\n    some order, that the resulting string will be good.\n    '''\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(lst):\n    '''\n    You are given a list of two strings, both strings consist of open\n    parentheses '(' or close parentheses ')' only.\n    Your job is to check if it is possible to process the two strings in\n    some order, that the resulting string will be good.\n    '''",
+  "prompt_sha256": "05503b1bbd42b08b31bb8fe7ad015d75115fbb3d9dcaef9fb7b42af06c5bfdac",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef candidate(lst):\n    '''\n    You are given a list of two strings, both strings consist of open\n    parentheses '(' or close parentheses ')' only.\n    Your job is to check if it is possible to process the two strings in\n    some order, that the resulting string will be good.\n\n    A \"good\" string of parentheses is defined as follows:\n    1. An empty string is a good string.\n    2. If S is a good string, then (S) is a good string.\n    3. If S and T are good strings, then ST is a good string.\n\n    This problem can be solved by checking if the total number of open\n    parentheses equals the total number of close parentheses across both strings.\n    If they are equal, then it's always possible to form a good string by\n    concatenating them in some order and potentially rearranging.\n    However, the prompt implies processing them in *some order*, which usually\n    means concatenation. If the strings are s1 and s2, we can form s1+s2 or s2+s1.\n    For a string to be \"good\", the balance of parentheses",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def candidate(lst):\n    '''\n    You are given a list of two strings, both strings consist of open\n    parentheses '(' or close parentheses ')' only.\n    Your job is to check if it is possible to process the two strings in\n    some order, that the resulting string will be good.\n\n    A \"good\" string of parentheses is defined as follows:\n    1. An empty string is a good string.\n    2. If S is a good string, then (S) is a good string.\n    3. If S and T are good strings, then ST is a good string.\n\n    This problem can be solved by checking if the total number of open\n    parentheses equals the total number of close parentheses across both strings.\n    If they are equal, then it's always possible to form a good string by\n    concatenating them in some order and potentially rearranging.\n    However, the prompt implies processing them in *some order*, which usually\n    means concatenation. If the strings are s1 and s2, we can form s1+s2 or s2+s1.\n    For a string to be \"good\", the balance of parentheses",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 1.6000943183898926,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_157::1p::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_157",
+  "category": "1p",
+  "entry_point": "right_angle_triangle",
+  "prompt_field": "prompt1p",
+  "prompt_text": "\ndef candidate(a, b, c):\n    '''\n    Given the lengths of the three sides of a triangle.\n    A right-angled triangle is a triangle in which one angle is right angle or \n    90 degree.\n    '''\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(a, b, c):\n    '''\n    Given the lengths of the three sides of a triangle.\n    A right-angled triangle is a triangle in which one angle is right angle or \n    90 degree.\n    '''",
+  "prompt_sha256": "d9b7908f4a505613e2ddab9d905aee6826ac8b3f91e6df6f3aaa742d6df44759",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef candidate(a, b, c):\n    '''\n    Given the lengths of the three sides of a triangle.\n    A right-angled triangle is a triangle in which one angle is right angle or \n    90 degree.\n    \n    Determines if the triangle formed by sides a, b, and c is a right-angled triangle.\n    \n    Args:\n        a: The length of the first side.\n        b: The length of the second side.\n        c: The length of the third side.\n        \n    Returns:\n        True if the triangle is right-angled, False otherwise.\n    '''\n    # Sort the sides to easily identify the hypotenuse (longest side)\n    sides = sorted([a, b, c])\n    \n    # Check for triangle inequality: the sum of any two sides must be greater than the third side\n    if sides[0] + sides[1] <= sides[2]:\n        return False  # Not a valid triangle\n        \n    # Apply the Pythagorean theorem: a^2 + b^2 = c^2\n    # We use a small tolerance for floating-point comparisons\n    tolerance",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def candidate(a, b, c):\n    '''\n    Given the lengths of the three sides of a triangle.\n    A right-angled triangle is a triangle in which one angle is right angle or \n    90 degree.\n    \n    Determines if the triangle formed by sides a, b, and c is a right-angled triangle.\n    \n    Args:\n        a: The length of the first side.\n        b: The length of the second side.\n        c: The length of the third side.\n        \n    Returns:\n        True if the triangle is right-angled, False otherwise.\n    '''\n    # Sort the sides to easily identify the hypotenuse (longest side)\n    sides = sorted([a, b, c])\n    \n    # Check for triangle inequality: the sum of any two sides must be greater than the third side\n    if sides[0] + sides[1] <= sides[2]:\n        return False  # Not a valid triangle\n        \n    # Apply the Pythagorean theorem: a^2 + b^2 = c^2\n    # We use a small tolerance for floating-point comparisons\n    tolerance",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 1.3868303298950195,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

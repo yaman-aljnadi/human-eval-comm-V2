@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_61::1p::andrijdavid/Meta-Llama-3-13B-Instruct::seed0",
+  "task_id": "idx_61",
+  "category": "1p",
+  "entry_point": "correct_bracketing",
+  "prompt_field": "prompt1p",
+  "prompt_text": "\n\ndef correct_bracketing(brackets: str):\n    \"\"\" brackets is a string of \"(\" and \")\".\n\n    >>> correct_bracketing(\"(\")\n    False\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef correct_bracketing(brackets: str):\n    \"\"\" brackets is a string of \"(\" and \")\".\n\n    >>> correct_bracketing(\"(\")\n    False\n    \"\"\"",
+  "prompt_sha256": "cb68f2f31a3b2555cd369f5f3ba1d458d45ec10640c88c3ca2df3b6f2c32e424",
+  "model_name": "andrijdavid/Meta-Llama-3-13B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef correct_bracketing(brackets: str):\n    \"\"\" brackets is a string of \"(\" and \")\".\n\n    >>> correct_bracketing(\"(\")\n    False\n    \"\"\"\n\n\n nackteBrötchen : str = \"\"\" \"\"\"\n\n# Input/output:\n\n Input/output:\nbrackets = input(\"input your inputstring of bracketing:\"\"]\n\nOutput:\n OutputString = correct_bracketying(brackets)\n\nạスクpeted Output:\n OutputString = False \"\"\"\n\nạ�nephobiaBrötchen : str = strinputinputinputinputinputinputinput inputinputinputinputinputinputinputinputinputinputinputinputinputinputinputinputinputinputinputinputinputinput input inputinputinput input input inputinput input inputinputinputinputinputinputinputinputinputinputinputinput inputinputinputinput inputinput inputinput inputinput inputinputinput input inputinput inputinput inputinputinput inputinput inputinput inputinputinput inputinputinput input inputinputinputinputinputinput inputinput inputinput input input inputinput inputinputinputinputinputinputinputinput inputinput inputinput inputinputinput inputinputinput inputinputinputinput inputinputinputinput input inputinputinput inputinputinputinput input inputinput inputinput inputinput input inputinput input inputinputinput inputinputinput inputinputinputinputinput inputinput input inputinput inputinputinputinput inputinput inputinput inputinput inputinput inputinputinputinputinputinput input inputinputinput inputinput input input inputinput input inputinputinputinput",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def correct_bracketing(brackets: str):\n    \"\"\" brackets is a string of \"(\" and \")\".\n\n    >>> correct_bracketing(\"(\")\n    False\n    \"\"\"\n\n\n nackteBrötchen : str = \"\"\" \"\"\"\n\n# Input/output:\n\n Input/output:\nbrackets = input(\"input your inputstring of bracketing:\"\"]\n\nOutput:\n OutputString = correct_bracketying(brackets)\n\nạスクpeted Output:\n OutputString = False \"\"\"\n\nạ�nephobiaBrötchen : str = strinputinputinputinputinputinputinput inputinputinputinputinputinputinputinputinputinputinputinputinputinputinputinputinputinputinputinputinputinput input inputinputinput input input inputinput input inputinputinputinputinputinputinputinputinputinputinputinput inputinputinputinput inputinput inputinput inputinput inputinputinput input inputinput inputinput inputinputinput inputinput inputinput inputinputinput inputinputinput input inputinputinputinputinputinput inputinput inputinput input input inputinput inputinputinputinputinputinputinputinput inputinput inputinput inputinputinput inputinputinput inputinputinputinput inputinputinputinput input inputinputinput inputinputinputinput input inputinput inputinput inputinput input inputinput input inputinputinput inputinputinput inputinputinputinputinput inputinput input inputinput inputinputinputinput inputinput inputinput inputinput inputinput inputinputinputinputinputinput input inputinputinput inputinput input input inputinput input inputinputinputinput",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 91.64858102798462,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

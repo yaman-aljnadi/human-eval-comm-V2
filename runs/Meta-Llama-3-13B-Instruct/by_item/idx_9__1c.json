@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_9::1c::andrijdavid/Meta-Llama-3-13B-Instruct::seed0",
+  "task_id": "idx_9",
+  "category": "1c",
+  "entry_point": "rolling_max",
+  "prompt_field": "prompt1c",
+  "prompt_text": "from typing import List, Tuple\n\n\ndef rolling_max(numbers: List[int]) -> List[int]:\n    \"\"\" From a given list of integers, generate a list of rolling maximum element found until given moment\n    in the sequence.\n    >>> rolling_max([1, 2, 3, 2, 3, 4, 2])\n    [1, 1, 1, 1, 1, 1, 1]\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List, Tuple\n\n\ndef rolling_max(numbers: List[int]) -> List[int]:\n    \"\"\" From a given list of integers, generate a list of rolling maximum element found until given moment\n    in the sequence.\n    >>> rolling_max([1, 2, 3, 2, 3, 4, 2])\n    [1, 1, 1, 1, 1, 1, 1]\n    \"\"\"",
+  "prompt_sha256": "cf6eb85b0c929b5a2ff0dd23aff22d38dbad1507931ad5107b729f222d0fcd5c",
+  "model_name": "andrijdavid/Meta-Llama-3-13B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List, Tuple\n\n\ndef rolling_max(numbers: List[int]) -> List[int]:\n    \"\"\" From a given list of integers, generate a list of rolling maximum element found until given moment\n    in the sequence.\n    >>> rolling_max([1, 2, 3, 2, 3, 4, 2])\n    [1, 1, 1, 1, 1, 1, 1]\n    \"\"\"\n\n\n\nROLLING Maximum of numbers:\nROLLING Maximum of numbers:\nROLLings maximums of numbers:\nROLLING maximums of numbers:\nROLLING maximums of numbers:\nROLLING maximums of numbers:\nROLLing maximums of numbers:\nROLLing maximums of numbers:\nROLLing maximums of numbers:\nROLLing maximums of numbers:\nROLLing maximums of numbers:\nROLLing maximums of numbers:\nROLLing maximums of numbers:\nROLLing maximums of numbers:\nROLLing maximums of numbers:\nROLLing maximumsalsy:\nROLLing maximums of numbers:\nROLLing maximums of numbers:\nROLLing maximums of numbers:\nROLLing maximums of numbers:\nROLLing maximums of numbers:\nROLLing maximums of numbers:\nROLLing maximums of numbers:\nROLLing maximums of numbers:\nROLLing maximums of numbers:\nROLLing maximums of numbers:\nROLLing maximums of numbers:\nROLLing maximums of numbers:\nROLLing maximums of numbers:\nROLLing maximums of numbers:\nROLLing maximums of numbers:\nROLLing maximums of numbers:\nROLLing maximums of numbers:\nROLLing maximums of numbers:\nROLLing maximums of numbers:\nROLLing maximums of numbers:\nROLLing maximums of numbers",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def rolling_max(numbers: List[int]) -> List[int]:\n    \"\"\" From a given list of integers, generate a list of rolling maximum element found until given moment\n    in the sequence.\n    >>> rolling_max([1, 2, 3, 2, 3, 4, 2])\n    [1, 1, 1, 1, 1, 1, 1]\n    \"\"\"\n\n\n\nROLLING Maximum of numbers:\nROLLING Maximum of numbers:\nROLLings maximums of numbers:\nROLLING maximums of numbers:\nROLLING maximums of numbers:\nROLLING maximums of numbers:\nROLLing maximums of numbers:\nROLLing maximums of numbers:\nROLLing maximums of numbers:\nROLLing maximums of numbers:\nROLLing maximums of numbers:\nROLLing maximums of numbers:\nROLLing maximums of numbers:\nROLLing maximums of numbers:\nROLLing maximums of numbers:\nROLLing maximumsalsy:\nROLLing maximums of numbers:\nROLLing maximums of numbers:\nROLLing maximums of numbers:\nROLLing maximums of numbers:\nROLLing maximums of numbers:\nROLLing maximums of numbers:\nROLLing maximums of numbers:\nROLLing maximums of numbers:\nROLLing maximums of numbers:\nROLLing maximums of numbers:\nROLLing maximums of numbers:\nROLLing maximums of numbers:\nROLLing maximums of numbers:\nROLLing maximums of numbers:\nROLLing maximums of numbers:\nROLLing maximums of numbers:\nROLLing maximums of numbers:\nROLLing maximums of numbers:\nROLLing maximums of numbers:\nROLLing maximums of numbers:\nROLLing maximums of numbers",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 91.458242893219,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

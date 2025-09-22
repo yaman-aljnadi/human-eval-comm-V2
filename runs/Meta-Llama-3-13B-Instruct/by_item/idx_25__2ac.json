@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_25::2ac::andrijdavid/Meta-Llama-3-13B-Instruct::seed0",
+  "task_id": "idx_25",
+  "category": "2ac",
+  "entry_point": "factorize",
+  "prompt_field": "prompt2ac",
+  "prompt_text": "from typing import List\n\n\ndef candidate(n: int) -> List[int]:\n    \"\"\" Return list of factors of given integer in the descending or ascending order.\n    Each of the factors should be listed number of times corresponding to how many times it appeares in factorization.\n    Input number should be equal to the product of all factors\n    >>> candidate(8)\n    [2, 4, 8]\n    >>> candidate(25)\n    [5, 25]\n    >>> candidate(70)\n    [2, 10, 70]\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List\n\n\ndef candidate(n: int) -> List[int]:\n    \"\"\" Return list of factors of given integer in the descending or ascending order.\n    Each of the factors should be listed number of times corresponding to how many times it appeares in factorization.\n    Input number should be equal to the product of all factors\n    >>> candidate(8)\n    [2, 4, 8]\n    >>> candidate(25)\n    [5, 25]\n    >>> candidate(70)\n    [2, 10, 70]\n    \"\"\"",
+  "prompt_sha256": "d13d3765bd357f4677c3b350158d6cc0be10c8f2f0a7974733b7d314b0c0c472",
+  "model_name": "andrijdavid/Meta-Llama-3-13B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List\n\n\ndef candidate(n: int) -> List[int]:\n    \"\"\" Return list of factors of given integer in the descending or ascending order.\n    Each of the factors should be listed number of times corresponding to how many times it appeares in factorization.\n    Input number should be equal to the product of all factors\n    >>> candidate(8)\n    [2, 4, 8]\n    >>> candidate(25)\n    [5, 25]\n    >>> candidate(70)\n    [2, 10, 70]\n    \"\"\"\n\n\n\n please provide direct code response or provide further questions if anything needed more information\n\nclaimer:This question was taken from LeetCode.comโจहरhttps://leetcode.com/problems factors-of-ggiven-integertance-of-f Factors-of-g-givend.descendant-or-ascendents-order.html\nascoendents_orascendentsorderascendentsorderascendentsorderascendentsorderascendentsorderascendentsorderascendentsorderascendentsorderascendentsorderascendentsorderascendentsorderascendentsorderascendentsorderascendentsorderascendentsorderascendentsorderascendentsorderascendentsorderascendentsorderascendentsorderascendentsorderascendentsorderascendentsorderascendentsorderascendentsorderascendentsorderascendentsorderascendentsorderascendentsorderascendentsorderascendentsorderascendentsorderascendentsorderascendentsorderascendentsorderascendentsorderascendentsorderascendentsorderascendentsorderascendentsorderascendentsorderascendentsorderascendentsorderascendentsorderascendentsorderascendentsorderascendentsorderascendentsorderasc",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def candidate(n: int) -> List[int]:\n    \"\"\" Return list of factors of given integer in the descending or ascending order.\n    Each of the factors should be listed number of times corresponding to how many times it appeares in factorization.\n    Input number should be equal to the product of all factors\n    >>> candidate(8)\n    [2, 4, 8]\n    >>> candidate(25)\n    [5, 25]\n    >>> candidate(70)\n    [2, 10, 70]\n    \"\"\"\n\n\n\n please provide direct code response or provide further questions if anything needed more information\n\nclaimer:This question was taken from LeetCode.comโจहरhttps://leetcode.com/problems factors-of-ggiven-integertance-of-f Factors-of-g-givend.descendant-or-ascendents-order.html\nascoendents_orascendentsorderascendentsorderascendentsorderascendentsorderascendentsorderascendentsorderascendentsorderascendentsorderascendentsorderascendentsorderascendentsorderascendentsorderascendentsorderascendentsorderascendentsorderascendentsorderascendentsorderascendentsorderascendentsorderascendentsorderascendentsorderascendentsorderascendentsorderascendentsorderascendentsorderascendentsorderascendentsorderascendentsorderascendentsorderascendentsorderascendentsorderascendentsorderascendentsorderascendentsorderascendentsorderascendentsorderascendentsorderascendentsorderascendentsorderascendentsorderascendentsorderascendentsorderascendentsorderascendentsorderascendentsorderascendentsorderascendentsorderascendentsorderasc",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 91.18939280509949,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_85::2cp::andrijdavid/Meta-Llama-3-13B-Instruct::seed0",
+  "task_id": "idx_85",
+  "category": "2cp",
+  "entry_point": "add",
+  "prompt_field": "prompt2cp",
+  "prompt_text": "\ndef add(lst):\n    \"\"\"Given a non-empty list of integers lst. add the even elements that..\n\n\n    Examples:\n        add([4, 2, 6, 7]) ==> 6 \n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef add(lst):\n    \"\"\"Given a non-empty list of integers lst. add the even elements that..\n\n\n    Examples:\n        add([4, 2, 6, 7]) ==> 6 \n    \"\"\"",
+  "prompt_sha256": "a1284b767ae685c9aae4190e2426c22f10a6cf3064b23a12449f0047830e11d1",
+  "model_name": "andrijdavid/Meta-Llama-3-13B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef add(lst):\n    \"\"\"Given a non-empty list of integers lst. add the even elements that..\n\n\n    Examples:\n        add([4, 2, 6, 7]) ==> 6 \n    \"\"\"\n\n\n##orges\n### Expected Output\n\n\n### Input/output clarification\n ### How do you want to input the list?\n\n### Input/output examples\n ### Inputting a list of integers\n ### Outputting the sum of even elements from the inputted list\n ### Please provide examples of inputting and/or clarifying how to input the list and/or how to output the sum of even elements\n\n### input/output examples:\n ### Inputting a list of integers:\n ### Inputting a list of even numbers:\n ### Outputting the sum of even elements:\n ### inputting a list of even numbers:\n ### clarifying how to input the list:\n ### outputting the sum of even elements:\n ### providing examples of inputting and/or clarifying how to input the list:\n ### inputting a list of even numbers:\n ### inputting a list of even numbers:\n ### inputting a list of even numbers:\n ### inputting a list of even numbers:\n ### inputting a list of even numbers:\n ### inputting a list of even numbers:\n ### inputting a list of even numbers:\n ### inputting a list of even numbers:\n ### inputting a list of even numbers:\n ### inputting a list of even numbers:\n ### inputting a list of even numbers:\n ### inputting a list of",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def add(lst):\n    \"\"\"Given a non-empty list of integers lst. add the even elements that..\n\n\n    Examples:\n        add([4, 2, 6, 7]) ==> 6 \n    \"\"\"\n\n\n##orges\n### Expected Output\n\n\n### Input/output clarification\n ### How do you want to input the list?\n\n### Input/output examples\n ### Inputting a list of integers\n ### Outputting the sum of even elements from the inputted list\n ### Please provide examples of inputting and/or clarifying how to input the list and/or how to output the sum of even elements\n\n### input/output examples:\n ### Inputting a list of integers:\n ### Inputting a list of even numbers:\n ### Outputting the sum of even elements:\n ### inputting a list of even numbers:\n ### clarifying how to input the list:\n ### outputting the sum of even elements:\n ### providing examples of inputting and/or clarifying how to input the list:\n ### inputting a list of even numbers:\n ### inputting a list of even numbers:\n ### inputting a list of even numbers:\n ### inputting a list of even numbers:\n ### inputting a list of even numbers:\n ### inputting a list of even numbers:\n ### inputting a list of even numbers:\n ### inputting a list of even numbers:\n ### inputting a list of even numbers:\n ### inputting a list of even numbers:\n ### inputting a list of even numbers:\n ### inputting a list of",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 91.21440100669861,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

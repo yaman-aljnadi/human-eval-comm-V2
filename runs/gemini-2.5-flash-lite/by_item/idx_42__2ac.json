@@ -1,0 +1,35 @@
+{
+  "record_id": "idx_42::2ac::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_42",
+  "category": "2ac",
+  "entry_point": "incr_list",
+  "prompt_field": "prompt2ac",
+  "prompt_text": "\n\ndef incr_list(l: list):\n    \"\"\"Return list with elements incremented by a number.\n    >>> incr_list([1, 2, 3])\n    [3, 4, 5]\n    >>> incr_list([5, 3, 5, 2, 3, 3, 9, 0, 123])\n    [7, 5, 7, 4, 5, 5, 11, 2, 125]\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef incr_list(l: list):\n    \"\"\"Return list with elements incremented by a number.\n    >>> incr_list([1, 2, 3])\n    [3, 4, 5]\n    >>> incr_list([5, 3, 5, 2, 3, 3, 9, 0, 123])\n    [7, 5, 7, 4, 5, 5, 11, 2, 125]\n    \"\"\"",
+  "prompt_sha256": "b982f0c345e219dad93db45e4c16c92edaf5b217c7e28945aa7d2d35c49edb82",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "What is the number by which the elements should be incremented?",
+  "gen_raw": {},
+  "contains_code": false,
+  "code_detected_method": "none",
+  "extracted_code": null,
+  "is_question": true,
+  "extracted_questions": [
+    "What is the number by which the elements should be incremented?"
+  ],
+  "question_count": 1,
+  "first_question": "What is the number by which the elements should be incremented?",
+  "question_chars": 63,
+  "latency_sec": 0.5954906940460205,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

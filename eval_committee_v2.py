@@ -41,8 +41,8 @@ python eval_committee_v2.py \
   
 # Triple evaluators
 python eval_committee_v2.py \
-  --results ./runs/openai-gpt-3.5-turbo/results.jsonl \
-  --outdir ./runs/openai-gpt-3.5-turbo \
+  --results ./runs/deepseek_coder_allcats/results.jsonl \
+  --outdir ./runs/deepseek_coder_allcats \
   --judges openai/gpt-3.5-turbo gemini/gemini-2.5-flash-lite deepseek-ai/deepseek-coder-6.7b-instruct \
     -v \
   --checkpoint-every 10 \

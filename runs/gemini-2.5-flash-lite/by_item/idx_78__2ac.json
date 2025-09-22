@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_78::2ac::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_78",
+  "category": "2ac",
+  "entry_point": "hex_key",
+  "prompt_field": "prompt2ac",
+  "prompt_text": "\ndef candidate(num):\n    \"\"\"You have been tasked to write a function that receives \n    an octal or hexadecimal (or another base) number as a string and counts the number of octal or hexadecimal (or another base) \n    digits that are primes (prime number, or a prime, is a natural number \n    greater than 1 that is not a product of two smaller natural numbers).\n    Hexadecimal digits are 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F.\n    Prime numbers are 2, 3, 5, 7, 11, 13, 17,...\n    So you have to determine a number of the following digits: 2, 3, 5, 7, \n    B (=decimal 11), D (=decimal 13), or digits from other base units.\n    Note: you may assume the input is always correct or empty string, \n    and symbols A,B,C,D,E,F are always uppercase.\n    Examples:\n    For num = \"AB\" the output should be 0.\n    For num = \"1077E\" the output should be 2.\n    For num = \"ABED1A33\" the output should be 2.\n    For num = \"123456789ABCDEF0\" the output should be 4.\n    For num = \"2020\" the output should be 2.\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(num):\n    \"\"\"You have been tasked to write a function that receives \n    an octal or hexadecimal (or another base) number as a string and counts the number of octal or hexadecimal (or another base) \n    digits that are primes (prime number, or a prime, is a natural number \n    greater than 1 that is not a product of two smaller natural numbers).\n    Hexadecimal digits are 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F.\n    Prime numbers are 2, 3, 5, 7, 11, 13, 17,...\n    So you have to determine a number of the following digits: 2, 3, 5, 7, \n    B (=decimal 11), D (=decimal 13), or digits from other base units.\n    Note: you may assume the input is always correct or empty string, \n    and symbols A,B,C,D,E,F are always uppercase.\n    Examples:\n    For num = \"AB\" the output should be 0.\n    For num = \"1077E\" the output should be 2.\n    For num = \"ABED1A33\" the output should be 2.\n    For num = \"123456789ABCDEF0\" the output should be 4.\n    For num = \"2020\" the output should be 2.\n    \"\"\"",
+  "prompt_sha256": "03fc37fbdad7915a6fc2b46271be07d0ea29bf7dd686ff3a482b2ad16598b4c9",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef candidate(num):\n    \"\"\"You have been tasked to write a function that receives\n    an octal or hexadecimal (or another base) number as a string and counts the number of octal or hexadecimal (or another base)\n    digits that are primes (prime number, or a prime, is a natural number\n    greater than 1 that is not a product of two smaller natural numbers).\n    Hexadecimal digits are 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F.\n    Prime numbers are 2, 3, 5, 7, 11, 13, 17,...\n    So you have to determine a number of the following digits: 2, 3, 5, 7,\n    B (=decimal 11), D (=decimal 13), or digits from other base units.\n    Note: you may assume the input is always correct or empty string,\n    and symbols A,B,C,D,E,F are always uppercase.\n    Examples:\n    For num =",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def candidate(num):\n    \"\"\"You have been tasked to write a function that receives\n    an octal or hexadecimal (or another base) number as a string and counts the number of octal or hexadecimal (or another base)\n    digits that are primes (prime number, or a prime, is a natural number\n    greater than 1 that is not a product of two smaller natural numbers).\n    Hexadecimal digits are 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F.\n    Prime numbers are 2, 3, 5, 7, 11, 13, 17,...\n    So you have to determine a number of the following digits: 2, 3, 5, 7,\n    B (=decimal 11), D (=decimal 13), or digits from other base units.\n    Note: you may assume the input is always correct or empty string,\n    and symbols A,B,C,D,E,F are always uppercase.\n    Examples:\n    For num =",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 1.434211254119873,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

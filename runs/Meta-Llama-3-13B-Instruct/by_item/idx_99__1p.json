@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_99::1p::andrijdavid/Meta-Llama-3-13B-Instruct::seed0",
+  "task_id": "idx_99",
+  "category": "1p",
+  "entry_point": "closest_integer",
+  "prompt_field": "prompt1p",
+  "prompt_text": "\ndef closest_integer(value):\n    '''\n    Create a function that takes a value (string) representing a number\n    and returns the closest\n    '''\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef closest_integer(value):\n    '''\n    Create a function that takes a value (string) representing a number\n    and returns the closest\n    '''",
+  "prompt_sha256": "6029212f237bb18a104317187677fca3b0738f10e9c5ae2acab8501cba1fc594",
+  "model_name": "andrijdavid/Meta-Llama-3-13B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef closest_integer(value):\n    '''\n    Create a function that takes a value (string) representing a number\n    and returns the closest\n    '''\n\n\n\nPlease note that I am familiar with python3 basics such as variables declaration, Functions declaration etcetera.\n\nmarktdown response:\nPlease provide a sample input value for example: closest_integer(\"pi\")\n\nmarktdown code:\n closest_integer function below:\n def closest_integerPi Pi = strPi\n def closest_integer(value):\nπClosest π Closest Closest Closest Closest Closest Closest Closest Closest Closest Closest Closest Closest Closest Closest Closest Closest Closest Closest Closest Closest Closest Closest Closest Closest Closest Closest Closest Closest Closest Closest Closest Closest Closest Closest Closest Closest Closest Closest Closest Closest ClosestClosest Closest ClosestClosestClosestClosestClosestClosestClosestClosestClosestClosestClosestClosest ClosestClosestClosest ClosestClosestClosestClosest Closest Closest Closest Closest Closest Closest Closest Closest Closest ClosestClosestClosestClosestClosestClosestClosest ClosestClosestClosestClosestClosest ClosestClosestClosest ClosestClosest Closest Closest ClosestClosestClosest Closest Close",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def closest_integer(value):\n    '''\n    Create a function that takes a value (string) representing a number\n    and returns the closest\n    '''\n\n\n\nPlease note that I am familiar with python3 basics such as variables declaration, Functions declaration etcetera.\n\nmarktdown response:\nPlease provide a sample input value for example: closest_integer(\"pi\")\n\nmarktdown code:\n closest_integer function below:\n def closest_integerPi Pi = strPi\n def closest_integer(value):\nπClosest π Closest Closest Closest Closest Closest Closest Closest Closest Closest Closest Closest Closest Closest Closest Closest Closest Closest Closest Closest Closest Closest Closest Closest Closest Closest Closest Closest Closest Closest Closest Closest Closest Closest Closest Closest Closest Closest Closest Closest Closest ClosestClosest Closest ClosestClosestClosestClosestClosestClosestClosestClosestClosestClosestClosestClosest ClosestClosestClosest ClosestClosestClosestClosest Closest Closest Closest Closest Closest Closest Closest Closest Closest ClosestClosestClosestClosestClosestClosestClosest ClosestClosestClosestClosestClosest ClosestClosestClosest ClosestClosest Closest Closest ClosestClosestClosest Closest Close",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 90.79672813415527,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

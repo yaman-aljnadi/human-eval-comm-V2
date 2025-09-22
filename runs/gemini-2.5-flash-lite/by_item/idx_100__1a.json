@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_100::1a::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_100",
+  "category": "1a",
+  "entry_point": "make_a_pile",
+  "prompt_field": "prompt1a",
+  "prompt_text": "\ndef make_a_pile(n):\n    \"\"\"\n    Given a positive integer n, you have to make a pile of 2*n or n levels of stones.\n    The first level has n stones.\n    The number of stones in the next level is:\n        - the next odd number if n is odd.\n        - the next even number if n is even.\n    Return the number of stones in each level in a list, where element at index\n    i represents the number of stones in the level (i+1).\n\n    Examples:\n    >>> make_a_pile(3)\n    [3, 5, 7]\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef make_a_pile(n):\n    \"\"\"\n    Given a positive integer n, you have to make a pile of 2*n or n levels of stones.\n    The first level has n stones.\n    The number of stones in the next level is:\n        - the next odd number if n is odd.\n        - the next even number if n is even.\n    Return the number of stones in each level in a list, where element at index\n    i represents the number of stones in the level (i+1).\n\n    Examples:\n    >>> make_a_pile(3)\n    [3, 5, 7]\n    \"\"\"",
+  "prompt_sha256": "626c28cde62847936b7eba85d84aafd4d8ec0324b64244e5f70b4e8dbfd58c92",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef make_a_pile(n):\n    \"\"\"\n    Given a positive integer n, you have to make a pile of 2*n or n levels of stones.\n    The first level has n stones.\n    The number of stones in the next level is:\n        - the next odd number if n is odd.\n        - the next even number if n is even.\n    Return the number of stones in each level in a list, where element at index\n    i represents the number of stones in the level (i+1).\n\n    Examples:\n    >>> make_a_pile(3)\n    [3, 5, 7]\n    >>> make_a_pile(4)\n    [4, 6, 8, 10]\n    \"\"\"\n    pile = [n]\n    current_stones = n\n    for _ in range(n - 1):\n        if current_stones % 2 == 0:  # If current number of stones is even\n            current_stones += 2\n        else:  # If current number of stones is odd\n            current_stones += 2\n        pile.append",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def make_a_pile(n):\n    \"\"\"\n    Given a positive integer n, you have to make a pile of 2*n or n levels of stones.\n    The first level has n stones.\n    The number of stones in the next level is:\n        - the next odd number if n is odd.\n        - the next even number if n is even.\n    Return the number of stones in each level in a list, where element at index\n    i represents the number of stones in the level (i+1).\n\n    Examples:\n    >>> make_a_pile(3)\n    [3, 5, 7]\n    >>> make_a_pile(4)\n    [4, 6, 8, 10]\n    \"\"\"\n    pile = [n]\n    current_stones = n\n    for _ in range(n - 1):\n        if current_stones % 2 == 0:  # If current number of stones is even\n            current_stones += 2\n        else:  # If current number of stones is odd\n            current_stones += 2\n        pile.append",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 1.4360597133636475,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

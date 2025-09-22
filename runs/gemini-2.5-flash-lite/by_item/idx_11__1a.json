@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_11::1a::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_11",
+  "category": "1a",
+  "entry_point": "string_xor",
+  "prompt_field": "prompt1a",
+  "prompt_text": "from typing import List\n\n\ndef candidate(a: str, b: str) -> str:\n    \"\"\" Input are two strings a and b consisting only of 1s and 0s.\n    Perform certain bitwise operation on these inputs and return result also as a string.\n    >>> candidate('010', '110')\n    '100'\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List\n\n\ndef candidate(a: str, b: str) -> str:\n    \"\"\" Input are two strings a and b consisting only of 1s and 0s.\n    Perform certain bitwise operation on these inputs and return result also as a string.\n    >>> candidate('010', '110')\n    '100'\n    \"\"\"",
+  "prompt_sha256": "dd9189f7305c3ffc5c573323fb01f0f42e85cd04ec9f7d9cf38671719568a203",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\nfrom typing import List\n\n\ndef candidate(a: str, b: str) -> str:\n    \"\"\" Input are two strings a and b consisting only of 1s and 0s.\n    Perform certain bitwise operation on these inputs and return result also as a string.\n    >>> candidate('010', '110')\n    '100'\n    \"\"\"\n    # Ensure strings are of the same length by padding with leading zeros if necessary\n    max_len = max(len(a), len(b))\n    a = a.zfill(max_len)\n    b = b.zfill(max_len)\n\n    result = \"\"\n    for i in range(max_len):\n        # Perform XOR operation on corresponding bits\n        if a[i] != b[i]:\n            result += '1'\n        else:\n            result += '0'\n    return result\n```",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "from typing import List\n\n\ndef candidate(a: str, b: str) -> str:\n    \"\"\" Input are two strings a and b consisting only of 1s and 0s.\n    Perform certain bitwise operation on these inputs and return result also as a string.\n    >>> candidate('010', '110')\n    '100'\n    \"\"\"\n    # Ensure strings are of the same length by padding with leading zeros if necessary\n    max_len = max(len(a), len(b))\n    a = a.zfill(max_len)\n    b = b.zfill(max_len)\n\n    result = \"\"\n    for i in range(max_len):\n        # Perform XOR operation on corresponding bits\n        if a[i] != b[i]:\n            result += '1'\n        else:\n            result += '0'\n    return result",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 1.4260015487670898,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

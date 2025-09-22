@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_55::1c::meta-llama/Meta-Llama-3-8B-Instruct::seed0",
+  "task_id": "idx_55",
+  "category": "1c",
+  "entry_point": "fib",
+  "prompt_field": "prompt1c",
+  "prompt_text": "\n\ndef fib(n: int):\n    \"\"\"Return n-th Fibonacci number.\n    >>> fib(10)\n    550\n    >>> fib(1)\n    10\n    >>> fib(8)\n    210\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef fib(n: int):\n    \"\"\"Return n-th Fibonacci number.\n    >>> fib(10)\n    550\n    >>> fib(1)\n    10\n    >>> fib(8)\n    210\n    \"\"\"",
+  "prompt_sha256": "c80fe7597ad380408204c8e35b7dd4f4bbe0daaedbe626182cbf6d3f1ed85e2b",
+  "model_name": "meta-llama/Meta-Llama-3-8B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef fib(n: int):\n    \"\"\"Return n-th Fibonacci number.\n    >>> fib(10)\n    550\n    >>> fib(1)\n    10\n    >>> fib(8)\n    210\n    \"\"\"\n\n\nWhat kind of data structures (such as linked lists, arrays, dictionaries, recursive functions, etc.) and techniques (such as memoization, dynamic programming, caching, etc.) should be used to solve this problem efficiently?\n\n**I will accept answers written only in markdown, like this:**\n```python\ndef fib(n: int):\n    if n <= 1:\n        return 10\n    elif n == 2:\n        return 11\n    else:\n        a, b = 10, 11\n        for _ in range(2, n):\n            a, b = b, a + b\n        return b\n```\nPlease provide an answer in markdown format (with backticks) or clarify the questions above.**  Thank you.** \n\nI will only accept Python3 code written in markdown format.** \n\nBest regards.**  \n \nYour answer will help me understand more about Python, data structures, and techniques.  Thank you!  **I look forward to your response.**  **Sincerely,**\n**[Your Name]** **[Your email]** **[Your Contact Information]** **[Your Institution/Country]**  **[Your Date of Birth]**  **[Your Height]**  **[Your Weight",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def fib(n: int):\n    if n <= 1:\n        return 10\n    elif n == 2:\n        return 11\n    else:\n        a, b = 10, 11\n        for _ in range(2, n):\n            a, b = b, a + b\n        return b",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 70.65143084526062,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

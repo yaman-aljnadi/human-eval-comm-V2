@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_79::2ap::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_79",
+  "category": "2ap",
+  "entry_point": "decimal_to_binary",
+  "prompt_field": "prompt2ap",
+  "prompt_text": "\ndef candidate(decimal):\n    \"\"\"You will be given a number in decimal form and your task is to convert it to\n    binary format. The function should return a string, with each character representing a binary\n    number. Each character in the string will be '0' or '1' or '2'.\n\n    There will be an extra couple of characters 'db' at.\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(decimal):\n    \"\"\"You will be given a number in decimal form and your task is to convert it to\n    binary format. The function should return a string, with each character representing a binary\n    number. Each character in the string will be '0' or '1' or '2'.\n\n    There will be an extra couple of characters 'db' at.\n    \"\"\"",
+  "prompt_sha256": "27759567178eebd6e0b241496491aea98c36968c16794fd128ad38b679f43ba5",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef candidate(decimal):\n    \"\"\"You will be given a number in decimal form and your task is to convert it to\n    binary format. The function should return a string, with each character representing a binary\n    number. Each character in the string will be '0' or '1' or '2'.\n\n    There will be an extra couple of characters 'db' at.\n    \"\"\"\n    if not isinstance(decimal, int) or decimal < 0:\n        raise ValueError(\"Input must be a non-negative integer.\")\n\n    if decimal == 0:\n        return \"0db\"\n\n    binary_representation = bin(decimal)[2:]  # Convert to binary and remove the '0b' prefix\n    # The prompt states characters will be '0', '1', or '2'.\n    # Standard binary conversion only uses '0' and '1'.\n    # This implies a misunderstanding in the prompt's description or an unusual encoding.\n    # Assuming the prompt meant a standard binary conversion and the '2' is a typo or\n    # a misunderstanding, we will proceed with standard binary.\n    # If a system using '0', '1',",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def candidate(decimal):\n    \"\"\"You will be given a number in decimal form and your task is to convert it to\n    binary format. The function should return a string, with each character representing a binary\n    number. Each character in the string will be '0' or '1' or '2'.\n\n    There will be an extra couple of characters 'db' at.\n    \"\"\"\n    if not isinstance(decimal, int) or decimal < 0:\n        raise ValueError(\"Input must be a non-negative integer.\")\n\n    if decimal == 0:\n        return \"0db\"\n\n    binary_representation = bin(decimal)[2:]  # Convert to binary and remove the '0b' prefix\n    # The prompt states characters will be '0', '1', or '2'.\n    # Standard binary conversion only uses '0' and '1'.\n    # This implies a misunderstanding in the prompt's description or an unusual encoding.\n    # Assuming the prompt meant a standard binary conversion and the '2' is a typo or\n    # a misunderstanding, we will proceed with standard binary.\n    # If a system using '0', '1',",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 1.7634766101837158,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

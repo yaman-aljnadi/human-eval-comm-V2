@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_82::1c::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_82",
+  "category": "1c",
+  "entry_point": "prime_length",
+  "prompt_field": "prompt1c",
+  "prompt_text": "\ndef prime_length(string):\n    \"\"\"Write a function that takes a string and returns True if the string\n    length is a prime number or False otherwise\n    Examples\n    prime_length('Hello') == False\n    prime_length('abcdcba') == False\n    prime_length('kittens') == False\n    prime_length('orange') == True\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef prime_length(string):\n    \"\"\"Write a function that takes a string and returns True if the string\n    length is a prime number or False otherwise\n    Examples\n    prime_length('Hello') == False\n    prime_length('abcdcba') == False\n    prime_length('kittens') == False\n    prime_length('orange') == True\n    \"\"\"",
+  "prompt_sha256": "3a7f4e5ec971977ebe0eb0c5646b4a17f97907761bfb168567f5bf8e15c11f55",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef prime_length(string):\n    \"\"\"Write a function that takes a string and returns True if the string\n    length is a prime number or False otherwise\n    Examples\n    prime_length('Hello') == False\n    prime_length('abcdcba') == False\n    prime_length('kittens') == False\n    prime_length('orange') == True\n    \"\"\"\n    length = len(string)\n    if length < 2:\n        return False\n    for i in range(2, int(length**0.5) + 1):\n        if length % i == 0:\n            return False\n    return True\n```",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def prime_length(string):\n    \"\"\"Write a function that takes a string and returns True if the string\n    length is a prime number or False otherwise\n    Examples\n    prime_length('Hello') == False\n    prime_length('abcdcba') == False\n    prime_length('kittens') == False\n    prime_length('orange') == True\n    \"\"\"\n    length = len(string)\n    if length < 2:\n        return False\n    for i in range(2, int(length**0.5) + 1):\n        if length % i == 0:\n            return False\n    return True",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 0.9447705745697021,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

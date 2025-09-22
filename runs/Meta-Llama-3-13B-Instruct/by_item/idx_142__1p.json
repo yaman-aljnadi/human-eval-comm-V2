@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_142::1p::andrijdavid/Meta-Llama-3-13B-Instruct::seed0",
+  "task_id": "idx_142",
+  "category": "1p",
+  "entry_point": "sum_squares",
+  "prompt_field": "prompt1p",
+  "prompt_text": "\n\n\ndef sum_squares(lst):\n    \"\"\"\"\n    This function will take a list of integers. The function will not \n    change the entries in the list whose indexes are not a multiple of 3 or 4. The function shall then return the sum of all entries. \n    \n    Examples:\n    For lst = [1,2,3] the output should be 6\n    For lst = []  the output should be 0\n    For lst = [-1,-5,2,-1,-5]  the output should be -126\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef sum_squares(lst):\n    \"\"\"\"\n    This function will take a list of integers. The function will not \n    change the entries in the list whose indexes are not a multiple of 3 or 4. The function shall then return the sum of all entries. \n    \n    Examples:\n    For lst = [1,2,3] the output should be 6\n    For lst = []  the output should be 0\n    For lst = [-1,-5,2,-1,-5]  the output should be -126\n    \"\"\"",
+  "prompt_sha256": "37a1f835c235925fc636afebe8b0fa3d2d3241ce13f0ac84aa3107fa7576d4be",
+  "model_name": "andrijdavid/Meta-Llama-3-13B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef sum_squares(lst):\n    \"\"\"\"\n    This function will take a list of integers. The function will not \n    change the entries in the list whose indexes are not a multiple of 3 or 4. The function shall then return the sum of all entries. \n    \n    Examples:\n    For lst = [1,2,3] the output should be 6\n    For lst = []  the output should be 0\n    For lst = [-1,-5,2,-1,-5]  the output should be -126\n    \"\"\"//{{}}\n\nlst = [1,-1,-2]\n\nsum_squares(lst)\n//{{}} Endsrbraceujte ends}}{{}} Ends}}{{}} Endsrbraceujte ends//{{}} Ends//{{}} Ends//{{}} ends//{{}} ends//{{}} ends//{{}} ends//{{}}//{{}} ends//{{}}//{{}} Ends//{{}}//{{}} ends//{{}}//{{}} ends//{{}}//{{}} ends//{{}}//{{}} ends//{{}}//{{}} ends//{{}} ends//{{}}//{{}} ends//{{}} ends//{{}} ends//{{}}//{{}} ends//{{}} ends//{{}}//{{}} ends//{{}} ends//{{}} ends//{{}}//{{}} ends//{{}} ends//{{}} ends//{{}} ends//{{}} ends//{{}} ends//{{}}//{{}} ends//{{}}//{{}} ends//{{}}//{{}} ends//{{}} ends//{{}}//{{}} ends//{{}}//{{}} ends//{{}}//{{}} ends//{{}} ends//{{}} ends//{{}} ends//{{}}//{{}} ends//{{}} ends//{{}} ends//{{}} ends//{{}} ends//{{}} ends//{{}} ends//{{}} ends//{{}} ends//{{}} ends//{{}} ends//{{}} ends//{{}} ends//{{}} ends//{{}} ends//{{}} ends//{{}} ends//{{}} ends//{{}} ends//{{}} ends//{{}} ends//{{}} ends//{{}} ends//{{}} ends//{{}}",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def sum_squares(lst):\n    \"\"\"\"\n    This function will take a list of integers. The function will not \n    change the entries in the list whose indexes are not a multiple of 3 or 4. The function shall then return the sum of all entries. \n    \n    Examples:\n    For lst = [1,2,3] the output should be 6\n    For lst = []  the output should be 0\n    For lst = [-1,-5,2,-1,-5]  the output should be -126\n    \"\"\"//{{}}\n\nlst = [1,-1,-2]\n\nsum_squares(lst)\n//{{}} Endsrbraceujte ends}}{{}} Ends}}{{}} Endsrbraceujte ends//{{}} Ends//{{}} Ends//{{}} ends//{{}} ends//{{}} ends//{{}} ends//{{}}//{{}} ends//{{}}//{{}} Ends//{{}}//{{}} ends//{{}}//{{}} ends//{{}}//{{}} ends//{{}}//{{}} ends//{{}}//{{}} ends//{{}} ends//{{}}//{{}} ends//{{}} ends//{{}} ends//{{}}//{{}} ends//{{}} ends//{{}}//{{}} ends//{{}} ends//{{}} ends//{{}}//{{}} ends//{{}} ends//{{}} ends//{{}} ends//{{}} ends//{{}} ends//{{}}//{{}} ends//{{}}//{{}} ends//{{}}//{{}} ends//{{}} ends//{{}}//{{}} ends//{{}}//{{}} ends//{{}}//{{}} ends//{{}} ends//{{}} ends//{{}} ends//{{}}//{{}} ends//{{}} ends//{{}} ends//{{}} ends//{{}} ends//{{}} ends//{{}} ends//{{}} ends//{{}} ends//{{}} ends//{{}} ends//{{}} ends//{{}} ends//{{}} ends//{{}} ends//{{}} ends//{{}} ends//{{}} ends//{{}} ends//{{}} ends//{{}} ends//{{}} ends//{{}} ends//{{}} ends//{{}}",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 91.54169225692749,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

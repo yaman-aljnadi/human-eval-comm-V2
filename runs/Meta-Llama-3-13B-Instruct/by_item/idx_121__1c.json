@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_121::1c::andrijdavid/Meta-Llama-3-13B-Instruct::seed0",
+  "task_id": "idx_121",
+  "category": "1c",
+  "entry_point": "solution",
+  "prompt_field": "prompt1c",
+  "prompt_text": "\ndef solution(lst):\n    \"\"\"Given a non-empty list of integers, return the sum of all of the odd elements that are in even positions.\n    \n\n    Examples\n    solution([5, 8, 7, 1]) ==> 1\n    solution([3, 3, 3, 3, 3]) ==> 3\n    solution([30, 13, 24, 321]) ==>30\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef solution(lst):\n    \"\"\"Given a non-empty list of integers, return the sum of all of the odd elements that are in even positions.\n    \n\n    Examples\n    solution([5, 8, 7, 1]) ==> 1\n    solution([3, 3, 3, 3, 3]) ==> 3\n    solution([30, 13, 24, 321]) ==>30\n    \"\"\"",
+  "prompt_sha256": "0a428829d2c761638e8d0a2e79662ad647aa7f16094b0723b613b392f674b8c3",
+  "model_name": "andrijdavid/Meta-Llama-3-13B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef solution(lst):\n    \"\"\"Given a non-empty list of integers, return the sum of all of the odd elements that are in even positions.\n    \n\n    Examples\n    solution([5, 8, 7, 1]) ==> 1\n    solution([3, 3, 3, 3, 3]) ==> 3\n    solution([30, 13, 24, 321]) ==>30\n    \"\"\"ODEV Question: Cod Liverstone Task #1 Cod Liverstone Task #1 Cod Liverstone task #1 Cod Liverstone Task #1 Cod Liverstone task #1 Cod Liverstone task #1 Cod Liverstone Task #1 Cod Liverstone Task #1 Cod liverstone task #1 Cod Liverstone Task #1 Cod Liverstone task #1 Cod Liverstone task #1 Cod Liverstone Task #1 Cod Liverstone task #1 Cod Liverstone task #1 Cod Liverstone task #ollective Cod Liverstone task #1 Cod Liverstone task #1 Cod Liverstone task #1 Cod Liverstone task #1 Cod Liverstone task #1 Cod liverstone task #1 Cod liverstone task #1 Cod liverstone task #1 Cod Liverstone task #1 Cod Liverstone task #1 Cod liverstone task #1 Cod Liverstone task #1 Cod liverstone task #1 Cod liverstone task #1 Cod Liverstone Task #1 Cod liverstone task #1 Cod liverstone Task #1 Cod Liverstone Task #1 Cod liverstone Task #1 Cod liverstone Task #1 Cod liverstone Task #1 Cod liverstone Task #1 Cod liverstone Task #1 Cod liverstone task #1 Cod liverstone Task #1 Cod liverstone Task #1",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def solution(lst):\n    \"\"\"Given a non-empty list of integers, return the sum of all of the odd elements that are in even positions.\n    \n\n    Examples\n    solution([5, 8, 7, 1]) ==> 1\n    solution([3, 3, 3, 3, 3]) ==> 3\n    solution([30, 13, 24, 321]) ==>30\n    \"\"\"ODEV Question: Cod Liverstone Task #1 Cod Liverstone Task #1 Cod Liverstone task #1 Cod Liverstone Task #1 Cod Liverstone task #1 Cod Liverstone task #1 Cod Liverstone Task #1 Cod Liverstone Task #1 Cod liverstone task #1 Cod Liverstone Task #1 Cod Liverstone task #1 Cod Liverstone task #1 Cod Liverstone Task #1 Cod Liverstone task #1 Cod Liverstone task #1 Cod Liverstone task #ollective Cod Liverstone task #1 Cod Liverstone task #1 Cod Liverstone task #1 Cod Liverstone task #1 Cod Liverstone task #1 Cod liverstone task #1 Cod liverstone task #1 Cod liverstone task #1 Cod Liverstone task #1 Cod Liverstone task #1 Cod liverstone task #1 Cod Liverstone task #1 Cod liverstone task #1 Cod liverstone task #1 Cod Liverstone Task #1 Cod liverstone task #1 Cod liverstone Task #1 Cod Liverstone Task #1 Cod liverstone Task #1 Cod liverstone Task #1 Cod liverstone Task #1 Cod liverstone Task #1 Cod liverstone Task #1 Cod liverstone task #1 Cod liverstone Task #1 Cod liverstone Task #1",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 92.26276707649231,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

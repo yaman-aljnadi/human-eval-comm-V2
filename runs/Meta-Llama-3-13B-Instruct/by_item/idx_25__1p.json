@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_25::1p::andrijdavid/Meta-Llama-3-13B-Instruct::seed0",
+  "task_id": "idx_25",
+  "category": "1p",
+  "entry_point": "factorize",
+  "prompt_field": "prompt1p",
+  "prompt_text": "from typing import List\n\n\ndef candidate(n: int) -> List[int]:\n    \"\"\" Return list of prime factors of given integer.\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List\n\n\ndef candidate(n: int) -> List[int]:\n    \"\"\" Return list of prime factors of given integer.\n    \"\"\"",
+  "prompt_sha256": "05e6810097907c0660902a02d520fe43d5e15c9e3afb83d3702736b01e06512d",
+  "model_name": "andrijdavid/Meta-Llama-3-13B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List\n\n\ndef candidate(n: int) -> List[int]:\n    \"\"\" Return list of prime factors of given integer.\n    \"\"\"\n\n\n#:egovohm\n#:egovohm\n #:egovohm\n#:egovohm\n defprime Factors(n: int):\n \"\"\" Return prime Factors of n\"\"\"endedininendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendend",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def candidate(n: int) -> List[int]:\n    \"\"\" Return list of prime factors of given integer.\n    \"\"\"\n\n\n#:egovohm\n#:egovohm\n #:egovohm\n#:egovohm\n defprime Factors(n: int):\n \"\"\" Return prime Factors of n\"\"\"endedininendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendend",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 91.08565044403076,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

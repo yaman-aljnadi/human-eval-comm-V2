@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_125::1a::meta-llama/Meta-Llama-3-8B-Instruct::seed0",
+  "task_id": "idx_125",
+  "category": "1a",
+  "entry_point": "split_words",
+  "prompt_field": "prompt1a",
+  "prompt_text": "\ndef split_words(txt):\n    '''\n    Given a string of words, return a list of words split on characters, if no characters exists in the text you\n    should split on commas ',' if no commas exists you should return the number of lower-case letters with odd order in the\n    alphabet, ord('a') = 0, ord('b') = 1, ... ord('z') = 25\n    Examples\n    split_words(\"Hello world!\") ➞ [\"Hello\", \"world!\"]\n    split_words(\"Hello,world!\") ➞ [\"Hello\", \"world!\"]\n    split_words(\"abcdef\") == 3 \n    '''\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef split_words(txt):\n    '''\n    Given a string of words, return a list of words split on characters, if no characters exists in the text you\n    should split on commas ',' if no commas exists you should return the number of lower-case letters with odd order in the\n    alphabet, ord('a') = 0, ord('b') = 1, ... ord('z') = 25\n    Examples\n    split_words(\"Hello world!\") ➞ [\"Hello\", \"world!\"]\n    split_words(\"Hello,world!\") ➞ [\"Hello\", \"world!\"]\n    split_words(\"abcdef\") == 3 \n    '''",
+  "prompt_sha256": "6660b892433fd5760d21e8da7b644a69d3b06636439589f82a7fd2503359dcfc",
+  "model_name": "meta-llama/Meta-Llama-3-8B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef split_words(txt):\n    '''\n    Given a string of words, return a list of words split on characters, if no characters exists in the text you\n    should split on commas ',' if no commas exists you should return the number of lower-case letters with odd order in the\n    alphabet, ord('a') = 0, ord('b') = 1, ... ord('z') = 25\n    Examples\n    split_words(\"Hello world!\") ➞ [\"Hello\", \"world!\"]\n    split_words(\"Hello,world!\") ➞ [\"Hello\", \"world!\"]\n    split_words(\"abcdef\") == 3 \n    '''\n\n\n[Your Code]\n\n\n\n\n\n**Code**\n```python\nimport re\n\ndef split_words(txt):\n    if re.search(r'[a-zA-Z]+', txt):\n        words = re.split(r'(\\W)', txt)\n        return [word.strip() for word in words if word.strip()]\n    else:\n        if re.search(r',', txt):\n            return re.split(r',', txt)\n        else:\n            odd_lowercase_count = 0\n            for char in txt.lower():\n                if 'a' <= char <= 'z' and (ord(char) - ord('a')) % 2!= 0:\n                    odd_lowercase_count += 1\n            return odd_lowercase_count\n```",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "import re\n\ndef split_words(txt):\n    if re.search(r'[a-zA-Z]+', txt):\n        words = re.split(r'(\\W)', txt)\n        return [word.strip() for word in words if word.strip()]\n    else:\n        if re.search(r',', txt):\n            return re.split(r',', txt)\n        else:\n            odd_lowercase_count = 0\n            for char in txt.lower():\n                if 'a' <= char <= 'z' and (ord(char) - ord('a')) % 2!= 0:\n                    odd_lowercase_count += 1\n            return odd_lowercase_count",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 37.49788808822632,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

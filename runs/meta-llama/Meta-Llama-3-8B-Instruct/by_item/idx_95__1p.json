@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_95::1p::meta-llama/Meta-Llama-3-8B-Instruct::seed0",
+  "task_id": "idx_95",
+  "category": "1p",
+  "entry_point": "check_dict_case",
+  "prompt_field": "prompt1p",
+  "prompt_text": "\ndef check_dict_case(dict):\n    \"\"\"\n    Given a dictionary, return True if all keys are strings in lower \n    case or all keys are strings in.\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef check_dict_case(dict):\n    \"\"\"\n    Given a dictionary, return True if all keys are strings in lower \n    case or all keys are strings in.\n    \"\"\"",
+  "prompt_sha256": "25707e577aafeab675cca0034db5acbbadbc4635b8cd88714351876ab91c9c53",
+  "model_name": "meta-llama/Meta-Llama-3-8B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef check_dict_case(dict):\n    \"\"\"\n    Given a dictionary, return True if all keys are strings in lower \n    case or all keys are strings in.\n    \"\"\"\n\n\n\n# Ask Clarifying Questions:\nPlease specify if we should also check if all values in the dictionary are either strings or not (also in either case, lowercase or uppercase). \n\n(I'll be available to provide further details or adjust expectations as needed.)](https://stackoverflow.com/questions/71643915/))](https://stackoverflow.com/questions/))](https://stackoverflow.com/questions/71643895/)\n\n**Code to come...**](https://meta.stackoverflow.com/)\n\n**Code only below**\n\n    ```python\n    def check_dict_case(dict):\n        all_keys_lower = all(isinstance(key, str) and key.islower() for key in dict.keys())\n        all_keys_upper = all(isinstance(key, str) and key.isupper() for key in dict.keys())\n        return all_keys_lower or all_keys_upper\n    ```](https://meta.stackoverflow.com/questions/)```](https://meta.stackoverflow.com/questions/7159395/))]]]\n    )\n    )\n**Code**](https://meta.stackoverflow.com/](https://meta.stackoverflow.com/](https://meta.stackoverflow.com/questions/))]]]\n    )]]]`\n    )]]]\n    )]]]\n\n**End of Code**\n\nI'll be available to provide further",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def check_dict_case(dict):\n        all_keys_lower = all(isinstance(key, str) and key.islower() for key in dict.keys())\n        all_keys_upper = all(isinstance(key, str) and key.isupper() for key in dict.keys())\n        return all_keys_lower or all_keys_upper",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 69.23480319976807,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

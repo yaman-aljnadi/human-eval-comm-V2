@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_33::1c::andrijdavid/Meta-Llama-3-13B-Instruct::seed0",
+  "task_id": "idx_33",
+  "category": "1c",
+  "entry_point": "sort_third",
+  "prompt_field": "prompt1c",
+  "prompt_text": "\n\ndef sort_third(l: list):\n    \"\"\"This function takes a list l and returns a list l' such that\n    l' is identical to l in the indicies that are not divisible by three, while its values at the indicies that are divisible by three are equal\n    to the values of the corresponding indicies of l, but sorted.\n    >>> sort_third([1, 2, 3])\n    [3, 2, 1]\n    >>> sort_third([5, 6, 3, 4, 8, 9, 2])\n    [9, 8, 6, 5, 4, 3, 2]\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef sort_third(l: list):\n    \"\"\"This function takes a list l and returns a list l' such that\n    l' is identical to l in the indicies that are not divisible by three, while its values at the indicies that are divisible by three are equal\n    to the values of the corresponding indicies of l, but sorted.\n    >>> sort_third([1, 2, 3])\n    [3, 2, 1]\n    >>> sort_third([5, 6, 3, 4, 8, 9, 2])\n    [9, 8, 6, 5, 4, 3, 2]\n    \"\"\"",
+  "prompt_sha256": "314410c24e7f63282c35146d6a8639a7df63781bf535fd0e091bddc868a3bf3c",
+  "model_name": "andrijdavid/Meta-Llama-3-13B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef sort_third(l: list):\n    \"\"\"This function takes a list l and returns a list l' such that\n    l' is identical to l in the indicies that are not divisible by three, while its values at the indicies that are divisible by three are equal\n    to the values of the corresponding indicies of l, but sorted.\n    >>> sort_third([1, 2, 3])\n    [3, 2, 1]\n    >>> sort_third([5, 6, 3, 4, 8, 9, 2])\n    [9, 8, 6, 5, 4, 3, 2]\n    \"\"\"\n\n\n\n please feel free to ask questions if you are not clear about the requirement\n_TypeInfoclarification-neededend_TypeInfoclarification neededend Batesfullyend Batesfullyendend Batesfully end Batesfully endend Batesfully end end end endendend Batesfully endendendend Batesfully end endendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendend",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def sort_third(l: list):\n    \"\"\"This function takes a list l and returns a list l' such that\n    l' is identical to l in the indicies that are not divisible by three, while its values at the indicies that are divisible by three are equal\n    to the values of the corresponding indicies of l, but sorted.\n    >>> sort_third([1, 2, 3])\n    [3, 2, 1]\n    >>> sort_third([5, 6, 3, 4, 8, 9, 2])\n    [9, 8, 6, 5, 4, 3, 2]\n    \"\"\"\n\n\n\n please feel free to ask questions if you are not clear about the requirement\n_TypeInfoclarification-neededend_TypeInfoclarification neededend Batesfullyend Batesfullyendend Batesfully end Batesfully endend Batesfully end end end endendend Batesfully endendendend Batesfully end endendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendendend",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 157.09027242660522,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

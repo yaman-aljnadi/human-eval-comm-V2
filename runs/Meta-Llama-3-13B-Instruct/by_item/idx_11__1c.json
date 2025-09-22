@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_11::1c::andrijdavid/Meta-Llama-3-13B-Instruct::seed0",
+  "task_id": "idx_11",
+  "category": "1c",
+  "entry_point": "string_xor",
+  "prompt_field": "prompt1c",
+  "prompt_text": "from typing import List\n\n\ndef string_xor(a: str, b: str) -> str:\n    \"\"\" Input are two strings a and b consisting only of 1s and 0s.\n    Perform binary XOR on these inputs and return result also as a string.\n    >>> string_xor('010', '110')\n    '011'\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List\n\n\ndef string_xor(a: str, b: str) -> str:\n    \"\"\" Input are two strings a and b consisting only of 1s and 0s.\n    Perform binary XOR on these inputs and return result also as a string.\n    >>> string_xor('010', '110')\n    '011'\n    \"\"\"",
+  "prompt_sha256": "b8830e4088f692a9c5b82c5dd8c847dccbe2278843fcc53bb88312a9b454bf88",
+  "model_name": "andrijdavid/Meta-Llama-3-13B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List\n\n\ndef string_xor(a: str, b: str) -> str:\n    \"\"\" Input are two strings a and b consisting only of 1s and 0s.\n    Perform binary XOR on these inputs and return result also as a string.\n    >>> string_xor('010', '110')\n    '011'\n    \"\"\"\n\n\n## output expected format\n\nplease provide code that would return output as per below format\n\n,eg: string_xoor('110', '120') Output: '011'\n\n ## code provided below\n\nPlease provide Python3 code belowaskaclarifying questionif neededlete me knowif you have any further questionst務force me to provide more contextlet me know if you have any further questionsI appreciate your help THANKSIN advance appreciate your help THANKSAdvance THANKS Advance THANKS advance THANKS THANKS THANKS THANKS THANKS THanks THanks THANKS THANKS THanks THanks THANKS THANKS THANKS THanks THANKS THanks THanks THANKS THANKS THanks THANKS THanks THanks THANKS THanks THANKS THANKS THANKS THANKS THanks THANKS THANKS THanks TH THANKS THanks THank THanks THANKS THank THanks THank THANKS THANKS THanks THank THanks THank THANKS THanks THank THANKS THanks THanks THANKS THanks THanks THank THanks THanks THank THanks THanks THanks",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def string_xor(a: str, b: str) -> str:\n    \"\"\" Input are two strings a and b consisting only of 1s and 0s.\n    Perform binary XOR on these inputs and return result also as a string.\n    >>> string_xor('010', '110')\n    '011'\n    \"\"\"\n\n\n## output expected format\n\nplease provide code that would return output as per below format\n\n,eg: string_xoor('110', '120') Output: '011'\n\n ## code provided below\n\nPlease provide Python3 code belowaskaclarifying questionif neededlete me knowif you have any further questionst務force me to provide more contextlet me know if you have any further questionsI appreciate your help THANKSIN advance appreciate your help THANKSAdvance THANKS Advance THANKS advance THANKS THANKS THANKS THANKS THANKS THanks THanks THANKS THANKS THanks THanks THANKS THANKS THANKS THanks THANKS THanks THanks THANKS THANKS THanks THANKS THanks THanks THANKS THanks THANKS THANKS THANKS THANKS THanks THANKS THANKS THanks TH THANKS THanks THank THanks THANKS THank THanks THank THANKS THANKS THanks THank THanks THank THANKS THanks THank THANKS THanks THanks THANKS THanks THanks THank THanks THanks THank THanks THanks THanks",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 91.08384799957275,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

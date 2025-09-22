@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_8::1p::andrijdavid/Meta-Llama-3-13B-Instruct::seed0",
+  "task_id": "idx_8",
+  "category": "1p",
+  "entry_point": "sum_product",
+  "prompt_field": "prompt1p",
+  "prompt_text": "from typing import List, Tuple\n\n\ndef candidate(numbers: List[int]) -> Tuple[int, int]:\n    \"\"\" For a given list of integers, return a tuple consisting of a sum and a product of all the integers in a list.\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List, Tuple\n\n\ndef candidate(numbers: List[int]) -> Tuple[int, int]:\n    \"\"\" For a given list of integers, return a tuple consisting of a sum and a product of all the integers in a list.\n    \"\"\"",
+  "prompt_sha256": "9aed8e43d6738cff20fcc3ca2de39e55d7318cf6eb640460fe7bea2cd1393ff7",
+  "model_name": "andrijdavid/Meta-Llama-3-13B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List, Tuple\n\n\ndef candidate(numbers: List[int]) -> Tuple[int, int]:\n    \"\"\" For a given list of integers, return a tuple consisting of a sum and a product of all the integers in a list.\n    \"\"\"WidgetItemized numbers contain at least two distinct integers\"\"\"WidgetItemized numbers contain at least two distinct numbers\"\"\"DMINimum requirement\"\"\"DMIN minimum requirement\"\"\"DMIN minimum requirement\"\"\"DMIN minimum requirement\"\"\"DMIN minimum requirement\"\"\"DMIN minimum requirement\"\"\"DMIN minimum requirement\"\"\"DMIN minimum requirement\"\"\"DMIN minimum requirement\"\"\"DMIN minimum requirement\"\"\"DMIN minimum requirement\"\"\"DMIN minimum requirement\"\"\"DMIN minimum requirement\"\"\"DMIN minimum requirement\"\"\"DMIN minimum requirement\"\"\"DMIN minimum requirement )\n\n\n\n\n\n\n\nClarify questions:\n\n1. What do you mean by \"DMIN minimum requirement\"?DMIN minimum requirement\"\"DMIN minimum requirement\"\"DMIN minimum requirement\"\"DMIN minimum requirement\"\"DMIN minimum requirement\"\"DMIN minimum requirement\"\"DMIN minimum requirement\"\"DMIN minimum requirement\"\"DMIN minimum requirement\"\"DMIN minimum requirement\"\"DMIN minimum requirement\"\"DMIN minimum requirement\"\"DMIN minimum requirement\"\"DMIN minimum requirement\"\"DMIN minimum requirement\"\"DMIN minimum requirement\"\"DMIN minimum requirement\"\"DMIN minimum requirement\"\"DMIN minimum requirement\"\"DMIN minimum requirement\"\"DMIN minimum requirement\"\"DMIN minimum requirement\"\"DMIN minimum requirement\"\"DMIN minimum requirement\"\"DMIN minimum requirement\"\"DMIN minimum requirement\"\"DMIN minimum requirement\"\"DMIN minimum requirement\"\"DMIN minimum requirement\"\"DMIN minimum requirement\"\"DMIN minimum requirement\"\"DMIN minimum requirement\"\"DMIN minimum requirement\"\"DMIN minimum requirement\"\"DMIN minimum requirement\"\"DMIN minimum requirement\"\"DMIN minimum requirement\"\"DMIN minimum requirement\"\"DMIN minimum requirement\"\"",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def candidate(numbers: List[int]) -> Tuple[int, int]:\n    \"\"\" For a given list of integers, return a tuple consisting of a sum and a product of all the integers in a list.\n    \"\"\"WidgetItemized numbers contain at least two distinct integers\"\"\"WidgetItemized numbers contain at least two distinct numbers\"\"\"DMINimum requirement\"\"\"DMIN minimum requirement\"\"\"DMIN minimum requirement\"\"\"DMIN minimum requirement\"\"\"DMIN minimum requirement\"\"\"DMIN minimum requirement\"\"\"DMIN minimum requirement\"\"\"DMIN minimum requirement\"\"\"DMIN minimum requirement\"\"\"DMIN minimum requirement\"\"\"DMIN minimum requirement\"\"\"DMIN minimum requirement\"\"\"DMIN minimum requirement\"\"\"DMIN minimum requirement\"\"\"DMIN minimum requirement\"\"\"DMIN minimum requirement )\n\n\n\n\n\n\n\nClarify questions:\n\n1. What do you mean by \"DMIN minimum requirement\"?DMIN minimum requirement\"\"DMIN minimum requirement\"\"DMIN minimum requirement\"\"DMIN minimum requirement\"\"DMIN minimum requirement\"\"DMIN minimum requirement\"\"DMIN minimum requirement\"\"DMIN minimum requirement\"\"DMIN minimum requirement\"\"DMIN minimum requirement\"\"DMIN minimum requirement\"\"DMIN minimum requirement\"\"DMIN minimum requirement\"\"DMIN minimum requirement\"\"DMIN minimum requirement\"\"DMIN minimum requirement\"\"DMIN minimum requirement\"\"DMIN minimum requirement\"\"DMIN minimum requirement\"\"DMIN minimum requirement\"\"DMIN minimum requirement\"\"DMIN minimum requirement\"\"DMIN minimum requirement\"\"DMIN minimum requirement\"\"DMIN minimum requirement\"\"DMIN minimum requirement\"\"DMIN minimum requirement\"\"DMIN minimum requirement\"\"DMIN minimum requirement\"\"DMIN minimum requirement\"\"DMIN minimum requirement\"\"DMIN minimum requirement\"\"DMIN minimum requirement\"\"DMIN minimum requirement\"\"DMIN minimum requirement\"\"DMIN minimum requirement\"\"DMIN minimum requirement\"\"DMIN minimum requirement\"\"DMIN minimum requirement\"\"",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 90.97835373878479,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

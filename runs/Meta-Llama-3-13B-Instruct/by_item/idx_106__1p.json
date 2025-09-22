@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_106::1p::andrijdavid/Meta-Llama-3-13B-Instruct::seed0",
+  "task_id": "idx_106",
+  "category": "1p",
+  "entry_point": "f",
+  "prompt_field": "prompt1p",
+  "prompt_text": "\ndef f(n):\n    \"\"\" Implement the function f that takes n as a parameter,\n    and returns a list of size n, such that the value of the element at index i is the factorial of i if i is even\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef f(n):\n    \"\"\" Implement the function f that takes n as a parameter,\n    and returns a list of size n, such that the value of the element at index i is the factorial of i if i is even\n    \"\"\"",
+  "prompt_sha256": "74ffe97b25327175b1c22a7180a6ebfdefb96f6a407d5b6fe07df44afea68142",
+  "model_name": "andrijdavid/Meta-Llama-3-13B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef f(n):\n    \"\"\" Implement the function f that takes n as a parameter,\n    and returns a list of size n, such that the value of the element at index i is the factorial of i if i is even\n    \"\"\"\n\n\n\nPlease note that n is an positive integer less than or equal(mathematical operator) 1000.\nPlease note that you don't need to worry about edge cases such as n being 0 or n being negative, as it's assumed that n will be within the given range mentioned above./>\n\nCodes below:\nDataExchange:\nPlease provide your Python3 code below:\ncodes below:\ncodes below:\ncodes below:\n\nCodes below:\ncodes below:\ncodes below:\ncodes below:\nCodes below:\n codes below:\n codes below:\n codes below:\n codes below:\n codes below:\n codes below:\n codes below:\n codes below:\n codes below:\n codes below:\n codes below:\n codes below:\n codes below:\n codes below:\n codes below:\n codes below:\n codes below:\n codes below:\n codes below:\n codes below:\n codes below:\n codes below:\n codes below:\n codes below:\n codes below:\n codes below:\n codes below:\n codes below:\n codes below:\n codes below:\n codes below:\n codes below:\n codes below:\n codes below:\n codes below:\n codes below:\n codes below:\n codes below:\n codes below:\n codes below:\n codes below:\n codes below:\n codes below:\n codes below:\n codes below:\n codes below:\n codes below:\n codes below:\n codes below:\n codes below:\n codes below:\n codes below:\n codes below",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def f(n):\n    \"\"\" Implement the function f that takes n as a parameter,\n    and returns a list of size n, such that the value of the element at index i is the factorial of i if i is even\n    \"\"\"\n\n\n\nPlease note that n is an positive integer less than or equal(mathematical operator) 1000.\nPlease note that you don't need to worry about edge cases such as n being 0 or n being negative, as it's assumed that n will be within the given range mentioned above./>\n\nCodes below:\nDataExchange:\nPlease provide your Python3 code below:\ncodes below:\ncodes below:\ncodes below:\n\nCodes below:\ncodes below:\ncodes below:\ncodes below:\nCodes below:\n codes below:\n codes below:\n codes below:\n codes below:\n codes below:\n codes below:\n codes below:\n codes below:\n codes below:\n codes below:\n codes below:\n codes below:\n codes below:\n codes below:\n codes below:\n codes below:\n codes below:\n codes below:\n codes below:\n codes below:\n codes below:\n codes below:\n codes below:\n codes below:\n codes below:\n codes below:\n codes below:\n codes below:\n codes below:\n codes below:\n codes below:\n codes below:\n codes below:\n codes below:\n codes below:\n codes below:\n codes below:\n codes below:\n codes below:\n codes below:\n codes below:\n codes below:\n codes below:\n codes below:\n codes below:\n codes below:\n codes below:\n codes below:\n codes below:\n codes below:\n codes below:\n codes below:\n codes below",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 91.14841318130493,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

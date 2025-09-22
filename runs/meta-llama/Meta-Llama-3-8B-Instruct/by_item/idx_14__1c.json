@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_14::1c::meta-llama/Meta-Llama-3-8B-Instruct::seed0",
+  "task_id": "idx_14",
+  "category": "1c",
+  "entry_point": "all_prefixes",
+  "prompt_field": "prompt1c",
+  "prompt_text": "from typing import List\n\n\ndef all_prefixes(string: str) -> List[str]:\n    \"\"\" Return list of all prefixes from shortest to longest of the input string\n    >>> all_prefixes('abc')\n    ['abc', 'ab', 'a']\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List\n\n\ndef all_prefixes(string: str) -> List[str]:\n    \"\"\" Return list of all prefixes from shortest to longest of the input string\n    >>> all_prefixes('abc')\n    ['abc', 'ab', 'a']\n    \"\"\"",
+  "prompt_sha256": "76b00de15ea3dc22981718fbf0cab5ab4749836b90222477bd2ab7af7530355c",
+  "model_name": "meta-llama/Meta-Llama-3-8B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List\n\n\ndef all_prefixes(string: str) -> List[str]:\n    \"\"\" Return list of all prefixes from shortest to longest of the input string\n    >>> all_prefixes('abc')\n    ['abc', 'ab', 'a']\n    \"\"\"\n\n\nThis is a code completion exercise, your task is to create a function called `all_prefixes` which takes a string as an input and returns a list of all possible prefixes of the given string in increasing order of their lengths.\n```\n[Your Code]\n```\n```\n[Your Code]\n```\nNote: The provided unit test suggests that the function should return all prefixes of the input string in increasing order of their lengths.\n```python\nimport unittest\nfrom your_module import all_prefixes\n\nclass TestAllPrefixes(unittest.TestCase):\n    def test_all_prefixes(self):\n        self.assertEqual(all_prefixes('abc'), ['abc', 'ab', 'a'])\n```\nIf you need any clarification, kindly ask. I will be happy to help you understand the problem better. Otherwise, you can directly provide the solution in markdown format with code. ```python\n```\n\nHere is the Python code for the `all_prefixes` function:\n\n```python\nfrom typing import List\n\ndef all_prefixes(string: str) -> List[str]:\n    return [string[i:] for i in range(len(string) + 1)]\n```\n\nThis function uses list comprehension to generate all possible prefixes of the input string. The outer loop `range(len(string) + ",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "[Your Code]",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 67.16692304611206,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

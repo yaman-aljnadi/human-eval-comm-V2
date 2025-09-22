@@ -1,0 +1,36 @@
+{
+  "record_id": "idx_52::1p::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_52",
+  "category": "1p",
+  "entry_point": "below_threshold",
+  "prompt_field": "prompt1p",
+  "prompt_text": "\n\ndef candidate(l: list, t: int):\n    \"\"\"Return True if all numbers in the list l are below.\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(l: list, t: int):\n    \"\"\"Return True if all numbers in the list l are below.\n    \"\"\"",
+  "prompt_sha256": "b4f6bb326cb3dd9587a4a1c7418cd1f5de48f4e85438082120b42986440e8839",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "Can you please clarify what \"below\" means in this context? For example, do you want to check if all numbers are below a specific value, or if they are below each other in some order?",
+  "gen_raw": {},
+  "contains_code": false,
+  "code_detected_method": "none",
+  "extracted_code": null,
+  "is_question": true,
+  "extracted_questions": [
+    "Can you please clarify what \"below\" means in this context?",
+    "For example, do you want to check if all numbers are below a specific value, or if they are below each other in some order?"
+  ],
+  "question_count": 2,
+  "first_question": "Can you please clarify what \"below\" means in this context?",
+  "question_chars": 181,
+  "latency_sec": 1.0196423530578613,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

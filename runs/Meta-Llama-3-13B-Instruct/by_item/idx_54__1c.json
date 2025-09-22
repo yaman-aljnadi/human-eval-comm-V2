@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_54::1c::andrijdavid/Meta-Llama-3-13B-Instruct::seed0",
+  "task_id": "idx_54",
+  "category": "1c",
+  "entry_point": "same_chars",
+  "prompt_field": "prompt1c",
+  "prompt_text": "\n\ndef same_chars(s0: str, s1: str):\n    \"\"\"\n    Check if two words have the same characters.\n    >>> same_chars('eabcdzzzz', 'dddzzzzzzzddeddabc')\n    False\n    >>> same_chars('abcd', 'dddddddabc')\n    False\n    >>> same_chars('dddddddabc', 'abcd')\n    False\n    >>> same_chars('eabcd', 'dddddddabc')\n    True\n    >>> same_chars('abcd', 'dddddddabce')\n    True\n    >>> same_chars('eabcdzzzz', 'dddzzzzzzzddddabc')\n    True\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef same_chars(s0: str, s1: str):\n    \"\"\"\n    Check if two words have the same characters.\n    >>> same_chars('eabcdzzzz', 'dddzzzzzzzddeddabc')\n    False\n    >>> same_chars('abcd', 'dddddddabc')\n    False\n    >>> same_chars('dddddddabc', 'abcd')\n    False\n    >>> same_chars('eabcd', 'dddddddabc')\n    True\n    >>> same_chars('abcd', 'dddddddabce')\n    True\n    >>> same_chars('eabcdzzzz', 'dddzzzzzzzddddabc')\n    True\n    \"\"\"",
+  "prompt_sha256": "08df24a3365f98c03c1e6d9e2d805f0c1c077c745cdfb678dd28a0e62f7de6d7",
+  "model_name": "andrijdavid/Meta-Llama-3-13B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef same_chars(s0: str, s1: str):\n    \"\"\"\n    Check if two words have the same characters.\n    >>> same_chars('eabcdzzzz', 'dddzzzzzzzddeddabc')\n    False\n    >>> same_chars('abcd', 'dddddddabc')\n    False\n    >>> same_chars('dddddddabc', 'abcd')\n    False\n    >>> same_chars('eabcd', 'dddddddabc')\n    True\n    >>> same_chars('abcd', 'dddddddabce')\n    True\n    >>> same_chars('eabcdzzzz', 'dddzzzzzzzddddabc')\n    True\n    \"\"\"\n\n\n\nPlease note that s0 and s1 may contain spaces or other non-English characters besides letters A-Z or letters like 'A-Za' oráč'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def same_chars(s0: str, s1: str):\n    \"\"\"\n    Check if two words have the same characters.\n    >>> same_chars('eabcdzzzz', 'dddzzzzzzzddeddabc')\n    False\n    >>> same_chars('abcd', 'dddddddabc')\n    False\n    >>> same_chars('dddddddabc', 'abcd')\n    False\n    >>> same_chars('eabcd', 'dddddddabc')\n    True\n    >>> same_chars('abcd', 'dddddddabce')\n    True\n    >>> same_chars('eabcdzzzz', 'dddzzzzzzzddddabc')\n    True\n    \"\"\"\n\n\n\nPlease note that s0 and s1 may contain spaces or other non-English characters besides letters A-Z or letters like 'A-Za' oráč'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'-'",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 110.19289588928223,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_57::1p::andrijdavid/Meta-Llama-3-13B-Instruct::seed0",
+  "task_id": "idx_57",
+  "category": "1p",
+  "entry_point": "monotonic",
+  "prompt_field": "prompt1p",
+  "prompt_text": "\n\ndef candidate(l: list):\n    \"\"\"\n    >>> candidate([1, 2, 4, 20])\n    True\n    >>> candidate([1, 20, 4, 10])\n    False\n    >>> candidate([4, 1, 0, -10])\n    True\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(l: list):\n    \"\"\"\n    >>> candidate([1, 2, 4, 20])\n    True\n    >>> candidate([1, 20, 4, 10])\n    False\n    >>> candidate([4, 1, 0, -10])\n    True\n    \"\"\"",
+  "prompt_sha256": "6be54dbb8e136fd819aca6880a01c7c11b053fe2a1b90f61386dd34b375a82e5",
+  "model_name": "andrijdavid/Meta-Llama-3-13B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(l: list):\n    \"\"\"\n    >>> candidate([1, 2, 4, 20])\n    True\n    >>> candidate([1, 20, 4, 10])\n    False\n    >>> candidate([4, 1, 0, -10])\n    True\n    \"\"\"\n\n\nPlease provide a Python3 code that prints True or False based on the inputted list.\n\n(codechef.com problem link: https://www codechef.com problemLink/ \"2020年07月31日 problem_link https://www code Chef.com problem link https://www code Chef.com problem link https://www code Chef.com problem link=https://www codechefs.com problem link https://www codechefs.com problem link https://www codechefs.com problem link=https://www codechefs.com problem linkhttps://www codechefs.com problem link=https://www codechefs.com problem linkhttps://www codechefs.com problem linkhttps://www codechefs.com problem linkhttps://www codechefs.com problem linkhttps://www codechefs.com problem linkhttps://www codechefs.com problem linkhttps://www codechefs.com problem linkhttps://www codechefs.com problem linkhttps://www codechefs.com problem linkhttps://www codechefs.com problem linkhttps://www codechefs.com problem link=https://www codechefs.com problem link=https://www codechefs.com problem linkhttps://www codechefs.com problem link=https://www codechefs.com problem link=https://www codechefs.com problem",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def candidate(l: list):\n    \"\"\"\n    >>> candidate([1, 2, 4, 20])\n    True\n    >>> candidate([1, 20, 4, 10])\n    False\n    >>> candidate([4, 1, 0, -10])\n    True\n    \"\"\"\n\n\nPlease provide a Python3 code that prints True or False based on the inputted list.\n\n(codechef.com problem link: https://www codechef.com problemLink/ \"2020年07月31日 problem_link https://www code Chef.com problem link https://www code Chef.com problem link https://www code Chef.com problem link=https://www codechefs.com problem link https://www codechefs.com problem link https://www codechefs.com problem link=https://www codechefs.com problem linkhttps://www codechefs.com problem link=https://www codechefs.com problem linkhttps://www codechefs.com problem linkhttps://www codechefs.com problem linkhttps://www codechefs.com problem linkhttps://www codechefs.com problem linkhttps://www codechefs.com problem linkhttps://www codechefs.com problem linkhttps://www codechefs.com problem linkhttps://www codechefs.com problem linkhttps://www codechefs.com problem linkhttps://www codechefs.com problem link=https://www codechefs.com problem link=https://www codechefs.com problem linkhttps://www codechefs.com problem link=https://www codechefs.com problem link=https://www codechefs.com problem",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 91.15598201751709,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

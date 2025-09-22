@@ -1,0 +1,41 @@
+{
+  "record_id": "idx_34::1p::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_34",
+  "category": "1p",
+  "entry_point": "unique",
+  "prompt_field": "prompt1p",
+  "prompt_text": "\n\ndef candidate(l: list):\n    \"\"\"Return elements in a list\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(l: list):\n    \"\"\"Return elements in a list\n    \"\"\"",
+  "prompt_sha256": "5c2a3a0789db930b381e247b28f46067c9f690e27920e134a7051a1e302e6cbe",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "What is the exact criteria for returning elements from the list `l`?\n\nFor example, are you looking for:\n*   All elements?\n*   Elements that meet a specific condition (e.g., all even numbers, all strings of a certain length)?\n*   A subset of elements based on indexing or slicing?\n*   Unique elements?\n*   Elements that appear more than once?",
+  "gen_raw": {},
+  "contains_code": false,
+  "code_detected_method": "none",
+  "extracted_code": null,
+  "is_question": true,
+  "extracted_questions": [
+    "What is the exact criteria for returning elements from the list `l`?",
+    "For example, are you looking for:\n*   All elements?",
+    "*   Elements that meet a specific condition (e.g., all even numbers, all strings of a certain length)?",
+    "*   A subset of elements based on indexing or slicing?",
+    "*   Unique elements?",
+    "*   Elements that appear more than once?",
+    ", all even numbers, all strings of a certain length)?"
+  ],
+  "question_count": 7,
+  "first_question": "What is the exact criteria for returning elements from the list `l`?",
+  "question_chars": 388,
+  "latency_sec": 0.8662087917327881,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

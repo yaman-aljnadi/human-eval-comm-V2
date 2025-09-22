@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_59::2ac::andrijdavid/Meta-Llama-3-13B-Instruct::seed0",
+  "task_id": "idx_59",
+  "category": "2ac",
+  "entry_point": "largest_prime_factor",
+  "prompt_field": "prompt2ac",
+  "prompt_text": "\n\ndef candidate(n: int):\n    \"\"\"Return the smallest or largest prime factor of n. Assume n > 1 and is not a prime.\n    >>> candidate(13195)\n    5\n    >>> candidate(2048)\n    2\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(n: int):\n    \"\"\"Return the smallest or largest prime factor of n. Assume n > 1 and is not a prime.\n    >>> candidate(13195)\n    5\n    >>> candidate(2048)\n    2\n    \"\"\"",
+  "prompt_sha256": "1b9df3bd729929a4a621e2a38fadc5847f8f3f2aa9f5c7633b7d85345a51b106",
+  "model_name": "andrijdavid/Meta-Llama-3-13B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(n: int):\n    \"\"\"Return the smallest or largest prime factor of n. Assume n > 1 and is not a prime.\n    >>> candidate(13195)\n    5\n    >>> candidate(2048)\n    2\n    \"\"\"\n\n\n\nplease give me the codeblock or provide further details if you need more information \nacíefaclarify\n```python\ndef candidate(n: int):\n    factors = set()\n    factors_adder = factors addCriterionλ=lambda x: x if x >1 else factors_adder(x %prime factors_adderPrime factors_adderprime factors_adderprime factors_adder prime factors_adderprime factors_adderprime factors_adder prime factors_adder prime factors_adder prime factors_adderprime factors_adder prime factors_adderprime factors_adder prime factors_adderprime factors_adderprime factors_adder prime factors_adder prime factors_adder prime factors_adder prime factors_adder prime factors_adder prime factors_adder prime factors_adder prime factors adder prime factors adder prime factors adder prime factors adder prime factors adder prime factors adder prime factors adder prime factors prime factors adder prime factors adder prime factors adder prime factors prime factors adder prime factors prime factors prime factors prime factors prime factors prime factors prime factors prime factors prime factors prime factors prime factors prime factors prime factors prime factors prime factors prime factors prime factors prime factors prime factors prime factors prime factors prime factors prime factors prime factors prime factors prime factors prime factors prime factors prime factors",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def candidate(n: int):\n    \"\"\"Return the smallest or largest prime factor of n. Assume n > 1 and is not a prime.\n    >>> candidate(13195)\n    5\n    >>> candidate(2048)\n    2\n    \"\"\"\n\n\n\nplease give me the codeblock or provide further details if you need more information \nacíefaclarify\n```python\ndef candidate(n: int):\n    factors = set()\n    factors_adder = factors addCriterionλ=lambda x: x if x >1 else factors_adder(x %prime factors_adderPrime factors_adderprime factors_adderprime factors_adder prime factors_adderprime factors_adderprime factors_adder prime factors_adder prime factors_adder prime factors_adderprime factors_adder prime factors_adderprime factors_adder prime factors_adderprime factors_adderprime factors_adder prime factors_adder prime factors_adder prime factors_adder prime factors_adder prime factors_adder prime factors_adder prime factors_adder prime factors adder prime factors adder prime factors adder prime factors adder prime factors adder prime factors adder prime factors adder prime factors prime factors adder prime factors adder prime factors adder prime factors prime factors adder prime factors prime factors prime factors prime factors prime factors prime factors prime factors prime factors prime factors prime factors prime factors prime factors prime factors prime factors prime factors prime factors prime factors prime factors prime factors prime factors prime factors prime factors prime factors prime factors prime factors prime factors prime factors prime factors prime factors",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 90.6356201171875,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

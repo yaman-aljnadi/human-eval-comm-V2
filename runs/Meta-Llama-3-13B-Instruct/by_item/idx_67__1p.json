@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_67::1p::andrijdavid/Meta-Llama-3-13B-Instruct::seed0",
+  "task_id": "idx_67",
+  "category": "1p",
+  "entry_point": "fruit_distribution",
+  "prompt_field": "prompt1p",
+  "prompt_text": "\ndef fruit_distribution(s,n):\n    \"\"\"\n    In this task, you will be given a string that represents a number of apples and oranges \n    that are distributed in a basket of fruit this basket contains \n    apples, oranges, and mango fruits. Given the string that represents the total number of \n    the oranges and apples and an integer that represent the total number of the fruits \n    in the basket return the number\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef fruit_distribution(s,n):\n    \"\"\"\n    In this task, you will be given a string that represents a number of apples and oranges \n    that are distributed in a basket of fruit this basket contains \n    apples, oranges, and mango fruits. Given the string that represents the total number of \n    the oranges and apples and an integer that represent the total number of the fruits \n    in the basket return the number\n    \"\"\"",
+  "prompt_sha256": "ad3832d614d77d7a30d1afef162a4d205a76bc64bb9abfc9504848f8bbe4b920",
+  "model_name": "andrijdavid/Meta-Llama-3-13B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef fruit_distribution(s,n):\n    \"\"\"\n    In this task, you will be given a string that represents a number of apples and oranges \n    that are distributed in a basket of fruit this basket contains \n    apples, oranges, and mango fruits. Given the string that represents the total number of \n    the oranges and apples and an integer that represent the total number of the fruits \n    in the basket return the number\n    \"\"\"orumination\nruzultats_nortats_nortats_nortats_nortats_nortats_nortats_nortats_nortats_nortats_nortats nortats_nortats nortats nortats nortats nortats nortats nortats nortats nortats nortats nortats nortats nortats nortats nortats nortats nortats nortats nortats nortats nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort n",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def fruit_distribution(s,n):\n    \"\"\"\n    In this task, you will be given a string that represents a number of apples and oranges \n    that are distributed in a basket of fruit this basket contains \n    apples, oranges, and mango fruits. Given the string that represents the total number of \n    the oranges and apples and an integer that represent the total number of the fruits \n    in the basket return the number\n    \"\"\"orumination\nruzultats_nortats_nortats_nortats_nortats_nortats_nortats_nortats_nortats_nortats_nortats nortats_nortats nortats nortats nortats nortats nortats nortats nortats nortats nortats nortats nortats nortats nortats nortats nortats nortats nortats nortats nortats nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort nort n",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 93.01728391647339,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_95::1p::andrijdavid/Meta-Llama-3-13B-Instruct::seed0",
+  "task_id": "idx_95",
+  "category": "1p",
+  "entry_point": "check_dict_case",
+  "prompt_field": "prompt1p",
+  "prompt_text": "\ndef check_dict_case(dict):\n    \"\"\"\n    Given a dictionary, return True if all keys are strings in lower \n    case or all keys are strings in.\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef check_dict_case(dict):\n    \"\"\"\n    Given a dictionary, return True if all keys are strings in lower \n    case or all keys are strings in.\n    \"\"\"",
+  "prompt_sha256": "25707e577aafeab675cca0034db5acbbadbc4635b8cd88714351876ab91c9c53",
+  "model_name": "andrijdavid/Meta-Llama-3-13B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef check_dict_case(dict):\n    \"\"\"\n    Given a dictionary, return True if all keys are strings in lower \n    case or all keys are strings in.\n    \"\"\"issyuezuezuezuezuezuezuezuezuezuezuezuezuezuezuezuezuezuezuez Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def check_dict_case(dict):\n    \"\"\"\n    Given a dictionary, return True if all keys are strings in lower \n    case or all keys are strings in.\n    \"\"\"issyuezuezuezuezuezuezuezuezuezuezuezuezuezuezuezuezuezuezuez Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua Joshua",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 110.1580913066864,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

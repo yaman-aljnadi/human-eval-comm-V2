@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_124::1p::meta-llama/Meta-Llama-3-8B-Instruct::seed0",
+  "task_id": "idx_124",
+  "category": "1p",
+  "entry_point": "valid_date",
+  "prompt_field": "prompt1p",
+  "prompt_text": "\ndef valid_date(date):\n    \"\"\"You have to write a function which validates a given date string and\n    returns True if the date is valid otherwise False.\n    The date is valid if all of the following rules are satisfied:\n    1.\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef valid_date(date):\n    \"\"\"You have to write a function which validates a given date string and\n    returns True if the date is valid otherwise False.\n    The date is valid if all of the following rules are satisfied:\n    1.\n    \"\"\"",
+  "prompt_sha256": "ffbcc39fa02eb502b12b4a020e7fa0ec8a7d20c0e3a1e12d4de7403a1b61407e",
+  "model_name": "meta-llama/Meta-Llama-3-8B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef valid_date(date):\n    \"\"\"You have to write a function which validates a given date string and\n    returns True if the date is valid otherwise False.\n    The date is valid if all of the following rules are satisfied:\n    1.\n    \"\"\"\n\n\n\n**Example Input/Output:**\n\n| Date | Validity | Reason for Invalidity |\n|------|-----------|------------------------|\n| \"2020-01-31\" | False | Date of January has 31 days |\n| \"2017-12-25\" | True | Date is valid |\n| \"2019-05-32\" | False | Day is not within range (1-30) |\n\n\n\n**Clarification:**\nYour function should consider that each month has a specific number of days.\nThe input will always be in the format YYYY-MM-DD. The given code should always parse the date correctly, and only consider the rules for January and March, the other months follow the traditional calendar.\nIf any of the given conditions are not satisfied, the function will return False, else it will return True.\n\n# Your code here\n\n\n\n## [Your Answer](#)\n##python\ndef valid_date(date):\n  year, month, day = map(int, date.split(\"-\"))\n  if month in (1, 3, 5, 7, 8, 10, 12):\n    if day > 31:\n      return False\n  elif month in (4, 6, 9, 11):\n    if",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def valid_date(date):\n    \"\"\"You have to write a function which validates a given date string and\n    returns True if the date is valid otherwise False.\n    The date is valid if all of the following rules are satisfied:\n    1.\n    \"\"\"\n\n\n\n**Example Input/Output:**\n\n| Date | Validity | Reason for Invalidity |\n|------|-----------|------------------------|\n| \"2020-01-31\" | False | Date of January has 31 days |\n| \"2017-12-25\" | True | Date is valid |\n| \"2019-05-32\" | False | Day is not within range (1-30) |\n\n\n\n**Clarification:**\nYour function should consider that each month has a specific number of days.\nThe input will always be in the format YYYY-MM-DD. The given code should always parse the date correctly, and only consider the rules for January and March, the other months follow the traditional calendar.\nIf any of the given conditions are not satisfied, the function will return False, else it will return True.\n\n# Your code here\n\n\n\n## [Your Answer](#)\n##python\ndef valid_date(date):\n  year, month, day = map(int, date.split(\"-\"))\n  if month in (1, 3, 5, 7, 8, 10, 12):\n    if day > 31:\n      return False\n  elif month in (4, 6, 9, 11):\n    if",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 67.99644804000854,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_87::1c::meta-llama/Meta-Llama-3-8B-Instruct::seed0",
+  "task_id": "idx_87",
+  "category": "1c",
+  "entry_point": "get_row",
+  "prompt_field": "prompt1c",
+  "prompt_text": "\ndef get_row(lst, x):\n    \"\"\"\n    You are given a 2 dimensional data, as a nested lists,\n    which is similar to matrix, however, unlike matrices,\n    each row may contain a different number of columns.\n    Given lst, and integer x, find integers x in the list,\n    and return list of tuples, [(x1, y1), (x2, y2) ...] such that\n    each tuple is a coordinate - (row, columns), starting with 0.\n    Sort coordinates initially by rows in ascending order.\n    Also, sort coordinates of the row by columns in descending order.\n    \n    Examples:\n    get_row([\n      [1,2,3,4,5,6],\n      [1,2,3,4,1,6],\n      [1,2,3,4,5,1]\n    ], 1) == [(2, 2)]\n    get_row([], 1) == [(2, 2)]\n    get_row([[], [1], [1, 2, 3]], 3) == []\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef get_row(lst, x):\n    \"\"\"\n    You are given a 2 dimensional data, as a nested lists,\n    which is similar to matrix, however, unlike matrices,\n    each row may contain a different number of columns.\n    Given lst, and integer x, find integers x in the list,\n    and return list of tuples, [(x1, y1), (x2, y2) ...] such that\n    each tuple is a coordinate - (row, columns), starting with 0.\n    Sort coordinates initially by rows in ascending order.\n    Also, sort coordinates of the row by columns in descending order.\n    \n    Examples:\n    get_row([\n      [1,2,3,4,5,6],\n      [1,2,3,4,1,6],\n      [1,2,3,4,5,1]\n    ], 1) == [(2, 2)]\n    get_row([], 1) == [(2, 2)]\n    get_row([[], [1], [1, 2, 3]], 3) == []\n    \"\"\"",
+  "prompt_sha256": "b6897a1ab6037433f8189feeca2d85ed9e5975edad97b42f845d8884c4471c24",
+  "model_name": "meta-llama/Meta-Llama-3-8B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef get_row(lst, x):\n    \"\"\"\n    You are given a 2 dimensional data, as a nested lists,\n    which is similar to matrix, however, unlike matrices,\n    each row may contain a different number of columns.\n    Given lst, and integer x, find integers x in the list,\n    and return list of tuples, [(x1, y1), (x2, y2) ...] such that\n    each tuple is a coordinate - (row, columns), starting with 0.\n    Sort coordinates initially by rows in ascending order.\n    Also, sort coordinates of the row by columns in descending order.\n    \n    Examples:\n    get_row([\n      [1,2,3,4,5,6],\n      [1,2,3,4,1,6],\n      [1,2,3,4,5,1]\n    ], 1) == [(2, 2)]\n    get_row([], 1) == [(2, 2)]\n    get_row([[], [1], [1, 2, 3]], 3) == []\n    \"\"\"\n\n\n# code here\n\n## Reply code only below this line\n```python\ndef get_row(lst, x):\n    result = []\n    for i, row in enumerate(sorted(((i, r) for i, r in enumerate(lst) if x in r), key=lambda x: (x[0], len(x[1])-len(sorted(x[1], reverse=True)) for _ in range(len(x[1]))))):\n        for j, val in enumerate(sorted(((j, val) for j, val in enumerate(row) if val == x), reverse=True)):\n            result.append((i, j))\n    return result\n```  # code ends here\n```  # code ends here\n```\n\n1. How to sort the inner lists of the main list based on their length in descending order and the elements of the inner lists based on their values in descending order?\n2. How to find the first occurrence of a given integer in a list and return its corresponding row and column indexes? \n3. How to sort the coordinates initially by rows in ascending order and also, sort coordinates of the row by columns in descending order? \n\nI have tried using sorted() function in combination with lambda function to achieve the results but I am facing difficulty in implementing these concepts correctly",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def get_row(lst, x):\n    result = []\n    for i, row in enumerate(sorted(((i, r) for i, r in enumerate(lst) if x in r), key=lambda x: (x[0], len(x[1])-len(sorted(x[1], reverse=True)) for _ in range(len(x[1]))))):\n        for j, val in enumerate(sorted(((j, val) for j, val in enumerate(row) if val == x), reverse=True)):\n            result.append((i, j))\n    return result",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 69.5864326953888,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

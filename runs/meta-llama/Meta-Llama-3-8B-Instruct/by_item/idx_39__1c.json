@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_39::1c::meta-llama/Meta-Llama-3-8B-Instruct::seed0",
+  "task_id": "idx_39",
+  "category": "1c",
+  "entry_point": "prime_fib",
+  "prompt_field": "prompt1c",
+  "prompt_text": "\n\ndef prime_fib(n: int):\n    \"\"\"\n    prime_fib returns n-th number that is a Fibonacci number and it's also prime.\n    >>> prime_fib(1)\n    20\n    >>> prime_fib(2)\n    30\n    >>> prime_fib(3)\n    50\n    >>> prime_fib(4)\n    130\n    >>> prime_fib(5)\n    890\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef prime_fib(n: int):\n    \"\"\"\n    prime_fib returns n-th number that is a Fibonacci number and it's also prime.\n    >>> prime_fib(1)\n    20\n    >>> prime_fib(2)\n    30\n    >>> prime_fib(3)\n    50\n    >>> prime_fib(4)\n    130\n    >>> prime_fib(5)\n    890\n    \"\"\"",
+  "prompt_sha256": "b85f31d1499bb85a077e068a3df3c3e34db693fbbe7af1edc24ec43c102b01af",
+  "model_name": "meta-llama/Meta-Llama-3-8B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef prime_fib(n: int):\n    \"\"\"\n    prime_fib returns n-th number that is a Fibonacci number and it's also prime.\n    >>> prime_fib(1)\n    20\n    >>> prime_fib(2)\n    30\n    >>> prime_fib(3)\n    50\n    >>> prime_fib(4)\n    130\n    >>> prime_fib(5)\n    890\n    \"\"\"\n\n\n\n\n\nHere is a Python solution using a generator to generate Fibonacci numbers and a helper function to check if a number is prime:\n\n```\ndef is_prime(n):\n    if n <= 1:\n        return False\n    if n == 2:\n        return True\n    if n % 2 == 0:\n        return False\n    i = 3\n    while i * i <= n:\n        if n % i == 0:\n            return False\n        i += 2\n    return True\n\ndef prime_fib(n):\n    a, b = 0, 1\n    i = 0\n    while True:\n        i += 1\n        a, b = b, a + b\n        if is_prime(b) and i == n:\n            return b\n```\n\n\n\n\n\nPlease let me know if this is what you were looking for!",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def is_prime(n):\n    if n <= 1:\n        return False\n    if n == 2:\n        return True\n    if n % 2 == 0:\n        return False\n    i = 3\n    while i * i <= n:\n        if n % i == 0:\n            return False\n        i += 2\n    return True\n\ndef prime_fib(n):\n    a, b = 0, 1\n    i = 0\n    while True:\n        i += 1\n        a, b = b, a + b\n        if is_prime(b) and i == n:\n            return b",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 47.361305713653564,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

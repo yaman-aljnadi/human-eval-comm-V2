@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_151::1a::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_151",
+  "category": "1a",
+  "entry_point": "double_the_difference",
+  "prompt_field": "prompt1a",
+  "prompt_text": "\ndef double_the_difference(lst):\n    '''\n    Given a list of numbers, return the sum of squares of the numbers\n    in the list that are even or odd. Ignore numbers that are negative or not integers.\n    \n    double_the_difference([1, 3, 2, 0]) == 1 + 9 + 0 + 0 = 10\n    double_the_difference([-1, -2, 0]) == 0\n    double_the_difference([9, -2]) == 81\n    double_the_difference([0]) == 0  \n   \n    If the input list is empty, return 0.\n    '''\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef double_the_difference(lst):\n    '''\n    Given a list of numbers, return the sum of squares of the numbers\n    in the list that are even or odd. Ignore numbers that are negative or not integers.\n    \n    double_the_difference([1, 3, 2, 0]) == 1 + 9 + 0 + 0 = 10\n    double_the_difference([-1, -2, 0]) == 0\n    double_the_difference([9, -2]) == 81\n    double_the_difference([0]) == 0  \n   \n    If the input list is empty, return 0.\n    '''",
+  "prompt_sha256": "78fbab8a01d8792a55cdfe82bf65b38920a70b2399063bd37618d3d91e7d6250",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "I'm ready to generate the Python3 code for the `double_the_difference` function.\n\nI have reviewed the docstring and examples and believe I understand the requirements. Here's a quick summary to confirm:\n\n*   **Input:** A list of numbers (`lst`).\n*   **Output:** An integer representing the sum of squares.\n*   **Processing:**\n    *   Iterate through each element in the list.\n    *   For each element:\n        *   Check if it's a non-negative integer.\n        *   If it is, check if it's even or odd.\n        *   If it's even or odd (and non-negative integer), square it and add it to a running sum.\n    *   Ignore negative numbers and non-integers.\n    *   If the input list is empty, return 0.\n\nThe examples seem to imply that \"even or odd\" is a redundant condition for integers, as all integers are either even or odd. The core filtering is for \"non-negative\" and \"integer\".\n\nLet me know if there are any nuances I've missed or if you'd like any specific edge cases considered. Otherwise",
+  "gen_raw": {},
+  "contains_code": false,
+  "code_detected_method": "none",
+  "extracted_code": null,
+  "is_question": true,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 2.6281635761260986,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

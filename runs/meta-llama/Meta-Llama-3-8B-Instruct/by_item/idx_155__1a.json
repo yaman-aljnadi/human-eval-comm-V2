@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_155::1a::meta-llama/Meta-Llama-3-8B-Instruct::seed0",
+  "task_id": "idx_155",
+  "category": "1a",
+  "entry_point": "even_odd_count",
+  "prompt_field": "prompt1a",
+  "prompt_text": "\ndef candidate(num):\n    \"\"\"Given an integer. return a tuple that has the number of odd or even digits, and odd or even digits, respectively.\n\n     Example:\n        candidate(-12) ==> (1, 1)\n        candidate(123) ==> (1, 2)\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(num):\n    \"\"\"Given an integer. return a tuple that has the number of odd or even digits, and odd or even digits, respectively.\n\n     Example:\n        candidate(-12) ==> (1, 1)\n        candidate(123) ==> (1, 2)\n    \"\"\"",
+  "prompt_sha256": "55d8a37551bf04ac3098f8f3565ebbe51fa953178d985b473933cd5d220fea1f",
+  "model_name": "meta-llama/Meta-Llama-3-8B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(num):\n    \"\"\"Given an integer. return a tuple that has the number of odd or even digits, and odd or even digits, respectively.\n\n     Example:\n        candidate(-12) ==> (1, 1)\n        candidate(123) ==> (1, 2)\n    \"\"\"\n\n\n| Code | \n|---------|\n```python\ndef candidate(num):\n    odd, even = 0, 0\n    for digit in str(abs(num)):\n        if int(digit) % 2 == 0:\n            even += 1\n        else:\n            odd += 1\n    return (odd, even)\n``` | \n```python\ndef candidate(num):\n    odd, even = 0, 0\n    for digit in str(abs(num)):\n        digit = int(digit)\n        if digit % 2 == 0:\n            even += 1\n        else:\n            odd += 1\n    return (odd, even)\n``` | ```python\ndef candidate(num):\n    odd, even = 0, 0\n    for digit in str(abs(num)):\n        digit = int(digit)\n        if digit % 2 == 0:\n            even += 1\n        else:\n            odd += 1\n    return tuple((odd, even))\n``` | \n```python\ndef candidate(num):\n    odd, even = 0, 0\n    num = str(abs(num))\n    for digit in num:\n        digit = int(digit)\n        if digit % 2 == 0:\n",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def candidate(num):\n    odd, even = 0, 0\n    for digit in str(abs(num)):\n        if int(digit) % 2 == 0:\n            even += 1\n        else:\n            odd += 1\n    return (odd, even)",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 48.5778968334198,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

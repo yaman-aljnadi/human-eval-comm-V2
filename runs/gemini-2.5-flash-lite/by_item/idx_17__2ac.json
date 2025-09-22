@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_17::2ac::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_17",
+  "category": "2ac",
+  "entry_point": "parse_music",
+  "prompt_field": "prompt2ac",
+  "prompt_text": "from typing import List\n\n\ndef parse_music(music_string: str) -> List[int]:\n    \"\"\" Input to this function is a string representing musical notes in a special ASCII format.\n    Your task is to parse this string and return list of integers corresponding to how many beats does each\n    not last.\n\n    Here is a legend:\n    'o' - whole note, lasts A beats\n    'o|' - half note, lasts B beats\n    '.|' - quater note, lasts C beat\n\n    >>> parse_music('o o| .| o| o| .| .| .| .| o o')\n    [1, 4, 2, 4, 4, 2, 2, 2, 2, 1, 1]\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List\n\n\ndef parse_music(music_string: str) -> List[int]:\n    \"\"\" Input to this function is a string representing musical notes in a special ASCII format.\n    Your task is to parse this string and return list of integers corresponding to how many beats does each\n    not last.\n\n    Here is a legend:\n    'o' - whole note, lasts A beats\n    'o|' - half note, lasts B beats\n    '.|' - quater note, lasts C beat\n\n    >>> parse_music('o o| .| o| o| .| .| .| .| o o')\n    [1, 4, 2, 4, 4, 2, 2, 2, 2, 1, 1]\n    \"\"\"",
+  "prompt_sha256": "2509bdb7f32af98e35796fe28a3ad61890db5c93b48101abea2cdae1dcb10118",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\nfrom typing import List\n\n\ndef parse_music(music_string: str) -> List[int]:\n    \"\"\" Input to this function is a string representing musical notes in a special ASCII format.\n    Your task is to parse this string and return list of integers corresponding to how many beats does each\n    not last.\n\n    Here is a legend:\n    'o' - whole note, lasts A beats\n    'o|' - half note, lasts B beats\n    '.|' - quater note, lasts C beat\n\n    >>> parse_music('o o| .| o| o| .| .| .| .| o o')\n    [1, 4, 2, 4, 4, 2, 2, 2, 2, 1, 1]\n    \"\"\"\n    # Based on the example, we can infer the beat durations:\n    # 'o' corresponds to 1 beat (e.g., the first 'o' and the last two 'o's)\n    # 'o|' corresponds to 4 beats (e.g., the first 'o|' and the subsequent ones)\n    # '.",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def parse_music(music_string: str) -> List[int]:\n    \"\"\" Input to this function is a string representing musical notes in a special ASCII format.\n    Your task is to parse this string and return list of integers corresponding to how many beats does each\n    not last.\n\n    Here is a legend:\n    'o' - whole note, lasts A beats\n    'o|' - half note, lasts B beats\n    '.|' - quater note, lasts C beat\n\n    >>> parse_music('o o| .| o| o| .| .| .| .| o o')\n    [1, 4, 2, 4, 4, 2, 2, 2, 2, 1, 1]\n    \"\"\"\n    # Based on the example, we can infer the beat durations:\n    # 'o' corresponds to 1 beat (e.g., the first 'o' and the last two 'o's)\n    # 'o|' corresponds to 4 beats (e.g., the first 'o|' and the subsequent ones)\n    # '.",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 1.6329660415649414,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

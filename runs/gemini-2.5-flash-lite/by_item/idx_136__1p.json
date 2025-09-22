@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_136::1p::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_136",
+  "category": "1p",
+  "entry_point": "largest_smallest_integers",
+  "prompt_field": "prompt1p",
+  "prompt_text": "\ndef largest_smallest_integers(lst):\n    '''\n    Create a function that returns a tuple (a, b), where 'a' is\n    the largest of negative integers\n    '''\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef largest_smallest_integers(lst):\n    '''\n    Create a function that returns a tuple (a, b), where 'a' is\n    the largest of negative integers\n    '''",
+  "prompt_sha256": "73d5cd35e78fe9704f157d104ed0a55194deb1c8ceac3b747e91d5b11421ffe3",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef largest_smallest_integers(lst):\n    \"\"\"\n    Create a function that returns a tuple (a, b), where 'a' is\n    the largest of negative integers and 'b' is the smallest of positive integers.\n    If no negative integers are found, 'a' should be None.\n    If no positive integers are found, 'b' should be None.\n\n    Args:\n        lst: A list of integers.\n\n    Returns:\n        A tuple (a, b) where 'a' is the largest negative integer and\n        'b' is the smallest positive integer. Returns (None, None) if\n        no negative or positive integers are found respectively.\n    \"\"\"\n    negatives = [x for x in lst if x < 0]\n    positives = [x for x in lst if x > 0]\n\n    largest_negative = max(negatives) if negatives else None\n    smallest_positive = min(positives) if positives else None\n\n    return (largest_negative, smallest_positive)\n```",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def largest_smallest_integers(lst):\n    \"\"\"\n    Create a function that returns a tuple (a, b), where 'a' is\n    the largest of negative integers and 'b' is the smallest of positive integers.\n    If no negative integers are found, 'a' should be None.\n    If no positive integers are found, 'b' should be None.\n\n    Args:\n        lst: A list of integers.\n\n    Returns:\n        A tuple (a, b) where 'a' is the largest negative integer and\n        'b' is the smallest positive integer. Returns (None, None) if\n        no negative or positive integers are found respectively.\n    \"\"\"\n    negatives = [x for x in lst if x < 0]\n    positives = [x for x in lst if x > 0]\n\n    largest_negative = max(negatives) if negatives else None\n    smallest_positive = min(positives) if positives else None\n\n    return (largest_negative, smallest_positive)",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 1.0270452499389648,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

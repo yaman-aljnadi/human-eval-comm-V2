@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_43::2ac::andrijdavid/Meta-Llama-3-13B-Instruct::seed0",
+  "task_id": "idx_43",
+  "category": "2ac",
+  "entry_point": "pairs_sum_to_zero",
+  "prompt_field": "prompt2ac",
+  "prompt_text": "\n\ndef candidate(l):\n    \"\"\"\n    candidate takes a list of integers as an input.\n    it returns True if there are elements in the list that\n    sum to zero, and False otherwise.\n    >>> candidate([1, 3, 5, 0])\n    True\n    >>> candidate([1, 3, -2, 1])\n    True\n    >>> candidate([1, 2, 3, 7])\n    True\n    >>> candidate([2, 4, -5, 3, 5, 7])\n    False\n    >>> candidate([1])\n    True\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(l):\n    \"\"\"\n    candidate takes a list of integers as an input.\n    it returns True if there are elements in the list that\n    sum to zero, and False otherwise.\n    >>> candidate([1, 3, 5, 0])\n    True\n    >>> candidate([1, 3, -2, 1])\n    True\n    >>> candidate([1, 2, 3, 7])\n    True\n    >>> candidate([2, 4, -5, 3, 5, 7])\n    False\n    >>> candidate([1])\n    True\n    \"\"\"",
+  "prompt_sha256": "d506e27dfb36cd2bf316cf0b305e4f6cf42684a2f7a54da5506a3c7d5bf03baf",
+  "model_name": "andrijdavid/Meta-Llama-3-13B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(l):\n    \"\"\"\n    candidate takes a list of integers as an input.\n    it returns True if there are elements in the list that\n    sum to zero, and False otherwise.\n    >>> candidate([1, 3, 5, 0])\n    True\n    >>> candidate([1, 3, -2, 1])\n    True\n    >>> candidate([1, 2, 3, 7])\n    True\n    >>> candidate([2, 4, -5, 3, 5, 7])\n    False\n    >>> candidate([1])\n    True\n    \"\"\"ImageContextually speaking,please assume that the input list contains at least one element]]>Streamerstedullly]]>Stream]]> Stream]]> Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def candidate(l):\n    \"\"\"\n    candidate takes a list of integers as an input.\n    it returns True if there are elements in the list that\n    sum to zero, and False otherwise.\n    >>> candidate([1, 3, 5, 0])\n    True\n    >>> candidate([1, 3, -2, 1])\n    True\n    >>> candidate([1, 2, 3, 7])\n    True\n    >>> candidate([2, 4, -5, 3, 5, 7])\n    False\n    >>> candidate([1])\n    True\n    \"\"\"ImageContextually speaking,please assume that the input list contains at least one element]]>Streamerstedullly]]>Stream]]> Stream]]> Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream Stream",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 163.8873679637909,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_70::1c::andrijdavid/Meta-Llama-3-13B-Instruct::seed0",
+  "task_id": "idx_70",
+  "category": "1c",
+  "entry_point": "strange_sort_list",
+  "prompt_field": "prompt1c",
+  "prompt_text": "\ndef strange_sort_list(lst):\n    '''\n    Given list of integers, return list in strange order.\n    Strange sorting, is when you start with the minimum value,\n    then maximum of the remaining integers, then minimum and so on.\n\n    Examples:\n    strange_sort_list([1, 2, 3, 4]) == [1, 2, 3, 4]\n    strange_sort_list([5, 5, 5, 5]) == [5]\n    strange_sort_list([]) == []\n    '''\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef strange_sort_list(lst):\n    '''\n    Given list of integers, return list in strange order.\n    Strange sorting, is when you start with the minimum value,\n    then maximum of the remaining integers, then minimum and so on.\n\n    Examples:\n    strange_sort_list([1, 2, 3, 4]) == [1, 2, 3, 4]\n    strange_sort_list([5, 5, 5, 5]) == [5]\n    strange_sort_list([]) == []\n    '''",
+  "prompt_sha256": "e0c266887cd922dd5b27e2c41919132d0d4d3c20faaf8ebe1fee477daa9e23ec",
+  "model_name": "andrijdavid/Meta-Llama-3-13B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef strange_sort_list(lst):\n    '''\n    Given list of integers, return list in strange order.\n    Strange sorting, is when you start with the minimum value,\n    then maximum of the remaining integers, then minimum and so on.\n\n    Examples:\n    strange_sort_list([1, 2, 3, 4]) == [1, 2, 3, 4]\n    strange_sort_list([5, 5, 5, 5]) == [5]\n    strange_sort_list([]) == []\n    ''']:\n\n\n### bitteichter answer below 👇️\n import randomiset randomseedrandom.seed random.seed randomseed randomseed randomseed randomseed randomseed randomseed randomseed random seed randomseed randomseed randomseed randomseed randomseed randomseed randomseed randomseed random seed random seed randomseed randomseed randomseed randomseed randomseed randomseed randomseed randomseed randomseed randomseed randomseed randomseed randomseed randomseed randomseed randomseed random seed randomseed randomseed randomseed randomseed randomseed random seed randomseed randomseed randomseed randomseed random seed randomseed randomseed randomseed random seed randomseed random seed randomseed randomseed randomseed randomseed randomseed randomseed randomseed randomseed randomseed random seed randomseed random seed randomseed randomseed randomseed random.seed randomseed randomseed randomseed randomseed randomseed random.seed randomseed randomseed randomseed random seed random seed randomseed random seed randomseed randomseed randomseed randomseed randomseed random seed randomseed randomseed random seed randomseed random seed randomseed random seed random seed randomseed randomseed random seed random seed random seed randomseed random seed randomseed randomseed randomseed random seed randomseed random seed randomseed randomseed randomseed random seed randomseed random seed randomseed random seed randomseed randomseed",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def strange_sort_list(lst):\n    '''\n    Given list of integers, return list in strange order.\n    Strange sorting, is when you start with the minimum value,\n    then maximum of the remaining integers, then minimum and so on.\n\n    Examples:\n    strange_sort_list([1, 2, 3, 4]) == [1, 2, 3, 4]\n    strange_sort_list([5, 5, 5, 5]) == [5]\n    strange_sort_list([]) == []\n    ''']:\n\n\n### bitteichter answer below 👇️\n import randomiset randomseedrandom.seed random.seed randomseed randomseed randomseed randomseed randomseed randomseed randomseed random seed randomseed randomseed randomseed randomseed randomseed randomseed randomseed randomseed random seed random seed randomseed randomseed randomseed randomseed randomseed randomseed randomseed randomseed randomseed randomseed randomseed randomseed randomseed randomseed randomseed randomseed random seed randomseed randomseed randomseed randomseed randomseed random seed randomseed randomseed randomseed randomseed random seed randomseed randomseed randomseed random seed randomseed random seed randomseed randomseed randomseed randomseed randomseed randomseed randomseed randomseed randomseed random seed randomseed random seed randomseed randomseed randomseed random.seed randomseed randomseed randomseed randomseed randomseed random.seed randomseed randomseed randomseed random seed random seed randomseed random seed randomseed randomseed randomseed randomseed randomseed random seed randomseed randomseed random seed randomseed random seed randomseed random seed random seed randomseed randomseed random seed random seed random seed randomseed random seed randomseed randomseed randomseed random seed randomseed random seed randomseed randomseed randomseed random seed randomseed random seed randomseed random seed randomseed randomseed",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 92.44636464118958,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

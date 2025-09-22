@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_31::1a::andrijdavid/Meta-Llama-3-13B-Instruct::seed0",
+  "task_id": "idx_31",
+  "category": "1a",
+  "entry_point": "is_prime",
+  "prompt_field": "prompt1a",
+  "prompt_text": "\n\ndef candidate(n):\n    \"\"\"Return true if a given number is composite or prime, and false otherwise.\n    >>> candidate(6)\n    False\n    >>> candidate(101)\n    True\n    >>> candidate(11)\n    True\n    >>> candidate(13441)\n    True\n    >>> candidate(61)\n    True\n    >>> candidate(4)\n    False\n    >>> candidate(1)\n    False\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(n):\n    \"\"\"Return true if a given number is composite or prime, and false otherwise.\n    >>> candidate(6)\n    False\n    >>> candidate(101)\n    True\n    >>> candidate(11)\n    True\n    >>> candidate(13441)\n    True\n    >>> candidate(61)\n    True\n    >>> candidate(4)\n    False\n    >>> candidate(1)\n    False\n    \"\"\"",
+  "prompt_sha256": "2f3a25c9e09bfb45585adbba09eada0dc79253921f9fa86249a7b554e0902e13",
+  "model_name": "andrijdavid/Meta-Llama-3-13B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(n):\n    \"\"\"Return true if a given number is composite or prime, and false otherwise.\n    >>> candidate(6)\n    False\n    >>> candidate(101)\n    True\n    >>> candidate(11)\n    True\n    >>> candidate(13441)\n    True\n    >>> candidate(61)\n    True\n    >>> candidate(4)\n    False\n    >>> candidate(1)\n    False\n    \"\"\"\n\n\n\n please note that composite numbers are numbers that are not prime numbers themselves neither prime numbers themselves neither themselves prime numbers themselvesprime numbers themselves prime numbers themselves prime numbersprime numbers prime numbers prime numbersprime numbers prime numbersprime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbersprime numbersprime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def candidate(n):\n    \"\"\"Return true if a given number is composite or prime, and false otherwise.\n    >>> candidate(6)\n    False\n    >>> candidate(101)\n    True\n    >>> candidate(11)\n    True\n    >>> candidate(13441)\n    True\n    >>> candidate(61)\n    True\n    >>> candidate(4)\n    False\n    >>> candidate(1)\n    False\n    \"\"\"\n\n\n\n please note that composite numbers are numbers that are not prime numbers themselves neither prime numbers themselves neither themselves prime numbers themselvesprime numbers themselves prime numbers themselves prime numbersprime numbers prime numbers prime numbersprime numbers prime numbersprime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbersprime numbersprime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime numbers prime",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 209.51597094535828,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

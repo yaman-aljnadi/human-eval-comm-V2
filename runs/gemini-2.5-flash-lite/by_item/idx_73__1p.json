@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_73::1p::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_73",
+  "category": "1p",
+  "entry_point": "smallest_change",
+  "prompt_field": "prompt1p",
+  "prompt_text": "\ndef candidate(arr):\n    \"\"\"\n    Given an array arr of integers, find the number of elements that\n    need to be changed to make the array palindromic. A palindromic array is an array that\n    is read the same backwards and forwards. In one change, you can change one element to any other element.\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(arr):\n    \"\"\"\n    Given an array arr of integers, find the number of elements that\n    need to be changed to make the array palindromic. A palindromic array is an array that\n    is read the same backwards and forwards. In one change, you can change one element to any other element.\n    \"\"\"",
+  "prompt_sha256": "8b9431bf1a21af1901c348955389ca90be4f8c6699b071af3104b93080dd476a",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef candidate(arr):\n    \"\"\"\n    Given an array arr of integers, find the number of elements that\n    need to be changed to make the array palindromic. A palindromic array is an array that\n    is read the same backwards and forwards. In one change, you can change one element to any other element.\n    \"\"\"\n    n = len(arr)\n    changes = 0\n    for i in range(n // 2):\n        if arr[i] != arr[n - 1 - i]:\n            changes += 1\n    return changes\n```",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def candidate(arr):\n    \"\"\"\n    Given an array arr of integers, find the number of elements that\n    need to be changed to make the array palindromic. A palindromic array is an array that\n    is read the same backwards and forwards. In one change, you can change one element to any other element.\n    \"\"\"\n    n = len(arr)\n    changes = 0\n    for i in range(n // 2):\n        if arr[i] != arr[n - 1 - i]:\n            changes += 1\n    return changes",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 1.0135374069213867,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_19::1c::meta-llama/Meta-Llama-3-8B-Instruct::seed0",
+  "task_id": "idx_19",
+  "category": "1c",
+  "entry_point": "sort_numbers",
+  "prompt_field": "prompt1c",
+  "prompt_text": "from typing import List\n\n\ndef sort_numbers(numbers: str) -> str:\n    \"\"\" Input is a space-delimited string of numberals from 'zero' to 'nine'.\n    Valid choices are 'zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight' and 'nine'.\n    Return the string with numbers sorted from smallest to largest\n    >>> sort_numbers('three one five')\n    'five three one'\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List\n\n\ndef sort_numbers(numbers: str) -> str:\n    \"\"\" Input is a space-delimited string of numberals from 'zero' to 'nine'.\n    Valid choices are 'zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight' and 'nine'.\n    Return the string with numbers sorted from smallest to largest\n    >>> sort_numbers('three one five')\n    'five three one'\n    \"\"\"",
+  "prompt_sha256": "073395c319f05bb9440da1e68d9adb8299640f0a09e97d83d718800c9655710d",
+  "model_name": "meta-llama/Meta-Llama-3-8B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List\n\n\ndef sort_numbers(numbers: str) -> str:\n    \"\"\" Input is a space-delimited string of numberals from 'zero' to 'nine'.\n    Valid choices are 'zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight' and 'nine'.\n    Return the string with numbers sorted from smallest to largest\n    >>> sort_numbers('three one five')\n    'five three one'\n    \"\"\"\n\n\n\n| 1.  |  |  |  |  |  |  | |  | |  |  | |  |  |  |  | |  | |\n| 2.  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |\n| 3.  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |\n|  | |  | |  |  |  |  | | | |  |  |  |  | |  |\n  |  |  |  |  |  |  |  |  |  |  |  | | | |  | |\n\nHere's a clarifying question: Is the input a string of numbers separated by any character (e.g., space, dash, or comma), or is the string separated by a specific character (e.g., always space)? If it's always space-separated, that simplifies the problem.  |  |  |  |  |  |  |  |  |  |  | ",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def sort_numbers(numbers: str) -> str:\n    \"\"\" Input is a space-delimited string of numberals from 'zero' to 'nine'.\n    Valid choices are 'zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight' and 'nine'.\n    Return the string with numbers sorted from smallest to largest\n    >>> sort_numbers('three one five')\n    'five three one'\n    \"\"\"\n\n\n\n| 1.  |  |  |  |  |  |  | |  | |  |  | |  |  |  |  | |  | |\n| 2.  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |\n| 3.  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |  |\n|  | |  | |  |  |  |  | | | |  |  |  |  | |  |\n  |  |  |  |  |  |  |  |  |  |  |  | | | |  | |\n\nHere's a clarifying question: Is the input a string of numbers separated by any character (e.g., space, dash, or comma), or is the string separated by a specific character (e.g., always space)? If it's always space-separated, that simplifies the problem.  |  |  |  |  |  |  |  |  |  |  |",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 69.98522710800171,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

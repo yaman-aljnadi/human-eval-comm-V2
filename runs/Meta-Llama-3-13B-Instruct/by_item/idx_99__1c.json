@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_99::1c::andrijdavid/Meta-Llama-3-13B-Instruct::seed0",
+  "task_id": "idx_99",
+  "category": "1c",
+  "entry_point": "closest_integer",
+  "prompt_field": "prompt1c",
+  "prompt_text": "\ndef closest_integer(value):\n    '''\n    Create a function that takes a value (string) representing a number\n    and returns the closest integer to it. If the number is equidistant\n    from two integers, round it away from zero.\n\n    Examples\n    >>> closest_integer(\"10\")\n    10\n    >>> closest_integer(\"15.3\")\n    20\n\n    Note:\n    Rounding away from zero means that if the given number is equidistant\n    from two integers, the one you should return is the one that is the\n    farthest from zero. For example closest_integer(\"14.5\") should\n    return 10 and closest_integer(\"-14.5\") should return -10.\n    '''\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef closest_integer(value):\n    '''\n    Create a function that takes a value (string) representing a number\n    and returns the closest integer to it. If the number is equidistant\n    from two integers, round it away from zero.\n\n    Examples\n    >>> closest_integer(\"10\")\n    10\n    >>> closest_integer(\"15.3\")\n    20\n\n    Note:\n    Rounding away from zero means that if the given number is equidistant\n    from two integers, the one you should return is the one that is the\n    farthest from zero. For example closest_integer(\"14.5\") should\n    return 10 and closest_integer(\"-14.5\") should return -10.\n    '''",
+  "prompt_sha256": "b5833ee4aacd998e0d6a1c27bc86ce6fdf06c07042b26ab32b3d85ac61d2cfc0",
+  "model_name": "andrijdavid/Meta-Llama-3-13B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef closest_integer(value):\n    '''\n    Create a function that takes a value (string) representing a number\n    and returns the closest integer to it. If the number is equidistant\n    from two integers, round it away from zero.\n\n    Examples\n    >>> closest_integer(\"10\")\n    10\n    >>> closest_integer(\"15.3\")\n    20\n\n    Note:\n    Rounding away from zero means that if the given number is equidistant\n    from two integers, the one you should return is the one that is the\n    farthest from zero. For example closest_integer(\"14.5\") should\n    return 10 and closest_integer(\"-14.5\") should return -10.\n    '''\n\n\n\nPlease note that round() function inbuilt in python3 Round Away from Zero means if the given number is equidistant from two integers return the one that is the farthest away from zero means if the given number is equidistant from two integers return the one that is the farthest away from zero means if the given number is equidistant from two integers return the one that is the farthest away from zero means if you are given a number like 14.5 it should return 10 means if you are given a number like -14.5 it should return -10 means if you are given auginment like 14.3 it should return 20 means if you are given a number like 15.3 it should return 20 means if you are given a number like 10 means it should return 10 means if you are given a number like 14 means it should return 14 means if you are given a number like 14 means it should return 14 means if you are given a number like 15 means it should return 15 means if you are given a number like 10 means it should return 10 means if you are given a number like 11 means it should return 11 means if you are given a",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def closest_integer(value):\n    '''\n    Create a function that takes a value (string) representing a number\n    and returns the closest integer to it. If the number is equidistant\n    from two integers, round it away from zero.\n\n    Examples\n    >>> closest_integer(\"10\")\n    10\n    >>> closest_integer(\"15.3\")\n    20\n\n    Note:\n    Rounding away from zero means that if the given number is equidistant\n    from two integers, the one you should return is the one that is the\n    farthest from zero. For example closest_integer(\"14.5\") should\n    return 10 and closest_integer(\"-14.5\") should return -10.\n    '''\n\n\n\nPlease note that round() function inbuilt in python3 Round Away from Zero means if the given number is equidistant from two integers return the one that is the farthest away from zero means if the given number is equidistant from two integers return the one that is the farthest away from zero means if the given number is equidistant from two integers return the one that is the farthest away from zero means if you are given a number like 14.5 it should return 10 means if you are given a number like -14.5 it should return -10 means if you are given auginment like 14.3 it should return 20 means if you are given a number like 15.3 it should return 20 means if you are given a number like 10 means it should return 10 means if you are given a number like 14 means it should return 14 means if you are given a number like 14 means it should return 14 means if you are given a number like 15 means it should return 15 means if you are given a number like 10 means it should return 10 means if you are given a number like 11 means it should return 11 means if you are given a",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 90.62452578544617,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

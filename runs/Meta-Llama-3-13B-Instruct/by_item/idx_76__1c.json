@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_76::1c::andrijdavid/Meta-Llama-3-13B-Instruct::seed0",
+  "task_id": "idx_76",
+  "category": "1c",
+  "entry_point": "is_simple_power",
+  "prompt_field": "prompt1c",
+  "prompt_text": "\ndef is_simple_power(x, n):\n    \"\"\"Your task is to write a function that returns true if a number x is a simple\n    power of n and false in other cases.\n    x is a simple power of n if n**int=x\n    For example:\n    is_simple_power(1, 4) => false\n    is_simple_power(2, 2) => false\n    is_simple_power(8, 2) => false\n    is_simple_power(3, 2) => true\n    is_simple_power(3, 1) => true\n    is_simple_power(5, 3) => true\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef is_simple_power(x, n):\n    \"\"\"Your task is to write a function that returns true if a number x is a simple\n    power of n and false in other cases.\n    x is a simple power of n if n**int=x\n    For example:\n    is_simple_power(1, 4) => false\n    is_simple_power(2, 2) => false\n    is_simple_power(8, 2) => false\n    is_simple_power(3, 2) => true\n    is_simple_power(3, 1) => true\n    is_simple_power(5, 3) => true\n    \"\"\"",
+  "prompt_sha256": "ff4046d7c1d80fd6ef09871e9210b80764fe05cb067508fa09ad1435f9185301",
+  "model_name": "andrijdavid/Meta-Llama-3-13B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef is_simple_power(x, n):\n    \"\"\"Your task is to write a function that returns true if a number x is a simple\n    power of n and false in other cases.\n    x is a simple power of n if n**int=x\n    For example:\n    is_simple_power(1, 4) => false\n    is_simple_power(2, 2) => false\n    is_simple_power(8, 2) => false\n    is_simple_power(3, 2) => true\n    is_simple_power(3, 1) => true\n    is_simple_power(5, 3) => true\n    \"\"\"\n\n\nPlease note that you can use built-in Python functions like ` pow()`, ` pow()`, ` pow()`, etcetera\nCLUDS:`Pow()` function Pow() function Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def is_simple_power(x, n):\n    \"\"\"Your task is to write a function that returns true if a number x is a simple\n    power of n and false in other cases.\n    x is a simple power of n if n**int=x\n    For example:\n    is_simple_power(1, 4) => false\n    is_simple_power(2, 2) => false\n    is_simple_power(8, 2) => false\n    is_simple_power(3, 2) => true\n    is_simple_power(3, 1) => true\n    is_simple_power(5, 3) => true\n    \"\"\"\n\n\nPlease note that you can use built-in Python functions like ` pow()`, ` pow()`, ` pow()`, etcetera\nCLUDS:`Pow()` function Pow() function Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow() Pow",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 91.94964337348938,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

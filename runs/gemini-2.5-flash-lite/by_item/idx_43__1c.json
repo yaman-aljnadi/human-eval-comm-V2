@@ -1,0 +1,40 @@
+{
+  "record_id": "idx_43::1c::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_43",
+  "category": "1c",
+  "entry_point": "pairs_sum_to_zero",
+  "prompt_field": "prompt1c",
+  "prompt_text": "\n\ndef pairs_sum_to_zero(l):\n    \"\"\"\n    pairs_sum_to_zero takes a list of integers as an input.\n    it returns True if there are two distinct elements in the list that\n    sum to zero, and False otherwise.\n    >>> pairs_sum_to_zero([1, 3, 5, 0])\n    True\n    >>> pairs_sum_to_zero([1, 3, -2, 1])\n    True\n    >>> pairs_sum_to_zero([1, 2, 3, 7])\n    True\n    >>> pairs_sum_to_zero([2, 4, -5, 3, 5, 7])\n    False\n    >>> pairs_sum_to_zero([1])\n    True\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef pairs_sum_to_zero(l):\n    \"\"\"\n    pairs_sum_to_zero takes a list of integers as an input.\n    it returns True if there are two distinct elements in the list that\n    sum to zero, and False otherwise.\n    >>> pairs_sum_to_zero([1, 3, 5, 0])\n    True\n    >>> pairs_sum_to_zero([1, 3, -2, 1])\n    True\n    >>> pairs_sum_to_zero([1, 2, 3, 7])\n    True\n    >>> pairs_sum_to_zero([2, 4, -5, 3, 5, 7])\n    False\n    >>> pairs_sum_to_zero([1])\n    True\n    \"\"\"",
+  "prompt_sha256": "8395462bacd0b4b074474ae211568ea7f1bd46d76b5f0cdf33f9791271194c07",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "I need some clarification on the expected behavior of the `pairs_sum_to_zero` function, specifically regarding the definition of \"distinct elements\" and the handling of edge cases.\n\nHere are my questions:\n\n1.  **Definition of \"distinct elements\"**: The docstring states \"two distinct elements\".\n    *   Does this mean two elements at different indices in the list, even if their values are the same? For example, in `[1, -1, 1]`, should `(1, -1)` be considered a valid pair?\n    *   Or does it mean two elements with different *values*? In `[1, -1, 1]`, would `(1, -1)` be valid, but if the input was `[1, 1, -1, -1]`, would `(1, -1)` (using any 1 and any -1) be valid, or would it require distinct *values* like `(1, -1)` and not `(1, 1)` or `(-1, -1)`?\n\n2.  **Handling of zero**: The docstring has `>>> pairs_sum_to_zero([1, ",
+  "gen_raw": {},
+  "contains_code": false,
+  "code_detected_method": "none",
+  "extracted_code": null,
+  "is_question": true,
+  "extracted_questions": [
+    "I need some clarification on the expected behavior of the `pairs_sum_to_zero` function, specifically regarding the definition of \"distinct elements\" and the handling of edge cases.\n\nHere are my questions:\n\n1.  **Definition of \"distinct elements\"**: The docstring states \"two distinct elements\".\n    *   Does this mean two elements at different indices in the list, even if their values are the same?",
+    "For example, in `[1, -1, 1]`, should `(1, -1)` be considered a valid pair?",
+    "*   Or does it mean two elements with different *values*?",
+    "In `[1, -1, 1]`, would `(1, -1)` be valid, but if the input was `[1, 1, -1, -1]`, would `(1, -1)` (using any 1 and any -1) be valid, or would it require distinct *values* like `(1, -1)` and not `(1, 1)` or `(-1, -1)`?",
+    "2.  **Handling of zero**: The docstring has `>>> pairs_sum_to_zero([1,?",
+    "*   Does this mean two elements at different indices in the list, even if their values are the same?"
+  ],
+  "question_count": 6,
+  "first_question": "I need some clarification on the expected behavior of the `pairs_sum_to_zero` function, specifically regarding the definition of \"distinct elements\" and the handling of edge cases.\n\nHere are my questions:\n\n1.  **Definition of \"distinct elements\"**: The docstring states \"two distinct elements\".\n    *   Does this mean two elements at different indices in the list, even if their values are the same?",
+  "question_chars": 918,
+  "latency_sec": 2.002333402633667,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

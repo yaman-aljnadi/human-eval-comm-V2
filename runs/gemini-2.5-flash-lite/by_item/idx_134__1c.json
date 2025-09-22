@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_134::1c::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_134",
+  "category": "1c",
+  "entry_point": "check_if_last_char_is_a_letter",
+  "prompt_field": "prompt1c",
+  "prompt_text": "\ndef check_if_last_char_is_a_letter(txt):\n    '''\n    Create a function that returns True if the last character\n    of a given string is an alphabetical character and is not\n    a part of a word, and False otherwise.\n    Note: \"word\" is a group of characters separated by space.\n\n    Examples:\n    check_if_last_char_is_a_letter(\"apple pie\") ➞ True\n    check_if_last_char_is_a_letter(\"apple pi e\") ➞ False\n    check_if_last_char_is_a_letter(\"apple pi e \") ➞ True\n    check_if_last_char_is_a_letter(\"\") ➞ True \n    '''\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef check_if_last_char_is_a_letter(txt):\n    '''\n    Create a function that returns True if the last character\n    of a given string is an alphabetical character and is not\n    a part of a word, and False otherwise.\n    Note: \"word\" is a group of characters separated by space.\n\n    Examples:\n    check_if_last_char_is_a_letter(\"apple pie\") ➞ True\n    check_if_last_char_is_a_letter(\"apple pi e\") ➞ False\n    check_if_last_char_is_a_letter(\"apple pi e \") ➞ True\n    check_if_last_char_is_a_letter(\"\") ➞ True \n    '''",
+  "prompt_sha256": "6c05649a9537287425142edb6df23752088f97c7891670b64fc9fd070310b040",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef check_if_last_char_is_a_letter(txt):\n    '''\n    Create a function that returns True if the last character\n    of a given string is an alphabetical character and is not\n    a part of a word, and False otherwise.\n    Note: \"word\" is a group of characters separated by space.\n\n    Examples:\n    check_if_last_char_is_a_letter(\"apple pie\") ➞ True\n    check_if_last_char_is_a_letter(\"apple pi e\") ➞ False\n    check_if_last_char_is_a_letter(\"apple pi e \") ➞ True\n    check_if_last_char_is_a_letter(\"\") ➞ True\n    '''\n    if not txt:\n        return True\n\n    last_char = txt[-1]\n\n    if last_char.isspace():\n        return True\n\n    if not last_char.isalpha():\n        return False\n\n    # Check if the character before the last one is a space.\n    # If it is, then the last character is considered not part of a word.\n    if len",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def check_if_last_char_is_a_letter(txt):\n    '''\n    Create a function that returns True if the last character\n    of a given string is an alphabetical character and is not\n    a part of a word, and False otherwise.\n    Note: \"word\" is a group of characters separated by space.\n\n    Examples:\n    check_if_last_char_is_a_letter(\"apple pie\") ➞ True\n    check_if_last_char_is_a_letter(\"apple pi e\") ➞ False\n    check_if_last_char_is_a_letter(\"apple pi e \") ➞ True\n    check_if_last_char_is_a_letter(\"\") ➞ True\n    '''\n    if not txt:\n        return True\n\n    last_char = txt[-1]\n\n    if last_char.isspace():\n        return True\n\n    if not last_char.isalpha():\n        return False\n\n    # Check if the character before the last one is a space.\n    # If it is, then the last character is considered not part of a word.\n    if len",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 1.5265097618103027,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

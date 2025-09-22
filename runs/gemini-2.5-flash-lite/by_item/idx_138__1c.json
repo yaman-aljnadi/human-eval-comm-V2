@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_138::1c::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_138",
+  "category": "1c",
+  "entry_point": "is_equal_to_sum_even",
+  "prompt_field": "prompt1c",
+  "prompt_text": "\ndef is_equal_to_sum_even(n):\n    \"\"\"Evaluate whether the given number n can be written as the sum of exactly 4 positive even numbers\n    Example\n    is_equal_to_sum_even(4) == True\n    is_equal_to_sum_even(6) == True\n    is_equal_to_sum_even(8) == False\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef is_equal_to_sum_even(n):\n    \"\"\"Evaluate whether the given number n can be written as the sum of exactly 4 positive even numbers\n    Example\n    is_equal_to_sum_even(4) == True\n    is_equal_to_sum_even(6) == True\n    is_equal_to_sum_even(8) == False\n    \"\"\"",
+  "prompt_sha256": "6cc10d358a1a77eb439e51563c4abf243f296d9481691523f1dbe20ed6097f42",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef is_equal_to_sum_even(n):\n    \"\"\"Evaluate whether the given number n can be written as the sum of exactly 4 positive even numbers\n    Example\n    is_equal_to_sum_even(4) == True\n    is_equal_to_sum_even(6) == True\n    is_equal_to_sum_even(8) == False\n    \"\"\"\n    # The smallest sum of 4 positive even numbers is 2 + 2 + 2 + 2 = 8.\n    # Therefore, any number less than 8 cannot be represented as the sum of 4 positive even numbers.\n    if n < 8:\n        return False\n\n    # If n is odd, it cannot be represented as the sum of even numbers.\n    if n % 2 != 0:\n        return False\n\n    # Any even number greater than or equal to 8 can be represented as the sum of 4 positive even numbers.\n    # This is because we can always represent n as 2 + 2 + 2 + (n - 6).\n    # Since n is even and n >= 8,",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def is_equal_to_sum_even(n):\n    \"\"\"Evaluate whether the given number n can be written as the sum of exactly 4 positive even numbers\n    Example\n    is_equal_to_sum_even(4) == True\n    is_equal_to_sum_even(6) == True\n    is_equal_to_sum_even(8) == False\n    \"\"\"\n    # The smallest sum of 4 positive even numbers is 2 + 2 + 2 + 2 = 8.\n    # Therefore, any number less than 8 cannot be represented as the sum of 4 positive even numbers.\n    if n < 8:\n        return False\n\n    # If n is odd, it cannot be represented as the sum of even numbers.\n    if n % 2 != 0:\n        return False\n\n    # Any even number greater than or equal to 8 can be represented as the sum of 4 positive even numbers.\n    # This is because we can always represent n as 2 + 2 + 2 + (n - 6).\n    # Since n is even and n >= 8,",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 1.357569932937622,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

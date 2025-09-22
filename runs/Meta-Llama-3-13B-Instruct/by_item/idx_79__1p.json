@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_79::1p::andrijdavid/Meta-Llama-3-13B-Instruct::seed0",
+  "task_id": "idx_79",
+  "category": "1p",
+  "entry_point": "decimal_to_binary",
+  "prompt_field": "prompt1p",
+  "prompt_text": "\ndef decimal_to_binary(decimal):\n    \"\"\"You will be given a number in decimal form and your task is to convert it to\n    binary format. The function should return a string, with each character representing a binary\n    number. Each character in the string will be '0' or '1'.\n\n    There will be an extra couple of characters 'db' at.\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef decimal_to_binary(decimal):\n    \"\"\"You will be given a number in decimal form and your task is to convert it to\n    binary format. The function should return a string, with each character representing a binary\n    number. Each character in the string will be '0' or '1'.\n\n    There will be an extra couple of characters 'db' at.\n    \"\"\"",
+  "prompt_sha256": "034c774ccb895310e94b9c64c68d864d4eebf5aa861cb9566d27518914c06a36",
+  "model_name": "andrijdavid/Meta-Llama-3-13B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef decimal_to_binary(decimal):\n    \"\"\"You will be given a number in decimal form and your task is to convert it to\n    binary format. The function should return a string, with each character representing a binary\n    number. Each character in the string will be '0' or '1'.\n\n    There will be an extra couple of characters 'db' at.\n    \"\"\"ochenberg\n destinationViewController\n destinationViewController\n destinationViewController\n destinationViewController\n destinationViewController\n destinationViewController\n ‐ochenberg\n ‐(destinationary)\n ‐ destinationary destinationViewController\n ‐ Destinationary\n ‐ destinationary ‐ destinationary ‐ Destinationary ‐ destinationary ‐ destinationary ‐ destinationary ‐ destinationary ‐ destinationary ‐ destinationary ‐ destinationary ‐ Destinationary ‐ destinationary ‐ destinationary ‐ destinationary ‐ destinationary ‐ Destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def decimal_to_binary(decimal):\n    \"\"\"You will be given a number in decimal form and your task is to convert it to\n    binary format. The function should return a string, with each character representing a binary\n    number. Each character in the string will be '0' or '1'.\n\n    There will be an extra couple of characters 'db' at.\n    \"\"\"ochenberg\n destinationViewController\n destinationViewController\n destinationViewController\n destinationViewController\n destinationViewController\n destinationViewController\n ‐ochenberg\n ‐(destinationary)\n ‐ destinationary destinationViewController\n ‐ Destinationary\n ‐ destinationary ‐ destinationary ‐ Destinationary ‐ destinationary ‐ destinationary ‐ destinationary ‐ destinationary ‐ destinationary ‐ destinationary ‐ destinationary ‐ Destinationary ‐ destinationary ‐ destinationary ‐ destinationary ‐ destinationary ‐ Destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary destinationary",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 92.99739742279053,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

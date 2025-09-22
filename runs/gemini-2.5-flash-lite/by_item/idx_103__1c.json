@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_103::1c::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_103",
+  "category": "1c",
+  "entry_point": "rounded_avg",
+  "prompt_field": "prompt1c",
+  "prompt_text": "\ndef rounded_avg(n, m):\n    \"\"\"You are given two positive integers n and m, and your task is to compute the\n    average of the integers from n through m (including n and m). \n    Round the answer to the nearest integer and convert that to binary.\n    If n is greater than m, return -1.\n    Example:\n    rounded_avg(1, 5) => \"0b1\"\n    rounded_avg(7, 5) => -1\n    rounded_avg(10, 20) => \"0b1010\"\n    rounded_avg(20, 33) => \"0b10100\"\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef rounded_avg(n, m):\n    \"\"\"You are given two positive integers n and m, and your task is to compute the\n    average of the integers from n through m (including n and m). \n    Round the answer to the nearest integer and convert that to binary.\n    If n is greater than m, return -1.\n    Example:\n    rounded_avg(1, 5) => \"0b1\"\n    rounded_avg(7, 5) => -1\n    rounded_avg(10, 20) => \"0b1010\"\n    rounded_avg(20, 33) => \"0b10100\"\n    \"\"\"",
+  "prompt_sha256": "8e2d76ea978840f280e8ec912a597c048798b5f6e4b81e6c5a2d7535dbe69d3a",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef rounded_avg(n, m):\n    \"\"\"You are given two positive integers n and m, and your task is to compute the\n    average of the integers from n through m (including n and m). \n    Round the answer to the nearest integer and convert that to binary.\n    If n is greater than m, return -1.\n    Example:\n    rounded_avg(1, 5) => \"0b1\"\n    rounded_avg(7, 5) => -1\n    rounded_avg(10, 20) => \"0b1010\"\n    rounded_avg(20, 33) => \"0b10100\"\n    \"\"\"\n    if n > m:\n        return -1\n\n    # Calculate the sum of integers from n to m\n    # The sum of an arithmetic progression is (n + m) * (number of terms) / 2\n    # Number of terms = m - n + 1\n    sum_of_integers = (n + m) * (m - n + 1) // 2\n\n    # Calculate the average\n    average",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def rounded_avg(n, m):\n    \"\"\"You are given two positive integers n and m, and your task is to compute the\n    average of the integers from n through m (including n and m). \n    Round the answer to the nearest integer and convert that to binary.\n    If n is greater than m, return -1.\n    Example:\n    rounded_avg(1, 5) => \"0b1\"\n    rounded_avg(7, 5) => -1\n    rounded_avg(10, 20) => \"0b1010\"\n    rounded_avg(20, 33) => \"0b10100\"\n    \"\"\"\n    if n > m:\n        return -1\n\n    # Calculate the sum of integers from n to m\n    # The sum of an arithmetic progression is (n + m) * (number of terms) / 2\n    # Number of terms = m - n + 1\n    sum_of_integers = (n + m) * (m - n + 1) // 2\n\n    # Calculate the average\n    average",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 1.4202930927276611,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_145::1c::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_145",
+  "category": "1c",
+  "entry_point": "order_by_points",
+  "prompt_field": "prompt1c",
+  "prompt_text": "\ndef order_by_points(nums):\n    \"\"\"\n    Write a function which sorts the given list of integers\n    in ascending order according to the sum of their digits.\n    Note: if there are several items with similar sum of their digits,\n    order them based on their index in original list.\n\n    For example:\n    >>> order_by_points([1, 11, -1, -11, -12]) == [1, 11, -1, -12, -11]\n    >>> order_by_points([]) == []\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef order_by_points(nums):\n    \"\"\"\n    Write a function which sorts the given list of integers\n    in ascending order according to the sum of their digits.\n    Note: if there are several items with similar sum of their digits,\n    order them based on their index in original list.\n\n    For example:\n    >>> order_by_points([1, 11, -1, -11, -12]) == [1, 11, -1, -12, -11]\n    >>> order_by_points([]) == []\n    \"\"\"",
+  "prompt_sha256": "5a293e7a8899ea07e8c4f5d2450bd5a484528b50d4f89d595f829b54cd5b98f1",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef order_by_points(nums):\n    \"\"\"\n    Write a function which sorts the given list of integers\n    in ascending order according to the sum of their digits.\n    Note: if there are several items with similar sum of their digits,\n    order them based on their index in original list.\n\n    For example:\n    >>> order_by_points([1, 11, -1, -11, -12]) == [1, 11, -1, -12, -11]\n    >>> order_by_points([]) == []\n    \"\"\"\n    def sum_digits(n):\n        s = 0\n        for digit in str(abs(n)):\n            s += int(digit)\n        return s\n\n    # Create a list of tuples: (sum_of_digits, original_index, number)\n    # We use original_index as a secondary sort key to maintain stable sort.\n    decorated_nums = [(sum_digits(num), i, num) for i, num in enumerate(nums)]\n\n    # Sort based on sum_of_digits, then original_index\n    decorated_",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def order_by_points(nums):\n    \"\"\"\n    Write a function which sorts the given list of integers\n    in ascending order according to the sum of their digits.\n    Note: if there are several items with similar sum of their digits,\n    order them based on their index in original list.\n\n    For example:\n    >>> order_by_points([1, 11, -1, -11, -12]) == [1, 11, -1, -12, -11]\n    >>> order_by_points([]) == []\n    \"\"\"\n    def sum_digits(n):\n        s = 0\n        for digit in str(abs(n)):\n            s += int(digit)\n        return s\n\n    # Create a list of tuples: (sum_of_digits, original_index, number)\n    # We use original_index as a secondary sort key to maintain stable sort.\n    decorated_nums = [(sum_digits(num), i, num) for i, num in enumerate(nums)]\n\n    # Sort based on sum_of_digits, then original_index\n    decorated_",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 1.5793561935424805,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

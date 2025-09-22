@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_99::1p::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_99",
+  "category": "1p",
+  "entry_point": "closest_integer",
+  "prompt_field": "prompt1p",
+  "prompt_text": "\ndef closest_integer(value):\n    '''\n    Create a function that takes a value (string) representing a number\n    and returns the closest\n    '''\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef closest_integer(value):\n    '''\n    Create a function that takes a value (string) representing a number\n    and returns the closest\n    '''",
+  "prompt_sha256": "6029212f237bb18a104317187677fca3b0738f10e9c5ae2acab8501cba1fc594",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\ndef closest_integer(value):\n    '''\n    Create a function that takes a value (string) representing a number\n    and returns the closest integer.\n\n    For example:\n    closest_integer(\"2.3\") == 2\n    closest_integer(\"2.7\") == 3\n    closest_integer(\"2.5\") == 3  # Standard rounding rules: .5 rounds up\n    closest_integer(\"-2.3\") == -2\n    closest_integer(\"-2.7\") == -3\n    closest_integer(\"-2.5\") == -2  # Standard rounding rules: .5 rounds away from zero\n    '''\n    try:\n        num = float(value)\n        # Python's round() function handles .5 by rounding to the nearest even number\n        # which might not be the desired \"closest\" if we strictly mean \"round half up\"\n        # or \"round half away from zero\".\n\n        # To implement \"round half up\" (for positive numbers) and \"round half away from zero\"\n        # for negative numbers, we can use a combination of floor/ceil and checking the decimal part.\n        if num",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def closest_integer(value):\n    '''\n    Create a function that takes a value (string) representing a number\n    and returns the closest integer.\n\n    For example:\n    closest_integer(\"2.3\") == 2\n    closest_integer(\"2.7\") == 3\n    closest_integer(\"2.5\") == 3  # Standard rounding rules: .5 rounds up\n    closest_integer(\"-2.3\") == -2\n    closest_integer(\"-2.7\") == -3\n    closest_integer(\"-2.5\") == -2  # Standard rounding rules: .5 rounds away from zero\n    '''\n    try:\n        num = float(value)\n        # Python's round() function handles .5 by rounding to the nearest even number\n        # which might not be the desired \"closest\" if we strictly mean \"round half up\"\n        # or \"round half away from zero\".\n\n        # To implement \"round half up\" (for positive numbers) and \"round half away from zero\"\n        # for negative numbers, we can use a combination of floor/ceil and checking the decimal part.\n        if num",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 1.6472759246826172,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

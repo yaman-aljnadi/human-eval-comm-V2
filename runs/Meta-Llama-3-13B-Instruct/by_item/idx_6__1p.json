@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_6::1p::andrijdavid/Meta-Llama-3-13B-Instruct::seed0",
+  "task_id": "idx_6",
+  "category": "1p",
+  "entry_point": "parse_nested_parens",
+  "prompt_field": "prompt1p",
+  "prompt_text": "from typing import List\n\n\ndef parse_nested_parens(paren_string: str) -> List[int]:\n    \"\"\" Input to this function is a string represented multiple groups for nested parentheses separated by spaces.\n    For each of the group, output an integer\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List\n\n\ndef parse_nested_parens(paren_string: str) -> List[int]:\n    \"\"\" Input to this function is a string represented multiple groups for nested parentheses separated by spaces.\n    For each of the group, output an integer\n    \"\"\"",
+  "prompt_sha256": "7dd62bfb90bee0dde28583e5160fefd67975be0d54828803b9dc7d434fe4155e",
+  "model_name": "andrijdavid/Meta-Llama-3-13B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List\n\n\ndef parse_nested_parens(paren_string: str) -> List[int]:\n    \"\"\" Input to this function is a string represented multiple groups for nested parentheses separated by spaces.\n    For each of the group, output an integer\n    \"\"\"\n\n\n\nPlease note that input string may contain spaces other than space character'' between groups or spaces within each group e.g., \"1 2 3 4 5 6\".\n\n Sample input string: \"1 2 3 4 5 6\"\n\n Sample output string: [1,2,3]\n\nExpected output string: [1,2]\n\n please note that eachgroup may contain spaces other than space character'' e.g., \"1 2 3 4 5 6\".\n\nPlease note that input string may contain spaces other than space character'' e.g., \"1 2 3 4 5 6\"STANCEoliciousnessoliciousnessoliciousnessoliciousnessoliciousnessollicitousnessollicitousnessollicitousnessollicitousnessollicitousnessollicitousnessollicitousnessollicitousnessollicitousnessollicitousnessollicitousnessollicitousnessollicitousnessollicitousnessollicitousnessollicitousnessollicitousnessollicitousnessollicitousnessollicitousnessollicitousnessollicitousnessollicitousnessollicitousnessollicitousnessollicitousnessol",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def parse_nested_parens(paren_string: str) -> List[int]:\n    \"\"\" Input to this function is a string represented multiple groups for nested parentheses separated by spaces.\n    For each of the group, output an integer\n    \"\"\"\n\n\n\nPlease note that input string may contain spaces other than space character'' between groups or spaces within each group e.g., \"1 2 3 4 5 6\".\n\n Sample input string: \"1 2 3 4 5 6\"\n\n Sample output string: [1,2,3]\n\nExpected output string: [1,2]\n\n please note that eachgroup may contain spaces other than space character'' e.g., \"1 2 3 4 5 6\".\n\nPlease note that input string may contain spaces other than space character'' e.g., \"1 2 3 4 5 6\"STANCEoliciousnessoliciousnessoliciousnessoliciousnessoliciousnessollicitousnessollicitousnessollicitousnessollicitousnessollicitousnessollicitousnessollicitousnessollicitousnessollicitousnessollicitousnessollicitousnessollicitousnessollicitousnessollicitousnessollicitousnessollicitousnessollicitousnessollicitousnessollicitousnessollicitousnessollicitousnessollicitousnessollicitousnessollicitousnessollicitousnessollicitousnessol",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 107.9713249206543,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

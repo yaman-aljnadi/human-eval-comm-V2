@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_6::1p::meta-llama/Meta-Llama-3-8B-Instruct::seed0",
+  "task_id": "idx_6",
+  "category": "1p",
+  "entry_point": "parse_nested_parens",
+  "prompt_field": "prompt1p",
+  "prompt_text": "from typing import List\n\n\ndef parse_nested_parens(paren_string: str) -> List[int]:\n    \"\"\" Input to this function is a string represented multiple groups for nested parentheses separated by spaces.\n    For each of the group, output an integer\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List\n\n\ndef parse_nested_parens(paren_string: str) -> List[int]:\n    \"\"\" Input to this function is a string represented multiple groups for nested parentheses separated by spaces.\n    For each of the group, output an integer\n    \"\"\"",
+  "prompt_sha256": "7dd62bfb90bee0dde28583e5160fefd67975be0d54828803b9dc7d434fe4155e",
+  "model_name": "meta-llama/Meta-Llama-3-8B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List\n\n\ndef parse_nested_parens(paren_string: str) -> List[int]:\n    \"\"\" Input to this function is a string represented multiple groups for nested parentheses separated by spaces.\n    For each of the group, output an integer\n    \"\"\"\n\n\n\n# Example usage\ninput_str = \"1 2 3 4 5  (2 + 3) 6 (4 + 5) (1 + 2 + 3) 7\"\nresult = parse_nested_parens(input_str)\nprint(result) # Output: [1, 5, 11, 7]\n\n\n\n\n\n\n\n1. You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions: \n\n```\nfrom typing import List\n\n\ndef parse_nested_parens(paren_string: str) -> List[int]:\n    \"\"\" Input to this function is a string represented multiple groups for nested parentheses separated by spaces.\n    For each of the group, output an integer\n    \"\"\"\n\n    # Example usage\n    input_str = \"1 2 3 4 5  (2 + 3) 6 (4 + 5) (1 + 2 + 3) 7\"\n    result = parse_nested_parens(input_str)\n    print(result) # Output: [1, 5, 11, 7]\n```\n\n\n\n\n\n```python\ndef parse_nested_parens(paren",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "from typing import List\n\n\ndef parse_nested_parens(paren_string: str) -> List[int]:\n    \"\"\" Input to this function is a string represented multiple groups for nested parentheses separated by spaces.\n    For each of the group, output an integer\n    \"\"\"\n\n    # Example usage\n    input_str = \"1 2 3 4 5  (2 + 3) 6 (4 + 5) (1 + 2 + 3) 7\"\n    result = parse_nested_parens(input_str)\n    print(result) # Output: [1, 5, 11, 7]",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 71.36800003051758,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_151::1a::andrijdavid/Meta-Llama-3-13B-Instruct::seed0",
+  "task_id": "idx_151",
+  "category": "1a",
+  "entry_point": "double_the_difference",
+  "prompt_field": "prompt1a",
+  "prompt_text": "\ndef double_the_difference(lst):\n    '''\n    Given a list of numbers, return the sum of squares of the numbers\n    in the list that are even or odd. Ignore numbers that are negative or not integers.\n    \n    double_the_difference([1, 3, 2, 0]) == 1 + 9 + 0 + 0 = 10\n    double_the_difference([-1, -2, 0]) == 0\n    double_the_difference([9, -2]) == 81\n    double_the_difference([0]) == 0  \n   \n    If the input list is empty, return 0.\n    '''\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef double_the_difference(lst):\n    '''\n    Given a list of numbers, return the sum of squares of the numbers\n    in the list that are even or odd. Ignore numbers that are negative or not integers.\n    \n    double_the_difference([1, 3, 2, 0]) == 1 + 9 + 0 + 0 = 10\n    double_the_difference([-1, -2, 0]) == 0\n    double_the_difference([9, -2]) == 81\n    double_the_difference([0]) == 0  \n   \n    If the input list is empty, return 0.\n    '''",
+  "prompt_sha256": "78fbab8a01d8792a55cdfe82bf65b38920a70b2399063bd37618d3d91e7d6250",
+  "model_name": "andrijdavid/Meta-Llama-3-13B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef double_the_difference(lst):\n    '''\n    Given a list of numbers, return the sum of squares of the numbers\n    in the list that are even or odd. Ignore numbers that are negative or not integers.\n    \n    double_the_difference([1, 3, 2, 0]) == 1 + 9 + 0 + 0 = 10\n    double_the_difference([-1, -2, 0]) == 0\n    double_the_difference([9, -2]) == 81\n    double_the_difference([0]) == 0  \n   \n    If the input list is empty, return 0.\n    '''endcodeendcodecodeendcode代码�数量ujte Difference Endedouble-the difference Ends/stdcendcodeendcodeendcodeendcodeendcode�数量aje�数量aje�数量aje�数量 Endsujte ends_ends Endsends Ends endsends Ends Ends Ends Ends Ends ends ends ends Endsends ends ends ends Ends ends ends ends Ends ends Ends ends ends ends Ends ends Ends Ends Ends Ends Endsends ends ends ends ends Endsends ends ends Endsends Endsends Endsends ends Endsends Ends Ends ends Ends ends Endsends Ends ends Ends ends Endsends ends ends ends Endsends Endsends Endsends Endsends Ends ends endsends Endsends Endsends Ends Endsends endsends Endsends Endsends Endsends Endsends Endsends Endsends ends ends ends Endsends Ends Ends Ends Endsends Endsends Ends Endsends Endsends ends Endsends Endsends ends Endsends Ends ends Endsends ends Endsends Endsends Ends Endsends Endsends Endsends Ends Endsends Endsends Endsends Endsends ends Ends Ends Ends ends Ends Endsends ends Endsends Endsends Endsends Endsends Endsends Endsends ends ends Endsends Endsends Endsends Ends Endsends Endsends Endsends Endsends ends ends Endsends Endsends Endsends Endsends Endsends Endsends Endsends Endsends Endsends Endsends Endsends Endsends endsends Endsends Ends",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def double_the_difference(lst):\n    '''\n    Given a list of numbers, return the sum of squares of the numbers\n    in the list that are even or odd. Ignore numbers that are negative or not integers.\n    \n    double_the_difference([1, 3, 2, 0]) == 1 + 9 + 0 + 0 = 10\n    double_the_difference([-1, -2, 0]) == 0\n    double_the_difference([9, -2]) == 81\n    double_the_difference([0]) == 0  \n   \n    If the input list is empty, return 0.\n    '''endcodeendcodecodeendcode代码�数量ujte Difference Endedouble-the difference Ends/stdcendcodeendcodeendcodeendcodeendcode�数量aje�数量aje�数量aje�数量 Endsujte ends_ends Endsends Ends endsends Ends Ends Ends Ends Ends ends ends ends Endsends ends ends ends Ends ends ends ends Ends ends Ends ends ends ends Ends ends Ends Ends Ends Ends Endsends ends ends ends ends Endsends ends ends Endsends Endsends Endsends ends Endsends Ends Ends ends Ends ends Endsends Ends ends Ends ends Endsends ends ends ends Endsends Endsends Endsends Endsends Ends ends endsends Endsends Endsends Ends Endsends endsends Endsends Endsends Endsends Endsends Endsends Endsends ends ends ends Endsends Ends Ends Ends Endsends Endsends Ends Endsends Endsends ends Endsends Endsends ends Endsends Ends ends Endsends ends Endsends Endsends Ends Endsends Endsends Endsends Ends Endsends Endsends Endsends Endsends ends Ends Ends Ends ends Ends Endsends ends Endsends Endsends Endsends Endsends Endsends Endsends ends ends Endsends Endsends Endsends Ends Endsends Endsends Endsends Endsends ends ends Endsends Endsends Endsends Endsends Endsends Endsends Endsends Endsends Endsends Endsends Endsends Endsends endsends Endsends Ends",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 92.56803750991821,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

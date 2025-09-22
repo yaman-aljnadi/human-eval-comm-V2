@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_162::1a::gemini-2.5-flash-lite::seed0",
+  "task_id": "idx_162",
+  "category": "1a",
+  "entry_point": "string_to_md5",
+  "prompt_field": "prompt1a",
+  "prompt_text": "\ndef candidate(text):\n    \"\"\"\n    Given a string 'text', return its ideal hash equivalent string.\n    If 'text' is an empty string, return None.\n\n    >>> candidate('Hello world') == '3e25960a79dbc69b674cd4ec67a72c62'\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(text):\n    \"\"\"\n    Given a string 'text', return its ideal hash equivalent string.\n    If 'text' is an empty string, return None.\n\n    >>> candidate('Hello world') == '3e25960a79dbc69b674cd4ec67a72c62'\n    \"\"\"",
+  "prompt_sha256": "d1cf1c344080776c6f30a33dc124e91367371a9bcbee80b99cec934e6eca84b4",
+  "model_name": "gemini-2.5-flash-lite",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "```python\nimport hashlib\n\ndef candidate(text):\n    \"\"\"\n    Given a string 'text', return its ideal hash equivalent string.\n    If 'text' is an empty string, return None.\n\n    >>> candidate('Hello world') == '3e25960a79dbc69b674cd4ec67a72c62'\n    \"\"\"\n    if not text:\n        return None\n    return hashlib.md5(text.encode('utf-8')).hexdigest()\n\n```",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "import hashlib\n\ndef candidate(text):\n    \"\"\"\n    Given a string 'text', return its ideal hash equivalent string.\n    If 'text' is an empty string, return None.\n\n    >>> candidate('Hello world') == '3e25960a79dbc69b674cd4ec67a72c62'\n    \"\"\"\n    if not text:\n        return None\n    return hashlib.md5(text.encode('utf-8')).hexdigest()",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 0.7518470287322998,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

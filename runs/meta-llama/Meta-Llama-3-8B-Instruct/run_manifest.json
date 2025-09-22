@@ -1,0 +1,25 @@
+{
+  "schema_version": "comm-v2.1",
+  "dataset": "jie-jw-wu/HumanEvalComm",
+  "split": "train",
+  "categories": [
+    "1a",
+    "1c",
+    "1p",
+    "2ac",
+    "2ap",
+    "2cp",
+    "3acp"
+  ],
+  "run_id": "3dc111b4c8b14c6c97894fa8282d9577",
+  "model": "meta-llama/Meta-Llama-3-8B-Instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "repetition_penalty": 1.0,
+    "do_sample": true
+  },
+  "created_utc": 1758167543
+}
