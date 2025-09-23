@@ -1,12 +1,5 @@
 #!/usr/bin/env python3
 """
-HumanEvalComm prototype runner (Option 1: evaluation reliability)
-
-- Loads jie-jw-wu/HumanEvalComm
-- Selects prompt variant fields (prompt1a, prompt1c, prompt1p, 2ac, 2ap, 2cp, 3acp)
-- Runs HuggingFace causal LMs to generate an initial response per item
-- Computes Communication Rate (non-code responses), as per paper definition
-- Saves per-item outputs and quick summary for future judging
 
 USAGE (example):
   python prototype_humanevalcomm.py \

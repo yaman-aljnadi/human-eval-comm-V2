@@ -2,10 +2,6 @@
 """
 Evaluation via a 1–3 LLM "committee" using a unified JSON JUDGE_PROMPT.
 
-This script replaces the two-step prompts with a single structured
-evaluator prompt (provided by the user) that returns a strict JSON schema.
-
-It supports 1, 2, or 3 judge models via --judges (space‑separated).
 
 Outputs:
 - per‑item committee judgments (committee_judgments.json)

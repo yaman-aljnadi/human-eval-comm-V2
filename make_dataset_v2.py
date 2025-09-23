@@ -1,21 +1,5 @@
 #!/usr/bin/env python3
 """
-make_dataset_v2.py — HumanEvalComm runner with robust, schema-stable saving.
-
-What’s new vs your version:
-  - Strong IDs: record_id = "<task_id>::<cat>::<model>::seed<seed>"
-  - Provenance: model, sampling params, prompt hash, dataset name/version
-  - Rich per-item fields for later committee aggregation:
-      * is_question (bool), question_count, first_question, question_chars
-      * code_detected_method ("fenced" | "def-scan" | "none")
-      * timings + token settings
-  - Atomic writes + --append support for results.jsonl (+ optional .gz)
-  - Optional Parquet export for analysis (pandas/pyarrow if available)
-  - Summary saved with exact counts + schema version
-  - Everything under outdir/{by_item,artifacts} with a run_manifest.json
-
-NOTE: This script still *generates* model outputs. Your separate script can
-ingest results.jsonl (or Parquet) to run the 3-model committee & add ratings.
 
 Usage example:
   python make_dataset_v2.py \
@@ -144,8 +128,6 @@ def append_jsonl(path: str, rows: List[Dict[str, Any]], gzip: bool = False):
                 f.write(json.dumps(r, ensure_ascii=False) + "\n")
 
 def detect_code_and_questions(text: str):
-    """Return: contains_code(bool), extracted_code(str|None),
-               questions(list[str]), code_detected_method(str)"""
     method = "none"
     m = CODE_FENCE_RE.search(text)
     if m:
@@ -220,10 +202,6 @@ def prepare_generator(model_name: str):
     return gen_pipe
 
 def prepare_generator_gemini(model_name: str, cfg) -> Any:
-    """
-    Returns a callable with a HF-like interface:
-      gen_fn(final_prompt, **ignored) -> {"generated_text": str, "gen_raw": dict}
-    """
     if genai is None:
         raise RuntimeError("google-generativeai is not installed. pip install google-generativeai")
 
@@ -232,7 +210,6 @@ def prepare_generator_gemini(model_name: str, cfg) -> Any:
         raise RuntimeError("GEMINI_API_KEY env var is not set.")
     genai.configure(api_key=api_key)
 
-    # Build the model
     model = genai.GenerativeModel(model_name)
 
     # Map your config to Gemini generation_config
@@ -279,14 +256,6 @@ def prepare_generator_gemini(model_name: str, cfg) -> Any:
 
 
 def prepare_generator_openrouter(model_name: str, cfg) -> Any:
-    """
-    Returns a callable with an HF-like interface:
-      gen_fn(final_prompt, **ignored) -> [{"generated_text": str, "gen_raw": dict, "latency_sec": float}]
-    Requires:
-      - pip install openai>=1.0.0
-      - env: OPENROUTER_API_KEY
-      - optional env: OPENROUTER_SITE_URL, OPENROUTER_SITE_NAME
-    """
     try:
         from openai import OpenAI
     except Exception as e:
@@ -301,15 +270,15 @@ def prepare_generator_openrouter(model_name: str, cfg) -> Any:
         api_key=api_key,
     )
 
-    # Map your config to OpenAI-style params (sane defaults)
+    
     generation_kwargs = {
-        "temperature": float(getattr(cfg, "temperature", 1.0)),     # steadier default
+        "temperature": float(getattr(cfg, "temperature", 1.0)),     
         "top_p": float(getattr(cfg, "top_p", 0.9)),
         # OpenRouter uses max_tokens (new tokens). Give reasoning models room.
         "max_tokens": int(getattr(cfg, "max_new_tokens", 256)),
     }
 
-    # Optional attribution headers for openrouter.ai rankings
+    
     extra_headers = {}
     site_url = os.getenv("OPENROUTER_SITE_URL")
     site_name = os.getenv("OPENROUTER_SITE_NAME")
@@ -320,12 +289,10 @@ def prepare_generator_openrouter(model_name: str, cfg) -> Any:
 
     def _extract_text_from_message(msg) -> str:
         """Robustly extract visible text from an OpenRouter message object."""
-        # Case 1: plain string content
         content = getattr(msg, "content", None)
         if isinstance(content, str) and content:
             return content
 
-        # Case 2: list of parts (content array)
         if isinstance(content, list):
             parts = []
             for p in content:
@@ -337,7 +304,6 @@ def prepare_generator_openrouter(model_name: str, cfg) -> Any:
             if parts:
                 return "".join(parts)
 
-        # Case 3: last resort—if a provider exposed a 'reasoning' field and content is empty
         reasoning = getattr(msg, "reasoning", None)
         if isinstance(reasoning, str) and reasoning:
             return reasoning
@@ -346,17 +312,13 @@ def prepare_generator_openrouter(model_name: str, cfg) -> Any:
 
     def gen_fn(prompt_text: str, **_):
         t0 = time.time()
-        # IMPORTANT: Ask for less visible 'thinking' and exclude it from the response.
-        # Many reasoning models (e.g., deepseek-r1) honor this on OpenRouter.
         resp = client.chat.completions.create(
             model=model_name,
             messages=[{"role": "user", "content": prompt_text}],
             extra_headers=extra_headers or None,
             # Provider-specific fields belong in extra_body:
             extra_body={
-                # Capture the model’s hidden “thinking”/reasoning tokens
                 "include_reasoning": True,
-                # Optional nudge for models that support it
                 "reasoning": {"effort": "low"},
             },
             **generation_kwargs,
@@ -371,7 +333,6 @@ def prepare_generator_openrouter(model_name: str, cfg) -> Any:
 
         text = _extract_text_from_message(msg) if msg is not None else ""
 
-        # Slim raw for parity with your HF dict
         try:
             usage = getattr(resp, "usage", None)
             finish_reason = getattr(resp.choices[0], "finish_reason", None)
@@ -417,7 +378,7 @@ def prepare_generator_openai(model_name: str, cfg):
     generation_kwargs = {
         "temperature": float(getattr(cfg, "temperature", 1.0)),
         "top_p": float(getattr(cfg, "top_p", 0.9)),
-        "max_tokens": int(getattr(cfg, "max_new_tokens", 256)),  # OpenAI's param name
+        "max_tokens": int(getattr(cfg, "max_new_tokens", 256)),  
     }
 
     def gen_fn(prompt_text: str, **_):
@@ -488,10 +449,9 @@ class ItemRow:
     # Timings
     latency_sec: float
 
-    # Placeholders reserved for committee/evaluator later
-    committee_label: Optional[str] = None          # e.g., "code" | "question" | "tie" | "inconclusive"
-    evaluator_quality: Optional[int] = None        # 1/2/3 (paper), to be filled later
-    evaluator_answers: Optional[str] = None        # filled later
+    committee_label: Optional[str] = None          
+    evaluator_quality: Optional[int] = None        
+    evaluator_answers: Optional[str] = None        
 
 # ---------- main ----------
 def main():
@@ -541,7 +501,6 @@ def main():
     }
     atomic_write(os.path.join(args.outdir, "run_manifest.json"), json.dumps(manifest, indent=2))
 
-    # Save initial config too (back-compat with your layout)
     with open(os.path.join(args.outdir, "run_config.json"), "w", encoding="utf-8") as f:
         json.dump(vars(args), f, indent=2)
 
@@ -605,7 +564,6 @@ def main():
             field = f"prompt{cat}"
             problem = item.get(field)
             if not isinstance(problem, str) or not problem.strip():
-                # Some combos (2ac/2cp/2ap/3acp) may be missing; skip gracefully
                 continue
 
             final_prompt = PAPER_PROMPT_TEMPLATE.format(problem=problem.strip())
@@ -704,7 +662,7 @@ def main():
         "model": args.model,
         "base_items": n_base,
         "expanded_rows": total,
-        "communication_rate": comm_rate,   # matches paper definition
+        "communication_rate": comm_rate,   
         "non_code_responses": non_code,
         "runtime_sec": total_sec,
         "categories": args.categories,
