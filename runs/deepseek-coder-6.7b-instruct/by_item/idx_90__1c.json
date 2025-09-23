@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_90::1c::deepseek-ai/deepseek-coder-6.7b-instruct::seed0",
+  "task_id": "idx_90",
+  "category": "1c",
+  "entry_point": "next_smallest",
+  "prompt_field": "prompt1c",
+  "prompt_text": "\ndef next_smallest(lst):\n    \"\"\"\n    You are given a list of integers.\n    Write a function next_smallest() that returns the 2nd smallest element of the list.\n    Return None if there is no such element.\n    \n    next_smallest([1, 2, 3, 4, 5]) == 1\n    next_smallest([5, 1, 4, 3, 2]) == 1\n    next_smallest([]) == None\n    next_smallest([1, 1]) == 1\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef next_smallest(lst):\n    \"\"\"\n    You are given a list of integers.\n    Write a function next_smallest() that returns the 2nd smallest element of the list.\n    Return None if there is no such element.\n    \n    next_smallest([1, 2, 3, 4, 5]) == 1\n    next_smallest([5, 1, 4, 3, 2]) == 1\n    next_smallest([]) == None\n    next_smallest([1, 1]) == 1\n    \"\"\"",
+  "prompt_sha256": "3cbeb2aa3d02e3dc01bbbc2156e080bccd856f59ffad40c5557863b0553cd63b",
+  "model_name": "deepseek-ai/deepseek-coder-6.7b-instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef next_smallest(lst):\n    \"\"\"\n    You are given a list of integers.\n    Write a function next_smallest() that returns the 2nd smallest element of the list.\n    Return None if there is no such element.\n    \n    next_smallest([1, 2, 3, 4, 5]) == 1\n    next_smallest([5, 1, 4, 3, 2]) == 1\n    next_smallest([]) == None\n    next_smallest([1, 1]) == 1\n    \"\"\"\n    lst.sort()\n    return lst[1] if len(lst) > 1 else None\n\nThe code provided uses the python built-in sort() method to sort the array, and then returns the 2nd element (index 1). If the list is empty or has only one element, it returns None.\n    \"\"\"\n    # your code here\n    pass\n\n\n\n    return lst[1] if len(lst) > 1 else None\n\n# This is a complete Python3 code:\n\ndef next_smallest(lst):\n    lst.sort()\n    return lst[1] if len(lst) > 1 else None\n# This code sorts the input list, and returns the second element of the sorted list if the list has more than 1 element. If the list has less than 2 elements, it returns None.\n\n\ndef next_smallest(lst):\n    if len(lst) > 1:\n        return sorted(lst)[1]\n    else:\n        return None\n# This code returns the second smallest number in a list if the list is long enough. If the",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def next_smallest(lst):\n    \"\"\"\n    You are given a list of integers.\n    Write a function next_smallest() that returns the 2nd smallest element of the list.\n    Return None if there is no such element.\n    \n    next_smallest([1, 2, 3, 4, 5]) == 1\n    next_smallest([5, 1, 4, 3, 2]) == 1\n    next_smallest([]) == None\n    next_smallest([1, 1]) == 1\n    \"\"\"\n    lst.sort()\n    return lst[1] if len(lst) > 1 else None\n\nThe code provided uses the python built-in sort() method to sort the array, and then returns the 2nd element (index 1). If the list is empty or has only one element, it returns None.\n    \"\"\"\n    # your code here\n    pass\n\n\n\n    return lst[1] if len(lst) > 1 else None\n\n# This is a complete Python3 code:\n\ndef next_smallest(lst):\n    lst.sort()\n    return lst[1] if len(lst) > 1 else None\n# This code sorts the input list, and returns the second element of the sorted list if the list has more than 1 element. If the list has less than 2 elements, it returns None.\n\n\ndef next_smallest(lst):\n    if len(lst) > 1:\n        return sorted(lst)[1]\n    else:\n        return None\n# This code returns the second smallest number in a list if the list is long enough. If the",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 75.54811239242554,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_98::2ac::deepseek-ai/deepseek-coder-6.7b-instruct::seed0",
+  "task_id": "idx_98",
+  "category": "2ac",
+  "entry_point": "count_upper",
+  "prompt_field": "prompt2ac",
+  "prompt_text": "\ndef count_upper(s):\n    \"\"\"\n    Given a string s, count the number of uppercase vowels in odd or even indices.\n    \n    For example:\n    count_upper('aBCdEf') returns 2\n    count_upper('abcdefg') returns 1\n    count_upper('dBBE') returns 1\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef count_upper(s):\n    \"\"\"\n    Given a string s, count the number of uppercase vowels in odd or even indices.\n    \n    For example:\n    count_upper('aBCdEf') returns 2\n    count_upper('abcdefg') returns 1\n    count_upper('dBBE') returns 1\n    \"\"\"",
+  "prompt_sha256": "41737e7eaa67b8d9d9fd1de3365abb4afae1855163076a1f26e7fbcccbac214b",
+  "model_name": "deepseek-ai/deepseek-coder-6.7b-instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef count_upper(s):\n    \"\"\"\n    Given a string s, count the number of uppercase vowels in odd or even indices.\n    \n    For example:\n    count_upper('aBCdEf') returns 2\n    count_upper('abcdefg') returns 1\n    count_upper('dBBE') returns 1\n    \"\"\"\n\n    # Start your code here\n\n# Solution:\n\nHere's a Python code that does this:\n\n```python\ndef count_upper(s):\n    vowels = 'AEIOU'\n    return sum(1 for i in range(len(s)) if i % 2 == 0 and s[i] in vowels)\n```\n\nIn this code, the function `count_upper(s)` takes a string `s` as input. It iterates over the string with a step of 2 (to check only even indices) and checks if the character at each index `i` is an uppercase vowel. It then returns the sum of these checks.\n\nNote that Python uses zero-based indexing, so `s[i]` refers to the `i`th character in `s`, where `i` is the index we're checking. If `i` is even, it checks if the character is an uppercase vowel. If so, it counts it. If `i` is odd, it skips it. The result is the total count of uppercase vowels in even-indexed positions of `s`.",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def count_upper(s):\n    vowels = 'AEIOU'\n    return sum(1 for i in range(len(s)) if i % 2 == 0 and s[i] in vowels)",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 62.820067167282104,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

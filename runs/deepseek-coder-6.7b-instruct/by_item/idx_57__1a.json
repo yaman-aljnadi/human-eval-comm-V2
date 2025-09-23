@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_57::1a::deepseek-ai/deepseek-coder-6.7b-instruct::seed0",
+  "task_id": "idx_57",
+  "category": "1a",
+  "entry_point": "monotonic",
+  "prompt_field": "prompt1a",
+  "prompt_text": "\n\ndef candidate(l: list):\n    \"\"\"Return True if list elements are increasing or decreasing with a specific condition (such as elements being monotonical, nonmonotonical, or another specific condition).\n    >>> candidate([1, 2, 4, 20])\n    True\n    >>> candidate([1, 20, 4, 10])\n    False\n    >>> candidate([4, 1, 0, -10])\n    True\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(l: list):\n    \"\"\"Return True if list elements are increasing or decreasing with a specific condition (such as elements being monotonical, nonmonotonical, or another specific condition).\n    >>> candidate([1, 2, 4, 20])\n    True\n    >>> candidate([1, 20, 4, 10])\n    False\n    >>> candidate([4, 1, 0, -10])\n    True\n    \"\"\"",
+  "prompt_sha256": "411350d6d2b4a32158bd6b58d01032f239ee5d0d8403d5db29d4ff43bdce1f73",
+  "model_name": "deepseek-ai/deepseek-coder-6.7b-instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(l: list):\n    \"\"\"Return True if list elements are increasing or decreasing with a specific condition (such as elements being monotonical, nonmonotonical, or another specific condition).\n    >>> candidate([1, 2, 4, 20])\n    True\n    >>> candidate([1, 20, 4, 10])\n    False\n    >>> candidate([4, 1, 0, -10])\n    True\n    \"\"\"\n    l_sorted_increasing = sorted(l)\n    l_sorted_decreasing = sorted(l, reverse=True)\n    l_reversed = list(reversed(l))\n    \n    if l == l_sorted_increasing or l == l_sorted_decreasing or l == l_reversed:\n        return True\n    return False\n\n\nif __name__ == \"__main__\":\n    import doctest\n    doctest.testmod()\n\n\nThis is an implementation of the solution based on Python3. It involves sorting the given list in ascending and descending order, and then it checks if the original list is equal to any of these sorted lists.\n\n- sorted(l) gives the list sorted in ascending order.\n- sorted(l, reverse=True) gives the list sorted in descending order.\n- list(reversed(l)) gives the list reversed, equivalent to the list in its original order.\n\nThis works under the assumption that the \"monotonical condition\" is that the list should be either in ascending order, descending order",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def candidate(l: list):\n    \"\"\"Return True if list elements are increasing or decreasing with a specific condition (such as elements being monotonical, nonmonotonical, or another specific condition).\n    >>> candidate([1, 2, 4, 20])\n    True\n    >>> candidate([1, 20, 4, 10])\n    False\n    >>> candidate([4, 1, 0, -10])\n    True\n    \"\"\"\n    l_sorted_increasing = sorted(l)\n    l_sorted_decreasing = sorted(l, reverse=True)\n    l_reversed = list(reversed(l))\n    \n    if l == l_sorted_increasing or l == l_sorted_decreasing or l == l_reversed:\n        return True\n    return False\n\n\nif __name__ == \"__main__\":\n    import doctest\n    doctest.testmod()\n\n\nThis is an implementation of the solution based on Python3. It involves sorting the given list in ascending and descending order, and then it checks if the original list is equal to any of these sorted lists.\n\n- sorted(l) gives the list sorted in ascending order.\n- sorted(l, reverse=True) gives the list sorted in descending order.\n- list(reversed(l)) gives the list reversed, equivalent to the list in its original order.\n\nThis works under the assumption that the \"monotonical condition\" is that the list should be either in ascending order, descending order",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 73.27162098884583,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

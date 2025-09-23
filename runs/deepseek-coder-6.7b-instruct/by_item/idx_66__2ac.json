@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_66::2ac::deepseek-ai/deepseek-coder-6.7b-instruct::seed0",
+  "task_id": "idx_66",
+  "category": "2ac",
+  "entry_point": "digitSum",
+  "prompt_field": "prompt2ac",
+  "prompt_text": "\ndef digitSum(s):\n    \"\"\"Task\n    Write a function that takes a string as input and returns the sum of the number of upper characters.\n\n    Examples:\n        digitSum(\"\") => 0\n        digitSum(\"abAB\") => 2\n        digitSum(\"abcCd\") => 1\n        digitSum(\"helloE\") => 1\n        digitSum(\"woArBld\") => 2\n        digitSum(\"aAaaaXa\") => 2\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef digitSum(s):\n    \"\"\"Task\n    Write a function that takes a string as input and returns the sum of the number of upper characters.\n\n    Examples:\n        digitSum(\"\") => 0\n        digitSum(\"abAB\") => 2\n        digitSum(\"abcCd\") => 1\n        digitSum(\"helloE\") => 1\n        digitSum(\"woArBld\") => 2\n        digitSum(\"aAaaaXa\") => 2\n    \"\"\"",
+  "prompt_sha256": "b71e0e4861d7c5017030537466b77db6f1b148a2e35d04ef189751460a1a2276",
+  "model_name": "deepseek-ai/deepseek-coder-6.7b-instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef digitSum(s):\n    \"\"\"Task\n    Write a function that takes a string as input and returns the sum of the number of upper characters.\n\n    Examples:\n        digitSum(\"\") => 0\n        digitSum(\"abAB\") => 2\n        digitSum(\"abcCd\") => 1\n        digitSum(\"helloE\") => 1\n        digitSum(\"woArBld\") => 2\n        digitSum(\"aAaaaXa\") => 2\n    \"\"\"\n\n    count = 0\n    for letter in s:\n        if letter.isupper():\n            count += 1\n    return count\n\n# The function digitSum takes a string s as input.\n# It initializes a variable count to 0.\n# The function iterates through each character in s. If a character is uppercase, it increments count by 1.\n# Finally, it returns the count.\n# The count represents the number of uppercase letters in the string.\n# By adding all uppercase letter counts, you can calculate the sum.\n# So, we return count which gives us the sum of the number of uppercase letters.\n# Python built-in function isupper is used to check if a character is an uppercase letter. It returns True if the character is uppercase, False otherwise.\n\n# To further clarify how this code works, below is the explanation:\n# 1. Iterates through each letter in the string s.\n# 2. Checks if the letter is uppercase using the built-in function isupper().\n# 3. If the letter is uppercase, it increments the count by 1.\n# 4",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def digitSum(s):\n    \"\"\"Task\n    Write a function that takes a string as input and returns the sum of the number of upper characters.\n\n    Examples:\n        digitSum(\"\") => 0\n        digitSum(\"abAB\") => 2\n        digitSum(\"abcCd\") => 1\n        digitSum(\"helloE\") => 1\n        digitSum(\"woArBld\") => 2\n        digitSum(\"aAaaaXa\") => 2\n    \"\"\"\n\n    count = 0\n    for letter in s:\n        if letter.isupper():\n            count += 1\n    return count\n\n# The function digitSum takes a string s as input.\n# It initializes a variable count to 0.\n# The function iterates through each character in s. If a character is uppercase, it increments count by 1.\n# Finally, it returns the count.\n# The count represents the number of uppercase letters in the string.\n# By adding all uppercase letter counts, you can calculate the sum.\n# So, we return count which gives us the sum of the number of uppercase letters.\n# Python built-in function isupper is used to check if a character is an uppercase letter. It returns True if the character is uppercase, False otherwise.\n\n# To further clarify how this code works, below is the explanation:\n# 1. Iterates through each letter in the string s.\n# 2. Checks if the letter is uppercase using the built-in function isupper().\n# 3. If the letter is uppercase, it increments the count by 1.\n# 4",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 68.5484402179718,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

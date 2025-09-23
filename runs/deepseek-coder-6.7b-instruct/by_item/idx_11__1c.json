@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_11::1c::deepseek-ai/deepseek-coder-6.7b-instruct::seed0",
+  "task_id": "idx_11",
+  "category": "1c",
+  "entry_point": "string_xor",
+  "prompt_field": "prompt1c",
+  "prompt_text": "from typing import List\n\n\ndef string_xor(a: str, b: str) -> str:\n    \"\"\" Input are two strings a and b consisting only of 1s and 0s.\n    Perform binary XOR on these inputs and return result also as a string.\n    >>> string_xor('010', '110')\n    '011'\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List\n\n\ndef string_xor(a: str, b: str) -> str:\n    \"\"\" Input are two strings a and b consisting only of 1s and 0s.\n    Perform binary XOR on these inputs and return result also as a string.\n    >>> string_xor('010', '110')\n    '011'\n    \"\"\"",
+  "prompt_sha256": "b8830e4088f692a9c5b82c5dd8c847dccbe2278843fcc53bb88312a9b454bf88",
+  "model_name": "deepseek-ai/deepseek-coder-6.7b-instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List\n\n\ndef string_xor(a: str, b: str) -> str:\n    \"\"\" Input are two strings a and b consisting only of 1s and 0s.\n    Perform binary XOR on these inputs and return result also as a string.\n    >>> string_xor('010', '110')\n    '011'\n    \"\"\"\n    res = [str(int(i) ^ int(j)) for i, j in zip(a, b)]\n    return \"\".join(res)\n\ndef decode_rle(s: str) -> str:\n    \"\"\" Implement Run-Length Encoding (RLE) decoding.\n    >>> decode_rle(\"4W3o2R1L1E\")\n    'WWWoRRLE'\n    \"\"\"\n    res = []\n    for i in range(0, len(s), 2):\n        res.extend(s[i+1]*int(s[i]))\n    return \"\".join(res)\n\ndef encode_rle(s: str) -> str:\n    \"\"\" Implement Run-Length Encoding (RLE) encoding.\n    >>> encode_rle(\"WWWoRRLE\")\n    '4W3o2R1L1E'\n    \"\"\"\n    res = []\n    for i in range(len(s)):\n        count = 1\n        while i+1<len(s) and s[i] == s[i",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def string_xor(a: str, b: str) -> str:\n    \"\"\" Input are two strings a and b consisting only of 1s and 0s.\n    Perform binary XOR on these inputs and return result also as a string.\n    >>> string_xor('010', '110')\n    '011'\n    \"\"\"\n    res = [str(int(i) ^ int(j)) for i, j in zip(a, b)]\n    return \"\".join(res)\n\ndef decode_rle(s: str) -> str:\n    \"\"\" Implement Run-Length Encoding (RLE) decoding.\n    >>> decode_rle(\"4W3o2R1L1E\")\n    'WWWoRRLE'\n    \"\"\"\n    res = []\n    for i in range(0, len(s), 2):\n        res.extend(s[i+1]*int(s[i]))\n    return \"\".join(res)\n\ndef encode_rle(s: str) -> str:\n    \"\"\" Implement Run-Length Encoding (RLE) encoding.\n    >>> encode_rle(\"WWWoRRLE\")\n    '4W3o2R1L1E'\n    \"\"\"\n    res = []\n    for i in range(len(s)):\n        count = 1\n        while i+1<len(s) and s[i] == s[i",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 44.74657368659973,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

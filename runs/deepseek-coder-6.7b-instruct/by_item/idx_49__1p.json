@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_49::1p::deepseek-ai/deepseek-coder-6.7b-instruct::seed0",
+  "task_id": "idx_49",
+  "category": "1p",
+  "entry_point": "modp",
+  "prompt_field": "prompt1p",
+  "prompt_text": "\n\ndef modp(n: int, p: int):\n    \"\"\"Return 2^n modulo.\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef modp(n: int, p: int):\n    \"\"\"Return 2^n modulo.\n    \"\"\"",
+  "prompt_sha256": "d91690d5d8b610edfa25765d0c7d324a6d61d54ff444db729df6d3d44abf172f",
+  "model_name": "deepseek-ai/deepseek-coder-6.7b-instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef modp(n: int, p: int):\n    \"\"\"Return 2^n modulo.\n    \"\"\"\n    def exponent(a: int, n: int, p: int):\n        res = 1\n        a = a % p\n        while n > 0:\n            if n % 2 == 1:\n                res = (res * a) % p\n            n = n >> 1\n            a = (a * a) % p\n        return res\n\n    return exponent(2, n, p)\n\n\ndef is_prime(n: int):\n    \"\"\"Check if a number is prime.\"\"\"\n    if n <= 1 or (n % 2 == 0 and n > 2):\n        return False\n    if n == 2 or n == 3:\n        return True\n    for x in range(3, int(n**0.5)+1, 2):\n        if n % x == 0:\n            return False\n    return True\n\n\ndef next_prime(n: int):\n    \"\"\"Find the next prime.\"\"\"\n    if n <= 1 or n == 2:\n        return 2\n    prime = n if n % 2 == 0 else n + 1\n    while not is_prime(prime):\n       ",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def modp(n: int, p: int):\n    \"\"\"Return 2^n modulo.\n    \"\"\"\n    def exponent(a: int, n: int, p: int):\n        res = 1\n        a = a % p\n        while n > 0:\n            if n % 2 == 1:\n                res = (res * a) % p\n            n = n >> 1\n            a = (a * a) % p\n        return res\n\n    return exponent(2, n, p)\n\n\ndef is_prime(n: int):\n    \"\"\"Check if a number is prime.\"\"\"\n    if n <= 1 or (n % 2 == 0 and n > 2):\n        return False\n    if n == 2 or n == 3:\n        return True\n    for x in range(3, int(n**0.5)+1, 2):\n        if n % x == 0:\n            return False\n    return True\n\n\ndef next_prime(n: int):\n    \"\"\"Find the next prime.\"\"\"\n    if n <= 1 or n == 2:\n        return 2\n    prime = n if n % 2 == 0 else n + 1\n    while not is_prime(prime):",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 64.39309787750244,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

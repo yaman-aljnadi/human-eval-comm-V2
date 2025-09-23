@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_129::1p::deepseek-ai/deepseek-coder-6.7b-instruct::seed0",
+  "task_id": "idx_129",
+  "category": "1p",
+  "entry_point": "minPath",
+  "prompt_field": "prompt1p",
+  "prompt_text": "\ndef minPath(grid, k):\n    \"\"\"\n    Given a grid with N rows and N columns (N >= 2) and a positive integer k, \n    each cell of the grid contains a value. Every integer in the range [1, N * N]\n    inclusive appears exactly once on the cells of the grid.\n\n    You have to find the minimum path of length k in the grid. You can start\n    from any cell, and in each step you can move to any of the neighbor cells,\n    in other words, you can go to cells which share an edge with you current\n    cell.\n    Please note that a path of length k means visiting exactly k cells (not\n    necessarily distinct).\n    You CANNOT go off the grid.\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef minPath(grid, k):\n    \"\"\"\n    Given a grid with N rows and N columns (N >= 2) and a positive integer k, \n    each cell of the grid contains a value. Every integer in the range [1, N * N]\n    inclusive appears exactly once on the cells of the grid.\n\n    You have to find the minimum path of length k in the grid. You can start\n    from any cell, and in each step you can move to any of the neighbor cells,\n    in other words, you can go to cells which share an edge with you current\n    cell.\n    Please note that a path of length k means visiting exactly k cells (not\n    necessarily distinct).\n    You CANNOT go off the grid.\n    \"\"\"",
+  "prompt_sha256": "20ae45cde41e4e8fd1eb027d99ab44374de1b26eb8f4cae438f04ef24f89a705",
+  "model_name": "deepseek-ai/deepseek-coder-6.7b-instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef minPath(grid, k):\n    \"\"\"\n    Given a grid with N rows and N columns (N >= 2) and a positive integer k, \n    each cell of the grid contains a value. Every integer in the range [1, N * N]\n    inclusive appears exactly once on the cells of the grid.\n\n    You have to find the minimum path of length k in the grid. You can start\n    from any cell, and in each step you can move to any of the neighbor cells,\n    in other words, you can go to cells which share an edge with you current\n    cell.\n    Please note that a path of length k means visiting exactly k cells (not\n    necessarily distinct).\n    You CANNOT go off the grid.\n    \"\"\"\n    return path\n\n# Solution:\n# It appears you're looking for the smallest path with length k on a grid where each step can take you to any of the neighboring cells, not necessarily distinct.\n# One possible approach is a Greedy approach where you always choose the smallest remaining numbers to add to your path. \n# We can do this by keeping track of the smallest remaining numbers in a priority queue and pop from it, always adding the smallest element to the path.\n# \n# 1. Initialize the priority queue with the first row of the grid, then while the size of the queue > 0:\n# 2. Dequeue the smallest number (a tuple with the cell coordinates and the number in the cell) from the queue.\n# 3. Add the number to the path.\n# 4. Add the next unseen numbers in the grid to the queue.\n# 5. If the length of the path == k, return the path.\n# 6. If not, repeat steps 2-5.\n# \n# Note: It's important to notice that, if we just return the path right away, the path might not be valid",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def minPath(grid, k):\n    \"\"\"\n    Given a grid with N rows and N columns (N >= 2) and a positive integer k, \n    each cell of the grid contains a value. Every integer in the range [1, N * N]\n    inclusive appears exactly once on the cells of the grid.\n\n    You have to find the minimum path of length k in the grid. You can start\n    from any cell, and in each step you can move to any of the neighbor cells,\n    in other words, you can go to cells which share an edge with you current\n    cell.\n    Please note that a path of length k means visiting exactly k cells (not\n    necessarily distinct).\n    You CANNOT go off the grid.\n    \"\"\"\n    return path\n\n# Solution:\n# It appears you're looking for the smallest path with length k on a grid where each step can take you to any of the neighboring cells, not necessarily distinct.\n# One possible approach is a Greedy approach where you always choose the smallest remaining numbers to add to your path. \n# We can do this by keeping track of the smallest remaining numbers in a priority queue and pop from it, always adding the smallest element to the path.\n# \n# 1. Initialize the priority queue with the first row of the grid, then while the size of the queue > 0:\n# 2. Dequeue the smallest number (a tuple with the cell coordinates and the number in the cell) from the queue.\n# 3. Add the number to the path.\n# 4. Add the next unseen numbers in the grid to the queue.\n# 5. If the length of the path == k, return the path.\n# 6. If not, repeat steps 2-5.\n# \n# Note: It's important to notice that, if we just return the path right away, the path might not be valid",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 75.40152430534363,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

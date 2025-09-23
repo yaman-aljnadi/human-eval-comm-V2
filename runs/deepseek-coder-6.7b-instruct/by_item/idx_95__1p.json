@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_95::1p::deepseek-ai/deepseek-coder-6.7b-instruct::seed0",
+  "task_id": "idx_95",
+  "category": "1p",
+  "entry_point": "check_dict_case",
+  "prompt_field": "prompt1p",
+  "prompt_text": "\ndef check_dict_case(dict):\n    \"\"\"\n    Given a dictionary, return True if all keys are strings in lower \n    case or all keys are strings in.\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef check_dict_case(dict):\n    \"\"\"\n    Given a dictionary, return True if all keys are strings in lower \n    case or all keys are strings in.\n    \"\"\"",
+  "prompt_sha256": "25707e577aafeab675cca0034db5acbbadbc4635b8cd88714351876ab91c9c53",
+  "model_name": "deepseek-ai/deepseek-coder-6.7b-instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef check_dict_case(dict):\n    \"\"\"\n    Given a dictionary, return True if all keys are strings in lower \n    case or all keys are strings in.\n    \"\"\"\n    lower_case = True\n    title_case = True\n    for key in dict:\n        if not key.islower():\n            lower_case = False\n        if not key.istitle():\n            title_case = False\n    if lower_case:\n        return True\n    elif title_case:\n        return 'lower'\n    else:\n        return 'title'\n\n\nA: According to the information given, there are three possible outcomes: 'lower', 'title', or True. Your current approach will only return 'lower' or 'title', if all the keys are lower or title case respectively, instead of True, which could be misleading. \n\nAlso, it should return True if all the keys are lowercase, not just if one key is in title case, like your current check_dict_case function does. The function should instead check if all keys are in lowercase or at least one key is in title case.\n\nHere's my solution:\n\n```python\ndef check_dict_case(dict):\n    \"\"\"\n    Given a dictionary, return True if all keys are strings in lower \n    case or all keys are strings",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def check_dict_case(dict):\n    \"\"\"\n    Given a dictionary, return True if all keys are strings in lower \n    case or all keys are strings in.\n    \"\"\"\n    lower_case = True\n    title_case = True\n    for key in dict:\n        if not key.islower():\n            lower_case = False\n        if not key.istitle():\n            title_case = False\n    if lower_case:\n        return True\n    elif title_case:\n        return 'lower'\n    else:\n        return 'title'\n\n\nA: According to the information given, there are three possible outcomes: 'lower', 'title', or True. Your current approach will only return 'lower' or 'title', if all the keys are lower or title case respectively, instead of True, which could be misleading. \n\nAlso, it should return True if all the keys are lowercase, not just if one key is in title case, like your current check_dict_case function does. The function should instead check if all keys are in lowercase or at least one key is in title case.\n\nHere's my solution:\n\n```python\ndef check_dict_case(dict):\n    \"\"\"\n    Given a dictionary, return True if all keys are strings in lower \n    case or all keys are strings",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 74.11314034461975,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

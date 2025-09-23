@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_20::1c::deepseek-ai/deepseek-coder-6.7b-instruct::seed0",
+  "task_id": "idx_20",
+  "category": "1c",
+  "entry_point": "find_closest_elements",
+  "prompt_field": "prompt1c",
+  "prompt_text": "from typing import List, Tuple\n\n\ndef find_closest_elements(numbers: List[float]) -> Tuple[float, float]:\n    \"\"\" From a supplied list of numbers (of length at least two) select and return two that are the closest to each\n    other and return them in order (smaller number, larger number).\n    >>> find_closest_elements([1.0, 2.0, 3.0, 4.0, 5.0, 2.2])\n    (1.0, 5.0)\n    >>> find_closest_elements([1.0, 2.0, 3.0, 4.0, 5.0, 2.0])\n    (1.0, 5.0)\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List, Tuple\n\n\ndef find_closest_elements(numbers: List[float]) -> Tuple[float, float]:\n    \"\"\" From a supplied list of numbers (of length at least two) select and return two that are the closest to each\n    other and return them in order (smaller number, larger number).\n    >>> find_closest_elements([1.0, 2.0, 3.0, 4.0, 5.0, 2.2])\n    (1.0, 5.0)\n    >>> find_closest_elements([1.0, 2.0, 3.0, 4.0, 5.0, 2.0])\n    (1.0, 5.0)\n    \"\"\"",
+  "prompt_sha256": "abd2d1f5cd085cd01cbb8475d9c595e211e817121fcd0cb22a59a3edb14fc952",
+  "model_name": "deepseek-ai/deepseek-coder-6.7b-instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List, Tuple\n\n\ndef find_closest_elements(numbers: List[float]) -> Tuple[float, float]:\n    \"\"\" From a supplied list of numbers (of length at least two) select and return two that are the closest to each\n    other and return them in order (smaller number, larger number).\n    >>> find_closest_elements([1.0, 2.0, 3.0, 4.0, 5.0, 2.2])\n    (1.0, 5.0)\n    >>> find_closest_elements([1.0, 2.0, 3.0, 4.0, 5.0, 2.0])\n    (1.0, 5.0)\n    \"\"\"\n    numbers.sort()\n    small = numbers[0]\n    large = numbers[-1]\n    return small, large\n\n\ndef sort_by_closest_elements(numbers: List[float]) -> List[float]:\n    \"\"\" Sort the supplied list of numbers by the condition defined in the description:\n    the elements are sorted such that their difference is as small as possible.\n    As the function returns a List[float], ensure that if the smallest two numbers are not provided,\n    the function will provide two closest numbers to 0.0 (from the smallest one to the largest one).\n    >>> sort_by_closest_elements([1.0, 2.0, 3.0, 4.0, 5.0, 2.2])\n    [5.0, 1.0, 2.2, 2.0, 3.0, 4.0]\n    >>> sort_by_closest_elements([1.0, 2.0, 3.0, 4.0, 5.0, 2.0])\n    [5.0, 1",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def find_closest_elements(numbers: List[float]) -> Tuple[float, float]:\n    \"\"\" From a supplied list of numbers (of length at least two) select and return two that are the closest to each\n    other and return them in order (smaller number, larger number).\n    >>> find_closest_elements([1.0, 2.0, 3.0, 4.0, 5.0, 2.2])\n    (1.0, 5.0)\n    >>> find_closest_elements([1.0, 2.0, 3.0, 4.0, 5.0, 2.0])\n    (1.0, 5.0)\n    \"\"\"\n    numbers.sort()\n    small = numbers[0]\n    large = numbers[-1]\n    return small, large\n\n\ndef sort_by_closest_elements(numbers: List[float]) -> List[float]:\n    \"\"\" Sort the supplied list of numbers by the condition defined in the description:\n    the elements are sorted such that their difference is as small as possible.\n    As the function returns a List[float], ensure that if the smallest two numbers are not provided,\n    the function will provide two closest numbers to 0.0 (from the smallest one to the largest one).\n    >>> sort_by_closest_elements([1.0, 2.0, 3.0, 4.0, 5.0, 2.2])\n    [5.0, 1.0, 2.2, 2.0, 3.0, 4.0]\n    >>> sort_by_closest_elements([1.0, 2.0, 3.0, 4.0, 5.0, 2.0])\n    [5.0, 1",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 45.99673390388489,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

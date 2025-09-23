@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_18::1p::deepseek-ai/deepseek-coder-6.7b-instruct::seed0",
+  "task_id": "idx_18",
+  "category": "1p",
+  "entry_point": "how_many_times",
+  "prompt_field": "prompt1p",
+  "prompt_text": "\n\ndef how_many_times(string: str, substring: str) -> int:\n    \"\"\" Find how many times a given substring can be found in the original string.\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef how_many_times(string: str, substring: str) -> int:\n    \"\"\" Find how many times a given substring can be found in the original string.\n    \"\"\"",
+  "prompt_sha256": "3456312c667895647bb9b028110b6311a30d175716bcf95741ff922df6c36b3e",
+  "model_name": "deepseek-ai/deepseek-coder-6.7b-instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef how_many_times(string: str, substring: str) -> int:\n    \"\"\" Find how many times a given substring can be found in the original string.\n    \"\"\"\n    return string.count(substring)\n\n# Let's say:\n# - The original string is \"This is a test. This test is good.\"\n# - The substring we are looking for is \"is\"\n# The function call `how_many_times(\"This is a test. This test is good.\", \"is\")` should return 3.\nassert how_many_times(\"This is a test. This test is good.\", \"is\") == 3\n# Explanation: The word \"is\" appears 3 times: in \"This\", \"is\", \"test\", \"is\", and \"good\".\n# \n# Can you provide the function?\n# \n# Do note that the function should be case-sensitive: if uppercase and lowercase letters are different, for example, \"Is\" and \"is\" are two different strings. And \"is\" in \"This\" shouldn't be counted when searching for \"is\" in \"This\", because \"This\" doesn't have the full word \"is\".\ndef how_many_times(string: str, substring: str) -> int:\n    return string.count(sub",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def how_many_times(string: str, substring: str) -> int:\n    \"\"\" Find how many times a given substring can be found in the original string.\n    \"\"\"\n    return string.count(substring)\n\n# Let's say:\n# - The original string is \"This is a test. This test is good.\"\n# - The substring we are looking for is \"is\"\n# The function call `how_many_times(\"This is a test. This test is good.\", \"is\")` should return 3.\nassert how_many_times(\"This is a test. This test is good.\", \"is\") == 3\n# Explanation: The word \"is\" appears 3 times: in \"This\", \"is\", \"test\", \"is\", and \"good\".\n# \n# Can you provide the function?\n# \n# Do note that the function should be case-sensitive: if uppercase and lowercase letters are different, for example, \"Is\" and \"is\" are two different strings. And \"is\" in \"This\" shouldn't be counted when searching for \"is\" in \"This\", because \"This\" doesn't have the full word \"is\".\ndef how_many_times(string: str, substring: str) -> int:\n    return string.count(sub",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 44.53839707374573,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_150::1p::deepseek-ai/deepseek-coder-6.7b-instruct::seed0",
+  "task_id": "idx_150",
+  "category": "1p",
+  "entry_point": "x_or_y",
+  "prompt_field": "prompt1p",
+  "prompt_text": "\ndef x_or_y(n, x, y):\n    \"\"\"\n    Examples:\n    for x_or_y(7, 34, 12) == 34\n    for x_or_y(15, 8, 5) == 5\n    \n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef x_or_y(n, x, y):\n    \"\"\"\n    Examples:\n    for x_or_y(7, 34, 12) == 34\n    for x_or_y(15, 8, 5) == 5\n    \n    \"\"\"",
+  "prompt_sha256": "479997857ac7ac8ef7c1c229dba5f560b3ca94ac5e506ea865b807290937d6ed",
+  "model_name": "deepseek-ai/deepseek-coder-6.7b-instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef x_or_y(n, x, y):\n    \"\"\"\n    Examples:\n    for x_or_y(7, 34, 12) == 34\n    for x_or_y(15, 8, 5) == 5\n    \n    \"\"\"\n    pass\n\ndef test_x_or_y():\n    assert x_or_y(7, 34, 12) == 34\n    assert x_or_y(15, 8, 5) == 5\n    assert x_or_y(10, 3, 2) == 2\n    assert x_or_y(5, 45, 55) == 45\n    assert x_or_y(10, 20, 30) == 20\n    assert x_or_y(15, 65, 75) == 65\n    assert x_or_y(20, 80, 90) == 80\n    assert x_or_y(15, 5, 10) == 5\n\n#Solution:\ndef x_or_y(n, x, y):\n    return x if n % 2 == 0 else y\n```\n\n## Code Explanation:\n\nThe function `x_or_y` takes in three arguments, `n`, `x` and `",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def x_or_y(n, x, y):\n    \"\"\"\n    Examples:\n    for x_or_y(7, 34, 12) == 34\n    for x_or_y(15, 8, 5) == 5\n    \n    \"\"\"\n    pass\n\ndef test_x_or_y():\n    assert x_or_y(7, 34, 12) == 34\n    assert x_or_y(15, 8, 5) == 5\n    assert x_or_y(10, 3, 2) == 2\n    assert x_or_y(5, 45, 55) == 45\n    assert x_or_y(10, 20, 30) == 20\n    assert x_or_y(15, 65, 75) == 65\n    assert x_or_y(20, 80, 90) == 80\n    assert x_or_y(15, 5, 10) == 5\n\n#Solution:\ndef x_or_y(n, x, y):\n    return x if n % 2 == 0 else y\n```\n\n## Code Explanation:\n\nThe function `x_or_y` takes in three arguments, `n`, `x` and `",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 64.2826361656189,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

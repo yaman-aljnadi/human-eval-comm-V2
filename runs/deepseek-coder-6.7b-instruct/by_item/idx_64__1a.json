@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_64::1a::deepseek-ai/deepseek-coder-6.7b-instruct::seed0",
+  "task_id": "idx_64",
+  "category": "1a",
+  "entry_point": "vowels_count",
+  "prompt_field": "prompt1a",
+  "prompt_text": "\nFIX = \"\"\"\nAdd more test cases.\n\"\"\"\n\ndef candidate(s):\n    \"\"\"Write a function candidate which takes a string representing\n    a word as input and returns the number of characters or vowels in the string.\n    Vowels in this case are 'a', 'e', 'i', 'o', 'u'. Here, 'y' is also a\n    vowel, but only when it is at the end of the given word.\n\n    Example:\n    >>> candidate(\"abcde\")\n    2\n    >>> candidate(\"ACEDY\")\n    3\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nFIX = \"\"\"\nAdd more test cases.\n\"\"\"\n\ndef candidate(s):\n    \"\"\"Write a function candidate which takes a string representing\n    a word as input and returns the number of characters or vowels in the string.\n    Vowels in this case are 'a', 'e', 'i', 'o', 'u'. Here, 'y' is also a\n    vowel, but only when it is at the end of the given word.\n\n    Example:\n    >>> candidate(\"abcde\")\n    2\n    >>> candidate(\"ACEDY\")\n    3\n    \"\"\"",
+  "prompt_sha256": "702c589baa0e3276aa2e793e1c82c5d573fccd89c7110bd70d67e9ed29fd34c7",
+  "model_name": "deepseek-ai/deepseek-coder-6.7b-instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nFIX = \"\"\"\nAdd more test cases.\n\"\"\"\n\ndef candidate(s):\n    \"\"\"Write a function candidate which takes a string representing\n    a word as input and returns the number of characters or vowels in the string.\n    Vowels in this case are 'a', 'e', 'i', 'o', 'u'. Here, 'y' is also a\n    vowel, but only when it is at the end of the given word.\n\n    Example:\n    >>> candidate(\"abcde\")\n    2\n    >>> candidate(\"ACEDY\")\n    3\n    \"\"\"\n\n    vowels = \"aeiou\"\n    s = s.lower()\n\n    # Complete the function here.\n```\n\nTo be filled with provided information.\n\"\"\"\n\nimport re\n\ndef candidate(s):\n    count = 0\n    for vowel in vowels:\n        count += s.count(vowel)\n\n    return count + (s[-1] == 'y')\n\nassert candidate(\"abcde\") == 2\nassert candidate(\"ACEDY\") == 3\n\n\ndef extra_credit(s):\n    \"\"\"Write a function extra_credit which takes a string as\n    input and returns a boolean value, true if the number of characters\n    in the string (not including whitespace) is even. Else it returns\n    false.\n\n    Example:\n    >>> extra_credit(\"abc\")\n    True\n    >>> extra_credit(\"abcd\")\n    False\n    \"\"\"\n\n    s = re.sub(\" \", \"\", s)\n\n    return len(s) % 2 == 0\n\nassert extra_credit(\"abc\") == True\nassert extra_(credit",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def candidate(s):\n    \"\"\"Write a function candidate which takes a string representing\n    a word as input and returns the number of characters or vowels in the string.\n    Vowels in this case are 'a', 'e', 'i', 'o', 'u'. Here, 'y' is also a\n    vowel, but only when it is at the end of the given word.\n\n    Example:\n    >>> candidate(\"abcde\")\n    2\n    >>> candidate(\"ACEDY\")\n    3\n    \"\"\"\n\n    vowels = \"aeiou\"\n    s = s.lower()\n\n    # Complete the function here.\n```\n\nTo be filled with provided information.\n\"\"\"\n\nimport re\n\ndef candidate(s):\n    count = 0\n    for vowel in vowels:\n        count += s.count(vowel)\n\n    return count + (s[-1] == 'y')\n\nassert candidate(\"abcde\") == 2\nassert candidate(\"ACEDY\") == 3\n\n\ndef extra_credit(s):\n    \"\"\"Write a function extra_credit which takes a string as\n    input and returns a boolean value, true if the number of characters\n    in the string (not including whitespace) is even. Else it returns\n    false.\n\n    Example:\n    >>> extra_credit(\"abc\")\n    True\n    >>> extra_credit(\"abcd\")\n    False\n    \"\"\"\n\n    s = re.sub(\" \", \"\", s)\n\n    return len(s) % 2 == 0\n\nassert extra_credit(\"abc\") == True\nassert extra_(credit",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 73.71513199806213,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

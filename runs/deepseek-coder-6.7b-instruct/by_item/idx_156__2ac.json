@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_156::2ac::deepseek-ai/deepseek-coder-6.7b-instruct::seed0",
+  "task_id": "idx_156",
+  "category": "2ac",
+  "entry_point": "int_to_mini_roman",
+  "prompt_field": "prompt2ac",
+  "prompt_text": "\ndef candidate(number):\n    \"\"\"\n    Given a positive integer, obtain its binary or hexadecimal or roman numeral equivalent as a string,\n    and return it in lowercase.\n    Restrictions: 1 <= num <= 1000\n\n    Examples:\n    >>> candidate(19) == 'xix'\n    >>> candidate(152) == 'iilc'\n    >>> candidate(426) == 'ivxxdc'\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(number):\n    \"\"\"\n    Given a positive integer, obtain its binary or hexadecimal or roman numeral equivalent as a string,\n    and return it in lowercase.\n    Restrictions: 1 <= num <= 1000\n\n    Examples:\n    >>> candidate(19) == 'xix'\n    >>> candidate(152) == 'iilc'\n    >>> candidate(426) == 'ivxxdc'\n    \"\"\"",
+  "prompt_sha256": "ca22bc8dbd786d22852eff9b6888efb019713da77886a10fb547b3b0df267279",
+  "model_name": "deepseek-ai/deepseek-coder-6.7b-instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(number):\n    \"\"\"\n    Given a positive integer, obtain its binary or hexadecimal or roman numeral equivalent as a string,\n    and return it in lowercase.\n    Restrictions: 1 <= num <= 1000\n\n    Examples:\n    >>> candidate(19) == 'xix'\n    >>> candidate(152) == 'iilc'\n    >>> candidate(426) == 'ivxxdc'\n    \"\"\"\n    int_to_roman = {1: 'i', 4: 'iv', 5: 'v', 9: 'ix', 10: 'x', 40: 'xl', 50: 'l', 90: 'xc', 100: 'c', 400: 'cd', 500: 'd', 900: 'cm', 1000:'m'}\n    res = ''\n    i = number\n    while i:\n        for key in sorted(int_to_roman.keys(), reverse=True):\n            while i >= key:\n                res += int_to_roman[key]\n                i -= key\n    return res\n    pass\n    \"\"\"\n\n    Examples:\n    >>> candidate(7) == '7'\n    >>> candidate(10) == 'a'\n    >>> candidate(13) =='m'\n    \"\"\"\n    int_to_bin = {2: '0000', 8: '1000', 4: '0100', 1: '",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def candidate(number):\n    \"\"\"\n    Given a positive integer, obtain its binary or hexadecimal or roman numeral equivalent as a string,\n    and return it in lowercase.\n    Restrictions: 1 <= num <= 1000\n\n    Examples:\n    >>> candidate(19) == 'xix'\n    >>> candidate(152) == 'iilc'\n    >>> candidate(426) == 'ivxxdc'\n    \"\"\"\n    int_to_roman = {1: 'i', 4: 'iv', 5: 'v', 9: 'ix', 10: 'x', 40: 'xl', 50: 'l', 90: 'xc', 100: 'c', 400: 'cd', 500: 'd', 900: 'cm', 1000:'m'}\n    res = ''\n    i = number\n    while i:\n        for key in sorted(int_to_roman.keys(), reverse=True):\n            while i >= key:\n                res += int_to_roman[key]\n                i -= key\n    return res\n    pass\n    \"\"\"\n\n    Examples:\n    >>> candidate(7) == '7'\n    >>> candidate(10) == 'a'\n    >>> candidate(13) =='m'\n    \"\"\"\n    int_to_bin = {2: '0000', 8: '1000', 4: '0100', 1: '",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 63.5489182472229,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

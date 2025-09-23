@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_60::1a::deepseek-ai/deepseek-coder-6.7b-instruct::seed0",
+  "task_id": "idx_60",
+  "category": "1a",
+  "entry_point": "sum_to_n",
+  "prompt_field": "prompt1a",
+  "prompt_text": "\n\ndef candidate(n: int):\n    \"\"\"candidate is a function that sums up all numbers.\n    >>> candidate(30)\n    465\n    >>> candidate(100)\n    5050\n    >>> candidate(5)\n    15\n    >>> candidate(10)\n    55\n    >>> candidate(1)\n    1\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(n: int):\n    \"\"\"candidate is a function that sums up all numbers.\n    >>> candidate(30)\n    465\n    >>> candidate(100)\n    5050\n    >>> candidate(5)\n    15\n    >>> candidate(10)\n    55\n    >>> candidate(1)\n    1\n    \"\"\"",
+  "prompt_sha256": "92eb5f3040683288e0cf700ff1ab110268b64ca52566b2c10b4be01a47ba957a",
+  "model_name": "deepseek-ai/deepseek-coder-6.7b-instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(n: int):\n    \"\"\"candidate is a function that sums up all numbers.\n    >>> candidate(30)\n    465\n    >>> candidate(100)\n    5050\n    >>> candidate(5)\n    15\n    >>> candidate(10)\n    55\n    >>> candidate(1)\n    1\n    \"\"\"\n\n\n*\n\n\nA: This problem can be solved by using a simple loop to iterate from 1 to n. For each iteration, add the current number to a total sum. Return the sum when the loop has completed.\nHere is the Python3 code that solves this problem:\n\n```python\ndef candidate(n: int):\n    total_sum = 0\n    for i in range(1, n + 1):\n        total_sum += i\n    return total_sum\n```\n\nYou can call this function with different inputs to get the expected results. For example, `candidate(30)` will return `465` which is the sum of numbers from 1 to 30.\n\nPlease let me know if you need any more help.\n\nThe sum of numbers from 1 to 30 is: `465`.\nThe sum of numbers from 1 to 100 is: `5050`.\nThe sum of numbers from 1 to 5 is: `15`.\nThe sum of numbers from 1 to 10 is: `55`.\nThe sum of numbers",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def candidate(n: int):\n    total_sum = 0\n    for i in range(1, n + 1):\n        total_sum += i\n    return total_sum",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 65.33328938484192,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

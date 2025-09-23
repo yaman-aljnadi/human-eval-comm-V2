@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_1::1p::deepseek-ai/deepseek-coder-6.7b-instruct::seed0",
+  "task_id": "idx_1",
+  "category": "1p",
+  "entry_point": "separate_paren_groups",
+  "prompt_field": "prompt1p",
+  "prompt_text": "from typing import List\n\n\ndef separate_paren_groups(paren_string: str) -> List[str]:\n    \"\"\" Input to this function is a string containing multiple groups of nested parentheses. Your goal is to\n \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List\n\n\ndef separate_paren_groups(paren_string: str) -> List[str]:\n    \"\"\" Input to this function is a string containing multiple groups of nested parentheses. Your goal is to\n \"\"\"",
+  "prompt_sha256": "75b7237aab987cbac7eaa562f6dfe23829eb1cd8ed4d2a0b6222ca9e4d99fb3d",
+  "model_name": "deepseek-ai/deepseek-coder-6.7b-instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List\n\n\ndef separate_paren_groups(paren_string: str) -> List[str]:\n    \"\"\" Input to this function is a string containing multiple groups of nested parentheses. Your goal is to\n \"\"\"\n\n\nA: We need to extract each group of parentheses separately. A group is defined as a contiguous set of parentheses, disregarding whitespace and other characters. For example, in this string:\n\n`\"(a * b) + (c * d)\"\n\nthere are two groups: `(a * b)` and `(c * d)`. \n\nThe function should return a List of the groups in the order they were found.\n\n```python\ndef separate_paren_groups(paren_string: str) -> List[str]:\n    stack = []\n    result = []\n    count = 0\n    temp = ''\n    for character in paren_string:\n        if character == '(':\n            count += 1\n            temp += character\n        if count > 1:\n            if character == ')' and temp[-1] == '(':\n                count -= 1\n                temp += character\n                result.append(temp)\n                temp = ''\n        else:\n            temp += character\n    return result\n\nprint(separate_paren_groups(\"(a*b)+",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def separate_paren_groups(paren_string: str) -> List[str]:\n    \"\"\" Input to this function is a string containing multiple groups of nested parentheses. Your goal is to\n \"\"\"\n\n\nA: We need to extract each group of parentheses separately. A group is defined as a contiguous set of parentheses, disregarding whitespace and other characters. For example, in this string:\n\n`\"(a * b) + (c * d)\"\n\nthere are two groups: `(a * b)` and `(c * d)`. \n\nThe function should return a List of the groups in the order they were found.\n\n```python\ndef separate_paren_groups(paren_string: str) -> List[str]:\n    stack = []\n    result = []\n    count = 0\n    temp = ''\n    for character in paren_string:\n        if character == '(':\n            count += 1\n            temp += character\n        if count > 1:\n            if character == ')' and temp[-1] == '(':\n                count -= 1\n                temp += character\n                result.append(temp)\n                temp = ''\n        else:\n            temp += character\n    return result\n\nprint(separate_paren_groups(\"(a*b)+",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 44.57491159439087,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

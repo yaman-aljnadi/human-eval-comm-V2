@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_9::1p::deepseek-ai/deepseek-coder-6.7b-instruct::seed0",
+  "task_id": "idx_9",
+  "category": "1p",
+  "entry_point": "rolling_max",
+  "prompt_field": "prompt1p",
+  "prompt_text": "from typing import List, Tuple\n\n\ndef rolling_max(numbers: List[int]) -> List[int]:\n    \"\"\" From a given list of integers, generate a list of rolling element.\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List, Tuple\n\n\ndef rolling_max(numbers: List[int]) -> List[int]:\n    \"\"\" From a given list of integers, generate a list of rolling element.\n    \"\"\"",
+  "prompt_sha256": "419983dc014275ac6680dd8e87cb8d4d44f09e8bb81e85d43bb855b783629b0a",
+  "model_name": "deepseek-ai/deepseek-coder-6.7b-instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List, Tuple\n\n\ndef rolling_max(numbers: List[int]) -> List[int]:\n    \"\"\" From a given list of integers, generate a list of rolling element.\n    \"\"\"\n    if not numbers:\n        return []\n    max_number = numbers[0]\n    rolling_max_numbers = [max_number]\n    for number in numbers[1:]:\n        if number > max_number:\n            max_number = number\n            rolling_max_numbers.append(max_number)\n    return rolling_max_numbers\n\n\n\n\ndef rolling_max_diff_with_index(numbers: List[int]) -> List[Tuple[int, int]]:\n    \"\"\" From a given list of integers, generate a list of tuples (difference, index) where difference is maximum difference between any two consecutive elements and index is index of max difference.\n    \"\"\"\n    if len(numbers) < 2:\n        return []\n    diffs_and_indices = []\n    max_diff = 0\n    max_diff_index = 0\n    prev_number = numbers[0]\n    for i, number in enumerate(numbers[1:], 1):\n        diff = abs(number - prev_number)\n        if diff > max_diff:\n",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def rolling_max(numbers: List[int]) -> List[int]:\n    \"\"\" From a given list of integers, generate a list of rolling element.\n    \"\"\"\n    if not numbers:\n        return []\n    max_number = numbers[0]\n    rolling_max_numbers = [max_number]\n    for number in numbers[1:]:\n        if number > max_number:\n            max_number = number\n            rolling_max_numbers.append(max_number)\n    return rolling_max_numbers\n\n\n\n\ndef rolling_max_diff_with_index(numbers: List[int]) -> List[Tuple[int, int]]:\n    \"\"\" From a given list of integers, generate a list of tuples (difference, index) where difference is maximum difference between any two consecutive elements and index is index of max difference.\n    \"\"\"\n    if len(numbers) < 2:\n        return []\n    diffs_and_indices = []\n    max_diff = 0\n    max_diff_index = 0\n    prev_number = numbers[0]\n    for i, number in enumerate(numbers[1:], 1):\n        diff = abs(number - prev_number)\n        if diff > max_diff:",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 44.97033357620239,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

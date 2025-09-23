@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_6::1a::deepseek-ai/deepseek-coder-6.7b-instruct::seed0",
+  "task_id": "idx_6",
+  "category": "1a",
+  "entry_point": "parse_nested_parens",
+  "prompt_field": "prompt1a",
+  "prompt_text": "from typing import List\n\n\ndef candidate(paren_string: str) -> List[int]:\n    \"\"\" Input to this function is a string represented multiple groups for nested parentheses separated by certain characters.\n    For each of the group, output the deepest level of nesting of parentheses.\n    E.g. (()()) has maximum two levels of nesting while ((())) has three.\n\n    >>> candidate('(()()) ((())) () ((())()())')\n    [2, 3, 1, 3]\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List\n\n\ndef candidate(paren_string: str) -> List[int]:\n    \"\"\" Input to this function is a string represented multiple groups for nested parentheses separated by certain characters.\n    For each of the group, output the deepest level of nesting of parentheses.\n    E.g. (()()) has maximum two levels of nesting while ((())) has three.\n\n    >>> candidate('(()()) ((())) () ((())()())')\n    [2, 3, 1, 3]\n    \"\"\"",
+  "prompt_sha256": "cc513998f07365782d953dfbb0066175f7917412b1e284d4edee22daf2f801df",
+  "model_name": "deepseek-ai/deepseek-coder-6.7b-instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List\n\n\ndef candidate(paren_string: str) -> List[int]:\n    \"\"\" Input to this function is a string represented multiple groups for nested parentheses separated by certain characters.\n    For each of the group, output the deepest level of nesting of parentheses.\n    E.g. (()()) has maximum two levels of nesting while ((())) has three.\n\n    >>> candidate('(()()) ((())) () ((())()())')\n    [2, 3, 1, 3]\n    \"\"\"\n    levels = []\n    # complete logic here:\n\n    return levels\n\n\nA: You can solve this problem by tracking the current level of nesting and resetting it whenever you find a pair of matched parentheses. Here is a Python solution that takes advantage of Python's built-in string methods:\n\n```python\nfrom typing import List\n\ndef candidate(paren_string: str) -> List[int]:\n    # split string into parentheses groups\n    groups = paren_string.split()\n    levels = []\n    \n    for group in groups:\n        current_level = 0\n        max_level = 0\n        # for each character in the group, update current level according to the type of parenthesis\n        for char in group:\n            if char == \"(\":\n                current_level += 1\n                # update max level if current level is greater\n                max_level = max(max_level, current_level)\n            elif char == \")\":\n                current_level -= 1\n        levels.append(max_level)\n    return levels\n```\n\nIn this solution, the function splits the input",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "from typing import List\n\ndef candidate(paren_string: str) -> List[int]:\n    # split string into parentheses groups\n    groups = paren_string.split()\n    levels = []\n    \n    for group in groups:\n        current_level = 0\n        max_level = 0\n        # for each character in the group, update current level according to the type of parenthesis\n        for char in group:\n            if char == \"(\":\n                current_level += 1\n                # update max level if current level is greater\n                max_level = max(max_level, current_level)\n            elif char == \")\":\n                current_level -= 1\n        levels.append(max_level)\n    return levels",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 45.426989793777466,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

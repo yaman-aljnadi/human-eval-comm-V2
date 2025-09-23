@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_105::2ap::deepseek-ai/deepseek-coder-6.7b-instruct::seed0",
+  "task_id": "idx_105",
+  "category": "2ap",
+  "entry_point": "by_length",
+  "prompt_field": "prompt2ap",
+  "prompt_text": "\ndef by_length(arr):\n    \"\"\"\n    Given an array of integers, sort the integers descendingly or ascendingly that are between 1 and 9 inclusive,\n    reverse the resulting array, and then replace each digit by its corresponding name from\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef by_length(arr):\n    \"\"\"\n    Given an array of integers, sort the integers descendingly or ascendingly that are between 1 and 9 inclusive,\n    reverse the resulting array, and then replace each digit by its corresponding name from\n    \"\"\"",
+  "prompt_sha256": "870332314c6bf273db6ec664d6686d9a6e401a73c5b542fb7358972bffa2ff1c",
+  "model_name": "deepseek-ai/deepseek-coder-6.7b-instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef by_length(arr):\n    \"\"\"\n    Given an array of integers, sort the integers descendingly or ascendingly that are between 1 and 9 inclusive,\n    reverse the resulting array, and then replace each digit by its corresponding name from\n    \"\"\"\n    dict = {0: 'Zero', 1: 'One', 2: 'Two', 3: 'Three', 4: 'Four', 5: 'Five', 6: 'Six', 7: 'Seven', 8: 'Eight', 9: 'Nine'}\n    one_to_nine = [str(i) for i in range(1, 10)]\n    result = [str(i) for i in arr if i in one_to_nine]\n    result.sort(key=len, reverse=True)\n    final_result = [dict[int(i)] for i in result]\n    return final_result\n    \"\"\"\n    your code goes here\n    \"\"\"\n    \"\"\"\n    Sample inputs:\n    - by_length([5, 2, 3, 1, 0, 4])\n    - by_length([1, 2, 3, 0])\n    \"\"\"\n\n\nA:\n```python\ndef by_length(arr):\n    dict = {0: 'Zero', 1: 'One', 2: '",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def by_length(arr):\n    \"\"\"\n    Given an array of integers, sort the integers descendingly or ascendingly that are between 1 and 9 inclusive,\n    reverse the resulting array, and then replace each digit by its corresponding name from\n    \"\"\"\n    dict = {0: 'Zero', 1: 'One', 2: 'Two', 3: 'Three', 4: 'Four', 5: 'Five', 6: 'Six', 7: 'Seven', 8: 'Eight', 9: 'Nine'}\n    one_to_nine = [str(i) for i in range(1, 10)]\n    result = [str(i) for i in arr if i in one_to_nine]\n    result.sort(key=len, reverse=True)\n    final_result = [dict[int(i)] for i in result]\n    return final_result\n    \"\"\"\n    your code goes here\n    \"\"\"\n    \"\"\"\n    Sample inputs:\n    - by_length([5, 2, 3, 1, 0, 4])\n    - by_length([1, 2, 3, 0])\n    \"\"\"\n\n\nA:\n```python\ndef by_length(arr):\n    dict = {0: 'Zero', 1: 'One', 2: '",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 63.7760329246521,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

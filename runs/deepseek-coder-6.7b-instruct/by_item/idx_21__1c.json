@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_21::1c::deepseek-ai/deepseek-coder-6.7b-instruct::seed0",
+  "task_id": "idx_21",
+  "category": "1c",
+  "entry_point": "rescale_to_unit",
+  "prompt_field": "prompt1c",
+  "prompt_text": "from typing import List\n\n\ndef rescale_to_unit(numbers: List[float]) -> List[float]:\n    \"\"\" Given list of numbers (of at least two elements), apply a linear transform to that list,\n    such that the smallest number will become 0 and the largest will become 1\n    >>> rescale_to_unit([1.0, 2.0, 3.0, 4.0, 5.0])\n    [1.0, 0.75, 0.5, 0.25, 0.0]\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List\n\n\ndef rescale_to_unit(numbers: List[float]) -> List[float]:\n    \"\"\" Given list of numbers (of at least two elements), apply a linear transform to that list,\n    such that the smallest number will become 0 and the largest will become 1\n    >>> rescale_to_unit([1.0, 2.0, 3.0, 4.0, 5.0])\n    [1.0, 0.75, 0.5, 0.25, 0.0]\n    \"\"\"",
+  "prompt_sha256": "42f732bb8d4061bf186c49a85f6a691e4c36acce8fc147be5ea010f757aaa476",
+  "model_name": "deepseek-ai/deepseek-coder-6.7b-instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List\n\n\ndef rescale_to_unit(numbers: List[float]) -> List[float]:\n    \"\"\" Given list of numbers (of at least two elements), apply a linear transform to that list,\n    such that the smallest number will become 0 and the largest will become 1\n    >>> rescale_to_unit([1.0, 2.0, 3.0, 4.0, 5.0])\n    [1.0, 0.75, 0.5, 0.25, 0.0]\n    \"\"\"\n\nThank you in advance.\n\nA: You can solve this problem by using the built-in `min()` and `max()` functions in Python to find the minimum and maximum values in the list, then use a list comprehension to create a new list where each value is rescaled to be between 0 and 1. Here is the Python code that accomplishes this:\n\n```python\nfrom typing import List\n\ndef rescale_to_unit(numbers: List[float]) -> List[float]:\n    min_val = min(numbers)\n    max_val = max(numbers)\n    range_val = max_val - min_val\n    return [(n - min_val) / range_val for n in numbers]\n```\nThis function first finds the minimum and maximum values in the input list. It then calculates the range of the input values (maximum value minus minimum value). Finally, it uses a list comprehension to create a new list where each value is rescaled to be between 0 and 1 by subtracting the minimum value and dividing by the range of the input values.\n\nThis code assumes that the",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "from typing import List\n\ndef rescale_to_unit(numbers: List[float]) -> List[float]:\n    min_val = min(numbers)\n    max_val = max(numbers)\n    range_val = max_val - min_val\n    return [(n - min_val) / range_val for n in numbers]",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 46.14006996154785,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

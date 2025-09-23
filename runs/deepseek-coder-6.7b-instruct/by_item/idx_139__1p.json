@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_139::1p::deepseek-ai/deepseek-coder-6.7b-instruct::seed0",
+  "task_id": "idx_139",
+  "category": "1p",
+  "entry_point": "special_factorial",
+  "prompt_field": "prompt1p",
+  "prompt_text": "\ndef special_factorial(n):\n    \"\"\"The Brazilian factorial is defined as:\n    brazilian_factorial(n) = \n   \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef special_factorial(n):\n    \"\"\"The Brazilian factorial is defined as:\n    brazilian_factorial(n) = \n   \"\"\"",
+  "prompt_sha256": "59ffcc3ad1d27a79bffc6843ef0d1643fdbe091ce7e2a8bebea43754cfd02e77",
+  "model_name": "deepseek-ai/deepseek-coder-6.7b-instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef special_factorial(n):\n    \"\"\"The Brazilian factorial is defined as:\n    brazilian_factorial(n) = \n   \"\"\"\n\nI wrote:\n\nif n==1:\n    return 1\nelse:\n    return n * special_factorial(n-1)\n\nI think. \n\nFor this problem, however, there is one additional condition that should be considered: \n- If n is 0 or lower, the function should return 1.\n- If n is even, the function should return n * special_factorial(n-2), instead of n * special_factorial(n-1)\n\nBut there is one more issue to consider:\n\nThe Brazilian factorial function is not like the regular factorial function. \nInstead of being factorial of the number, its output is a product of the factorials of the number \nand all the numbers less than it which are evenly divisible by it. \n\nSo I wrote the updated code as below:\n\ndef special_factorial(n, p=2):\n    \"\"\"The Brazilian factorial is defined as:\n    brazilian_factorial(n, p) = n * factorial(n/p) * p\n    \"\"\"\n    if n == 0 or n == 1",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def special_factorial(n):\n    \"\"\"The Brazilian factorial is defined as:\n    brazilian_factorial(n) = \n   \"\"\"\n\nI wrote:\n\nif n==1:\n    return 1\nelse:\n    return n * special_factorial(n-1)\n\nI think. \n\nFor this problem, however, there is one additional condition that should be considered: \n- If n is 0 or lower, the function should return 1.\n- If n is even, the function should return n * special_factorial(n-2), instead of n * special_factorial(n-1)\n\nBut there is one more issue to consider:\n\nThe Brazilian factorial function is not like the regular factorial function. \nInstead of being factorial of the number, its output is a product of the factorials of the number \nand all the numbers less than it which are evenly divisible by it. \n\nSo I wrote the updated code as below:\n\ndef special_factorial(n, p=2):\n    \"\"\"The Brazilian factorial is defined as:\n    brazilian_factorial(n, p) = n * factorial(n/p) * p\n    \"\"\"\n    if n == 0 or n == 1",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 63.18614149093628,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_146::2ac::deepseek-ai/deepseek-coder-6.7b-instruct::seed0",
+  "task_id": "idx_146",
+  "category": "2ac",
+  "entry_point": "specialFilter",
+  "prompt_field": "prompt2ac",
+  "prompt_text": "\ndef specialFilter(nums):\n    \"\"\"Write a function that takes an array of numbers as input and returns \n    the number of elements in the array that are less than or greater than or exactly 10 and both \n    first and last digits of a number are odd (1, 3, 5, 7, 9) or even (0, 2, 4, 6, 8).\n    For example:\n    specialFilter([15, -73, 14, -15]) => 1 \n    specialFilter([33, -2, -3, 45, 21, 109]) => 2\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef specialFilter(nums):\n    \"\"\"Write a function that takes an array of numbers as input and returns \n    the number of elements in the array that are less than or greater than or exactly 10 and both \n    first and last digits of a number are odd (1, 3, 5, 7, 9) or even (0, 2, 4, 6, 8).\n    For example:\n    specialFilter([15, -73, 14, -15]) => 1 \n    specialFilter([33, -2, -3, 45, 21, 109]) => 2\n    \"\"\"",
+  "prompt_sha256": "16df1d481cfef46c947490b23cdc024a4519a044b17634429baf13bd95e2cb33",
+  "model_name": "deepseek-ai/deepseek-coder-6.7b-instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef specialFilter(nums):\n    \"\"\"Write a function that takes an array of numbers as input and returns \n    the number of elements in the array that are less than or greater than or exactly 10 and both \n    first and last digits of a number are odd (1, 3, 5, 7, 9) or even (0, 2, 4, 6, 8).\n    For example:\n    specialFilter([15, -73, 14, -15]) => 1 \n    specialFilter([33, -2, -3, 45, 21, 109]) => 2\n    \"\"\"\n    def is_special(num):\n        # check if first and last digits are odd or even\n        first_digit = str(num)[0]\n        last_digit = str(num)[-1]\n        if (int(first_digit) % 2 == 1)!= (int(last_digit) % 2 == 1):\n            return abs(num) > 10\n        return False\n    return sum(map(is_special, nums))\n\nprint(specialFilter([15, -73, 14, -15]))\nprint(specialFilter([33, -2, -3, 45, 21, 109]))\n\n'''\nMy initial approach was to convert numbers to strings, and check if the first and last digits of a number are odd or even by converting these digits back to integers. For numbers where the first and last digits are not equal, we only count if the absolute value of the number is greater than 10.\n\nThe time complexity of this solution is O(n), where n is the number of elements in the input list,",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def specialFilter(nums):\n    \"\"\"Write a function that takes an array of numbers as input and returns \n    the number of elements in the array that are less than or greater than or exactly 10 and both \n    first and last digits of a number are odd (1, 3, 5, 7, 9) or even (0, 2, 4, 6, 8).\n    For example:\n    specialFilter([15, -73, 14, -15]) => 1 \n    specialFilter([33, -2, -3, 45, 21, 109]) => 2\n    \"\"\"\n    def is_special(num):\n        # check if first and last digits are odd or even\n        first_digit = str(num)[0]\n        last_digit = str(num)[-1]\n        if (int(first_digit) % 2 == 1)!= (int(last_digit) % 2 == 1):\n            return abs(num) > 10\n        return False\n    return sum(map(is_special, nums))\n\nprint(specialFilter([15, -73, 14, -15]))\nprint(specialFilter([33, -2, -3, 45, 21, 109]))\n\n'''\nMy initial approach was to convert numbers to strings, and check if the first and last digits of a number are odd or even by converting these digits back to integers. For numbers where the first and last digits are not equal, we only count if the absolute value of the number is greater than 10.\n\nThe time complexity of this solution is O(n), where n is the number of elements in the input list,",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 66.75207042694092,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

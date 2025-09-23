@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_17::1c::deepseek-ai/deepseek-coder-6.7b-instruct::seed0",
+  "task_id": "idx_17",
+  "category": "1c",
+  "entry_point": "parse_music",
+  "prompt_field": "prompt1c",
+  "prompt_text": "from typing import List\n\n\ndef parse_music(music_string: str) -> List[int]:\n    \"\"\" Input to this function is a string representing musical notes in a special ASCII format.\n    Your task is to parse this string and return list of integers corresponding to how many beats does each\n    not last.\n\n    Here is a legend:\n    'o' - whole note, lasts four beats\n    'o|' - half note, lasts two beats\n    '.|' - quater note, lasts one beat\n\n    >>> parse_music('o o| .| o| o| .| .| .| .| o o')\n    [1, 4, 2, 4, 4, 2, 2, 2, 2, 1, 1]\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List\n\n\ndef parse_music(music_string: str) -> List[int]:\n    \"\"\" Input to this function is a string representing musical notes in a special ASCII format.\n    Your task is to parse this string and return list of integers corresponding to how many beats does each\n    not last.\n\n    Here is a legend:\n    'o' - whole note, lasts four beats\n    'o|' - half note, lasts two beats\n    '.|' - quater note, lasts one beat\n\n    >>> parse_music('o o| .| o| o| .| .| .| .| o o')\n    [1, 4, 2, 4, 4, 2, 2, 2, 2, 1, 1]\n    \"\"\"",
+  "prompt_sha256": "e861664dd955a2c2b18aa9ed4c4b94ab2ec1399da750b79369e3a26452b8645d",
+  "model_name": "deepseek-ai/deepseek-coder-6.7b-instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List\n\n\ndef parse_music(music_string: str) -> List[int]:\n    \"\"\" Input to this function is a string representing musical notes in a special ASCII format.\n    Your task is to parse this string and return list of integers corresponding to how many beats does each\n    not last.\n\n    Here is a legend:\n    'o' - whole note, lasts four beats\n    'o|' - half note, lasts two beats\n    '.|' - quater note, lasts one beat\n\n    >>> parse_music('o o| .| o| o| .| .| .| .| o o')\n    [1, 4, 2, 4, 4, 2, 2, 2, 2, 1, 1]\n    \"\"\"\n\n    notes = music_string.split()\n    beats = []\n    for note in notes:\n        if note == 'o':\n            beats.append(4)\n        elif note == 'o|':\n            beats.append(2)\n        elif note == '.|':\n            beats.append(1)\n    return beats\n\n\nif __name__ == \"__main__\":\n    import doctest\n    doctest.testmod()\n\nI've tried to write the solution in Python3:\ndef parse_music(music_string: str) -> List[int]:\n    notes = music_string.split()\n    beats = []\n    for note in notes:\n        if note == 'o':\n            beats.append(4)\n        elif note == 'o|':\n            beats.append(2)\n        elif note == '.|':\n            beats.append(1)\n    return beats\n\n\nprint(parse_music('o o|.| o| o|.|.|.|.| o o'))\n\nBut",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def parse_music(music_string: str) -> List[int]:\n    \"\"\" Input to this function is a string representing musical notes in a special ASCII format.\n    Your task is to parse this string and return list of integers corresponding to how many beats does each\n    not last.\n\n    Here is a legend:\n    'o' - whole note, lasts four beats\n    'o|' - half note, lasts two beats\n    '.|' - quater note, lasts one beat\n\n    >>> parse_music('o o| .| o| o| .| .| .| .| o o')\n    [1, 4, 2, 4, 4, 2, 2, 2, 2, 1, 1]\n    \"\"\"\n\n    notes = music_string.split()\n    beats = []\n    for note in notes:\n        if note == 'o':\n            beats.append(4)\n        elif note == 'o|':\n            beats.append(2)\n        elif note == '.|':\n            beats.append(1)\n    return beats\n\n\nif __name__ == \"__main__\":\n    import doctest\n    doctest.testmod()\n\nI've tried to write the solution in Python3:\ndef parse_music(music_string: str) -> List[int]:\n    notes = music_string.split()\n    beats = []\n    for note in notes:\n        if note == 'o':\n            beats.append(4)\n        elif note == 'o|':\n            beats.append(2)\n        elif note == '.|':\n            beats.append(1)\n    return beats\n\n\nprint(parse_music('o o|.| o| o|.|.|.|.| o o'))\n\nBut",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 45.89528846740723,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

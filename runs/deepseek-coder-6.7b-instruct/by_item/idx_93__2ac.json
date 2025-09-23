@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_93::2ac::deepseek-ai/deepseek-coder-6.7b-instruct::seed0",
+  "task_id": "idx_93",
+  "category": "2ac",
+  "entry_point": "encode",
+  "prompt_field": "prompt2ac",
+  "prompt_text": "\ndef encode(message):\n    \"\"\"\n    Write a function that takes a message, and encodes in such a \n    way that it swaps case of all letters, replaces all vowels in \n    the message with the letter that appears several places ahead of that \n    vowel in the english alphabet. \n    Assume only letters. \n    \n    Examples:\n    >>> encode('test')\n    'TEST'\n    >>> encode('This is a message')\n    'tHIS IS A MESSAGE'\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef encode(message):\n    \"\"\"\n    Write a function that takes a message, and encodes in such a \n    way that it swaps case of all letters, replaces all vowels in \n    the message with the letter that appears several places ahead of that \n    vowel in the english alphabet. \n    Assume only letters. \n    \n    Examples:\n    >>> encode('test')\n    'TEST'\n    >>> encode('This is a message')\n    'tHIS IS A MESSAGE'\n    \"\"\"",
+  "prompt_sha256": "c42268e1612c328d5a224f691c82044327e8e6e7108b06be8e67fa199020f7da",
+  "model_name": "deepseek-ai/deepseek-coder-6.7b-instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef encode(message):\n    \"\"\"\n    Write a function that takes a message, and encodes in such a \n    way that it swaps case of all letters, replaces all vowels in \n    the message with the letter that appears several places ahead of that \n    vowel in the english alphabet. \n    Assume only letters. \n    \n    Examples:\n    >>> encode('test')\n    'TEST'\n    >>> encode('This is a message')\n    'tHIS IS A MESSAGE'\n    \"\"\"\n\n\nA: The Python function provided below achieves the required functionality. This function uses the built-in Python string methods.\n\n```python\ndef encode(message):\n    vowel_map = {'a': 'e', 'e': 'i', 'i': 'o', 'o': 'u', 'u': 'a',\n                 'A': 'E', 'E': 'I', 'I': 'O', 'O': 'U', 'U': 'A'}\n    encoded = \"\"\n    for char in message:\n        if char.isalpha():\n            encoded += vowel_map[char] if char in vowel_map else char\n        else:\n            encoded += char\n    return encoded\n```\n\nThis Python3 function takes a string as an input. It checks each character in the string if it's an alphabet letter or not. \nIf it's an alphabet letter, it uses the \"vowel_map\" dictionary to map it to another vowel. If the character is not a vowel, the function just appends the character to the \"encoded\" string as is. Characters that are not alphab",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def encode(message):\n    vowel_map = {'a': 'e', 'e': 'i', 'i': 'o', 'o': 'u', 'u': 'a',\n                 'A': 'E', 'E': 'I', 'I': 'O', 'O': 'U', 'U': 'A'}\n    encoded = \"\"\n    for char in message:\n        if char.isalpha():\n            encoded += vowel_map[char] if char in vowel_map else char\n        else:\n            encoded += char\n    return encoded",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 75.40062975883484,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

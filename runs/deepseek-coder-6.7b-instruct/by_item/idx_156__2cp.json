@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_156::2cp::deepseek-ai/deepseek-coder-6.7b-instruct::seed0",
+  "task_id": "idx_156",
+  "category": "2cp",
+  "entry_point": "int_to_mini_roman",
+  "prompt_field": "prompt2cp",
+  "prompt_text": "\ndef candidate(number):\n    \"\"\"\n    Restrictions: 1 <= num <= 1000\n\n    Examples:\n    >>> candidate(19) == 'xix'\n    >>> candidate(152) == 'iilc'\n    >>> candidate(426) == 'ivxxdc'\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(number):\n    \"\"\"\n    Restrictions: 1 <= num <= 1000\n\n    Examples:\n    >>> candidate(19) == 'xix'\n    >>> candidate(152) == 'iilc'\n    >>> candidate(426) == 'ivxxdc'\n    \"\"\"",
+  "prompt_sha256": "86011918a85ca247384bba5c59c0eaf92f87cc79be1202aa8a9dc3ab7b3849dd",
+  "model_name": "deepseek-ai/deepseek-coder-6.7b-instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(number):\n    \"\"\"\n    Restrictions: 1 <= num <= 1000\n\n    Examples:\n    >>> candidate(19) == 'xix'\n    >>> candidate(152) == 'iilc'\n    >>> candidate(426) == 'ivxxdc'\n    \"\"\"\n    dict_num_str = {1: 'i', 4: 'iv', 5: 'v', 9: 'ix', 10: 'x'}\n    result = ''\n\n    while number > 0:\n        for key, value in sorted(dict_num_str.items(), reverse=True):\n            while number >= key:\n                result += value\n                number -= key\n\n    return result\n\ndef decode(r):\n    dict_num_str = {1: 'i', 4: 'iv', 5: 'v', 9: 'ix', 10: 'x'}\n    num = 0\n\n    for value, key in dict_num_str.items():\n        r = r.replace(key, str(value))\n        num += value * r.count(str(value))\n        r = r.replace(str(value), '')\n        \n    return num\n\nprint(candidate(19))\nprint(decode(candidate(19)))\nprint(candidate(426))\nprint(decode(candidate(426)))\n",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def candidate(number):\n    \"\"\"\n    Restrictions: 1 <= num <= 1000\n\n    Examples:\n    >>> candidate(19) == 'xix'\n    >>> candidate(152) == 'iilc'\n    >>> candidate(426) == 'ivxxdc'\n    \"\"\"\n    dict_num_str = {1: 'i', 4: 'iv', 5: 'v', 9: 'ix', 10: 'x'}\n    result = ''\n\n    while number > 0:\n        for key, value in sorted(dict_num_str.items(), reverse=True):\n            while number >= key:\n                result += value\n                number -= key\n\n    return result\n\ndef decode(r):\n    dict_num_str = {1: 'i', 4: 'iv', 5: 'v', 9: 'ix', 10: 'x'}\n    num = 0\n\n    for value, key in dict_num_str.items():\n        r = r.replace(key, str(value))\n        num += value * r.count(str(value))\n        r = r.replace(str(value), '')\n        \n    return num\n\nprint(candidate(19))\nprint(decode(candidate(19)))\nprint(candidate(426))\nprint(decode(candidate(426)))",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 62.17021322250366,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

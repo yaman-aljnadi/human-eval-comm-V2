@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_6::1p::deepseek-ai/deepseek-coder-6.7b-instruct::seed0",
+  "task_id": "idx_6",
+  "category": "1p",
+  "entry_point": "parse_nested_parens",
+  "prompt_field": "prompt1p",
+  "prompt_text": "from typing import List\n\n\ndef parse_nested_parens(paren_string: str) -> List[int]:\n    \"\"\" Input to this function is a string represented multiple groups for nested parentheses separated by spaces.\n    For each of the group, output an integer\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List\n\n\ndef parse_nested_parens(paren_string: str) -> List[int]:\n    \"\"\" Input to this function is a string represented multiple groups for nested parentheses separated by spaces.\n    For each of the group, output an integer\n    \"\"\"",
+  "prompt_sha256": "7dd62bfb90bee0dde28583e5160fefd67975be0d54828803b9dc7d434fe4155e",
+  "model_name": "deepseek-ai/deepseek-coder-6.7b-instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List\n\n\ndef parse_nested_parens(paren_string: str) -> List[int]:\n    \"\"\" Input to this function is a string represented multiple groups for nested parentheses separated by spaces.\n    For each of the group, output an integer\n    \"\"\"\n    def get_next_group(index: int) -> str:\n        \"\"\"Finds the next group of parentheses in paren_string.\"\"\"\n        start = index\n        while index < len(paren_string) and paren_string[index]!='':\n            index += 1\n        return paren_string[start:index]\n\n    def get_level(group: str) -> int:\n        \"\"\"Returns the level of nesting of a single group.\"\"\"\n        count = 0\n        for char in group:\n            if char == '(':\n                count += 1\n            elif char == ')':\n                count -= 1\n        return count\n\n    results = []\n    index = 0\n    while index < len(paren_string):\n        group = get_next_group(index)\n        results.append(get_level(group))\n        index += len(group) + 1  # Plus 1 for the space\n    return results\n\nprint(parse_nested_parens(\"(()) (())\"))\n\n\"\"\"In the provided example, the function should return [1, ",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def parse_nested_parens(paren_string: str) -> List[int]:\n    \"\"\" Input to this function is a string represented multiple groups for nested parentheses separated by spaces.\n    For each of the group, output an integer\n    \"\"\"\n    def get_next_group(index: int) -> str:\n        \"\"\"Finds the next group of parentheses in paren_string.\"\"\"\n        start = index\n        while index < len(paren_string) and paren_string[index]!='':\n            index += 1\n        return paren_string[start:index]\n\n    def get_level(group: str) -> int:\n        \"\"\"Returns the level of nesting of a single group.\"\"\"\n        count = 0\n        for char in group:\n            if char == '(':\n                count += 1\n            elif char == ')':\n                count -= 1\n        return count\n\n    results = []\n    index = 0\n    while index < len(paren_string):\n        group = get_next_group(index)\n        results.append(get_level(group))\n        index += len(group) + 1  # Plus 1 for the space\n    return results\n\nprint(parse_nested_parens(\"(()) (())\"))\n\n\"\"\"In the provided example, the function should return [1,",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 45.22357702255249,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_9::2ap::deepseek-ai/deepseek-coder-6.7b-instruct::seed0",
+  "task_id": "idx_9",
+  "category": "2ap",
+  "entry_point": "rolling_max",
+  "prompt_field": "prompt2ap",
+  "prompt_text": "from typing import List, Tuple\n\n\ndef candidate(numbers: List[int]) -> List[int]:\n    \"\"\" From a given list of integers, generate a list of rolling element.\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List, Tuple\n\n\ndef candidate(numbers: List[int]) -> List[int]:\n    \"\"\" From a given list of integers, generate a list of rolling element.\n    \"\"\"",
+  "prompt_sha256": "8aada1b86e14aa7242c9b322371587bf901aa2914d065168d274e41388a08219",
+  "model_name": "deepseek-ai/deepseek-coder-6.7b-instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List, Tuple\n\n\ndef candidate(numbers: List[int]) -> List[int]:\n    \"\"\" From a given list of integers, generate a list of rolling element.\n    \"\"\"\n    return [numbers[i] for i in range(len(numbers))]\n\n\ndef pairs(numbers: List[int]) -> List[Tuple[int, int]]:\n    \"\"\" Form pairs from a given list of integers.\n    \"\"\"\n    return [(numbers[i], numbers[i + 1]) for i in range(0, len(numbers), 2)]\n\n\ndef transpose(matrix: List[List[int]]) -> List[List[int]]:\n    \"\"\" Transpose the given matrix.\n    \"\"\"\n    return [[row[i] for row in matrix] for i in range(len(matrix[0]))]\n\n\ndef matrix_multiply(matrix1: List[List[int]], matrix2: List[List[int]]) -> List[List[int]]:\n    \"\"\" Multiply two matrices.\n    \"\"\"\n    # Transpose matrix2 for matrix multiplication\n    matrix2_t = transpose(matrix2)\n    return [[sum(a * b for a, b in zip(row, col)) for col in matrix2_t] for",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def candidate(numbers: List[int]) -> List[int]:\n    \"\"\" From a given list of integers, generate a list of rolling element.\n    \"\"\"\n    return [numbers[i] for i in range(len(numbers))]\n\n\ndef pairs(numbers: List[int]) -> List[Tuple[int, int]]:\n    \"\"\" Form pairs from a given list of integers.\n    \"\"\"\n    return [(numbers[i], numbers[i + 1]) for i in range(0, len(numbers), 2)]\n\n\ndef transpose(matrix: List[List[int]]) -> List[List[int]]:\n    \"\"\" Transpose the given matrix.\n    \"\"\"\n    return [[row[i] for row in matrix] for i in range(len(matrix[0]))]\n\n\ndef matrix_multiply(matrix1: List[List[int]], matrix2: List[List[int]]) -> List[List[int]]:\n    \"\"\" Multiply two matrices.\n    \"\"\"\n    # Transpose matrix2 for matrix multiplication\n    matrix2_t = transpose(matrix2)\n    return [[sum(a * b for a, b in zip(row, col)) for col in matrix2_t] for",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 44.449076414108276,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

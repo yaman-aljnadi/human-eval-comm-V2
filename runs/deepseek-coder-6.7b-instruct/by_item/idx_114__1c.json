@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_114::1c::deepseek-ai/deepseek-coder-6.7b-instruct::seed0",
+  "task_id": "idx_114",
+  "category": "1c",
+  "entry_point": "minSubArraySum",
+  "prompt_field": "prompt1c",
+  "prompt_text": "\ndef minSubArraySum(nums):\n    \"\"\"\n    Given an array of integers nums, find the minimum sum of any non-empty sub-array\n    of nums.\n    Example\n    minSubArraySum([2, 3, 4, 1, 2, 4]) == 3\n    minSubArraySum([-1, -2, -3]) == -5\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef minSubArraySum(nums):\n    \"\"\"\n    Given an array of integers nums, find the minimum sum of any non-empty sub-array\n    of nums.\n    Example\n    minSubArraySum([2, 3, 4, 1, 2, 4]) == 3\n    minSubArraySum([-1, -2, -3]) == -5\n    \"\"\"",
+  "prompt_sha256": "6c7367f96676984b2c6d72d08bba79440be0eeee0bda8a75a92bdc39f6f9bbe1",
+  "model_name": "deepseek-ai/deepseek-coder-6.7b-instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef minSubArraySum(nums):\n    \"\"\"\n    Given an array of integers nums, find the minimum sum of any non-empty sub-array\n    of nums.\n    Example\n    minSubArraySum([2, 3, 4, 1, 2, 4]) == 3\n    minSubArraySum([-1, -2, -3]) == -5\n    \"\"\"\n    n = len(nums)\n    min_sum = nums[0]\n    current_sum = nums[0]\n    \n    for i in range(1, n):\n        current_sum = min(nums[i], current_sum + nums[i])\n        min_sum = min(min_sum, current_sum)\n        \n    return min_sum\n\nThe code is basically calculating the minimum subarray sum using a dynamic programming approach. It keeps track of the current_sum and min_sum of the subarray until it traverses through the whole array. It then returns the min_sum.\n\nThis algorithm has a time complexity of O(n) as it performs a single pass over the array and a space complexity of O(1) as it uses only a constant amount of space.\n",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def minSubArraySum(nums):\n    \"\"\"\n    Given an array of integers nums, find the minimum sum of any non-empty sub-array\n    of nums.\n    Example\n    minSubArraySum([2, 3, 4, 1, 2, 4]) == 3\n    minSubArraySum([-1, -2, -3]) == -5\n    \"\"\"\n    n = len(nums)\n    min_sum = nums[0]\n    current_sum = nums[0]\n    \n    for i in range(1, n):\n        current_sum = min(nums[i], current_sum + nums[i])\n        min_sum = min(min_sum, current_sum)\n        \n    return min_sum\n\nThe code is basically calculating the minimum subarray sum using a dynamic programming approach. It keeps track of the current_sum and min_sum of the subarray until it traverses through the whole array. It then returns the min_sum.\n\nThis algorithm has a time complexity of O(n) as it performs a single pass over the array and a space complexity of O(1) as it uses only a constant amount of space.",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 47.786041021347046,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

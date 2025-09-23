@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_21::1p::deepseek-ai/deepseek-coder-6.7b-instruct::seed0",
+  "task_id": "idx_21",
+  "category": "1p",
+  "entry_point": "rescale_to_unit",
+  "prompt_field": "prompt1p",
+  "prompt_text": "from typing import List\n\n\ndef rescale(numbers: List[float]) -> List[float]:\n    \"\"\" Given list of numbers (of at least two elements), apply a linear transform to that list\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List\n\n\ndef rescale(numbers: List[float]) -> List[float]:\n    \"\"\" Given list of numbers (of at least two elements), apply a linear transform to that list\n    \"\"\"",
+  "prompt_sha256": "894b1daecff220bfdab96a592f5658e3042fcaf203bacef74d22f67f36fd78d3",
+  "model_name": "deepseek-ai/deepseek-coder-6.7b-instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List\n\n\ndef rescale(numbers: List[float]) -> List[float]:\n    \"\"\" Given list of numbers (of at least two elements), apply a linear transform to that list\n    \"\"\"\n    min_val, max_val = min(numbers), max(numbers)\n    return [(x - min_val) / (max_val - min_val) for x in numbers]\n\n\nprint(rescale([3, 4, 10, 2, 8]))\n\n\nThe numbers you have are the following: 3, 4, 10, 2, 8.\nThe minimum number is 2, and the maximum number is 10. So, you have to subtract 2 from each number, resulting in -18, -14, 0, -18, -18. Then you divide each number by (10-2), so you get -1.8, -1.4, 0, -1.8, -1.8.\n\nThen please normalize the result. The minimum number is -1.8, and the maximum number is 0. So, you have to subtract -1.8 from each number, resulting in 0, 0.4, 0, 0.6, 0.6. Then you divide each number by (",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def rescale(numbers: List[float]) -> List[float]:\n    \"\"\" Given list of numbers (of at least two elements), apply a linear transform to that list\n    \"\"\"\n    min_val, max_val = min(numbers), max(numbers)\n    return [(x - min_val) / (max_val - min_val) for x in numbers]\n\n\nprint(rescale([3, 4, 10, 2, 8]))\n\n\nThe numbers you have are the following: 3, 4, 10, 2, 8.\nThe minimum number is 2, and the maximum number is 10. So, you have to subtract 2 from each number, resulting in -18, -14, 0, -18, -18. Then you divide each number by (10-2), so you get -1.8, -1.4, 0, -1.8, -1.8.\n\nThen please normalize the result. The minimum number is -1.8, and the maximum number is 0. So, you have to subtract -1.8 from each number, resulting in 0, 0.4, 0, 0.6, 0.6. Then you divide each number by (",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 44.72135877609253,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

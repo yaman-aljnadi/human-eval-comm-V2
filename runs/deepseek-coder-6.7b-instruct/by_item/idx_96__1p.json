@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_96::1p::deepseek-ai/deepseek-coder-6.7b-instruct::seed0",
+  "task_id": "idx_96",
+  "category": "1p",
+  "entry_point": "count_up_to",
+  "prompt_field": "prompt1p",
+  "prompt_text": "\ndef count_up_to(n):\n    \"\"\"Implement a function that takes an non-negative integer and returns an array of the first n\n    integers that are prime numbers and\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef count_up_to(n):\n    \"\"\"Implement a function that takes an non-negative integer and returns an array of the first n\n    integers that are prime numbers and\n    \"\"\"",
+  "prompt_sha256": "e57d93591c85af8ba06a8ebd591ccd724d7f0ed7157ffec6d3c7a82f7bc20ac9",
+  "model_name": "deepseek-ai/deepseek-coder-6.7b-instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef count_up_to(n):\n    \"\"\"Implement a function that takes an non-negative integer and returns an array of the first n\n    integers that are prime numbers and\n    \"\"\"\n    def is_prime(num):\n        if num <= 1:\n            return False\n        elif num <= 3:\n            return True\n        elif num % 2 == 0 or num % 3 == 0:\n            return False\n        i = 5\n        while i * i <= num:\n            if num % i == 0 or num % (i + 2) == 0:\n                return False\n            i += 6\n        return True\n    \n    prime_list = []\n    for i in range(2, n + 1):\n        if is_prime(i):\n            prime_list.append(i)\n    return prime_list\n\nn = 20\nprint(count_up_to(n))\n```\nThis code snippet includes a function that checks if a number is prime, and uses it to create a list of prime numbers up to n.\n\nThe function `is_prime` takes an integer as input and returns True if it's a prime number and False otherwise. It returns False for numbers less than or equal to 1, and True for numbers 2, 3 and all numbers of the form 6k+/-",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def count_up_to(n):\n    \"\"\"Implement a function that takes an non-negative integer and returns an array of the first n\n    integers that are prime numbers and\n    \"\"\"\n    def is_prime(num):\n        if num <= 1:\n            return False\n        elif num <= 3:\n            return True\n        elif num % 2 == 0 or num % 3 == 0:\n            return False\n        i = 5\n        while i * i <= num:\n            if num % i == 0 or num % (i + 2) == 0:\n                return False\n            i += 6\n        return True\n    \n    prime_list = []\n    for i in range(2, n + 1):\n        if is_prime(i):\n            prime_list.append(i)\n    return prime_list\n\nn = 20\nprint(count_up_to(n))\n```\nThis code snippet includes a function that checks if a number is prime, and uses it to create a list of prime numbers up to n.\n\nThe function `is_prime` takes an integer as input and returns True if it's a prime number and False otherwise. It returns False for numbers less than or equal to 1, and True for numbers 2, 3 and all numbers of the form 6k+/-",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 65.95268297195435,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

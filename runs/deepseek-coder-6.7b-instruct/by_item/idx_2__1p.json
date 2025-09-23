@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_2::1p::deepseek-ai/deepseek-coder-6.7b-instruct::seed0",
+  "task_id": "idx_2",
+  "category": "1p",
+  "entry_point": "truncate_number",
+  "prompt_field": "prompt1p",
+  "prompt_text": "\n\ndef truncate_number(number: float) -> float:\n    \"\"\" Given a positive floating point number, it can be decomposed into\n    and integer part (largest integer smaller than given number) and decimals\n    (leftover part always smaller than 1).\n\n        \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef truncate_number(number: float) -> float:\n    \"\"\" Given a positive floating point number, it can be decomposed into\n    and integer part (largest integer smaller than given number) and decimals\n    (leftover part always smaller than 1).\n\n        \"\"\"",
+  "prompt_sha256": "a592606f82e77f13d5465268199dabbae79fb43241657d57e88279b9271ef82f",
+  "model_name": "deepseek-ai/deepseek-coder-6.7b-instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef truncate_number(number: float) -> float:\n    \"\"\" Given a positive floating point number, it can be decomposed into\n    and integer part (largest integer smaller than given number) and decimals\n    (leftover part always smaller than 1).\n\n        \"\"\"\n    int_part = int(number)\n    return float(int_part)\n\ndef truncate_time_into_hours(time: str) -> str:\n    \"\"\" A time string is of the form \"hh:mm:ss\". This function should return a\n    string which is the same but truncated to represent only the hours.\n    All time string inputs are expected to be in 24-hour format.\n\n        \"\"\"\n    hours, minutes, seconds = map(int, time.split(\":\"))\n    return f\"{hours}:{minutes}:{seconds}\"\n\ndef truncate_timedelta_to_days(timedelta: str) -> str:\n    \"\"\" A time delta string is in the form \"days, hours:minutes:seconds\". \n    This function should return a time delta string which is the same \n    but truncated to represent only the days. All inputs are expected\n    to be in the format returned by the `truncate_timedelta_to_days` \n    function.\n    \"\"\"\n    days, time = timedelta.split(\" \")\n    time =",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def truncate_number(number: float) -> float:\n    \"\"\" Given a positive floating point number, it can be decomposed into\n    and integer part (largest integer smaller than given number) and decimals\n    (leftover part always smaller than 1).\n\n        \"\"\"\n    int_part = int(number)\n    return float(int_part)\n\ndef truncate_time_into_hours(time: str) -> str:\n    \"\"\" A time string is of the form \"hh:mm:ss\". This function should return a\n    string which is the same but truncated to represent only the hours.\n    All time string inputs are expected to be in 24-hour format.\n\n        \"\"\"\n    hours, minutes, seconds = map(int, time.split(\":\"))\n    return f\"{hours}:{minutes}:{seconds}\"\n\ndef truncate_timedelta_to_days(timedelta: str) -> str:\n    \"\"\" A time delta string is in the form \"days, hours:minutes:seconds\". \n    This function should return a time delta string which is the same \n    but truncated to represent only the days. All inputs are expected\n    to be in the format returned by the `truncate_timedelta_to_days` \n    function.\n    \"\"\"\n    days, time = timedelta.split(\" \")\n    time =",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 44.66370749473572,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_56::2ap::deepseek-ai/deepseek-coder-6.7b-instruct::seed0",
+  "task_id": "idx_56",
+  "category": "2ap",
+  "entry_point": "correct_bracketing",
+  "prompt_field": "prompt2ap",
+  "prompt_text": "\n\ndef candidate(brackets: str):\n    \"\"\" brackets is a string of \"<\" and \">\".\n\n    >>> candidate(\"<\")\n    False\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(brackets: str):\n    \"\"\" brackets is a string of \"<\" and \">\".\n\n    >>> candidate(\"<\")\n    False\n    \"\"\"",
+  "prompt_sha256": "cbe9be9b2a6b71d90866f0ec1f116a4b171426a76e2f4570d01015790386565e",
+  "model_name": "deepseek-ai/deepseek-coder-6.7b-instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(brackets: str):\n    \"\"\" brackets is a string of \"<\" and \">\".\n\n    >>> candidate(\"<\")\n    False\n    \"\"\"\n    stack = []\n    balanced = True\n    for bracket in brackets:\n        if bracket == \"<\":\n            stack.append(bracket)\n        else:\n            if len(stack) == 0:\n                balanced = False\n                break\n            else:\n                stack.pop()\n    \n    if len(stack)!= 0:\n        balanced = False\n\n    return balanced\n\n# This function is checking if all brackets \"<\" are correctly closed or not.\n# If they are, the function returns True, else returns False. \n# It makes use of stack data structure to solve this problem.\n\n# This is the expected result of the function when called with test data\n# candidate(\"<\") should return False\n# candidate(\"><\") should return True\n# candidate(\"><<\") should return False\n# candidate(\">><<\") should return False\n\n# This code should be validated and tested against the example test cases to ensure functionality and accuracy\n\n# This function is designed to solve a specific problem statement in a specific domain. It takes an input string of brackets and returns a boolean value to signify whether or not the",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def candidate(brackets: str):\n    \"\"\" brackets is a string of \"<\" and \">\".\n\n    >>> candidate(\"<\")\n    False\n    \"\"\"\n    stack = []\n    balanced = True\n    for bracket in brackets:\n        if bracket == \"<\":\n            stack.append(bracket)\n        else:\n            if len(stack) == 0:\n                balanced = False\n                break\n            else:\n                stack.pop()\n    \n    if len(stack)!= 0:\n        balanced = False\n\n    return balanced\n\n# This function is checking if all brackets \"<\" are correctly closed or not.\n# If they are, the function returns True, else returns False. \n# It makes use of stack data structure to solve this problem.\n\n# This is the expected result of the function when called with test data\n# candidate(\"<\") should return False\n# candidate(\"><\") should return True\n# candidate(\"><<\") should return False\n# candidate(\">><<\") should return False\n\n# This code should be validated and tested against the example test cases to ensure functionality and accuracy\n\n# This function is designed to solve a specific problem statement in a specific domain. It takes an input string of brackets and returns a boolean value to signify whether or not the",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 75.38882803916931,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

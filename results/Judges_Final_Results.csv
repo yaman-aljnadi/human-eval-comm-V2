@@ -2,3 +2,4 @@ model tested,items,with_questions,non_questions,communication_rate,good_question
 openai-gpt-3.5-turbo,771,235,536,0.304799,0.285344,0.290532,0.503731,openai/gpt-3.5-turbo gemini/gemini-2.5-flash-lite deepseek-ai/deepseek-coder-6.7b-instruct,1,256
 Meta-Llama-3-13B-Instruct,771,297,474,0.385214,0.176394,0.215305,0.105485,openai/gpt-3.5-turbo gemini/gemini-2.5-flash-lite deepseek-ai/deepseek-coder-6.7b-instruct,1,256
 gemini-2.5-flash-lite,771,283,488,0.367056,0.333333,0.354086,0.409836,openai/gpt-3.5-turbo gemini/gemini-2.5-flash-lite deepseek-ai/deepseek-coder-6.7b-instruct,1,256
+deepseek-coder-6.7b-instruct,771,271,500,0.351492,0.255512,0.294423,0.322,openai/gpt-3.5-turbo gemini/gemini-2.5-flash-lite deepseek-ai/deepseek-coder-6.7b-instruct,1,256

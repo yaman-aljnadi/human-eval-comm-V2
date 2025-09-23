@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_108::1c::deepseek-ai/deepseek-coder-6.7b-instruct::seed0",
+  "task_id": "idx_108",
+  "category": "1c",
+  "entry_point": "count_nums",
+  "prompt_field": "prompt1c",
+  "prompt_text": "\ndef count_nums(arr):\n    \"\"\"\n    Write a function count_nums which takes an array of integers and returns\n    the number of elements which has a sum of digits > 0.\n    If a number is negative, then its first signed digit will be negative:\n    e.g. -123 has signed digits -1, 2, and 3.\n    >>> count_nums([]) == 0\n    >>> count_nums([-1, 11, -11]) == 2\n    >>> count_nums([1, 1, 2]) == 0\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef count_nums(arr):\n    \"\"\"\n    Write a function count_nums which takes an array of integers and returns\n    the number of elements which has a sum of digits > 0.\n    If a number is negative, then its first signed digit will be negative:\n    e.g. -123 has signed digits -1, 2, and 3.\n    >>> count_nums([]) == 0\n    >>> count_nums([-1, 11, -11]) == 2\n    >>> count_nums([1, 1, 2]) == 0\n    \"\"\"",
+  "prompt_sha256": "b0f39054a6a74ff2cb024345c1291193195c42ca3fa0914e8342e83177d38866",
+  "model_name": "deepseek-ai/deepseek-coder-6.7b-instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef count_nums(arr):\n    \"\"\"\n    Write a function count_nums which takes an array of integers and returns\n    the number of elements which has a sum of digits > 0.\n    If a number is negative, then its first signed digit will be negative:\n    e.g. -123 has signed digits -1, 2, and 3.\n    >>> count_nums([]) == 0\n    >>> count_nums([-1, 11, -11]) == 2\n    >>> count_nums([1, 1, 2]) == 0\n    \"\"\"\n    result = 0\n    for num in arr:\n        num_str = str(num)\n        if num < 0:\n            num_str = num_str[1:]\n        if sum(int(digit) for digit in num_str) > 0:\n            result += 1\n    return result\n```\n\n```python\ndef count_nums(arr):\n    result = 0\n    for num in arr:\n        num_str = str(abs(num))\n        if sum(int(digit) for digit in num_str) > 0:\n            result += 1\n    return result\n```\n\n```python\ndef count_nums(arr):\n    return sum(sum(map(int, str(abs(num)))) > 0 for num in arr)\n```\n\n```python\ndef count_nums(arr):\n    return sum(sum(map(int, str(abs(num)))) for num in arr) > 0\n```\n\n```python\ndef count_nums(arr):\n    return sum(sum(map(int, str(abs(x)))) for x in arr)",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 64.57156538963318,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

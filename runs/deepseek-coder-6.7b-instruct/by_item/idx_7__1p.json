@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_7::1p::deepseek-ai/deepseek-coder-6.7b-instruct::seed0",
+  "task_id": "idx_7",
+  "category": "1p",
+  "entry_point": "filter_by_substring",
+  "prompt_field": "prompt1p",
+  "prompt_text": "from typing import List\n\n\ndef filter_by_substring(strings: List[str], substring: str) -> List[str]:\n    \"\"\" Filter an input list of strings\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List\n\n\ndef filter_by_substring(strings: List[str], substring: str) -> List[str]:\n    \"\"\" Filter an input list of strings\n    \"\"\"",
+  "prompt_sha256": "e5f14c5f1def4577b393852df3f70865530cc234dbfb4830533e231a5f773b7e",
+  "model_name": "deepseek-ai/deepseek-coder-6.7b-instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List\n\n\ndef filter_by_substring(strings: List[str], substring: str) -> List[str]:\n    \"\"\" Filter an input list of strings\n    \"\"\"\n    # Your function body should be written here \n\n\ndef main():\n    strings = [\"example1\", \"example2\", \"example3\"]\n    substring = \"example\"\n    print(filter_by_substring(strings, substring))\n\n\nif __name__ == \"__main__\":\n    main()\n\nThis script is incomplete. There's no implementation for the `filter_by_substring` function. The expected output for the given inputs should be `[\"example1\", \"example2\", \"example3\"]`.\n    \"\"\"\n\n# Function definition:\ndef filter_by_substring(strings: List[str], substring: str) -> List[str]:\n    return [s for s in strings if substring in s]\n\n# Now, call the function and print the result\nprint(filter_by_substring([\"example1\", \"example2\", \"example3\"], \"example\"))\n\n\n# If you run this code, it will print `[\"example1\", \"example2\", \"example3\"]`.\n\nThis function `filter_by_substring` iterates over the list of strings",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def filter_by_substring(strings: List[str], substring: str) -> List[str]:\n    \"\"\" Filter an input list of strings\n    \"\"\"\n    # Your function body should be written here \n\n\ndef main():\n    strings = [\"example1\", \"example2\", \"example3\"]\n    substring = \"example\"\n    print(filter_by_substring(strings, substring))\n\n\nif __name__ == \"__main__\":\n    main()\n\nThis script is incomplete. There's no implementation for the `filter_by_substring` function. The expected output for the given inputs should be `[\"example1\", \"example2\", \"example3\"]`.\n    \"\"\"\n\n# Function definition:\ndef filter_by_substring(strings: List[str], substring: str) -> List[str]:\n    return [s for s in strings if substring in s]\n\n# Now, call the function and print the result\nprint(filter_by_substring([\"example1\", \"example2\", \"example3\"], \"example\"))\n\n\n# If you run this code, it will print `[\"example1\", \"example2\", \"example3\"]`.\n\nThis function `filter_by_substring` iterates over the list of strings",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 44.997910022735596,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

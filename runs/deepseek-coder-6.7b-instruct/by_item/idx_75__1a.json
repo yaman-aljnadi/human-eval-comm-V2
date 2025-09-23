@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_75::1a::deepseek-ai/deepseek-coder-6.7b-instruct::seed0",
+  "task_id": "idx_75",
+  "category": "1a",
+  "entry_point": "is_multiply_prime",
+  "prompt_field": "prompt1a",
+  "prompt_text": "\ndef is_multiply_prime(a):\n    \"\"\"Write a function that returns true if the given number is the multiplication of K prime numbers\n    and false otherwise.\n    Knowing that (a) is less then 100. \n    Example:\n    is_multiply_prime(30) == True\n    30 = 2 * 3 * 5\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef is_multiply_prime(a):\n    \"\"\"Write a function that returns true if the given number is the multiplication of K prime numbers\n    and false otherwise.\n    Knowing that (a) is less then 100. \n    Example:\n    is_multiply_prime(30) == True\n    30 = 2 * 3 * 5\n    \"\"\"",
+  "prompt_sha256": "615d8b608ed26f38c6357315f9815d0e8262d2767d4699668c2754257c9a43fc",
+  "model_name": "deepseek-ai/deepseek-coder-6.7b-instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef is_multiply_prime(a):\n    \"\"\"Write a function that returns true if the given number is the multiplication of K prime numbers\n    and false otherwise.\n    Knowing that (a) is less then 100. \n    Example:\n    is_multiply_prime(30) == True\n    30 = 2 * 3 * 5\n    \"\"\"\n    def is_prime(n):\n        if n==1:\n            return False\n        elif n==2:\n            return True\n        else:\n            for i in range(2, n):\n                if n % i == 0:\n                    return False\n            return True\n\n    factors = []\n    for i in range(2, a):\n        if a % i == 0 and is_prime(i):\n            factors.append(i)\n\n    product = 1\n    for factor in factors:\n        product *= factor\n\n    return product == a\n\nprint(is_multiply_prime(30))\n\n#Code ends here\n\n\nI've made the is_prime() function to determine if a given number is a prime number. It checks divisibility by numbers less than itself and greater than 1. If it's divisible by any of those, it's not a prime number.\n\nThen in is_multiply_prime(), it calculates factors of 'a' that are prime. It checks if 'a' modulo 'i' is zero to find out if 'i' is a factor",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def is_multiply_prime(a):\n    \"\"\"Write a function that returns true if the given number is the multiplication of K prime numbers\n    and false otherwise.\n    Knowing that (a) is less then 100. \n    Example:\n    is_multiply_prime(30) == True\n    30 = 2 * 3 * 5\n    \"\"\"\n    def is_prime(n):\n        if n==1:\n            return False\n        elif n==2:\n            return True\n        else:\n            for i in range(2, n):\n                if n % i == 0:\n                    return False\n            return True\n\n    factors = []\n    for i in range(2, a):\n        if a % i == 0 and is_prime(i):\n            factors.append(i)\n\n    product = 1\n    for factor in factors:\n        product *= factor\n\n    return product == a\n\nprint(is_multiply_prime(30))\n\n#Code ends here\n\n\nI've made the is_prime() function to determine if a given number is a prime number. It checks divisibility by numbers less than itself and greater than 1. If it's divisible by any of those, it's not a prime number.\n\nThen in is_multiply_prime(), it calculates factors of 'a' that are prime. It checks if 'a' modulo 'i' is zero to find out if 'i' is a factor",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 74.01496267318726,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

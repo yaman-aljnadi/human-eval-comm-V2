@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_120::2ap::deepseek-ai/deepseek-coder-6.7b-instruct::seed0",
+  "task_id": "idx_120",
+  "category": "2ap",
+  "entry_point": "maximum",
+  "prompt_field": "prompt2ap",
+  "prompt_text": "\ndef candidate(arr, k):\n    \"\"\"\n    Given an array arr of integers and a positive integer k, return a sorted list \n    of length k with \n\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(arr, k):\n    \"\"\"\n    Given an array arr of integers and a positive integer k, return a sorted list \n    of length k with \n\n    \"\"\"",
+  "prompt_sha256": "534154b2d2f18638035379756967843d684c481d5471e0dd5d10078702d19d6f",
+  "model_name": "deepseek-ai/deepseek-coder-6.7b-instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(arr, k):\n    \"\"\"\n    Given an array arr of integers and a positive integer k, return a sorted list \n    of length k with \n\n    \"\"\"\n\n\nA: The problem description is missing some details so I'm going to make some assumptions:\n\nAssumptions:\n1. The function `candidate` should take two arguments: a list of integers and a positive integer `k`.\n2. We should return `k` smallest numbers from the list.\n3. The returned list should be sorted in ascending order.\n\nIf these assumptions don't fit your need, please clarify them and I'll adjust my answer.\n\nBased on the assumptions, here's the code:\n```python\ndef candidate(arr, k):\n    return sorted(arr)[:k]\n```\nIn this code, we use the Python built-in function `sorted` to sort the list in ascending order and then slice the first `k` elements from the sorted list. This code will work correctly as long as all numbers in the list are integers. \n\nIn Python, lists are mutable, so `sorted` creates a new list that is sorted, leaving the original list unaffected. The `[:k]` slice selects the first `k` elements of the sorted list.\n\nTesting it with an",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def candidate(arr, k):\n    return sorted(arr)[:k]",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 75.6572322845459,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

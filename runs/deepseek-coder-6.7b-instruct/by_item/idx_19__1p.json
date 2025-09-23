@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_19::1p::deepseek-ai/deepseek-coder-6.7b-instruct::seed0",
+  "task_id": "idx_19",
+  "category": "1p",
+  "entry_point": "sort_numbers",
+  "prompt_field": "prompt1p",
+  "prompt_text": "from typing import List\n\n\ndef sort_numbers(numbers: str) -> str:\n    \"\"\" Input is a space-delimited string of numberals.\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List\n\n\ndef sort_numbers(numbers: str) -> str:\n    \"\"\" Input is a space-delimited string of numberals.\n    \"\"\"",
+  "prompt_sha256": "7fa6e28a4365b7a7ae2407576082d3a49d03277f345e232bbf59021e8c7e5031",
+  "model_name": "deepseek-ai/deepseek-coder-6.7b-instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List\n\n\ndef sort_numbers(numbers: str) -> str:\n    \"\"\" Input is a space-delimited string of numberals.\n    \"\"\"\n    numbers = numbers.split(\" \")\n    numbers = list(map(int, numbers))\n    return''.join(map(str, sorted(numbers)))\n\n#my_numbers = '1 2 3 4 5'\n#print(sort_numbers(my_numbers))\n# Output: '1 2 3 4 5'\n\n\nA: From your question, it seems like you want to sort a space-delimited string of numbers as a string. The numbers must be sorted in ascending order. The sorted numbers must also be a string.\nYou have provided a function `sort_numbers` which can be called and the input would be a space-delimited string of numbers. The function will split the numbers in that string, convert them to integers, sort them and then join them back into a space-delimited string.\n\nHere is how you use it:\n\n```python\nmy_numbers = '3 1 2 5 4'\nprint(sort_numbers(my_numbers))\n```\n\nThe output will be: '1 2 3 4 ",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "my_numbers = '3 1 2 5 4'\nprint(sort_numbers(my_numbers))",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 44.437870264053345,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

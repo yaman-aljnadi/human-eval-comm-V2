@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_118::1a::deepseek-ai/deepseek-coder-6.7b-instruct::seed0",
+  "task_id": "idx_118",
+  "category": "1a",
+  "entry_point": "get_closest_vowel",
+  "prompt_field": "prompt1a",
+  "prompt_text": "\ndef candidate(word):\n    \"\"\"You are given a word. Your task is to find the farthest or closest vowel that stands between \n    two consonants from the left or right side of the word (case sensitive).\n    \n    Vowels in the beginning and ending doesn't count. Return empty string if you didn't\n    find any vowel met the above condition. \n\n    You may assume that the given string contains English letter only.\n\n    Example:\n    candidate(\"yogurt\") ==> \"u\"\n    candidate(\"FULL\") ==> \"U\"\n    candidate(\"quick\") ==> \"\"\n    candidate(\"ab\") ==> \"\"\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(word):\n    \"\"\"You are given a word. Your task is to find the farthest or closest vowel that stands between \n    two consonants from the left or right side of the word (case sensitive).\n    \n    Vowels in the beginning and ending doesn't count. Return empty string if you didn't\n    find any vowel met the above condition. \n\n    You may assume that the given string contains English letter only.\n\n    Example:\n    candidate(\"yogurt\") ==> \"u\"\n    candidate(\"FULL\") ==> \"U\"\n    candidate(\"quick\") ==> \"\"\n    candidate(\"ab\") ==> \"\"\n    \"\"\"",
+  "prompt_sha256": "03fc462ab11e013a48a7e31caa70ac6e243a91e876c9385c03a3884ba38eb842",
+  "model_name": "deepseek-ai/deepseek-coder-6.7b-instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(word):\n    \"\"\"You are given a word. Your task is to find the farthest or closest vowel that stands between \n    two consonants from the left or right side of the word (case sensitive).\n    \n    Vowels in the beginning and ending doesn't count. Return empty string if you didn't\n    find any vowel met the above condition. \n\n    You may assume that the given string contains English letter only.\n\n    Example:\n    candidate(\"yogurt\") ==> \"u\"\n    candidate(\"FULL\") ==> \"U\"\n    candidate(\"quick\") ==> \"\"\n    candidate(\"ab\") ==> \"\"\n    \"\"\"\n    vowels = 'aeiouAEIOU'\n    left = []\n    right = []\n    for i in range(1, len(word)-1):\n        if word[i-1] not in vowels and word[i+1] not in vowels:\n            left.append(i)\n            \n    for i in range(len(word)-2, 0, -1):\n        if word[i-1] not in vowels and word[i+1] not in vowels:\n                   \n    return word[left[0]] if left else \"\"\n\n\nA: \n\n\nI see that you are interested in creating a code that finds the farthest or closest vowel that stands between two consonants from the left or right side of the word (case sensitive).\n\nYou want to create a function that takes a word as an input and returns the character in the word which is a vowel and stands between two consonants from left or right side of the word.\n\nTo accomplish this task, you can iterate over the word from left to right (excluding the first and last characters) and keep track of characters that",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def candidate(word):\n    \"\"\"You are given a word. Your task is to find the farthest or closest vowel that stands between \n    two consonants from the left or right side of the word (case sensitive).\n    \n    Vowels in the beginning and ending doesn't count. Return empty string if you didn't\n    find any vowel met the above condition. \n\n    You may assume that the given string contains English letter only.\n\n    Example:\n    candidate(\"yogurt\") ==> \"u\"\n    candidate(\"FULL\") ==> \"U\"\n    candidate(\"quick\") ==> \"\"\n    candidate(\"ab\") ==> \"\"\n    \"\"\"\n    vowels = 'aeiouAEIOU'\n    left = []\n    right = []\n    for i in range(1, len(word)-1):\n        if word[i-1] not in vowels and word[i+1] not in vowels:\n            left.append(i)\n            \n    for i in range(len(word)-2, 0, -1):\n        if word[i-1] not in vowels and word[i+1] not in vowels:\n                   \n    return word[left[0]] if left else \"\"\n\n\nA: \n\n\nI see that you are interested in creating a code that finds the farthest or closest vowel that stands between two consonants from the left or right side of the word (case sensitive).\n\nYou want to create a function that takes a word as an input and returns the character in the word which is a vowel and stands between two consonants from left or right side of the word.\n\nTo accomplish this task, you can iterate over the word from left to right (excluding the first and last characters) and keep track of characters that",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 63.49034595489502,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

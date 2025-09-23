@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_121::2ac::deepseek-ai/deepseek-coder-6.7b-instruct::seed0",
+  "task_id": "idx_121",
+  "category": "2ac",
+  "entry_point": "solution",
+  "prompt_field": "prompt2ac",
+  "prompt_text": "\ndef solution(lst):\n    \"\"\"Given a non-empty list of integers, return the sum of all of the even or odd elements that are in even or odd positions.\n    \n\n    Examples\n    solution([5, 8, 7, 1]) ==> 1\n    solution([3, 3, 3, 3, 3]) ==> 3\n    solution([30, 13, 24, 321]) ==>30\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef solution(lst):\n    \"\"\"Given a non-empty list of integers, return the sum of all of the even or odd elements that are in even or odd positions.\n    \n\n    Examples\n    solution([5, 8, 7, 1]) ==> 1\n    solution([3, 3, 3, 3, 3]) ==> 3\n    solution([30, 13, 24, 321]) ==>30\n    \"\"\"",
+  "prompt_sha256": "bdd1920755fc7854e4fa441a2f80b2a602aa847e207b92c66d3329f88a37966c",
+  "model_name": "deepseek-ai/deepseek-coder-6.7b-instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef solution(lst):\n    \"\"\"Given a non-empty list of integers, return the sum of all of the even or odd elements that are in even or odd positions.\n    \n\n    Examples\n    solution([5, 8, 7, 1]) ==> 1\n    solution([3, 3, 3, 3, 3]) ==> 3\n    solution([30, 13, 24, 321]) ==>30\n    \"\"\"\n    sum_elements = 0\n    for i in range(len(lst)):\n        if i % 2 == 0: #position is even\n            if lst[i] % 2 ==0 : #element is even\n                sum_elements += lst[i]\n        else:\n            if lst[i] % 2!=0 : #element is odd\n                sum_elements += lst[i]\n    return sum_elements\n```\n\nExamples\n```python\nassert solution([5, 8, 7, 1]) == 1\nassert solution([3, 3, 3, 3, 3]) == 3\nassert solution([30, 13, 24, 321]) == 30\n```\n'''\n\n'''\n# Answer\n\ndef solution(lst):\n    sum_elements = 0\n    for i in range(len(lst)):\n        if i % 2 == 0: #position is even\n            if lst[i] % 2 == 0: #element is even\n                sum_elements += lst[i]",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "Examples",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 62.73519253730774,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

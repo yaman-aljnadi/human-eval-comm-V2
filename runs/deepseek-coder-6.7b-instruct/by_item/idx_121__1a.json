@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_121::1a::deepseek-ai/deepseek-coder-6.7b-instruct::seed0",
+  "task_id": "idx_121",
+  "category": "1a",
+  "entry_point": "solution",
+  "prompt_field": "prompt1a",
+  "prompt_text": "\ndef solution(lst):\n    \"\"\"Given a non-empty list of integers, return the sum of all of the even or odd elements that are in even or odd positions.\n    \n\n    Examples\n    solution([5, 8, 7, 1]) ==> 12\n    solution([3, 3, 3, 3, 3]) ==> 9\n    solution([30, 13, 24, 321]) ==>0\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef solution(lst):\n    \"\"\"Given a non-empty list of integers, return the sum of all of the even or odd elements that are in even or odd positions.\n    \n\n    Examples\n    solution([5, 8, 7, 1]) ==> 12\n    solution([3, 3, 3, 3, 3]) ==> 9\n    solution([30, 13, 24, 321]) ==>0\n    \"\"\"",
+  "prompt_sha256": "d7b66057fadc2bbc8e18646fb067bb841aa1238a47b824613a7eb59a8d273cb5",
+  "model_name": "deepseek-ai/deepseek-coder-6.7b-instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef solution(lst):\n    \"\"\"Given a non-empty list of integers, return the sum of all of the even or odd elements that are in even or odd positions.\n    \n\n    Examples\n    solution([5, 8, 7, 1]) ==> 12\n    solution([3, 3, 3, 3, 3]) ==> 9\n    solution([30, 13, 24, 321]) ==>0\n    \"\"\"\n    sum = 0\n    for i in range(len(lst)):\n        if i % 2 == 0 or lst[i] % 2 == 0:\n            sum += lst[i]\n    return sum\n\n# Test cases\nprint(solution([5, 8, 7, 1]))\nprint(solution([3, 3, 3, 3, 3]))\nprint(solution([30, 13, 24, 321]))\n\n# My code:\n```python\ndef solution(lst):\n    sum = 0\n    for i in range(len(lst)):\n        if i % 2 == 0 or lst[i] % 2 == 0:\n            sum += lst[i]\n    return sum\n\nprint(solution([5, 8, 7, 1]))\nprint(solution([3, 3, 3, 3, 3]))\nprint(solution([30, 13, 24, 321]))\n```\n\n# Explanation:\n\n-",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def solution(lst):\n    sum = 0\n    for i in range(len(lst)):\n        if i % 2 == 0 or lst[i] % 2 == 0:\n            sum += lst[i]\n    return sum\n\nprint(solution([5, 8, 7, 1]))\nprint(solution([3, 3, 3, 3, 3]))\nprint(solution([30, 13, 24, 321]))",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 64.29590201377869,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

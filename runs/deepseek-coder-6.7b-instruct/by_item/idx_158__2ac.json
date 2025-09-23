@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_158::2ac::deepseek-ai/deepseek-coder-6.7b-instruct::seed0",
+  "task_id": "idx_158",
+  "category": "2ac",
+  "entry_point": "find_max",
+  "prompt_field": "prompt2ac",
+  "prompt_text": "\ndef candidate(words):\n    \"\"\"Write a function that accepts a list of strings.\n    The list contains different words. Return the word with minimum or maximum number\n    of unique characters. If multiple strings have minimum or maximum number of unique\n    characters, return the one which comes first in lexicographical order.\n\n    candidate([\"name\", \"of\", \"string\"]) == \"of\"\n    candidate([\"name\", \"enam\", \"game\"]) == \"name\"\n    candidate([\"aaaaaaa\", \"bb\" ,\"cc\"]) == \"\"bb\"\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(words):\n    \"\"\"Write a function that accepts a list of strings.\n    The list contains different words. Return the word with minimum or maximum number\n    of unique characters. If multiple strings have minimum or maximum number of unique\n    characters, return the one which comes first in lexicographical order.\n\n    candidate([\"name\", \"of\", \"string\"]) == \"of\"\n    candidate([\"name\", \"enam\", \"game\"]) == \"name\"\n    candidate([\"aaaaaaa\", \"bb\" ,\"cc\"]) == \"\"bb\"\n    \"\"\"",
+  "prompt_sha256": "94070bf9cad3ef4d7d978283ebe57112268650fd4967c475f960280e879aaec8",
+  "model_name": "deepseek-ai/deepseek-coder-6.7b-instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(words):\n    \"\"\"Write a function that accepts a list of strings.\n    The list contains different words. Return the word with minimum or maximum number\n    of unique characters. If multiple strings have minimum or maximum number of unique\n    characters, return the one which comes first in lexicographical order.\n\n    candidate([\"name\", \"of\", \"string\"]) == \"of\"\n    candidate([\"name\", \"enam\", \"game\"]) == \"name\"\n    candidate([\"aaaaaaa\", \"bb\" ,\"cc\"]) == \"\"bb\"\n    \"\"\"\n    pass  # your code here\n\n#Explanation: This function needs to determine the string that has the least unique letters. When the strings are arranged in lexicographical order and when they have an equal number of unique characters. It needs to return the string that comes first in lexicographical order.\n\n\nA: Here is a Python3 solution. It first generates a list of tuples, where each tuple contains a word and the number of unique letters in it. Then it sorts this list by two keys: first by the number of unique letters in descending order, and second by lexicographical order of words in case of ties. Finally it returns the word in first position of sorted list.\n\n```python\ndef candidate(words):\n    # list of tuples (word, count of unique characters)\n    words_and_counts = [(w, len(set(w))) for w in words]\n    # sort words_and_counts by unique character count in descending order\n    # and lexicographical order in case of ties\n    sorted_words_and_counts = sorted(words_and_counts, key=lambda x: (-x",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def candidate(words):\n    \"\"\"Write a function that accepts a list of strings.\n    The list contains different words. Return the word with minimum or maximum number\n    of unique characters. If multiple strings have minimum or maximum number of unique\n    characters, return the one which comes first in lexicographical order.\n\n    candidate([\"name\", \"of\", \"string\"]) == \"of\"\n    candidate([\"name\", \"enam\", \"game\"]) == \"name\"\n    candidate([\"aaaaaaa\", \"bb\" ,\"cc\"]) == \"\"bb\"\n    \"\"\"\n    pass  # your code here\n\n#Explanation: This function needs to determine the string that has the least unique letters. When the strings are arranged in lexicographical order and when they have an equal number of unique characters. It needs to return the string that comes first in lexicographical order.\n\n\nA: Here is a Python3 solution. It first generates a list of tuples, where each tuple contains a word and the number of unique letters in it. Then it sorts this list by two keys: first by the number of unique letters in descending order, and second by lexicographical order of words in case of ties. Finally it returns the word in first position of sorted list.\n\n```python\ndef candidate(words):\n    # list of tuples (word, count of unique characters)\n    words_and_counts = [(w, len(set(w))) for w in words]\n    # sort words_and_counts by unique character count in descending order\n    # and lexicographical order in case of ties\n    sorted_words_and_counts = sorted(words_and_counts, key=lambda x: (-x",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 65.29109978675842,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

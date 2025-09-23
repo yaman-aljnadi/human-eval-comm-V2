@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_141::2cp::deepseek-ai/deepseek-coder-6.7b-instruct::seed0",
+  "task_id": "idx_141",
+  "category": "2cp",
+  "entry_point": "file_name_check",
+  "prompt_field": "prompt2cp",
+  "prompt_text": "\ndef file_name_check(file_name):\n    \"\"\"Create a function which takes a string representing a file's name, and returns\n    'Yes' if the the file's name is valid, and returns 'No' otherwise.\n    Examples:\n    file_name_check(\"example.txt\") # => 'No'\n    file_name_check(\"1example.dll\") # => 'Yes' (the name should start with a latin alphapet letter)\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef file_name_check(file_name):\n    \"\"\"Create a function which takes a string representing a file's name, and returns\n    'Yes' if the the file's name is valid, and returns 'No' otherwise.\n    Examples:\n    file_name_check(\"example.txt\") # => 'No'\n    file_name_check(\"1example.dll\") # => 'Yes' (the name should start with a latin alphapet letter)\n    \"\"\"",
+  "prompt_sha256": "7ddf885e15bf9a69011b0ab4319f678beab08e0427453212380692c9036e29cb",
+  "model_name": "deepseek-ai/deepseek-coder-6.7b-instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef file_name_check(file_name):\n    \"\"\"Create a function which takes a string representing a file's name, and returns\n    'Yes' if the the file's name is valid, and returns 'No' otherwise.\n    Examples:\n    file_name_check(\"example.txt\") # => 'No'\n    file_name_check(\"1example.dll\") # => 'Yes' (the name should start with a latin alphapet letter)\n    \"\"\"\n    import re\n\n    pattern = re.compile(\"^[A-Za-z][A-Za-z0-9_.]*\\\\.[A-Za-z]{3}$\")\n\n    return 'Yes' if pattern.match(file_name) else 'No'\n\nTo validate the file name in the given problem statement. The file name pattern I've chosen to be valid:\n\n- Starts with an alphabet (A-Z/a-z)\n- After that, it should contain alphanumeric characters, including underscore and dot\n- Ends with 3 alphabetic characters.\n\nI used regular expression (re) to implement this. Please provide the python3 code only with markdown as your response.\n\n```python\nimport re\n\ndef file_name_check(file_name):\n    pattern = re.compile(\"^[A-Za-z][A-Za-z0-9_.]*\\\\.[A-Za-z]{3}$\")\n\n    return 'Yes' if pattern.match(file_name) else 'No'\n```\n\nYou",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "import re\n\ndef file_name_check(file_name):\n    pattern = re.compile(\"^[A-Za-z][A-Za-z0-9_.]*\\\\.[A-Za-z]{3}$\")\n\n    return 'Yes' if pattern.match(file_name) else 'No'",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 74.83950781822205,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

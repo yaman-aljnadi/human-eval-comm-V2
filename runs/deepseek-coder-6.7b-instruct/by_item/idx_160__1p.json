@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_160::1p::deepseek-ai/deepseek-coder-6.7b-instruct::seed0",
+  "task_id": "idx_160",
+  "category": "1p",
+  "entry_point": "do_algebra",
+  "prompt_field": "prompt1p",
+  "prompt_text": "\ndef do_algebra(operator, operand):\n    \"\"\"\n    Given two lists operator, and operand. The first list has basic algebra operations, and \n    the second list is a list of integers. \n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef do_algebra(operator, operand):\n    \"\"\"\n    Given two lists operator, and operand. The first list has basic algebra operations, and \n    the second list is a list of integers. \n    \"\"\"",
+  "prompt_sha256": "652280135d81193d7968cefa7f7b2c9d114cc2895140f12f8a86f29062fd9351",
+  "model_name": "deepseek-ai/deepseek-coder-6.7b-instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef do_algebra(operator, operand):\n    \"\"\"\n    Given two lists operator, and operand. The first list has basic algebra operations, and \n    the second list is a list of integers. \n    \"\"\"\n    # Operators: add, subtract, multiply, divide.\n\n    if operator[0] == \"add\":\n        return sum(operand)\n    if operator[0] == \"subtract\":\n        return operand[0] - sum(operand[1:])\n    if operator[0] == \"multiply\":\n        product = 1\n        for num in operand:\n            product *= num\n        return product\n    if operator[0] == \"divide\":\n        quotient = operand[0]\n        for num in operand[1:]:\n            quotient /= num\n        return quotient\n\n# Testing the function:\nprint(do_algebra([\"add\", \"multiply\"], [1, 2, 3, 4])) # Should return (1+2) * 3 * 4 = 96\nprint(do_algebra([\"subtract\", \"divide\"], [10, 2, 3, 4])) # Should return 10 - (2 +3 +4) = 10 - 9 =1\n\nIf there is a",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def do_algebra(operator, operand):\n    \"\"\"\n    Given two lists operator, and operand. The first list has basic algebra operations, and \n    the second list is a list of integers. \n    \"\"\"\n    # Operators: add, subtract, multiply, divide.\n\n    if operator[0] == \"add\":\n        return sum(operand)\n    if operator[0] == \"subtract\":\n        return operand[0] - sum(operand[1:])\n    if operator[0] == \"multiply\":\n        product = 1\n        for num in operand:\n            product *= num\n        return product\n    if operator[0] == \"divide\":\n        quotient = operand[0]\n        for num in operand[1:]:\n            quotient /= num\n        return quotient\n\n# Testing the function:\nprint(do_algebra([\"add\", \"multiply\"], [1, 2, 3, 4])) # Should return (1+2) * 3 * 4 = 96\nprint(do_algebra([\"subtract\", \"divide\"], [10, 2, 3, 4])) # Should return 10 - (2 +3 +4) = 10 - 9 =1\n\nIf there is a",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 61.25183725357056,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

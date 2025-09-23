@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_27::2ac::deepseek-ai/deepseek-coder-6.7b-instruct::seed0",
+  "task_id": "idx_27",
+  "category": "2ac",
+  "entry_point": "flip_case",
+  "prompt_field": "prompt2ac",
+  "prompt_text": "\n\ndef candidate(string: str) -> str:\n    \"\"\" For a given string, flip lowercase or uppercase characters to either uppercase or lowercase.\n    >>> candidate('Hello')\n    'hello'\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(string: str) -> str:\n    \"\"\" For a given string, flip lowercase or uppercase characters to either uppercase or lowercase.\n    >>> candidate('Hello')\n    'hello'\n    \"\"\"",
+  "prompt_sha256": "4af91e82c799d0c06718db71dd5fac3b45cf1a0779f7ab80f6872d0fc783a5cb",
+  "model_name": "deepseek-ai/deepseek-coder-6.7b-instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(string: str) -> str:\n    \"\"\" For a given string, flip lowercase or uppercase characters to either uppercase or lowercase.\n    >>> candidate('Hello')\n    'hello'\n    \"\"\"\n    flipped_string = \"\"\n    for char in string:\n        if char.isupper():\n            flipped_string += char.lower()\n        else:\n            flipped_string += char.upper()\n    return flipped_string\n\n\nA: It seems there is some misunderstanding. Your function works as expected, but I noticed that the code does not handle special characters or digits. If you need to keep them the same, you will need to add an additional check. \n\nHere is the corrected function:\n```python\ndef candidate(string: str) -> str:\n    \"\"\" For a given string, flip lowercase or uppercase characters to either uppercase or lowercase.\n    >>> candidate('Hello')\n    'hello'\n    \"\"\"\n    flipped_string = \"\"\n    for char in string:\n        if char.isalpha():\n            if char.isupper():\n                flipped_string += char.lower()\n            else:\n                flipped_string += char.upper()\n        else:\n            flipped_string += char\n    return flipped_string\n```\n\nThis function flips the",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def candidate(string: str) -> str:\n    \"\"\" For a given string, flip lowercase or uppercase characters to either uppercase or lowercase.\n    >>> candidate('Hello')\n    'hello'\n    \"\"\"\n    flipped_string = \"\"\n    for char in string:\n        if char.isalpha():\n            if char.isupper():\n                flipped_string += char.lower()\n            else:\n                flipped_string += char.upper()\n        else:\n            flipped_string += char\n    return flipped_string",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 75.88808131217957,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

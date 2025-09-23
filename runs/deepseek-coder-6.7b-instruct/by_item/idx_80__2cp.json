@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_80::2cp::deepseek-ai/deepseek-coder-6.7b-instruct::seed0",
+  "task_id": "idx_80",
+  "category": "2cp",
+  "entry_point": "is_happy",
+  "prompt_field": "prompt2cp",
+  "prompt_text": "\ndef is_happy(s):\n    \"\"\"You are given a string s.\n    Your task is to check if the string is happy or not.\n    For example:\n    is_happy(a) => True\n    is_happy(aa) => True\n    is_happy(abcd) => False\n    is_happy(aabb) => True\n    is_happy(adb) => False\n    is_happy(xyy) => True\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef is_happy(s):\n    \"\"\"You are given a string s.\n    Your task is to check if the string is happy or not.\n    For example:\n    is_happy(a) => True\n    is_happy(aa) => True\n    is_happy(abcd) => False\n    is_happy(aabb) => True\n    is_happy(adb) => False\n    is_happy(xyy) => True\n    \"\"\"",
+  "prompt_sha256": "b842659059a2e35e73d5ce98c9ed63b62d1d269e8b80f29e411ef612bd80c250",
+  "model_name": "deepseek-ai/deepseek-coder-6.7b-instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef is_happy(s):\n    \"\"\"You are given a string s.\n    Your task is to check if the string is happy or not.\n    For example:\n    is_happy(a) => True\n    is_happy(aa) => True\n    is_happy(abcd) => False\n    is_happy(aabb) => True\n    is_happy(adb) => False\n    is_happy(xyy) => True\n    \"\"\"\n\n# This function is supposed to return True when the input string s is in a 'happy' state, and False when the string is not in a 'happy' state.\n# A string is in a 'happy' state if it contains no duplicate characters, and has the same number of unique characters on either side of the string.\n# If the conditions are not met, then the function should continue to examine the string.\n# To keep things simple, we can assume that the input string s is all lowercase English letters.\n\nHere is what you need to do to create this Python function:\n1. Initialize a dictionary to keep track of counts of each character.\n2. Iterate through the string s from left to right. For each character, increment its count in the dictionary.\n3. If at any point there are duplicate counts, return False.\n4. If all the counts are unique, iterate through the dictionary. Check if the count is the same as the sum of the lengths of all characters to the left of the current index in the string. If they aren't the same, return False.\n5. If all these checks passed, return True.\n\nHere is the Python function implementation",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def is_happy(s):\n    \"\"\"You are given a string s.\n    Your task is to check if the string is happy or not.\n    For example:\n    is_happy(a) => True\n    is_happy(aa) => True\n    is_happy(abcd) => False\n    is_happy(aabb) => True\n    is_happy(adb) => False\n    is_happy(xyy) => True\n    \"\"\"\n\n# This function is supposed to return True when the input string s is in a 'happy' state, and False when the string is not in a 'happy' state.\n# A string is in a 'happy' state if it contains no duplicate characters, and has the same number of unique characters on either side of the string.\n# If the conditions are not met, then the function should continue to examine the string.\n# To keep things simple, we can assume that the input string s is all lowercase English letters.\n\nHere is what you need to do to create this Python function:\n1. Initialize a dictionary to keep track of counts of each character.\n2. Iterate through the string s from left to right. For each character, increment its count in the dictionary.\n3. If at any point there are duplicate counts, return False.\n4. If all the counts are unique, iterate through the dictionary. Check if the count is the same as the sum of the lengths of all characters to the left of the current index in the string. If they aren't the same, return False.\n5. If all these checks passed, return True.\n\nHere is the Python function implementation",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 76.12320590019226,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

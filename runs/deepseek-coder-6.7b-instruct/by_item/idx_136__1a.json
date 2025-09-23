@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_136::1a::deepseek-ai/deepseek-coder-6.7b-instruct::seed0",
+  "task_id": "idx_136",
+  "category": "1a",
+  "entry_point": "largest_smallest_integers",
+  "prompt_field": "prompt1a",
+  "prompt_text": "\ndef largest_smallest_integers(lst):\n    '''\n    Create a function that returns a tuple (a, b), where 'a' is\n    one of negative integers, and 'b' is one\n    of positive integers in a list.\n    If there is no negative or positive integers, return them as None.\n\n    Examples:\n    largest_smallest_integers([2, 4, 1, 3, 5, 7]) == (None, 1)\n    largest_smallest_integers([]) == (None, None)\n    largest_smallest_integers([0]) == (None, None)\n    '''\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef largest_smallest_integers(lst):\n    '''\n    Create a function that returns a tuple (a, b), where 'a' is\n    one of negative integers, and 'b' is one\n    of positive integers in a list.\n    If there is no negative or positive integers, return them as None.\n\n    Examples:\n    largest_smallest_integers([2, 4, 1, 3, 5, 7]) == (None, 1)\n    largest_smallest_integers([]) == (None, None)\n    largest_smallest_integers([0]) == (None, None)\n    '''",
+  "prompt_sha256": "25c51c2ba5e68596d437a88f57f4ba4700f00a7f7a46b8861625abd848e4d30b",
+  "model_name": "deepseek-ai/deepseek-coder-6.7b-instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef largest_smallest_integers(lst):\n    '''\n    Create a function that returns a tuple (a, b), where 'a' is\n    one of negative integers, and 'b' is one\n    of positive integers in a list.\n    If there is no negative or positive integers, return them as None.\n\n    Examples:\n    largest_smallest_integers([2, 4, 1, 3, 5, 7]) == (None, 1)\n    largest_smallest_integers([]) == (None, None)\n    largest_smallest_integers([0]) == (None, None)\n    '''\n    negative_num = None\n    positive_num = None\n\n    for i in lst:\n        if i < 0:\n            if negative_num is None or i > negative_num:\n                negative_num = i\n        elif i > 0:\n            if positive_num is None or i < positive_num:\n                positive_num = i\n\n    return negative_num, positive_num\n\n#Python 3 code:\n```python\ndef largest_smallest_integers(lst):\n    negative_num = None\n    positive_num = None\n\n    for i in lst:\n        if i < 0:\n            if negative_num is None or i > negative_num:\n                negative_num = i\n        elif i > 0:\n            if positive_num is None or i < positive_num:\n                positive_num = i\n\n    return negative_num, positive_num\n```\n```\n</details>\n\nAs you can see, this is a Python function that takes a list of integers, and returns the largest negative and smallest positive integer from the list. It does this by iterating through",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def largest_smallest_integers(lst):\n    negative_num = None\n    positive_num = None\n\n    for i in lst:\n        if i < 0:\n            if negative_num is None or i > negative_num:\n                negative_num = i\n        elif i > 0:\n            if positive_num is None or i < positive_num:\n                positive_num = i\n\n    return negative_num, positive_num",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 67.14254212379456,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

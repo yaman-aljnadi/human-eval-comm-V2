@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_89::1c::deepseek-ai/deepseek-coder-6.7b-instruct::seed0",
+  "task_id": "idx_89",
+  "category": "1c",
+  "entry_point": "encrypt",
+  "prompt_field": "prompt1c",
+  "prompt_text": "\ndef encrypt(s):\n    \"\"\"Create a function encrypt that takes a string as an argument and\n    returns a string encrypted with the alphabet being rotated. \n    The alphabet should be rotated in a manner such that the letters \n    shift down by two multiplied to two places.\n    For example:\n    encrypt('hi') returns 'kl'\n    encrypt('asdfghjkl') returns 'cvfiknqrs'\n    encrypt('gf') returns 'ji'\n    encrypt('et') returns 'gv'\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef encrypt(s):\n    \"\"\"Create a function encrypt that takes a string as an argument and\n    returns a string encrypted with the alphabet being rotated. \n    The alphabet should be rotated in a manner such that the letters \n    shift down by two multiplied to two places.\n    For example:\n    encrypt('hi') returns 'kl'\n    encrypt('asdfghjkl') returns 'cvfiknqrs'\n    encrypt('gf') returns 'ji'\n    encrypt('et') returns 'gv'\n    \"\"\"",
+  "prompt_sha256": "cbc7dd217ccce3b6dd5875b76388c7232179b202860a52c8e99bc4b4a8fee8ee",
+  "model_name": "deepseek-ai/deepseek-coder-6.7b-instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef encrypt(s):\n    \"\"\"Create a function encrypt that takes a string as an argument and\n    returns a string encrypted with the alphabet being rotated. \n    The alphabet should be rotated in a manner such that the letters \n    shift down by two multiplied to two places.\n    For example:\n    encrypt('hi') returns 'kl'\n    encrypt('asdfghjkl') returns 'cvfiknqrs'\n    encrypt('gf') returns 'ji'\n    encrypt('et') returns 'gv'\n    \"\"\"\n    # Your code goes here\n\n    encrypted = \"\"\n\n    for character in s:\n        if character.isalpha():\n            if character.isupper():\n                encrypted += chr((ord(character) - 65 + 2*2) % 26 + 65)\n            else:\n                encrypted += chr((ord(character) - 97 + 2*2) % 26 + 97)\n        else:\n            encrypted += character\n\n    return encrypted\n\n#test\nprint(encrypt('hi'))  # 'kl'\nprint(encrypt('asdfghjkl'))  # 'cvfiknqrs'\nprint(encrypt('gf'))  # 'ji'\nprint(encrypt('et'))  # 'gv'\n\nThe above code works by iterating over each character in the input string. If the character is an alphabet, it is converted to its ASCII representation, then the rotation is applied (subtracted by 65 for uppercase and 97 for lowercase for a 'a' to get a starting point), added by twice the rotation, and finally wrapped by",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def encrypt(s):\n    \"\"\"Create a function encrypt that takes a string as an argument and\n    returns a string encrypted with the alphabet being rotated. \n    The alphabet should be rotated in a manner such that the letters \n    shift down by two multiplied to two places.\n    For example:\n    encrypt('hi') returns 'kl'\n    encrypt('asdfghjkl') returns 'cvfiknqrs'\n    encrypt('gf') returns 'ji'\n    encrypt('et') returns 'gv'\n    \"\"\"\n    # Your code goes here\n\n    encrypted = \"\"\n\n    for character in s:\n        if character.isalpha():\n            if character.isupper():\n                encrypted += chr((ord(character) - 65 + 2*2) % 26 + 65)\n            else:\n                encrypted += chr((ord(character) - 97 + 2*2) % 26 + 97)\n        else:\n            encrypted += character\n\n    return encrypted\n\n#test\nprint(encrypt('hi'))  # 'kl'\nprint(encrypt('asdfghjkl'))  # 'cvfiknqrs'\nprint(encrypt('gf'))  # 'ji'\nprint(encrypt('et'))  # 'gv'\n\nThe above code works by iterating over each character in the input string. If the character is an alphabet, it is converted to its ASCII representation, then the rotation is applied (subtracted by 65 for uppercase and 97 for lowercase for a 'a' to get a starting point), added by twice the rotation, and finally wrapped by",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 76.20976996421814,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

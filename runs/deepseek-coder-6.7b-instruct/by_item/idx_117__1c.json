@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_117::1c::deepseek-ai/deepseek-coder-6.7b-instruct::seed0",
+  "task_id": "idx_117",
+  "category": "1c",
+  "entry_point": "select_words",
+  "prompt_field": "prompt1c",
+  "prompt_text": "\ndef select_words(s, n):\n    \"\"\"Given a string s and a natural number n, you have been tasked to implement \n    a function that returns a list of all words from string s that contain exactly \n    n consonants, in order these words appear in the string s.\n    If the string s is empty then the function should return an empty list.\n    Note: you may assume the input string contains only letters and spaces.\n    Examples:\n    select_words(\"Mary had a little lamb\", 4) ==> [\"had\"]\n    select_words(\"Mary had a little lamb\", 3) ==> [\"lamb\"]\n    select_words(\"simple white space\", 2) ==> [\"white\"]\n    select_words(\"Hello world\", 4) ==> [\"Hello\"]\n    select_words(\"Uncle sam\", 3) ==> [\"sam\"]\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef select_words(s, n):\n    \"\"\"Given a string s and a natural number n, you have been tasked to implement \n    a function that returns a list of all words from string s that contain exactly \n    n consonants, in order these words appear in the string s.\n    If the string s is empty then the function should return an empty list.\n    Note: you may assume the input string contains only letters and spaces.\n    Examples:\n    select_words(\"Mary had a little lamb\", 4) ==> [\"had\"]\n    select_words(\"Mary had a little lamb\", 3) ==> [\"lamb\"]\n    select_words(\"simple white space\", 2) ==> [\"white\"]\n    select_words(\"Hello world\", 4) ==> [\"Hello\"]\n    select_words(\"Uncle sam\", 3) ==> [\"sam\"]\n    \"\"\"",
+  "prompt_sha256": "5786006a4136f8dbe7498b617917aa35e0368488550ef341668967c2d696f60d",
+  "model_name": "deepseek-ai/deepseek-coder-6.7b-instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef select_words(s, n):\n    \"\"\"Given a string s and a natural number n, you have been tasked to implement \n    a function that returns a list of all words from string s that contain exactly \n    n consonants, in order these words appear in the string s.\n    If the string s is empty then the function should return an empty list.\n    Note: you may assume the input string contains only letters and spaces.\n    Examples:\n    select_words(\"Mary had a little lamb\", 4) ==> [\"had\"]\n    select_words(\"Mary had a little lamb\", 3) ==> [\"lamb\"]\n    select_words(\"simple white space\", 2) ==> [\"white\"]\n    select_words(\"Hello world\", 4) ==> [\"Hello\"]\n    select_words(\"Uncle sam\", 3) ==> [\"sam\"]\n    \"\"\"\n\n    def count_consonants(word):\n        vowels = \"aeiou\"\n        consonants = 0\n        for letter in word:\n            if letter.lower() not in vowels:\n                consonants += 1\n        return consonants\n\n    words = s.split(\" \")\n    selected_words = []\n\n    for word in words:\n        if count_consonants(word) == n:\n            selected_words.append(word)\n\n    return selected_words\n\n\nA: Here is a Python3 solution using the built-in methods of strings and lists:\n\n```python\ndef select_words(s, n):\n    vowels = \"aeiou\"\n    words = s.split(\" \")\n    selected_words = []\n\n    for word in words:\n        consonant_count = sum(1 for letter in word if letter.lower() not in vowels)\n        if consonant_count == n:\n            selected_words.append(word)\n\n    return selected_words\n\nprint(select_words(\"Mary had a little lamb\", 4",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def select_words(s, n):\n    \"\"\"Given a string s and a natural number n, you have been tasked to implement \n    a function that returns a list of all words from string s that contain exactly \n    n consonants, in order these words appear in the string s.\n    If the string s is empty then the function should return an empty list.\n    Note: you may assume the input string contains only letters and spaces.\n    Examples:\n    select_words(\"Mary had a little lamb\", 4) ==> [\"had\"]\n    select_words(\"Mary had a little lamb\", 3) ==> [\"lamb\"]\n    select_words(\"simple white space\", 2) ==> [\"white\"]\n    select_words(\"Hello world\", 4) ==> [\"Hello\"]\n    select_words(\"Uncle sam\", 3) ==> [\"sam\"]\n    \"\"\"\n\n    def count_consonants(word):\n        vowels = \"aeiou\"\n        consonants = 0\n        for letter in word:\n            if letter.lower() not in vowels:\n                consonants += 1\n        return consonants\n\n    words = s.split(\" \")\n    selected_words = []\n\n    for word in words:\n        if count_consonants(word) == n:\n            selected_words.append(word)\n\n    return selected_words\n\n\nA: Here is a Python3 solution using the built-in methods of strings and lists:\n\n```python\ndef select_words(s, n):\n    vowels = \"aeiou\"\n    words = s.split(\" \")\n    selected_words = []\n\n    for word in words:\n        consonant_count = sum(1 for letter in word if letter.lower() not in vowels)\n        if consonant_count == n:\n            selected_words.append(word)\n\n    return selected_words\n\nprint(select_words(\"Mary had a little lamb\", 4",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 65.60438513755798,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

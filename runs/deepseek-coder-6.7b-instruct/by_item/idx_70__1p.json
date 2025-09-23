@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_70::1p::deepseek-ai/deepseek-coder-6.7b-instruct::seed0",
+  "task_id": "idx_70",
+  "category": "1p",
+  "entry_point": "strange_sort_list",
+  "prompt_field": "prompt1p",
+  "prompt_text": "\ndef strange_sort_list(lst):\n    '''\n    Given list of integers, return list in strange order.\n\n    Examples:\n    strange_sort_list([1, 2, 3, 4]) == [1, 4, 2, 3]\n    strange_sort_list([5, 5, 5, 5]) == [5, 5, 5, 5]\n    strange_sort_list([]) == []\n    '''\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef strange_sort_list(lst):\n    '''\n    Given list of integers, return list in strange order.\n\n    Examples:\n    strange_sort_list([1, 2, 3, 4]) == [1, 4, 2, 3]\n    strange_sort_list([5, 5, 5, 5]) == [5, 5, 5, 5]\n    strange_sort_list([]) == []\n    '''",
+  "prompt_sha256": "f885cf93f6aefa816f9224810d15cc865c897fafee3156b9ece3bfff9b71fab6",
+  "model_name": "deepseek-ai/deepseek-coder-6.7b-instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef strange_sort_list(lst):\n    '''\n    Given list of integers, return list in strange order.\n\n    Examples:\n    strange_sort_list([1, 2, 3, 4]) == [1, 4, 2, 3]\n    strange_sort_list([5, 5, 5, 5]) == [5, 5, 5, 5]\n    strange_sort_list([]) == []\n    '''\n\nSo you give your example and describe how the function works, and I write code according to that.\n'''\n\nHere's the Python3 code based on the description you provided:\n\n```python\ndef strange_sort_list(lst):\n    if len(lst) <= 1:\n        return lst\n    mid = len(lst) // 2\n    left = strange_sort_list(lst[:mid])\n    right = strange_sort_list(lst[mid:])\n    return merge(left, right)\n\ndef merge(left, right):\n    merged = []\n    while left and right:\n        merged.append(left.pop(0))\n        merged.append(right.pop(0))\n    return merged + left + right\n```\n\nI will explain it, the function `strange_sort_list` is a variant of merge sort where pairs of elements are swapped in the final output. The function splits the list into two halves recursively until they are individual elements. It then merges these two halves back together with each pair of elements in the new list swapped.\n''",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def strange_sort_list(lst):\n    if len(lst) <= 1:\n        return lst\n    mid = len(lst) // 2\n    left = strange_sort_list(lst[:mid])\n    right = strange_sort_list(lst[mid:])\n    return merge(left, right)\n\ndef merge(left, right):\n    merged = []\n    while left and right:\n        merged.append(left.pop(0))\n        merged.append(right.pop(0))\n    return merged + left + right",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 65.18920540809631,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

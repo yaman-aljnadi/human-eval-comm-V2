@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_145::1c::deepseek-ai/deepseek-coder-6.7b-instruct::seed0",
+  "task_id": "idx_145",
+  "category": "1c",
+  "entry_point": "order_by_points",
+  "prompt_field": "prompt1c",
+  "prompt_text": "\ndef order_by_points(nums):\n    \"\"\"\n    Write a function which sorts the given list of integers\n    in ascending order according to the sum of their digits.\n    Note: if there are several items with similar sum of their digits,\n    order them based on their index in original list.\n\n    For example:\n    >>> order_by_points([1, 11, -1, -11, -12]) == [1, 11, -1, -12, -11]\n    >>> order_by_points([]) == []\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef order_by_points(nums):\n    \"\"\"\n    Write a function which sorts the given list of integers\n    in ascending order according to the sum of their digits.\n    Note: if there are several items with similar sum of their digits,\n    order them based on their index in original list.\n\n    For example:\n    >>> order_by_points([1, 11, -1, -11, -12]) == [1, 11, -1, -12, -11]\n    >>> order_by_points([]) == []\n    \"\"\"",
+  "prompt_sha256": "5a293e7a8899ea07e8c4f5d2450bd5a484528b50d4f89d595f829b54cd5b98f1",
+  "model_name": "deepseek-ai/deepseek-coder-6.7b-instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef order_by_points(nums):\n    \"\"\"\n    Write a function which sorts the given list of integers\n    in ascending order according to the sum of their digits.\n    Note: if there are several items with similar sum of their digits,\n    order them based on their index in original list.\n\n    For example:\n    >>> order_by_points([1, 11, -1, -11, -12]) == [1, 11, -1, -12, -11]\n    >>> order_by_points([]) == []\n    \"\"\"\n\n    # define the helper function to calculate the sum of digits\n    def sum_of_digits(num):\n        if num < 0:\n            num = -num\n        return sum(int(digit) for digit in str(num))\n\n    # use the'sorted' function with a custom key function\n    return sorted(nums, key=sum_of_digits)\n\n\n    # for i in range(len(nums)):\n    #     min_index = i\n    #     for j in range(i+1, len(nums)):\n    #         if sum_of_digits(nums[j]) < sum_of_digits(nums[min_index]):\n    #             min_index = j\n    #     nums[i], nums[min_index] = nums[min_index], nums[i]\n    # return nums\n```\n'''\n\ndef order_by_points(nums):\n    if nums == []:\n        return []\n    return sorted(nums, key=lambda x: sum(int",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def order_by_points(nums):\n    \"\"\"\n    Write a function which sorts the given list of integers\n    in ascending order according to the sum of their digits.\n    Note: if there are several items with similar sum of their digits,\n    order them based on their index in original list.\n\n    For example:\n    >>> order_by_points([1, 11, -1, -11, -12]) == [1, 11, -1, -12, -11]\n    >>> order_by_points([]) == []\n    \"\"\"\n\n    # define the helper function to calculate the sum of digits\n    def sum_of_digits(num):\n        if num < 0:\n            num = -num\n        return sum(int(digit) for digit in str(num))\n\n    # use the'sorted' function with a custom key function\n    return sorted(nums, key=sum_of_digits)\n\n\n    # for i in range(len(nums)):\n    #     min_index = i\n    #     for j in range(i+1, len(nums)):\n    #         if sum_of_digits(nums[j]) < sum_of_digits(nums[min_index]):\n    #             min_index = j\n    #     nums[i], nums[min_index] = nums[min_index], nums[i]\n    # return nums\n```\n'''\n\ndef order_by_points(nums):\n    if nums == []:\n        return []\n    return sorted(nums, key=lambda x: sum(int",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 64.53279113769531,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

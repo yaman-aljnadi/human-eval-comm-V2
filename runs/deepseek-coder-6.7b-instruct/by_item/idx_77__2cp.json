@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_77::2cp::deepseek-ai/deepseek-coder-6.7b-instruct::seed0",
+  "task_id": "idx_77",
+  "category": "2cp",
+  "entry_point": "iscube",
+  "prompt_field": "prompt2cp",
+  "prompt_text": "\ndef candidate(a):\n    '''\n    Write a function that takes an integer a and returns True \n    if this integer is.\n    Note: you may assume the input is always valid.\n    Examples:\n    candidate(1) ==> False\n    candidate(2) ==> True\n    candidate(-1) ==> False\n    candidate(64) ==> False\n    candidate(0) ==> False\n    candidate(180) ==> True\n    '''\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(a):\n    '''\n    Write a function that takes an integer a and returns True \n    if this integer is.\n    Note: you may assume the input is always valid.\n    Examples:\n    candidate(1) ==> False\n    candidate(2) ==> True\n    candidate(-1) ==> False\n    candidate(64) ==> False\n    candidate(0) ==> False\n    candidate(180) ==> True\n    '''",
+  "prompt_sha256": "9db029738e95696c884609243e8932ab041078d1ed12f3599b3de0be580e1117",
+  "model_name": "deepseek-ai/deepseek-coder-6.7b-instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(a):\n    '''\n    Write a function that takes an integer a and returns True \n    if this integer is.\n    Note: you may assume the input is always valid.\n    Examples:\n    candidate(1) ==> False\n    candidate(2) ==> True\n    candidate(-1) ==> False\n    candidate(64) ==> False\n    candidate(0) ==> False\n    candidate(180) ==> True\n    '''\n    def is_prime(num):\n        if num == 1 or num == 0:\n            return False\n        else:\n            for i in range(2, num):\n                if num % i == 0:\n                    return False\n            return True\n\n    if is_prime(a):\n        return is_prime(sum([int(i) for i in str(a)]))\n    else:\n        return False\n\n# Sample tests\nprint(candidate(1))  # False\nprint(candidate(2))  # True\nprint(candidate(-1))  # False\nprint(candidate(64))  # False\nprint(candidate(0))  # False\nprint(candidate(180))  # False\n\n# This code will return true for prime numbers that are part of 3 digit numbers only.\n# For 4-digit numbers and more the task is not clear.\n\n\nA: If I understand you correctly, the function checks whether the integer given as an argument is a prime number and whether the sum of its digits is also a prime number. The function `candidate` first checks whether the",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def candidate(a):\n    '''\n    Write a function that takes an integer a and returns True \n    if this integer is.\n    Note: you may assume the input is always valid.\n    Examples:\n    candidate(1) ==> False\n    candidate(2) ==> True\n    candidate(-1) ==> False\n    candidate(64) ==> False\n    candidate(0) ==> False\n    candidate(180) ==> True\n    '''\n    def is_prime(num):\n        if num == 1 or num == 0:\n            return False\n        else:\n            for i in range(2, num):\n                if num % i == 0:\n                    return False\n            return True\n\n    if is_prime(a):\n        return is_prime(sum([int(i) for i in str(a)]))\n    else:\n        return False\n\n# Sample tests\nprint(candidate(1))  # False\nprint(candidate(2))  # True\nprint(candidate(-1))  # False\nprint(candidate(64))  # False\nprint(candidate(0))  # False\nprint(candidate(180))  # False\n\n# This code will return true for prime numbers that are part of 3 digit numbers only.\n# For 4-digit numbers and more the task is not clear.\n\n\nA: If I understand you correctly, the function checks whether the integer given as an argument is a prime number and whether the sum of its digits is also a prime number. The function `candidate` first checks whether the",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 62.97992825508118,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_104::1p::deepseek-ai/deepseek-coder-6.7b-instruct::seed0",
+  "task_id": "idx_104",
+  "category": "1p",
+  "entry_point": "unique_digits",
+  "prompt_field": "prompt1p",
+  "prompt_text": "\ndef unique_digits(x):\n    \"\"\"Given a list of positive integers x. return a sorted list of all \n    elements that hasn't any.\n\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef unique_digits(x):\n    \"\"\"Given a list of positive integers x. return a sorted list of all \n    elements that hasn't any.\n\n    \"\"\"",
+  "prompt_sha256": "9b0e7704aa8b881ca3cf237fbd37f6f76f943c922a06aac513477ca519122a2e",
+  "model_name": "deepseek-ai/deepseek-coder-6.7b-instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef unique_digits(x):\n    \"\"\"Given a list of positive integers x. return a sorted list of all \n    elements that hasn't any.\n\n    \"\"\"\n    digits = set(\"0123456789\")\n    unique = []\n\n    for number in x:\n        str_num = str(number)\n        for digit in str_num:\n            if digit in digits:\n                digits.remove(digit)\n\n    for digit in digits:\n        unique.append(int(digit))\n\n    return sorted(unique)\n\n\nA: Your question does not provide any data to test this function with. Hence, I am going to assume that your input is [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]. In this case, your function will return [] as all digits from 0 to 9 are included in the input list.\n\nThe function will return the numbers that are not in the input list in ascending order. \n\nFor your case, the output will be: []\n\nThis shows that all digits from 0 to 9 are in the list of unique digits as they are not present in the list. \n\nSo the output of the function is as",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def unique_digits(x):\n    \"\"\"Given a list of positive integers x. return a sorted list of all \n    elements that hasn't any.\n\n    \"\"\"\n    digits = set(\"0123456789\")\n    unique = []\n\n    for number in x:\n        str_num = str(number)\n        for digit in str_num:\n            if digit in digits:\n                digits.remove(digit)\n\n    for digit in digits:\n        unique.append(int(digit))\n\n    return sorted(unique)\n\n\nA: Your question does not provide any data to test this function with. Hence, I am going to assume that your input is [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]. In this case, your function will return [] as all digits from 0 to 9 are included in the input list.\n\nThe function will return the numbers that are not in the input list in ascending order. \n\nFor your case, the output will be: []\n\nThis shows that all digits from 0 to 9 are in the list of unique digits as they are not present in the list. \n\nSo the output of the function is as",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 65.31923413276672,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_85::1c::deepseek-ai/deepseek-coder-6.7b-instruct::seed0",
+  "task_id": "idx_85",
+  "category": "1c",
+  "entry_point": "add",
+  "prompt_field": "prompt1c",
+  "prompt_text": "\ndef add(lst):\n    \"\"\"Given a non-empty list of integers lst. add the even elements that are at odd indices..\n\n\n    Examples:\n        add([4, 2, 6, 7]) ==> 6 \n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef add(lst):\n    \"\"\"Given a non-empty list of integers lst. add the even elements that are at odd indices..\n\n\n    Examples:\n        add([4, 2, 6, 7]) ==> 6 \n    \"\"\"",
+  "prompt_sha256": "4fecf1e6bcd76313b2cec88e07f80346dbaf67856f63566b666b238114bb043d",
+  "model_name": "deepseek-ai/deepseek-coder-6.7b-instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef add(lst):\n    \"\"\"Given a non-empty list of integers lst. add the even elements that are at odd indices..\n\n\n    Examples:\n        add([4, 2, 6, 7]) ==> 6 \n    \"\"\"\n    total = 0\n    for i in range(1, len(lst), 2):\n        if lst[i] % 2 == 0:\n            total += lst[i]\n    return total\n\nprint(add([4, 2, 6, 7]))  # Should return 6\n\n```python\ndef add(lst):\n    \"\"\"Given a non-empty list of integers lst. add the even elements that are at odd indices.\n\n\n    Examples:\n        add([4, 2, 6, 7]) ==> 6 \n    \"\"\"\n    total = 0\n    for i in range(1, len(lst), 2):\n        if lst[i] % 2 == 0:\n            total += lst[i]\n    return total\n\nprint(add([4, 2, 6, 7]))  # Should return 6\n```\n\n\n&lt;code&gt;total&lt;/code&gt; is set to keep track of the sum of the even numbers at odd indices. The for loop iterates through the list starting from the second position",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def add(lst):\n    \"\"\"Given a non-empty list of integers lst. add the even elements that are at odd indices.\n\n\n    Examples:\n        add([4, 2, 6, 7]) ==> 6 \n    \"\"\"\n    total = 0\n    for i in range(1, len(lst), 2):\n        if lst[i] % 2 == 0:\n            total += lst[i]\n    return total\n\nprint(add([4, 2, 6, 7]))  # Should return 6",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 74.55039572715759,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

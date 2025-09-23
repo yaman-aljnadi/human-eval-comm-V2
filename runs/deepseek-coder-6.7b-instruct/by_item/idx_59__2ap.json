@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_59::2ap::deepseek-ai/deepseek-coder-6.7b-instruct::seed0",
+  "task_id": "idx_59",
+  "category": "2ap",
+  "entry_point": "largest_prime_factor",
+  "prompt_field": "prompt2ap",
+  "prompt_text": "\n\ndef candidate(n: int):\n    \"\"\"Return the smallest or largest prime factor of n. Assume n > 1 and is not a prime.\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(n: int):\n    \"\"\"Return the smallest or largest prime factor of n. Assume n > 1 and is not a prime.\n    \"\"\"",
+  "prompt_sha256": "c07b60f18c5d2d5cf2566cfa6e5373070f294fb8bd54fc40467192e7265e84c5",
+  "model_name": "deepseek-ai/deepseek-coder-6.7b-instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(n: int):\n    \"\"\"Return the smallest or largest prime factor of n. Assume n > 1 and is not a prime.\n    \"\"\"\n    # START_FULL_SOLUTION\n    i = 2\n    while i * i <= n:\n        if n % i:\n            i += 1\n        else:\n            return i  # or n // i\n\n    return n  # if n is prime\n    # END_FULL_SOLUTION\n\nprint(candidate(36))  # should print 2 or 3\n\nThis Python function calculates the smallest prime factor of a given number n, considering n is not a prime and greater than 1. If n is prime, the function returns n.\n\nThe algorithm works by iterating from 2 up to sqrt(n) and for each i, if n is divisible by i, we return i. If not, we increment i by 1 and continue. If no i is found that divides n, we return n as the smallest prime factor.\n\nThe complexity of this algorithm is O(sqrt(n)) because in the worst-case scenario, we iterate up to sqrt(n) times.\n\nIf you need further explanation or changes, please, provide more details.\n\nNote: This code will",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def candidate(n: int):\n    \"\"\"Return the smallest or largest prime factor of n. Assume n > 1 and is not a prime.\n    \"\"\"\n    # START_FULL_SOLUTION\n    i = 2\n    while i * i <= n:\n        if n % i:\n            i += 1\n        else:\n            return i  # or n // i\n\n    return n  # if n is prime\n    # END_FULL_SOLUTION\n\nprint(candidate(36))  # should print 2 or 3\n\nThis Python function calculates the smallest prime factor of a given number n, considering n is not a prime and greater than 1. If n is prime, the function returns n.\n\nThe algorithm works by iterating from 2 up to sqrt(n) and for each i, if n is divisible by i, we return i. If not, we increment i by 1 and continue. If no i is found that divides n, we return n as the smallest prime factor.\n\nThe complexity of this algorithm is O(sqrt(n)) because in the worst-case scenario, we iterate up to sqrt(n) times.\n\nIf you need further explanation or changes, please, provide more details.\n\nNote: This code will",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 65.09532856941223,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

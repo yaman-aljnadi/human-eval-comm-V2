@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_4::2ap::deepseek-ai/deepseek-coder-6.7b-instruct::seed0",
+  "task_id": "idx_4",
+  "category": "2ap",
+  "entry_point": "mean_absolute_deviation",
+  "prompt_field": "prompt2ap",
+  "prompt_text": "from typing import List\n\n\ndef candidate(numbers: List[float]) -> float:\n    \"\"\" For a given list of input numbers, calculate Mean Absolute Deviation\n    MAD = average | x - (e.g. max or mean or other) |\n\"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List\n\n\ndef candidate(numbers: List[float]) -> float:\n    \"\"\" For a given list of input numbers, calculate Mean Absolute Deviation\n    MAD = average | x - (e.g. max or mean or other) |\n\"\"\"",
+  "prompt_sha256": "037ebba5a3bb240978857e93e4096fef63431bce6ff6e0e7b6c752ea2d4110fb",
+  "model_name": "deepseek-ai/deepseek-coder-6.7b-instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List\n\n\ndef candidate(numbers: List[float]) -> float:\n    \"\"\" For a given list of input numbers, calculate Mean Absolute Deviation\n    MAD = average | x - (e.g. max or mean or other) |\n\"\"\"\n```\nUser's response:\nHere is the python3 code:\n\n```python\nfrom typing import List\n\ndef candidate(numbers: List[float]) -> float:\n    mean = sum(numbers) / len(numbers)\n    abs_diffs = [abs(x - mean) for x in numbers]\n    mad = sum(abs_diffs) / len(abs_diffs)\n    return mad\n```\nThis code calculates the mean absolute deviation (MAD) of a list of numbers. It first calculates the mean of the numbers, then calculates the absolute differences between each number and the mean, and finally calculates the average of these absolute differences to get the MAD.\n",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "User's response:\nHere is the python3 code:",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 28.11624526977539,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_116::1p::deepseek-ai/deepseek-coder-6.7b-instruct::seed0",
+  "task_id": "idx_116",
+  "category": "1p",
+  "entry_point": "sort_array",
+  "prompt_field": "prompt1p",
+  "prompt_text": "\ndef sort_array(arr):\n    \"\"\"\n    In this Kata, you have to sort an array of non-negative integers according to\n    number of ones in their \n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef sort_array(arr):\n    \"\"\"\n    In this Kata, you have to sort an array of non-negative integers according to\n    number of ones in their \n    \"\"\"",
+  "prompt_sha256": "ca0b581ac7c90ce6664b5e224560dc0b39d01685a65727e454c40d1c9d2d10b3",
+  "model_name": "deepseek-ai/deepseek-coder-6.7b-instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef sort_array(arr):\n    \"\"\"\n    In this Kata, you have to sort an array of non-negative integers according to\n    number of ones in their \n    \"\"\"\n    return arr\n\narr = [10, 3, 15, 7, 8, 12]\nprint(sort_array(arr))\n\narr = [10, 3, 15,0,12]\nprint(sort_array(arr))\n\narr = [10, 3, 38, 3, 27]\nprint(sort_array(arr))\n\narr = [10, 3, 15, 7, 8, 12, 1]\nprint(sort_array(arr))\n\nThis is the initial implementation of the function and it should look like this:\n\ndef sort_array(arr):\n    def count_ones(n):\n        return bin(n).count('1')\n    return sorted(arr, key=count_ones)\nThe problem is, in the print statements, the output is always the same. So, the question is how to test the function now?\nIn Python, you can use built-in function to count the binary representation of number of ones, but how to apply it to the array? I understand bin",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def sort_array(arr):\n    \"\"\"\n    In this Kata, you have to sort an array of non-negative integers according to\n    number of ones in their \n    \"\"\"\n    return arr\n\narr = [10, 3, 15, 7, 8, 12]\nprint(sort_array(arr))\n\narr = [10, 3, 15,0,12]\nprint(sort_array(arr))\n\narr = [10, 3, 38, 3, 27]\nprint(sort_array(arr))\n\narr = [10, 3, 15, 7, 8, 12, 1]\nprint(sort_array(arr))\n\nThis is the initial implementation of the function and it should look like this:\n\ndef sort_array(arr):\n    def count_ones(n):\n        return bin(n).count('1')\n    return sorted(arr, key=count_ones)\nThe problem is, in the print statements, the output is always the same. So, the question is how to test the function now?\nIn Python, you can use built-in function to count the binary representation of number of ones, but how to apply it to the array? I understand bin",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 63.31076717376709,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

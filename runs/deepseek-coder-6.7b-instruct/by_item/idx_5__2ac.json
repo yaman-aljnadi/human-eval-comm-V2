@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_5::2ac::deepseek-ai/deepseek-coder-6.7b-instruct::seed0",
+  "task_id": "idx_5",
+  "category": "2ac",
+  "entry_point": "intersperse",
+  "prompt_field": "prompt2ac",
+  "prompt_text": "from typing import List\n\n\ndef candidate(numbers: List[int], x: int) -> List[int]:\n    \"\"\" Insert a number 'x' for a certain number of times in the input list `numbers'\n    >>> candidate([], 4)\n    [4]\n    >>> candidate([1, 2, 3], 4)\n    [1, 2, 3, 4]\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List\n\n\ndef candidate(numbers: List[int], x: int) -> List[int]:\n    \"\"\" Insert a number 'x' for a certain number of times in the input list `numbers'\n    >>> candidate([], 4)\n    [4]\n    >>> candidate([1, 2, 3], 4)\n    [1, 2, 3, 4]\n    \"\"\"",
+  "prompt_sha256": "7adc18d5ca3668abb5952afe93279a34174117266d2ae6d112e87d5bd59c2593",
+  "model_name": "deepseek-ai/deepseek-coder-6.7b-instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List\n\n\ndef candidate(numbers: List[int], x: int) -> List[int]:\n    \"\"\" Insert a number 'x' for a certain number of times in the input list `numbers'\n    >>> candidate([], 4)\n    [4]\n    >>> candidate([1, 2, 3], 4)\n    [1, 2, 3, 4]\n    \"\"\"\n    numbers.append(x)\n    return numbers\n\n#src/test_candidate.py\nfrom src import candidate\nimport unittest\n\nclass TestCandidate(unittest.TestCase):\n\n    def test_candidate(self):\n        self.assertEqual(candidate([], 4), [4])\n        self.assertEqual(candidate([1, 2, 3], 4), [1, 2, 3, 4])\n\n\nif __name__ == '__main__':\n    unittest.main()\n\n#src/__init__.py\nfrom.candidate import *\n\n#main.py\nfrom src import candidate\n\n\nif __name__ == \"__main__\":\n    print(candidate([], 4))\n    print(candidate([1, 2, 3], 4))\n\n#tests/test_candidate.py\nimport unittest\nfrom src import candidate\n\n\nclass TestCandidate(unittest.TestCase):\n\n    def test_candidate(self):\n        self.assertEqual(candidate([], 4), [",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def candidate(numbers: List[int], x: int) -> List[int]:\n    \"\"\" Insert a number 'x' for a certain number of times in the input list `numbers'\n    >>> candidate([], 4)\n    [4]\n    >>> candidate([1, 2, 3], 4)\n    [1, 2, 3, 4]\n    \"\"\"\n    numbers.append(x)\n    return numbers\n\n#src/test_candidate.py\nfrom src import candidate\nimport unittest\n\nclass TestCandidate(unittest.TestCase):\n\n    def test_candidate(self):\n        self.assertEqual(candidate([], 4), [4])\n        self.assertEqual(candidate([1, 2, 3], 4), [1, 2, 3, 4])\n\n\nif __name__ == '__main__':\n    unittest.main()\n\n#src/__init__.py\nfrom.candidate import *\n\n#main.py\nfrom src import candidate\n\n\nif __name__ == \"__main__\":\n    print(candidate([], 4))\n    print(candidate([1, 2, 3], 4))\n\n#tests/test_candidate.py\nimport unittest\nfrom src import candidate\n\n\nclass TestCandidate(unittest.TestCase):\n\n    def test_candidate(self):\n        self.assertEqual(candidate([], 4), [",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 44.264402866363525,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

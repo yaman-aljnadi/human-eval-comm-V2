@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_61::2cp::deepseek-ai/deepseek-coder-6.7b-instruct::seed0",
+  "task_id": "idx_61",
+  "category": "2cp",
+  "entry_point": "correct_bracketing",
+  "prompt_field": "prompt2cp",
+  "prompt_text": "\n\ndef correct_bracketing(brackets: str):\n    \"\"\" brackets is a string of \"(\" and \")\".\n\n    >>> correct_bracketing(\"(\")\n    True\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef correct_bracketing(brackets: str):\n    \"\"\" brackets is a string of \"(\" and \")\".\n\n    >>> correct_bracketing(\"(\")\n    True\n    \"\"\"",
+  "prompt_sha256": "b3776f8e38b17c5b7076bc729d85497e373406d49219a785d6b47e39995bf5d2",
+  "model_name": "deepseek-ai/deepseek-coder-6.7b-instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef correct_bracketing(brackets: str):\n    \"\"\" brackets is a string of \"(\" and \")\".\n\n    >>> correct_bracketing(\"(\")\n    True\n    \"\"\"\n\n    stack = []\n    for bracket in brackets:\n        if bracket == '(':\n            stack.append(bracket)\n        elif bracket == ')' and len(stack) > 0:\n            stack.pop()\n        else:\n            return False\n    return len(stack) == 0\n\n# This function checks if the parenthesis are balanced properly\n\n# 1) If you receive a \"(\" it pushes it to a data structure\n# 2) If you receive a \")\" it pops the last item in the data structure (if any). \n# 3) If no matching pair is found, the function returns false.\n# 4) Finally, if the length of the data structure is zero, it returns True. This means all parenthesis were balanced properly.\n# 5) If it’s not zero, it means there are unbalanced pairs, so it returns False.\n```python\ndef correct_bracketing(brackets: str) -> bool:\n    stack = []\n    for bracket in brackets:\n        if bracket == '(':\n            stack.append(bracket)",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def correct_bracketing(brackets: str):\n    \"\"\" brackets is a string of \"(\" and \")\".\n\n    >>> correct_bracketing(\"(\")\n    True\n    \"\"\"\n\n    stack = []\n    for bracket in brackets:\n        if bracket == '(':\n            stack.append(bracket)\n        elif bracket == ')' and len(stack) > 0:\n            stack.pop()\n        else:\n            return False\n    return len(stack) == 0\n\n# This function checks if the parenthesis are balanced properly\n\n# 1) If you receive a \"(\" it pushes it to a data structure\n# 2) If you receive a \")\" it pops the last item in the data structure (if any). \n# 3) If no matching pair is found, the function returns false.\n# 4) Finally, if the length of the data structure is zero, it returns True. This means all parenthesis were balanced properly.\n# 5) If it’s not zero, it means there are unbalanced pairs, so it returns False.\n```python\ndef correct_bracketing(brackets: str) -> bool:\n    stack = []\n    for bracket in brackets:\n        if bracket == '(':\n            stack.append(bracket)",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 76.38169932365417,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

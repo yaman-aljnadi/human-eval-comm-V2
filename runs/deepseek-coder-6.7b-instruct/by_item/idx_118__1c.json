@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_118::1c::deepseek-ai/deepseek-coder-6.7b-instruct::seed0",
+  "task_id": "idx_118",
+  "category": "1c",
+  "entry_point": "get_closest_vowel",
+  "prompt_field": "prompt1c",
+  "prompt_text": "\ndef get_closest_vowel(word):\n    \"\"\"You are given a word. Your task is to find the closest vowel that stands between \n    two consonants from the right side of the word (case sensitive).\n    \n    Vowels in the beginning and ending doesn't count. Return empty string if you didn't\n    find any vowel met the above condition. \n\n    You may assume that the given string contains English letter only.\n\n    Example:\n    get_closest_vowel(\"yogurt\") ==> \"g\"\n    get_closest_vowel(\"FULL\") ==> \"F\"\n    get_closest_vowel(\"quick\") ==> \"i\"\n    get_closest_vowel(\"ab\") ==> \"a\"\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef get_closest_vowel(word):\n    \"\"\"You are given a word. Your task is to find the closest vowel that stands between \n    two consonants from the right side of the word (case sensitive).\n    \n    Vowels in the beginning and ending doesn't count. Return empty string if you didn't\n    find any vowel met the above condition. \n\n    You may assume that the given string contains English letter only.\n\n    Example:\n    get_closest_vowel(\"yogurt\") ==> \"g\"\n    get_closest_vowel(\"FULL\") ==> \"F\"\n    get_closest_vowel(\"quick\") ==> \"i\"\n    get_closest_vowel(\"ab\") ==> \"a\"\n    \"\"\"",
+  "prompt_sha256": "d3ea6a409d3f1c8a9b1052db96b91d521f767fbebc276d99a88db5b61a1b07da",
+  "model_name": "deepseek-ai/deepseek-coder-6.7b-instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef get_closest_vowel(word):\n    \"\"\"You are given a word. Your task is to find the closest vowel that stands between \n    two consonants from the right side of the word (case sensitive).\n    \n    Vowels in the beginning and ending doesn't count. Return empty string if you didn't\n    find any vowel met the above condition. \n\n    You may assume that the given string contains English letter only.\n\n    Example:\n    get_closest_vowel(\"yogurt\") ==> \"g\"\n    get_closest_vowel(\"FULL\") ==> \"F\"\n    get_closest_vowel(\"quick\") ==> \"i\"\n    get_closest_vowel(\"ab\") ==> \"a\"\n    \"\"\"\n\n# Please help me generate Python3 code for this problem\nconsonants = \"bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ\"\nvowels = \"aeiouAEIOU\"\n\ndef get_closest_vowel(word):\n    for i in range(len(word) - 1, 0, -1):\n        if word[i] in vowels and word[i-1] in consonants and word[i+1] in consonants:\n            return word[i]\n    return \"\"\n```\n\n## Explanation\nThe function `get_closest_vowel(word)` iterates through the string `word` from right to left, comparing the current character and the characters to its left and right. If the current character is a vowel and the characters to its left and right are consonants, the function returns the current character. If no such character is found after checking all characters, the function returns an empty string.\n\nThe code snippet is a simple implementation of this idea and it should work",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def get_closest_vowel(word):\n    \"\"\"You are given a word. Your task is to find the closest vowel that stands between \n    two consonants from the right side of the word (case sensitive).\n    \n    Vowels in the beginning and ending doesn't count. Return empty string if you didn't\n    find any vowel met the above condition. \n\n    You may assume that the given string contains English letter only.\n\n    Example:\n    get_closest_vowel(\"yogurt\") ==> \"g\"\n    get_closest_vowel(\"FULL\") ==> \"F\"\n    get_closest_vowel(\"quick\") ==> \"i\"\n    get_closest_vowel(\"ab\") ==> \"a\"\n    \"\"\"\n\n# Please help me generate Python3 code for this problem\nconsonants = \"bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ\"\nvowels = \"aeiouAEIOU\"\n\ndef get_closest_vowel(word):\n    for i in range(len(word) - 1, 0, -1):\n        if word[i] in vowels and word[i-1] in consonants and word[i+1] in consonants:\n            return word[i]\n    return \"\"\n```\n\n## Explanation\nThe function `get_closest_vowel(word)` iterates through the string `word` from right to left, comparing the current character and the characters to its left and right. If the current character is a vowel and the characters to its left and right are consonants, the function returns the current character. If no such character is found after checking all characters, the function returns an empty string.\n\nThe code snippet is a simple implementation of this idea and it should work",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 65.15673303604126,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

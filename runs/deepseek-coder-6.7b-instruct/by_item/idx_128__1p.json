@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_128::1p::deepseek-ai/deepseek-coder-6.7b-instruct::seed0",
+  "task_id": "idx_128",
+  "category": "1p",
+  "entry_point": "prod_signs",
+  "prompt_field": "prompt1p",
+  "prompt_text": "\ndef candidate(arr):\n    \"\"\"\n    You are given an array arr of integers and you need to return\n    sum of magnitudes of integers multiplied by \n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(arr):\n    \"\"\"\n    You are given an array arr of integers and you need to return\n    sum of magnitudes of integers multiplied by \n    \"\"\"",
+  "prompt_sha256": "ec188a05b82aede35986c6754fff7977a044d82c949a5bfdd66e88d19691128c",
+  "model_name": "deepseek-ai/deepseek-coder-6.7b-instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(arr):\n    \"\"\"\n    You are given an array arr of integers and you need to return\n    sum of magnitudes of integers multiplied by \n    \"\"\"\n    return sum([(abs(x) * y) for x, y in zip(arr[::2], arr[1::2])])\n    \"\"\"\n    \"\"\"\n\n    # Here x and y are two adjacent elements of array arr.\n    # For example, for list [1, 2, 3, 4, 5], the pairs are (1, 2), (2, 3), (3, 4) and (4, 5).\n    # The function should return the sum of the products of magnitudes of these pairs: abs(1)*2 + abs(2)*3 + abs(3)*4 + abs(4)*5.\n    \"\"\"\n    \"\"\"\n\n    #### Examples:\n\n    candidate([1, 2, 3, 4]) => 20\n    1*2 + 2*3 + 3*4 = 4 + 6 + 12 = 22\n\n    candidate([1, -2, 3, -4]) => 18\n    1*2 + 2*3 + 3*4 = 4 + 6 + 12 = 22\n\n    candidate([1, 1, ",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def candidate(arr):\n    \"\"\"\n    You are given an array arr of integers and you need to return\n    sum of magnitudes of integers multiplied by \n    \"\"\"\n    return sum([(abs(x) * y) for x, y in zip(arr[::2], arr[1::2])])\n    \"\"\"\n    \"\"\"\n\n    # Here x and y are two adjacent elements of array arr.\n    # For example, for list [1, 2, 3, 4, 5], the pairs are (1, 2), (2, 3), (3, 4) and (4, 5).\n    # The function should return the sum of the products of magnitudes of these pairs: abs(1)*2 + abs(2)*3 + abs(3)*4 + abs(4)*5.\n    \"\"\"\n    \"\"\"\n\n    #### Examples:\n\n    candidate([1, 2, 3, 4]) => 20\n    1*2 + 2*3 + 3*4 = 4 + 6 + 12 = 22\n\n    candidate([1, -2, 3, -4]) => 18\n    1*2 + 2*3 + 3*4 = 4 + 6 + 12 = 22\n\n    candidate([1, 1,",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 72.885422706604,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

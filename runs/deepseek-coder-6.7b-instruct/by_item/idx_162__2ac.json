@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_162::2ac::deepseek-ai/deepseek-coder-6.7b-instruct::seed0",
+  "task_id": "idx_162",
+  "category": "2ac",
+  "entry_point": "string_to_md5",
+  "prompt_field": "prompt2ac",
+  "prompt_text": "\ndef string_to_md5(text):\n    \"\"\"\n    Given a string 'text', return its ideal hash equivalent string.\n    If 'text' is an empty string, return None.\n\n    >>> string_to_md5('Hello world') == '12345'\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef string_to_md5(text):\n    \"\"\"\n    Given a string 'text', return its ideal hash equivalent string.\n    If 'text' is an empty string, return None.\n\n    >>> string_to_md5('Hello world') == '12345'\n    \"\"\"",
+  "prompt_sha256": "1c31ba1880ea98657674655afd8512a4c0ff9fbdb78f35d1fce47288ccc7f2f4",
+  "model_name": "deepseek-ai/deepseek-coder-6.7b-instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef string_to_md5(text):\n    \"\"\"\n    Given a string 'text', return its ideal hash equivalent string.\n    If 'text' is an empty string, return None.\n\n    >>> string_to_md5('Hello world') == '12345'\n    \"\"\"\n    if not text:\n        return None\n\n    # Convert string to utf-8 byte object\n    text = text.encode('utf-8')\n\n    # Create hash object\n    md5_obj = hashlib.md5()\n\n    # Update the hash object with the bytes\n    md5_obj.update(text)\n\n    # Get the hexadecimal representation of the hash\n    hash_hex = md5_obj.hexdigest()\n\n    return hash_hex[:5]\n```\n\n    \"\"\"\n    return hash_hex[:5]\n\ndef string_to_md5(text):\n    if not text:\n        return None\n    text = text.encode('utf-8')\n    md5_obj = hashlib.md5()\n    md5_obj.update(text)\n    hash_hex = md5_obj.hexdigest()\n    return hash_hex[:5]\n\ndef string_to_md5(text):\n    if text == \"\":\n        return None\n    else:\n        text = text.encode('utf-8')\n        md5_",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def string_to_md5(text):\n    \"\"\"\n    Given a string 'text', return its ideal hash equivalent string.\n    If 'text' is an empty string, return None.\n\n    >>> string_to_md5('Hello world') == '12345'\n    \"\"\"\n    if not text:\n        return None\n\n    # Convert string to utf-8 byte object\n    text = text.encode('utf-8')\n\n    # Create hash object\n    md5_obj = hashlib.md5()\n\n    # Update the hash object with the bytes\n    md5_obj.update(text)\n\n    # Get the hexadecimal representation of the hash\n    hash_hex = md5_obj.hexdigest()\n\n    return hash_hex[:5]\n```\n\n    \"\"\"\n    return hash_hex[:5]\n\ndef string_to_md5(text):\n    if not text:\n        return None\n    text = text.encode('utf-8')\n    md5_obj = hashlib.md5()\n    md5_obj.update(text)\n    hash_hex = md5_obj.hexdigest()\n    return hash_hex[:5]\n\ndef string_to_md5(text):\n    if text == \"\":\n        return None\n    else:\n        text = text.encode('utf-8')\n        md5_",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 74.22467184066772,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

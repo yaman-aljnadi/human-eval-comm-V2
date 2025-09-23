@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_94::1c::deepseek-ai/deepseek-coder-6.7b-instruct::seed0",
+  "task_id": "idx_94",
+  "category": "1c",
+  "entry_point": "skjkasdkd",
+  "prompt_field": "prompt1c",
+  "prompt_text": "\n\ndef skjkasdkd(lst):\n    \"\"\"You are given a list of integers.\n    You need to find the largest prime value and return the sum of its digits.\n\n    Examples:\n    For lst = [0,3,2,1,3,5,7,4,5,5,5,2,181,32,4,32,3,2,32,324,4,3] the output should be 2\n    For lst = [1,0,1,8,2,4597,2,1,3,40,1,2,1,2,4,2,5,1] the output should be 2\n    For lst = [1,3,1,32,5107,34,83278,109,163,23,2323,32,30,1,9,3] the output should be 3\n    For lst = [0,724,32,71,99,32,6,0,5,91,83,0,5,6] the output should be 5\n    For lst = [0,81,12,3,1,21] the output should be 3\n    For lst = [0,8,1,2,1,7] the output should be 2\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef skjkasdkd(lst):\n    \"\"\"You are given a list of integers.\n    You need to find the largest prime value and return the sum of its digits.\n\n    Examples:\n    For lst = [0,3,2,1,3,5,7,4,5,5,5,2,181,32,4,32,3,2,32,324,4,3] the output should be 2\n    For lst = [1,0,1,8,2,4597,2,1,3,40,1,2,1,2,4,2,5,1] the output should be 2\n    For lst = [1,3,1,32,5107,34,83278,109,163,23,2323,32,30,1,9,3] the output should be 3\n    For lst = [0,724,32,71,99,32,6,0,5,91,83,0,5,6] the output should be 5\n    For lst = [0,81,12,3,1,21] the output should be 3\n    For lst = [0,8,1,2,1,7] the output should be 2\n    \"\"\"",
+  "prompt_sha256": "93c27504b1172174a7d2893362a2843a3bd0ebd9d8e7009173fbd56f0bd5b38e",
+  "model_name": "deepseek-ai/deepseek-coder-6.7b-instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef skjkasdkd(lst):\n    \"\"\"You are given a list of integers.\n    You need to find the largest prime value and return the sum of its digits.\n\n    Examples:\n    For lst = [0,3,2,1,3,5,7,4,5,5,5,2,181,32,4,32,3,2,32,324,4,3] the output should be 2\n    For lst = [1,0,1,8,2,4597,2,1,3,40,1,2,1,2,4,2,5,1] the output should be 2\n    For lst = [1,3,1,32,5107,34,83278,109,163,23,2323,32,30,1,9,3] the output should be 3\n    For lst = [0,724,32,71,99,32,6,0,5,91,83,0,5,6] the output should be 5\n    For lst = [0,81,12,3,1,21] the output should be 3\n    For lst = [0,8,1,2,1,7] the output should be 2\n    \"\"\"\n    pass\n\n# Now I need to ask you how to solve it\n\n# You should start by writing tests, then identify steps for the solution, then begin coding\n\n\nA: You've given a task that seems to be fairly well understood, but it's hard to say what sort of help you're looking for since it's a fairly complex task involving prime number identification and digit summation.\n\nHowever, here's a rough breakdown of what I'd consider the steps needed:\n\n1. First, define a helper function that checks if a number is prime.\n2. Then, filter the list for prime numbers only.\n3. Order the primes from highest to lowest.\n4. Select the highest value (this should be the first one in the sorted list).\n5. Turn this number into a string, iterate through it's digits, and sum them.\n6. Return this total.\n\nNow, given that this problem involves iterating through a list to get the final output, you might use Python's built-in `max` function along with the `sorted` function for easier sorting and access. I'm assuming that there is a",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def skjkasdkd(lst):\n    \"\"\"You are given a list of integers.\n    You need to find the largest prime value and return the sum of its digits.\n\n    Examples:\n    For lst = [0,3,2,1,3,5,7,4,5,5,5,2,181,32,4,32,3,2,32,324,4,3] the output should be 2\n    For lst = [1,0,1,8,2,4597,2,1,3,40,1,2,1,2,4,2,5,1] the output should be 2\n    For lst = [1,3,1,32,5107,34,83278,109,163,23,2323,32,30,1,9,3] the output should be 3\n    For lst = [0,724,32,71,99,32,6,0,5,91,83,0,5,6] the output should be 5\n    For lst = [0,81,12,3,1,21] the output should be 3\n    For lst = [0,8,1,2,1,7] the output should be 2\n    \"\"\"\n    pass\n\n# Now I need to ask you how to solve it\n\n# You should start by writing tests, then identify steps for the solution, then begin coding\n\n\nA: You've given a task that seems to be fairly well understood, but it's hard to say what sort of help you're looking for since it's a fairly complex task involving prime number identification and digit summation.\n\nHowever, here's a rough breakdown of what I'd consider the steps needed:\n\n1. First, define a helper function that checks if a number is prime.\n2. Then, filter the list for prime numbers only.\n3. Order the primes from highest to lowest.\n4. Select the highest value (this should be the first one in the sorted list).\n5. Turn this number into a string, iterate through it's digits, and sum them.\n6. Return this total.\n\nNow, given that this problem involves iterating through a list to get the final output, you might use Python's built-in `max` function along with the `sorted` function for easier sorting and access. I'm assuming that there is a",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 75.78681683540344,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

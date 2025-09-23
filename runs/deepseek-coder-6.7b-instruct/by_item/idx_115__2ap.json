@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_115::2ap::deepseek-ai/deepseek-coder-6.7b-instruct::seed0",
+  "task_id": "idx_115",
+  "category": "2ap",
+  "entry_point": "max_fill",
+  "prompt_field": "prompt2ap",
+  "prompt_text": "\ndef max_fill(grid, capacity):\n    import math\n    \"\"\"\n    You are given a rectangular grid of wells. Each row represents a single well,\n    and each 0 or 1 in a row represents a single unit of water.\n    Each well has a corresponding bucket that can be used to extract water from it, \n    and all buckets have the same capacity.\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef max_fill(grid, capacity):\n    import math\n    \"\"\"\n    You are given a rectangular grid of wells. Each row represents a single well,\n    and each 0 or 1 in a row represents a single unit of water.\n    Each well has a corresponding bucket that can be used to extract water from it, \n    and all buckets have the same capacity.\n    \"\"\"",
+  "prompt_sha256": "efb901f45bcd43c01252f34500dd4225e802a868b21a7e7ce21bb6cc10acbaf5",
+  "model_name": "deepseek-ai/deepseek-coder-6.7b-instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef max_fill(grid, capacity):\n    import math\n    \"\"\"\n    You are given a rectangular grid of wells. Each row represents a single well,\n    and each 0 or 1 in a row represents a single unit of water.\n    Each well has a corresponding bucket that can be used to extract water from it, \n    and all buckets have the same capacity.\n    \"\"\"\n    grid = [[math.inf] + row + [math.inf] for row in grid]\n    grid = [[math.inf] * len(grid[0])] + grid + [[math.inf] * len(grid[0])]\n    buckets = 0\n    filled = {(row, col): 0 for row in range(len(grid)) for col in range(len(grid[0]))}\n    while True:\n        buckets += 1\n        queue = [(0, 0)]\n        while queue:\n            row, col = queue.pop()\n            for dr, dc in [(-1, 0), (1, 0), (0, -1), (0, 1)]:\n                nr, nc = row + dr, col + dc\n                if 0 <= nr < len(grid) and 0 <= nc < len(grid[0]) and grid[nr][nc] == 1:\n                    if filled[(nr, nc)] < buckets:\n                        filled[(nr, nc)] = buckets\n                        queue.append((nr, n",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def max_fill(grid, capacity):\n    import math\n    \"\"\"\n    You are given a rectangular grid of wells. Each row represents a single well,\n    and each 0 or 1 in a row represents a single unit of water.\n    Each well has a corresponding bucket that can be used to extract water from it, \n    and all buckets have the same capacity.\n    \"\"\"\n    grid = [[math.inf] + row + [math.inf] for row in grid]\n    grid = [[math.inf] * len(grid[0])] + grid + [[math.inf] * len(grid[0])]\n    buckets = 0\n    filled = {(row, col): 0 for row in range(len(grid)) for col in range(len(grid[0]))}\n    while True:\n        buckets += 1\n        queue = [(0, 0)]\n        while queue:\n            row, col = queue.pop()\n            for dr, dc in [(-1, 0), (1, 0), (0, -1), (0, 1)]:\n                nr, nc = row + dr, col + dc\n                if 0 <= nr < len(grid) and 0 <= nc < len(grid[0]) and grid[nr][nc] == 1:\n                    if filled[(nr, nc)] < buckets:\n                        filled[(nr, nc)] = buckets\n                        queue.append((nr, n",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 61.987157106399536,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

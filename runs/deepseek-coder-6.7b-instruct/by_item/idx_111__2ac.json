@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_111::2ac::deepseek-ai/deepseek-coder-6.7b-instruct::seed0",
+  "task_id": "idx_111",
+  "category": "2ac",
+  "entry_point": "histogram",
+  "prompt_field": "prompt2ac",
+  "prompt_text": "\ndef histogram(test):\n    \"\"\"Given a string representing a space separated lowercase letters, return a dictionary\n    of the letter with the least or most repetition and containing the corresponding count.\n    If several letters have the same occurrence, return all of them.\n    \n    Example:\n    histogram('a b c') == {'a': 1}\n    histogram('a b b a') == {'a': 2}\n    histogram('a b c a b') == {'a': 2}\n    histogram('b b b b a') == {'b': 4}\n    histogram('') == {}\n\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef histogram(test):\n    \"\"\"Given a string representing a space separated lowercase letters, return a dictionary\n    of the letter with the least or most repetition and containing the corresponding count.\n    If several letters have the same occurrence, return all of them.\n    \n    Example:\n    histogram('a b c') == {'a': 1}\n    histogram('a b b a') == {'a': 2}\n    histogram('a b c a b') == {'a': 2}\n    histogram('b b b b a') == {'b': 4}\n    histogram('') == {}\n\n    \"\"\"",
+  "prompt_sha256": "a39fc788f8d1254ae747c03db0f996b30bde33b1538f72adca4a7ba2e9bf737c",
+  "model_name": "deepseek-ai/deepseek-coder-6.7b-instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef histogram(test):\n    \"\"\"Given a string representing a space separated lowercase letters, return a dictionary\n    of the letter with the least or most repetition and containing the corresponding count.\n    If several letters have the same occurrence, return all of them.\n    \n    Example:\n    histogram('a b c') == {'a': 1}\n    histogram('a b b a') == {'a': 2}\n    histogram('a b c a b') == {'a': 2}\n    histogram('b b b b a') == {'b': 4}\n    histogram('') == {}\n\n    \"\"\"\n\n    histogram_dict = {}\n    \n    # YOUR CODE GOES HERE\n    # Split the string into a list of words\n    words = test.split(\" \")\n\n    # Iterate over the words\n    for word in words:\n        # If the word is already in the dictionary, increment its value by 1\n        if word in histogram_dict:\n            histogram_dict[word] += 1\n        # Otherwise, add the word to the dictionary with a value of 1\n        else:\n            histogram_dict[word] = 1\n\n    # Find the min and max values in the dictionary\n    min_value = min(histogram_dict.values())\n    max_value = max(histogram_dict.values())\n\n    # Find the keys with the min and max values\n    min_keys = [k for k, v in histogram_dict.items() if v == min_value]\n    max_keys = [k for k, v in histogram_dict.items() if v == max_value]\n\n    # If there are multiple keys with the min value, return all of them",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def histogram(test):\n    \"\"\"Given a string representing a space separated lowercase letters, return a dictionary\n    of the letter with the least or most repetition and containing the corresponding count.\n    If several letters have the same occurrence, return all of them.\n    \n    Example:\n    histogram('a b c') == {'a': 1}\n    histogram('a b b a') == {'a': 2}\n    histogram('a b c a b') == {'a': 2}\n    histogram('b b b b a') == {'b': 4}\n    histogram('') == {}\n\n    \"\"\"\n\n    histogram_dict = {}\n    \n    # YOUR CODE GOES HERE\n    # Split the string into a list of words\n    words = test.split(\" \")\n\n    # Iterate over the words\n    for word in words:\n        # If the word is already in the dictionary, increment its value by 1\n        if word in histogram_dict:\n            histogram_dict[word] += 1\n        # Otherwise, add the word to the dictionary with a value of 1\n        else:\n            histogram_dict[word] = 1\n\n    # Find the min and max values in the dictionary\n    min_value = min(histogram_dict.values())\n    max_value = max(histogram_dict.values())\n\n    # Find the keys with the min and max values\n    min_keys = [k for k, v in histogram_dict.items() if v == min_value]\n    max_keys = [k for k, v in histogram_dict.items() if v == max_value]\n\n    # If there are multiple keys with the min value, return all of them",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 66.18281817436218,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

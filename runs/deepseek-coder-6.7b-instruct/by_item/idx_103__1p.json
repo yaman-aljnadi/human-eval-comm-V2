@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_103::1p::deepseek-ai/deepseek-coder-6.7b-instruct::seed0",
+  "task_id": "idx_103",
+  "category": "1p",
+  "entry_point": "rounded_avg",
+  "prompt_field": "prompt1p",
+  "prompt_text": "\ndef candidate(n, m):\n    \"\"\"You are given two positive integers n and m, and your task is to compute the\n    average of the integers from n through m (including n and m). \n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(n, m):\n    \"\"\"You are given two positive integers n and m, and your task is to compute the\n    average of the integers from n through m (including n and m). \n    \"\"\"",
+  "prompt_sha256": "1c3d42496b7dadcb0c4de1ffa4dd43d33671b821c499b8fcba3e97fa12bf1a75",
+  "model_name": "deepseek-ai/deepseek-coder-6.7b-instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(n, m):\n    \"\"\"You are given two positive integers n and m, and your task is to compute the\n    average of the integers from n through m (including n and m). \n    \"\"\"\n    s=0\n    c=0\n    for i in range(n,m+1):\n        s=s+i\n        c=c+1\n    return s/c\n\ndef better_candidate(n, m):\n    \"\"\"You are given two positive integers n and m, and your task is to compute the\n    average of the integers from n through m (including n and m). \n    \"\"\"\n    s=0\n    c=0\n    for i in range(n,m+1):\n        s=s+i\n        c=c+1\n    return s/c\n\nprint(candidate(1, 10)) # should print 5.5\nprint(better_candidate(1, 10)) # should print 5.5\n\nThe result of these two functions are different because function \"candidate\" and \"better_candidate\" do the same job. There is not an error in your code, both of them work fine and produce the same output.\n\n\nHere is an improved code to compute the average of the integers from n through m (including n and m):\n\"\"\"\nCode",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def candidate(n, m):\n    \"\"\"You are given two positive integers n and m, and your task is to compute the\n    average of the integers from n through m (including n and m). \n    \"\"\"\n    s=0\n    c=0\n    for i in range(n,m+1):\n        s=s+i\n        c=c+1\n    return s/c\n\ndef better_candidate(n, m):\n    \"\"\"You are given two positive integers n and m, and your task is to compute the\n    average of the integers from n through m (including n and m). \n    \"\"\"\n    s=0\n    c=0\n    for i in range(n,m+1):\n        s=s+i\n        c=c+1\n    return s/c\n\nprint(candidate(1, 10)) # should print 5.5\nprint(better_candidate(1, 10)) # should print 5.5\n\nThe result of these two functions are different because function \"candidate\" and \"better_candidate\" do the same job. There is not an error in your code, both of them work fine and produce the same output.\n\n\nHere is an improved code to compute the average of the integers from n through m (including n and m):\n\"\"\"\nCode",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 63.87373113632202,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

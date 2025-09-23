@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_146::1c::deepseek-ai/deepseek-coder-6.7b-instruct::seed0",
+  "task_id": "idx_146",
+  "category": "1c",
+  "entry_point": "specialFilter",
+  "prompt_field": "prompt1c",
+  "prompt_text": "\ndef specialFilter(nums):\n    \"\"\"Write a function that takes an array of numbers as input and returns \n    the number of elements in the array that are greater than 10 and both \n    first and last digits of a number are odd (1, 3, 5, 7, 9).\n    For example:\n    specialFilter([15, -73, 14, -15]) => 15 \n    specialFilter([33, -2, -3, 45, 21, 109]) => 45\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef specialFilter(nums):\n    \"\"\"Write a function that takes an array of numbers as input and returns \n    the number of elements in the array that are greater than 10 and both \n    first and last digits of a number are odd (1, 3, 5, 7, 9).\n    For example:\n    specialFilter([15, -73, 14, -15]) => 15 \n    specialFilter([33, -2, -3, 45, 21, 109]) => 45\n    \"\"\"",
+  "prompt_sha256": "480f3817c762507b6e7801771ae4582f4bab34bfb45a6bc16c2a491704f7bb72",
+  "model_name": "deepseek-ai/deepseek-coder-6.7b-instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef specialFilter(nums):\n    \"\"\"Write a function that takes an array of numbers as input and returns \n    the number of elements in the array that are greater than 10 and both \n    first and last digits of a number are odd (1, 3, 5, 7, 9).\n    For example:\n    specialFilter([15, -73, 14, -15]) => 15 \n    specialFilter([33, -2, -3, 45, 21, 109]) => 45\n    \"\"\"\n\n    def isSpecial(num):\n        str_num = str(num)\n        first_digit = int(str_num[0])\n        last_digit = int(str_num[-1])\n        if num > 10 and first_digit % 2 == 1 and last_digit % 2 == 1:\n            return True\n        else:\n            return False\n    result = [num for num in nums if isSpecial(num)]\n\n    return len(result)\n\n\nprint(specialFilter([15, -73, 14, -15]))  # Should print: 1\nprint(specialFilter([33, -2, -3, 45, 21, 109]))  # Should print: 2\nprint(specialFilter([33, -2, -3, 47, 21, 109]))  # Should print: 3\nprint(specialFilter([33, -2, -3, 45, 21, 111]))  # Should print: 0\nprint(specialFilter([3",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def specialFilter(nums):\n    \"\"\"Write a function that takes an array of numbers as input and returns \n    the number of elements in the array that are greater than 10 and both \n    first and last digits of a number are odd (1, 3, 5, 7, 9).\n    For example:\n    specialFilter([15, -73, 14, -15]) => 15 \n    specialFilter([33, -2, -3, 45, 21, 109]) => 45\n    \"\"\"\n\n    def isSpecial(num):\n        str_num = str(num)\n        first_digit = int(str_num[0])\n        last_digit = int(str_num[-1])\n        if num > 10 and first_digit % 2 == 1 and last_digit % 2 == 1:\n            return True\n        else:\n            return False\n    result = [num for num in nums if isSpecial(num)]\n\n    return len(result)\n\n\nprint(specialFilter([15, -73, 14, -15]))  # Should print: 1\nprint(specialFilter([33, -2, -3, 45, 21, 109]))  # Should print: 2\nprint(specialFilter([33, -2, -3, 47, 21, 109]))  # Should print: 3\nprint(specialFilter([33, -2, -3, 45, 21, 111]))  # Should print: 0\nprint(specialFilter([3",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 65.77129364013672,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

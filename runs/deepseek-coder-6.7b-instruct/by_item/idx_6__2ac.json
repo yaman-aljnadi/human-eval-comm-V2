@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_6::2ac::deepseek-ai/deepseek-coder-6.7b-instruct::seed0",
+  "task_id": "idx_6",
+  "category": "2ac",
+  "entry_point": "parse_nested_parens",
+  "prompt_field": "prompt2ac",
+  "prompt_text": "from typing import List\n\n\ndef candidate(paren_string: str) -> List[int]:\n    \"\"\" Input to this function is a string represented multiple groups for nested parentheses separated by certain characters.\n    For each of the group, output the deepest level of nesting of parentheses.\n    E.g. (() ()) has maximum two levels of nesting while ((( ))) has three.\n\n    >>> candidate('(()())((()))()((())()())')\n    [2, 3, 1, 3]\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List\n\n\ndef candidate(paren_string: str) -> List[int]:\n    \"\"\" Input to this function is a string represented multiple groups for nested parentheses separated by certain characters.\n    For each of the group, output the deepest level of nesting of parentheses.\n    E.g. (() ()) has maximum two levels of nesting while ((( ))) has three.\n\n    >>> candidate('(()())((()))()((())()())')\n    [2, 3, 1, 3]\n    \"\"\"",
+  "prompt_sha256": "870b54a6b9f2c5934e19c3571a093438bc2e24f21459bec7a0a462dfd91b70ee",
+  "model_name": "deepseek-ai/deepseek-coder-6.7b-instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List\n\n\ndef candidate(paren_string: str) -> List[int]:\n    \"\"\" Input to this function is a string represented multiple groups for nested parentheses separated by certain characters.\n    For each of the group, output the deepest level of nesting of parentheses.\n    E.g. (() ()) has maximum two levels of nesting while ((( ))) has three.\n\n    >>> candidate('(()())((()))()((())()())')\n    [2, 3, 1, 3]\n    \"\"\"\n    levels = []\n\n    # your code goes here\n    stack = []\n    for ch in paren_string:\n        if ch == '(':\n            stack.append(ch)\n        elif ch == ')':\n            if stack:\n                stack.pop()\n            else:\n                continue\n        levels.append(len(stack))\n    return levels\n\n\nA: Here is your function `candidate()`.\n\n```python\nfrom typing import List\n\ndef candidate(paren_string: str) -> List[int]:\n    levels = []\n    stack = []\n    for ch in paren_string:\n        if ch == '(':\n            stack.append(ch)\n        elif ch == ')':\n            if stack:\n                stack.pop()\n            else:\n                continue\n        levels.append(len(stack))\n    return levels\n```\n\nThis function iterates over the input string. It keeps track of the level of each opening parenthesis with the help of a list. For every closing parenthesis, it pops the last opening parenthesis from the list. The length of the list",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "from typing import List\n\ndef candidate(paren_string: str) -> List[int]:\n    levels = []\n    stack = []\n    for ch in paren_string:\n        if ch == '(':\n            stack.append(ch)\n        elif ch == ')':\n            if stack:\n                stack.pop()\n            else:\n                continue\n        levels.append(len(stack))\n    return levels",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 45.4348578453064,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

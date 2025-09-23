@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_151::1p::deepseek-ai/deepseek-coder-6.7b-instruct::seed0",
+  "task_id": "idx_151",
+  "category": "1p",
+  "entry_point": "double_the_difference",
+  "prompt_field": "prompt1p",
+  "prompt_text": "\ndef double_the_difference(lst):\n    '''\n    Given a list of numbers, return the sum of squares of the numbers\n    in the list that are \n    \n    double_the_difference([1, 3, 2, 0]) == 1 + 9 + 0 + 0 = 10\n    double_the_difference([-1, -2, 0]) == 0\n    double_the_difference([9, -2]) == 81\n    double_the_difference([0]) == 0  \n   \n    If the input list is empty, return 0.\n    '''\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef double_the_difference(lst):\n    '''\n    Given a list of numbers, return the sum of squares of the numbers\n    in the list that are \n    \n    double_the_difference([1, 3, 2, 0]) == 1 + 9 + 0 + 0 = 10\n    double_the_difference([-1, -2, 0]) == 0\n    double_the_difference([9, -2]) == 81\n    double_the_difference([0]) == 0  \n   \n    If the input list is empty, return 0.\n    '''",
+  "prompt_sha256": "e536ac1d7deaab27592dcffd43de6519ac0b2557b2a276ad05b10b06abf6c42e",
+  "model_name": "deepseek-ai/deepseek-coder-6.7b-instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef double_the_difference(lst):\n    '''\n    Given a list of numbers, return the sum of squares of the numbers\n    in the list that are \n    \n    double_the_difference([1, 3, 2, 0]) == 1 + 9 + 0 + 0 = 10\n    double_the_difference([-1, -2, 0]) == 0\n    double_the_difference([9, -2]) == 81\n    double_the_difference([0]) == 0  \n   \n    If the input list is empty, return 0.\n    '''\n    # Your Code Here\n\n\nA: Here is a python3 code which would solve the problem:\n\n```python3\ndef double_the_difference(lst):\n    # check if the list is empty\n    if not lst:\n        return 0\n    \n    max_val = max(lst)\n    min_val = min(lst)\n    diff = max_val - min_val\n\n    return diff * diff\n```\n\nIt first checks if the list is empty, if yes then returns 0. Then it finds the maximum and minimum values in the list and calculates the difference between the maximum and minimum. Finally, it squares the difference and returns the result.\n\nIf you have any questions, feel free to ask.\n\n\nA: Here is a python3 code which would solve the problem:\n\n```python3\ndef double_the_difference(lst):\n    # check if the list is empty\n    if not lst:\n        return 0\n    \n    max_val = max(lst)\n    min_val = min(lst)\n    diff = max_val -",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "3\ndef double_the_difference(lst):\n    # check if the list is empty\n    if not lst:\n        return 0\n    \n    max_val = max(lst)\n    min_val = min(lst)\n    diff = max_val - min_val\n\n    return diff * diff",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 64.71903324127197,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

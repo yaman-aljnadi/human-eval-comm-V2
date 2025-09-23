@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_64::2ac::deepseek-ai/deepseek-coder-6.7b-instruct::seed0",
+  "task_id": "idx_64",
+  "category": "2ac",
+  "entry_point": "vowels_count",
+  "prompt_field": "prompt2ac",
+  "prompt_text": "\nFIX = \"\"\"\nAdd more test cases.\n\"\"\"\n\ndef candidate(s):\n    \"\"\"Write a function candidate which takes a string representing\n    a word as input and returns the number of characters or vowels in the string.\n    Vowels in this case are 'a', 'e', 'i', 'o', 'u'. Here, 'y' is also a\n    vowel, but only when it is at the end of the given word.\n\n    Example:\n    >>> candidate(\"abcde\")\n    5\n    >>> candidate(\"ACEDY\")\n    5\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nFIX = \"\"\"\nAdd more test cases.\n\"\"\"\n\ndef candidate(s):\n    \"\"\"Write a function candidate which takes a string representing\n    a word as input and returns the number of characters or vowels in the string.\n    Vowels in this case are 'a', 'e', 'i', 'o', 'u'. Here, 'y' is also a\n    vowel, but only when it is at the end of the given word.\n\n    Example:\n    >>> candidate(\"abcde\")\n    5\n    >>> candidate(\"ACEDY\")\n    5\n    \"\"\"",
+  "prompt_sha256": "94ef092e33a4caf3d470069cb6bb6a8ee91384605310973c172814685d231b30",
+  "model_name": "deepseek-ai/deepseek-coder-6.7b-instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nFIX = \"\"\"\nAdd more test cases.\n\"\"\"\n\ndef candidate(s):\n    \"\"\"Write a function candidate which takes a string representing\n    a word as input and returns the number of characters or vowels in the string.\n    Vowels in this case are 'a', 'e', 'i', 'o', 'u'. Here, 'y' is also a\n    vowel, but only when it is at the end of the given word.\n\n    Example:\n    >>> candidate(\"abcde\")\n    5\n    >>> candidate(\"ACEDY\")\n    5\n    \"\"\"\n    vowels = [\"a\", \"e\", \"i\", \"o\", \"u\"]\n    count = 0\n    for character in s:\n        if character.lower() in vowels or character.lower() == \"y\":\n            count += 1\n    return count\n\n#tests/test_candidate.py\nimport pytest\n\nfrom solution import candidate\n\n\n@pytest.mark.parametrize(\"input_value, expected\", [\n    (\"abcde\", 2),\n    (\"ACEDY\", 2),\n    (\"Yobibik\", 4),\n    (\"\", 0),\n])\ndef test_candidate(input_value, expected):\n    assert candidate(input_value) == expectedimport unittest\n\n\ndef fizz_buzz(n):\n    # 1からnまでFizzBuzzを出力する関数\n\n    for i in range(1, n+1):\n        if i % 3 == 0 and i % 5 == 0:\n            print(\"FizzBuzz\")\n        elif",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def candidate(s):\n    \"\"\"Write a function candidate which takes a string representing\n    a word as input and returns the number of characters or vowels in the string.\n    Vowels in this case are 'a', 'e', 'i', 'o', 'u'. Here, 'y' is also a\n    vowel, but only when it is at the end of the given word.\n\n    Example:\n    >>> candidate(\"abcde\")\n    5\n    >>> candidate(\"ACEDY\")\n    5\n    \"\"\"\n    vowels = [\"a\", \"e\", \"i\", \"o\", \"u\"]\n    count = 0\n    for character in s:\n        if character.lower() in vowels or character.lower() == \"y\":\n            count += 1\n    return count\n\n#tests/test_candidate.py\nimport pytest\n\nfrom solution import candidate\n\n\n@pytest.mark.parametrize(\"input_value, expected\", [\n    (\"abcde\", 2),\n    (\"ACEDY\", 2),\n    (\"Yobibik\", 4),\n    (\"\", 0),\n])\ndef test_candidate(input_value, expected):\n    assert candidate(input_value) == expectedimport unittest\n\n\ndef fizz_buzz(n):\n    # 1からnまでFizzBuzzを出力する関数\n\n    for i in range(1, n+1):\n        if i % 3 == 0 and i % 5 == 0:\n            print(\"FizzBuzz\")\n        elif",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 74.34828162193298,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

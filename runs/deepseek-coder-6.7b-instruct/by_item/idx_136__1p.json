@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_136::1p::deepseek-ai/deepseek-coder-6.7b-instruct::seed0",
+  "task_id": "idx_136",
+  "category": "1p",
+  "entry_point": "largest_smallest_integers",
+  "prompt_field": "prompt1p",
+  "prompt_text": "\ndef largest_smallest_integers(lst):\n    '''\n    Create a function that returns a tuple (a, b), where 'a' is\n    the largest of negative integers\n    '''\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef largest_smallest_integers(lst):\n    '''\n    Create a function that returns a tuple (a, b), where 'a' is\n    the largest of negative integers\n    '''",
+  "prompt_sha256": "73d5cd35e78fe9704f157d104ed0a55194deb1c8ceac3b747e91d5b11421ffe3",
+  "model_name": "deepseek-ai/deepseek-coder-6.7b-instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef largest_smallest_integers(lst):\n    '''\n    Create a function that returns a tuple (a, b), where 'a' is\n    the largest of negative integers\n    '''\n    # Filter out non negative integer values from list\n    negative_integers = [num for num in lst if num < 0]\n\n    if negative_integers:\n        # Return the largest negative integer\n        return (max(negative_integers),)\n    else:\n        # No negative integers in the list. Return None\n        return (None,)\n\n\nA: Here is a Python3 code snippet that returns the largest integer from a list of integers. The function checks if the list contains any negative integers and then returns the maximum of them. If there are no negative integers in the list, it will return `None`:\n\n```python\ndef largest_negative_integer(lst):\n    negative_numbers = [n for n in lst if n < 0]\n    return max(negative_numbers) if negative_numbers else None\n```\n\nIn this code,\n\n- `[n for n in lst if n < 0]` is a list comprehension that creates a new list of the negative numbers in `lst`.\n- `max(negative_numbers)` returns the maximum value in `negative_",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def largest_negative_integer(lst):\n    negative_numbers = [n for n in lst if n < 0]\n    return max(negative_numbers) if negative_numbers else None",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 65.50946831703186,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

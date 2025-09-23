@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_23::1p::deepseek-ai/deepseek-coder-6.7b-instruct::seed0",
+  "task_id": "idx_23",
+  "category": "1p",
+  "entry_point": "strlen",
+  "prompt_field": "prompt1p",
+  "prompt_text": "\n\ndef candidate(string: str) -> int:\n    \"\"\" Return length\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(string: str) -> int:\n    \"\"\" Return length\n    \"\"\"",
+  "prompt_sha256": "bf440e4ffc6802048c10fca7f806e0adfedea796a63a14e9d46f844ccb078002",
+  "model_name": "deepseek-ai/deepseek-coder-6.7b-instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(string: str) -> int:\n    \"\"\" Return length\n    \"\"\"\n    return len(string)\n\ndef candidate(string: str) -> str:\n    \"\"\" Return a reversed string\n    \"\"\"\n    return string[::-1]\n\ndef candidate(string: str) -> str:\n    \"\"\" Replace every 5th character with '*' and return new string\n    \"\"\"\n    result = list(string)\n    for index in range(4, len(string), 5):\n        result[index] = '*'\n    return \"\".join(result)\n\ndef candidate(string: str) -> int:\n    \"\"\" Count number of a's, b's and c's in the string and return the sum\n    \"\"\"\n    return string.count('a') + string.count('b') + string.count('c')\n\ndef candidate(string: str) -> str:\n    \"\"\" Return a new string where all words start with a capital letter\n    \"\"\"\n    return''.join(word.capitalize() for word in string.split())\n\ndef candidate(string: str) -> int:\n    \"\"\" Return the count of words in string\n   ",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def candidate(string: str) -> int:\n    \"\"\" Return length\n    \"\"\"\n    return len(string)\n\ndef candidate(string: str) -> str:\n    \"\"\" Return a reversed string\n    \"\"\"\n    return string[::-1]\n\ndef candidate(string: str) -> str:\n    \"\"\" Replace every 5th character with '*' and return new string\n    \"\"\"\n    result = list(string)\n    for index in range(4, len(string), 5):\n        result[index] = '*'\n    return \"\".join(result)\n\ndef candidate(string: str) -> int:\n    \"\"\" Count number of a's, b's and c's in the string and return the sum\n    \"\"\"\n    return string.count('a') + string.count('b') + string.count('c')\n\ndef candidate(string: str) -> str:\n    \"\"\" Return a new string where all words start with a capital letter\n    \"\"\"\n    return''.join(word.capitalize() for word in string.split())\n\ndef candidate(string: str) -> int:\n    \"\"\" Return the count of words in string",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 49.801493406295776,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

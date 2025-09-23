@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_85::1p::deepseek-ai/deepseek-coder-6.7b-instruct::seed0",
+  "task_id": "idx_85",
+  "category": "1p",
+  "entry_point": "add",
+  "prompt_field": "prompt1p",
+  "prompt_text": "\ndef add(lst):\n    \"\"\"Given a non-empty list of integers lst. add the even elements that..\n\n\n    Examples:\n        add([4, 2, 6, 7]) ==> 2 \n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef add(lst):\n    \"\"\"Given a non-empty list of integers lst. add the even elements that..\n\n\n    Examples:\n        add([4, 2, 6, 7]) ==> 2 \n    \"\"\"",
+  "prompt_sha256": "586f23cd32d99557e91af9b5508e9bb73b6eb08704e8f9b6b19f40a3292c11b4",
+  "model_name": "deepseek-ai/deepseek-coder-6.7b-instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef add(lst):\n    \"\"\"Given a non-empty list of integers lst. add the even elements that..\n\n\n    Examples:\n        add([4, 2, 6, 7]) ==> 2 \n    \"\"\"\n    sum = 0\n    for i in lst:\n        if i%2 == 0:\n            sum += i\n    return sum\n```\n\nA: You can do this task using list comprehension. Here's how you can write it in Python:\n\n```python\ndef add(lst):\n    return sum([i for i in lst if i%2 == 0])\n```\n\nThis function returns the sum of all even numbers in the given list `lst`. It does this by using list comprehension to create a new list of only the even numbers in `lst`, and then the `sum()` function to add them all together.\n\nIn this case, `i%2 == 0` checks if the number is even (as the remainder of a number divided by 2 is 0 when it's even), and `i for i in lst if i%2 == 0` is a generator that produces all these even numbers in the list `lst`.\n\nThe `sum` built-in function then adds up all these numbers and returns the total.\n```\n</pre>\n\nIn conclusion, the result is a direct",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "A: You can do this task using list comprehension. Here's how you can write it in Python:",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 76.36341500282288,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

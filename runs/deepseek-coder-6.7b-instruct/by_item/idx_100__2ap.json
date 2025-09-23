@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_100::2ap::deepseek-ai/deepseek-coder-6.7b-instruct::seed0",
+  "task_id": "idx_100",
+  "category": "2ap",
+  "entry_point": "make_a_pile",
+  "prompt_field": "prompt2ap",
+  "prompt_text": "\ndef make_a_pile(n):\n    \"\"\"\n    Given a positive integer n, you have to make a pile of 2*n or n levels of stones.\n    The first level has n stones.\n    The number of stones in the next level is:\n        - the next odd number if n is odd.\n        - the next even number if n is even.\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef make_a_pile(n):\n    \"\"\"\n    Given a positive integer n, you have to make a pile of 2*n or n levels of stones.\n    The first level has n stones.\n    The number of stones in the next level is:\n        - the next odd number if n is odd.\n        - the next even number if n is even.\n    \"\"\"",
+  "prompt_sha256": "7e037499b51b5a579e865bd6e05d7bdfc5e3d0e76776f5d8ba3f17ce0935fa62",
+  "model_name": "deepseek-ai/deepseek-coder-6.7b-instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef make_a_pile(n):\n    \"\"\"\n    Given a positive integer n, you have to make a pile of 2*n or n levels of stones.\n    The first level has n stones.\n    The number of stones in the next level is:\n        - the next odd number if n is odd.\n        - the next even number if n is even.\n    \"\"\"\n    piles = [n]\n    current_number = n\n\n    while len(piles) < 2 * n:\n        if current_number % 2 == 0:\n            current_number += 1\n        else:\n            current_number += 2\n        piles.append(current_number)\n\n    return piles\n\n# In this particular example, n=3\nprint(make_a_pile(3))\n\n# Expected Output: [3, 6, 9, 12, 15, 18, 21, 24, 27, 30, 33, 36, 39, 42, 45, 48, 51, 54, 57, 60, 63, 66, 69, 72]\n\n\nA: This code creates a list of size 2*n that contains the first level of stones (which is just n), and then for the remaining spaces (size of list less than 2*n), increments the current_number by either 1 or",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def make_a_pile(n):\n    \"\"\"\n    Given a positive integer n, you have to make a pile of 2*n or n levels of stones.\n    The first level has n stones.\n    The number of stones in the next level is:\n        - the next odd number if n is odd.\n        - the next even number if n is even.\n    \"\"\"\n    piles = [n]\n    current_number = n\n\n    while len(piles) < 2 * n:\n        if current_number % 2 == 0:\n            current_number += 1\n        else:\n            current_number += 2\n        piles.append(current_number)\n\n    return piles\n\n# In this particular example, n=3\nprint(make_a_pile(3))\n\n# Expected Output: [3, 6, 9, 12, 15, 18, 21, 24, 27, 30, 33, 36, 39, 42, 45, 48, 51, 54, 57, 60, 63, 66, 69, 72]\n\n\nA: This code creates a list of size 2*n that contains the first level of stones (which is just n), and then for the remaining spaces (size of list less than 2*n), increments the current_number by either 1 or",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 65.31665778160095,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

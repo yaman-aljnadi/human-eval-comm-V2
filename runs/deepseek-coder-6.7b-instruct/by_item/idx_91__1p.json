@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_91::1p::deepseek-ai/deepseek-coder-6.7b-instruct::seed0",
+  "task_id": "idx_91",
+  "category": "1p",
+  "entry_point": "is_bored",
+  "prompt_field": "prompt1p",
+  "prompt_text": "\ndef is_bored(S):\n    \"\"\"\n    You'll be given a string of words, and your task is to count the number\n    of boredoms.\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef is_bored(S):\n    \"\"\"\n    You'll be given a string of words, and your task is to count the number\n    of boredoms.\n    \"\"\"",
+  "prompt_sha256": "bd374a490b9a9e5ae54a213977c69a7b93665e42aa4d060999987f9c88537c18",
+  "model_name": "deepseek-ai/deepseek-coder-6.7b-instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef is_bored(S):\n    \"\"\"\n    You'll be given a string of words, and your task is to count the number\n    of boredoms.\n    \"\"\"\n    boredoms = [\"boredom\", \"tired\", \"dont feel like\", \"dont want to\",\n                \"wanna go out\", \"going out\", \"going for a drive\",\n                \"outside\", \"exercise\", \"enjoy\", \"sad\", \"unhappy\"]\n    count = 0\n    S = S.lower()\n    for b in boredoms:\n        count += S.count(b)\n    return count\n\n#test_cases\nprint(is_bored(\"I am boredom with nothing to do today. I feel tired of sitting at home all day. I dont feel like doing anything.\"))  # should return 4\nprint(is_bored(\"I am boredom. I went outside and played a game of soccer.\"))  # should return 1\nprint(is_bored(\"I dont feel like going out. I am going for a drive.\"))  # should return 2\nprint(is_bored(\"I am boredom. I want to go outside for exercise.\"))  # should return 2\nprint(is_bored(\"I am very unhappy. I feel sad.\"))  #",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def is_bored(S):\n    \"\"\"\n    You'll be given a string of words, and your task is to count the number\n    of boredoms.\n    \"\"\"\n    boredoms = [\"boredom\", \"tired\", \"dont feel like\", \"dont want to\",\n                \"wanna go out\", \"going out\", \"going for a drive\",\n                \"outside\", \"exercise\", \"enjoy\", \"sad\", \"unhappy\"]\n    count = 0\n    S = S.lower()\n    for b in boredoms:\n        count += S.count(b)\n    return count\n\n#test_cases\nprint(is_bored(\"I am boredom with nothing to do today. I feel tired of sitting at home all day. I dont feel like doing anything.\"))  # should return 4\nprint(is_bored(\"I am boredom. I went outside and played a game of soccer.\"))  # should return 1\nprint(is_bored(\"I dont feel like going out. I am going for a drive.\"))  # should return 2\nprint(is_bored(\"I am boredom. I want to go outside for exercise.\"))  # should return 2\nprint(is_bored(\"I am very unhappy. I feel sad.\"))  #",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 74.76595401763916,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

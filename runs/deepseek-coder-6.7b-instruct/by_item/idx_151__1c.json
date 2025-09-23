@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_151::1c::deepseek-ai/deepseek-coder-6.7b-instruct::seed0",
+  "task_id": "idx_151",
+  "category": "1c",
+  "entry_point": "double_the_difference",
+  "prompt_field": "prompt1c",
+  "prompt_text": "\ndef double_the_difference(lst):\n    '''\n    Given a list of numbers, return the sum of squares of the numbers\n    in the list that are odd. Ignore numbers that are negative or not integers.\n    \n    double_the_difference([1, 3, 2, 0]) == 0 + 0 + 4 + 0 = 4\n    double_the_difference([-1, -2, 0]) == 4\n    double_the_difference([9, -2]) == 4\n    double_the_difference([0]) == 0  \n   \n    If the input list is empty, return 0.\n    '''\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef double_the_difference(lst):\n    '''\n    Given a list of numbers, return the sum of squares of the numbers\n    in the list that are odd. Ignore numbers that are negative or not integers.\n    \n    double_the_difference([1, 3, 2, 0]) == 0 + 0 + 4 + 0 = 4\n    double_the_difference([-1, -2, 0]) == 4\n    double_the_difference([9, -2]) == 4\n    double_the_difference([0]) == 0  \n   \n    If the input list is empty, return 0.\n    '''",
+  "prompt_sha256": "23032e8d08f560cbc74d4bbcd828bcc114f1d3987687bcf093eaaab18b50ecdc",
+  "model_name": "deepseek-ai/deepseek-coder-6.7b-instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef double_the_difference(lst):\n    '''\n    Given a list of numbers, return the sum of squares of the numbers\n    in the list that are odd. Ignore numbers that are negative or not integers.\n    \n    double_the_difference([1, 3, 2, 0]) == 0 + 0 + 4 + 0 = 4\n    double_the_difference([-1, -2, 0]) == 4\n    double_the_difference([9, -2]) == 4\n    double_the_difference([0]) == 0  \n   \n    If the input list is empty, return 0.\n    '''\n    result = 0\n    for i in lst:\n        if i > 0 and type(i) == int:\n            if i % 2!= 0:\n                result += i ** 2\n    return result * 2\n```\n\n```python\nassert(double_the_difference([1, 3, 2, 0]) == 4)\nassert(double_the_difference([-1, -2, 0]) == 4)\nassert(double_the_difference([9, -2]) == 4)\nassert(double_the_difference([0]) == 0)\nassert(double_the_difference([]) == 0)\n```\n\nThe function `double_the_difference` computes the sum of the squares of the odd numbers in the list (ignoring negative numbers and non-integers). It sums the squares of the odd numbers in the list, then multiplies the result by two. If the input list is empty, it returns 0. The function checks for positive, odd, and integer values and skips the others. The function uses the modulus operator to determine if the number is odd.",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 67.25462579727173,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

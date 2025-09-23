@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_120::2ac::deepseek-ai/deepseek-coder-6.7b-instruct::seed0",
+  "task_id": "idx_120",
+  "category": "2ac",
+  "entry_point": "maximum",
+  "prompt_field": "prompt2ac",
+  "prompt_text": "\ndef candidate(arr, k):\n    \"\"\"\n    Given an array arr of integers and a positive integer k, return a sorted list \n    of length k with the minimum or maximum k numbers in arr.\n\n    Example 1:\n\n        Input: arr = [-3, -4, 5], k = 3\n        Output: [-4, -3]\n\n    Example 2:\n\n        Input: arr = [4, -4, 4], k = 2\n        Output: [4]\n\n    Example 3:\n\n        Input: arr = [-3, 2, 1, 2, -1, -2, 1], k = 1\n        Output: []\n\n    Note:\n        1. The length of the array will be in the range of [1, 1000].\n        2. The elements in the array will be in the range of [-1000, 1000].\n        3. 0 <= k <= len(arr)\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(arr, k):\n    \"\"\"\n    Given an array arr of integers and a positive integer k, return a sorted list \n    of length k with the minimum or maximum k numbers in arr.\n\n    Example 1:\n\n        Input: arr = [-3, -4, 5], k = 3\n        Output: [-4, -3]\n\n    Example 2:\n\n        Input: arr = [4, -4, 4], k = 2\n        Output: [4]\n\n    Example 3:\n\n        Input: arr = [-3, 2, 1, 2, -1, -2, 1], k = 1\n        Output: []\n\n    Note:\n        1. The length of the array will be in the range of [1, 1000].\n        2. The elements in the array will be in the range of [-1000, 1000].\n        3. 0 <= k <= len(arr)\n    \"\"\"",
+  "prompt_sha256": "021762adeed70959c940c5cf8a002212456e9067280c3cdbd41203d658a681b5",
+  "model_name": "deepseek-ai/deepseek-coder-6.7b-instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef candidate(arr, k):\n    \"\"\"\n    Given an array arr of integers and a positive integer k, return a sorted list \n    of length k with the minimum or maximum k numbers in arr.\n\n    Example 1:\n\n        Input: arr = [-3, -4, 5], k = 3\n        Output: [-4, -3]\n\n    Example 2:\n\n        Input: arr = [4, -4, 4], k = 2\n        Output: [4]\n\n    Example 3:\n\n        Input: arr = [-3, 2, 1, 2, -1, -2, 1], k = 1\n        Output: []\n\n    Note:\n        1. The length of the array will be in the range of [1, 1000].\n        2. The elements in the array will be in the range of [-1000, 1000].\n        3. 0 <= k <= len(arr)\n    \"\"\"\n    pass\n\n# In python, we are going to use the `heapq` module which provides an implementation of the heap queue algorithm, also known as the priority queue algorithm. Here is the solution.\n\ndef candidate(arr, k):\n    import heapq\n\n    # Create a max heap from the array\n    max_heap = [-x for x in arr]\n    heapq.heapify(max_heap)\n\n    # Pop the minimum k values from the heap\n    result = []\n    for _ in range(k):\n        result.append(-heapq.heappop(max_heap))\n\n    # Return the result sorted\n    return sorted(result)\n\n# test cases:\nprint(candidate([-3, -4, 5], 2)) # should return [-4]\nprint(candidate([4, -4, 4], 1)) # should return [4]\nprint(candidate([-3, 2, 1, 2, -1, -2, 1], 1)) # should return []\n\n# It is important to note that the `s",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def candidate(arr, k):\n    \"\"\"\n    Given an array arr of integers and a positive integer k, return a sorted list \n    of length k with the minimum or maximum k numbers in arr.\n\n    Example 1:\n\n        Input: arr = [-3, -4, 5], k = 3\n        Output: [-4, -3]\n\n    Example 2:\n\n        Input: arr = [4, -4, 4], k = 2\n        Output: [4]\n\n    Example 3:\n\n        Input: arr = [-3, 2, 1, 2, -1, -2, 1], k = 1\n        Output: []\n\n    Note:\n        1. The length of the array will be in the range of [1, 1000].\n        2. The elements in the array will be in the range of [-1000, 1000].\n        3. 0 <= k <= len(arr)\n    \"\"\"\n    pass\n\n# In python, we are going to use the `heapq` module which provides an implementation of the heap queue algorithm, also known as the priority queue algorithm. Here is the solution.\n\ndef candidate(arr, k):\n    import heapq\n\n    # Create a max heap from the array\n    max_heap = [-x for x in arr]\n    heapq.heapify(max_heap)\n\n    # Pop the minimum k values from the heap\n    result = []\n    for _ in range(k):\n        result.append(-heapq.heappop(max_heap))\n\n    # Return the result sorted\n    return sorted(result)\n\n# test cases:\nprint(candidate([-3, -4, 5], 2)) # should return [-4]\nprint(candidate([4, -4, 4], 1)) # should return [4]\nprint(candidate([-3, 2, 1, 2, -1, -2, 1], 1)) # should return []\n\n# It is important to note that the `s",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 72.39536571502686,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

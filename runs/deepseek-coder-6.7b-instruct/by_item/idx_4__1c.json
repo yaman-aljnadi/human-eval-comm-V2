@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_4::1c::deepseek-ai/deepseek-coder-6.7b-instruct::seed0",
+  "task_id": "idx_4",
+  "category": "1c",
+  "entry_point": "mean_absolute_deviation",
+  "prompt_field": "prompt1c",
+  "prompt_text": "from typing import List\n\n\ndef mean_absolute_deviation(numbers: List[float]) -> float:\n    \"\"\" For a given list of input numbers, calculate Mean Absolute Deviation\n    around the mean of this dataset.\n    Mean Absolute Deviation is the average absolute difference between each\n    element and a centerpoint (mean in this case):\n    MAD = average | x - x_mean |\n    >>> mean_absolute_deviation([1.0, 2.0, 3.0, 4.0])\n    1.5\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List\n\n\ndef mean_absolute_deviation(numbers: List[float]) -> float:\n    \"\"\" For a given list of input numbers, calculate Mean Absolute Deviation\n    around the mean of this dataset.\n    Mean Absolute Deviation is the average absolute difference between each\n    element and a centerpoint (mean in this case):\n    MAD = average | x - x_mean |\n    >>> mean_absolute_deviation([1.0, 2.0, 3.0, 4.0])\n    1.5\n    \"\"\"",
+  "prompt_sha256": "69e55f381f7272023dbdd3643c32a2088a0867d857b0a51854fc577a878c4561",
+  "model_name": "deepseek-ai/deepseek-coder-6.7b-instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List\n\n\ndef mean_absolute_deviation(numbers: List[float]) -> float:\n    \"\"\" For a given list of input numbers, calculate Mean Absolute Deviation\n    around the mean of this dataset.\n    Mean Absolute Deviation is the average absolute difference between each\n    element and a centerpoint (mean in this case):\n    MAD = average | x - x_mean |\n    >>> mean_absolute_deviation([1.0, 2.0, 3.0, 4.0])\n    1.5\n    \"\"\"\n    mean = sum(numbers) / len(numbers)\n    return sum(abs(x - mean) for x in numbers) / len(numbers)\n\n\ndef mean_bias(numbers: List[float], actual: List[float]) -> float:\n    \"\"\"\n    For a given predicted list of input numbers and corresponding actual\n    numbers calculate Mean Bias. Mean Bias is the average difference between\n    each predicted value and the corresponding actual value:\n    MB = average ( y_predicted - y )\n    y_predicted is the predicted value and y is the actual value\n    >>> mean_bias([1.0, 2.0, 3.0, 4.0],[1,2,3,4])\n    0.0\n    \"\"\"\n    return sum(x - y for x, y in zip(numbers, actual)) / len(numbers)\n\n\ndef relative_absolute_error(predicted: List[float], actual: List[float]) -> float:\n    \"\"\"\n    For a given predicted list of input numbers and corresponding actual\n    numbers calculate Rel",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def mean_absolute_deviation(numbers: List[float]) -> float:\n    \"\"\" For a given list of input numbers, calculate Mean Absolute Deviation\n    around the mean of this dataset.\n    Mean Absolute Deviation is the average absolute difference between each\n    element and a centerpoint (mean in this case):\n    MAD = average | x - x_mean |\n    >>> mean_absolute_deviation([1.0, 2.0, 3.0, 4.0])\n    1.5\n    \"\"\"\n    mean = sum(numbers) / len(numbers)\n    return sum(abs(x - mean) for x in numbers) / len(numbers)\n\n\ndef mean_bias(numbers: List[float], actual: List[float]) -> float:\n    \"\"\"\n    For a given predicted list of input numbers and corresponding actual\n    numbers calculate Mean Bias. Mean Bias is the average difference between\n    each predicted value and the corresponding actual value:\n    MB = average ( y_predicted - y )\n    y_predicted is the predicted value and y is the actual value\n    >>> mean_bias([1.0, 2.0, 3.0, 4.0],[1,2,3,4])\n    0.0\n    \"\"\"\n    return sum(x - y for x, y in zip(numbers, actual)) / len(numbers)\n\n\ndef relative_absolute_error(predicted: List[float], actual: List[float]) -> float:\n    \"\"\"\n    For a given predicted list of input numbers and corresponding actual\n    numbers calculate Rel",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 45.418227195739746,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_20::1p::deepseek-ai/deepseek-coder-6.7b-instruct::seed0",
+  "task_id": "idx_20",
+  "category": "1p",
+  "entry_point": "find_closest_elements",
+  "prompt_field": "prompt1p",
+  "prompt_text": "from typing import List, Tuple\n\n\ndef find_closest_elements(numbers: List[float]) -> Tuple[float, float]:\n    \"\"\" From a supplied list of numbers (of length at least two) select and return two that are the closest to each\n    other and return them in order.\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List, Tuple\n\n\ndef find_closest_elements(numbers: List[float]) -> Tuple[float, float]:\n    \"\"\" From a supplied list of numbers (of length at least two) select and return two that are the closest to each\n    other and return them in order.\n    \"\"\"",
+  "prompt_sha256": "354e9db87137a22c2c8c3fbefa810d1ccc43eea8718065960a220b1d420d6fef",
+  "model_name": "deepseek-ai/deepseek-coder-6.7b-instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\nfrom typing import List, Tuple\n\n\ndef find_closest_elements(numbers: List[float]) -> Tuple[float, float]:\n    \"\"\" From a supplied list of numbers (of length at least two) select and return two that are the closest to each\n    other and return them in order.\n    \"\"\"\n    if len(numbers)<2:\n        return None\n    numbers.sort()\n    min_diff = float('inf')\n    result = ()\n    for i in range(1, len(numbers)):\n        diff = numbers[i] - numbers[i-1]\n        if diff < min_diff:\n            min_diff = diff\n            result = (numbers[i-1], numbers[i])\n    return result\n\nA sample invocation to this function could look like:\n\nresult = find_closest_elements([1.1, 3.3, 5.5, 4.4, 2.2, 6.6])\n\nI was thinking of the Python3 syntax to be used to solve this problem using sorting and then iterating over the sorted list. \n\nIn general, I know this function is expected to return two elements that are the closest to each other in the list but do not specify if the order of the elements in the return value is important. \n\nBut, for the sake of simplicity, let's consider the order as important.\n\nFor the list [1.1",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def find_closest_elements(numbers: List[float]) -> Tuple[float, float]:\n    \"\"\" From a supplied list of numbers (of length at least two) select and return two that are the closest to each\n    other and return them in order.\n    \"\"\"\n    if len(numbers)<2:\n        return None\n    numbers.sort()\n    min_diff = float('inf')\n    result = ()\n    for i in range(1, len(numbers)):\n        diff = numbers[i] - numbers[i-1]\n        if diff < min_diff:\n            min_diff = diff\n            result = (numbers[i-1], numbers[i])\n    return result\n\nA sample invocation to this function could look like:\n\nresult = find_closest_elements([1.1, 3.3, 5.5, 4.4, 2.2, 6.6])\n\nI was thinking of the Python3 syntax to be used to solve this problem using sorting and then iterating over the sorted list. \n\nIn general, I know this function is expected to return two elements that are the closest to each other in the list but do not specify if the order of the elements in the return value is important. \n\nBut, for the sake of simplicity, let's consider the order as important.\n\nFor the list [1.1",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 44.60503387451172,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

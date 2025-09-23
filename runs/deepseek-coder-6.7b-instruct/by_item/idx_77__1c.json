@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_77::1c::deepseek-ai/deepseek-coder-6.7b-instruct::seed0",
+  "task_id": "idx_77",
+  "category": "1c",
+  "entry_point": "iscube",
+  "prompt_field": "prompt1c",
+  "prompt_text": "\ndef iscube(a):\n    '''\n    Write a function that takes an integer a and returns True \n    if this integer is a cube of some integer number.\n    Note: you may assume the input is always valid.\n    Examples:\n    iscube(1) ==> False\n    iscube(2) ==> True\n    iscube(-1) ==> False\n    iscube(64) ==> False\n    iscube(0) ==> False\n    iscube(180) ==> True\n    '''\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef iscube(a):\n    '''\n    Write a function that takes an integer a and returns True \n    if this integer is a cube of some integer number.\n    Note: you may assume the input is always valid.\n    Examples:\n    iscube(1) ==> False\n    iscube(2) ==> True\n    iscube(-1) ==> False\n    iscube(64) ==> False\n    iscube(0) ==> False\n    iscube(180) ==> True\n    '''",
+  "prompt_sha256": "78631ea68f3112eddda466b2743e4ba70c0f2813516ccc2c1726df7721b95301",
+  "model_name": "deepseek-ai/deepseek-coder-6.7b-instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef iscube(a):\n    '''\n    Write a function that takes an integer a and returns True \n    if this integer is a cube of some integer number.\n    Note: you may assume the input is always valid.\n    Examples:\n    iscube(1) ==> False\n    iscube(2) ==> True\n    iscube(-1) ==> False\n    iscube(64) ==> False\n    iscube(0) ==> False\n    iscube(180) ==> True\n    '''\n\n\nA: Here is the Python3 code to solve the problem. This code solves the problem by checking if the square of the square root of the number is equal to the number itself. It also checks if the number is a negative cube by changing the sign of the original number and then checking if the square of the square root of the number is equal to the absolute value of the number itself.\n\n```python\ndef iscube(a):\n    return int(a**(1/3))**3 == a or -int(abs(a)**(1/3))**3 == abs(a)\n```\nThis works because:\n- In Python, the ** operator is used to raise a number to a certain power.\n- The int function returns the nearest integer to a number.\n- The **(1/3) operator is used to raise a number to the power of 1/3.\n- The abs function returns the absolute value of a number.\n- The - operator inverts the sign of a number.\n\nPlease provide further explanations, if needed.\n\nFor example, if we input:\n```python\nprint(iscube(2))\nprint",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def iscube(a):\n    return int(a**(1/3))**3 == a or -int(abs(a)**(1/3))**3 == abs(a)",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 65.32609748840332,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

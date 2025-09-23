@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_116::1c::deepseek-ai/deepseek-coder-6.7b-instruct::seed0",
+  "task_id": "idx_116",
+  "category": "1c",
+  "entry_point": "sort_array",
+  "prompt_field": "prompt1c",
+  "prompt_text": "\ndef sort_array(arr):\n    \"\"\"\n    In this Kata, you have to sort an array of non-negative integers according to\n    number of ones in their binary representation in descending order.\n    For similar number of ones, sort based on decimal value.\n\n    It must be implemented like this:\n    >>> sort_array([1, 5, 2, 3, 4]) == [1, 2, 3, 4, 5]\n    >>> sort_array([-2, -3, -4, -5, -6]) == [-6, -5, -4, -3, -2]\n    >>> sort_array([1, 0, 2, 3, 4]) [0, 1, 2, 3, 4]\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef sort_array(arr):\n    \"\"\"\n    In this Kata, you have to sort an array of non-negative integers according to\n    number of ones in their binary representation in descending order.\n    For similar number of ones, sort based on decimal value.\n\n    It must be implemented like this:\n    >>> sort_array([1, 5, 2, 3, 4]) == [1, 2, 3, 4, 5]\n    >>> sort_array([-2, -3, -4, -5, -6]) == [-6, -5, -4, -3, -2]\n    >>> sort_array([1, 0, 2, 3, 4]) [0, 1, 2, 3, 4]\n    \"\"\"",
+  "prompt_sha256": "9e9c7f5f1cf7b841948f6865e3949b33c9411c1788a61bfd5d5be8777a50e0fd",
+  "model_name": "deepseek-ai/deepseek-coder-6.7b-instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef sort_array(arr):\n    \"\"\"\n    In this Kata, you have to sort an array of non-negative integers according to\n    number of ones in their binary representation in descending order.\n    For similar number of ones, sort based on decimal value.\n\n    It must be implemented like this:\n    >>> sort_array([1, 5, 2, 3, 4]) == [1, 2, 3, 4, 5]\n    >>> sort_array([-2, -3, -4, -5, -6]) == [-6, -5, -4, -3, -2]\n    >>> sort_array([1, 0, 2, 3, 4]) [0, 1, 2, 3, 4]\n    \"\"\"\n\n    def key_function(n):\n        \"\"\"\n        This function returns a tuple. The first element is the count of ones in\n        the binary representation of the number, and the second element is the\n        decimal value of the number.\n        \"\"\"\n        return (bin(n).count('1'), n) if n > 0 else (-bin(-n).count('1'), n)\n\n    return sorted(arr, key=key_function, reverse=True)\n    # Using key=lambda n: (-bin(n).count('1'), n) is another way to sort based on binary representation.\n\nif __name__ == \"__main__\":\n    import doctest\n    doctest.testmod(sort_array)\n\n    print(sort_array([1, 5, 2, 3, 4]))  # [1, 2, 3, 4, 5]\n    print(sort_array([-2, -3, -4, -5, -6]))  # [-2, -3, -4, -5, -6]\n    print(sort_array([1, ",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def sort_array(arr):\n    \"\"\"\n    In this Kata, you have to sort an array of non-negative integers according to\n    number of ones in their binary representation in descending order.\n    For similar number of ones, sort based on decimal value.\n\n    It must be implemented like this:\n    >>> sort_array([1, 5, 2, 3, 4]) == [1, 2, 3, 4, 5]\n    >>> sort_array([-2, -3, -4, -5, -6]) == [-6, -5, -4, -3, -2]\n    >>> sort_array([1, 0, 2, 3, 4]) [0, 1, 2, 3, 4]\n    \"\"\"\n\n    def key_function(n):\n        \"\"\"\n        This function returns a tuple. The first element is the count of ones in\n        the binary representation of the number, and the second element is the\n        decimal value of the number.\n        \"\"\"\n        return (bin(n).count('1'), n) if n > 0 else (-bin(-n).count('1'), n)\n\n    return sorted(arr, key=key_function, reverse=True)\n    # Using key=lambda n: (-bin(n).count('1'), n) is another way to sort based on binary representation.\n\nif __name__ == \"__main__\":\n    import doctest\n    doctest.testmod(sort_array)\n\n    print(sort_array([1, 5, 2, 3, 4]))  # [1, 2, 3, 4, 5]\n    print(sort_array([-2, -3, -4, -5, -6]))  # [-2, -3, -4, -5, -6]\n    print(sort_array([1,",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 63.45723009109497,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

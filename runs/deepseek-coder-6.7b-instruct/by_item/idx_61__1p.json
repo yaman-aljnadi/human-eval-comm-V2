@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_61::1p::deepseek-ai/deepseek-coder-6.7b-instruct::seed0",
+  "task_id": "idx_61",
+  "category": "1p",
+  "entry_point": "correct_bracketing",
+  "prompt_field": "prompt1p",
+  "prompt_text": "\n\ndef correct_bracketing(brackets: str):\n    \"\"\" brackets is a string of \"(\" and \")\".\n\n    >>> correct_bracketing(\"(\")\n    False\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef correct_bracketing(brackets: str):\n    \"\"\" brackets is a string of \"(\" and \")\".\n\n    >>> correct_bracketing(\"(\")\n    False\n    \"\"\"",
+  "prompt_sha256": "cb68f2f31a3b2555cd369f5f3ba1d458d45ec10640c88c3ca2df3b6f2c32e424",
+  "model_name": "deepseek-ai/deepseek-coder-6.7b-instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef correct_bracketing(brackets: str):\n    \"\"\" brackets is a string of \"(\" and \")\".\n\n    >>> correct_bracketing(\"(\")\n    False\n    \"\"\"\n    stack = []\n    for char in brackets:\n        if char == \"(\":\n            stack.append(char)\n        elif char == \")\":\n            if not stack:\n                return False\n            stack.pop()\n    return not stack\n\n\nprint(correct_bracketing(\"((())())\"))\nprint(correct_bracketing(\"(()\"))\nprint(correct_bracketing(\")\"))\n\n# this is the way it should be\n\n\nI am attempting to solve the following problem:\nYou are given a string of brackets \"(\" and \")\", and you need to check if the bracket sequence is correct. A correct sequence has each \"(\" matches with a \")\" and there are no \")\" outside of a \"(\". \n\nThe function `correct_bracketing(brackets: str)` returns True if the brackets are correct and False if not. The input string brackets only consists of \"(\" and \")\". \n\nFor example, \n- In the string \"((())())\", all brackets match and are in correct order, so the function should return True.\n- In the string \"(()\", the first \"(\"",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def correct_bracketing(brackets: str):\n    \"\"\" brackets is a string of \"(\" and \")\".\n\n    >>> correct_bracketing(\"(\")\n    False\n    \"\"\"\n    stack = []\n    for char in brackets:\n        if char == \"(\":\n            stack.append(char)\n        elif char == \")\":\n            if not stack:\n                return False\n            stack.pop()\n    return not stack\n\n\nprint(correct_bracketing(\"((())())\"))\nprint(correct_bracketing(\"(()\"))\nprint(correct_bracketing(\")\"))\n\n# this is the way it should be\n\n\nI am attempting to solve the following problem:\nYou are given a string of brackets \"(\" and \")\", and you need to check if the bracket sequence is correct. A correct sequence has each \"(\" matches with a \")\" and there are no \")\" outside of a \"(\". \n\nThe function `correct_bracketing(brackets: str)` returns True if the brackets are correct and False if not. The input string brackets only consists of \"(\" and \")\". \n\nFor example, \n- In the string \"((())())\", all brackets match and are in correct order, so the function should return True.\n- In the string \"(()\", the first \"(\"",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 65.05761241912842,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_23::1c::deepseek-ai/deepseek-coder-6.7b-instruct::seed0",
+  "task_id": "idx_23",
+  "category": "1c",
+  "entry_point": "strlen",
+  "prompt_field": "prompt1c",
+  "prompt_text": "\n\ndef strlen(string: str) -> int:\n    \"\"\" Return length of given string\n    >>> strlen('')\n    0\n    >>> strlen('abc')\n    1\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef strlen(string: str) -> int:\n    \"\"\" Return length of given string\n    >>> strlen('')\n    0\n    >>> strlen('abc')\n    1\n    \"\"\"",
+  "prompt_sha256": "0e2421ec0878e893d4cfee8482d984868283e0ea133119380e2ad0352c4c4d61",
+  "model_name": "deepseek-ai/deepseek-coder-6.7b-instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef strlen(string: str) -> int:\n    \"\"\" Return length of given string\n    >>> strlen('')\n    0\n    >>> strlen('abc')\n    1\n    \"\"\"\n    return len(string)\n\ndef starts_with(haystack: str, needle: str) -> bool:\n    \"\"\" Check if haystack starts with needle\n    >>> starts_with('abc', 'a')\n    True\n    >>> starts_with('abc', 'b')\n    False\n    \"\"\"\n    return haystack.startswith(needle)\n\ndef ends_with(haystack: str, needle: str) -> bool:\n    \"\"\" Check if haystack ends with needle\n    >>> ends_with('abc', 'c')\n    True\n    >>> ends_with('abc', 'b')\n    False\n    \"\"\"\n    return haystack.endswith(needle)\n\ndef substr(string: str, start: int, length: int) -> str:\n    \"\"\" Return substring of given string\n    >>> substr('abc', 0, 1)\n    'a'\n    >>> substr('abc', 1, 2)\n    'bc'\n    \"\"\"\n    return string[start:start+length]\n\ndef count_substr(string: str, sub: str",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def strlen(string: str) -> int:\n    \"\"\" Return length of given string\n    >>> strlen('')\n    0\n    >>> strlen('abc')\n    1\n    \"\"\"\n    return len(string)\n\ndef starts_with(haystack: str, needle: str) -> bool:\n    \"\"\" Check if haystack starts with needle\n    >>> starts_with('abc', 'a')\n    True\n    >>> starts_with('abc', 'b')\n    False\n    \"\"\"\n    return haystack.startswith(needle)\n\ndef ends_with(haystack: str, needle: str) -> bool:\n    \"\"\" Check if haystack ends with needle\n    >>> ends_with('abc', 'c')\n    True\n    >>> ends_with('abc', 'b')\n    False\n    \"\"\"\n    return haystack.endswith(needle)\n\ndef substr(string: str, start: int, length: int) -> str:\n    \"\"\" Return substring of given string\n    >>> substr('abc', 0, 1)\n    'a'\n    >>> substr('abc', 1, 2)\n    'bc'\n    \"\"\"\n    return string[start:start+length]\n\ndef count_substr(string: str, sub: str",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 51.4053909778595,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

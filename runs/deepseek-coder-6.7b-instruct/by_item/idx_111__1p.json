@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_111::1p::deepseek-ai/deepseek-coder-6.7b-instruct::seed0",
+  "task_id": "idx_111",
+  "category": "1p",
+  "entry_point": "histogram",
+  "prompt_field": "prompt1p",
+  "prompt_text": "\ndef histogram(test):\n    \"\"\"Given a string representing a space separated lowercase letters, return a dictionary\n    of the letter \n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef histogram(test):\n    \"\"\"Given a string representing a space separated lowercase letters, return a dictionary\n    of the letter \n    \"\"\"",
+  "prompt_sha256": "ebe642c9cca6926682bf55c8562f5ffe179aeb3c745cd6dd933c8d678530771e",
+  "model_name": "deepseek-ai/deepseek-coder-6.7b-instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef histogram(test):\n    \"\"\"Given a string representing a space separated lowercase letters, return a dictionary\n    of the letter \n    \"\"\"\n    hist = {}\n    for letter in test:\n        hist[letter] = hist.get(letter, 0) + 1\n    return hist\n\nprint(histogram('aaabbcccc'))\n\nExamples and Explanations:\n\nhistogram('aaabbcccc') ➞ {'a': 3, 'b': 2, 'c': 4}\nhistogram('mississippi') ➞ {'m': 1, 'i': 4,'s': 4, 'p': 2}\n\nCode explanation:\n\"\"\" Given a string, for each letter in the string, if it is already in the dictionary, increment its count by 1. If it's not in the dictionary, add it to the dictionary with a count of 1. Return the dictionary at the end. \"\"\"\n\nI have the solution ready, but I'm asking for clarity if anyone can provide guidance or help.\n\nA: Your current problem requires a function to create a histogram from a string. The histogram is a representation of the frequency of each character in a data set, such as a string. If a character appears in the string,",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def histogram(test):\n    \"\"\"Given a string representing a space separated lowercase letters, return a dictionary\n    of the letter \n    \"\"\"\n    hist = {}\n    for letter in test:\n        hist[letter] = hist.get(letter, 0) + 1\n    return hist\n\nprint(histogram('aaabbcccc'))\n\nExamples and Explanations:\n\nhistogram('aaabbcccc') ➞ {'a': 3, 'b': 2, 'c': 4}\nhistogram('mississippi') ➞ {'m': 1, 'i': 4,'s': 4, 'p': 2}\n\nCode explanation:\n\"\"\" Given a string, for each letter in the string, if it is already in the dictionary, increment its count by 1. If it's not in the dictionary, add it to the dictionary with a count of 1. Return the dictionary at the end. \"\"\"\n\nI have the solution ready, but I'm asking for clarity if anyone can provide guidance or help.\n\nA: Your current problem requires a function to create a histogram from a string. The histogram is a representation of the frequency of each character in a data set, such as a string. If a character appears in the string,",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 64.90964198112488,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

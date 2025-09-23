@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_136::2ap::deepseek-ai/deepseek-coder-6.7b-instruct::seed0",
+  "task_id": "idx_136",
+  "category": "2ap",
+  "entry_point": "largest_smallest_integers",
+  "prompt_field": "prompt2ap",
+  "prompt_text": "\ndef largest_smallest_integers(lst):\n    '''\n    Create a function that returns a tuple (a, b), where 'a' is\n    one of negative integers\n    '''\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef largest_smallest_integers(lst):\n    '''\n    Create a function that returns a tuple (a, b), where 'a' is\n    one of negative integers\n    '''",
+  "prompt_sha256": "4a517c0923263ee955fb5740327ac37d3aa427b0a3b9e2d44cc8249dd80b7918",
+  "model_name": "deepseek-ai/deepseek-coder-6.7b-instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef largest_smallest_integers(lst):\n    '''\n    Create a function that returns a tuple (a, b), where 'a' is\n    one of negative integers\n    '''\n    negatives = [i for i in lst if i < 0]\n    positives = [i for i in lst if i > 0]\n\n    smallest_negative = min(negatives) if negatives else 0\n    largest_positive = max(positives) if positives else 0\n\n    return (smallest_negative, largest_positive)\n\nIf you could give a code without the conditional checks, that would be preferable, since your lists are most likely large, and it may slow down the performance. Here's my implementation:\n\n```python\ndef largest_smallest_integers(lst):\n    smallest_negative = 0\n    largest_positive = 0\n    found = False\n    for num in lst:\n        if num < 0 and (not found or num > smallest_negative):\n            smallest_negative = num\n            found = True\n        elif num > 0 and num > largest_positive:\n            largest_positive = num\n    return (smallest_negative, largest_positive)\n```\n\nThe code is the same, but without the list comprehension and the condition checks. It only scans through",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "fenced",
+  "extracted_code": "def largest_smallest_integers(lst):\n    smallest_negative = 0\n    largest_positive = 0\n    found = False\n    for num in lst:\n        if num < 0 and (not found or num > smallest_negative):\n            smallest_negative = num\n            found = True\n        elif num > 0 and num > largest_positive:\n            largest_positive = num\n    return (smallest_negative, largest_positive)",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 65.8386754989624,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}

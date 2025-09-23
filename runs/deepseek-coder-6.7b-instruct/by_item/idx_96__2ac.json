@@ -1,0 +1,33 @@
+{
+  "record_id": "idx_96::2ac::deepseek-ai/deepseek-coder-6.7b-instruct::seed0",
+  "task_id": "idx_96",
+  "category": "2ac",
+  "entry_point": "count_up_to",
+  "prompt_field": "prompt2ac",
+  "prompt_text": "\ndef count_up_to(n):\n    \"\"\"Implement a function that takes an non-negative integer and returns an array of the last or first n\n    integers that are prime numbers and more or less than n.\n    for example:\n    count_up_to(5) => [1,2,3]\n    count_up_to(11) => [1,2,3,5,7]\n    count_up_to(0) => []\n    count_up_to(20) => [1,2,3,5,7,11,13,17,19]\n    count_up_to(1) => [1]\n    count_up_to(18) => [1,2,3,5,7,11,13,17]\n    \"\"\"\n",
+  "prompt_final": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef count_up_to(n):\n    \"\"\"Implement a function that takes an non-negative integer and returns an array of the last or first n\n    integers that are prime numbers and more or less than n.\n    for example:\n    count_up_to(5) => [1,2,3]\n    count_up_to(11) => [1,2,3,5,7]\n    count_up_to(0) => []\n    count_up_to(20) => [1,2,3,5,7,11,13,17,19]\n    count_up_to(1) => [1]\n    count_up_to(18) => [1,2,3,5,7,11,13,17]\n    \"\"\"",
+  "prompt_sha256": "42185eb5b0a8f0d5f8075760c3564ab862b189716e6ac8b453f024e35bac087a",
+  "model_name": "deepseek-ai/deepseek-coder-6.7b-instruct",
+  "seed": 0,
+  "gen_params": {
+    "max_new_tokens": 256,
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "do_sample": true,
+    "repetition_penalty": 1.0
+  },
+  "generated_text": "You are an expert software developer who writes high quality code. With below information, please either generate Python3 code (Respond directly with code only with markdown), or ask clarifying questions:\n\ndef count_up_to(n):\n    \"\"\"Implement a function that takes an non-negative integer and returns an array of the last or first n\n    integers that are prime numbers and more or less than n.\n    for example:\n    count_up_to(5) => [1,2,3]\n    count_up_to(11) => [1,2,3,5,7]\n    count_up_to(0) => []\n    count_up_to(20) => [1,2,3,5,7,11,13,17,19]\n    count_up_to(1) => [1]\n    count_up_to(18) => [1,2,3,5,7,11,13,17]\n    \"\"\"\n\n    def is_prime(n):\n        if n < 2:\n            return False\n        for i in range(2, int(n ** 0.5) + 1):\n            if n % i == 0:\n                return False\n        return True\n\n    primes = [num for num in range(n + 1) if is_prime(num)]\n    return primes\n\n#examples\nprint(count_up_to(5)) #[1,2,3]\nprint(count_up_to(11)) #[1,2,3,5,7]\nprint(count_up_to(0)) #[]\nprint(count_up_to(20)) #[1,2,3,5,7,11,13,17,19]\nprint(count_up_to(1)) #[1]\nprint(count_up_to(18)) #[1,2,3,5,7,11,13,17]\n\nThe code is implemented using the fact that prime numbers are greater than 1 and if a number has any div",
+  "gen_raw": {},
+  "contains_code": true,
+  "code_detected_method": "def-scan",
+  "extracted_code": "def count_up_to(n):\n    \"\"\"Implement a function that takes an non-negative integer and returns an array of the last or first n\n    integers that are prime numbers and more or less than n.\n    for example:\n    count_up_to(5) => [1,2,3]\n    count_up_to(11) => [1,2,3,5,7]\n    count_up_to(0) => []\n    count_up_to(20) => [1,2,3,5,7,11,13,17,19]\n    count_up_to(1) => [1]\n    count_up_to(18) => [1,2,3,5,7,11,13,17]\n    \"\"\"\n\n    def is_prime(n):\n        if n < 2:\n            return False\n        for i in range(2, int(n ** 0.5) + 1):\n            if n % i == 0:\n                return False\n        return True\n\n    primes = [num for num in range(n + 1) if is_prime(num)]\n    return primes\n\n#examples\nprint(count_up_to(5)) #[1,2,3]\nprint(count_up_to(11)) #[1,2,3,5,7]\nprint(count_up_to(0)) #[]\nprint(count_up_to(20)) #[1,2,3,5,7,11,13,17,19]\nprint(count_up_to(1)) #[1]\nprint(count_up_to(18)) #[1,2,3,5,7,11,13,17]\n\nThe code is implemented using the fact that prime numbers are greater than 1 and if a number has any div",
+  "is_question": false,
+  "extracted_questions": [],
+  "question_count": 0,
+  "first_question": null,
+  "question_chars": 0,
+  "latency_sec": 65.85811686515808,
+  "committee_label": null,
+  "evaluator_quality": null,
+  "evaluator_answers": null
+}
