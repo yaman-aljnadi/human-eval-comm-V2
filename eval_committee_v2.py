@@ -80,7 +80,8 @@ from typing import Any, Dict, List, Optional, Tuple
 
 # ---------- User-specified unified judge prompt ----------
 
-JUDGE_PROMPT = """You are a careful *evaluator* of clarifying-question quality and recovery.
+JUDGE_PROMPT = """
+You are a careful evaluator of clarifying-question quality and recovery.
 You are given:
 1) The ORIGINAL coding problem description.
 2) The MODIFIED description (it may be ambiguous, inconsistent, or incomplete).
