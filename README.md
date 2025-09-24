@@ -11,7 +11,7 @@ The benchmark builds on Wu & Fard’s *HumanEvalComm* paper.
 
 ---
 
-## 📌 Motivation & Contribution
+## Contribution
 
 The original HumanEvalComm highlighted the importance of clarifying questions in code generation. However, it relied on **a single LLM evaluator**, which sometimes produced inconsistent or biased judgments.  
 
@@ -23,7 +23,7 @@ This yields more stable and trustworthy evaluation metrics.
 
 ---
 
-## 📂 Repository Overview
+## Repository Overview
 
 - **`make_dataset_v2.py`**  
   Generates datasets from HumanEvalComm tasks.  
@@ -51,13 +51,13 @@ This yields more stable and trustworthy evaluation metrics.
   - Supports checkpointing, resuming, and configurable verbosity.
 
 ---
-## 🖥️ Resources Used
+## Resources Used
 * Operating System: Ubuntu 20.04.5 LTS
 * CPU: Intel(R) Xeon(R) Silver 4214 @ 2.20GHz
 * GPU: NVIDIA Tesla V100-PCIE-32GB
 
 
-## ⚙️ Installation
+## Installation
 
 Requirements:
 - Python ≥ 3.9
@@ -85,7 +85,7 @@ set OPENROUTER_API_KEY='#'
 
 ```
 
-## ⚙️ Usage 
+## Usage 
 1. Generate dataset example
 ``` bash
     python make_dataset_v2.py \
@@ -153,7 +153,7 @@ Output:
 1. committee_judgments.json — per-item evaluations.
 2. committee_summary.json / .csv — aggregate metrics.
 
-## 📊 Evaluation Metrics
+## Evaluation Metrics
 * Communication Rate — % of responses with clarifying questions.
 * Good Question Rate — % of high-quality clarifying questions (score = 3).
 * Acceptable Question Rate — % of questions rated ≥ 2.
