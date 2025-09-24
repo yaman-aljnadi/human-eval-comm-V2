@@ -171,28 +171,23 @@ Report:
 **Per‑response record (`ItemRow`)**
 ```json
 {
-  # Identifiers
-  "record_id": "string",               // unique key, e.g. task_id::model::seed
+  "record_id": "string",               
   "task_id": "string",
   "category": "1a|1c|1p|2ac|2cp|2ap|3apc",
   "entry_point": "string|null",
 
-  # Prompt provenance
   "prompt_field": "string",
   "prompt_text": "string",
   "prompt_final": "string",
   "prompt_sha256": "string",
 
-  # Model provenance
   "model_name": "string",
   "seed": 0,
   "gen_params": {"temperature": 1.0, "top_p": 0.9},
 
-  # Raw output
   "generated_text": "string",
   "gen_raw": {"...": "HF dict minus generated_text"},
 
-  # Parsed output
   "contains_code": true,
   "code_detected_method": "regex|parser|none",
   "extracted_code": "string|null",
@@ -202,10 +197,8 @@ Report:
   "first_question": "string|null",
   "question_chars": 0,
 
-  # Timings
   "latency_sec": 0.0,
 
-  # Evaluation
   "committee_label": "string|null",
   "evaluator_quality": 1,
   "evaluator_answers": "string|null"
@@ -217,7 +210,6 @@ Report:
 {
   "record_id": "string",
 
-  # Committee votes
   "committee_is_question": [true, false, true],
   "committee_question_quality": [1, 2, 3],
   "committee_minimal_answers": ["yes", "no", "maybe"],
@@ -225,7 +217,6 @@ Report:
   "committee_false_recovery": [true, false, false],
   "committee_reasoning": ["...", "...", "..."],
 
-  # Final aggregation
   "final_is_question": true,
   "final_question_quality": 3,
   "final_answer_quality": 2,
