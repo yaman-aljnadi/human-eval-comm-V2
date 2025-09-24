@@ -1,9 +1,8 @@
 # HumanEvalComm‑V2: Committee‑based LLM Evaluation for Ambiguity, Inconsistency, and Incompleteness
 
-> Repository: https://github.com/yaman-aljnadi/human-eval-comm-V2
 
 HumanEvalComm‑V2 extends **HumanEvalComm** to make LLM‑as‑judge evaluation **more reliable and reproducible**.  
-Instead of a single judge, V2 evaluates each item with a **committee of 3 LLM judges**, aggregates by **majority vote**, and stores **per‑judge labels** for auditability. It also ships **revised evaluation parameters**, stricter schema validation, and ready‑to‑run scripts.
+Instead of a single judge, HumanEvalComm‑V2 evaluates each item with a **committee of 3 LLM judges**, aggregates by **majority vote**, and stores **per‑judge labels** for auditability. It also ships **revised evaluation parameters**, and better schema validation.
 
 ---
 
@@ -17,7 +16,7 @@ Instead of a single judge, V2 evaluates each item with a **committee of 3 LLM ju
 ---
 
 ## Dataset & Task
-We use the **HumanEvalComm** dataset (771 items) which modifies HumanEval problems to introduce requirement defects. For each item, a generator LLM must either **ask clarifying question(s)** or **directly produce code**. Judges assess whether questions were asked and how good they are.  
+Using the **HumanEvalComm** dataset (771 items) which modifies HumanEval problems to introduce requirement defects. For each item, a generator LLM must either **ask clarifying question(s)** or **directly produce code**. Judges assess whether questions were asked and how good they are.  
 Dataset (original): https://huggingface.co/datasets/jie-jw-wu/HumanEvalComm
 
 **Categories & counts**
@@ -46,7 +45,7 @@ Dataset (original): https://huggingface.co/datasets/jie-jw-wu/HumanEvalComm
 - `gemini/gemini-2.5-flash-lite`
 - `deepseek-ai/deepseek-coder-6.7b-instruct`
 
-Aggregation: **simple majority** for Booleans and **mode** for ordinal labels (1–3). Ties are retained as `undecided` and excluded from affected metrics (reported with tie counts).
+Aggregation: **simple majority** for Booleans and **mode** for ordinal labels (1–3). Ties: resolved in favor of the superior model;.
 
 ---
 
@@ -76,11 +75,10 @@ setx GEMINI_API_KEY "..."
 setx OPENROUTER_API_KEY "..."
 ```
 
-> The repo can drive OpenAI, Gemini, and OpenRouter endpoints for generators and judges (depending on flags).
 
 ---
 
-## Quick start
+## Quick start example
 
 ### 1) Generate model responses
 ```bash
@@ -102,7 +100,7 @@ runs/gemini-2.5-flash-lite/
 └── by_item/
 ```
 
-### 2) Evaluate with 1–3 judges
+### 2) Evaluate with 1–3 judges example
 **Single evaluator**
 ```bash
 python eval_committee_v2.py \
@@ -158,14 +156,13 @@ Let each item *i* have final (aggregated) labels:
 - `QQᵢ ∈ {1,2,3}` — question quality (1=Bad, 2=Fair, 3=Good)
 - `FRᵢ ∈ {0,1}` — false recovery (no questions, but still “recovered” missing info)
 
-We report:
+Report:
 
 - **Communication Rate (CR)** — share asking questions
 - **Good Question Rate (GQR‑all)** — share with `QQᵢ=3` over all items
 - **Good Question Rate (GQR‑asked)** — share with `QQᵢ=3` conditioned on asking
 - **False Recovery Rate (FRR‑all / FRR‑noQ)** — spurious recovery without questions
 
-Ties are excluded from any metric that depends on the tied label; tie counts are reported separately.
 
 ---
 
@@ -174,16 +171,44 @@ Ties are excluded from any metric that depends on the tied label; tie counts are
 **Per‑response record (`ItemRow`)**
 ```json
 {
-  "record_id": "task_id::model::seed",
+  # Identifiers
+  "record_id": "string",               // unique key, e.g. task_id::model::seed
   "task_id": "string",
   "category": "1a|1c|1p|2ac|2cp|2ap|3apc",
+  "entry_point": "string|null",
+
+  # Prompt provenance
+  "prompt_field": "string",
   "prompt_text": "string",
+  "prompt_final": "string",
+  "prompt_sha256": "string",
+
+  # Model provenance
   "model_name": "string",
+  "seed": 0,
   "gen_params": {"temperature": 1.0, "top_p": 0.9},
+
+  # Raw output
   "generated_text": "string",
+  "gen_raw": {"...": "HF dict minus generated_text"},
+
+  # Parsed output
   "contains_code": true,
+  "code_detected_method": "regex|parser|none",
+  "extracted_code": "string|null",
+  "is_question": false,
+  "extracted_questions": ["string", "..."],
+  "question_count": 0,
+  "first_question": "string|null",
+  "question_chars": 0,
+
+  # Timings
   "latency_sec": 0.0,
-  "committee_label": "string|null"
+
+  # Evaluation
+  "committee_label": "string|null",
+  "evaluator_quality": 1,
+  "evaluator_answers": "string|null"
 }
 ```
 
@@ -191,13 +216,20 @@ Ties are excluded from any metric that depends on the tied label; tie counts are
 ```json
 {
   "record_id": "string",
+
+  # Committee votes
   "committee_is_question": [true, false, true],
   "committee_question_quality": [1, 2, 3],
+  "committee_minimal_answers": ["yes", "no", "maybe"],
   "committee_answer_quality": [1, 2, 3],
+  "committee_false_recovery": [true, false, false],
+  "committee_reasoning": ["...", "...", "..."],
+
+  # Final aggregation
+  "final_is_question": true,
   "final_question_quality": 3,
   "final_answer_quality": 2,
-  "committee_reasoning": ["...", "...", "..."],
-  "committee_false_recovery": [true, false, false]
+  "final_false_recovery": false
 }
 ```
 
