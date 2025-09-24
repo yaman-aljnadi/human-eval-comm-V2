@@ -226,7 +226,7 @@ Report:
 
 ---
 
-## Preliminary results (example, all categories, N=771)
+## Preliminary results (N=771)
 | Model | CR ↑ | GQR‑all ↑ | GQR‑asked ↑ | FRR‑all ↓ | FRR‑noQ ↓ |
 |---|---:|---:|---:|---:|---:|
 | Meta‑Llama‑3‑13B‑Instruct | 38.5% | 17.6% | 45.8% | 6.5% | 10.5% |
@@ -234,7 +234,6 @@ Report:
 | gemini‑2.5‑flash‑lite | 36.7% | 33.3% | 90.8% | 25.9% | 41.0% |
 | openai‑gpt‑3.5‑turbo | 30.5% | 28.5% | 93.6% | 35.0% | 50.4% |
 
-> Report point estimates with 95% CIs in papers; per‑judge rates and ties are available for auditability.
 
 ---
 
@@ -276,25 +275,3 @@ Return exactly:
 
 ---
 
-## Citing
-If you use this repo, please cite the original HumanEvalComm work and this V2 extension.
-
-```text
-Wu, Jie JW, and Fatemeh H. Fard. HumanEvalComm: Benchmarking the Communication
-Competence of Code Generation for LLMs and LLM Agents. arXiv:2406.00215.
-```
-
-```text
-Aljnadi, Yaman. HumanEvalComm‑V2: Committee‑based LLM Evaluation for Ambiguity,
-Inconsistency, and Incompleteness. 2025.
-```
-
----
-
-## Acknowledgments
-- HumanEvalComm authors & dataset maintainers
-- Model providers: OpenAI, Google, DeepSeek
-- Community contributors and reviewers
-
-## License
-Add your license here (e.g., MIT or Apache‑2.0).
