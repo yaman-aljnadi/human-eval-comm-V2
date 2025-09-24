@@ -7,7 +7,7 @@ Instead of a single judge, V2 evaluates each item with a **committee of 3 LLM ju
 
 ---
 
-## What's new in V2
+## What's new
 - **Committee‑based judging (3 LLMs):** reduces variance/bias vs. a single judge; ties are surfaced explicitly.
 - **Revised evaluation parameters & schemas:** sturdier parsing/validation; consistent JSON outputs.
 - **Fully reproducible runs:** fixed seeds, deterministic temperatures, and structured artifacts (per‑item + aggregate).
